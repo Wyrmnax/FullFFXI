@@ -79,7 +79,7 @@ return {
                     [">"] = 0
                 },
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"resolution\" <t>"
+                ["ws_cmd"] = "/ws \"dimidiation\" <t>"
             }
         },
         ["SAM"] = {

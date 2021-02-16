@@ -22,6 +22,8 @@ local useAutoRA = false
 local araDelayed = 0
 local ws_cmd = ''
 local autowsDelay = 0.5
+local keepAM = false
+local haveAM = false
 local defaults = {hps = {['<']=100, ['>']=0}}
 settings = _libs.lor.settings.load('data/settings.lua', defaults)
 local settings_loaded = false
@@ -50,6 +52,7 @@ function save_settings()
     settings[name][job][skill].hps = hps
     settings[name][job][skill].mobs = mobs
     settings[name][job][skill].ws_cmd = ws_cmd
+	settings[name][job][skill].keepam = keepAM
     settings:save()
 end
 
@@ -127,6 +130,14 @@ windower.register_event('addon command', function (command,...)
         if not valid_hp_args(parsed) then return end
         hps['<'] = parsed['<'] or hps['<']
         hps['>'] = parsed['>'] or hps['>']
+		save_settings()
+        print_status()
+	elseif command == 'keepam' then
+		keepAM = true		
+		save_settings()
+        print_status()
+	elseif command == 'noam' then
+		keepAM = false
 		save_settings()
         print_status()
 	elseif command == 'mob' then
@@ -212,7 +223,6 @@ windower.register_event('job change', function()
     enabled = false
 end)
 
-
 windower.register_event('prerender', function()
     if not settings_loaded then
         if windower.ffxi.get_player() ~= nil then
@@ -232,7 +242,17 @@ windower.register_event('prerender', function()
                         araDelayed = araDelayed + 1
                     else
                         if hp_gt < mob.hpp and mob.hpp < hp_lt then
-                            windower.send_command(('input %s'):format(ws_cmd))
+							if keepAM then
+								if haveAM then									
+									windower.send_command(('input %s'):format(ws_cmd))
+								else
+									if player.vitals.tp > 2999 then
+										windower.send_command(('input %s'):format(ws_cmd))
+									end
+								end
+							else							
+								windower.send_command(('input %s'):format(ws_cmd))
+							end
                         end
                         araDelayed = 0
                         if useAutoRA then
@@ -249,10 +269,25 @@ end)
 
 function print_status()
 	local power = enabled and 'ON' or 'OFF'
+	local AM = 'OFF'
+	if keepAM then
+		AM = 'ON'
+	end
     local ws_msg = #ws_cmd > 1 and ws_cmd or '(no ws specified)'
-    atcf('[AutoWS: %s] %s %s mobs @ %d < HP%% < %s', power, ws_msg, rarr, hps['>'], hps['<'])
+    atcf('[AutoWS: %s] %s %s mobs @ %d < HP%% < %s - Keep AM %s', power, ws_msg, rarr, hps['>'], hps['<'], AM)
 end
 
+windower.register_event('gain buff', function(buff)
+    if buff == 272 then
+		haveAM = true
+    end
+end)
+
+windower.register_event('lose buff', function(buff)
+    if buff == 272 then
+		haveAM = false
+    end
+end)
 
 function print_help()
     local help = T{
@@ -261,6 +296,7 @@ function print_help()
         ['hp (>|<) (hp%)'] = 'Set the default HP value for when weaponskills should be executed',
         ['use weaponskill_name'] = 'Set the weaponskill that should be used',
         ['autora (on|off)'] = 'Enable / disable the AutoRA addon',
+		['keepam / noam'] = 'Will try to keep AM3 up',
     }
     --local mwwidth = max(unpack(map(string.wlen, table.keys(help))))
     local mwwidth = col_width(help:keys())

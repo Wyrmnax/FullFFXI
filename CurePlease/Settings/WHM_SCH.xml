@@ -29,7 +29,7 @@
   <curagaCurePercentage>75</curagaCurePercentage>
   <curagaTargetType>0</curagaTargetType>
   <curagaTargetName />
-  <curagaRequiredMembers>3</curagaRequiredMembers>
+  <curagaRequiredMembers>2</curagaRequiredMembers>
   <autoHasteMinutes>2</autoHasteMinutes>
   <autoAdloquiumMinutes>2</autoAdloquiumMinutes>
   <autoPhalanxIIMinutes>2</autoPhalanxIIMinutes>
@@ -51,10 +51,10 @@
   <plGainBoost_Spell>0</plGainBoost_Spell>
   <plBarElement>true</plBarElement>
   <plBarElement_Spell>3</plBarElement_Spell>
-  <AOE_Barelemental>false</AOE_Barelemental>
+  <AOE_Barelemental>true</AOE_Barelemental>
   <plBarStatus>true</plBarStatus>
-  <plBarStatus_Spell>2</plBarStatus_Spell>
-  <AOE_Barstatus>false</AOE_Barstatus>
+  <plBarStatus_Spell>3</plBarStatus_Spell>
+  <AOE_Barstatus>true</AOE_Barstatus>
   <plAuspice>false</plAuspice>
   <plRegen>true</plRegen>
   <plRegen_Level>4</plRegen_Level>
@@ -64,18 +64,18 @@
   <plRefresh_Level>2</plRefresh_Level>
   <plProtect>false</plProtect>
   <plShell>false</plShell>
-  <plBlink>true</plBlink>
+  <plBlink>false</plBlink>
   <plPhalanx>false</plPhalanx>
-  <plStoneskin>true</plStoneskin>
+  <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
   <plEnspell_Spell>0</plEnspell_Spell>
-  <plStormSpell>true</plStormSpell>
+  <plStormSpell>false</plStormSpell>
   <plStormSpell_Spell>7</plStormSpell_Spell>
   <plAdloquium>false</plAdloquium>
-  <plKlimaform>true</plKlimaform>
-  <plAquaveil>true</plAquaveil>
+  <plKlimaform>false</plKlimaform>
+  <plAquaveil>false</plAquaveil>
   <plHaste>false</plHaste>
   <plHaste_Level>0</plHaste_Level>
   <plSpikes>false</plSpikes>
@@ -93,15 +93,15 @@
   <blinkAccession>false</blinkAccession>
   <phalanxPerpetuance>false</phalanxPerpetuance>
   <phalanxAccession>false</phalanxAccession>
-  <stoneskinPerpetuance>true</stoneskinPerpetuance>
+  <stoneskinPerpetuance>false</stoneskinPerpetuance>
   <stoneskinAccession>true</stoneskinAccession>
   <enspellPerpetuance>false</enspellPerpetuance>
   <enspellAccession>false</enspellAccession>
   <stormspellPerpetuance>false</stormspellPerpetuance>
   <stormspellAccession>false</stormspellAccession>
-  <adloquiumPerpetuance>false</adloquiumPerpetuance>
-  <adloquiumAccession>false</adloquiumAccession>
-  <aquaveilPerpetuance>true</aquaveilPerpetuance>
+  <adloquiumPerpetuance>true</adloquiumPerpetuance>
+  <adloquiumAccession>true</adloquiumAccession>
+  <aquaveilPerpetuance>false</aquaveilPerpetuance>
   <aquaveilAccession>false</aquaveilAccession>
   <barspellPerpetuance>false</barspellPerpetuance>
   <barspellAccession>false</barspellAccession>
@@ -176,7 +176,7 @@
   <naPlague>false</naPlague>
   <naPoison>true</naPoison>
   <naSilence>true</naSilence>
-  <naErase>false</naErase>
+  <naErase>true</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
   <PrioritizeDoomRemoval>true</PrioritizeDoomRemoval>
@@ -273,39 +273,39 @@
   <monitoredVitDown>true</monitoredVitDown>
   <monitoredWeight>true</monitoredWeight>
   <monitoredAmnesia>true</monitoredAmnesia>
-  <na_Weight>false</na_Weight>
-  <na_VitDown>false</na_VitDown>
-  <na_Threnody>false</na_Threnody>
-  <na_Slow>false</na_Slow>
-  <na_Shock>false</na_Shock>
-  <na_StrDown>false</na_StrDown>
-  <na_Requiem>false</na_Requiem>
-  <na_Rasp>false</na_Rasp>
-  <na_MaxTpDown>false</na_MaxTpDown>
-  <na_MaxMpDown>false</na_MaxMpDown>
-  <na_MaxHpDown>false</na_MaxHpDown>
-  <na_MagicAttackDown>false</na_MagicAttackDown>
-  <na_MagicAccDown>false</na_MagicAccDown>
-  <na_MagicDefenseDown>false</na_MagicDefenseDown>
-  <na_MndDown>false</na_MndDown>
-  <na_IntDown>false</na_IntDown>
-  <na_Helix>false</na_Helix>
-  <na_Frost>false</na_Frost>
-  <na_EvasionDown>false</na_EvasionDown>
-  <na_Elegy>false</na_Elegy>
-  <na_Drown>false</na_Drown>
-  <na_Dia>false</na_Dia>
-  <na_DefenseDown>false</na_DefenseDown>
-  <na_DexDown>false</na_DexDown>
-  <na_Choke>false</na_Choke>
-  <na_ChrDown>false</na_ChrDown>
-  <na_Burn>false</na_Burn>
-  <na_Bio>false</na_Bio>
-  <na_Bind>false</na_Bind>
-  <na_AttackDown>false</na_AttackDown>
-  <na_Addle>false</na_Addle>
-  <na_AccuracyDown>false</na_AccuracyDown>
-  <na_AgiDown>false</na_AgiDown>
+  <na_Weight>true</na_Weight>
+  <na_VitDown>true</na_VitDown>
+  <na_Threnody>true</na_Threnody>
+  <na_Slow>true</na_Slow>
+  <na_Shock>true</na_Shock>
+  <na_StrDown>true</na_StrDown>
+  <na_Requiem>true</na_Requiem>
+  <na_Rasp>true</na_Rasp>
+  <na_MaxTpDown>true</na_MaxTpDown>
+  <na_MaxMpDown>true</na_MaxMpDown>
+  <na_MaxHpDown>true</na_MaxHpDown>
+  <na_MagicAttackDown>true</na_MagicAttackDown>
+  <na_MagicAccDown>true</na_MagicAccDown>
+  <na_MagicDefenseDown>true</na_MagicDefenseDown>
+  <na_MndDown>true</na_MndDown>
+  <na_IntDown>true</na_IntDown>
+  <na_Helix>true</na_Helix>
+  <na_Frost>true</na_Frost>
+  <na_EvasionDown>true</na_EvasionDown>
+  <na_Elegy>true</na_Elegy>
+  <na_Drown>true</na_Drown>
+  <na_Dia>true</na_Dia>
+  <na_DefenseDown>true</na_DefenseDown>
+  <na_DexDown>true</na_DexDown>
+  <na_Choke>true</na_Choke>
+  <na_ChrDown>true</na_ChrDown>
+  <na_Burn>true</na_Burn>
+  <na_Bio>true</na_Bio>
+  <na_Bind>true</na_Bind>
+  <na_AttackDown>true</na_AttackDown>
+  <na_Addle>true</na_Addle>
+  <na_AccuracyDown>true</na_AccuracyDown>
+  <na_AgiDown>true</na_AgiDown>
   <mpMinCastValue>100</mpMinCastValue>
   <lowMPcheckBox>false</lowMPcheckBox>
   <healLowMP>false</healLowMP>

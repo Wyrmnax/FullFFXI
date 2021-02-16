@@ -1,0 +1,27 @@
+<settings>
+    <global>
+        <X>0</X>
+        <Y>0</Y>
+        <Zoom>100</Zoom>
+        <Opacity>75</Opacity>
+        <ShowPC>true</ShowPC>
+        <ShowNPC>true</ShowNPC>
+        <ShowMob>true</ShowMob>
+        <ShowMarker>true</ShowMarker>
+        <ShowTargetLine>true</ShowTargetLine>
+        <Ranges />
+    </global>
+    <Valka>
+        <X>1133</X>
+        <Y>279</Y>
+    </Valka>
+    <Khory>
+        <X>1364</X>
+        <Y>472</Y>
+        <Zoom>40</Zoom>
+    </Khory>
+    <Lorah>
+        <X>1134</X>
+        <Y>273</Y>
+    </Lorah>
+</settings>

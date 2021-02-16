@@ -1,0 +1,5 @@
+return {
+    ["Tell"]={}, 
+    ["Battle"]={}, 
+    ["General"]={}
+}

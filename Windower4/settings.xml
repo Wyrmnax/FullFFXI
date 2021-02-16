@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <autoload>
+    <addon>aecho</addon>
+    <addon>azureSets</addon>
+    <addon>cancel</addon>
+    <addon>DistancePlus</addon>
+    <addon>enternity</addon>
+    <addon>GearSwap</addon>
+    <addon>Omen</addon>
+    <addon>rolltracker</addon>
+    <addon>TParty</addon>
+    <addon>timestamp</addon>
+    <addon>distance</addon>
+    <addon>send</addon>
+    <addon>HealBot</addon>
+    <addon>shortcuts</addon>
+    <addon>findAll</addon>
+    <addon>Pouches</addon>
+    <addon>Skillchains</addon>
+    <addon>TreasurePool</addon>
+    <addon>Treasury</addon>
+    <addon>organizer</addon>
+    <addon>checkparam</addon>
+    <addon>AutoRA</addon>
+    <addon>remember</addon>
+    <addon>Trusts</addon>
+    <plugin>AutoExec</plugin>
+    <plugin>JaZero</plugin>
+    <plugin>Timers</plugin>
+    <plugin>LightLuggage</plugin>
+    <plugin>Sandbox</plugin>
+    <plugin>DelayMeNot</plugin>
+    <plugin>FFXIDB</plugin>
+  </autoload>
+  <profile name="">
+    <consolekey>Insert</consolekey>
+    <uiscale>1</uiscale>
+    <supersampling>2</supersampling>
+    <bumpmapping>true</bumpmapping>
+  </profile>
+  <profile name="Valka">
+    <consolekey>Insert</consolekey>
+    <windowmode>Window</windowmode>
+    <width>1500</width>
+    <height>800</height>
+    <uiscale>1</uiscale>
+  </profile>
+</settings>

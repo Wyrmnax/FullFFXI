@@ -1,0 +1,14 @@
+input /ja Immanence <me>;
+input /p Starting SC;
+wait 1;
+input /ma water <t>;
+wait 4;
+input /p Induration in 3 seconds;
+input /ja Immanence <me>;
+wait 1;
+input /ma blizzard <t>;
+wait 4;
+input /p Induration!;
+input /ja Ebullience <me>;
+wait 1
+input /ma "Blizzard V" <t>;

@@ -1,0 +1,254 @@
+﻿[
+  {
+    "name": "addtochat",
+    "pattern": "535556578BE96A086A00896C241C",
+    "mask": "xxxxxxxxxxxxxx",
+    "offset": -6,
+    "count": 0
+  },
+  {
+    "name": "autotranslate",
+    "pattern": "CC5685ED578BF1C644241000C644241100C64424",
+    "mask": "xxxxxxxxxxxxxxxxxxxx",
+    "offset": -6,
+    "count": 0
+  },
+  {
+    "name": "autotranslatethis",
+    "pattern": "8BFF83C9FF33C06A00F2AEF7D1496A01518B0D",
+    "mask": "x?xxxxxxxxxxxxxxxxx",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "decryptpacket",
+    "pattern": "cccccccc53558bac24c8050000563be857",
+    "mask": "xxxxxxxxxxxxxxxxx",
+    "offset": -6,
+    "count": 0
+  },
+  {
+    "name": "encryptpacket",
+    "pattern": "33c0558b6c24144956578d14cd0000000033ff85ed89542410",
+    "mask": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+    "offset": -6,
+    "count": 0
+  },
+  {
+    "name": "entityarray",
+    "pattern": "8B560C8B042A8B0485",
+    "mask": "xxxxxxxxx",
+    "offset": 9,
+    "count": 0
+  },
+  {
+    "name": "initcode",
+    "pattern": "C64107048B51",
+    "mask": "xxxxxx",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "inputthis",
+    "pattern": "3bcb74148b01ff502084c0740b8b0d",
+    "mask": "xxxxxxxxxxxxxxx",
+    "offset": -4,
+    "count": 0
+  },
+  {
+    "name": "inventory",
+    "pattern": "8B15FFFFFFFF85D275FF33C0C3",
+    "mask": "xx????xxx?xxx",
+    "offset": 2,
+    "count": 0
+  },
+  {
+    "name": "logfile",
+    "pattern": "50E8FFFFFFFF84C075388B0D",
+    "mask": "xx????xxxxxx",
+    "offset": -4,
+    "count": 0
+  },
+  {
+    "name": "parsecommand",
+    "pattern": "8B8C24080400005556578D",
+    "mask": "xxxxxxxxxxx",
+    "offset": -6,
+    "count": 0
+  },
+  {
+    "name": "party",
+    "pattern": "0FBEC38D0C5256578BF58D0448",
+    "mask": "xxxxxxxxxxxxx",
+    "offset": 23,
+    "count": 0
+  },
+  {
+    "name": "player",
+    "pattern": "84FFFFFFFFF605FFFFFFFF010F84FFFFFFFF8B0D",
+    "mask": "x????xx????xxx????xx",
+    "offset": 20,
+    "count": 0
+  },
+  {
+    "name": "ownpos",
+    "pattern": "66C7442410790050",
+    "mask": "xxxxxxxx",
+    "offset": 37,
+    "count": 0
+  },
+  {
+    "name": "scenemanagement",
+    "pattern": "6605FFFF6685C074FF8B0DFFFFFFFF25FFFF000050FFFFFFFFFF85C0",
+    "mask": "xx??xxxx?xx????x??xxx?????xx",
+    "offset": 11,
+    "count": 0
+  },
+  {
+    "name": "settarget",
+    "pattern": "3C09FFFF8B0DFFFFFFFF8A415184C0",
+    "mask": "xx??xx????xxxxx",
+    "offset": 6,
+    "count": 0
+  },
+  {
+    "name": "target",
+    "pattern": "53568BF18B480433DB3BCB75065E33C05B59C38B0D",
+    "mask": "xxxxxxxxxxxxxxxxxxxxx",
+    "offset": 45,
+    "count": 0
+  },
+  {
+    "name": "subtarget",
+    "pattern": "A1FFFFFFFFBFFFFFFFFF8BFFB9",
+    "mask": "x????x????x?x",
+    "offset": 1,
+    "count": 0
+  },
+  {
+    "name": "abilityinfo",
+    "pattern": "8B44240C5657B9FFFFFFFF8D70048B44240C8DB8FFFFFFFFF3A5C680FFFFFFFF015FB0015EC3",
+    "mask": "xxxxxxx????xxxxxxxxx????xxxx????xxxxxx",
+    "offset": 20,
+    "count": 1
+  },
+  {
+    "name": "hasspell",
+    "pattern": "568BF1E8FFFFFFFF85C074FF8B8EFFFFFFFF6A00",
+    "mask": "xxxx????xxx?xx????xx",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "keyitems",
+    "pattern": "8B44240485C07C1683F8FF7D118B4C2408",
+    "mask": "xxxxxxxxxx?xxxxxx",
+    "offset": 20,
+    "count": 0
+  },
+  {
+    "name": "chatlog",
+    "pattern": "8B0DFFFFFFFF85C9740F8BFFFFFFFFFF8B",
+    "mask": "xx????xxxxx?????x",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "vanatime",
+    "pattern": "B0015EC390518B4C24088D4424005068",
+    "mask": "xxxxxxxxxxxxxxxx",
+    "offset": 52,
+    "count": 0
+  },
+  {
+    "name": "abilityrecasttable",
+    "pattern": "894124E9FFFFFFFF8B46FF6A006A00508BCEE8",
+    "mask": "xxxx????xx?xxxxxxxx",
+    "offset": 25,
+    "count": 0
+  },
+  {
+    "name": "spellrecasttable",
+    "pattern": "56BEFFFFFFFF66833E00FFFFFFFFFFFFFF662906",
+    "mask": "xx????xxxx???????xxx",
+    "offset": 2,
+    "count": 0
+  },
+  {
+    "name": "weather",
+    "pattern": "66A1FFFFFFFF663DFFFF72",
+    "mask": "xx????xx??x",
+    "offset": 2,
+    "count": 0
+  },
+  {
+    "name": "dialogboxdata",
+    "pattern": "8BCEE8FFFFFFFF8B0DFFFFFFFF3BCB",
+    "mask": "xxx????xx????xx",
+    "offset": 9,
+    "count": 0
+  },
+  {
+    "name": "dialogboxtext",
+    "pattern": "6A058BCD89442428BEFFFFFFFF8D7C242C32DB",
+    "mask": "xxxxxxxxx????xxxxxx",
+    "offset": 9,
+    "count": 0
+  },
+  {
+    "name": "castbar",
+    "pattern": "6A028BCEE8FFFFFFFF8B0DFFFFFFFF85C9",
+    "mask": "xxxxx????xx????xx",
+    "offset": 11,
+    "count": 0
+  },
+  {
+    "name": "ja0wait",
+    "pattern": "8B81FC00000040",
+    "mask": "xxxxxxx",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "engage0wait",
+    "pattern": "66FF81FFFFFFFF66C781FFFFFFFF0807C3",
+    "mask": "xxx????xxx????xxx",
+    "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "zoneinfo",
+    "pattern": "89464CA3FFFFFFFFE8E0A000",
+    "mask": "xxxx????xxxx",
+    "offset": 4,
+    "count": 0
+  },
+  {
+    "name": "mapbase",
+    "pattern": "891DFFFFFFFF8BCE899E",
+    "mask": "xx????xxxx",
+    "offset": 2,
+    "count": 0
+  },
+  {
+    "name": "fishinginfo",
+    "pattern": "83CFFFE8FFFFFFFF84C00F85FFFFFFFF3BFB0F85FFFFFFFF8B0D",
+    "mask": "xxxx????xxxx????xxxx????xx",
+    "offset": 26,
+    "count": 0
+  },
+  {
+    "name": "mapinfo",
+    "pattern": "8A0DFFFFFFFF5333C05684C95774FF8A5424188B7424148B7C2410B9",
+    "mask": "xx????xxxxxxxx?xxxxxxxxxxxxx",
+    "offset": 28,
+    "count": 0
+  },
+  {
+    "name": "autofollow",
+    "pattern": "8BCFE8FFFFFFFF8B0DFFFFFFFFE8FFFFFFFF8BE885ED750CB9",
+    "mask": "xxx????xx????x????xxxxxxx",
+    "offset": 25,
+    "count": 0
+  }
+]

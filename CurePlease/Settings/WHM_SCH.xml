@@ -50,13 +50,13 @@
   <plGainBoost>true</plGainBoost>
   <plGainBoost_Spell>0</plGainBoost_Spell>
   <plBarElement>true</plBarElement>
-  <plBarElement_Spell>3</plBarElement_Spell>
+  <plBarElement_Spell>0</plBarElement_Spell>
   <AOE_Barelemental>true</AOE_Barelemental>
   <plBarStatus>true</plBarStatus>
-  <plBarStatus_Spell>3</plBarStatus_Spell>
+  <plBarStatus_Spell>2</plBarStatus_Spell>
   <AOE_Barstatus>true</AOE_Barstatus>
   <plAuspice>false</plAuspice>
-  <plRegen>true</plRegen>
+  <plRegen>false</plRegen>
   <plRegen_Level>4</plRegen_Level>
   <plReraise>true</plReraise>
   <plReraise_Level>3</plReraise_Level>
@@ -94,13 +94,13 @@
   <phalanxPerpetuance>false</phalanxPerpetuance>
   <phalanxAccession>false</phalanxAccession>
   <stoneskinPerpetuance>false</stoneskinPerpetuance>
-  <stoneskinAccession>true</stoneskinAccession>
+  <stoneskinAccession>false</stoneskinAccession>
   <enspellPerpetuance>false</enspellPerpetuance>
   <enspellAccession>false</enspellAccession>
   <stormspellPerpetuance>false</stormspellPerpetuance>
   <stormspellAccession>false</stormspellAccession>
-  <adloquiumPerpetuance>true</adloquiumPerpetuance>
-  <adloquiumAccession>true</adloquiumAccession>
+  <adloquiumPerpetuance>false</adloquiumPerpetuance>
+  <adloquiumAccession>false</adloquiumAccession>
   <aquaveilPerpetuance>false</aquaveilPerpetuance>
   <aquaveilAccession>false</aquaveilAccession>
   <barspellPerpetuance>false</barspellPerpetuance>
@@ -348,7 +348,7 @@
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>
   <enableHotKeys>false</enableHotKeys>
   <enableFastCast_Mode>false</enableFastCast_Mode>
-  <trackCastingPackets>false</trackCastingPackets>
+  <trackCastingPackets>true</trackCastingPackets>
   <ipAddress>127.0.0.1</ipAddress>
   <listeningPort>19769</listeningPort>
 </MySettings>

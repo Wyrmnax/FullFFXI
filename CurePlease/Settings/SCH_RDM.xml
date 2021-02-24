@@ -348,7 +348,7 @@
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>
   <enableHotKeys>false</enableHotKeys>
   <enableFastCast_Mode>false</enableFastCast_Mode>
-  <trackCastingPackets>false</trackCastingPackets>
+  <trackCastingPackets>true</trackCastingPackets>
   <ipAddress>127.0.0.1</ipAddress>
   <listeningPort>19769</listeningPort>
 </MySettings>

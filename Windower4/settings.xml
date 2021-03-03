@@ -25,6 +25,7 @@
     <addon>AutoRA</addon>
     <addon>remember</addon>
     <addon>Trusts</addon>
+    <addon>autocontrol</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

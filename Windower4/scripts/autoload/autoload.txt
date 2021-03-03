@@ -18,6 +18,7 @@ load LightLuggage;
 load Sandbox;
 load Timers;
 lua load aecho;
+lua load autocontrol;
 lua load AutoRA;
 lua load azureSets;
 lua load cancel;

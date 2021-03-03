@@ -9,7 +9,7 @@
         <ShowMob>true</ShowMob>
         <ShowMarker>true</ShowMarker>
         <ShowTargetLine>true</ShowTargetLine>
-        <Ranges />
+        <Ranges></Ranges>
     </global>
     <Valka>
         <X>1133</X>
@@ -17,7 +17,7 @@
     </Valka>
     <Khory>
         <X>1364</X>
-        <Y>466</Y>
+        <Y>465</Y>
         <Zoom>40</Zoom>
     </Khory>
     <Lorah>

@@ -47,6 +47,17 @@ return {
                 ["ws_cmd"] = "/ws \"'Blade: Ten'\" <t>"
             }
         },
+        ["PUP"] = {
+            ["Hand-to-Hand"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"asuran fists\" <t>"
+            }
+        },
         ["RDM"] = {
             ["Staff"] = {
                 ["hps"] = {
@@ -81,7 +92,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"dimidiation\" <t>"
+                ["ws_cmd"] = "/ws \"resolution\" <t>"
             }
         },
         ["SAM"] = {
@@ -117,6 +128,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"upheaval\" <t>"
             },
@@ -125,6 +137,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"resolution\" <t>"
             },
@@ -133,16 +146,18 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"asuran fists\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
+                ["ws_cmd"] = "/ws \"upheaval\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {

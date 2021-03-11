@@ -50,7 +50,7 @@
   <plGainBoost>true</plGainBoost>
   <plGainBoost_Spell>0</plGainBoost_Spell>
   <plBarElement>true</plBarElement>
-  <plBarElement_Spell>0</plBarElement_Spell>
+  <plBarElement_Spell>4</plBarElement_Spell>
   <AOE_Barelemental>true</AOE_Barelemental>
   <plBarStatus>true</plBarStatus>
   <plBarStatus_Spell>2</plBarStatus_Spell>

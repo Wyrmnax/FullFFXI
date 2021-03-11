@@ -47,7 +47,6 @@ consolebg position 15 50
 lua load parse
 lua load skillchains
 lua load autorun
-lua load ruptchat
 lua load autows
 lua load react
 lua load shout_ml

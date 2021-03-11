@@ -4,6 +4,13 @@
         <auto>true</auto>
         <language>English</language>
         <sets>
+            <abyssea>
+                <1>Sylvie (UC)</1>
+                <2>Joachim</2>
+                <3>Ulmia</3>
+                <4>Koru-Moru</4>
+                <5>Kupipi</5>
+            </abyssea>
             <alexander>
                 <1>Qultada</1>
                 <2>Selh&apos;teus</2>
@@ -12,10 +19,10 @@
                 <5>Karaha-Baruha</5>
             </alexander>
             <default>
-                <1>Sylvie (UC)</1>
-                <2>Qultada</2>
-                <3>Karaha-Baruha</3>
-                <4>August</4>
+                <1>August</1>
+                <2>Sylvie (UC)</2>
+                <3>Qultada</3>
+                <4>Karaha-Baruha</4>
                 <5>Ulmia</5>
             </default>
             <leveling>
@@ -40,11 +47,11 @@
                 <5>Ulmia</5>
             </notank>
             <odyssey>
-                <1>August</1>
-                <2>Qultada</2>
-                <3>Koru-Moru</3>
+                <1>AAEV</1>
+                <2>Arciela</2>
+                <3>Selh&apos;teus</3>
                 <4>Karaha-Baruha</4>
-                <5>Selh&apos;teus</5>
+                <5>Qultada</5>
             </odyssey>
         </sets>
         <wait>

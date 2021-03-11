@@ -11,6 +11,7 @@
 wait 5;
 load LuaCore;
 load AutoExec;
+load ChatMon;
 load DelayMeNot;
 load FFXIDB;
 load JaZero;
@@ -23,7 +24,7 @@ lua load AutoRA;
 lua load azureSets;
 lua load cancel;
 lua load checkparam;
-lua load distance;
+lua load Debuffed;
 lua load DistancePlus;
 lua load enternity;
 lua load findAll;

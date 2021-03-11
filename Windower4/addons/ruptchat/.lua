@@ -1,5 +1,0 @@
-return {
-    ["Tell"]={}, 
-    ["Battle"]={}, 
-    ["General"]={}
-}

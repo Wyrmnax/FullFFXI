@@ -55,7 +55,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"asuran fists\" <t>"
+                ["ws_cmd"] = "/ws \"howling fist\" <t>"
             }
         },
         ["RDM"] = {
@@ -90,9 +90,18 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = true,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"dimidiation\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"resolution\" <t>"
+                ["ws_cmd"] = "/ws \"dimidiation\" <t>"
             }
         },
         ["SAM"] = {
@@ -120,6 +129,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"judgment\" <t>"
             },
@@ -130,7 +140,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"upheaval\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -139,7 +149,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"resolution\" <t>"
+                ["ws_cmd"] = "/ws \"upheaval\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {

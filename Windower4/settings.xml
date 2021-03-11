@@ -11,7 +11,6 @@
     <addon>rolltracker</addon>
     <addon>TParty</addon>
     <addon>timestamp</addon>
-    <addon>distance</addon>
     <addon>send</addon>
     <addon>HealBot</addon>
     <addon>shortcuts</addon>
@@ -26,6 +25,7 @@
     <addon>remember</addon>
     <addon>Trusts</addon>
     <addon>autocontrol</addon>
+    <addon>Debuffed</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>
@@ -33,6 +33,7 @@
     <plugin>Sandbox</plugin>
     <plugin>DelayMeNot</plugin>
     <plugin>FFXIDB</plugin>
+    <plugin>ChatMon</plugin>
   </autoload>
   <profile name="">
     <consolekey>Insert</consolekey>

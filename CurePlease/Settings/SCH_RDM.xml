@@ -48,7 +48,7 @@
   <plProtectra>false</plProtectra>
   <plProtectra_Level>5</plProtectra_Level>
   <plGainBoost>false</plGainBoost>
-  <plGainBoost_Spell>0</plGainBoost_Spell>
+  <plGainBoost_Spell>10</plGainBoost_Spell>
   <plBarElement>false</plBarElement>
   <plBarElement_Spell>0</plBarElement_Spell>
   <AOE_Barelemental>false</AOE_Barelemental>
@@ -59,7 +59,7 @@
   <plRegen>true</plRegen>
   <plRegen_Level>5</plRegen_Level>
   <plReraise>true</plReraise>
-  <plReraise_Level>1</plReraise_Level>
+  <plReraise_Level>3</plReraise_Level>
   <plRefresh>false</plRefresh>
   <plRefresh_Level>1</plRefresh_Level>
   <plProtect>true</plProtect>
@@ -72,7 +72,7 @@
   <plEnspell>false</plEnspell>
   <plEnspell_Spell>0</plEnspell_Spell>
   <plStormSpell>false</plStormSpell>
-  <plStormSpell_Spell>0</plStormSpell_Spell>
+  <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>
   <plKlimaform>false</plKlimaform>
   <plAquaveil>false</plAquaveil>
@@ -91,14 +91,14 @@
   <refreshAccession>false</refreshAccession>
   <blinkPerpetuance>false</blinkPerpetuance>
   <blinkAccession>false</blinkAccession>
-  <phalanxPerpetuance>true</phalanxPerpetuance>
-  <phalanxAccession>true</phalanxAccession>
+  <phalanxPerpetuance>false</phalanxPerpetuance>
+  <phalanxAccession>false</phalanxAccession>
   <stoneskinPerpetuance>false</stoneskinPerpetuance>
-  <stoneskinAccession>true</stoneskinAccession>
+  <stoneskinAccession>false</stoneskinAccession>
   <enspellPerpetuance>false</enspellPerpetuance>
   <enspellAccession>false</enspellAccession>
-  <stormspellPerpetuance>false</stormspellPerpetuance>
-  <stormspellAccession>false</stormspellAccession>
+  <stormspellPerpetuance>true</stormspellPerpetuance>
+  <stormspellAccession>true</stormspellAccession>
   <adloquiumPerpetuance>true</adloquiumPerpetuance>
   <adloquiumAccession>true</adloquiumAccession>
   <aquaveilPerpetuance>false</aquaveilPerpetuance>

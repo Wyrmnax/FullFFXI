@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Blurred Shield +1",
+    ammo="Coiste Bodhar",
+    head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="War. Beads +2", augments={'Path: A',}},
+    waist="Ioskeha Belt +1",
+    left_ear="Cessance Earring",
+    right_ear="Schere Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

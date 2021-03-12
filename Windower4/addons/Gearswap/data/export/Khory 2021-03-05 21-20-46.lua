@@ -1,0 +1,17 @@
+sets.exported={
+    main="Epeolatry",
+    sub="Utu Grip",
+    ammo="Staunch Tathlum +1",
+    head="Aya. Zucchetto +2",
+    body="Ayanmo Corazza +2",
+    hands="Turms Mittens +1",
+    legs="Meg. Chausses +1",
+    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+    neck={ name="Futhark Torque +1", augments={'Path: A',}},
+    waist="Windbuffet Belt +1",
+    left_ear="Sherida Earring",
+    right_ear="Telos Earring",
+    left_ring="Defending Ring",
+    right_ring="Moonbeam Ring",
+    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}

@@ -21,9 +21,9 @@ function get_sets()
 	include('Gearsets/'..player.name..'/WAR_Gearsets.lua')
 
 -- Define Default Values for Variables
-	DW = 0
-	DT = 0
-	ACC = 0
+	Mode = 0
+	PDT = 0
+	MDT = 0
 	ShadowType = 'None'
 	FighterRoll = false
 	
@@ -49,12 +49,14 @@ windower.register_event('lose buff', function(buff)
 end)
 
 function self_command(command)
-   -- Lock DT
-	if command == 'DT' then
-		if DT == 1 then
-			windower.add_to_chat(121,'DT Unlocked')
-			-- set value
-			DT = 0
+   -- Lock PDT
+	if command == 'PDT' then
+		if PDT == 1 then
+			windower.add_to_chat(121,'PDT Unlocked')
+			-- make sure other values are set to default
+			PDT = 0
+			-- Unlock MDT set and equip Current TP set
+			MDT = 0
 			-- Place Me in my previous set.
 			if player.status == 'Engaged' then
 				previous_set()
@@ -62,17 +64,21 @@ function self_command(command)
 				equip(sets.idle.Standard)
 			end
 		else
+		-- Make sure other values are set to default
+			MDT = 0
 		-- Set PDT set and equip it
-			DT = 1
-			equip(sets.idle.DT)
-			windower.add_to_chat(121,'DT Set Locked')
+			PDT = 1
+			equip(sets.idle.PDT)
+			windower.add_to_chat(121,'PDT Set Locked')
 		end
---  Lock DW
-	elseif command == 'DW' then
-		if DW == 1 then
-		-- Unlock DW set and equip Current TP set
-			DW = 0
-			windower.add_to_chat(121,'DW Unlocked')
+--  Lock MDT
+	elseif command == 'MDT' then
+		if MDT == 1 then
+		-- make sure other values are set to default
+			PDT = 0
+		-- Unlock MDT set and equip Current TP set
+			MDT = 0
+			windower.add_to_chat(121,'MDT Unlocked')
 		-- Place Me in my previous set.
 			if player.status == 'Engaged' then
 				previous_set()
@@ -80,41 +86,39 @@ function self_command(command)
 				equip(sets.idle.Standard)
 			end
 		else
-		-- lock DW set and equip it
-			DW = 1
-			equip(sets.idle.DT.DW)
-			windower.add_to_chat(121,'DW Set Locked')
+		-- make sure other values are set to default
+			PDT = 0
+		-- lock MDT set and equip it
+			MDT = 1
+			equip(sets.idle.MDT)
+			windower.add_to_chat(121,'MDT Set Locked')
 		end
-	elseif command == 'ACC' then		
-		if ACC == 1 then
-		-- Unlock ACC set and equip Current TP set
-			ACC = 0
-			windower.add_to_chat(121,'ACC Unlocked')
-		-- Place Me in my previous set.
+	elseif command == 'TP' then
+		if PDT == 1 or MDT == 1 then
+			-- Reset to Default
+			PDT = 0
+			MDT = 0
+			-- Place me in previous set
 			if player.status == 'Engaged' then
 				previous_set()
 			else
 				equip(sets.idle.Standard)
 			end
 		else
-		-- lock DW set and equip it
-			ACC = 1
-			if DT == 1 then
-				if DW == 1 then
-					equip(sets.idle.DT.DW.ACC)
-				else
-					equip(sets.idle.DT.ACC)
-				end
+			if Mode >= 2 then
+			-- Reset to 0
+				Mode = 0
 			else
-				if DW == 1 then
-					equip(sets.idle.DW)
-				else
-					equip(sets.idle.ACC)
-				end
-		end		
-		windower.add_to_chat(121,'ACC Set Locked')
-	end
-			
+			-- Increment by 1
+				Mode = Mode + 1
+			end
+			-- Place me in previous set
+			if player.status == 'Engaged' then
+				previous_set()
+			else
+				equip(sets.idle.Standard)
+			end
+		end
 	elseif command == 'twilight' then
 		-- Twilight Helm/Mail logic
 		if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then
@@ -140,9 +144,9 @@ function status_change(new,old)
 		else	
 			if PDT == 1 then
 				if buffactive['Weakness'] or player.hpp < 30 then
-					equip(sets.idle.DT,{head="Twilight Helm",body="Twilight Mail"})
+					equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
 				else
-					equip(sets.idle.DT)
+					equip(sets.idle.PDT)
 				end
 			elseif MDT == 1 then
 				equip(sets.idle.MDT)
@@ -160,9 +164,9 @@ function status_change(new,old)
 		-- Engaged Sets
 		if PDT == 1 then
 			if buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.DT,{head="Twilight Helm",body="Twilight Mail"})
+				equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
 			else
-				equip(sets.idle.DT)
+				equip(sets.idle.PDT)
 			end
 		elseif MDT == 1 then
 			equip(sets.idle.MDT)
@@ -276,9 +280,9 @@ function aftercast(spell,arg)
 		if player.status == 'Engaged' then
 			if PDT == 1 then
 				if buffactive['Weakness'] or player.hpp < 30 then
-					equip(sets.idle.DT,{head="Twilight Helm",body="Twilight Mail"})
+					equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
 				else
-					equip(sets.idle.DT)
+					equip(sets.idle.PDT)
 				end
 			elseif MDT == 1 then
 				equip(sets.idle.MDT)
@@ -288,9 +292,9 @@ function aftercast(spell,arg)
 		else
 			if PDT == 1 then
 				if buffactive['Weakness'] or player.hpp < 30 then
-					equip(sets.idle.DT,{head="Twilight Helm",body="Twilight Mail"})
+					equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
 				else
-					equip(sets.idle.DT)
+					equip(sets.idle.PDT)
 				end
 			elseif MDT == 1 then
 				equip(sets.idle.MDT)

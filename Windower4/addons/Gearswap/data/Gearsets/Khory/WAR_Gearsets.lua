@@ -11,7 +11,7 @@ if player.name == 'Khory' then
 	include('include/equipment.lua')
 	-- include('../include/autoexec.lua')	
 	
-	send_command('wait 6;input /lockstyleset 1')
+	--send_command('wait 6;input /lockstyleset 1')
 	
 -- sets Macros off = 0  on = 1
 		automacroset = 1
@@ -65,13 +65,8 @@ sets.idle.DT = {
     right_ear="Schere Earring",
     left_ring="Hetairoi Ring",
     right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
-
-sets.idle.DT.ACC = {}
-
-sets.idle.DT.DW = {}
-
-sets.idle.DT.DW.ACC = {}
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 
 sets.misc.Town = set_combine(sets.idle.DT, {right_ring="Shneddick Ring"})
 				
@@ -80,7 +75,9 @@ sets.idle.Standard = set_combine(sets.misc.Town, {
 
 sets.Enmity = {}
 
--- TP set
+-- TP sets
+
+--Standard TP
 sets.TP = {  
 	ammo="Coiste Bodhar",
     head="Flam. Zucchetto +2",
@@ -90,55 +87,54 @@ sets.TP = {
     feet="Pumm. Calligae +3",
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
-    --left_ear="Telos Earring",
-    right_ear="Schere Earring",
-	left_ear="Suppanomimi",
-    left_ring="Hetairoi Ring",
-    right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-	}
-
-sets.TP.Fighters = set_combine(sets.TP, {
-	ammo="Ginsen",	
-    right_ear="Dedition Earring"
-	})
-
-sets.TP.Acc = {  ammo="Seeth. Bomblet +1",
-    head="Flam. Zucchetto +2",
-    body="Pumm. Lorica +3",
-    hands="Sakpata's Gauntlets",
-    legs="Pumm. Cuisses +3",
-    feet="Pumm. Calligae +3",
-    neck={ name="War. Beads +2", augments={'Path: A',}},
-    waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
-    right_ear="Dedition Earring",
-    right_ring="Niqmaddu Ring",
+    right_ear="Schere Earring",
+	--left_ear="Suppanomimi",
     left_ring="Hetairoi Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    right_ring="Niqmaddu Ring",
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},	
 	}
--- GreatAxe TP 
-sets.TP.GA = set_combine(sets.misc.TP, {
-				})
-
--- Ionis Haste +2% Save TP 25+
-sets.TP.GA.Ionis = set_combine(sets.TP.GA, {
-	})
-
--- Great Axe Accuracy TP
-sets.TP.GA.Acc = set_combine(sets.TP.Acc, {
-				})
-
-sets.TP.GA.Acc.Ionis = set_combine(sets.TP.GA.Acc,{
-	})
 	
--- GreatSword
-sets.TP.GS = set_combine(sets.misc.TP, {
+					
+sets.TP.DT = set_combine(sets.TP, {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="War. Beads +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Brutal Earring",
+    right_ear="Schere Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 				})
+	
+sets.TP.DW = set_combine(sets.TP,{
+	hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
+    left_ear="Suppanomimi",
+	})
+
+sets.TP.DW.DT = set_combine(sets.TP.DT, {
+	hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
+    left_ear="Suppanomimi",
+				})	
+
+--sets.TP.DW.ATK = set_combine(sets.TP, {
+--				})
+	
+--sets.TP.DW.DT.ATK = set_combine(sets.TP, {
+--				})
 
 
-sets.TP.GS.Acc = set_combine(sets.TP.Acc, {
-				})
+--sets.TP.DT.ATK = set_combine(sets.TP.DT, {
+--	})
+	
+--sets.TP.ATK = set_combine(sets.TP.DT, {
+--				})
+				
 	
 sets.TH = {
 	ammo="Per. Lucky Egg",
@@ -183,9 +179,6 @@ sets.precast.WS = {
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
-	
-sets.precast.WS.MS = set_combine(sets.precast.WS, {
-	})
 		
 sets.precast.WS.wsd = {
 	ammo="Knobkierrie",

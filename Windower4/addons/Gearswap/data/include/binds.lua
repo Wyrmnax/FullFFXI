@@ -43,7 +43,7 @@ if player.main_job == "WAR" then
 	-- set binds
 	windower.send_command('@bind f10 gs c DW')
 	windower.send_command('@bind f11 gs c DT')
-	windower.send_command('@bind f12 gs c ACC')
+	windower.send_command('@bind f12 gs c ATK')
 	
 elseif player.main_job == "MNK" then
 	basic_binds()

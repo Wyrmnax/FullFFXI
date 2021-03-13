@@ -195,23 +195,8 @@ sets.precast.WS.wsd = {
     left_ring="Beithir Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
-	
-sets.precast.WS.Acc = {
-	ammo="Knobkierrie",
-    head="Agoge Mask +3",
-    body="Pumm. Lorica +3",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},
-    feet="Sulev. Leggings +2",
-    neck="War. Beads +2",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Thrud Earring",
-    right_ring="Niqmaddu Ring",
-    left_ring="Beithir Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
-	}
-	
+
+-- THIS IS NOT WORKING!	
 sets.precast.WS.MAB = {
 	ammo="Seeth. Bomblet +1",
     head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},

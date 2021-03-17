@@ -35,6 +35,9 @@ Long term
 - Epeolatry
 
 
+ [VICD-338] [T28-481] [JUFD-757] [BBAN-088] [PPSD-050] [JUFD-948] 
+[VRTM-332] [RKI-426] [NITR-210] [IPZ-712] [MIGD-693] [AVOP-372] [VICD-341] 
+[PGD-872] [HND-290] [RCT-838] [LZPL-028] [URPW-024] [WANZ-481]
 
 jobs to keep
 WAR / COR / SCH / SMN / WHM / ... RUN?

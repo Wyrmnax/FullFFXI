@@ -14,7 +14,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
@@ -55,7 +55,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"victory smite\" <t>"
+                ["ws_cmd"] = "/ws \"howling fist\" <t>"
             }
         },
         ["RDM"] = {
@@ -131,7 +131,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"judgment\" <t>"
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -140,7 +140,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"upheaval\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -176,7 +176,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"upheaval\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         }
     },

@@ -97,8 +97,8 @@
   <stoneskinAccession>false</stoneskinAccession>
   <enspellPerpetuance>false</enspellPerpetuance>
   <enspellAccession>false</enspellAccession>
-  <stormspellPerpetuance>true</stormspellPerpetuance>
-  <stormspellAccession>true</stormspellAccession>
+  <stormspellPerpetuance>false</stormspellPerpetuance>
+  <stormspellAccession>false</stormspellAccession>
   <adloquiumPerpetuance>true</adloquiumPerpetuance>
   <adloquiumAccession>true</adloquiumAccession>
   <aquaveilPerpetuance>false</aquaveilPerpetuance>

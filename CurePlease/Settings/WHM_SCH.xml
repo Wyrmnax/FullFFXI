@@ -141,7 +141,7 @@
   <AfflatusSolace>true</AfflatusSolace>
   <AfflatusMisery>false</AfflatusMisery>
   <DivineSeal>true</DivineSeal>
-  <Devotion>true</Devotion>
+  <Devotion>false</Devotion>
   <DivineCaress>true</DivineCaress>
   <Composure>false</Composure>
   <Convert>false</Convert>

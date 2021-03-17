@@ -44,7 +44,7 @@ if player.name == 'Khory' then
 -- Standard/idle
 sets.idle.PDT = { 
 	ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +1", augments={'Enhances "Battuta" effect',}},
+    head="Nyame helm",
     body="Runeist's Coat +2",
     hands="Turms Mittens +1",
     legs="Eri. Leg Guards +1",
@@ -61,7 +61,7 @@ sets.idle.PDT = {
 
 sets.idle.MDT = { 
 	ammo="Staunch Tathlum +1",
-    head={ name="Fu. Bandeau +1", augments={'Enhances "Battuta" effect',}},
+    head="Nyame helm",
     body="Runeist's Coat +2",
     hands="Turms Mittens +1",
     legs="Eri. Leg Guards +1",
@@ -104,7 +104,7 @@ sets.TP = {
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
     hands="Turms Mittens +1",
-    legs="Meg. Chausses +1",
+    legs="Meg. Chausses +2",
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
     waist="Ioskeha Belt +1",

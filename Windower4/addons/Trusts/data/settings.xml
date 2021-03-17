@@ -12,19 +12,19 @@
                 <5>Kupipi</5>
             </abyssea>
             <alexander>
-                <1>Qultada</1>
-                <2>Selh&apos;teus</2>
-                <3>Joachim</3>
-                <4>Cherukiki</4>
-                <5>Karaha-Baruha</5>
+                <1>Selh&apos;teus</1>
+                <2>Cherukiki</2>
+                <3>Qultada</3>
+                <4>Pieuje (UC)</4>
+                <5>Arciela</5>
             </alexander>
             <default>
                 <1>August</1>
-                <2>Sylvie (UC)</2>
-                <3>Qultada</3>
-                <4>Karaha-Baruha</4>
-                <5>Ulmia</5>
-            </default>
+                <2>Qultada</2>
+                <3>Karaha-Baruha</3>
+                <4>Ulmia</4>
+                <5>Pieuje (UC)</5>
+            </default>            
             <leveling>
                 <1>August</1>
                 <2>Shantotto II</2>
@@ -33,18 +33,18 @@
                 <5>Koru-Moru</5>
             </leveling>
             <lilith>
-                <1>Sylvie (UC)</1>
-                <2>Star Sibyl</2>
-                <3>Koru-Moru</3>
-                <4>Cherukiki</4>
-                <5>Kupipi</5>
+                <1>Star Sibyl</1>
+                <2>Koru-Moru</2>
+                <3>Cherukiki</3>
+                <4>Kupipi</4>
+                <5>Pieuje (UC)</5>
             </lilith>
             <notank>
-                <1>Sylvie (UC)</1>
+                <1>Koru-Moru</1>
                 <2>Qultada</2>
-                <3>Koru-Moru</3>
-                <4>Karaha-Baruha</4>
-                <5>Ulmia</5>
+                <3>Ulmia</3>
+                <4>Arciela</4>
+                <5>Pieuje (UC)</5>
             </notank>
             <odyssey>
                 <1>AAEV</1>

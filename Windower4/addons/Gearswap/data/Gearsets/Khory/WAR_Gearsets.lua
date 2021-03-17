@@ -161,16 +161,15 @@ sets.precast.JA["Aggressive Aim"] = {body="Warrior's Lorica +2"}
 -- Weaponskills
 sets.precast.WS = {    
     ammo="Seeth. Bomblet +1",
-	head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
+	--head="Sakpata's Helm",
+    --body="Sakpata's Plate",
+    --hands="Sakpata's Gauntlets",
+    --feet="Sakpata's Leggings",
+    head="Flam. Zucchetto +2",
+    body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
+    hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    --head="Flam. Zucchetto +2",
-    --body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
-    --hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
-    --legs={ name="Argosy Breeches", augments={'STR+10','DEX+10','Attack+15',}},
-    --feet="Flam. Gambieras +2",
+    feet="Flam. Gambieras +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Cessance Earring",
@@ -199,17 +198,17 @@ sets.precast.WS.wsd = {
 -- THIS IS NOT WORKING!	
 sets.precast.WS.MAB = {
 	ammo="Seeth. Bomblet +1",
-    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
+    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    body="Pumm. Lorica +3",
     hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs={ name="Odyssean Cuisses", augments={'Weapon skill damage +3%','VIT+10','Accuracy+14',}},
-    feet={ name="Valorous Greaves", augments={'Pet: Haste+4','Crit.hit rate+3','Weapon skill damage +6%','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
+    legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},
+    feet={ name="Odyssean Greaves", augments={'"Mag.Atk.Bns."+20','Weapon skill damage +3%','STR+3','Mag. Acc.+11',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
-    left_ear="Friomisi Earring",
-    right_ear="Moldavite Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomisi Earring",
+    left_ring="Beithir Ring",
     right_ring="Niqmaddu Ring",
-    left_ring="Flamma Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 		
@@ -218,6 +217,10 @@ sets.precast.WS.MAB = {
 	})
 	
 	sets.precast.WS["Mistral Axe"] = set_combine(sets.precast.WS.wsd, { 
+	})
+	
+	sets.precast.WS["Cloudsplitter"] = set_combine(sets.precast.WS.MAB, { 	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 --Sword

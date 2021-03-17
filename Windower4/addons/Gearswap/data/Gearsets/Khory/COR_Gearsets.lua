@@ -36,19 +36,19 @@ if player.name == 'Khory' then
 		
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = {    
-    ammo="Chrono Bullet",
+sets.idle.PDT = {    	
+	ammo="Chrono Bullet",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Meg. Gloves +2",
     legs="Malignance Tights",
     feet="Malignance Boots",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Telos Earring",
-    right_ear="Suppanomimi",
-    left_ring="Defending Ring",
-    right_ring="Apate Ring",
+    neck="Lissome Necklace",
+    waist="Windbuffet Belt +1",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
 
 sets.idle.MDT = { 

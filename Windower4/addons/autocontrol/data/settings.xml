@@ -4,9 +4,41 @@
         <AutoActivate>true</AutoActivate>
         <AutoDeusExAutomata>false</AutoDeusExAutomata>
         <autosets>
+            <dd>
+                <frame>sharpshot frame</frame>
+                <head>valoredge head</head>
+                <slot01>inhibitor</slot01>
+                <slot02>inhibitor ii</slot02>
+                <slot03>attuner</slot03>
+                <slot04>auto-repair kit iv</slot04>
+                <slot05>magniplug ii</slot05>
+                <slot06>speedloader ii</slot06>
+                <slot07>truesights</slot07>
+                <slot08>turbo charger</slot08>
+                <slot09>turbo charger ii</slot09>
+                <slot10>optic fiber</slot10>
+                <slot11>optic fiber ii</slot11>
+                <slot12>coiler ii</slot12>
+            </dd>
             <default>
 
             </default>
+            <meleedd>
+                <frame>valoredge frame</frame>
+                <head>valoredge head</head>
+                <slot01>turbo charger</slot01>
+                <slot02>turbo charger ii</slot02>
+                <slot03>speedloader</slot03>
+                <slot04>coiler ii</slot04>
+                <slot05>auto-repair kit iv</slot05>
+                <slot06>magniplug ii</slot06>
+                <slot07>inhibitor</slot07>
+                <slot08>inhibitor ii</slot08>
+                <slot09>attuner</slot09>
+                <slot10>optic fiber</slot10>
+                <slot11>optic fiber ii</slot11>
+                <slot12>speedloader ii</slot12>
+            </meleedd>
             <overdrive>
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>
@@ -43,16 +75,16 @@
                 <frame>valoredge frame</frame>
                 <head>valoredge head</head>
                 <slot01>auto-repair kit iii</slot01>
-                <slot02>steam jacket</slot02>
-                <slot03>turbo charger</slot03>
-                <slot04>turbo charger ii</slot04>
-                <slot05>tension spring iv</slot05>
-                <slot06>optic fiber</slot06>
-                <slot07>armor plate ii</slot07>
-                <slot08>armor plate iii</slot08>
-                <slot09>stabilizer ii</slot09>
-                <slot10>magniplug</slot10>
-                <slot11>magniplug ii</slot11>
+                <slot02>optic fiber</slot02>
+                <slot03>armor plate ii</slot03>
+                <slot04>armor plate iii</slot04>
+                <slot05>steam jacket</slot05>
+                <slot06>turbo charger</slot06>
+                <slot07>turbo charger ii</slot07>
+                <slot08>stabilizer ii</slot08>
+                <slot09>coiler</slot09>
+                <slot10>tension spring ii</slot10>
+                <slot11>tension spring iii</slot11>
                 <slot12>heatsink</slot12>
             </upinarms>
         </autosets>

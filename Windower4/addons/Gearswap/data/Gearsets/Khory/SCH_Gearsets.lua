@@ -35,10 +35,10 @@ if player.Name == 'Khory' then
 		-- Auto Sets
 		-- Standard/idle
 		sets.idle.PDT = {    
-		main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Niobid Strap",
-    ammo="Ghastly Tathlum +1",
-    head="Acad. Mortar. +2",
+	main="Bolelabunga",
+	sub="Ammurapi Shield",
+    ammo="Staunch Tathlum +1",
+    head="Acad. Mortar. +3",
     body="Shamash Robe",
     hands="Arbatel Bracers +1",
     legs="Assid. Pants +1",
@@ -51,11 +51,11 @@ if player.Name == 'Khory' then
     right_ring="Shneddick Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
-		sets.idle.MDT = {
-		    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Niobid Strap",
-    ammo="Ghastly Tathlum +1",
-    head="Acad. Mortar. +2",
+		sets.idle.MDT = { 
+	main="Bolelabunga",
+	sub="Ammurapi Shield",
+    ammo="Staunch Tathlum +1",
+    head="Acad. Mortar. +3",
     body="Shamash Robe",
     hands="Arbatel Bracers +1",
     legs="Assid. Pants +1",
@@ -117,8 +117,8 @@ if player.Name == 'Khory' then
 		-- Elemental
 		-- High Resist
 		sets.midcast.Elemental = {
-		    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Niobid Strap",
+	main="Bunzi's Rod",
+	sub="Ammurapi Shield",
     ammo="Ghastly Tathlum +1",
     head={ name="Merlinic Hood", augments={'Mag. Acc.+13 "Mag.Atk.Bns."+13','Magic burst dmg.+10%','Mag. Acc.+8','"Mag.Atk.Bns."+3',}},
     body="Amalric Doublet +1",
@@ -135,8 +135,9 @@ if player.Name == 'Khory' then
 	}
 		-- Damage
 		sets.midcast.Nuke = {
-		    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Niobid Strap",
+    main="Bunzi's Rod",
+	sub="Ammurapi Shield",
+    ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head={ name="Merlinic Hood", augments={'Mag. Acc.+13 "Mag.Atk.Bns."+13','Magic burst dmg.+10%','Mag. Acc.+8','"Mag.Atk.Bns."+3',}},
     body="Amalric Doublet +1",
@@ -163,8 +164,8 @@ if player.Name == 'Khory' then
 	})
 	
 	sets.midcast.Kaustra ={
-		    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Niobid Strap",
+    main="Bunzi's Rod",
+	sub="Ammurapi Shield",
     ammo="Ghastly Tathlum +1",
     head="Pixie Hairpin +1",
     body="Merlinic Jubbah",

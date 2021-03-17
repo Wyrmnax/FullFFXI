@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="EasyFarm.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d"
+             d:DesignHeight="281.856"
+             d:DesignWidth="400">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <Expander Header="Battle Settings" Margin="0, 5">
+                <UniformGrid>
+                    <CheckBox Content="Engage"
+                      ToolTip="Sets whether the player should engage the target."
+                      IsChecked="{Binding ShouldEngage}" 
+                      Margin="5, 5" />
+                    <CheckBox Content="Approach"
+                      ToolTip="Sets whether the player should approach the target."
+                      IsChecked="{Binding ShouldApproach}"
+                      Margin="5, 5" />
+                    <CheckBox Content="Use Tab Targeting"
+                      ToolTip="Sets whether the player should use tabbing for targeting."
+                      IsChecked="{Binding EnableTabTargeting}" 
+                      Margin="5, 5" />
+                    <CheckBox Content="Home Point On Death"
+                      ToolTip="Sets whether the player should return to homepoint on death."
+                      IsChecked="{Binding HomePointOnDeath}"
+                      Margin="5, 5" />
+                </UniformGrid>
+            </Expander>
+            <Expander Header="Trust Settings" Margin="0, 5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Margin="5"
+                        Content="Trust Party Size" />
+                    <controls:NumericUpDown 
+                        Grid.Column="1"
+                        Margin="5"
+                        ToolTip="Sets the maximum allowable number of trusts in the party."
+                        Value="{Binding TrustPartySize}"  />
+                </Grid>
+            </Expander>
+            <Expander Header="Misc Settings" Margin="0,2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Detection Distance" />
+                    <Slider Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            Minimum="0"
+                            Maximum="50"
+                            Value="{Binding DetectionDistance}" />
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Content="Height Threshold" />
+                    <Slider Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            Minimum="0"
+                            Maximum="50"
+                            Value="{Binding HeightThreshold}" />
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           Content="Melee Distance" />
+                    <Slider Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            Minimum="0"
+                            Maximum="50"
+                            Value="{Binding MeleeDistance}" />
+                    <Label Grid.Row="3"
+                           Grid.Column="0"
+                           Content="Wander Distance" />
+                    <Slider Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            Minimum="0"
+                            Maximum="50"
+                            Value="{Binding WanderDistance}" />
+                    <Label Grid.Row="4"
+                           Grid.Column="0"
+                           Content="Global Cooldown" />
+                    <Slider Grid.Row="4"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                            Minimum="0"
+                            Maximum="10000"
+                            SmallChange="100"
+                            Value="{Binding GlobalCooldown}" />
+                    <Label Grid.Row="5"
+                           Grid.Column="0"
+                           Content="Avoid Objects" />
+                    <CheckBox Grid.Row="5"
+                            Grid.Column="1"
+                            Margin="5 0 0 0"
+                              IsChecked="{Binding AvoidObjects}" />
+                    <Button Grid.Row="6"
+                            Grid.ColumnSpan="2" Grid.Column="0"
+                                Margin="0 5 0 0"
+                            Command="{Binding RestoreDefaultsCommand}"
+                            Content="Restore Defaults" />
+                </Grid>
+            </Expander>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

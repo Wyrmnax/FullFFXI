@@ -48,7 +48,7 @@
   <plProtectra>true</plProtectra>
   <plProtectra_Level>5</plProtectra_Level>
   <plGainBoost>true</plGainBoost>
-  <plGainBoost_Spell>0</plGainBoost_Spell>
+  <plGainBoost_Spell>7</plGainBoost_Spell>
   <plBarElement>true</plBarElement>
   <plBarElement_Spell>4</plBarElement_Spell>
   <AOE_Barelemental>true</AOE_Barelemental>
@@ -85,7 +85,7 @@
   <accessionProShell>false</accessionProShell>
   <AccessionRegen>false</AccessionRegen>
   <PerpetuanceRegen>false</PerpetuanceRegen>
-  <regenPerpetuance>true</regenPerpetuance>
+  <regenPerpetuance>false</regenPerpetuance>
   <regenAccession>true</regenAccession>
   <refreshPerpetuance>false</refreshPerpetuance>
   <refreshAccession>false</refreshAccession>

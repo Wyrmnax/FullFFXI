@@ -221,6 +221,7 @@ end)
 
 windower.register_event('job change', function()
     enabled = false
+	keepAM = false
 end)
 
 windower.register_event('prerender', function()

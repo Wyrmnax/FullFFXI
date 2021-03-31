@@ -6,7 +6,6 @@
     <addon>cancel</addon>
     <addon>DistancePlus</addon>
     <addon>enternity</addon>
-    <addon>GearSwap</addon>
     <addon>Omen</addon>
     <addon>rolltracker</addon>
     <addon>TParty</addon>
@@ -26,6 +25,8 @@
     <addon>Trusts</addon>
     <addon>autocontrol</addon>
     <addon>Debuffed</addon>
+    <addon>instaLS</addon>
+    <addon>GearSwap</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

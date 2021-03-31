@@ -198,11 +198,11 @@ sets.precast.WS.wsd = {
 -- THIS IS NOT WORKING!	
 sets.precast.WS.MAB = {
 	ammo="Seeth. Bomblet +1",
-    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
-    body="Pumm. Lorica +3",
+    head="Nyame Helm",
+    body="Sacro Breastplate",
     hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},
-    feet={ name="Odyssean Greaves", augments={'"Mag.Atk.Bns."+20','Weapon skill damage +3%','STR+3','Mag. Acc.+11',}},
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -275,6 +275,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS,
 -- Polearm
 sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.wsd, 
 {
+	body = "Hjarrandi Breast.",
 })
 
 -- Club
@@ -289,7 +290,9 @@ sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.wsd,
 				
 -- Misc Sets
 sets.precast.Fastcast = set_combine(sets.idle.DT, {
-				head="Cizin Helm", lear="Loquac. Earring", 
+				head="Cizin Helm", 
+				lear="Loquac. Earring", 
+				body="Sacro Breastplate",
 				rring="Prolix Ring"})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})

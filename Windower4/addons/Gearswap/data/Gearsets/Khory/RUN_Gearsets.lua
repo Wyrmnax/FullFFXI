@@ -45,10 +45,10 @@ if player.name == 'Khory' then
 sets.idle.PDT = { 
 	ammo="Staunch Tathlum +1",
     head="Nyame helm",
-    body="Runeist's Coat +2",
+    body="Nyame mail",
     hands="Turms Mittens +1",
-    legs="Eri. Leg Guards +1",
-    feet="Erilaz Greaves +1",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
@@ -62,10 +62,10 @@ sets.idle.PDT = {
 sets.idle.MDT = { 
 	ammo="Staunch Tathlum +1",
     head="Nyame helm",
-    body="Runeist's Coat +2",
+    body="Nyame mail",
     hands="Turms Mittens +1",
-    legs="Eri. Leg Guards +1",
-    feet="Erilaz Greaves +1",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
@@ -91,9 +91,12 @@ sets.idle.Evasion = {
                 back="Fravashi Mantle", waist="Flume Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"}
 
 sets.Enmity = set_combine(sets.idle.PDT, {
+	ammo="Sapience Orb",
 	body="Emet Harness +1",
     hands="Kurys Gloves",
+	waist="Audumbla Sash",
     legs="Eri. Leg Guards +1",
+	feet="Erilaz Greaves +1",
     neck="Unmoving Collar +1",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	})
@@ -133,8 +136,20 @@ sets.precast.JA["Elemental Sforzo"] = {body="Futhark Coat"}
 sets.precast.JA["Odyllic Subterfuge"] = {}
 
 sets.precast.JA["Lunge"] = {
-				head="Athos Chapeau", neck="Eddy Necklace", lear="Friomisi Earring", rear="Novio Earring",
-				back="Toro Cape", legs="Iuitl Tights"}
+	ammo="Seeth. Bomblet +1",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear="Friomisi Earring",
+    right_ear="Moldavite Earring",
+    left_ring="Mujin Band",
+    right_ring="Vertigo Ring",
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+	}
 sets.precast.JA["Valiance"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Vallation"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
@@ -179,7 +194,7 @@ sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
 
 -- INT
 sets.midcast.Spikes = set_combine(sets.idle.PDT,{lring="Icesoul Ring", rring="Icesoul Ring"})
-sets.midcast.Flash = set_combine(sets.Enmity,sets.precast.Fastcast,{})
+sets.midcast.Flash = set_combine(sets.Enmity,{})
 
 -- Weaponskills
 sets.precast.WS = {ammo="Coiste Bodhar",
@@ -194,11 +209,9 @@ sets.precast.WS = {ammo="Coiste Bodhar",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
     right_ring="Ilabrat Ring",
-    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
-sets.precast.WS.Acc = {ammo="Vanir Battery",
-				head="Whirlpool Mask", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Manibozho Jerkin", hands="Manibozho Gloves", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	}
+sets.precast.WS.Acc = {}
 
 -- GreatSword
 sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {

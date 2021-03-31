@@ -29,6 +29,7 @@ lua load DistancePlus;
 lua load enternity;
 lua load findAll;
 lua load GearSwap;
+lua load instaLS;
 lua load Omen;
 lua load organizer;
 lua load Pouches;

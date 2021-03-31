@@ -45,11 +45,13 @@ consolebg position 15 50
 //lua loading
 //lua l XIpivot
 lua load parse
+lua load myhome
 lua load skillchains
 lua load autorun
 lua load autows
 lua load react
 lua load shout_ml
+
 
 // *** ALLIANCE TARGET KEYS ***
 // This lets you push Alt+F1-6 and Ctrl+F1-6 to  to target Alliance members.

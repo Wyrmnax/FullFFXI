@@ -217,12 +217,12 @@ sets.precast.QD.ACC = {
 -- Elemental Shots
 sets.precast.QD.MAB = {
     ammo="QDBullet",
-	head={ name="Herculean Helm", augments={'INT+3','"Mag.Atk.Bns."+20','Magic Damage +23','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
+	head="Nyame Helm",
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-    legs={ name="Herculean Trousers", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Weapon skill damage +3%','INT+4','Mag. Acc.+9','"Mag.Atk.Bns."+6',}},
+    legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
-    neck="Comm. Charm +1",
+    neck={ name="Comm. Charm +1", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     right_ear="Hermetic Earring",
@@ -274,7 +274,7 @@ sets.precast.RAWS = {
     legs={ name="Herculean Trousers", augments={'Rng.Acc.+30','Weapon skill damage +4%',}},
     feet="Lanun Bottes +2",
     neck="Iskur Gorget",
-    waist="Yemaya Belt",
+    waist="Eschan Stone",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
@@ -284,10 +284,10 @@ sets.precast.RAWS = {
 	
 sets.precast.RAWS['Wildfire'] = {    
 	ammo="WSBullet",
-	head="Malignance Chapeau",
+	head="Nyame helm",
 	body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-    legs={ name="Herculean Trousers", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Weapon skill damage +3%','INT+4','Mag. Acc.+9','"Mag.Atk.Bns."+6',}},
+    legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +1",
     waist="Eschan Stone",
@@ -306,6 +306,21 @@ sets.precast.RAWS['Leaden Salute'] = set_combine(sets.precast.RAWS["Wildfire"], 
 
 sets.precast.RAWS['Last Stand'] = set_combine(sets.precast.RAWS, {
 	waist="Fotia Belt",
+	})
+
+sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {	
+	head="Malignance Chapeau",
+    body="Nyame mail",
+    hands="Meg. Gloves +2",
+    legs={ name="Herculean Trousers", augments={'Rng.Acc.+30','Weapon skill damage +4%',}},
+    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    neck="Iskur Gorget",
+    waist="Yemaya Belt",
+    left_ear="Ishvara Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Dingir Ring",
+    right_ring="Ilabrat Ring",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	})
 					
 -- Midcast Sets

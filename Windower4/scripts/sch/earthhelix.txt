@@ -1,5 +1,5 @@
 input /ja Immanence <me>;
-input /p Starting SC;
+input /p Starting SC Gravitation;
 wait 1;
 input /ma Aero <t>;
 wait 4;

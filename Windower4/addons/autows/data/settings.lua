@@ -90,7 +90,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"dimidiation\" <t>"
             },
@@ -131,7 +131,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"black halo\" <t>"
+                ["ws_cmd"] = "/ws \"judgment\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -140,7 +140,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"upheaval\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {

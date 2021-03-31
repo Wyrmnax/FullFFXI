@@ -8,18 +8,10 @@ Bodies SMN (Shard x5, Void x3)
 
 
 FFXI Short term goals
-- Pinga Pants (+1) - fast cast SCH - 7m ~ 25m
-- Amaalric Gages +1 - ~11m
-- Sancus Sachet +1 - 
 - Ternion Dagger +1
 - Adhemar Jacket +1 (TP RUN Pakacet)
 - Lustratio Leggings +1 (Tenodera)
 - Lustratio Subligar +1 (Naphula)
-- Argosy Breeches +1
-- Ayanmo Corazza +2
-- Ayanmo head +2
-- Meghanada Legs +2
-
 
 Medium term
 - 1k domain points - Hauksbok Bullet	
@@ -28,7 +20,7 @@ Medium term
 - Leaafy healer trust
 - Perimede Cape (Maju - Reisenjima)
 - Aurgelmir Orb (+1) - 5m / 72m  
-- Balder earring (+1) - 9.5m / 80m
+- ??? Balder earring (+1) - 9.5m / 80m
 
 Long term
 - Nirvana

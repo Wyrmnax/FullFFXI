@@ -278,6 +278,10 @@ sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.wsd,
 	body = "Hjarrandi Breast.",
 })
 
+sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS.wsd, 
+{
+})
+
 -- Club
 sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS.wsd, 
 {

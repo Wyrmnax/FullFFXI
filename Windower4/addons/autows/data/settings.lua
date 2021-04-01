@@ -180,6 +180,19 @@ return {
             }
         }
     },
+    ["Valka"] = {
+        ["WHM"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"skullbreaker\" <t>"
+            }
+        }
+    },
     ["hps"] = {
         ["<"] = 100,
         [">"] = 0

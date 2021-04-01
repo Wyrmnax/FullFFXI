@@ -51,6 +51,7 @@ lua load autorun
 lua load autows
 lua load react
 lua load shout_ml
+lua load anchor
 
 
 // *** ALLIANCE TARGET KEYS ***

@@ -33,114 +33,106 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-				ammo="Happo Shuriken",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
-    neck="Vim Torque +1",
-    waist="Windbuffet Belt +1",
-    left_ear="Suppanomimi",
-    right_ear="Brutal Earring",
-    left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
-    back="Sacro Mantle",
+	head="Mpaca's Cap",
+	body="Malignance Tabard",
+	hands="Mpaca's Gloves",
+	left_ring="Defending Ring",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
 	}
 
-sets.idle.MDT = { 
-				ammo="Happo Shuriken",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
-    neck="Vim Torque +1",
-    waist="Windbuffet Belt +1",
-    left_ear="Suppanomimi",
-    right_ear="Brutal Earring",
-    left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
-    back="Sacro Mantle",
-	}
+sets.idle.MDT = {}
 
 sets.misc.Town = set_combine(sets.idle.PDT, { 
-				feet="Danzo Sune-Ate"})
+				})
 				
 sets.idle.Standard = set_combine(sets.idle.PDT, {
-				lear="Merman's Earring", rear="Merman's Earring", feet="Danzo Sune-Ate"})
+				})
 -- Full Evasion
-sets.idle.Evasion = set_combine(sets.idle.PDT,{
-			head="Felistris Mask", neck="Torero Torque", lear="Musical Earring", rear="Novia Earring",
-            body="Otronif Harness", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Fravashi Mantle", waist="Twilight Belt", legs="Otronif Brais +1",feet="Otronif Boots +1"})
+sets.idle.Evasion = set_combine(sets.idle.PDT,{})
 
-sets.Enmity = {
-		neck="Atzintli Necklace",
-		back="Fravashi Mantle"}
+sets.Enmity = {}
 
 -- Precast	
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
-			head="Athos's Chapeau", lear="Loquac. Earring", rring="Prolix Ring"})
+	head={ name="Herculean Helm", augments={'INT+3','"Mag.Atk.Bns."+20','Magic Damage +23','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+    neck="Voltsurge Torque",
+    left_ring="Kishar Ring",
+			})
 
-sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})
+sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {
+			})
 
 sets.precast.Recast = set_combine(sets.idle.PDT,{
-			head="Athos's Chapeau", rear="Loquac. Earring",
-			rring="Prolix Ring",
+			
 			})
 -- Midcast
 sets.midcast.Wheel = {
-			head="Koga Hatsuburi", neck="Stoicheion Medal", lear="Novio Earring", rear="Friomisi Earring",
-			body="Ninja Chainmail", hands="Ninja Tekko", lring="Icesoul Ring", rring="Icesoul Ring",
-			back="Toro Cape", waist="Wanion Belt", legs="Ninja Hakama", feet="Ninja Kyahan",
-			head="Ninja Hatsuburi", }
+	ammo="Seeth. Bomblet +1",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Herculean Gloves", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Fast Cast"+2','INT+5','"Mag.Atk.Bns."+15',}},
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomisi Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+    back="Sacro mantle",
+			}
 			
 sets.midcast.Skill = {
-			feet="Koga Kyahan"}
+	ammo="Seeth. Bomblet +1",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Herculean Gloves", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Fast Cast"+2','INT+5','"Mag.Atk.Bns."+15',}},
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomisi Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+    back="Sacro mantle",
+			}
 sets.midcast.Enfeeb = set_combine(sets.midcast.Skill,{
-			lear="Lifestorm Earring", rear="Psystorm Earring",
-			lring="Sangoma Ring", rring="Perception Ring"})
+			})
 sets.midcast.Utsusemi = set_combine(sets.precast.Utsusemi,{
-			waist="Twilight Belt", feet="Iga Kyahan +2"})
+			})
 			
 -- TP Sets 
 sets.TP = { 
-	ammo="Happo Shuriken",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+	ammo="Date Shuriken",
+    head="Mpaca's Cap",
     body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    hands="Mpaca's Gloves",
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
-    neck="Vim Torque +1",
+    neck="Lissome Necklace",
     waist="Windbuffet Belt +1",
     left_ear="Suppanomimi",
-    right_ear="Brutal Earring",
-    left_ring="Ilabrat Ring",
+    right_ear="Telos Earring",
+    left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back="Sacro Mantle",
+    back="Sacro mantle",
 	}
 
 -- Accuracy TP Set
-sets.TP.Acc = {ammo="Ginsen",
-			head="Felistris Mask", neck="Asperity Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Thaumas Coat", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Windbuffet Belt", legs="Otronif Brais +1", feet="Manibozho Boots"}
+sets.TP.Acc = {}
 
 -- Alliance Buffed
-sets.TP.Buffed = {ammo="Ginsen",
-			head="Felistris Mask", neck="Asperity Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Thaumas Coat", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Windbuffet Belt", legs="Otronif Brais +1", feet="Manibozho Boots"}
+sets.TP.Buffed = {}
 
 -- Hybrid Evasion
-sets.TP.Hybrid = set_combine(sets.idle.PDT,{
-			head="Felistris Mask", neck="Asperity Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Otronif Harness", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Windbuffet Belt", legs="Otronif Brais +1", feet="Otronif Boots +1"})
+sets.TP.Hybrid = set_combine(sets.idle.PDT,{})
 
 -- RA Sets
-sets.precast.Snapshot = {legs="Nahtirah Trousers"}
+sets.precast.Snapshot = {}
 
 sets.RA = {}
 				
@@ -156,34 +148,81 @@ sets.precast.JA["Futae"] = {hands="Iga Tekko +2"}
 -- Weaponskills
 sets.precast.WS = { 
 	ammo="Seeth. Bomblet +1",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+    head="Mpaca's Cap",
     body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    hands="Mpaca's Gloves",
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Cessance Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Brutal Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back="Sacro Mantle",
+    back="Sacro mantle",
 	}
 -- Mercy Stroke 
 sets.precast.WS["Blade: Jin"] = set_combine(sets.precast.WS, { 
+	left_ear= "Mache Earring",
 })
 
 sets.precast.WS["Blade: Shun"] = set_combine(sets.precast.WS, { 
 })
 
 sets.precast.WS["Blade: Hi"] = set_combine(sets.precast.WS, { 
+	left_ear= "Mache Earring",
 })
 				
 sets.precast.WS["Blade: Metsu"] = set_combine(sets.precast.WS, { 
+	left_ear= "Mache Earring",
 })
 
 sets.precast.WS["Blade: Kamu"] = set_combine(sets.precast.WS, { 
+	left_ear= "Mache Earring",
 })
+
+sets.precast.WS["Blade: Ku"] = set_combine(sets.precast.WS, { 
+	left_ear= "Mache Earring",
+})
+
+sets.precast.WS["Blade: Teki"] = set_combine(sets.precast.WS, { 
+	ammo="Seeth. Bomblet +1",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Herculean Gloves", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Fast Cast"+2','INT+5','"Mag.Atk.Bns."+15',}},
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomisi Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+    back="Sacro mantle",
+})
+
+sets.precast.WS["Blade: To"] = set_combine(sets.precast.WS["Blade: Teki"], { 
+})
+
+sets.precast.WS["Blade: Chi"] = set_combine(sets.precast.WS["Blade: Teki"], { 
+})
+
+sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS, { 
+	ammo="Seeth. Bomblet +1",
+    head="Mpaca's Cap",
+    body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
+    hands="Mpaca's Gloves",
+    legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
+    feet="Nyame Sollerets",
+    neck="Fotia Gorget",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Ishvara Earring",
+    left_ring="Ilabrat Ring",
+    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    back="Sacro Mantle",
+})
+
 
 sets.misc.Waltz = {}
 sets.misc.Steps = set_combine(sets.TP.Acc)

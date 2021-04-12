@@ -24,13 +24,15 @@ function get_sets()
 		WSBullet = {ammo="Chrono Bullet"}
 		-- Magical WS Bullets "use the cheapest"
 		MBullet = {ammo="Chrono Bullet"}
+	
 	-- Luzaf's Ring - 1 to use
 	luzaf = 1
 	
-	Mode = 0
+	KillTpRoll = 1
 	PDT = 0
-	MDT = 0
+	Mode = 'MeleeSB'
 	ShadowType = 'None'
+	ModeWeapon = sets.MeleeSB
 	
 --includes
 	--include('include/autoexec.lua')
@@ -49,95 +51,53 @@ end
 
 function self_command(command)
    -- Lock PDT
-	if command == 'PDT' then
+	if command == 'KillTpRoll' then
+		if KillTpRoll == 1 then
+			KillTpRoll = 0
+			windower.add_to_chat(121,'Keep TP When Rolling')
+		else 
+			KillTpRoll = 1
+			windower.add_to_chat(121,'Max Duration Rolls')
+		end
+   
+	elseif command == 'PDT' then
 		if PDT == 1 then
 			-- make sure other values are set to default
 			-- Unlock PDT/MDT Variables
 			PDT = 0
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
+			-- Place Me in my previous set.			
+			previous_set()			
 			windower.add_to_chat(121,'PDT Set UnLocked')
 		else
 		-- Make sure other values are set to default
-				MDT = 0
 			-- Set PDT set and equip it
-				PDT = 1
-				equip(sets.idle.PDT)
-				windower.add_to_chat(121,'PDT Set Locked')
+			PDT = 1
+			previous_set()
+			windower.add_to_chat(121,'PDT Set Locked')
 		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-		-- Unlock PDT/MDT Variables
-			PDT = 0
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+--  Lock Acc	
+	elseif command == 'Mode' then
+		if Mode == 'MeleeSB' then
+			Mode = 'MeleeLeaden'
+			ModeWeapon = sets.MeleeLeaden			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Melee Leaden')
+		elseif Mode == 'MeleeLeaden' then
+			Mode = 'RangedLastStand'
+			ModeWeapon = sets.RangedLastStand
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'MDT Set UnLocked')
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1	
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode Ranged Last Stand')
+		elseif Mode == 'RangedLastStand' then
+			Mode = 'RangedLeaden'
+			ModeWeapon = sets.RangedLeaden
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'PDT/MDT Set UnLocked')
-		else
-			if Mode >= 3 then
-				-- Reset to 0
-				Mode = 0
-			else
-				-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode Ranged Leaden')
+		elseif Mode == 'RangedLeaden' then
+			Mode = 'MeleeSB'
+			ModeWeapon = sets.MeleeSB
 				previous_set()
-			else
-				if Mode == 0 then
-					windower.add_to_chat(121,'Melee TP Set')
-				elseif Mode == 1 then
-					windower.add_to_chat(121,'Ranged TP Set')
-				elseif Mode == 2 then
-					windower.add_to_chat(121,'Melee Acc TP Set')
-				elseif Mode == 3 then
-					windower.add_to_chat(121,'Ranged Acc TP Set')
-				end
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif commmand == "luzaf" then
-		if lufaz == 1 then
-			lufaz = 0
-			windower.add_to_chat(121,'Luzaf\'s Ring Enabled')
-		else
-			lufaz = 1
-			windower.add_to_chat(121,'Luzaf\'s Ring Enabled')
-		end
-	elseif command == "RA" then
-		windower.send_command('input /ra <t>')
+			windower.add_to_chat(121,'Mode Melee Savage Blade')
+		end	
 	end
 end
 
@@ -147,30 +107,10 @@ function status_change(new,old)
 			windower.add_to_chat(121, "Town Gear")
 			equip(sets.misc.Town)
 		else
-			if PDT == 1 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				equip(sets.idle.Standard)
-			end
+			previous_set()
 		end
 	elseif new == 'Engaged' then
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			-- Equip previous TP set 
-				previous_set()
-		end
+		previous_set()
     end
 end
 
@@ -182,16 +122,8 @@ function precast(spell,arg)
 			windower.add_to_chat(121, 'Canceled RA - '..player.equipment.ammo..' Equipped')
 			equip(TPBullet)
 			cancel_spell()
-		else
-			if buffactive['Flurry'] then
-				if flurry2 == 1 then 
-					equip(sets.precast.Snapshot.Flurry2)
-				else
-					equip(sets.precast.Snapshot.Flurry)
-				end
-			else
-				equip(sets.precast.Snapshot)
-			end
+		else			
+			equip(sets.precast.Snapshot)
 		end
 -- Cor Rolls
 	elseif spell.type == 'CorsairRoll' or spell.english == "Double-Up" then
@@ -340,41 +272,17 @@ function midcast(spell,arg)
 		-- Triple Shot
 		if buffactive["Triple Shot"] then
 			-- Acc Sets 
-			if Mode == 1 or Mode == 3 then
-				if player.equipment.range == "Armageddon" then
-					equip(sets.RA.Armageddon.Acc, sets.precast.JA["Triple Shot"])
-				elseif player.equipment.range == "Eminent Gun" then
-					equip(sets.RA.Acc. sets.precast.JA["Triple Shot"])
-				else
-					equip(sets.RA, sets.precast.JA["Triple Shot"])
-				end
+			if Acc == 1 then
+				equip(sets.RA.Acc, sets.precast.JA["Triple Shot"])
 			else
-				if player.equipment.range == "Armageddon" then
-					equip(sets.RA.Armageddon, sets.precast.JA["Triple Shot"])
-				elseif player.equipment.range == "Eminent Gun" then
-					equip(sets.RA, sets.precast.JA["Triple Shot"])
-				else
-					equip(sets.RA, sets.precast.JA["Triple Shot"])
-				end
+				equip(sets.RA, sets.precast.JA["Triple Shot"])				
 			end
 		else
 			-- Acc Sets 
-			if Mode == 1 or Mode == 3 then
-				if player.equipment.range == "Armageddon" then
-					equip(sets.RA.Armageddon.Acc)
-				elseif player.equipment.range == "Eminent Gun" then
-					equip(sets.RA.Acc)
-				else
-					equip(sets.RA)
-				end
+			if Acc == 1 then
+				equip(sets.RA.Acc)				
 			else
-				if player.equipment.range == "Armageddon" then
-					equip(sets.RA.Armageddon)
-				elseif player.equipment.range == "Eminent Gun" then
-					equip(sets.RA)
-				else
-					equip(sets.RA)
-				end
+				equip(sets.RA)
 			end
 		end
     end
@@ -402,34 +310,7 @@ function midcast(spell,arg)
 end
 
 function aftercast(spell,arg)
--- Auto sets
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if PDT == 1 or MDT == 1 or buffactive['Weakness'] then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			if player.status == 'Engaged' then
-				if spell.target.distance <= 6 then
-					previous_set()
-				else
-					equip(sets.idle.Standard)
-				end
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	end
+	previous_set()
    -- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
     if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
@@ -440,27 +321,19 @@ end
 
 function previous_set()
 	slot_lock()
-	if Mode == 0 then
-		equip(sets.TP)
-		windower.add_to_chat(121,'Melee TP Set')
-	elseif Mode == 1 then
-		if player.equipment.range == "Armageddon" then
-			equip(sets.RA.Armageddon)
-		elseif player.equipment.range == "Eminent Gun" then
-			equip(sets.RA)
+	if areas.Town:contains(world.zone) then
+		equip(ModeWeapon, sets.misc.Town)
+	elseif player.status == 'Engaged' then
+		if PDT == 0 then
+			equip(ModeWeapon, sets.TP)
+			windower.add_to_chat(121,'Tp Set ' ..Mode)
+		else 
+			equip(ModeWeapon, sets.idle.PDT)
+			windower.add_to_chat(121,'PDT Set Locked')
 		end
-		windower.add_to_chat(121,'Ranged TP Set')
-	elseif Mode == 2 then
-		equip(sets.TP.Acc)
-		windower.add_to_chat(121,'Melee Acc TP Set')
-	elseif Mode == 3 then
-		if player.equipment.range == "Armageddon" then
-			equip(sets.RA.Armageddon.Acc)
-		elseif player.equipment.range == "Eminent Gun" then
-			equip(sets.RA.Acc)
-		end
-		windower.add_to_chat(121,'Ranged Acc TP Set')
-	end		
+	else 
+		equip(ModeWeapon,sets.idle.Standard)
+	end
 end
 
 function slot_lock()

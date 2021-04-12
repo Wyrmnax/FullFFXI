@@ -424,6 +424,12 @@ function get_sets()
     right_ring="Jhakri Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
+	
+	sets.midcast.nuking.lowtier = set_combine(sets.midcast.nuking.normal, {
+	ammo="Per. Lucky Egg",
+    head="Volte Cap",
+    waist="Chaac Belt",
+	})
     -- used with toggle, default: F10
     -- Pieces to swap from freen nuke to Magic Burst
     sets.midcast.MB.acc = set_combine(sets.midcast.nuking.normal, { 

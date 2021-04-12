@@ -275,7 +275,6 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS,
 -- Polearm
 sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.wsd, 
 {
-	body = "Hjarrandi Breast.",
 })
 
 sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS.wsd, 

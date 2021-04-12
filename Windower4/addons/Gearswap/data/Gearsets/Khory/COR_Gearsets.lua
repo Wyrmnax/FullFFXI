@@ -20,7 +20,7 @@ if player.name == 'Khory' then
 			if player.sub_job == 'DNC' then
 				set_macro_page(1,4)
 			elseif player.sub_job == 'NIN' then
-				set_macro_page(2,4)
+				set_macro_page(1,4)
 			elseif player.sub_job == 'RNG' then
 				set_macro_page(3,4)
 			elseif player.sub_job == 'WHM' then 
@@ -34,6 +34,30 @@ if player.name == 'Khory' then
 			set_macro_page(1,4)
 		end
 		
+	sets.MeleeSB = { 
+	main="Naegling",
+    sub="Tauret",
+    range={ name="Anarchy +3", augments={'Delay:+60','TP Bonus +1000',}},
+	}
+	
+	sets.MeleeLeaden = { 
+	main="Naegling",
+    sub="Tauret",
+    range="Fomalhaut",
+	}
+	
+	sets.RangedLastStand = { 
+	main="Kustawi +1",
+    sub="Nusku Shield",
+    range="Fomalhaut",
+	}
+	
+	sets.RangedLeaden = { 
+	main="Tauret",
+    sub="Nusku Shield",
+    range="Fomalhaut",
+	}
+		
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = {    	
@@ -44,27 +68,12 @@ sets.idle.PDT = {
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Lissome Necklace",
-    waist="Windbuffet Belt +1",
-    left_ear="Brutal Earring",
+    waist="Sailfi Belt +1",
+    left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Ilabrat Ring",
     right_ring="Epona's Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
-
-sets.idle.MDT = { 
-				ammo="Chrono Bullet",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Meg. Gloves +2",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Telos Earring",
-    right_ear="Suppanomimi",
-    left_ring="Defending Ring",
-    right_ring="Apate Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {
@@ -78,46 +87,31 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 sets.TP = { 
 	ammo="Chrono Bullet",
     head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands="Meg. Gloves +2",
-    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Lissome Necklace",
-    waist="Windbuffet Belt +1",
-    left_ear="Brutal Earring",
-    right_ear="Cessance Earring",
-    left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
-
--- Melee Accuracy TP
-sets.TP.Acc = {	
-				 ammo="TPBullet",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Meg. Gloves +2",
-    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
-    feet="Malignance Boots",
-    neck="Vim Torque +1",
-    waist="Windbuffet Belt +1",
+    waist="Sailfi Belt +1"",
     left_ear="Telos Earring",
-    right_ear="Digni. Earring",
-    left_ring="Ilabrat Ring",
+    right_ear="Cessance Earring",
+    left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},}
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 
 -- RA Sets
 sets.precast.Snapshot = {ammo="TPBullet",
-	body="Laksa. Frac +2",
+	body="Laksa. Frac +3",
 	hands="Carmine Fin. Ga. +1",
 	wasit="Yemaya Belt",
 	legs="Adhemar Kecks",
     feet="Meg. Jam. +2",}
 	
--- Eminent Gun
+-- Shooting
 sets.RA = { ammo="TPBullet",
 			head="Malignance Chapeau",
-    body="Laksa. Frac +2",
+    body="Laksa. Frac +3",
     hands="Ikenga's Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
@@ -132,7 +126,7 @@ sets.RA = { ammo="TPBullet",
 				
 sets.RA.Acc = { ammo="TPBullet",
 			head="Malignance Chapeau",
-    body="Laksa. Frac +2",
+    body="Laksa. Frac +3",
     hands="Meg. Gloves +2",
     legs="Malignance Tights",
     feet="Malignance Boots",
@@ -144,38 +138,6 @@ sets.RA.Acc = { ammo="TPBullet",
     right_ring="Ilabrat Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
-
--- Armageddon 
-sets.RA.Armageddon = { ammo="TPBullet",
-			head="Malignance Chapeau",
-    body="Laksa. Frac +2",
-    hands="Meg. Gloves +2",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Iskur Gorget",
-    waist="Yemaya Belt",
-    left_ear="Telos Earring",
-    right_ear="Neritic Earring",
-    left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
-	}
-
-sets.RA.Armageddon.Acc = { ammo="TPBullet",
-			head="Malignance Chapeau",
-    body="Laksa. Frac +2",
-    hands="Meg. Gloves +2",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Iskur Gorget",
-    waist="Yemaya Belt",
-    left_ear="Telos Earring",
-    right_ear="Neritic Earring",
-    left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
-	}
-
 
 
 -- JA
@@ -189,12 +151,14 @@ sets.precast.JA["Triple Shot"] = {body="Nvrch. Frac +2"}
 sets.precast.JA["Double-Up"] = set_combine(sets.precast.JA["Phantom Roll"])
 
 -- Corsair Rolls
-sets.precast.JA["Phantom Roll"] = {head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
+sets.precast.JA["Phantom Roll"] = {main="Lanun Knife", ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
 sets.precast.JA["Caster's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {legs="Nvrch. Culottes +2"})
 sets.precast.JA["Courser's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {feet="Navarch's Bottes +2"})
 sets.precast.JA["Blitzer's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {head="Navarch's Tricorne +2"})
 sets.precast.JA["Tactician's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {body="Navarch's Frac +2"})
 sets.precast.JA["Allies' Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {hands="Navarch's Gants +2"})
+
+sets.MaxDuration = {main="Lanun Knife", reanged="Compensator"}
 
 -- Quick Draw 
 sets.precast.QD = {}
@@ -221,7 +185,7 @@ sets.precast.QD.MAB = {
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs="Nyame Flanchard",
-    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck={ name="Comm. Charm +1", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
@@ -241,7 +205,7 @@ sets.precast.WS = {
     body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
     hands="Meg. Gloves +2",
     legs="Malignance Tights",
-    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Fotia Gorget",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
@@ -253,10 +217,10 @@ sets.precast.WS = {
 sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
+    body="Laksa. Frac +3",
     hands="Meg. Gloves +2",
     legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
-    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +1",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
@@ -269,10 +233,10 @@ sets.precast.WS["Savage Blade"] = {
 sets.precast.RAWS = {
 	ammo="TPBullet",
 	head="Malignance Chapeau",
-    body="Laksa. Frac +2",
+    body="Laksa. Frac +3",
     hands="Meg. Gloves +2",
     legs={ name="Herculean Trousers", augments={'Rng.Acc.+30','Weapon skill damage +4%',}},
-    feet="Lanun Bottes +2",
+    feet="Lanun Bottes +3",
     neck="Iskur Gorget",
     waist="Eschan Stone",
     left_ear="Ishvara Earring",
@@ -288,13 +252,13 @@ sets.precast.RAWS['Wildfire'] = {
 	body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs="Nyame Flanchard",
-    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +1",
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     right_ear="Moldavite Earring",
     left_ring="Dingir Ring",
-    right_ring="Apate Ring",
+    right_ring="Ilabrat Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 	
@@ -313,7 +277,7 @@ sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {
     body="Nyame mail",
     hands="Meg. Gloves +2",
     legs={ name="Herculean Trousers", augments={'Rng.Acc.+30','Weapon skill damage +4%',}},
-    feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Iskur Gorget",
     waist="Yemaya Belt",
     left_ear="Ishvara Earring",

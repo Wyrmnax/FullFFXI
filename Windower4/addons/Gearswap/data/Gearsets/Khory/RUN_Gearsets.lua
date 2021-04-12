@@ -217,6 +217,21 @@ sets.precast.WS.Acc = {}
 sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
 })
 sets.precast.WS.Acc["Resolution"] = set_combine(sets.precast.WS, {
+})	
+sets.precast.WS.Acc["Shockwave"] = set_combine(sets.precast.WS, {
+	ammo="Per. Lucky Egg",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Kurys Gloves",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Chaac Belt",
+    left_ear="Digni. Earring",
+    right_ear="Hermetic Earring",
+    left_ring="Vertigo Ring",
+    right_ring="Kishar Ring",
+    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 })				
 sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
@@ -234,6 +249,9 @@ sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS, {
     back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 })
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS, {
+})
+
+sets.precast.WS["Herculean Slash"] = set_combine(sets.precast.WS["Shockwave"], {
 })
 -- Sword
 sets.precast.WS["Requiescat"] = set_combine(sets.precast.WS, {

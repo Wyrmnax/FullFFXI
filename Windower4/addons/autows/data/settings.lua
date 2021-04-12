@@ -16,7 +16,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             }
         },
         ["MNK"] = {
@@ -43,8 +43,18 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"'Blade: Ten'\" <t>"
+                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["PUP"] = {
@@ -140,7 +150,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"fell cleave\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -167,7 +177,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"upheaval\" <t>"
+                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -177,6 +187,17 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
+            }
+        },
+        ["WHM"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"realmrazer\" <t>"
             }
         }
     },

@@ -33,56 +33,27 @@ if player.name == 'Valka' then
 		-- Auto Sets
 		-- Standard/idle
 		sets.idle.PDT = {
+				main="Bolelabunga",
 				sub="Sors Shield",
-				head="Befouled Crown",
+				ammo="Amar Cluster",
+				head="Inyanga Tiara +2",
 				body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
+				hands="Inyan. Dastanas +2",
 				legs="Assid. Pants +1",
-				feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
+				feet="Inyan. Crackows +1",
+				neck="Henic Torque",
 				waist="Porous Rope",
-				left_ear="Pixie Earring",
+				left_ear="Mendi. Earring",
 				right_ear="Nourish. Earring",
 				left_ring="Ayanmo Ring",
-				right_ring="Warp Ring"
+				right_ring="Warden's  Ring",
+				back={ name="Alaunus's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity-10','Phys. dmg. taken-10%',}},
 				}
 		sets.idle.MDT = {
-				sub="Sors Shield",
-				head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-				body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				legs="Assid. Pants +1",
-				feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				waist="Porous Rope",
-				left_ear="Pixie Earring",
-				right_ear="Nourish. Earring",
-				left_ring="Ayanmo Ring",
-				right_ring="Warp Ring"
 				}		
 		sets.Resting = set_combine(sets.idle.PDT, {
-				sub="Sors Shield",
-				head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-				body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				legs="Assid. Pants +1",
-				feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				waist="Porous Rope",
-				left_ear="Pixie Earring",
-				right_ear="Nourish. Earring",
-				left_ring="Ayanmo Ring",
-				right_ring="Warp Ring"
 				})
 		sets.idle.Standard = set_combine(sets.idle.PDT,{
-				sub="Sors Shield",
-				head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-				body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				legs="Assid. Pants +1",
-				feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				waist="Porous Rope",
-				left_ear="Pixie Earring",
-				right_ear="Nourish. Earring",
-				left_ring="Ayanmo Ring",
-				right_ring="Warp Ring"
 				})
 
 		sets.misc.Town = set_combine(sets.idle.PDT, {
@@ -90,21 +61,22 @@ if player.name == 'Valka' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = {
-			sub="Sors Shield",
-			head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+			sub="Sors Shield",			
+			head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
 			body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
 			hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-			legs="Ebers Pantaloons",
-			feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
+			legs="Aya. Cosciales +1",
+			feet="Regal Pumps +1",
 			waist="Porous Rope",
-			left_ear="Pixie Earring",
+			left_ear="Mendi. Earring",
 			right_ear="Nourish. Earring",
 			left_ring="Ayanmo Ring",
-			right_ring="Warp Ring"
+			back={ name="Alaunus's Cape", augments={'"Fast Cast"+10',}},
 		}
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
-                body="Heka's Kalairis",
-                back="Pahtli Cape", legs="Orsn. Pantaln. +2",feet="Cure Clogs"})
+			left_ear="Mendi. Earring",
+			legs="Ebers Pantaloons",
+			feet="Vanya Clogs"})
 		-- JA
 		sets.precast.JA['Benediction'] = {body="Cleric's Briault +2"}
 		sets.precast.JA['Asylum'] = {}
@@ -115,26 +87,13 @@ if player.name == 'Valka' then
 		
 		-- Midcast
 		sets.midcast.Recast = set_combine(sets.idle.PDT, sets.precast.Fastcast, {
-				sub="Sors Shield",
-				head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-				body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				legs="Ebers Pantaloons",
-				feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-				waist="Porous Rope",
-				left_ear="Pixie Earring",
-				right_ear="Nourish. Earring",
-				left_ring="Ayanmo Ring",
-				right_ring="Warp Ring"
 				})
-		sets.midcast.ConserveMP = {ammo="Clarus Stone",
-				lear="Magnetic Earring", rear="Gifted Earring",
-                body="Hedera Cotehardie", hands="Serpentes Cuffs",
-                waist="Austerity Belt", legs="Nares Trews", feet="Umbani Boots"}
+		sets.midcast.ConserveMP = {}
 
 		--Healing Magic
 		-- Cures
 		sets.midcast.Cure = {
+			main="Queller Rod",
 			sub="Sors Shield",
 			head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 			body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
@@ -142,39 +101,17 @@ if player.name == 'Valka' then
 			legs="Ebers Pantaloons",
 			feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
 			waist="Porous Rope",
-			left_ear="Pixie Earring",
+			left_ear="Mendi. Earring",
 			right_ear="Nourish. Earring",
 			left_ring="Ayanmo Ring",
-			right_ring="Warp Ring"
+			right_ring="Sangoma Ring"
 			}
 		sets.midcast.EnmityCure = set_combine(sets.midcast.Cure, {
-			main="Queler Rod",
-			sub="Sors Shield",
-			head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-			body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-			hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-			legs="Ebers Pantaloons",
-			feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-			waist="Porous Rope",
-			left_ear="Pixie Earring",
-			right_ear="Nourish. Earring",
-			left_ring="Ayanmo Ring",
-			right_ring="Warp Ring"
 			})
 
-		sets.midcast.Curaga = {
-			sub="Sors Shield",
-			head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-			body={ name="Vanya Robe", augments={'HP+50','MP+50','"Refresh"+2',}},
-			hands={ name="Kaykaus Cuffs", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-			legs="Ebers Pantaloons",
-			feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
-			waist="Porous Rope",
-			left_ear="Pixie Earring",
-			right_ear="Nourish. Earring",
-			left_ring="Ayanmo Ring",
-			right_ring="Warp Ring"
-			}
+		sets.midcast.Curaga = set_combine(sets.midcast.Cure, {
+			})
+			
 		sets.midcast.EnmityCuraga = set_combine(sets.midcast.Curaga, {})
 
 		sets.midcast.Cura = {}

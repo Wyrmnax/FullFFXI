@@ -24,7 +24,13 @@
                 <3>Arciela</3>
                 <4>Ulmia</4>
                 <5>Yoran-Oran (UC)</5>
-            </default>            
+            </default>
+            <five>
+                <1>August</1>
+                <2>Qultada</2>
+                <3>Arciela</3>
+                <4>Yoran-Oran (UC)</4>
+            </five>
             <leveling>
                 <1>August</1>
                 <2>Shantotto II</2>
@@ -39,6 +45,13 @@
                 <4>Kupipi</4>
                 <5>Yoran-Oran (UC)</5>
             </lilith>
+            <mage>
+                <1>Yoran-Oran (UC)</1>
+                <2>Star Sibyl</2>
+                <3>Arciela</3>
+                <4>August</4>
+                <5>Amchuchu</5>
+            </mage>
             <notank>
                 <1>Koru-Moru</1>
                 <2>Qultada</2>

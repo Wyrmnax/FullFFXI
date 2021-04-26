@@ -1,5 +1,25 @@
 return {
     ["Khory"] = {
+        ["BLU"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+            }
+        },
         ["COR"] = {
             ["Dagger"] = {
                 ["hps"] = {
@@ -16,7 +36,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["MNK"] = {
@@ -45,7 +65,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+                ["ws_cmd"] = "/ws \"blade: Hi\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -100,7 +120,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"dimidiation\" <t>"
             },
@@ -132,7 +152,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"decimation\" <t>"
+                ["ws_cmd"] = "/ws \"cloudsplitter\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {

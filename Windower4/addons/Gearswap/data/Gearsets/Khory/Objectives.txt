@@ -9,7 +9,6 @@ Bodies SMN (Shard x5, Void x3)
 
 FFXI Short term goals
 - Ternion Dagger +1
-- Adhemar Jacket +1 (TP RUN Pakacet)
 - Lustratio Leggings +1 (Tenodera)
 - Lustratio Subligar +1 (Naphula)
 
@@ -39,4 +38,20 @@ Valka
 - Pemphredo Tathlum
 - Kayakus Head
 - Mephitias ring +1
+
+/drg - tp/hit = 87 - 800 dmg/hit
+11.49 (11.5 hits/ws
+46k ws
+
+/sam tp/hit = 96 - 800 d.g/hit
+10.42 his/ws
+43k ws
+
+10000 hits
+= 8m damage
+
+/drg = 870.32 wss = 40.034 m  == 48.034m
+
+/sam = 959.69 Wss = 41.266 m = 49.266m
+
 

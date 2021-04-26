@@ -36,7 +36,7 @@ if player.name == 'Khory' then
 		
 	sets.MeleeSB = { 
 	main="Naegling",
-    sub="Tauret",
+    sub="Gleti's Knife",
     range={ name="Anarchy +3", augments={'Delay:+60','TP Bonus +1000',}},
 	}
 	
@@ -92,7 +92,7 @@ sets.TP = {
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Lissome Necklace",
-    waist="Sailfi Belt +1"",
+    waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
@@ -167,7 +167,7 @@ sets.precast.QD.ACC = {
     ammo="QDBullet",
 	head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Ikenga's Gloves",
+    hands="Nyame Gauntlets",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Comm. Charm +1",
@@ -183,7 +183,7 @@ sets.precast.QD.MAB = {
     ammo="QDBullet",
 	head="Nyame Helm",
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
-    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck={ name="Comm. Charm +1", augments={'Path: A',}},
@@ -250,7 +250,7 @@ sets.precast.RAWS['Wildfire'] = {
 	ammo="WSBullet",
 	head="Nyame helm",
 	body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
-    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +1",
@@ -263,8 +263,10 @@ sets.precast.RAWS['Wildfire'] = {
 	}
 	
 sets.precast.RAWS['Leaden Salute'] = set_combine(sets.precast.RAWS["Wildfire"], {
-	head="Pixie Hairpin +1", 
+	head="Pixie Hairpin +1", 	
+    right_ring="Archon Ring",
 	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	waist="Svelt. Gouriz +1",
 	})
 
 

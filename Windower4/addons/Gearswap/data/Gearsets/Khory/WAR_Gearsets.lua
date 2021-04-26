@@ -54,17 +54,18 @@ if player.name == 'Khory' then
 sets.idle.DT = { 
 	 ammo="Coiste Bodhar",
     head="Sakpata's Helm",
-    body="Sakpata's Plate",
+    body="Sacro Breastplate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    neck={ name="War. Beads +2", augments={'Path: A',}},
+    feet="Sakpata's Leggings",	
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    --neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
     left_ear="Cessance Earring",	
 	--left_ear="Suppanomimi",
     right_ear="Schere Earring",
-    left_ring="Hetairoi Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -85,8 +86,8 @@ sets.TP = {
     hands="Sakpata's Gauntlets",
     legs="Pumm. Cuisses +3",
     feet="Pumm. Calligae +3",
-    neck={ name="War. Beads +2", augments={'Path: A',}},
-    waist="Ioskeha Belt +1",
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Schere Earring",
 	--left_ear="Suppanomimi",
@@ -103,7 +104,7 @@ sets.TP.DT = set_combine(sets.TP, {
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck={ name="War. Beads +2", augments={'Path: A',}},
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Brutal Earring",
     right_ear="Schere Earring",
@@ -168,8 +169,8 @@ sets.precast.WS = {
     head="Flam. Zucchetto +2",
     body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
     hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
-    legs="Sakpata's Cuisses",
     feet="Flam. Gambieras +2",
+    legs="Sakpata's Cuisses",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Cessance Earring",
@@ -226,7 +227,24 @@ sets.precast.WS.MAB = {
 --Sword
 	sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.wsd, { 	
     neck="War. Beads +2",
+    --legs="Sakpata's Cuisses",
 	})
+	
+	sets.precast.WS["Seraph Blade"] = set_combine(sets.precast.WS.MAB, { 	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+	sets.precast.WS["Red Lotus Blade"] = set_combine(sets.precast.WS.MAB, { 	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+	sets.precast.WS["Sanguine Blade"] = set_combine(sets.precast.WS.MAB, { 	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+	sets.precast.WS["Circle Blade"] = set_combine(sets.precast.WS.wsd, sets.TH)
+	
+	sets.precast.WS["Requiescat"] = set_combine(sets.precast.WS, sets.TH)
 	
 -- Great Axe
 sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS.wsd, { 

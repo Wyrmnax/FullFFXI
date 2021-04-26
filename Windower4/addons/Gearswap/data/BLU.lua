@@ -16,13 +16,11 @@ function get_sets(spell)
 	--include('include/autoexec.lua')
 	include('include/binds.lua')
 	include('include/utility.lua')
-	include('include/macro.lua')
+	--include('include/macro.lua')
 	
 -- Get BLU gearsets
 	include('Gearsets/'..player.name..'/BLU_Gearsets.lua')
 	
-	
-	select_default_macro_book()
 -- Define Default Values for Variables
 	Mode = 0
 	Type = 0
@@ -50,7 +48,7 @@ function get_sets(spell)
 				["Subduction"]="Nuke",["Entomb"]="Nuke",["Silent Storm"]="Nuke",["Anvil Lightning"]="Nuke",
 				["Scouring Spate"]="Nuke",["Spectral Floe"]="Nuke",["Searing Tempest"]="Nuke",
 				-- Nukes Dark
-				["Tenebral Crush"]="Nuke.Dark"}
+				["Tenebral Crush"]="NukeDark"}
     bluSpells = T{
 				-- Recast
 				["Animating Wail"]="Recast", ["Battery Charge"]="Recast", ["Cocoon"]="Recast", ["Nat. Meditation"]="Recast", 
@@ -162,38 +160,6 @@ function self_command(command)
 			Type = Type + 1 
 		end 
 		
-		-- Set spell to type and subjob
-		if Type == "dynamis" or Type == 1 then
-			set_macro_page(8,1)
-			windower.send_command('wait 3;aset spellset dynamis')
-			windower.add_to_chat(121,'Dynamis Spells Set')
-		elseif Type == "AOE" or Type == 2 then
-			set_macro_page(8,2)
-			windower.send_command('wait 3;aset spellset aoe')
-				windower.add_to_chat(121,'AOE Spells Set')
-		else 
-			if player.sub_job == 'NIN' then
-				set_macro_page(8,3)
-				windower.send_command('wait 3;aset spellset dd')
-				windower.add_to_chat(121,'BLU/NIN Spells Set')
-			elseif player.sub_job == 'WAR' then
-				set_macro_page(8,4)
-				windower.send_command('wait 3;aset spellset dd')
-				windower.add_to_chat(121,'BLU/WAR Spells Set')
-			elseif player.sub_job == 'RDM' then
-				set_macro_page(8,5)
-				windower.send_command('wait 3;aset spellset dd')
-				windower.add_to_chat(121,'BLU/RDM Spells Set')
-			elseif player.sub_job == 'DNC' then
-				set_macro_page(8,6)
-				windower.send_command('wait 3;aset spellset dd')
-				windower.add_to_chat(121,'BLU/DNC DD Spells Set')
-			else
-				set_macro_page(8,3)
-				windower.send_command('wait 3;aset spellset dd')
-				windower.add_to_chat(121,'BLU/?? DD Spells Set')
-			end
-		end
 	end
 end
 
@@ -319,6 +285,7 @@ function midcast(spell,arg)
 	if spell.skill == 'Blue Magic' then
 		if spell.name == "White Wind" and spell.targets == "SELF" then
 			equip(sets.midcast.BlueMagic.WW.Self)
+		
 		elseif bluSpellStats[spell.english] then
 			equip(sets.midcast.BlueMagic[bluSpellStats[spell.english]])
 			if buffactive['Chain Affinity'] then
@@ -332,7 +299,10 @@ function midcast(spell,arg)
         else
 			windower.add_to_chat(121,"Default Skill Set")
             equip(sets.midcast.BlueMagic)
-        end
+        end				
+		if buffactive['Diffusion'] then
+			equip(sets.precast.JA["Diffusion"])
+		end
 -- Healing Magic
 	elseif spell.skill == 'Healing Magic' then
 		-- Add Light Obi Twilight Cape and Chatoyant Staff

@@ -71,12 +71,23 @@
                 <y>200</y>
             </pos>
         </display>
-        <visible>false</visible>
     </khory>
     <lorah>
+        <display>
+            <pos>
+                <x>859</x>
+                <y>200</y>
+            </pos>
+        </display>
         <visible>false</visible>
     </lorah>
     <valka>
+        <display>
+            <pos>
+                <x>859</x>
+                <y>200</y>
+            </pos>
+        </display>
         <visible>false</visible>
     </valka>
 </settings>

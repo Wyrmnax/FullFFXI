@@ -98,15 +98,19 @@ sets.Enmity = set_combine(sets.idle.PDT, {
     legs="Eri. Leg Guards +1",
 	feet="Erilaz Greaves +1",
     neck="Unmoving Collar +1",
+	rring="Supershear ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	})
 
 -- TP set
 sets.TP = {
     ammo="Staunch Tathlum +1",
-    head="Aya. Zucchetto +2",
-    body="Ayanmo Corazza +2",
-    hands="Turms Mittens +1",
+    --head="Aya. Zucchetto +2",
+    --body="Ayanmo Corazza +2",
+    --hands="Turms Mittens +1",
+	head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="Meg. Chausses +2",
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
@@ -118,18 +122,9 @@ sets.TP = {
     back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 			
-sets.TP.Acc = { ammo="Honed Tathlum",
-			head="Whirlpool Mask", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-            body="Thaumas Coat", hands="Buremte Gloves", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Dynamic Belt +1", legs="Manibozho Brais", feet="Manibozho Boots"}
-sets.TP.Buffed = { ammo="Vanir Battery",
-			head="Felistris Mask", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-            body="Thaumas Coat", hands="Manibozho Gloves", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Windbuffet Belt", legs="Manibozho Brais", feet="Manibozho Boots"}			
-sets.TP.Hybrid = { ammo="Vanir Battery",
-			head="Whirlpool Mask", neck="Twilight Torque", lear="Bladeborn Earring", rear="Steelflash Earring",
-            body="Thaumas Coat", hands="Iuitl Wristbands +1", lring="Defending Ring", rring="Epona's Ring",
-            back="Repulse Mantle", waist="Flume Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"}
+sets.TP.Acc = { }
+sets.TP.Buffed = { }			
+sets.TP.Hybrid = { }
 				
 -- JA
 sets.precast.JA["Elemental Sforzo"] = {body="Futhark Coat"}
@@ -209,7 +204,7 @@ sets.precast.WS = {ammo="Coiste Bodhar",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
     right_ring="Ilabrat Ring",
-    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 sets.precast.WS.Acc = {}
 
@@ -218,7 +213,7 @@ sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
 })
 sets.precast.WS.Acc["Resolution"] = set_combine(sets.precast.WS, {
 })	
-sets.precast.WS.Acc["Shockwave"] = set_combine(sets.precast.WS, {
+sets.precast.WS["Shockwave"] = set_combine(sets.precast.WS, {
 	ammo="Per. Lucky Egg",
     head="Nyame Helm",
     body="Nyame Mail",
@@ -231,22 +226,22 @@ sets.precast.WS.Acc["Shockwave"] = set_combine(sets.precast.WS, {
     right_ear="Hermetic Earring",
     left_ring="Vertigo Ring",
     right_ring="Kishar Ring",
-    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })				
 sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
     body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
     hands="Meg. Gloves +2",
-    legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
-    feet="Meg. Jam. +2",
-    neck="Vim Torque +1",
+    legs={ name="Lustr. Subligar +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
+    feet={ name="Lustra. Leggings +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
+    neck="Caro Necklace",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
     right_ring="Ilabrat Ring",
-    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS, {
 })

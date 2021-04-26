@@ -62,8 +62,8 @@
     </global>
     <khory>
         <pos>
-            <x>1452</x>
-            <y>174</y>
+            <x>1171</x>
+            <y>170</y>
         </pos>
     </khory>
     <lorah>
@@ -75,7 +75,7 @@
     <valka>
         <pos>
             <x>959</x>
-            <y>9</y>
+            <y>65</y>
         </pos>
     </valka>
 </settings>

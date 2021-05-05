@@ -26,8 +26,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -65,8 +66,19 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: Hi\" <t>"
+                ["ws_cmd"] = "/ws \"blade: hi\" <t>"
             },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+            }
+        },
+        ["PLD"] = {
             ["Sword"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -222,6 +234,17 @@ return {
         }
     },
     ["Valka"] = {
+        ["GEO"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"hexa strike\" <t>"
+            }
+        },
         ["WHM"] = {
             ["Club"] = {
                 ["hps"] = {

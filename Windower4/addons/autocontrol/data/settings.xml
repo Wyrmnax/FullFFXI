@@ -71,6 +71,22 @@
                 <slot11>optic fiber ii</slot11>
                 <slot12>flashbulb</slot12>
             </tankbruiser>
+            <tankturtle>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>strobe</slot01>
+                <slot02>strobe ii</slot02>
+                <slot03>heat capacitor ii</slot03>
+                <slot04>mana jammer iv</slot04>
+                <slot05>mana jammer iii</slot05>
+                <slot06>regulator</slot06>
+                <slot07>armor plate iv</slot07>
+                <slot08>barrier module ii</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>optic fiber</slot10>
+                <slot11>optic fiber ii</slot11>
+                <slot12>flashbulb</slot12>
+            </tankturtle>
             <upinarms>
                 <frame>valoredge frame</frame>
                 <head>valoredge head</head>
@@ -106,8 +122,8 @@
         <maneuvertimers>true</maneuvertimers>
         <padding>0</padding>
         <pos>
-            <x>1573</x>
-            <y>910</y>
+            <x>1565</x>
+            <y>909</y>
         </pos>
         <text>
             <alpha>255</alpha>

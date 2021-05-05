@@ -47,7 +47,7 @@ consolebg position 15 50
 lua load parse
 lua load myhome
 lua load skillchains
-lua load autorun
+//lua load autorun
 lua load autows
 lua load shout_ml
 

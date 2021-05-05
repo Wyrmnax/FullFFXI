@@ -28,24 +28,25 @@
 
             </default>
             <magic>
-                <slot01>barrier tusk</slot01>
-                <slot02>subduction</slot02>
+                <slot01>auroral drape</slot01>
+                <slot02>spectral floe</slot02>
                 <slot03>cocoon</slot03>
-                <slot04>delta thrust</slot04>
-                <slot05>tenebral crush</slot05>
+                <slot04>cursed sphere</slot04>
+                <slot05>magic fruit</slot05>
                 <slot06>dream flower</slot06>
-                <slot07>reactor cool</slot07>
-                <slot08>occultation</slot08>
-                <slot09>battery charge</slot09>
-                <slot10>auroral drape</slot10>
-                <slot11>barbed crescent</slot11>
-                <slot12>spectral floe</slot12>
-                <slot13>anvil lightning</slot13>
-                <slot14>erratic flutter</slot14>
-                <slot15>eyes on me</slot15>
-                <slot16>entomb</slot16>
-                <slot17>magic fruit</slot17>
-                <slot18>cursed sphere</slot18>
+                <slot07>subduction</slot07>
+                <slot08>battery charge</slot08>
+                <slot09>erratic flutter</slot09>
+                <slot10>cannonball</slot10>
+                <slot11>barrier tusk</slot11>
+                <slot12>barbed crescent</slot12>
+                <slot13>tenebral crush</slot13>
+                <slot14>delta thrust</slot14>
+                <slot15>occultation</slot15>
+                <slot16>anvil lightning</slot16>
+                <slot17>reactor cool</slot17>
+                <slot18>entomb</slot18>
+                <slot19>sound blast</slot19>
             </magic>
             <nyzul>
                 <slot01>sinker drill</slot01>

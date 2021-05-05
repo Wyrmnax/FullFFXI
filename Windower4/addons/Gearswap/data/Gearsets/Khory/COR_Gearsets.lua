@@ -218,6 +218,7 @@ sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
     body="Laksa. Frac +3",
+	--body="Malignance Tabard",
     hands="Meg. Gloves +2",
     legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},

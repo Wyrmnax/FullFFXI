@@ -27,7 +27,6 @@
     <addon>Debuffed</addon>
     <addon>instaLS</addon>
     <addon>GearSwap</addon>
-    <addon>equipviewer</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

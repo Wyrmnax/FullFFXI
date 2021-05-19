@@ -17,13 +17,13 @@ function get_sets()
 		QDBullets = T{"Omphalos Bullet","Animikii Bullet"}
 	-- Ammo
 		-- Quick Draw Only
-		QDBullet = {ammo="Animikii Bullet"}
+		QDBullet = {ammo="Living Bullet"}
 		-- Normal TP Bullets
 		TPBullet = {ammo="Chrono Bullet"}
 		-- WS Bullets
 		WSBullet = {ammo="Chrono Bullet"}
 		-- Magical WS Bullets "use the cheapest"
-		MBullet = {ammo="Chrono Bullet"}
+		MBullet = {ammo="Living Bullet"}
 	
 	-- Luzaf's Ring - 1 to use
 	luzaf = 1

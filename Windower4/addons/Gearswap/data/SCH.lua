@@ -178,7 +178,7 @@ function get_sets()
     ammo="Staunch Tathlum +1",
     head="Acad. Mortar. +3",
     body="Shamash Robe",
-    hands="Arbatel Bracers +1",
+    hands="Nyame Gauntlets",
     legs="Assid. Pants +1",
     feet="Nyame Sollerets",
     neck="Loricate Torque +1",

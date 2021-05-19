@@ -43,7 +43,7 @@ if player.name == 'Khory' then
 	sets.MeleeLeaden = { 
 	main="Naegling",
     sub="Tauret",
-    range="Fomalhaut",
+    range="Death Penalty",
 	}
 	
 	sets.RangedLastStand = { 
@@ -53,9 +53,9 @@ if player.name == 'Khory' then
 	}
 	
 	sets.RangedLeaden = { 
-	main="Tauret",
-    sub="Nusku Shield",
-    range="Fomalhaut",
+	main="Naegling",
+    sub="Tauret",
+    range="Death Penalty",
 	}
 		
 -- Auto Sets
@@ -65,7 +65,7 @@ sets.idle.PDT = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Meg. Gloves +2",
-    legs="Malignance Tights",
+    legs="Meg. Chausses +2",
     feet="Malignance Boots",
     neck="Lissome Necklace",
     waist="Sailfi Belt +1",
@@ -89,13 +89,13 @@ sets.TP = {
     head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
     body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
+    legs="Meg. Chausses +2",
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Lissome Necklace",
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
-    right_ear="Cessance Earring",
-    left_ring="Hetairoi Ring",
+    right_ear="Suppanomimi",
+    left_ring="Petrov Ring",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -164,7 +164,7 @@ sets.MaxDuration = {main="Lanun Knife", reanged="Compensator"}
 sets.precast.QD = {}
 --Light/Dark Shot
 sets.precast.QD.ACC = {
-    ammo="QDBullet",
+    ammo="Living Bullet",
 	head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Nyame Gauntlets",
@@ -180,7 +180,7 @@ sets.precast.QD.ACC = {
 	}
 -- Elemental Shots
 sets.precast.QD.MAB = {
-    ammo="QDBullet",
+    ammo="Living Bullet",
 	head="Nyame Helm",
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands="Nyame Gauntlets",
@@ -230,6 +230,7 @@ sets.precast.WS["Savage Blade"] = {
     right_ring="Apate Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
 
+
 -- RA WS
 sets.precast.RAWS = {
 	ammo="TPBullet",
@@ -248,7 +249,7 @@ sets.precast.RAWS = {
 	}
 	
 sets.precast.RAWS['Wildfire'] = {    
-	ammo="WSBullet",
+	ammo="Living Bullet",
 	head="Nyame helm",
 	body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands="Nyame Gauntlets",
@@ -276,6 +277,7 @@ sets.precast.RAWS['Last Stand'] = set_combine(sets.precast.RAWS, {
 	})
 
 sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {	
+	ammo="Living Bullet",
 	head="Malignance Chapeau",
     body="Nyame mail",
     hands="Meg. Gloves +2",
@@ -288,6 +290,10 @@ sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {
     left_ring="Dingir Ring",
     right_ring="Ilabrat Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+	})
+	
+	
+sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.RAWS["Wildfire"], {
 	})
 					
 -- Midcast Sets

@@ -5,14 +5,14 @@
         <BLU>store tp|double attack|triple attack|quadruple attack|critical hit rate|critical hit damage|weapon skill damage|fast cast|magic attack bonus|magic accuracy|cure potency</BLU>
         <BRD>all songs|song effect duration|fast cast|song spellcasting time</BRD>
         <BST>pet: double attack|pet: magic attack bonus|pet: damage taken</BST>        
-		<COR>store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|magic accuracy|magic attack bonus|magic damage</COR>
+		<COR>store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|magic accuracy|magic attack bonus|magic damage|damage taken|physical damage taken|magic damage taken</COR>
         <DNC>store tp|double attack|triple attack|quadruple attack</DNC>
         <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRG>
         <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRK>
         <GEO>pet: regen|pet: damage taken|indicolure effect duration|indi eff dur|fast cast|magic evasion</GEO>
         <MNK>store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow</MNK>
         <NIN>store tp|double attack|triple attack|quadruple attack|subtle blow|weapon skill damage|</NIN>
-        <PLD>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate|phalanx|cure potency|fast cast</PLD>
+        <PLD>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate down|spellcasting interruption rate|phalanx|cure potency|fast cast</PLD>
         <PUP>pet: hp|pet: damage taken|pet: regen|martial arts|store tp|double attack|triple attack|quadruple attack</PUP>
         <RDM>magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|fast cast|enfeebling magic skill|enhancing magic skill|store tp|dual wield</RDM>
         <RNG>store tp|snapshot|rapid shot|weapon skill damage</RNG>

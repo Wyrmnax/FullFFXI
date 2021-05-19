@@ -17,7 +17,18 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
+            }
+        },
+        ["BRD"] = {
+            ["Dagger"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"evisceration\" <t>"
             }
         },
         ["COR"] = {
@@ -38,6 +49,17 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
+            }
+        },
+        ["DRG"] = {
+            ["Polearm"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"penta thrust\" <t>"
             }
         },
         ["MNK"] = {
@@ -116,6 +138,26 @@ return {
                 },
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"'Savage Blade'\" <t>"
+            }
+        },
+        ["RNG"] = {
+            ["Dagger"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"viper bite\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"fast blade\" <t>"
             }
         },
         ["RUN"] = {

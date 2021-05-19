@@ -5,6 +5,7 @@
         <size>10</size>
     </global>
     <khory>
+        <mode>whitelist</mode>
         <size>20</size>
     </khory>
     <sevii>

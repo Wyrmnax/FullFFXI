@@ -27,6 +27,7 @@ lua load checkparam;
 lua load Debuffed;
 lua load DistancePlus;
 lua load enternity;
+lua load equipviewer;
 lua load findAll;
 lua load GearSwap;
 lua load instaLS;

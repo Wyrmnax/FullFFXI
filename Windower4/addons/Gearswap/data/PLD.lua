@@ -56,7 +56,6 @@ function status_change(new,old)
 end
 
 function precast(spell,arg)
-	windower.add_to_chat(121, 'precast ' ..spell.type)
 	if spell.type == 'JobAbility' and not buffactive['amnesia'] then	
 		if spell.name == 'Chivalry' and player.tp <= 700 then
 			cancel_spell()
@@ -67,10 +66,15 @@ function precast(spell,arg)
 			equip(sets.FullEnmity)
 		end
 	elseif spell.type == 'WeaponSkill' and not buffactive['amnesia'] then
+		windower.add_to_chat(121, 'Weaponskill!')
 		if player.status == 'Engaged' then
 			if player.tp >= 1000 then
-				if spell.target.distance <= 5 then					
-					equip(sets.precast.WS)
+				if spell.target.distance <= 5 then		
+					if sets.precast.WS[spell.name] then
+						equip(sets.precast.WS[spell.name])
+					else
+						equip(sets.precast.WS)
+					end
 				else
 					cancel_spell()
 					windower.add_to_chat(121, 'Canceled '..spell.name..'.'..spell.target.name..' is Too Far')
@@ -133,39 +137,39 @@ function midcast(spell,arg)
 		elseif spell.english:wcmatch("Cure*") then
 			equip(sets.midcast.Cure)
 		else
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 		end
 	elseif spell.skill == 'Enhancing Magic' then
-		if spell.name == "Reprisal" then
+		if spell.name == "Reprisal" then			
 			equip(sets.midcast.EnhancingMagic.Reprisal)
-		elseif spell.name == "Phalanx" then
+		elseif spell.name == "Phalanx" then		
 			equip(sets.midcast.EnhancingMagic.Phalanx)
-		elseif spell.name == "Crusade" then
-			equip(sets.SIRD)
-		else
-			equip(sets.SIRD)
+		elseif spell.name == "Crusade" then		
+			equip(sets.midcast.EnhancingMagic)
+		else		
+			equip(sets.midcast.EnhancingMagic)
 		end
 	elseif spell.skill == 'Divine Magic' then
 		if spell.name == "Flash" then
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 		elseif spell.english:wcmatch('Banish*') then
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 		elseif spell.english:wcmatch('Holy*') then
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 		elseif spell.english:wcmatch('Enlight') then
-			equip(sets.SIRD)	
+			equip(sets.midcast.SIRD)	
 		else
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 		end
 	elseif spell.skill == 'Blue Magic' then
-		equip(sets.SIRD)
+		equip(sets.midcast.SIRD)
 	elseif spell.skill == 'Elemental Magic' then
-		equip(sets.SIRD)
+		equip(sets.midcast.SIRD)
 	elseif spell.type == 'Ninjutsu' and not (buffactive['silence'] or  buffactive['mute']) then
 	-- Utsusemi
 		if windower.wc_match(spell.name,'Utsusemi*') then
 			-- Equip PDT then Utsusemi Gear sets
-			equip(sets.SIRD)
+			equip(sets.midcast.SIRD)
 			if spell.name == 'Utsusemi: Ichi' and ShadowType == 'Ni' then
 				if buffactive['Copy Image'] then
 					windower.ffxi.cancel_buff(66)

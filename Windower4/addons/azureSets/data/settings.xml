@@ -71,17 +71,17 @@
                 <slot20>magic fruit</slot20>
             </nyzul>
             <tank>
-                <slot01>cocoon</slot01>
-                <slot02>healing breeze</slot02>
-                <slot03>sheep song</slot03>
-                <slot04>wild carrot</slot04>
-                <slot05>pollen</slot05>
+                <slot01>healing breeze</slot01>
+                <slot02>sheep song</slot02>
+                <slot03>grand slam</slot03>
+                <slot04>terror touch</slot04>
+                <slot05>cocoon</slot05>
                 <slot06>jettatura</slot06>
-                <slot07>blank gaze</slot07>
-                <slot08>geist wall</slot08>
-                <slot09>refueling</slot09>
-                <slot10>terror touch</slot10>
-                <slot11>uppercut</slot11>
+                <slot07>geist wall</slot07>
+                <slot08>wild carrot</slot08>
+                <slot09>pollen</slot09>
+                <slot10>wild oats</slot10>
+                <slot11>blank gaze</slot11>
             </tank>
             <vw1>
                 <slot01>Firespit</slot01>

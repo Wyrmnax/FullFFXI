@@ -59,7 +59,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"penta thrust\" <t>"
+                ["ws_cmd"] = "/ws \"wheeling thrust\" <t>"
             }
         },
         ["MNK"] = {

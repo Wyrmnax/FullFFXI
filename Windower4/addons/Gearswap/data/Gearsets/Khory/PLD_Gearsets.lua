@@ -56,7 +56,7 @@ sets.idle = {
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
 	}
 				
-sets.idle.Standard = set_combine(sets.idle, { rring="Shneddick Ring",
+sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
 				})
 -- TP 
 sets.TP = { 
@@ -67,10 +67,10 @@ sets.TP = {
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
     neck="Unmoving Collar +1",
-    waist="Flume Belt +1",
+    waist="Sailfi Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
-    left_ring="Gelatinous Ring +1",
+    left_ring="Moonbeam Ring",
     right_ring="Gelatinous Ring +1",		
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
 }
@@ -87,6 +87,7 @@ sets.Enmity = set_combine(sets.idle,{
     right_ear="Tuisto Earring",
     left_ring="Supershear Ring",
     right_ring="Gelatinous Ring +1",
+	feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
 })
 
@@ -101,6 +102,7 @@ sets.precast.Fastcast = {
     feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
     neck="Voltsurge Torque",
     left_ring="Kishar Ring",
+	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast,{
@@ -123,15 +125,22 @@ sets.midcast.SIRD = set_combine(sets.Enmity,{
 sets.midcast.Cure = set_combine(sets.midcast.SIRD,{
 })
 
-sets.midcast.DivineMagic = set_combine(sets.Recast,{body="Reverence Surcoat"})
+sets.midcast.DivineMagic = set_combine(sets.midcast.SIRD,{body="Reverence Surcoat"})
 
-sets.midcast.EnhancingMagic = set_combine(sets.Recast,{})
+sets.midcast.EnhancingMagic = set_combine(sets.midcast.SIRD,{
+	hands="Regal Gauntlets",})
 
-sets.midcast.EnhancingMagic.Reprisal = { 
-}
+sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
+	head="Sakpata's Helm",	
+	hands="Regal Gauntlets",
+    body="Sacro Breastplate",
+	left_ring="Defending Ring",
+	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	})
 
-sets.midcast.EnhancingMagic.Phalanx = { 
-}
+sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
+    legs="Sakpata's Cuisses",
+	})
 
 -- JA
 sets.precast.JA["Invincible"] = set_combine(sets.Enmity,{legs="Cab. Breeches"})
@@ -157,22 +166,66 @@ sets.precast.JA["Shield Bash"] = set_combine(sets.Enmity,{
 				hands="Cab. Gauntlets",lear="Knightly Earring"})
 
 -- WS
-sets.precast.WS = {
-				}
-sets.precast.WS['Requiescat'] = { 
-}
-sets.precast.WS['Chant du Cygne'] = {
-}
+sets.precast.WS = set_combine(sets.TP, {
+	ammo="Coiste Bodhar",
+	head="Flam. Zucchetto +2",
+	neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},    
+    left_ring={ name="Beithir Ring", augments={'Path: A',}},
+    feet="Sulev. Leggings +2",
+	})
+
+sets.precast.WS.WSD = set_combine(sets.TP, { 
+	hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+	legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},  
+    feet="Sulev. Leggings +2", 
+	})
+	
+sets.precast.WS.MAB = { 
+	ammo="Staunch Tathlum +1",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    legs="Nyame Flanchard",
+    feet="Sulev. Leggings +2",
+    neck="Moonlight Necklace",
+    waist="Eschan Stone",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomisi Earring",
+    left_ring={ name="Beithir Ring", augments={'Path: A',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},   
+	}
+				
+sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {
+	})
+	
+sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
+	body="Hjarrandi Breast.",
+	})
+	
 sets.precast.WS['Atonement'] = set_combine(sets.precast.WS, sets.Enmity,{
 				
 				})
 
-sets.precast.WS.Acc = {}
-sets.precast.WS.Acc['Requiescat'] = {
-}
+sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS.WSD, {
+	})
+	
+sets.precast.WS['Red Lotus Blade'] = set_combine(sets.precast.WS.MAB, {
+	})
 
-sets.precast.WS.Acc['Chant du Cygne'] = {
-}
+sets.precast.WS['Shining Blade'] = set_combine(sets.precast.WS.MAB, {
+	})
+	
+sets.precast.WS['Seraph Blade'] = set_combine(sets.precast.WS.MAB, {
+	})
+	
+sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.WS.MAB, {
+	head="Pixie Hairpin +1",    
+    left_ring="Archon Ring",
+	})
+
 
 -- Misc Sets
 

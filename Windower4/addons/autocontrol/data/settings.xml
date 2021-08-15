@@ -55,6 +55,22 @@
                 <slot11>armor plate iv</slot11>
                 <slot12>armor plate iii</slot12>
             </overdrive>
+            <ranged>
+                <frame>sharpshot frame</frame>
+                <head>sharpshot head</head>
+                <slot01>inhibitor</slot01>
+                <slot02>inhibitor ii</slot02>
+                <slot03>magniplug</slot03>
+                <slot04>magniplug ii</slot04>
+                <slot05>attuner</slot05>
+                <slot06>truesights</slot06>
+                <slot07>barrage turbine</slot07>
+                <slot08>repeater</slot08>
+                <slot09>drum magazine</slot09>
+                <slot10>scope iv</slot10>
+                <slot11>optic fiber</slot11>
+                <slot12>optic fiber ii</slot12>
+            </ranged>
             <tankbruiser>
                 <frame>valoredge frame</frame>
                 <head>soulsoother head</head>

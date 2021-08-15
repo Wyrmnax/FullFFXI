@@ -117,11 +117,11 @@ function pet_change(pet,gain)
 -- Gain a Pet 
 	if gain == true then
 	-- When I Summon my Automaton
-		if master == 1 then
-			equip(sets.idle.Standard)
-		else
-			equip(sets.idle.Standard)
-		end
+		--if master == 1 then
+			--equip(sets.idle.Standard)
+		--else
+			--equip(sets.idle.Standard)
+		--end
 	else
 		-- When i have no Automaton
 		master = 1

@@ -37,7 +37,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             },
@@ -48,7 +48,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             }
         },
         ["DRG"] = {

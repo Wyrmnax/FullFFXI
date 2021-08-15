@@ -139,6 +139,7 @@ sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 	})
 
 sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
+	head="Odyssean Helm",
     legs="Sakpata's Cuisses",
 	})
 

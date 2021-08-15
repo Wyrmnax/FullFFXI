@@ -53,8 +53,8 @@ if player.name == 'Khory' then
 	}
 	
 	sets.RangedLeaden = { 
-	main="Naegling",
-    sub="Tauret",
+	main={ name="Lanun Knife", augments={'Path: A',}},
+    sub={ name="Lanun Knife", augments={'Path: C',}},
     range="Death Penalty",
 	}
 		
@@ -104,7 +104,7 @@ sets.TP = {
 sets.precast.Snapshot = {ammo="TPBullet",
 	body="Laksa. Frac +3",
 	hands="Carmine Fin. Ga. +1",
-	wasit="Yemaya Belt",
+	wasit="K. Kachina Belt +1",
 	legs="Adhemar Kecks",
     feet="Meg. Jam. +2",}
 	
@@ -116,11 +116,11 @@ sets.RA = { ammo="TPBullet",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Yemaya Belt",
+    waist="K. Kachina Belt +1",
     left_ear="Telos Earring",
-    right_ear="Neritic Earring",
+    right_ear="Beyla Earring",
     left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Hajduk Ring +1",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 				
@@ -131,17 +131,17 @@ sets.RA.Acc = { ammo="TPBullet",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Yemaya Belt",
+    waist="K. Kachina Belt +1",
     left_ear="Telos Earring",
-    right_ear="Neritic Earring",
+    right_ear="Beyla Earring",
     left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Hajduk Ring +1",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 
 
 -- JA
-sets.precast.JA["Wild Card"] = {feet="Lanun Bottes"}
+sets.precast.JA["Wild Card"] = {feet="Lanun Bottes +3"}
 sets.precast.JA["Cutting Cards"] = {}
 
 sets.precast.JA["Fold"] = {hands="Lanun Gants"}
@@ -151,14 +151,14 @@ sets.precast.JA["Triple Shot"] = {body="Nvrch. Frac +2"}
 sets.precast.JA["Double-Up"] = set_combine(sets.precast.JA["Phantom Roll"])
 
 -- Corsair Rolls
-sets.precast.JA["Phantom Roll"] = {main="Lanun Knife", ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
+sets.precast.JA["Phantom Roll"] = {main={ name="Lanun Knife", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
 sets.precast.JA["Caster's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {legs="Nvrch. Culottes +2"})
 sets.precast.JA["Courser's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {feet="Navarch's Bottes +2"})
 sets.precast.JA["Blitzer's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {head="Navarch's Tricorne +2"})
 sets.precast.JA["Tactician's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {body="Navarch's Frac +2"})
 sets.precast.JA["Allies' Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {hands="Navarch's Gants +2"})
 
-sets.MaxDuration = {main="Lanun Knife", reanged="Compensator"}
+sets.MaxDuration = {sub={ name="Lanun Knife", augments={'Path: C',}}, reanged="Compensator"}
 
 -- Quick Draw 
 sets.precast.QD = {}
@@ -170,7 +170,7 @@ sets.precast.QD.ACC = {
     hands="Nyame Gauntlets",
     legs="Malignance Tights",
     feet="Malignance Boots",
-    neck="Comm. Charm +1",
+    neck="Comm. Charm +2",
     waist="Eschan Stone",
     left_ear="Lempo Earring",
     right_ear="Hermetic Earring",
@@ -186,7 +186,7 @@ sets.precast.QD.MAB = {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-    neck={ name="Comm. Charm +1", augments={'Path: A',}},
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     right_ear="Hermetic Earring",
@@ -217,12 +217,12 @@ sets.precast.WS = {
 sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    body="Laksa. Frac +3",
-	--body="Malignance Tabard",
+    --body="Laksa. Frac +3",
+	body="Malignance Tabard",
     hands="Meg. Gloves +2",
     legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-    neck="Comm. Charm +1",
+    neck="Comm. Charm +2",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -241,10 +241,10 @@ sets.precast.RAWS = {
     feet="Lanun Bottes +3",
     neck="Iskur Gorget",
     waist="Eschan Stone",
-    left_ear="Ishvara Earring",
+    left_ear="Beyla Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Hajduk Ring +1",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 	
@@ -255,7 +255,7 @@ sets.precast.RAWS['Wildfire'] = {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-    neck="Comm. Charm +1",
+    neck="Comm. Charm +2",
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     right_ear="Moldavite Earring",
@@ -278,14 +278,14 @@ sets.precast.RAWS['Last Stand'] = set_combine(sets.precast.RAWS, {
 
 sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {	
 	ammo="Living Bullet",
-	head="Malignance Chapeau",
+	head="Nyame Helm",
     body="Nyame mail",
-    hands="Meg. Gloves +2",
-    legs={ name="Herculean Trousers", augments={'Rng.Acc.+30','Weapon skill damage +4%',}},
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Iskur Gorget",
-    waist="Yemaya Belt",
-    left_ear="Ishvara Earring",
+    waist="K. Kachina Belt +1",
+    left_ear="Beyla Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
     right_ring="Ilabrat Ring",

@@ -31,6 +31,8 @@ lua load equipviewer;
 lua load findAll;
 lua load GearSwap;
 lua load instaLS;
+lua load lottery;
+lua load MyHome;
 lua load Omen;
 lua load organizer;
 lua load Pouches;

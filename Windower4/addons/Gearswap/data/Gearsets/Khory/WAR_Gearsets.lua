@@ -227,7 +227,9 @@ sets.precast.WS.MAB = {
 --Sword
 	sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.wsd, { 	
     neck="War. Beads +2",
+	--hands="Sakpata's Gauntlets",
     --legs="Sakpata's Cuisses",
+	--right_ring="Defending Ring",
 	})
 	
 	sets.precast.WS["Seraph Blade"] = set_combine(sets.precast.WS.MAB, { 	
@@ -306,6 +308,9 @@ sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS.wsd,
 
 sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.wsd, 
 {
+	hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+	right_ring="Defending Ring",
 })
 
 				

@@ -29,10 +29,76 @@ local items = {}
 local bags = {}
 local item_tab = {}
 
+do
+    local names = {'Nomad Moogle'} -- don't add Pilgrim Moogle to this list, organizer currently does not work in Odyssey.
+    local moogles = {}
+    local poked = false
+    local block_menu = false
+    
+    clear_moogles = function()
+        moogles = {}
+        poked = false
+    end
+    
+    local poke_moogle = function(npc)
+        local p = packets.new('outgoing', 0x1a, {
+            ["Target"] = npc.id,
+            ["Target Index"] = npc.index,
+            })
+        poked = true
+        block_menu = true
+        packets.inject(p)
+        repeat 
+            coroutine.sleep(0.4)
+        until not block_menu
+    end
+    
+    nomad_moogle = function()
+        if #moogles == 0 then
+            for _,name in ipairs(names) do
+                local npcs = windower.ffxi.get_mob_list(name)
+                for index in pairs(npcs) do
+                    table.insert(moogles,index)
+                end
+            end
+        end
+        
+        local player = windower.ffxi.get_mob_by_target('me')
+        for _, moo_index in ipairs(moogles) do
+            local moo = windower.ffxi.get_mob_by_index(moo_index)
+            if moo and (moo.x - player.x)^2 + (moo.y - player.y)^2 < 36 then
+                if not poked then
+                    poke_moogle(moo)
+                end
+                return moo.name
+            end
+        end
+        return false
+    end
+    
+    windower.register_event('incoming chunk',function(id)
+        if id == 0x02E and block_menu then
+            block_menu = false
+            return true
+        end
+    end)
+end
+
+windower.register_event('zone change',function() 
+    clear_moogles()
+end)
+
 local function validate_bag(bag_table)
-    if (bag_table.access == 'Everywhere' or (bag_table.access == 'Mog House' and windower.ffxi.get_info().mog_house)) and
-        windower.ffxi.get_bag_info(bag_table.id) then
-        return true
+    if type(bag_table) == 'table' and windower.ffxi.get_bag_info(bag_table.id) then 
+        if bag_table.access == 'Everywhere' then
+            return true
+        elseif bag_table.access == 'Mog House' then 
+            if windower.ffxi.get_info().mog_house then
+                return true
+            elseif nomad_moogle() and bag_table.english ~= 'Storage' then -- Storage is not available at Nomad Moogles
+                return true
+            end
+        end
     end
     return false
 end

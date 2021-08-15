@@ -1076,15 +1076,15 @@ function spell_complete(rline)
     if rline.tp_cost == 0 then 
 	rline.tpaftercast = player.tp 
 	else
-    --rline.tpaftercast = player.tp - rline.tp_cost 
+    rline.tpaftercast = player.tp - rline.tp_cost 
 	end
 	
     if rline.mp_cost == 0 then
         rline.mpaftercast = player.mp
         rline.mppaftercast = player.mpp
     else
-        --rline.mpaftercast = player.mp - rline.mp_cost
-        --rline.mppaftercast = (player.mp - rline.mp_cost)/player.max_mp
+        rline.mpaftercast = player.mp - rline.mp_cost
+        rline.mppaftercast = (player.mp - rline.mp_cost)/player.max_mp
     end
     
     return rline

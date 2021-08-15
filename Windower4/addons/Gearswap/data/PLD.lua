@@ -66,7 +66,6 @@ function precast(spell,arg)
 			equip(sets.FullEnmity)
 		end
 	elseif spell.type == 'WeaponSkill' and not buffactive['amnesia'] then
-		windower.add_to_chat(121, 'Weaponskill!')
 		if player.status == 'Engaged' then
 			if player.tp >= 1000 then
 				if spell.target.distance <= 5 then		

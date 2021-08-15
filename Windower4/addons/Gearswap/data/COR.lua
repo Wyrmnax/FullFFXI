@@ -170,7 +170,7 @@ function precast(spell,arg)
 	elseif spell.type == "CorsairShot" then
 		if spell.english:wcmatch('Dark Shot|Light Shot') then
 			if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-				equip(sets.midcast.Nuke.MB.Acc,{waist="Hachirin-no-Obi"})
+				equip(sets.precast.QD.ACC,QDBullet)
 			else
 				equip(sets.precast.QD.ACC,QDBullet)
 			end

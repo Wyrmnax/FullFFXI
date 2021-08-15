@@ -1,6 +1,6 @@
 <update>
   <launcher>
-    <version>4.3.7757.25902</version>
+    <version>4.3.7757.25903</version>
   </launcher>
   <hook>
     <version>4.3.6.3</version>
@@ -8,7 +8,7 @@
   <plugins>
     <plugin>
       <name>LuaCore</name>
-      <version>2.2.3.0</version>
+      <version>2.3.0.9</version>
       <required>true</required>
       <resources>true</resources>
     </plugin>
@@ -139,7 +139,7 @@
       <name>StatusTimer</name>
       <version>1.2.3.2</version>
       <description>
-        Displays buff timers below your status effects.
+        Displays buff timers below your status effects. You really shouldn't use this on retail, SE added a better version years ago. "/statustimer on"
       </description>
     </plugin>
     <plugin>
@@ -151,7 +151,7 @@
     </plugin>
     <plugin>
       <name>Timers</name>
-      <version>3.7.4.32</version>
+      <version>3.7.4.35</version>
       <resources>true</resources>
       <description>
         Tracks ability and spell recast timers, as well as durations on buffs that you cast.

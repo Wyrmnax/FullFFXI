@@ -41,7 +41,7 @@ if player.name == 'Khory' then
 	}
 	
 	sets.MeleeLeaden = { 
-	main="Naegling",
+	main={ name="Rostam", augments={'Path: A',}},
     sub="Tauret",
     range="Death Penalty",
 	}
@@ -53,8 +53,8 @@ if player.name == 'Khory' then
 	}
 	
 	sets.RangedLeaden = { 
-	main={ name="Lanun Knife", augments={'Path: A',}},
-    sub={ name="Lanun Knife", augments={'Path: C',}},
+	main={ name="Rostam", augments={'Path: A',}},
+    sub={ name="Rostam", augments={'Path: C',}},
     range="Death Penalty",
 	}
 		
@@ -65,7 +65,7 @@ sets.idle.PDT = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Meg. Gloves +2",
-    legs="Meg. Chausses +2",
+    legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Lissome Necklace",
     waist="Sailfi Belt +1",
@@ -151,14 +151,14 @@ sets.precast.JA["Triple Shot"] = {body="Nvrch. Frac +2"}
 sets.precast.JA["Double-Up"] = set_combine(sets.precast.JA["Phantom Roll"])
 
 -- Corsair Rolls
-sets.precast.JA["Phantom Roll"] = {main={ name="Lanun Knife", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
+sets.precast.JA["Phantom Roll"] = {main={ name="Rostam", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
 sets.precast.JA["Caster's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {legs="Nvrch. Culottes +2"})
 sets.precast.JA["Courser's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {feet="Navarch's Bottes +2"})
 sets.precast.JA["Blitzer's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {head="Navarch's Tricorne +2"})
 sets.precast.JA["Tactician's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {body="Navarch's Frac +2"})
 sets.precast.JA["Allies' Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {hands="Navarch's Gants +2"})
 
-sets.MaxDuration = {sub={ name="Lanun Knife", augments={'Path: C',}}, reanged="Compensator"}
+sets.MaxDuration = {sub={ name="Rostam", augments={'Path: C',}}, reanged="Compensator"}
 
 -- Quick Draw 
 sets.precast.QD = {}
@@ -186,8 +186,8 @@ sets.precast.QD.MAB = {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-    neck={ name="Comm. Charm +2", augments={'Path: A',}},
-    waist="Eschan Stone",
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},    
+	waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
     right_ear="Hermetic Earring",
     left_ring="Dingir Ring",
@@ -217,10 +217,10 @@ sets.precast.WS = {
 sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    --body="Laksa. Frac +3",
-	body="Malignance Tabard",
+    body="Laksa. Frac +3",
+	--body="Malignance Tabard",
     hands="Meg. Gloves +2",
-    legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
+    legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +2",
     waist="Sailfi Belt +1",
@@ -256,7 +256,7 @@ sets.precast.RAWS['Wildfire'] = {
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Comm. Charm +2",
-    waist="Eschan Stone",
+    waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
     right_ear="Moldavite Earring",
     left_ring="Dingir Ring",
@@ -268,7 +268,6 @@ sets.precast.RAWS['Leaden Salute'] = set_combine(sets.precast.RAWS["Wildfire"], 
 	head="Pixie Hairpin +1", 	
     right_ring="Archon Ring",
 	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	waist="Svelt. Gouriz +1",
 	})
 
 
@@ -284,7 +283,7 @@ sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Iskur Gorget",
-    waist="K. Kachina Belt +1",
+    waist="Orpheus's Sash",
     left_ear="Beyla Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",

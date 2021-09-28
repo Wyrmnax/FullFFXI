@@ -149,7 +149,7 @@ sets.precast.JA["Valiance"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Vallation"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
 sets.precast.JA["Pflug"] = {feet="Runiest Boots"}
-sets.precast.JA["Battuta"] = {head="Futhark Bandeau"}
+sets.precast.JA["Battuta"] = {head="Futhark Bandeau +2"}
 sets.precast.JA["Sleight of Sword"] = {hands="Futhark Mitons"}
 sets.precast.JA["Inspiration"] = {legs="Futhark Trousers"}
 sets.precast.JA["Rayke"] = {feet="Futhark Boots"}
@@ -180,7 +180,7 @@ sets.midcast.Enhancing = {
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},}
 	
 sets.midcast.Phalanx = set_combine(sets.midcast.Enhancing,{
-				head="Futhark Bandeau +1"
+				head="Futhark Bandeau +2"
 				})
 				
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
@@ -196,7 +196,7 @@ sets.precast.WS = {ammo="Coiste Bodhar",
     head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
     body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
     hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
+    legs="Nyame Flanchard",
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
@@ -233,7 +233,7 @@ sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS, {
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
     body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
     hands="Meg. Gloves +2",
-    legs={ name="Lustr. Subligar +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
+    legs="Nyame Flanchard",
     feet={ name="Lustra. Leggings +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
     neck="Caro Necklace",
     waist="Sailfi Belt +1",

@@ -425,20 +425,10 @@ if player.main_job == "PUP" then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'WAR' then
-				set_macro_page(1,19)
-			elseif player.sub_job == 'NIN' then
-				set_macro_page(2,19)
-			elseif player.sub_job == 'DNC' then
-				set_macro_page(3,19)
-			elseif player.sub_job == 'SCH' then 
-				set_macro_page(4,19)
-			elseif player.sub_job == 'WHM' then 
-				set_macro_page(5,19)
-			else
-				set_macro_page(1,19)
+				set_macro_page(1,15)
 			end
 		else
-			set_macro_page(1,19)
+			set_macro_page(1,15)
 		end
 	end
 end

@@ -55,8 +55,8 @@
   <plBarStatus>true</plBarStatus>
   <plBarStatus_Spell>2</plBarStatus_Spell>
   <AOE_Barstatus>true</AOE_Barstatus>
-  <plAuspice>false</plAuspice>
-  <plRegen>false</plRegen>
+  <plAuspice>true</plAuspice>
+  <plRegen>true</plRegen>
   <plRegen_Level>4</plRegen_Level>
   <plReraise>true</plReraise>
   <plReraise_Level>4</plReraise_Level>

@@ -170,7 +170,7 @@ sets.precast.WS = {
     body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
     hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
     feet="Flam. Gambieras +2",
-    legs="Sakpata's Cuisses",
+    legs="Nyame Flanchard",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Cessance Earring",
@@ -185,7 +185,7 @@ sets.precast.WS.wsd = {
     head="Agoge Mask +3",
     body="Pumm. Lorica +3",
     hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},
+    legs="Nyame Flanchard",
     feet="Sulev. Leggings +2",
     neck="War. Beads +2",
     waist="Sailfi Belt +1",
@@ -205,7 +205,7 @@ sets.precast.WS.MAB = {
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Beithir Ring",
@@ -258,8 +258,7 @@ sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS.wsd, {
 				
 sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.wsd, {   
     neck="War.Beads +2",	
-	waist="Ioskeha Belt +1",
-	legs={ name="Odyssean Cuisses", augments={'Weapon skill damage +3%','VIT+10','Accuracy+14',}},
+	waist="Ioskeha Belt +1",	
     back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 				
@@ -281,7 +280,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS,
     head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
     body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
     hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs={ name="Odyssean Cuisses", augments={'Weapon skill damage +3%','VIT+10','Accuracy+14',}},
+    legs="Nyame Flanchard",
     feet={ name="Valorous Greaves", augments={'Pet: Haste+4','Crit.hit rate+3','Weapon skill damage +6%','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
@@ -308,9 +307,6 @@ sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS.wsd,
 
 sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.wsd, 
 {
-	hands="Sakpata's Gauntlets",
-    legs="Sakpata's Cuisses",
-	right_ring="Defending Ring",
 })
 
 				

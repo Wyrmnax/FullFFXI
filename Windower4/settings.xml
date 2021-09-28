@@ -30,6 +30,7 @@
     <addon>equipviewer</addon>
     <addon>lottery</addon>
     <addon>MyHome</addon>
+    <addon>Bonanza</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>
@@ -38,6 +39,7 @@
     <plugin>DelayMeNot</plugin>
     <plugin>FFXIDB</plugin>
     <plugin>ChatMon</plugin>
+    <plugin>Config</plugin>
   </autoload>
   <profile name="">
     <consolekey>Insert</consolekey>

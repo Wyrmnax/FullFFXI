@@ -4,6 +4,22 @@
         <AutoActivate>true</AutoActivate>
         <AutoDeusExAutomata>false</AutoDeusExAutomata>
         <autosets>
+            <ambusfrog>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>attuner</slot01>
+                <slot02>inhibitor ii</slot02>
+                <slot03>speedloader</slot03>
+                <slot04>magniplug ii</slot04>
+                <slot05>mana jammer iii</slot05>
+                <slot06>mana jammer iv</slot06>
+                <slot07>turbo charger ii</slot07>
+                <slot08>turbo charger</slot08>
+                <slot09>optic fiber</slot09>
+                <slot10>optic fiber ii</slot10>
+                <slot11>magniplug</slot11>
+                <slot12>auto-repair kit iv</slot12>
+            </ambusfrog>
             <dd>
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>

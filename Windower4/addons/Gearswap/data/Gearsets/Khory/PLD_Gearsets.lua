@@ -119,6 +119,7 @@ sets.midcast.SIRD = set_combine(sets.Enmity,{
     legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
     feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
     neck="Moonlight Necklace",
+	lear="Knightly Earring",
     waist="Audumbla Sash",
 })
 
@@ -140,7 +141,9 @@ sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 
 sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
 	head="Odyssean Helm",
+	hands="Souv. handsch. +1",
     legs="Sakpata's Cuisses",
+	feet="Souveran Schuhs +1"
 	})
 
 -- JA
@@ -192,7 +195,7 @@ sets.precast.WS.MAB = {
     legs="Nyame Flanchard",
     feet="Sulev. Leggings +2",
     neck="Moonlight Necklace",
-    waist="Eschan Stone",
+    waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring={ name="Beithir Ring", augments={'Path: A',}},

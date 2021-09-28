@@ -321,9 +321,7 @@ end
 
 function previous_set()
 	slot_lock()
-	if areas.Town:contains(world.zone) then
-		equip(ModeWeapon, sets.misc.Town)
-	elseif player.status == 'Engaged' then
+	if player.status == 'Engaged' then
 		if PDT == 0 then
 			equip(ModeWeapon, sets.TP)
 			windower.add_to_chat(121,'Tp Set ' ..Mode)
@@ -332,7 +330,7 @@ function previous_set()
 			windower.add_to_chat(121,'PDT Set Locked')
 		end
 	else 
-		equip(ModeWeapon,sets.idle.Standard)
+		equip(ModeWeapon, sets.idle.Standard)
 	end
 end
 

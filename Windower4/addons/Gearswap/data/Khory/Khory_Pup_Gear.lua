@@ -220,26 +220,78 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Hiza. Haramaki +2",hands="Malignance Gloves",ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Fucho-no-Obi",legs=gear.herculean_dt_legs,feet="Hippo. Socks +1"}
+	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Animator P",
+    ammo="Automat. Oil +3",
+    head="Karagoz Capello +1",
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands="Mpaca's Gloves",
+    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",
+    back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Regen"+10','System: 1 ID: 1247 Val: 4',}},
+}
 		
 	sets.idle.Refresh = {
-        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-        body="Vrikodara Jupon",hands=gear.herculean_refresh_hands,ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Fucho-no-Obi",legs="Rawhide Trousers",feet="Hippo. Socks +1"}
+	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Animator P",
+    ammo="Automat. Oil +3",
+    head="Karagoz Capello +1",
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands="Mpaca's Gloves",
+    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",
+    back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Regen"+10','System: 1 ID: 1247 Val: 4',}},
+}
 		
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
-        head="Rawhide Mask",neck="Loricate Torque +1",ear1="Enmerkar Earring",ear2="Handler's Earring +1",
-        body="Taeon Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Dark Ring",
-        back="Moonlight Cape",waist="Isa Belt",legs="Tali'ah Sera. +2",feet="Hippo. Socks +1"}
+	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Animator P",
+    ammo="Automat. Oil +3",
+    head="Rawhide Mask",
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands="Mpaca's Gloves",
+    legs="Rawhide trousers",
+    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",
+    back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Regen"+10','System: 1 ID: 1247 Val: 4',}},
+}
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-        head="Anwig Salade",neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Domesticator's Earring",
-        body="Taeon Tabard",hands="Regimen Mittens",ring1="Varar Ring +1",ring2="Varar Ring +1",
-        back="Visucius's Mantle",waist="Klouskap Sash",legs="Tali'ah Sera. +2",feet="Tali'ah Crackows +2"}
+	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Animator P",
+    ammo="Automat. Oil +3",
+    head="Karagoz Capello +1",
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands="Mpaca's Gloves",
+    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",
+    back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Regen"+10','System: 1 ID: 1247 Val: 4',}},
+}
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
 	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})

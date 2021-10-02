@@ -682,7 +682,7 @@ function filter_pretarget(action)
         not res.monstrosity[windower.ffxi.get_mjob_data().species] or not res.monstrosity[windower.ffxi.get_mjob_data().species].tp_moves[action.id] or
         not (res.monstrosity[windower.ffxi.get_mjob_data().species].tp_moves[action.id] <= player.main_job_level)) then
         -- Monstrosity filtering
-        msg.debugging("Unable to execute command. You do not have access to that monsterskill ("..(res.monster_abilities[action.id][language] or action.id)..")")
+        msg.debugging("Unable to execute command. You do not have access to that monsterskill ("..(res.monster_skills[action.id][language] or action.id)..")")
         return false
     end
     
@@ -1073,12 +1073,9 @@ function spell_complete(rline)
         rline.element = res.elements[rline.element][language]
     end
     
-    if rline.tp_cost == 0 then 
-	rline.tpaftercast = player.tp 
-	else
-    rline.tpaftercast = player.tp - rline.tp_cost 
-	end
-	
+    if rline.tp_cost == 0 then rline.tpaftercast = player.tp else
+    rline.tpaftercast = player.tp - rline.tp_cost end
+    
     if rline.mp_cost == 0 then
         rline.mpaftercast = player.mp
         rline.mppaftercast = player.mpp

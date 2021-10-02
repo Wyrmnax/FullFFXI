@@ -245,6 +245,13 @@
     "count": 0
   },
   {
+    "name": "mapinfofloor",
+    "pattern": "8B7424148B4424108B7C240C8B0D",
+    "mask": "xxxxxxxxxxxxxx",
+    "offset": 14,
+    "count": 0
+  },
+  {
     "name": "autofollow",
     "pattern": "8BCFE8FFFFFFFF8B0DFFFFFFFFE8FFFFFFFF8BE885ED750CB9",
     "mask": "xxx????xx????x????xxxxxxx",

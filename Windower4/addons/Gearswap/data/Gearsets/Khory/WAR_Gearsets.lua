@@ -262,7 +262,10 @@ sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.wsd, {
     back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 				
-sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.wsd, sets.TH)
+sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.wsd, {
+	ammo="Per. Lucky Egg",
+	waist="Chaac Belt",
+	})
 
 sets.precast.WS["Full Break"] = set_combine(sets.precast.WS.wsd, {    
 })

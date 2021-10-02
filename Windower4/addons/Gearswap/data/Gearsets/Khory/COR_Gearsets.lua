@@ -47,7 +47,7 @@ if player.name == 'Khory' then
 	}
 	
 	sets.RangedLastStand = { 
-	main="Kustawi +1",
+	main={ name="Rostam", augments={'Path: A',}},
     sub="Nusku Shield",
     range="Fomalhaut",
 	}
@@ -120,7 +120,7 @@ sets.RA = { ammo="TPBullet",
     left_ear="Telos Earring",
     right_ear="Beyla Earring",
     left_ring="Dingir Ring",
-    right_ring="Hajduk Ring +1",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 				
@@ -135,7 +135,7 @@ sets.RA.Acc = { ammo="TPBullet",
     left_ear="Telos Earring",
     right_ear="Beyla Earring",
     left_ring="Dingir Ring",
-    right_ring="Hajduk Ring +1",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 
@@ -244,7 +244,7 @@ sets.precast.RAWS = {
     left_ear="Beyla Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
-    right_ring="Hajduk Ring +1",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	}
 	

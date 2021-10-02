@@ -1,5 +1,1 @@
-﻿{
-  "PositionSendToAll": false,
-  "TransparencyLevel": 100,
-  "ZoneDelay": 5000
-}
+{"PositionSendToAll":false,"TransparencyLevel":100,"ZoneDelay":5000,"AlwaysOnTop":false,"MapViewOpen":true,"ReduceCPUUsage":false,"ProcessName":null}

@@ -39,7 +39,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
+                ["ws_cmd"] = "/ws \"last stand\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -215,7 +215,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {

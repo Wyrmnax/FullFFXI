@@ -220,7 +220,7 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
     head="Karagoz Capello +1",
@@ -238,7 +238,7 @@ function init_gear_sets()
 }
 		
 	sets.idle.Refresh = {
-	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
     head="Karagoz Capello +1",
@@ -257,7 +257,7 @@ function init_gear_sets()
 		
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
-	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
     head="Rawhide Mask",
@@ -276,7 +276,7 @@ function init_gear_sets()
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-	main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
     head="Karagoz Capello +1",
@@ -294,8 +294,14 @@ function init_gear_sets()
 }
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
-	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
-	sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, {waist="Isa Belt",ear2="Handler's Earring +1"})
+	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {
+	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
+    hands={ name="Taeon Gloves", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+	})
+	sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, {
+	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
+    hands={ name="Taeon Gloves", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+	})
 	sets.idle.Pet.Engaged.LightTank = set_combine(sets.idle.Pet.Engaged, {waist="Isa Belt",ear2="Handler's Earring +1"})
     sets.idle.Pet.Engaged.Magic = set_combine(sets.idle.Pet.Engaged, {})
 	sets.idle.Pet.Engaged.Heal = sets.idle.Pet.Engaged.Magic

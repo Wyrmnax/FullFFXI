@@ -44,7 +44,7 @@ sets.idle = {
 	ammo="Staunch Tathlum +1",
     head="Sakpata's Helm",
     body="Sacro Breastplate",
-    hands="Regal Gauntlets",
+    hands="Souv. Handsch. +1",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
     neck="Unmoving Collar +1",
@@ -63,7 +63,7 @@ sets.TP = {
 	ammo="Staunch Tathlum +1",
     head="Sakpata's Helm",
     body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
+    hands="Souv. Handsch. +1",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
     neck="Unmoving Collar +1",
@@ -182,9 +182,13 @@ sets.precast.WS = set_combine(sets.TP, {
 
 sets.precast.WS.WSD = set_combine(sets.TP, { 
 	hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-	legs={ name="Valorous Hose", augments={'Accuracy+14 Attack+14','Weapon skill damage +5%','Accuracy+6','Attack+9',}},	
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},  
+	legs="Nyame Flanchard",	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring={ name="Beithir Ring", augments={'Path: A',}}, 
     feet="Sulev. Leggings +2", 
+	
 	})
 	
 sets.precast.WS.MAB = { 

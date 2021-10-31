@@ -39,7 +39,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
+                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -59,7 +59,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"wheeling thrust\" <t>"
+                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["MNK"] = {
@@ -119,7 +128,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"howling fist\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["RDM"] = {
@@ -198,6 +207,17 @@ return {
                 ["ws_cmd"] = "/ws \"'Tachi: Fudo'\" <t>"
             }
         },
+        ["THF"] = {
+            ["Dagger"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
+            }
+        },
         ["WAR"] = {
             ["Axe"] = {
                 ["hps"] = {
@@ -206,9 +226,18 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            },
+            ["Dagger"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
@@ -233,7 +262,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"upheaval\" <t>"
+                ["ws_cmd"] = "/ws \"resolution\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -242,7 +271,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"asuran fists\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -251,7 +280,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -260,7 +289,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             }
         },
         ["WHM"] = {

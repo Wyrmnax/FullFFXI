@@ -294,6 +294,8 @@ function midcast(spell,arg)
 			equip(sets.midcast.ConserveMP, sets.precast.Shellra)
 		elseif spell.english:wcmatch('Reraise*') then
 			equip(sets.midcast.ConserveMP)
+		elseif spell.english:wcmatch('Erase*') then
+			equip(sets.midcast.Erase)
 		else
 			equip(sets.midcast.ConserveMP)
 		end

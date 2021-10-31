@@ -246,7 +246,7 @@ if player.name == 'Khory' then
 			neck="Sanctity Necklace",
 			waist="Orpheus's Sash",
 			left_ear="Friomisi Earring",
-			right_ear="Moldavite Earring",
+			right_ear="Sortiarius Earring",
 			left_ring="Jhakri Ring",
 			right_ring="Strendu Ring",
 			back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},

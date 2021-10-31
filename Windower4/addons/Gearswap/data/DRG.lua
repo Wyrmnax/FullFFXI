@@ -121,10 +121,10 @@ end
 
 function status_change(new,old)
     if T{'Idle','Resting'}:contains(new) then
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
+		--if areas.Town:contains(world.zone) then
+			--windower.add_to_chat(121, "Town Gear")
+			--equip(sets.misc.Town)
+		--else
 			if PDT == 1 then
 				if buffactive['Weakness'] then
 					equip(sets.idle.PDT,{head="Twilight Helm", body="Twilight Mail"})
@@ -137,10 +137,10 @@ function status_change(new,old)
 				if new == 'Resting' then
 					equip(sets.Resting)
 				else
-					equip(sets.idle.Standard)
+					equip(sets.idle.PDT)
 				end
 			end
-		end
+		--end
 	elseif new == 'Engaged' then
  		-- Automatically activate Hasso when engaging
 		if player.sub_job["SAM"] and not buffactive['Hasso'] and not buffactive.Amnesia and not buffactive.Obliviscence and	not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[138] < 1 then

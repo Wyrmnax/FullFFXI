@@ -239,6 +239,7 @@ windower.register_event('prerender', function()
                 local hp_lt = table.get_nested_value(mobs, mob.name, '<') or hps['<']
                 local hp_gt = table.get_nested_value(mobs, mob.name, '>') or hps['>']
                 if player.vitals.tp > 999 then
+				--if player.vitals.tp > 1550 then
                     if useAutoRA and (araDelayed < 2) then
                         araDelayed = araDelayed + 1
                     else

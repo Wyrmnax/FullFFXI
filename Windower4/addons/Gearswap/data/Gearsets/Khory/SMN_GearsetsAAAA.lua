@@ -64,7 +64,7 @@ if player.name == 'Feary' then
     feet="Convo. Pigaches +2",
     neck="Caller's Pendant",
     waist="Klouskap Sash", 
-    left_ear="Moldavite Earring",
+    left_ear="Sortiarius Earring",
     right_ear="Enmerkar Earring",
     left_ring="Varar Ring",
     right_ring="Varar Ring",

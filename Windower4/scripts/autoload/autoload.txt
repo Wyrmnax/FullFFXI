@@ -27,6 +27,7 @@ lua load Bonanza;
 lua load cancel;
 lua load checkparam;
 lua load Debuffed;
+lua load Dimmer;
 lua load DistancePlus;
 lua load enternity;
 lua load equipviewer;

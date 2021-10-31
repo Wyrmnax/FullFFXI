@@ -43,7 +43,7 @@ if player.name == 'Khory' then
 	sets.MeleeLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
     sub="Tauret",
-    range="Death Penalty",
+    range={ name="Death Penalty", augments={'Path: A',}},
 	}
 	
 	sets.RangedLastStand = { 
@@ -55,7 +55,7 @@ if player.name == 'Khory' then
 	sets.RangedLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
     sub={ name="Rostam", augments={'Path: C',}},
-    range="Death Penalty",
+    range={ name="Death Penalty", augments={'Path: A',}},
 	}
 		
 -- Auto Sets
@@ -71,7 +71,7 @@ sets.idle.PDT = {
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Defending Ring",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -175,7 +175,7 @@ sets.precast.QD.ACC = {
     left_ear="Lempo Earring",
     right_ear="Hermetic Earring",
     left_ring="Dingir Ring",
-    right_ring="Apate Ring",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 -- Elemental Shots
@@ -191,7 +191,7 @@ sets.precast.QD.MAB = {
     left_ear="Friomisi Earring",
     right_ear="Hermetic Earring",
     left_ring="Dingir Ring",
-    right_ring="Apate Ring",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 
@@ -211,14 +211,13 @@ sets.precast.WS = {
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
-    right_ring="Apate Ring",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
 
 sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    body="Laksa. Frac +3",
-	--body="Malignance Tabard",
+    body="Nyame Mail",
     hands="Meg. Gloves +2",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
@@ -227,7 +226,7 @@ sets.precast.WS["Savage Blade"] = {
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
-    right_ring="Apate Ring",
+    right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
 
 
@@ -258,7 +257,7 @@ sets.precast.RAWS['Wildfire'] = {
     neck="Comm. Charm +2",
     waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
-    right_ear="Moldavite Earring",
+    right_ear="Sortiarius Earring",
     left_ring="Dingir Ring",
     right_ring="Ilabrat Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},

@@ -163,7 +163,7 @@ if player.name == 'Khory' then
 		-- Status Ailments
 		sets.midcast.NaSpells = set_combine(sets.midcast.Recast, {})
 		
-		sets.midcast.Erase = set_combine(sets.midcast.NaSpells)
+		sets.midcast.Erase = set_combine(sets.midcast.NaSpells, {neck="Cleric's Torque"})
 
 		sets.midcast.Cursna = set_combine(sets.midcast.Recast, {
 				body="Ebers Bliaud +1",

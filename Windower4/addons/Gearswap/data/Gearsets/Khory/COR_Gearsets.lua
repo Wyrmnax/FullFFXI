@@ -14,6 +14,8 @@ if player.name == 'Khory' then
 	include('include/equipment.lua')
 	-- include('../include/autoexec.lua')
 	
+	send_command('lua reload autocor')
+	
 -- sets Macros off = 0  on = 1
 		automacroset = 1
 		if automacroset == 1 then
@@ -42,19 +44,19 @@ if player.name == 'Khory' then
 	
 	sets.MeleeLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
-    sub="Tauret",
+    sub="Gleti's Knife",
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
 	
 	sets.RangedLastStand = { 
-	main={ name="Rostam", augments={'Path: A',}},
+	main="Kustawi +1",
     sub="Nusku Shield",
     range="Fomalhaut",
 	}
 	
 	sets.RangedLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
-    sub={ name="Rostam", augments={'Path: C',}},
+    sub="Kustawi +1",
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
 		

@@ -8,7 +8,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"black halo\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -59,7 +59,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
+                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -289,7 +289,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["WHM"] = {

@@ -47,7 +47,7 @@ if player.name == 'Khory' then
     right_ear="Hermetic Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back="Twilight Cape",
+    back="Alaunus's Cape",
 	}
 	
 		sets.idle.MDT = {    
@@ -65,7 +65,7 @@ if player.name == 'Khory' then
     right_ear="Hermetic Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back="Twilight Cape",
+    back="Alaunus's Cape",
 	}
 	
 		sets.Resting = set_combine(sets.idle.PDT, {
@@ -93,9 +93,10 @@ if player.name == 'Khory' then
     right_ear="Mendi. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back="Twilight Cape",
+    back="Alaunus's Cape",
 	}
-		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
+		sets.precast.Cure = set_combine(sets.precast.Fastcast, {		   
+		body="Shamash Robe",
 		waist="Witful Belt",
 		})
 		
@@ -134,7 +135,7 @@ if player.name == 'Khory' then
     right_ear="Mendi. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back="Twilight Cape",
+    back="Alaunus's Cape",
 	}
 		sets.midcast.EnmityCure = set_combine(sets.midcast.Cure, {
 		})
@@ -154,7 +155,7 @@ if player.name == 'Khory' then
     right_ear="Hermetic Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back="Twilight Cape",
+    back="Alaunus's Cape",
 	}
 		sets.midcast.EnmityCuraga = set_combine(sets.midcast.Curaga, {})
 
@@ -214,7 +215,7 @@ if player.name == 'Khory' then
 		sets.midcast.Banish = {main="Soothsayer Staff",
 				head="Nahtirah Hat", neck="Eddy Necklace", lear="Friomisi Earring", rear="Novio Earring",
                 body="Bokwus Robe", hands="Yaoyotl Gloves", lring="Aquasoul Ring", rring="Aquasoul Ring",
-                back="Toro Cape", waist="Sekhmet Corset", legs="Gendewitha Spats", feet="Gendewitha Galoshes"}
+                back="Alaunus's Cape", waist="Sekhmet Corset", legs="Gendewitha Spats", feet="Gendewitha Galoshes"}
 		sets.midcast.Holy = set_combine(sets.midcast.Banish)
 
 		-- Enfeebling
@@ -222,11 +223,11 @@ if player.name == 'Khory' then
 		sets.midcast.Enfeebling = {main="Soothsayer Staff", sub="Mephitis Grip", ammo="Aureole",
 				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
                 body="Bokwus Robe", hands="Gende. Gages +1", lring="Aquasoul ring", rring="Aquasoul ring",
-                back="Refraction Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
+                back="Alaunus's Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
 		sets.midcast.Macc = {main="Soothsayer Staff", sub="Mephitis Grip", ammo="Aureole",
 				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
                 body="Bokwus Robe", hands="Gende. Gages +1", lring="Perception ring", rring="Sangoma Ring",
-                back="Refraction Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
+                back="Alaunus's Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
 
 		sets.midcast.Dia = set_combine(sets.midcast.ConserveMP,{})
 
@@ -234,7 +235,7 @@ if player.name == 'Khory' then
 		sets.midcast.DarkMagic = set_combine(sets.midcast.Macc, {	
 				head="Appetence Crown", neck="Aesir Torque",
 				body="Hedera Cotehardie",
-				back="Merciful Cape"})
+				back="Alaunus's Cape"})
 		sets.midcast.Drain = set_combine(sets.midcast.Macc, {
 				head="Appetence Crown", neck="Aesir Torque",
 				waist="Fucho-no-Obi"})

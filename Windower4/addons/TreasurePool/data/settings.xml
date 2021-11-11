@@ -67,12 +67,22 @@
         </pos>
     </khory>
     <lorah>
+        <display>
+            <pos>
+                <x>700</x>
+            </pos>
+        </display>
         <pos>
             <x>567</x>
             <y>13</y>
         </pos>
     </lorah>
     <valka>
+        <display>
+            <pos>
+                <x>700</x>
+            </pos>
+        </display>
         <pos>
             <x>959</x>
             <y>65</y>

@@ -181,8 +181,11 @@ sets.precast.WS = set_combine(sets.TP, {
 	})
 
 sets.precast.WS.WSD = set_combine(sets.TP, { 
-	hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-	legs="Nyame Flanchard",	
+	neck="Loricate Torque+1",
+	head="Nyame Helm",
+    body="Nyame Mail",
+    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    legs="Nyame Flanchard",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Regal Ring",

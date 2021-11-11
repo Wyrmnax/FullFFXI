@@ -1,14 +1,10 @@
-2021-10-26 17:12:05.0579 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
-2021-10-26 17:18:19.9257 EasyFarm.Logging.NLogTextFileLogger FSM thread interrupted
-System.Threading.ThreadInterruptedException: Thread was interrupted from a waiting state.
-   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
-   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
-   at MemoryAPI.Memory.EliteMmoWrapper.NavigationTools.MoveForwardTowardsPosition(Func`1 targetPosition, Boolean useObjectAvoidance) in C:\projects\easyfarm\MemoryAPI\Memory\EliteMMOWrapper.cs:line 126
-   at MemoryAPI.Memory.EliteMmoWrapper.NavigationTools.GotoNPC(Int32 id, Boolean useObjectAvoidance) in C:\projects\easyfarm\MemoryAPI\Memory\EliteMMOWrapper.cs:line 99
-   at EasyFarm.States.ApproachState.Run() in C:\projects\easyfarm\EasyFarm\States\ApproachState.cs:line 66
-   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 171
+2021-11-10 11:21:28.9883 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
+2021-11-10 14:18:38.1401 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
    at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
-2021-10-26 18:34:20.4999 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+2021-11-10 14:26:42.2004 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
 System.OperationCanceledException: The operation was canceled.
    at System.Threading.CancellationToken.ThrowOperationCanceledException()
    at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154

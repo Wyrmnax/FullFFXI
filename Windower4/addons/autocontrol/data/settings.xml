@@ -36,6 +36,22 @@
                 <slot11>optic fiber ii</slot11>
                 <slot12>magniplug</slot12>
             </dd>
+            <ddnosc>
+                <frame>sharpshot frame</frame>
+                <head>valoredge head</head>
+                <slot01>flame holder</slot01>
+                <slot02>scope iv</slot02>
+                <slot03>attuner</slot03>
+                <slot04>auto-repair kit iv</slot04>
+                <slot05>magniplug ii</slot05>
+                <slot06>steam jacket</slot06>
+                <slot07>truesights</slot07>
+                <slot08>turbo charger</slot08>
+                <slot09>turbo charger ii</slot09>
+                <slot10>optic fiber</slot10>
+                <slot11>optic fiber ii</slot11>
+                <slot12>magniplug</slot12>
+            </ddnosc>
             <ddsc>
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>

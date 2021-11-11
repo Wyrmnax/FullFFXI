@@ -206,11 +206,11 @@ if player.name == 'Khory' then
 		-- Weaponskill
 		sets.precast.WS = {
 			ammo="Coiste Bodhar",
-			head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-			body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-			legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-			feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+			head="Nyame helm",
+			body="Nyame Mail",
+			hands="Jhakri Cuffs +2",
+			legs="Nyame Flanchard",
+			feet="Nyame Sollerets",
 			neck="Fotia Gorget",
 			waist="Fotia Belt",
 			left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -222,10 +222,10 @@ if player.name == 'Khory' then
 				
 		sets.precast.WS.WSD = {
 			ammo="Amar Cluster",
-			head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-			body="Assim. Jubbah +2",
+			head="Nyame helm",
+			body="Nyame Mail",
 			hands="Jhakri Cuffs +2",
-			legs={ name="Herculean Trousers", augments={'Accuracy+20 Attack+20','Weapon skill damage +5%','STR+6','Attack+2',}},
+			legs="Nyame Flanchard",
 			feet="Nyame Sollerets",
 			neck="Caro Necklace",
 			waist={ name="Sailfi Belt +1", augments={'Path: A',}},

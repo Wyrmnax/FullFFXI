@@ -20,6 +20,22 @@
                 <slot11>optic fiber ii</slot11>
                 <slot12>optic fiber</slot12>
             </ambusfrog>
+            <blm>
+                <frame>stormwaker frame</frame>
+                <head>spiritreaver head</head>
+                <slot01>loudspeaker iv</slot01>
+                <slot02>ice maker</slot02>
+                <slot03>amplifier</slot03>
+                <slot04>amplifier ii</slot04>
+                <slot05>arcanoclutch</slot05>
+                <slot06>optic fiber</slot06>
+                <slot07>optic fiber ii</slot07>
+                <slot08>auto-repair kit iii</slot08>
+                <slot09>mana tank iv</slot09>
+                <slot10>mana tank iii</slot10>
+                <slot11>mana conserver</slot11>
+                <slot12>economizer</slot12>
+            </blm>
             <dd>
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>
@@ -40,11 +56,11 @@
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>
                 <slot01>flame holder</slot01>
-                <slot02>scope iv</slot02>
+                <slot02>tension spring iv</slot02>
                 <slot03>attuner</slot03>
                 <slot04>auto-repair kit iv</slot04>
                 <slot05>magniplug ii</slot05>
-                <slot06>steam jacket</slot06>
+                <slot06>coiler ii</slot06>
                 <slot07>truesights</slot07>
                 <slot08>turbo charger</slot08>
                 <slot09>turbo charger ii</slot09>
@@ -183,6 +199,22 @@
                 <slot11>tension spring iii</slot11>
                 <slot12>heatsink</slot12>
             </upinarms>
+            <whm>
+                <frame>stormwaker frame</frame>
+                <head>soulsoother head</head>
+                <slot01>mana booster</slot01>
+                <slot02>tactical processor</slot02>
+                <slot03>mana tank ii</slot03>
+                <slot04>mana tank iv</slot04>
+                <slot05>vivi-valve ii</slot05>
+                <slot06>damage gauge ii</slot06>
+                <slot07>damage gauge</slot07>
+                <slot08>optic fiber</slot08>
+                <slot09>optic fiber ii</slot09>
+                <slot10>resister ii</slot10>
+                <slot11>resister</slot11>
+                <slot12>scanner</slot12>
+            </whm>
         </autosets>
         <bg>
             <alpha>255</alpha>

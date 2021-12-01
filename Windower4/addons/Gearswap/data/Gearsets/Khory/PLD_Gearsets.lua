@@ -43,8 +43,24 @@ magicalshield = {sub="Aegis"}
 sets.idle = {
 	ammo="Staunch Tathlum +1",
     head="Sakpata's Helm",
-    body="Sacro Breastplate",
+    body="Sakpata's Plate",
     hands="Souv. Handsch. +1",
+    legs="Sakpata's Cuisses",
+    feet="Rev. Leggings +3",
+    neck="Unmoving Collar +1",
+    waist="Flume Belt +1",
+    left_ear="Foresti Earring",
+    right_ear="Tuisto Earring",
+    left_ring="Moonbeam Ring",
+    right_ring="Gelatinous Ring +1", 
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+	}
+	
+sets.idle.MDT = {
+	ammo="Staunch Tathlum +1",
+    head="Sakpata's Helm",
+    body="Sacro Breastplate",
+    hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
     neck="Unmoving Collar +1",
@@ -59,21 +75,7 @@ sets.idle = {
 sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
 				})
 -- TP 
-sets.TP = { 
-	ammo="Staunch Tathlum +1",
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Souv. Handsch. +1",
-    legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    neck="Unmoving Collar +1",
-    waist="Sailfi Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Tuisto Earring",
-    left_ring="Moonbeam Ring",
-    right_ring="Gelatinous Ring +1",		
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
-}
+sets.TP = set_combine(sets.idle, { })
 				
 -- Precast 
 -- Enmity Caps at 100 

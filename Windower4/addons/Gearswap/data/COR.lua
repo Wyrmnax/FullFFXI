@@ -192,7 +192,7 @@ function precast(spell,arg)
 		if ranged_weaponskills:contains(spell.name) then
 			if player.status == 'Engaged' then
 				if player.tp >= 100 then
-					if spell.target.distance <= ranged_weaponskills_Distance[spell.name] then
+					--if spell.target.distance <= ranged_weaponskills_Distance[spell.name] then
 						if sets.precast.RAWS[spell.name] then
 							if spell.name == "Wildfire" or spell.name == "Leaden Salute" then
 								if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
@@ -206,10 +206,10 @@ function precast(spell,arg)
 						else
 							equip(sets.precast.RAWS)
 						end
-					else
-						cancel_spell()
-						windower.add_to_chat(121,''..spell.target.name..'is too far to ws')
-					end
+					--else
+						--cancel_spell()
+						--windower.add_to_chat(121,''..spell.target.name..'is too far to ws')
+					--end
 				else 
 					cancel_spell()
 					windower.add_to_chat(121, ''..player.tp..'TP is not enough to WS')

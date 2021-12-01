@@ -36,6 +36,9 @@ function clear_binds()
 	windower.send_command('bind !f4 input /ta <a23>')
 	windower.send_command('bind !f5 input /ta <a24>')
 	windower.send_command('bind !f6 input /ta <a25>')
+	windower.send_command('lua unload autocor')
+	windower.send_command('lua unload autopup')
+	windower.send_command('lua unload autocontrol')
 end
 
 if player.main_job == "WAR" then
@@ -124,9 +127,7 @@ elseif player.main_job == "RDM" then
 elseif player.main_job == "PLD" then
 	basic_binds()
 	-- set binds
-	windower.send_command('@bind f10 gs c MDT')
-	windower.send_command('@bind f11 gs c PDT')
-	windower.send_command('@bind f12 gs c TP')
+	windower.send_command('@bind f11 gs c Mode')
 	windower.send_command('@bind #g input /echo test')
 --	windower.send_command('bind f1 input /ma "Cure IV" <p0>')
 --	windower.send_command('bind f2 input /ma "Cure IV" <p1>')

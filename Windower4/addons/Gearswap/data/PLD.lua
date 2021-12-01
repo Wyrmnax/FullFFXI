@@ -42,8 +42,22 @@ function file_unload()
 end
 
 function self_command(command)
-	-- Lock PDT
-	
+	if command == 'Mode' then
+		if Mode == 0 then
+			-- make sure other values are set to default
+			-- Unlock PDT/MDT Variables
+			Mode = 1
+			-- Place Me in my previous set.			
+			previous_set()			
+			windower.add_to_chat(121,'MDT Set Locked')
+		else
+		-- Make sure other values are set to default
+			-- Set PDT set and equip it
+			Mode = 0
+			previous_set()
+			windower.add_to_chat(121,'PDT Set Locked')
+		end
+	end
 end
 
 function status_change(new,old)
@@ -221,12 +235,22 @@ end
 function previous_set()
 	slot_lock()
 	weapon_check()
-	if areas.Town:contains(world.zone) then
-		equip(sets.idle.Standard)
-	elseif player.status == 'Engaged' then
-		equip(sets.TP)
-	else 
-		equip(sets.idle.Standard)
+	if Mode == 0 then
+		if areas.Town:contains(world.zone) then
+			equip(sets.idle.Standard)
+		elseif player.status == 'Engaged' then
+			equip(sets.TP)
+		else 
+			equip(sets.idle.Standard)
+		end
+	elseif Mode == 1 then
+		if areas.Town:contains(world.zone) then
+			equip(sets.idle.Standard)
+		elseif player.status == 'Engaged' then
+			equip(sets.idle.MDT)
+		else 
+			equip(sets.idle.MDT)
+		end
 	end
 end
 	

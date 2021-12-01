@@ -93,7 +93,7 @@ if player.name == 'Khory' then
 		sets.precast.JA["Efflux"] = {legs="Mavi Tayt +2"}
 		sets.precast.JA["Diffusion"] = {feet="Luhlaza Charuqs +1"}
 		sets.precast.JA["Convergence"] = {head="Luhlaza Keffiyeh"}
-		sets.precast.JA["Enchainment"] = {body="Luhlaza Jubbah"}
+		sets.precast.JA["Enchainment"] = {body="Luhlaza Jubbah +1"}
 		
 		-- Precast
 		-- Magic
@@ -132,7 +132,7 @@ if player.name == 'Khory' then
 			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 			left_ear="Telos Earring",
 			right_ear="Digni. Earring",
-			left_ring="Apate Ring",
+			left_ring="Regal Ring",
 			right_ring={ name="Beithir Ring", augments={'Path: A',}},
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 			}

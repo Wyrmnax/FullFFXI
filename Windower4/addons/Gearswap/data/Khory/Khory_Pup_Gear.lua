@@ -6,6 +6,8 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
 	state.IdleMode:options('Normal','PDT','Refresh')
 	state.Weapons:options('None','Godhands','PetWeapons')
+	send_command('lua reload autopup')
+	send_command('lua reload autocontrol')
 
     -- Default/Automatic maneuvers for each pet mode.  Define at least 3.
 	defaultManeuvers = {
@@ -192,21 +194,55 @@ function init_gear_sets()
 	
     -- Midcast sets for pet actions
     sets.midcast.Pet.Cure = {}
-	sets.midcast.Pet['Enfeebling Magic'] = {neck="Adad Amulet",ear1="Enmerkar Earring",ear2="Handler's Earring +1",body="Taeon Tabard",hands="Regimen Mittens",ring1="Varar Ring +1",ring2="Varar Ring +1",waist="Incarnation Sash",legs="Tali'ah Sera. +2"}
-    sets.midcast.Pet['Elemental Magic'] = {neck="Adad Amulet",ear1="Enmerkar Earring",ear2="Handler's Earring +1",body="Taeon Tabard",hands="Regimen Mittens",ring1="Varar Ring +1",ring2="Varar Ring +1",waist="Incarnation Sash",legs="Tali'ah Sera. +2"}
+	sets.midcast.Pet['Enfeebling Magic'] = {
+	head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Mpaca's Gloves",
+    legs="Nyame flanchard",
+    feet="Mpaca's boots",
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",}
+	
+    sets.midcast.Pet['Elemental Magic'] = {
+	head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Mpaca's Gloves",
+    legs="Nyame flanchard",
+    feet="Mpaca's boots",
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",}
 	
 	-- The following sets are predictive and are equipped before we even know the ability will happen, as a workaround due to
 	-- the fact that start of ability packets are too late in the case of Pup abilities, WS, and certain spells.
 	sets.midcast.Pet.PetEnmityGear = {}
-	sets.midcast.Pet.PetWSGear = {neck="Shulmanu Collar",ear1="Enmerkar Earring",ear2="Handler's Earring +1",body="Taeon Tabard",hands="Regimen Mittens",ring1="Varar Ring +1",ring2="Varar Ring +1",back="Dispersal Mantle",waist="Incarnation Sash",legs="Tali'ah Sera. +2"}
+	sets.midcast.Pet.PetWSGear = {}
 	
-    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {})
+    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {head="Karagoz Capello +1", hands="Mpaca's Gloves", feet= "Mpaca's Boots"})
 	sets.midcast.Pet.PetWSGear.Melee = set_combine(sets.midcast.Pet.PetWSGear, {ring2="C. Palug Ring"})
 	sets.midcast.Pet.PetWSGear.Tank = set_combine(sets.midcast.Pet.PetWSGear, {})
 	sets.midcast.Pet.PetWSGear.LightTank = set_combine(sets.midcast.Pet.PetWSGear, {})
     sets.midcast.Pet.PetWSGear.Magic = set_combine(sets.midcast.Pet.PetWSGear, {})
 	sets.midcast.Pet.PetWSGear.Heal = set_combine(sets.midcast.Pet.PetWSGear, {})
-	sets.midcast.Pet.PetWSGear.Nuke = set_combine(sets.midcast.Pet.PetWSGear, {})
+	sets.midcast.Pet.PetWSGear.Nuke = set_combine(sets.midcast.Pet.PetWSGear, {
+	head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Mpaca's Gloves",
+    legs="Nyame flanchard",
+    feet="Mpaca's boots",
+    neck="Shulmanu Collar",
+    waist="Klouskap Sash",
+    left_ear="Enmerkar Earring",
+    right_ear="Crep. Earring",
+    left_ring="Varar Ring",
+    right_ring="C. Palug Ring",})
     
 	-- Currently broken, preserved in case of future functionality.
 	--sets.midcast.Pet.WeaponSkill = {}
@@ -223,12 +259,12 @@ function init_gear_sets()
 	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
-    head="Karagoz Capello +1",
-    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    hands="Mpaca's Gloves",
-    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    neck="Shulmanu Collar",
+    head="Rawhide Mask",
+	body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Assid. Pants +1",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
     waist="Klouskap Sash",
     left_ear="Enmerkar Earring",
     right_ear="Crep. Earring",
@@ -241,12 +277,12 @@ function init_gear_sets()
 	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
-    head="Karagoz Capello +1",
-    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    hands="Mpaca's Gloves",
-    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    neck="Shulmanu Collar",
+    head="Rawhide Mask",
+	body="Nyame Mail",    
+    hands="Nyame Gauntlets",
+    legs="Assid. Pants +1",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
     waist="Klouskap Sash",
     left_ear="Enmerkar Earring",
     right_ear="Crep. Earring",
@@ -261,11 +297,11 @@ function init_gear_sets()
     range="Animator P",
     ammo="Automat. Oil +3",
     head="Rawhide Mask",
-    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    hands="Mpaca's Gloves",
-    legs="Rawhide trousers",
-    feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    neck="Shulmanu Collar",
+	body="Nyame Mail",    
+    hands="Nyame Gauntlets",
+    legs="Assid. Pants +1",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
     waist="Klouskap Sash",
     left_ear="Enmerkar Earring",
     right_ear="Crep. Earring",
@@ -279,9 +315,11 @@ function init_gear_sets()
 	main="Xiucoatl",
     range="Animator P",
     ammo="Automat. Oil +3",
-    head="Karagoz Capello +1",
+	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
+    --head="Karagoz Capello +1",
     body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
-    hands="Mpaca's Gloves",
+    --hands="Mpaca's Gloves",
+	hands={ name="Taeon Gloves", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
     legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
     feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
     neck="Shulmanu Collar",
@@ -293,7 +331,7 @@ function init_gear_sets()
     back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: "Regen"+10','System: 1 ID: 1247 Val: 4',}},
 }
 
-    sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
+    sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {head="Nyame Helm",body="Nyame Mail",hands="Mpaca's Gloves",legs="Nyame flanchard", feet= "Mpaca's Boots"})
 	sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {
 	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
     hands={ name="Taeon Gloves", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},

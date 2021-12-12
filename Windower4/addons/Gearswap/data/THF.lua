@@ -148,10 +148,10 @@ function status_change(new,old)
 -- Autoset
     if T{'Idle','Resting'}:contains(new) then
 		windower.add_to_chat(121,'Idle/Resting Set')
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
+		--if areas.Town:contains(world.zone) then
+			--windower.add_to_chat(121, "Town Gear")
+			--equip(sets.misc.Town)
+		--else
 			if TH == 1 then
 				if Mode == 4 then
 					equip(sets.idle.Standard,sets.idle.Evasion,sets.TH)
@@ -165,7 +165,7 @@ function status_change(new,old)
 					equip(sets.idle.Standard)
 				end
 			end
-		end
+		--end
 	elseif new == 'Engaged' then
 		if PDT == 1 or MDT == 1 then
 			if PDT == 1 and MDT == 0 then
@@ -321,15 +321,15 @@ end
 
 function aftercast(spell,arg)
 -- Autoset
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		if buffactive['Flee'] or spell.name == 'Flee' then
-				windower.add_to_chat(121,'Flee active')
-				equip(sets.misc.Town, {feet="Pillager's Poulaines"})
-		else
-			equip(sets.misc.Town)
-		end
-	else
+	--if areas.Town:contains(world.zone) then
+		--windower.add_to_chat(121, "Town Gear")
+		--if buffactive['Flee'] or spell.name == 'Flee' then
+				--windower.add_to_chat(121,'Flee active')
+				--equip(sets.misc.Town, {feet="Pillager's Poulaines"})
+		--else
+			--equip(sets.misc.Town)
+		--end
+	--else
 		if player.status == 'Engaged' then
 			if S{'Sneak Attack', 'Trick Attack', 'Feint'}:contains(spell.english) then
 				-- Do nothing 
@@ -351,7 +351,7 @@ function aftercast(spell,arg)
 				end
 			end
 		end
-	end
+	--end
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'

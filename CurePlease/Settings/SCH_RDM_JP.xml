@@ -56,7 +56,7 @@
   <plBarStatus_Spell>2</plBarStatus_Spell>
   <AOE_Barstatus>false</AOE_Barstatus>
   <plAuspice>false</plAuspice>
-  <plRegen>false</plRegen>
+  <plRegen>true</plRegen>
   <plRegen_Level>5</plRegen_Level>
   <plReraise>false</plReraise>
   <plReraise_Level>3</plReraise_Level>
@@ -340,7 +340,7 @@
   <EnableAddOn>true</EnableAddOn>
   <pauseOnZoneBox>false</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
-  <pauseOnKO>false</pauseOnKO>
+  <pauseOnKO>true</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
   <autoFollowName />
   <autoFollowDistance>5</autoFollowDistance>

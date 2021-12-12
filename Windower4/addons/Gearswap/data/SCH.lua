@@ -184,7 +184,7 @@ function get_sets()
     neck="Loricate Torque +1",
     waist="Embla Sash",
     left_ear="Malignance Earring",
-    right_ear="Odnowa Earring +1",
+    right_ear="Savant's Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -259,14 +259,14 @@ function get_sets()
     sets.precast.casting = {
     ammo="Sapience Orb",
     head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
-    body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+26','Magic burst dmg.+10%','Mag. Acc.+6',}},
-    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+9','"Fast Cast"+5','"Mag.Atk.Bns."+5',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
+    hands="Acad. Bracers +3",
     legs="Agwu's Slops",
-    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+21','"Fast Cast"+6','INT+1',}},
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+5','INT+2','Mag. Acc.+9',}},
     neck="Voltsurge Torque",
     waist="Embla Sash",
     left_ear="Malignance Earring",
-    right_ear="Odnowa Earring +1",
+    right_ear="Savant's Earring",
     left_ring="Kishar Ring",
     right_ring="",
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
@@ -275,14 +275,14 @@ function get_sets()
 	sets.precast["Stun"] = {
 	ammo="Impatiens",
     head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
-    body={ name="Merlinic Jubbah", augments={'"Mag.Atk.Bns."+26','Magic burst dmg.+10%','Mag. Acc.+6',}},
-    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+9','"Fast Cast"+5','"Mag.Atk.Bns."+5',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
+    hands="Acad. Bracers +3",
     legs="Agwu's Slops",
-    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+21','"Fast Cast"+6','INT+1',}},
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+5','INT+2','Mag. Acc.+9',}},
     neck="Voltsurge Torque",
     waist="Embla Sash",
     left_ear="Malignance Earring",
-    right_ear="Odnowa Earring +1",
+    right_ear="Regal Earring",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
@@ -317,7 +317,7 @@ function get_sets()
 
     sets.precast["Tabula Rasa"] = {legs="Pedagogy Pants +1"}
     sets.precast["Enlightenment"] = {body="Peda. Gown +3"}	 
-    sets.precast["Sublimation"] = {head="Acad. Mortar. +3", body="Peda. Gown +3", waist="Embla sash"}	 
+    sets.precast["Sublimation"] = {head="Acad. Mortar. +3", body="Peda. Gown +3",right_ear="Savant's Earring", waist="Embla sash"}	 
 
 	
 	----------
@@ -342,6 +342,25 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Pixie Hairpin +1",
+    body="Amalric Doublet +1",
+    hands="Amalric Gages +1",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
+    neck="Argute Stole +2",
+    waist="Sacro Cord",
+    left_ear="Malignance Earring",
+    right_ear="Static Earring",
+    left_ring="Freke Ring",
+    right_ring="Mujin Band",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    }
+	-- Make sure you have a non weather obi in this set. Helix get bonus naturally no need Obi.	
+    sets.midcast.LightHelix = {
+	main="Daybreak",
+	sub="Culminus",
+    ammo="Seeth. Bomblet +1",
+    ammo="Ghastly Tathlum +1",
+    head="Peda. M.Board +3",
     body="Amalric Doublet +1",
     hands="Amalric Gages +1",
     legs="Agwu's Slops",
@@ -439,13 +458,60 @@ function get_sets()
 	
     -- Enfeebling
 	sets.midcast["Stun"] = {
-
+		main="Bunzi's Rod",
+	sub="Ammurapi Shield",
+    ammo="Seeth. Bomblet +1",
+    ammo="Ghastly Tathlum +1",
+    head="Peda. M.Board +3",
+    body="Amalric Doublet +1",
+    hands="Amalric Gages +1",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
+    neck="Argute Stole +2",
+    waist="Sacro Cord",
+    left_ear="Malignance Earring",
+    right_ear="Regal Earring",
+    left_ring="Freke Ring",
+    right_ring="Jhakri Ring",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}	
+	
     sets.midcast.IntEnfeebling = {
-
+	main="Bunzi's Rod",
+	sub="Ammurapi Shield",
+    ammo="Seeth. Bomblet +1",
+    ammo="Ghastly Tathlum +1",
+    head="Peda. M.Board +3",
+    body="Amalric Doublet +1",
+    hands="Amalric Gages +1",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
+    neck="Argute Stole +2",
+    waist="Sacro Cord",
+    left_ear="Malignance Earring",
+    right_ear="Regal Earring",
+    left_ring="Freke Ring",
+    right_ring="Jhakri Ring",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
+	
     sets.midcast.MndEnfeebling = {
-
+	main="Bunzi's Rod",
+	sub="Ammurapi Shield",
+    ammo="Seeth. Bomblet +1",
+    ammo="Ghastly Tathlum +1",
+    head="Peda. M.Board +3",
+    body="Amalric Doublet +1",
+    hands="Amalric Gages +1",
+    legs="Agwu's Slops",
+    feet="Agwu's Pigaches",
+    neck="Argute Stole +2",
+    waist="Sacro Cord",
+    left_ear="Malignance Earring",
+    right_ear="Regal Earring",
+    left_ring="Freke Ring",
+    right_ring="Jhakri Ring",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
 	
     -- Enhancing
@@ -458,7 +524,7 @@ function get_sets()
     hands="Telchine Gloves",
     legs="Telchine Braconi",
     feet="Telchine Pigaches",
-    neck={ name="Argute Stole +2", augments={'Path: A',}},
+    neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Lempo Earring",
     right_ear="Halasz Earring",

@@ -73,7 +73,7 @@ sets.midcast.Wheel = {
 	ammo="Seeth. Bomblet +1",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands={ name="Herculean Gloves", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Fast Cast"+2','INT+5','"Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",

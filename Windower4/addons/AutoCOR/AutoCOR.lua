@@ -1,7 +1,7 @@
 _addon.author = 'Ivaar'
 _addon.name = 'AutoCOR'
 _addon.commands = {'cor'}
-_addon.version = '1.20.07.19'
+_addon.version = '1.20.05.02'
 
 require('pack')
 require('lists')
@@ -135,28 +135,35 @@ windower.register_event('prerender',function ()
         nexttime = curtime
         del = 0.1
         local play = windower.ffxi.get_player()
-        if not play or play.main_job ~= 'COR' or play.status > 1 then return end
+        if not play or (play.main_job ~= 'COR' and play.sub_job ~= 'COR') or play.status > 1 then return end
+        local maincor = (play.main_job == 'COR')
         local abil_recasts = windower.ffxi.get_ability_recasts()
         if buffs[16] or is_moving or not aoe_range() then return end
-        if buffs[309] then
+        if buffs[309] and maincor then
             if abil_recasts[198] and abil_recasts[198] == 0 then
                 use_JA('/ja "Fold" <me>')
             end
             return
         end
         for x = 1,2 do
+            if x == 2 and not maincor then return end
             local roll = rolls:with('en',settings.roll[x])
             if not buffs[roll.buff] then
                 if abil_recasts[193] == 0 then
-                    if x == settings.crooked_cards and abil_recasts[96] and abil_recasts[96] == 0 then
-                        use_JA('/ja "Crooked Cards" <me>')
-                    else
-                        use_JA('/ja "%s" <me>':format(roll.en))
+                    if x == settings.crooked_cards and maincor and not buffs[601] then
+                        if abil_recasts[96] and abil_recasts[96] == 0 then
+                            use_JA('/ja "Crooked Cards" <me>')
+                            return
+                        elseif abil_recasts[96] and abil_recasts[96] < 20 then
+                            return
+                        end
                     end
+                    use_JA('/ja "%s" <me>':format(roll.en))
+                    return
                 end
                 return
             elseif buffs[308] and buffs[308] == roll.id and buffs[roll.buff] ~= roll.lucky and buffs[roll.buff] ~= 11 then
-                if abil_recasts[197] and abil_recasts[197] == 0 and not buffs[357] and L{roll.lucky-1,10,roll.unlucky > 6 and roll.unlucky}:contains(buffs[roll.buff]) then
+                if maincor and abil_recasts[197] and abil_recasts[197] == 0 and not buffs[357] and L{roll.lucky-1,10,roll.unlucky > 6 and roll.unlucky}:contains(buffs[roll.buff]) then
                     use_JA('/ja "Snake Eye" <me>')
                 elseif abil_recasts[194] and abil_recasts[194] == 0 and (buffs[357] or buffs[roll.buff] < 7) then
                     use_JA('/ja "Double-Up" <me>')
@@ -207,11 +214,11 @@ windower.register_event('addon command', function(...)
 
         if not slot then
             return
-        elseif not commands[3] then
+        elseif not commands[3]  then
             settings.aoe[slot] = not settings.aoe[slot]
-        elseif commands[3] == 'on' then
+        elseif command == 'on' then
             settings.aoe[slot] = true
-        elseif commands[3] == 'off' then
+        elseif command == 'off' then
             settings.aoe[slot] = false
         end
 
@@ -222,13 +229,13 @@ windower.register_event('addon command', function(...)
         end
     elseif commands[1] == 'save' then
         settings:save()
-        windower.add_to_chat(207, 'Settings saved.')
     elseif commands[1] == 'eval' then
         assert(loadstring(table.concat(commands, ' ',2)))()
     else
         -- create help text
     end
     cor_status:text(display_box())
+    --windower.add_to_chat(207, str)
 end)
 
 function use_JA(str)

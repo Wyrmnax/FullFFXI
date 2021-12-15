@@ -49,7 +49,7 @@
   <plProtectra_Level>5</plProtectra_Level>
   <plGainBoost>false</plGainBoost>
   <plGainBoost_Spell>10</plGainBoost_Spell>
-  <plBarElement>true</plBarElement>
+  <plBarElement>false</plBarElement>
   <plBarElement_Spell>5</plBarElement_Spell>
   <AOE_Barelemental>false</AOE_Barelemental>
   <plBarStatus>false</plBarStatus>
@@ -66,7 +66,7 @@
   <plShell>true</plShell>
   <plBlink>false</plBlink>
   <plPhalanx>true</plPhalanx>
-  <plStoneskin>false</plStoneskin>
+  <plStoneskin>true</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
@@ -314,7 +314,7 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>400</sublimationMP>
-  <SublimationRecoverWhenCharging>true</SublimationRecoverWhenCharging>
+  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

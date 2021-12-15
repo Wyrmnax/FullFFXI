@@ -2,27 +2,27 @@
 <MySettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <settingsSet>true</settingsSet>
   <cure1enabled>false</cure1enabled>
-  <cure1amount>10</cure1amount>
+  <cure1amount>61</cure1amount>
   <cure2enabled>false</cure2enabled>
-  <cure2amount>60</cure2amount>
+  <cure2amount>164</cure2amount>
   <cure3enabled>true</cure3enabled>
-  <cure3amount>130</cure3amount>
+  <cure3amount>500</cure3amount>
   <cure4enabled>true</cure4enabled>
-  <cure4amount>270</cure4amount>
+  <cure4amount>900</cure4amount>
   <cure5enabled>false</cure5enabled>
-  <cure5amount>450</cure5amount>
+  <cure5amount>0</cure5amount>
   <cure6enabled>false</cure6enabled>
-  <cure6amount>600</cure6amount>
+  <cure6amount>0</cure6amount>
   <curagaEnabled>false</curagaEnabled>
-  <curagaAmount>20</curagaAmount>
+  <curagaAmount>164</curagaAmount>
   <curaga2enabled>false</curaga2enabled>
-  <curaga2Amount>70</curaga2Amount>
+  <curaga2Amount>241</curaga2Amount>
   <curaga3enabled>false</curaga3enabled>
-  <curaga3Amount>165</curaga3Amount>
+  <curaga3Amount>502</curaga3Amount>
   <curaga4enabled>false</curaga4enabled>
-  <curaga4Amount>330</curaga4Amount>
+  <curaga4Amount>0</curaga4Amount>
   <curaga5enabled>false</curaga5enabled>
-  <curaga5Amount>570</curaga5Amount>
+  <curaga5Amount>0</curaga5Amount>
   <curePercentage>75</curePercentage>
   <priorityCurePercentage>95</priorityCurePercentage>
   <monitoredCurePercentage>85</monitoredCurePercentage>
@@ -41,7 +41,7 @@
   <autoProtect_Minutes>29</autoProtect_Minutes>
   <autoProtect_Spell>4</autoProtect_Spell>
   <autoShellMinutes>29</autoShellMinutes>
-  <autoShell_Spell>4</autoShell_Spell>
+  <autoShell_Spell>3</autoShell_Spell>
   <autoStorm_Spell>0</autoStorm_Spell>
   <plShellra>false</plShellra>
   <plShellra_Level>5</plShellra_Level>

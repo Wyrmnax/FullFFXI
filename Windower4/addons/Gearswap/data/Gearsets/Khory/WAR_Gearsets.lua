@@ -205,11 +205,11 @@ sets.precast.WS.MAB = {
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
-    waist="Orpheus's Sash",
+    waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Beithir Ring",
-    right_ring="Niqmaddu Ring",
+    right_ring="Regal Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 		
@@ -278,20 +278,7 @@ sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
 	})
 				
 -- Dagger
-sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS, 
-	{ammo="Seeth. Bomblet +1",
-    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Nyame Flanchard",
-    feet={ name="Valorous Greaves", augments={'Pet: Haste+4','Crit.hit rate+3','Weapon skill damage +6%','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
-    neck="Sanctity Necklace",
-    waist="Eschan Stone",
-    left_ear="Friomisi Earring",
-    right_ear="Sortiarius Earring",
-    right_ring="Niqmaddu Ring",
-    left_ring="Flamma Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, { 
 	})
 
 -- Polearm

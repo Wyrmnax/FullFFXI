@@ -257,6 +257,8 @@ function get_sets()
     -- Generic Casting Set that all others take off of. Here you should add all your fast cast 
     -- Grimoire: 10(cap:25) / rdm: 15
     sets.precast.casting = {
+	main="Musa",
+	sub="Clerisy Strap",
     ammo="Sapience Orb",
     head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
@@ -272,7 +274,9 @@ function get_sets()
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
     }
 
-	sets.precast["Stun"] = {
+	sets.precast["Stun"] = {	
+	main="Musa",
+	sub="Clerisy Strap",
 	ammo="Impatiens",
     head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
@@ -458,7 +462,7 @@ function get_sets()
 	
     -- Enfeebling
 	sets.midcast["Stun"] = {
-		main="Bunzi's Rod",
+	main="Bunzi's Rod",
 	sub="Ammurapi Shield",
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
@@ -516,8 +520,8 @@ function get_sets()
 	
     -- Enhancing
     sets.midcast.enhancing = set_combine(sets.midcast.casting,{
-	main="Bolelabunga",
-	sub="Ammurapi Shield",
+	main="Musa",
+	sub="Giuoco Grip",
 	ammo="Staunch Tathlum +1",
     head="Telchine Cap",
 	body="Telchine Chas.",
@@ -552,7 +556,9 @@ function get_sets()
  	
  	sets.midcast.cure = {} -- Leave This Empty
     -- Cure Potency
-    sets.midcast.cure.normal = set_combine(sets.midcast.casting,{
+    sets.midcast.cure.normal = set_combine(sets.midcast.casting,{	
+	main="Musa",
+	sub="Giuoco Grip",
 	ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 	body="",
@@ -568,8 +574,6 @@ function get_sets()
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     })
     sets.midcast.cure.weather = set_combine(sets.midcast.cure.normal,{
-		main="Chatoyant Staff",
-
     })    
 
     ------------
@@ -578,15 +582,15 @@ function get_sets()
 	sets.midcast.regen = {} 	-- leave this empty
 	-- Normal hybrid well rounded Regen
     sets.midcast.regen.hybrid = {
-	main="Bolelabunga",
-	sub="Ammurapi Shield",
+	main="Musa",
+	sub="Giuoco Grip",
 	ammo="Staunch Tathlum +1",
     head="Telchine Cap",
 	body="Telchine Chas.",
     hands="Telchine Gloves",
     legs="Telchine Braconi",
     feet="Telchine Pigaches",
-    neck={ name="Argute Stole +2", augments={'Path: A',}},
+    neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Lempo Earring",
     right_ear="Halasz Earring",

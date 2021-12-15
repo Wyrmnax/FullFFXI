@@ -8,7 +8,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -39,7 +39,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"last stand\" <t>"
+                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -244,7 +244,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -289,7 +289,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             }
         },
         ["WHM"] = {

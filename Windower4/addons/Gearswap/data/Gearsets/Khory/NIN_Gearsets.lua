@@ -171,8 +171,24 @@ sets.precast.WS.WSD = {
     feet="Nyame Sollerets",
     neck="Caro Necklace",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ear="Cessance Earring",
     right_ear="Ishvara Earring",
+    left_ring="Ilabrat Ring",
+    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    back="Sacro Mantle",
+	}
+	
+sets.precast.WS.MAB = { 
+	ammo="Seeth. Bomblet +1",
+	head="Nyame Helm",
+    body="Nyame Mail", 
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Caro Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Crepuscular Earring",
+    right_ear="Frimosi Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
     back="Sacro Mantle",
@@ -191,7 +207,8 @@ sets.precast.WS["Blade: Hi"] = set_combine(sets.precast.WS.WSD, {
 })
 
 sets.precast.WS["Blade: Ten"] = set_combine(sets.precast.WS.WSD, { 
-	head="Mpaca's Cap",
+	head="Mpaca's Cap",	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 })
 				
 sets.precast.WS["Blade: Metsu"] = set_combine(sets.precast.WS.WSD, { 
@@ -206,38 +223,31 @@ sets.precast.WS["Blade: Ku"] = set_combine(sets.precast.WS, {
 	left_ear= "Telos Earring",
 })
 
-sets.precast.WS["Blade: Teki"] = set_combine(sets.precast.WS, { 
-	ammo="Seeth. Bomblet +1",
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
-    neck="Sanctity Necklace",
-    waist="Orpheus's Sash",
+sets.precast.WS["Blade: Teki"] = set_combine(sets.precast.WS.MAB, { 
+})
+
+sets.precast.WS["Blade: To"] = set_combine(sets.precast.WS.MAB, { 
+})
+
+sets.precast.WS["Blade: Chi"] = set_combine(sets.precast.WS.MAB, { 
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Friomisi Earring",
-    left_ring="Ilabrat Ring",
-    right_ring="Dingir Ring",
-    back="Sacro mantle",
 })
 
-sets.precast.WS["Blade: To"] = set_combine(sets.precast.WS["Blade: Teki"], { 
+sets.precast.WS["Blade: Ei"] = set_combine(sets.precast.WS.MAB, { 
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 })
 
-sets.precast.WS["Blade: Chi"] = set_combine(sets.precast.WS["Blade: Teki"], { 
-})
-
-sets.precast.WS["Blade: Ei"] = set_combine(sets.precast.WS["Blade: Teki"], { 
-})
-
-sets.precast.WS["Blade: Yu"] = set_combine(sets.precast.WS["Blade: Teki"], { 
+sets.precast.WS["Blade: Yu"] = set_combine(sets.precast.WS.MAB, { 
 })
 
 sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, { 
-	head="Mpaca's Cap",
+	head="Mpaca's Cap",	
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 })
 
+sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, { 
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+})
 
 sets.misc.Waltz = {}
 sets.misc.Steps = set_combine(sets.TP.Acc)

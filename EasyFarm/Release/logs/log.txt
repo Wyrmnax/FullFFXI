@@ -79,3 +79,19 @@ System.Threading.ThreadInterruptedException: Thread was interrupted from a waiti
    at EasyFarm.States.TravelState.Run() in C:\projects\easyfarm\EasyFarm\States\TravelState.cs:line 67
    at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 171
    at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
+2021-12-19 22:20:44.7174 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
+2021-12-20 00:32:29.1405 EasyFarm.Logging.NLogTextFileLogger FSM thread interrupted
+System.Threading.ThreadInterruptedException: Thread was interrupted from a waiting state.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 174
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
+2021-12-20 06:38:10.8493 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99

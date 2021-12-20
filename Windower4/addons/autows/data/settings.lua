@@ -97,7 +97,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: hi\" <t>"
+                ["ws_cmd"] = "/ws \"blade: Metsu\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -235,7 +235,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -244,7 +244,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -253,7 +253,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+            },
+            ["Great Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -262,7 +271,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"resolution\" <t>"
+                ["ws_cmd"] = "/ws \"Cyclone\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -271,7 +280,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Shadow of Death\" <t>"
+            },
+            ["Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Shadow of Death\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -282,6 +300,24 @@ return {
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
+            ["Scythe"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
+            },
+            ["Staff"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+            },
             ["Sword"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -289,7 +325,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["WHM"] = {

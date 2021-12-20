@@ -164,9 +164,9 @@ sets.precast.WS = {
 	
 sets.precast.WS.WSD = { 
 	ammo="Seeth. Bomblet +1",
-    head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
-    hands="Mpaca's Gloves",
+	head="Nyame Helm",
+    body="Nyame Mail", 
+    hands="Nyame Gauntlets",
     legs="Hiza. Hizayoroi +2",
     feet="Nyame Sollerets",
     neck="Caro Necklace",
@@ -179,7 +179,7 @@ sets.precast.WS.WSD = {
 	}
 -- Mercy Stroke 
 sets.precast.WS["Blade: Jin"] = set_combine(sets.precast.WS, { 
-	left_ear= "Mache Earring",
+	left_ear= "Telos Earring",
 })
 
 sets.precast.WS["Blade: Shun"] = set_combine(sets.precast.WS, { 
@@ -194,16 +194,16 @@ sets.precast.WS["Blade: Ten"] = set_combine(sets.precast.WS.WSD, {
 	head="Mpaca's Cap",
 })
 				
-sets.precast.WS["Blade: Metsu"] = set_combine(sets.precast.WS, { 
-	left_ear= "Mache Earring",
+sets.precast.WS["Blade: Metsu"] = set_combine(sets.precast.WS.WSD, { 
+	left_ear= "Telos Earring",
 })
 
 sets.precast.WS["Blade: Kamu"] = set_combine(sets.precast.WS, { 
-	left_ear= "Mache Earring",
+	left_ear= "Telos Earring",
 })
 
 sets.precast.WS["Blade: Ku"] = set_combine(sets.precast.WS, { 
-	left_ear= "Mache Earring",
+	left_ear= "Telos Earring",
 })
 
 sets.precast.WS["Blade: Teki"] = set_combine(sets.precast.WS, { 

@@ -221,7 +221,6 @@ sets.precast.WS.MAB = {
 	})
 	
 	sets.precast.WS["Cloudsplitter"] = set_combine(sets.precast.WS.MAB, { 	
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 --Sword

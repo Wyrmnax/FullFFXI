@@ -8,9 +8,9 @@
 -- Called when the player's subjob changes.
 function sub_job_change(newSubjob, oldSubjob)
 	-- Macros 
-    if select_default_macro_book() then
-        select_default_macro_book()
-    end
+    --if select_default_macro_book() then
+        --select_default_macro_book()
+    --end
     
     if job_sub_job_change then
         job_sub_job_change(newSubjob, oldSubjob)

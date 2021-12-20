@@ -86,9 +86,7 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 				})
 				
 sets.idle.Evasion = { 
-				head="Felistris Mask", neck="Torero Torque", lear="Musical Earring", rear="Novia Earring",
-                body="Iuitl Vest", hands="Iuitl Wristbands +1", lring="Defending Ring", rring=Aug.Darkring1,
-                back="Fravashi Mantle", waist="Flume Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"}
+				}
 
 sets.Enmity = set_combine(sets.idle.PDT, {
 	ammo="Sapience Orb",
@@ -106,12 +104,12 @@ sets.Enmity = set_combine(sets.idle.PDT, {
 sets.TP = {
 	ammo="Staunch Tathlum +1",
     head="Nyame helm",
-    body="Nyame mail",
+    body="Ayanmo Corazza +2",
     hands="Turms Mittens +1",
-    legs="Nyame Flanchard",
+    legs="Meg. Chausses +2",
     feet="Nyame Sollerets",
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
-    waist="Flume Belt +1",
+    waist="Sailfi Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
@@ -207,11 +205,11 @@ sets.midcast.Flash = set_combine(sets.Enmity,{})
 
 -- Weaponskills
 sets.precast.WS = {ammo="Coiste Bodhar",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+    feet="Nyame Sollerets",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Sherida Earring",

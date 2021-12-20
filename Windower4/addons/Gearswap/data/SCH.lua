@@ -216,6 +216,19 @@ function get_sets()
       
     -- Weapon Skills sets just add them by name.
     sets.me["Shattersoul"] = {
+	ammo="Amar Cluster",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear="Malignance Earring",
+    right_ear="Crep. Earring",
+    left_ring="Crepuscular Ring",
+    right_ring="Metamor. Ring +1",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 
     }
     sets.me["Myrkr"] = {

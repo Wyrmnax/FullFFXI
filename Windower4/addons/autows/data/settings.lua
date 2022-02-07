@@ -97,7 +97,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: chi\" <t>"
+                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {

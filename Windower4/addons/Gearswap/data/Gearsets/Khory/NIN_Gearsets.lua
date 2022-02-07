@@ -84,7 +84,7 @@ sets.midcast.Wheel = {
     right_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 			}
 			
 sets.midcast.Skill = {
@@ -100,7 +100,7 @@ sets.midcast.Skill = {
     right_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}}
 			}
 sets.midcast.Enfeeb = set_combine(sets.midcast.Skill,{
 			})
@@ -121,7 +121,7 @@ sets.TP = {
     right_ear="Telos Earring",
     left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Accuracy TP Set
@@ -161,7 +161,7 @@ sets.precast.WS = {
     right_ear="Brutal Earring",
     left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.WSD = { 
@@ -177,7 +177,7 @@ sets.precast.WS.WSD = {
     right_ear="Ishvara Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
-    back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.MAB = { 
@@ -193,7 +193,7 @@ sets.precast.WS.MAB = {
     right_ear="Frimosi Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
-    back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}}
 	}
 -- Mercy Stroke 
 sets.precast.WS["Blade: Jin"] = set_combine(sets.precast.WS, { 

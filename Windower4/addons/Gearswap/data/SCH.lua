@@ -109,6 +109,7 @@ hud_font = 'Impact'
     windower.send_command('bind !f10 gs c toggle nukemode')		-- Alt-F10 to change Nuking Mode
     windower.send_command('bind ^F10 gs c toggle matchsc')      -- CTRL-F10 to change Match SC Mode      	
     windower.send_command('bind !end gs c hud lite')            -- Alt-End to toggle light hud version   
+	send_command('wait 3;input /lockstyleset 2')
 
 --[[
     This gets passed in when the Keybinds is turned on.
@@ -174,7 +175,7 @@ function get_sets()
     -- Your idle set
     sets.me.idle.refresh = {
 	main="Bolelabunga",
-	sub="Genbu's Shield",
+	sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Acad. Mortar. +3",
     body="Shamash Robe",

@@ -39,12 +39,12 @@ function get_sets()
 		body={name="Hedera Cotehardie",order=5},hands={name="Gendewitha Gages",order=11},ring2={name="Prolix Ring",order=10},
 		back={name="Rhapsode's Cape",order=8},waist="Phasmida Belt",legs="Byakko's Haidate",feet={name="Chelona Boots +1",order=9}}
 
-	sets.midcast.Debuff = {main="Carnwenhan",sub="Genbu's Shield",range="Gjallarhorn",
+	sets.midcast.Debuff = {main="Carnwenhan",sub="Genmei Shield",range="Gjallarhorn",
 		head="Kaabanax Hat",neck="Aoidos' Matinee",ear1="Psystorm Earring",ear2="Lifestorm earring",
 		body="Aoidos' Hngrln. +2",hands="Lurid Mitts",ring1="Omega Ring",ring2="Sangoma ring",
 		back="Rhapsode's Cape",waist="Aristo belt",legs="Mdk. Shalwar +1",feet="Brioso slippers"}
 	
-	sets.midcast.Buff = {main="Carnwenhan",sub="Genbu's Shield",head="Aoidos' Calot +2",neck="Aoidos' Matinee",
+	sets.midcast.Buff = {main="Carnwenhan",sub="Genmei Shield",head="Aoidos' Calot +2",neck="Aoidos' Matinee",
 		body="Aoidos' Hngrln. +2",hands="Ad. Mnchtte. +2",legs="Mdk. Shalwar +1",feet="Brioso slippers"}
 	
 	sets.midcast.DBuff = {range="Daurdabla"}

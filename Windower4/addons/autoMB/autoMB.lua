@@ -589,7 +589,7 @@ windower.register_event('incoming chunk', function(id, packet, data, modified, i
 				debug_message("MB Target out of range, max range: "..settings.cast_range)
 			end
 		else
-			debug_message("MB Target is not claimed by party or alliance")
+			--debug_message("MB Target is not claimed by party or alliance")
 		end
 	end
 end)
@@ -678,14 +678,16 @@ windower.register_event('addon command', function(...)
 		end
 		local t = tonumber(arg[2])
 		if (settings.cast_type == 'jutsu') then
-			if (settings.cast_tier > 0 and settings.cast_tier < 4) then
+			--if (settings.cast_tier > 0 and settings.cast_tier < 4) then
 				settings.cast_tier = t
-			end
+			--end
 		else
 			if (t > 0 and t < 7) then
 				settings.cast_tier = t
 			end		
 		end
+		windower.add_to_chat(207, "t value. " ..t)
+		windower.add_to_chat(207, "UTier set. " ..settings.cast_tier)
 		settings:save()
 		message("Cast Tier set to: "..t.." ["..(settings.cast_type == 'jutsu' and jutsu_tiers[settings.cast_tier].suffix or magic_tiers[settings.cast_tier].suffix).."]")
 		return

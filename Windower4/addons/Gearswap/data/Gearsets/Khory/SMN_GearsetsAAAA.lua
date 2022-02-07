@@ -15,7 +15,7 @@ if player.name == 'Feary' then
 			
 		-- Auto Sets
 		-- Standard/idle
-		sets.idle.PDT = {main="Patriarch Cane", sub="Genbu's Shield",
+		sets.idle.PDT = {main="Patriarch Cane", sub="Genmei Shield",
 				head="Hagondes Hat", neck="Twilight Torque", lear="", rear="",
                 body="Hagondes Coat", hands="Hagondes Cuffs", lring=Aug.Darkring1, rring="Defending Ring",
                 back="Umbra Cape", waist="Fucho-no-obi", legs="Hagondes Pants", feet="Hagondes Sabots"}
@@ -69,7 +69,7 @@ if player.name == 'Feary' then
     left_ring="Varar Ring",
     right_ring="Varar Ring",
 	back="Campestre's cape",}
-		sets.idle.Avatar.Spirit = {main="Bolelabunga",sub="Genbu's Shield",ammo="Sancus Sachet",
+		sets.idle.Avatar.Spirit = {main="Bolelabunga",sub="Genmei Shield",ammo="Sancus Sachet",
 				head="Caller's Horn +2",neck="Caller's Pendant",lear="Loquacious Earring",rear="Moonshade Earring",
 				body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Evoker's Ring",ring2="Sangoma Ring",
 				back="Tiresias' Cape",waist="Fucho-no-obi",legs="Summoner's Spats",feet="Caller's Pgch +2"}

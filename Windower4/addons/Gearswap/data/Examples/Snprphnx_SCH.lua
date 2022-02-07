@@ -1,11 +1,11 @@
 function get_sets()
 		
-	sets.aftercast_Idle_noSub = {main="Owleyes",sub="Genbu's Shield",ammo="Incantor Stone",
+	sets.aftercast_Idle_noSub = {main="Owleyes",sub="Genmei Shield",ammo="Incantor Stone",
 		head="Savant's bonnet +2",neck="Twilight Torque",ear1="Lifestorm Earring",ear2="Loquacious Earring",
 		body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Sangoma Ring",ring2="Maquette Ring",
 		back="Shadow Mantle",waist="Korin Obi",legs="Nares Trews",feet="Serpentes Sabots"}
 	
-	sets.aftercast_Idle_Sub = {main="Owleyes",sub="Genbu's Shield",ammo="Incantor Stone",
+	sets.aftercast_Idle_Sub = {main="Owleyes",sub="Genmei Shield",ammo="Incantor Stone",
 		head="Savant's bonnet +2",neck="Twilight Torque",ear1="Savant's Earring",ear2="Loquacious Earring",
 		body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Sangoma Ring",ring2="Maquette Ring",
 		back="Shadow Mantle",waist="Korin Obi",legs="Nares Trews",feet="Serpentes Sabots"}

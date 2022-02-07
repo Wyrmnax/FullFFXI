@@ -11,7 +11,7 @@
         <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRK>
         <GEO>pet: regen|pet: damage taken|indicolure effect duration|indi eff dur|fast cast|magic evasion</GEO>
         <MNK>store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow</MNK>
-        <NIN>store tp|double attack|triple attack|quadruple attack|subtle blow|weapon skill damage|magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|magic damage|fast cast</NIN>
+        <NIN>store tp|double attack|triple attack|quadruple attack|subtle blow|weapon skill damage|magic attack bonus|magic burst damage|magic accuracy|magic damage|fast cast|damage taken|physical damage taken|magic damage taken</NIN>
         <PLD>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate down|spellcasting interruption rate|phalanx|cure potency|fast cast|magic Evasion</PLD>
         <PUP>pet: hp|pet: damage taken|pet: regen|martial arts|store tp|double attack|triple attack|quadruple attack</PUP>
         <RDM>magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|fast cast|enfeebling magic skill|enhancing magic skill|store tp|dual wield</RDM>

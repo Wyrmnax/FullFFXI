@@ -36,7 +36,7 @@ if player.Name == 'Khory' then
 		-- Standard/idle
 		sets.idle.PDT = {    
 	main="Bolelabunga",
-	sub="Genbu's Shield",
+	sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Acad. Mortar. +3",
     body="Shamash Robe",
@@ -53,7 +53,7 @@ if player.Name == 'Khory' then
 	}
 		sets.idle.MDT = { 
 	main="Bolelabunga",
-	sub="Genbu's Shield",
+	sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Acad. Mortar. +3",
     body="Shamash Robe",

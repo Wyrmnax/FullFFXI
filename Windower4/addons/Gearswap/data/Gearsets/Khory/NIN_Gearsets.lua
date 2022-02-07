@@ -30,13 +30,15 @@ if player.name == 'Khory' then
 			set_macro_page(1,20)
 		end
 		
+	send_command('wait 3;input /lockstyleset 3')
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-	head="Mpaca's Cap",
+	head="Nyame Helm",
 	body="Malignance Tabard",
-	hands="Mpaca's Gloves",
+	hands="Nyame Gauntlets",
 	left_ring="Defending Ring",
+	right_ring="Shneddick Ring",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
 	}
@@ -82,7 +84,7 @@ sets.midcast.Wheel = {
     right_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back="Sacro mantle",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 			}
 			
 sets.midcast.Skill = {
@@ -98,7 +100,7 @@ sets.midcast.Skill = {
     right_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back="Sacro mantle",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 			}
 sets.midcast.Enfeeb = set_combine(sets.midcast.Skill,{
 			})
@@ -108,18 +110,18 @@ sets.midcast.Utsusemi = set_combine(sets.precast.Utsusemi,{
 -- TP Sets 
 sets.TP = { 
 	ammo="Date Shuriken",
-    head="Mpaca's Cap",
-    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+    body={ name="Tatena. Harama. +1", augments={'Path: A',}},
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+    feet="Malignance Boots",
     neck="Lissome Necklace",
-    waist="Sailfi Belt +1",
-    left_ear="Suppanomimi",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Brutal Earring",
     right_ear="Telos Earring",
     left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back="Sacro mantle",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Accuracy TP Set
@@ -159,7 +161,7 @@ sets.precast.WS = {
     right_ear="Brutal Earring",
     left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
-    back="Sacro mantle",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.WSD = { 
@@ -167,7 +169,7 @@ sets.precast.WS.WSD = {
 	head="Nyame Helm",
     body="Nyame Mail", 
     hands="Nyame Gauntlets",
-    legs="Hiza. Hizayoroi +2",
+    legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Caro Necklace",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -175,7 +177,7 @@ sets.precast.WS.WSD = {
     right_ear="Ishvara Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
-    back="Sacro Mantle",
+    back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.MAB = { 
@@ -191,7 +193,7 @@ sets.precast.WS.MAB = {
     right_ear="Frimosi Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
-    back="Sacro Mantle",
+    back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 -- Mercy Stroke 
 sets.precast.WS["Blade: Jin"] = set_combine(sets.precast.WS, { 
@@ -202,6 +204,7 @@ sets.precast.WS["Blade: Shun"] = set_combine(sets.precast.WS, {
 })
 
 sets.precast.WS["Blade: Hi"] = set_combine(sets.precast.WS.WSD, { 
+	body="Abnoba Kaftan",
     neck="Lissome Necklace",
     waist="Svelt. Gouriz +1",
 })

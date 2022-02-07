@@ -59,7 +59,7 @@ if player.name == 'Feary' then
 
 		-- Auto Sets
 		-- Standard/idle
-		sets.idle.PDT = {main="Mandau", sub="Genbu's Shield",
+		sets.idle.PDT = {main="Mandau", sub="Genmei Shield",
 				head="Bihu Roundlet +1", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
                 body="Gendewitha Bliaut", hands="Gende. Gages +1", lring=Aug.Darkring1, rring="Defending Ring",
                 back="Umbra Cape", waist="Flume Belt", legs="Bihu Cannions +1", feet="Bihu Slippers"}
@@ -238,7 +238,7 @@ elseif player.name == "Aniyah" then
 
 		-- Auto Sets
 		-- Standard/idle
-		sets.idle.PDT = {main="Mandau", sub="Genbu's Shield",
+		sets.idle.PDT = {main="Mandau", sub="Genmei Shield",
 				head="Bihu Roundlet +1", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
                 body="Gendewitha Bliaut", hands="Gendewitha Gages", lring=Aug.Darkring1.Aniyah, rring="Defending Ring".Aniyah,
                 back="Umbra Cape", waist="Flume Belt", legs="Gendewitha Spats", feet="Bihu Slippers"}
@@ -250,7 +250,7 @@ elseif player.name == "Aniyah" then
 				head="", neck="Eidolon Pendant", lear="Magnetic Earring", rear="Moonshade Earring",
                 body="Gendewitha Bliaut", hands="Gendewitha Gages", lring="", rring="",
                 back="Felicitas Cape", waist="Austerity Belt", legs="Gendewitha Spats", feet="Chelona Boots"})
-		sets.idle.Standard = set_combine(sets.idle.PDT,{main="Mandau", sub="Genbu's Shield",
+		sets.idle.Standard = set_combine(sets.idle.PDT,{main="Mandau", sub="Genmei Shield",
 				lear="Merman's Earring", rear="Moonshade Earring",
                 body="Gendewitha Bliaut", hands="Gendewitha Gages",
                 legs="Gendewitha Spats", feet="Aoidos' Cothrn. +2"})

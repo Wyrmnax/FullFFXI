@@ -34,7 +34,7 @@ if player.name == 'Khory' then
 		-- Standard/idle
 		sets.idle.PDT = {    
 	main="Bolelabunga",
-    sub="Genbu's Shield",
+    sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Inyanga Tiara +2",    
     body="Shamash Robe",
@@ -52,7 +52,7 @@ if player.name == 'Khory' then
 	
 		sets.idle.MDT = {    
 	main="Bolelabunga",
-    sub="Genbu's Shield",
+    sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Inyanga Tiara +2",    
     body="Shamash Robe",
@@ -220,14 +220,36 @@ if player.name == 'Khory' then
 
 		-- Enfeebling
 		-- Potency
-		sets.midcast.Enfeebling = {main="Soothsayer Staff", sub="Mephitis Grip", ammo="Aureole",
-				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
-                body="Bokwus Robe", hands="Gende. Gages +1", lring="Aquasoul ring", rring="Aquasoul ring",
-                back="Alaunus's Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
-		sets.midcast.Macc = {main="Soothsayer Staff", sub="Mephitis Grip", ammo="Aureole",
-				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
-                body="Bokwus Robe", hands="Gende. Gages +1", lring="Perception ring", rring="Sangoma Ring",
-                back="Alaunus's Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
+		sets.midcast.Enfeebling = {main="Daybreak",
+    sub="Ammurapi Shield",
+    ammo="Pemphredo Tathlum",
+    head="Aya. Zucchetto +2",
+    body="Shamash Robe",
+    hands="Inyan. Dastanas +2",
+    legs="Aya. Cosciales +2",
+    feet="Inyan. Crackows +2",
+    neck="Incanter's Torque",
+    waist="Sacro Cord",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Inyanga Ring",
+    right_ring="Kishar Ring",
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},}
+		sets.midcast.Macc = {main="Daybreak",
+    sub="Ammurapi Shield",
+    ammo="Pemphredo Tathlum",
+    head="Aya. Zucchetto +2",
+    body="Shamash Robe",
+    hands="Inyan. Dastanas +2",
+    legs="Aya. Cosciales +2",
+    feet="Inyan. Crackows +2",
+    neck="Incanter's Torque",
+    waist="Sacro Cord",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Inyanga Ring",
+    right_ring="Kishar Ring",
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},}
 
 		sets.midcast.Dia = set_combine(sets.midcast.ConserveMP,{})
 

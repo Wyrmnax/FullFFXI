@@ -7,7 +7,7 @@
 --
 --
 
-if player.Name == 'Feary' then
+if player.Name == 'Khory' then
 		-- includes
 		include('include/mappings.lua')
 		include('include/equipment.lua')
@@ -33,24 +33,70 @@ if player.Name == 'Feary' then
 
 		-- Auto Sets
 		-- Standard/idle
-		sets.idle.PDT = {main="Mandau", sub="Genbu's Shield",
-				head="Hagondes Hat", neck="Twilight Torque",
-                body="Hagondes Coat", hands="Gende. Gages +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Umbra Cape", waist="Flume Belt", legs="Hagondes Pants", feet="Hagondes Sabots"}
-		sets.idle.MDT = {ammo="Vanir Battery",
-				head="Hagondes Hat", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
-                body="Hagondes Coat", hands="Gende. Gages +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Engulfer Cape", waist="Flume Belt", legs="Hagondes Pants", feet="Gendewitha Galoshes"}			
-		sets.Resting = set_combine(sets.idle.PDT, {main="Chatoyant Staff",
-				head="Vitivation Chapeau", neck="Eidolon Pendant", lear="Magnetic Earring", rear="Moonshade Earring",
-                body="Hagondes Coat", hands="Serpentes Cuffs",
-                back="Felicitas Cape", waist="Austerity Belt", legs="Nares Trews", feet="Chelona Boots"})
-		sets.idle.Standard = set_combine(sets.idle.PDT,{
-				lear="Merman's Earring", rear="Moonshade Earring"})
-		sets.misc.Town = set_combine(sets.idle.PDT, {
-				head="Vitivation Chapeau",
-				body="Vitivation Tabard",
-				legs="Blood Cuisses"})
+		sets.idle.PDT = {ammo={ ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Jhakri Cuffs +2",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",}
+	
+		sets.idle.MDT = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Jhakri Cuffs +2",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",}	
+	
+		sets.Resting = set_combine(sets.idle.PDT, {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Jhakri Cuffs +2",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",})
+	
+		sets.idle.Standard = set_combine(sets.idle.PDT,{ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Jhakri Cuffs +2",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",})
+	
+		sets.misc.Town = set_combine(sets.idle.PDT, {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Jhakri Cuffs +2",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",})
 		-- JA
 		sets.precast.JA["Chainspell"] = {body="Vitivation Tabard"}
 		sets.precast.JA["Stymie"] = {}
@@ -62,10 +108,18 @@ if player.Name == 'Feary' then
 		
 		-- Precast
 		-- Magic
-		sets.precast.Fastcast = {ammo="Impatiens",
-				head="Nahtirah Hat", neck="Orunmila's Torque", lear="Loquac. Earring", rear="Estq. Earring",
-                body="Vitivation Tabard", hands="Gende. Gages +1", rring="Prolix Ring",
-                back="Swith Cape", waist="Witful Belt", legs="Orvail Pants +1", feet="Chelona Boots"}
+		sets.precast.Fastcast = {ammo="Sapience Orb",
+    head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
+    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+    legs={ name="Psycloth Lappas", augments={'MP+75','Mag. Acc.+14','"Fast Cast"+7',}},
+    feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
+    neck="Voltsurge Torque",
+    waist="Embla Sash",
+    left_ear="Malignance Earring",
+    right_ear="Mendi. Earring",
+    left_ring="Kishar Ring",}
+	
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
                 body="Heka's Kalasiris",
                 back="Pahtli Cape"})
@@ -92,9 +146,13 @@ if player.Name == 'Feary' then
 		-- Enhancing 
 		-- Goal 500+
 		sets.midcast.Enhancing = {
-				head="Vitivation Chapeau", neck="Colossus's Torque", rear="Andoaa Earring",
-                body="Vitivation Tabard", hands="Vitivation Gloves",
-                back="Estoqueur's Cape", waist="Cascade Belt", legs="Atrophy Tights", feet="Estq. Houseaux +2"}
+				head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+    body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
+    hands="Telchine Gloves",
+    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
+    feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+    neck="Incanter's Torque",
+    waist="Embla Sash",}
 		sets.midcast.Phalanx = set_combine(sets.midcast.Enhancing, {hands="Vitivation Gloves"})
 		sets.midcast.Hastespell = {ammo="Impatiens", waist="Witful Belt"}
 		sets.midcast.Stoneskin = {back="Estoqueur's Cape", feet="Estq. Houseaux +2"}

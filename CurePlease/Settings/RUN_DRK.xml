@@ -5,13 +5,13 @@
   <cure1amount>10</cure1amount>
   <cure2enabled>false</cure2enabled>
   <cure2amount>60</cure2amount>
-  <cure3enabled>true</cure3enabled>
+  <cure3enabled>false</cure3enabled>
   <cure3amount>130</cure3amount>
-  <cure4enabled>true</cure4enabled>
+  <cure4enabled>false</cure4enabled>
   <cure4amount>270</cure4amount>
-  <cure5enabled>true</cure5enabled>
+  <cure5enabled>false</cure5enabled>
   <cure5amount>450</cure5amount>
-  <cure6enabled>true</cure6enabled>
+  <cure6enabled>false</cure6enabled>
   <cure6amount>600</cure6amount>
   <curagaEnabled>false</curagaEnabled>
   <curagaAmount>20</curagaAmount>

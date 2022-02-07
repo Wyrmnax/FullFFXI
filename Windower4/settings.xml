@@ -32,6 +32,7 @@
     <addon>MyHome</addon>
     <addon>Bonanza</addon>
     <addon>Dimmer</addon>
+    <addon>DressUp</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

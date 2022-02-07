@@ -39,7 +39,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"leaden salute\" <t>"
+                ["ws_cmd"] = "/ws \"last stand\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -97,7 +97,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: metsu\" <t>"
+                ["ws_cmd"] = "/ws \"blade: chi\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -145,8 +145,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"'Savage Blade'\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["RNG"] = {
@@ -244,7 +245,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -253,7 +254,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -271,7 +272,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cyclone\" <t>"
+                ["ws_cmd"] = "/ws \"Raiden Thrust\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -289,7 +290,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Shadow of Death\" <t>"
+                ["ws_cmd"] = "/ws \"Cyclone\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -307,7 +308,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Red Lotus Blade\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -325,7 +326,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             }
         },
         ["WHM"] = {

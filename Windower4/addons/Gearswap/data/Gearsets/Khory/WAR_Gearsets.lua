@@ -258,6 +258,7 @@ sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS.wsd, {
 sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.wsd, {   
     neck="War.Beads +2",	
 	waist="Ioskeha Belt +1",	
+	lring="Gelatinouse Ring +1",
     back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 				

@@ -35,7 +35,7 @@
   <autoPhalanxIIMinutes>2</autoPhalanxIIMinutes>
   <autoStormspellMinutes>2</autoStormspellMinutes>
   <autoRefresh_Minutes>2</autoRefresh_Minutes>
-  <autoRefresh_Spell>1</autoRefresh_Spell>
+  <autoRefresh_Spell>0</autoRefresh_Spell>
   <autoRegen_Minutes>1</autoRegen_Minutes>
   <autoRegen_Spell>3</autoRegen_Spell>
   <autoProtect_Minutes>29</autoProtect_Minutes>
@@ -166,8 +166,8 @@
   <plSilenceItem>0</plSilenceItem>
   <plDoomEnabled>false</plDoomEnabled>
   <plDoomitem>0</plDoomitem>
-  <wakeSleepEnabled>false</wakeSleepEnabled>
-  <wakeSleepSpell>2</wakeSleepSpell>
+  <wakeSleepEnabled>true</wakeSleepEnabled>
+  <wakeSleepSpell>0</wakeSleepSpell>
   <naBlindness>false</naBlindness>
   <naCurse>true</naCurse>
   <naDisease>true</naDisease>

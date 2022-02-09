@@ -34,6 +34,7 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
+	ammo="Date Shuriken",
 	head="Nyame Helm",
 	body="Malignance Tabard",
 	hands="Nyame Gauntlets",
@@ -79,13 +80,17 @@ sets.midcast.Wheel = {
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
-    waist="Orpheus's Sash",
+    waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Metamor. Ring +1",
     right_ring="Dingir Ring",
     back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 			}
+			
+sets.midcast.Futae = set_combine(sets.midcast.Wheel,{
+    hands="Hattori Tekko +1"
+	})
 			
 sets.midcast.Skill = {
 	ammo="Seeth. Bomblet +1",
@@ -105,13 +110,13 @@ sets.midcast.Skill = {
 sets.midcast.Enfeeb = set_combine(sets.midcast.Skill,{
 			})
 sets.midcast.Utsusemi = set_combine(sets.precast.Utsusemi,{
-			})
+			feet="Hattori Kyahan +1",})
 			
 -- TP Sets 
 sets.TP = { 
 	ammo="Date Shuriken",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Tatena. Harama. +1", augments={'Path: A',}},
+    head="Mpaca's Cap",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet="Malignance Boots",
@@ -145,7 +150,7 @@ sets.precast.JA["Mikage"] = {}
 sets.precast.JA["Sange"] = {body="Koga Chainmail +2"}
 sets.precast.JA["Yonin"] = {legs="Iga Hakama +2"}
 sets.precast.JA["Innin"] = {head="Iga Zukin +2"}
-sets.precast.JA["Futae"] = {hands="Iga Tekko +2"}
+sets.precast.JA["Futae"] = {hands="Hattori Tekko +1"}
 
 -- Weaponskills
 sets.precast.WS = { 

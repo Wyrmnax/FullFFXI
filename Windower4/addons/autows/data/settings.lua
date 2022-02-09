@@ -87,8 +87,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
             },
             ["Katana"] = {
                 ["hps"] = {
@@ -245,7 +246,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -263,7 +264,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -290,7 +291,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cyclone\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -308,7 +309,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Red Lotus Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Ei\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -317,7 +318,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -326,7 +327,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             }
         },
         ["WHM"] = {

@@ -233,9 +233,13 @@ function midcast(spell,arg)
 		elseif spell.name == 'Monomi: Ichi' or spell.name == 'Sneak' and buffactive.Sneak and spell.target.type == 'SELF' then
 			windower.ffxi.cancel_buff(71)
 		elseif spell.name == "Migawara: Ichi" then
-			equip(sets.midcast.Skill)
-		elseif spell.english:wcmatch("Katon*|Doton*|Suiton*|Huton*|Hyoton*|Raiton") then
-			equip(sets.midcast.Wheel)
+			equip(sets.midcast.Skill)		
+		elseif windower.wc_match(spell.name,'Katon*|Doton*|Suiton*|Huton*|Hyoton*|Raiton')then
+			if buffactive["Futae"] then				
+				equip(sets.midcast.Futae)
+			else
+				equip(sets.midcast.Wheel)
+			end			
 		else
 			equip(sets.midcast.Enfeeb)
 		end

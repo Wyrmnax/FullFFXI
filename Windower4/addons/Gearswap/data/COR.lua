@@ -79,21 +79,25 @@ function self_command(command)
 	elseif command == 'Mode' then
 		if Mode == 'MeleeSB' then
 			Mode = 'MeleeLeaden'
+			windower.send_command('autows use Leaden Salute')
 			ModeWeapon = sets.MeleeLeaden			
 				previous_set()		
 			windower.add_to_chat(121,'Mode Melee Leaden')
 		elseif Mode == 'MeleeLeaden' then
 			Mode = 'RangedLastStand'
+			windower.send_command('autows use Last Stand')
 			ModeWeapon = sets.RangedLastStand
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Last Stand')
 		elseif Mode == 'RangedLastStand' then
 			Mode = 'RangedLeaden'
+			windower.send_command('autows use Leaden Salute')
 			ModeWeapon = sets.RangedLeaden
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Leaden')
 		elseif Mode == 'RangedLeaden' then
 			Mode = 'MeleeSB'
+			windower.send_command('autows use Savage Blade')
 			ModeWeapon = sets.MeleeSB
 				previous_set()
 			windower.add_to_chat(121,'Mode Melee Savage Blade')

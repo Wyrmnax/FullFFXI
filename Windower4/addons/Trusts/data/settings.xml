@@ -15,24 +15,24 @@
                 <1>Selh&apos;teus</1>
                 <2>Cherukiki</2>
                 <3>Qultada</3>
-                <4>Yoran-Oran (UC)</4>
+                <4>Monberaux</4>
                 <5>Arciela</5>
             </alexander>
             <default>
                 <1>Valaineral</1>
                 <2>Qultada</2>
-                <3>Arciela</3>
-                <4>Ulmia</4>
-                <5>Yoran-Oran (UC)</5>
+                <3>Monberaux</3>
+                <4>Sylvie (UC)</4>
+                <5>Ulmia</5>
             </default>
             <five>
                 <1>Valaineral</1>
                 <2>Qultada</2>
                 <3>Arciela</3>
-                <4>Yoran-Oran (UC)</4>
+                <4>Monberaux</4>
             </five>
             <geo>
-                <1>Yoran-Oran (UC)</1>
+                <1>Monberaux</1>
                 <2>Arciela</2>
                 <3>Qultada</3>
                 <4>Ulmia</4>
@@ -40,13 +40,13 @@
             <gin>
                 <1>Qultada</1>
                 <2>Arciela</2>
-                <3>Yoran-Oran (UC)</3>
+                <3>Monberaux</3>
                 <4>Joachim</4>
                 <5>Selh&apos;teus</5>
             </gin>
             <leveling>
                 <1>AAEV</1>
-                <2>Yoran-Oran (UC)</2>
+                <2>Monberaux</2>
                 <3>Moogle</3>
                 <4>Shantotto II</4>
                 <5>Koru-Moru</5>
@@ -56,10 +56,10 @@
                 <2>Koru-Moru</2>
                 <3>Cherukiki</3>
                 <4>Kupipi</4>
-                <5>Yoran-Oran (UC)</5>
+                <5>Monberaux</5>
             </lilith>
             <mage>
-                <1>Yoran-Oran (UC)</1>
+                <1>Monberaux</1>
                 <2>Star Sibyl</2>
                 <3>Arciela</3>
                 <4>Valaineral</4>
@@ -69,8 +69,8 @@
                 <1>Qultada</1>
                 <2>Ulmia</2>
                 <3>Arciela</3>
-                <4>Yoran-Oran (UC)</4>
-                <5>Selh&apos;teus</5>
+                <4>Monberaux</4>
+                <5>Monberaux</5>
             </notank>
             <odyssey>
                 <1>AAEV</1>
@@ -83,7 +83,7 @@
                 <1>Valaineral</1>
                 <2>August</2>
                 <3>AAEV</3>
-                <4>Yoran-Oran (UC)</4>
+                <4>Monberaux</4>
                 <5>Koru-Moru</5>
             </shinryu>
         </sets>

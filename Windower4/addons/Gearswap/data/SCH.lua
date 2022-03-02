@@ -174,7 +174,7 @@ function get_sets()
 
     -- Your idle set
     sets.me.idle.refresh = {
-	main="Bolelabunga",
+	main="Daybreak",
 	sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Acad. Mortar. +3",
@@ -184,7 +184,7 @@ function get_sets()
     feet="Nyame Sollerets",
     neck="Loricate Torque +1",
     waist="Embla Sash",
-    left_ear="Malignance Earring",
+    left_ear="Eabani Earring",
     right_ear="Savant's Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
@@ -217,6 +217,23 @@ function get_sets()
       
     -- Weapon Skills sets just add them by name.
     sets.me["Shattersoul"] = {
+	ammo="Amar Cluster",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Sanctity Necklace",
+    waist="Eschan Stone",
+    left_ear="Malignance Earring",
+    right_ear="Crep. Earring",
+    left_ring="Crepuscular Ring",
+    right_ring="Metamor. Ring +1",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+
+    }
+	
+	sets.me["Shell Crusher"] = {
 	ammo="Amar Cluster",
     head="Nyame Helm",
     body="Nyame Mail",
@@ -274,14 +291,14 @@ function get_sets()
 	main="Musa",
 	sub="Clerisy Strap",
     ammo="Sapience Orb",
-    head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
     hands="Acad. Bracers +3",
     legs="Agwu's Slops",
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+5','INT+2','Mag. Acc.+9',}},
     neck="Voltsurge Torque",
     waist="Embla Sash",
-    left_ear="Malignance Earring",
+    lear="Enchntr. Earring +1",
     right_ear="Savant's Earring",
     left_ring="Kishar Ring",
     right_ring="",
@@ -292,7 +309,7 @@ function get_sets()
 	main="Musa",
 	sub="Clerisy Strap",
 	ammo="Impatiens",
-    head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
     hands="Acad. Bracers +3",
     legs="Agwu's Slops",
@@ -480,9 +497,9 @@ function get_sets()
 	sub="Ammurapi Shield",
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
-    head="Peda. M.Board +3",
+    head="Acad. Mortar. +3",
     body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+    hands="Acad. Bracers +3",
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -499,9 +516,9 @@ function get_sets()
 	sub="Ammurapi Shield",
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
-    head="Peda. M.Board +3",
+    head="Acad. Mortar. +3",
     body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+    hands="Acad. Bracers +3",
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -558,9 +575,11 @@ function get_sets()
 		waist="Siegel Sash",
     })
     sets.midcast.refresh = set_combine(sets.midcast.enhancing,{
-		head="Amalric Coif",
+		head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     })
-    sets.midcast.aquaveil = sets.midcast.refresh
+    sets.midcast.aquaveil = set_combine(sets.midcast.enhancing,{
+		head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    })
 	
     sets.midcast["Drain"] = set_combine(sets.midcast.nuking, {
 		head="Pixie Hairpin +1",

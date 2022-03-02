@@ -44,6 +44,7 @@ consolebg position 15 50
 
 //lua loading
 //lua l XIpivot
+lua load chatfilter
 lua load superwarp
 lua load parse
 lua load myhome

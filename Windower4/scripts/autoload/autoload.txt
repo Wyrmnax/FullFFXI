@@ -23,7 +23,6 @@ lua load aecho;
 lua load autocontrol;
 lua load AutoRA;
 lua load azureSets;
-lua load Bonanza;
 lua load cancel;
 lua load checkparam;
 lua load Debuffed;

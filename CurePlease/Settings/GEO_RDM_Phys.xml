@@ -6,12 +6,12 @@
   <cure2enabled>false</cure2enabled>
   <cure2amount>60</cure2amount>
   <cure3enabled>true</cure3enabled>
-  <cure3amount>130</cure3amount>
+  <cure3amount>400</cure3amount>
   <cure4enabled>true</cure4enabled>
-  <cure4amount>270</cure4amount>
-  <cure5enabled>true</cure5enabled>
+  <cure4amount>754</cure4amount>
+  <cure5enabled>false</cure5enabled>
   <cure5amount>450</cure5amount>
-  <cure6enabled>true</cure6enabled>
+  <cure6enabled>false</cure6enabled>
   <cure6amount>600</cure6amount>
   <curagaEnabled>false</curagaEnabled>
   <curagaAmount>20</curagaAmount>
@@ -39,9 +39,9 @@
   <autoRegen_Minutes>1</autoRegen_Minutes>
   <autoRegen_Spell>3</autoRegen_Spell>
   <autoProtect_Minutes>29</autoProtect_Minutes>
-  <autoProtect_Spell>4</autoProtect_Spell>
+  <autoProtect_Spell>2</autoProtect_Spell>
   <autoShellMinutes>29</autoShellMinutes>
-  <autoShell_Spell>4</autoShell_Spell>
+  <autoShell_Spell>1</autoShell_Spell>
   <autoStorm_Spell>0</autoStorm_Spell>
   <plShellra>false</plShellra>
   <plShellra_Level>5</plShellra_Level>
@@ -60,8 +60,8 @@
   <plRegen_Level>4</plRegen_Level>
   <plReraise>false</plReraise>
   <plReraise_Level>2</plReraise_Level>
-  <plRefresh>false</plRefresh>
-  <plRefresh_Level>2</plRefresh_Level>
+  <plRefresh>true</plRefresh>
+  <plRefresh_Level>1</plRefresh_Level>
   <plProtect>false</plProtect>
   <plShell>false</plShell>
   <plBlink>false</plBlink>
@@ -115,9 +115,9 @@
   <specifiedEngageTarget>false</specifiedEngageTarget>
   <IndiSpell_Spell>10</IndiSpell_Spell>
   <GeoSpell_Spell>25</GeoSpell_Spell>
-  <EntrustedSpell_Spell>7</EntrustedSpell_Spell>
-  <LuopanSpell_Target>Khory</LuopanSpell_Target>
-  <EntrustedSpell_Target>Khory</EntrustedSpell_Target>
+  <EntrustedSpell_Spell>3</EntrustedSpell_Spell>
+  <LuopanSpell_Target>Kujjaku</LuopanSpell_Target>
+  <EntrustedSpell_Target>Kujjaku</EntrustedSpell_Target>
   <enableSinging>false</enableSinging>
   <recastSongs_Monitored>false</recastSongs_Monitored>
   <SongsOnlyWhenNear>false</SongsOnlyWhenNear>
@@ -144,11 +144,11 @@
   <Devotion>false</Devotion>
   <DivineCaress>false</DivineCaress>
   <Composure>false</Composure>
-  <Convert>true</Convert>
+  <Convert>false</Convert>
   <Entrust>true</Entrust>
   <FullCircle>true</FullCircle>
-  <Dematerialize>true</Dematerialize>
-  <BlazeOfGlory>true</BlazeOfGlory>
+  <Dematerialize>false</Dematerialize>
+  <BlazeOfGlory>false</BlazeOfGlory>
   <RadialArcana>false</RadialArcana>
   <EclipticAttrition>false</EclipticAttrition>
   <LifeCycle>false</LifeCycle>
@@ -156,7 +156,6 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
-  <Majesty>false</Majesty>
   <plDebuffEnabled>false</plDebuffEnabled>
   <monitoredDebuffEnabled>false</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>false</enablePartyDebuffRemoval>
@@ -179,9 +178,6 @@
   <naErase>false</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
-  <PrioritizeDoomRemoval>false</PrioritizeDoomRemoval>
-  <AugmentDoomRemoval>false</AugmentDoomRemoval>
-  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>false</plAgiDown>
   <plAccuracyDown>false</plAccuracyDown>
   <plAddle>false</plAddle>
@@ -314,7 +310,6 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>100</sublimationMP>
-  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

@@ -59,9 +59,10 @@ sets.Enmity = {}
 -- Precast	
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 	head={ name="Herculean Helm", augments={'INT+3','"Mag.Atk.Bns."+20','Magic Damage +23','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
-    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},	
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     neck="Voltsurge Torque",
+	lear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
 			})
 
@@ -121,7 +122,7 @@ sets.TP = {
     legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
     feet="Malignance Boots",
     neck="Lissome Necklace",
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    waist="Reiki Yotai",
     left_ear="Brutal Earring",
     right_ear="Telos Earring",
     left_ring="Hetairoi Ring",

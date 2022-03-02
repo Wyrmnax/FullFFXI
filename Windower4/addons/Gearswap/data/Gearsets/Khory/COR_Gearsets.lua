@@ -73,7 +73,7 @@ sets.idle.PDT = {
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
-    left_ring="Defending Ring",
+    left_ring="Petrov Ring",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -94,7 +94,7 @@ sets.TP = {
     legs="Meg. Chausses +2",
     feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
     neck="Lissome Necklace",
-    waist="Sailfi Belt +1",
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Petrov Ring",
@@ -301,7 +301,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.RAWS["Wildfire"], {
 -- Aftercast
 
 -- Misc Sets
-sets.precast.Fastcast = set_combine(sets.idle.PDT, {head="Athos's Chapeau", lear="Loquac. Earring", rring="Prolix Ring",})
+sets.precast.Fastcast = set_combine(sets.idle.PDT, {head="Athos's Chapeau", lear="Enchntr. Earring +1", rring="Prolix Ring",})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})
 

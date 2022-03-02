@@ -89,7 +89,7 @@ if player.name == 'Khory' then
     feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
     neck="Voltsurge Torque",
     waist="Embla Sash",
-    left_ear="Malignance Earring",
+    lear="Enchntr. Earring +1",
     right_ear="Mendi. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",

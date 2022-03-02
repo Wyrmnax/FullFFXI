@@ -197,11 +197,6 @@ function precast(spell,arg)
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
 		end
-		if spell.name == "Mending Halation" then
-			windower.send_command("wait 3;input /p Casting %Spell - HP Return in 3 secs. Gather together!")
-		elseif spell.name == "Radial Arcana" then
-			windower.send_command("wait 3;input /p Casting %Spell - HP Return in 3 secs. Gather together!")
-		end
 -- Weaponskills
 	 elseif spell.type == 'WeaponSkill' then
 		if player.status == 'Engaged' then
@@ -229,14 +224,10 @@ function precast(spell,arg)
 			cancel_spell()
 			windower.send_command('wait 1;Full Cicle;wait 1;'..spell.name)
 		else
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-			else
-				equip(sets.precast.Fastcast)
-			end
+			equip(sets.precast.Fastcast)
 		end		
 -- Magic
-	elseif spell.type:endswith('Magic') then
+	elseif spell.type:endswith('Magic') then	
 		if spell.skill == 'Healing Magic' then
 			-- Cure casting time
 			if spell.english:wcmatch('Cure*') or spell.english:wcmatch("Curaga*") then
@@ -245,11 +236,7 @@ function precast(spell,arg)
 				equip(sets.precast.Fastcast)
 			end
 		elseif spell.skill == 'Enhancing Magic' then
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Enhancing, {main=Fastcast.Staff[spell.element]})
-			else
 				equip(sets.precast.Enhancing)
-			end
 			-- Cancel Sneak
 			if spell.name == 'Sneak' and buffactive.Sneak and spell.target.type == 'SELF' then
 				windower.ffxi.cancel_buff(71)
@@ -258,50 +245,28 @@ function precast(spell,arg)
 		elseif spell.skill == "Elemental Magic" then
 			-- Impact
 			if spell.name == "Impact" or player.equipment.body == "Twilight Cloak" then
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element],head="Empty", body="Twilight Cloak"})
-				else
-					equip(sets.precast.Elemental, {head="Empty", body="Twilight Cloak"})
-				end				
+				equip(sets.precast.Elemental, {head="Empty", body="Twilight Cloak"})
 			else
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Elemental)
-				end
+				equip(sets.precast.Elemental)
 			end
 		elseif spell.skill == 'Dark Magic' then
 			if spell.name == "Stun" then
-				equip(sets.midcast.Stun)
-			else
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Fastcast)
-				end
-			end	
-		-- All Other Magic
-		else
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
+				equip(sets.precast.Stun)
 			else
 				equip(sets.precast.Fastcast)
-			end
+			end	
+		elseif spell.english:wcmatch('Dispelga')then
+			equip(sets.precast.Dispelga)
+		-- All Other Magic
+		else
+			equip(sets.precast.Fastcast)
 		end
 -- Ninjutsu
 	elseif spell.type == 'Ninjutsu' then
-		if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-			equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-		else
 			equip(sets.precast.Fastcast)
-		end
 -- BardSongs
 	elseif spell.type == 'BardSong' then
-		if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-			equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-		else
 			equip(sets.precast.Fastcast)
-		end
 	else
 	-- Special handling to remove Dancer sub job Sneak effect
 		if spell.name == 'Spectral Jig' and buffactive.Sneak then
@@ -363,12 +328,12 @@ function midcast(spell,arg)
 		end
 -- Enhancing Magic
 	elseif spell.skill == 'Enhancing Magic' then
-		if spell.name == 'Phalanx' then
+		if spell.name == 'Phalanx' then				
 			equip(sets.midcast.Phalanx) 
 		elseif spell.english:contains("Spikes") then
 			equip(sets.midcast.INT)
 		elseif spell.english:contains("Refresh") then
-			equip(sets.midcast.ConserveMP)
+			equip(sets.midcast.Refresh)
 		elseif spell.name == 'Stoneskin' then
 			equip(sets.midcast.Stoneskin)
 			if buffactive.Stoneskin then
@@ -386,8 +351,12 @@ function midcast(spell,arg)
 			equip(sets.midcast.ConserveMP)
 		end
 -- Enfeebling Magic
-	elseif spell.skill == 'Enfeebling Magic' then
-		equip(sets.midcast.Macc)
+	elseif spell.skill == 'Enfeebling Magic' then		
+		if spell.english:wcmatch('Dispelga')then
+			equip(sets.midcast.Dispelga)
+		else
+			equip(sets.midcast.Macc)
+		end
 -- Divine Magic
 	elseif spell.skill == 'Divine Magic' then
 		if spell.english:startswith('Banish') then
@@ -400,7 +369,8 @@ function midcast(spell,arg)
 			equip(sets.midcast.Macc)
 		end
 -- Dark Magic
-	elseif spell.skill == 'Dark Magic' then
+	elseif spell.skill == 'Dark Magic' then		
+		windower.add_to_chat(121,"Dark")
 		if spell.name == "Drain" then
 			equip(sets.midcast.Aspir) 
 		elseif spell.name == "Aspir" then
@@ -412,6 +382,7 @@ function midcast(spell,arg)
 		end
 -- Elemental Magic
 	elseif spell.skill == 'Elemental Magic' then
+		windower.add_to_chat(121,"Elemental")
 		if spell.name == "Impact" or player.equipment.body == "Twilight Cloak" then
 			equip(sets.midcast.Macc, {head="Empty", body="Twilight Cloak"})
 		elseif spell.english:wcmatch('Frost|Drown|Rasp|Burn|Shock|Choke') then
@@ -421,13 +392,13 @@ function midcast(spell,arg)
 			if Mode == 0 then
 				if Skill == 1 then
 					if (spell.element == world.day_element or spell.element == world.weather_element) or buffactive[elements.storm_of[spell.element]] then
-						equip(sets.midcast.Nuke.Acc, {lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+						equip(sets.midcast.Nuke.Acc, {waist="Hachirin-no-Obi"})
 					else
 						equip(sets.midcast.Nuke.Acc)
 					end 
 				else
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-						equip(sets.midcast.Nuke,{lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+						equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 					else
 						equip(sets.midcast.Nuke)
 					end
@@ -436,7 +407,7 @@ function midcast(spell,arg)
 			elseif Mode == 1 then
 				if Skill == 1 then
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-						equip(sets.midcast.Nuke.MB.Acc,{lring="Zodiac Ring", waist="Hachirin-no-Obi"})
+						equip(sets.midcast.Nuke.MB.Acc,{waist="Hachirin-no-Obi"})
 					else
 						equip(sets.midcast.Nuke.MB.Acc)
 					end
@@ -472,7 +443,7 @@ function midcast(spell,arg)
 		equip(sets.midcast.Macc)
 	end
 	
-	if spell.interuppeted then
+	if spell.interrupted then
 		aftercast()
 	end
 end -- end midcast
@@ -505,11 +476,16 @@ function aftercast(spell,arg)
 			elseif MDT == 1 then
 				equip(sets.idle.MDT)
 			else
-				if Pet == 1 then 
+				if pet.isvalid then 
 					equip(sets.idle.Standard.Pet)
 				else
 					equip(sets.idle.Standard)
 				end
+			end
+		end
+		if spell.type == 'Geomancy' then
+			if spell.english:startswith('Geo') then
+				equip(sets.idle.Standard.Pet)
 			end
 		end
 	end
@@ -560,12 +536,10 @@ function aftercast(spell,arg)
 		elseif spell.name == "Concetric Pulse" then
 			windower.add_to_chat(121,"%Spell.Name - Dismiss Loupon and Deals Damage")
 		elseif spell.name == "Mending Halation" then
-			windower.send_command("wait 3;input /p Casting %Spell.Name - HP Return in 3 secs. Gather together!")
 			windower.send_command("wait 120;input /echo [%Spell.Name] Ready in 3 Minutes")
 			windower.send_command("wait 240;input /echo [%Spell.Name] Ready in 1 Minutes")
 			windower.send_command("wait 300;input /echo [%Spell.Name] Ready!")
 		elseif spell.name == "Radial Arcana" then
-			windower.send_command("wait 3;input /p Casting %Spell.Name - HP Return in 3 secs. Gather together!")
 			windower.send_command("wait 120;input /echo [%Spell.Name] Ready in 3 Minutes")
 			windower.send_command("wait 240;input /echo [%Spell.Name] Ready in 1 Minutes")
 			windower.send_command("wait 300;input /echo [%Spell.Name] Ready!")

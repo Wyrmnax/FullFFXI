@@ -8,11 +8,11 @@
   <cure3enabled>true</cure3enabled>
   <cure3amount>401</cure3amount>
   <cure4enabled>true</cure4enabled>
-  <cure4amount>749</cure4amount>
+  <cure4amount>814</cure4amount>
   <cure5enabled>true</cure5enabled>
-  <cure5amount>965</cure5amount>
+  <cure5amount>1075</cure5amount>
   <cure6enabled>true</cure6enabled>
-  <cure6amount>1195</cure6amount>
+  <cure6amount>1500</cure6amount>
   <curagaEnabled>true</curagaEnabled>
   <curagaAmount>181</curagaAmount>
   <curaga2enabled>true</curaga2enabled>
@@ -66,7 +66,7 @@
   <plShell>false</plShell>
   <plBlink>false</plBlink>
   <plPhalanx>false</plPhalanx>
-  <plStoneskin>false</plStoneskin>
+  <plStoneskin>true</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
@@ -156,7 +156,6 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
-  <Majesty>false</Majesty>
   <plDebuffEnabled>true</plDebuffEnabled>
   <monitoredDebuffEnabled>true</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
@@ -179,9 +178,6 @@
   <naErase>true</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
-  <PrioritizeDoomRemoval>true</PrioritizeDoomRemoval>
-  <AugmentDoomRemoval>true</AugmentDoomRemoval>
-  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>true</plAgiDown>
   <plAccuracyDown>true</plAccuracyDown>
   <plAddle>true</plAddle>
@@ -314,7 +310,6 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>400</sublimationMP>
-  <SublimationRecoverWhenCharging>true</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

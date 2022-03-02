@@ -59,7 +59,7 @@ if player.name == 'Khory' then
 		sets.TP = {
 		ammo="Coiste Bodhar",
 		head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-		body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		body={ name="Gleti's Cuirass", augments={'Path: A',}},
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
 		feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
@@ -99,13 +99,14 @@ if player.name == 'Khory' then
 		-- Magic
 		sets.precast.Fastcast = {
 			ammo="Sapience Orb",
-			head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+			head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 			body={ name="Luhlaza Jubbah +1", augments={'Enhances "Enchainment" effect',}},
 			hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
 			legs={ name="Psycloth Lappas", augments={'MP+75','Mag. Acc.+14','"Fast Cast"+7',}},
 			feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
 			neck="Voltsurge Torque",
-			left_ear="Mendi. Earring",
+			lear="Enchntr. Earring +1",
+			rear="Mendi. Earring",
 			left_ring="Kishar Ring",
 			right_ring="Strendu Ring",
 			back={ name="Rosmerta's Cape", augments={'"Fast Cast"+10',}},
@@ -184,7 +185,7 @@ if player.name == 'Khory' then
 			right_ring="Archon Ring",
 			})
 		sets.midcast.BlueMagic.Aquaveil = set_combine(sets.midcast.BlueMagic, {
-			head="Amalric Coif",
+			head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 			})
 			
 		-- Macc 

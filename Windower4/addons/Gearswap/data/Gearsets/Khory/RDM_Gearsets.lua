@@ -109,7 +109,7 @@ if player.Name == 'Khory' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = {ammo="Sapience Orb",
-    head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     legs={ name="Psycloth Lappas", augments={'MP+75','Mag. Acc.+14','"Fast Cast"+7',}},

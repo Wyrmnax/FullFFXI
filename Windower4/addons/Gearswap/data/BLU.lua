@@ -409,10 +409,6 @@ function aftercast(spell)
         windower.send_command('wait 50;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:10 ]')
         windower.send_command('wait 55;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:05 ]')
 	end
--- Convert
-	if spell.name == 'Convert' then
-	  windower.send_command('wait 2;input /ma "Cure IV" me')
-	end
  -- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
     if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'

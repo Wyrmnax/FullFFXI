@@ -99,7 +99,7 @@ sets.TP = {
 					
 sets.TP.DT = set_combine(sets.TP, {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Sakpata's Helm",
+    head="Hjarrandi Helm",
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
@@ -116,6 +116,7 @@ sets.TP.DT = set_combine(sets.TP, {
 sets.TP.DW = set_combine(sets.TP,{
 	hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
     left_ear="Suppanomimi",
+	waist="Reiki Yotai",
 	})
 
 sets.TP.DW.DT = set_combine(sets.TP.DT, {
@@ -302,8 +303,8 @@ sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.wsd,
 				
 -- Misc Sets
 sets.precast.Fastcast = set_combine(sets.idle.DT, {
-				head="Cizin Helm", 
-				lear="Loquac. Earring", 
+				head="Sakpata's helm", 				
+				lear="Enchntr. Earring +1",
 				body="Sacro Breastplate",
 				rring="Prolix Ring"})
 

@@ -39,7 +39,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"last stand\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -48,7 +48,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DRG"] = {
@@ -69,6 +69,17 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
+            }
+        },
+        ["GEO"] = {
+            ["Staff"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"cataclysm\" <t>"
             }
         },
         ["MNK"] = {
@@ -98,7 +109,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+                ["ws_cmd"] = "/ws \"blade: Shun\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -185,7 +196,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"dimidiation\" <t>"
             },
@@ -207,6 +218,26 @@ return {
                 },
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"'Tachi: Fudo'\" <t>"
+            }
+        },
+        ["SCH"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
+            },
+            ["Staff"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"shattersoul\" <t>"
             }
         },
         ["THF"] = {
@@ -237,7 +268,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -327,7 +358,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             }
         },
         ["WHM"] = {

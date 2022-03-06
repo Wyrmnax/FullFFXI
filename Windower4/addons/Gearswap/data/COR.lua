@@ -30,7 +30,7 @@ function get_sets()
 	
 	KillTpRoll = 1
 	PDT = 0
-	Mode = 'MeleeSB'
+	Mode = 'MeleeEvis'
 	ShadowType = 'None'
 	ModeWeapon = sets.MeleeSB
 	
@@ -77,7 +77,13 @@ function self_command(command)
 		end
 --  Lock Acc	
 	elseif command == 'Mode' then
-		if Mode == 'MeleeSB' then
+		if Mode == 'MeleeEvis' then
+			Mode = 'MeleeSB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.MeleeSB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'MeleeSB' then
 			Mode = 'MeleeLeaden'
 			windower.send_command('autows use Leaden Salute')
 			ModeWeapon = sets.MeleeLeaden			
@@ -96,11 +102,43 @@ function self_command(command)
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Leaden')
 		elseif Mode == 'RangedLeaden' then
+			Mode = 'MeleeEvis'
+			windower.send_command('autows use Evisceration')
+			ModeWeapon = sets.MeleeEvis
+				previous_set()
+			windower.add_to_chat(121,'Mode Melee Evisceration')
+		end	
+	elseif command == 'ModeX' then
+		if Mode == 'MeleeLeaden' then
 			Mode = 'MeleeSB'
 			windower.send_command('autows use Savage Blade')
-			ModeWeapon = sets.MeleeSB
+			ModeWeapon = sets.MeleeSB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'RangedLastStand' then
+			Mode = 'MeleeLeaden'
+			windower.send_command('autows use Leaden Salute')
+			ModeWeapon = sets.MeleeLeaden			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Melee Leaden')
+		elseif Mode == 'RangedLeaden' then
+			Mode = 'RangedLastStand'
+			windower.send_command('autows use Last Stand')
+			ModeWeapon = sets.RangedLastStand
 				previous_set()
-			windower.add_to_chat(121,'Mode Melee Savage Blade')
+			windower.add_to_chat(121,'Mode Ranged Last Stand')
+		elseif Mode == 'MeleeEvis' then
+			Mode = 'RangedLeaden'
+			windower.send_command('autows use Leaden Salute')
+			ModeWeapon = sets.RangedLeaden
+				previous_set()
+			windower.add_to_chat(121,'Mode Ranged Leaden')
+		elseif Mode == 'MeleeSB' then
+			Mode = 'MeleeEvis'
+			windower.send_command('autows use Evisceration')
+			ModeWeapon = sets.MeleeEvis
+				previous_set()
+			windower.add_to_chat(121,'Mode Melee Evisceration')
 		end	
 	end
 end

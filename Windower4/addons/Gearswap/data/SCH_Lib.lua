@@ -588,7 +588,7 @@ function midcast(spell)
     elseif spell.skill == 'Enfeebling Magic' and spell.type == 'WhiteMagic' then -- to do: better rule for this.
         equip(sets.midcast.MndEnfeebling)
     elseif spell.type == 'BlackMagic' then
-		if windower.wc_match(spell.name,'Fire|Thunder|Aero|Blizzard|Stone|Water') then	
+		if windower.wc_match(spell.name,'Fire|Thunder|Aero|Blizzard|Stone|Water|Geohelix|hydrohelix|Anemohelix|Pyrohelix|Cryohelix|Ionohelix|Noctohelix|Luminohelix') then	
 			equip(sets.midcast.nuking.lowtier)
         elseif mBurst.value == true then
             equip(sets.midcast.MB[nukeModes.current])

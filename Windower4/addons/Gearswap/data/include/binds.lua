@@ -178,11 +178,12 @@ elseif player.main_job == "RNG" then
 	--windower.send_command('@bind f12 gs c TP')
 	
 elseif player.main_job == "COR" then
-	basic_binds()
+	clear_binds()
 	-- set binds
 	windower.send_command('@bind f10 gs c KillTpRoll')
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c Mode')
+	windower.send_command('@bind ^f12 gs c ModeX')
 elseif player.main_job == "SMN" then
 	basic_binds()
 	-- set binds

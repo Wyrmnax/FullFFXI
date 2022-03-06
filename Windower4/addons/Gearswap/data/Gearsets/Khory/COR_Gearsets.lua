@@ -36,15 +36,21 @@ if player.name == 'Khory' then
 			set_macro_page(1,4)
 		end
 		
+	sets.MeleeEvis = { 
+	main="Tauret",
+    sub={ name="Demers. Degen +1", augments={'Path: A',}},
+    range={ name="Anarchy +3", augments={'Delay:+60','TP Bonus +1000',}},
+	}
+		
 	sets.MeleeSB = { 
 	main="Naegling",
-    sub="Gleti's Knife",
+    sub={ name="Demers. Degen +1", augments={'Path: A',}},
     range={ name="Anarchy +3", augments={'Delay:+60','TP Bonus +1000',}},
 	}
 	
 	sets.MeleeLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
-    sub="Gleti's Knife",
+    sub={ name="Demers. Degen +1", augments={'Path: A',}},
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
 	
@@ -59,6 +65,8 @@ if player.name == 'Khory' then
     sub="Kustawi +1",
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
+	
+	send_command('wait 3;input /lockstyleset 8')
 		
 -- Auto Sets
 -- Standard/idle
@@ -66,14 +74,14 @@ sets.idle.PDT = {
 	ammo="Chrono Bullet",
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Meg. Gloves +2",
-    legs="Meg. Chausses +2",
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Lissome Necklace",
-    waist="Sailfi Belt +1",
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
-    right_ear="Cessance Earring",
-    left_ring="Petrov Ring",
+    right_ear="Suppanomimi",
+    left_ring="Defending Ring",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -88,11 +96,11 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 -- Melee TP 
 sets.TP = { 
 	ammo="Chrono Bullet",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs="Meg. Chausses +2",
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+    legs="Malignance Tights",
+    feet="Malignance Boots",
     neck="Lissome Necklace",
     waist="Reiki Yotai",
     left_ear="Telos Earring",

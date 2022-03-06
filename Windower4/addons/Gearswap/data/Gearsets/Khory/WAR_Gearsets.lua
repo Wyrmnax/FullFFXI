@@ -150,7 +150,7 @@ sets.precast.JA["Mighty Strikes"] = {hands="Agoge Mufflers"}
 sets.precast.JA["Brazen Rush"] = {}
 
 sets.precast.JA["Provoke"] = set_combine(sets.Enmity, sets.TH)
-sets.precast.JA["Berserk"] = {body="Pumm. Lorica +3", feet="Agoge Calligae +1"}
+sets.precast.JA["Berserk"] = {body="Pumm. Lorica +3", feet="Agoge Calligae +3"}
 sets.precast.JA["Defender"] = {}
 sets.precast.JA["Warcry"] = {head="Agoge Mask +3"}
 sets.precast.JA["Aggressor"] = {head="Pummeler's Mask", body="Sakpata's Plate"}
@@ -162,6 +162,26 @@ sets.precast.JA["Aggressive Aim"] = {body="Warrior's Lorica +2"}
 
 -- Weaponskills
 sets.precast.WS = {    
+    ammo="Seeth. Bomblet +1",
+	--head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands="Sakpata's Gauntlets",
+    --feet="Sakpata's Leggings",
+    head="Flam. Zucchetto +2",
+    --body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
+    --hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
+    feet="Flam. Gambieras +2",
+    legs="Nyame Flanchard",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Cessance Earring",
+    right_ear="Schere Earring",
+    left_ring="Flamma Ring",
+    right_ring="Niqmaddu Ring",
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	}
+	
+sets.precast.WS.crit = {    
     ammo="Seeth. Bomblet +1",
 	--head="Sakpata's Helm",
     body="Sakpata's Plate",

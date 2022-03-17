@@ -22,7 +22,7 @@ function get_sets()
 
 -- Define Default Values for Variables
 	DW = 0
-	DT = 0
+	DT = 1
 	ShadowType = 'None'
 	FighterRoll = false
 	

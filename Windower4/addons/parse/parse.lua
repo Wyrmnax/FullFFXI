@@ -38,7 +38,7 @@ default_settings.display = {}
 default_settings.display.melee = {
 		["visible"] = true,
 		["type"] = "offense",
-		["pos"] = {x=570,y=50},
+		["pos"] = {x=670,y=50},
 		["order"] = L{"damage","melee","ws"},
 		["max"] = 20,
 		["data_types"] = {
@@ -78,7 +78,7 @@ default_settings.display.defense = {
 default_settings.display.ranged = {
 		["visible"] = false,
 		["type"] = "offense",
-		["pos"] = {x=570,y=200},
+		["pos"] = {x=670,y=200},
 		["order"] = L{"damage","ranged","ws"},
 		["max"] = 14,
 		["data_types"] = {
@@ -95,7 +95,7 @@ default_settings.display.ranged = {
 default_settings.display.magic = {
 		["visible"] = false,
 		["type"] = "offense",
-		["pos"] = {x=570,y=50},		
+		["pos"] = {x=670,y=50},		
 		["order"] = L{"damage","spell"},
 		["max"] = 8,
 		["data_types"] = {

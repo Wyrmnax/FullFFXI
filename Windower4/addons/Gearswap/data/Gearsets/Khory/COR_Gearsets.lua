@@ -131,7 +131,7 @@ sets.RA = { ammo="TPBullet",
     right_ear="Beyla Earring",
     left_ring="Dingir Ring",
     right_ring="Regal Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 				
 sets.RA.Acc = { ammo="TPBullet",
@@ -146,7 +146,7 @@ sets.RA.Acc = { ammo="TPBullet",
     right_ear="Beyla Earring",
     left_ring="Dingir Ring",
     right_ring="Regal Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 
 
@@ -254,7 +254,7 @@ sets.precast.RAWS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
     right_ring="Regal Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 	
 sets.precast.RAWS['Wildfire'] = {    

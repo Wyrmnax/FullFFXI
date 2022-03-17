@@ -66,7 +66,7 @@ if player.Name == 'Khory' then
 		legs="Nyame Flanchard",
 		waist="Isa Belt",
 		feet="Bagua Sandals +1",
-		 back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 		})
 						
 		sets.misc.Town = set_combine(sets.idle.PDT, {})
@@ -285,6 +285,7 @@ if player.Name == 'Khory' then
 		
 		-- Melee Sets
 		sets.TP = {
+		main = "Maxentius",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head={ name="Nyame Helm", augments={'Path: B',}},
 		body={ name="Nyame Mail", augments={'Path: B',}},
@@ -297,7 +298,7 @@ if player.Name == 'Khory' then
 		right_ear="Telos Earring",
 		left_ring="Petrov Ring",
 		right_ring="Hetairoi Ring",
-		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +15','Pet: Damage taken -3%',}},
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 		}
 		sets.TP.Acc = set_combine(sets.TP, {waist="Witful Belt",})
 		sets.precast.WS = set_combine(sets.TP, {

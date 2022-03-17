@@ -137,7 +137,7 @@ local function trade_cells()
         local remaining = {
             cobalt = 0,
             rubicund = 0,
-            phase = 4,
+            phase = 5,
         }
         local idx = 1
         local n = 0

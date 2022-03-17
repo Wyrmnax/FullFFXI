@@ -31,6 +31,8 @@ if player.name == 'Khory' then
 			set_macro_page(1,12)
 		end
 		
+	send_command('wait 3;input /lockstyleset 6')
+		
 -- Auto Sets
 	
 --Maximum Multi Attack set	
@@ -66,7 +68,7 @@ sets.idle.DT = {
     right_ear="Schere Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.misc.Town = set_combine(sets.idle.DT, {right_ring="Shneddick Ring"})
@@ -93,7 +95,7 @@ sets.TP = {
 	--left_ear="Suppanomimi",
     left_ring="Hetairoi Ring",
     right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},	
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
 	}
 	
 					
@@ -110,7 +112,7 @@ sets.TP.DT = set_combine(sets.TP, {
     right_ear="Schere Earring",
     left_ring="Hetairoi Ring",
     right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 				})
 	
 sets.TP.DW = set_combine(sets.TP,{
@@ -205,7 +207,7 @@ sets.precast.WS.wsd = {
 	ammo="Knobkierrie",
     head="Agoge Mask +3",
     body="Pumm. Lorica +3",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Sulev. Leggings +2",
     neck="War. Beads +2",
@@ -222,7 +224,7 @@ sets.precast.WS.MAB = {
 	ammo="Seeth. Bomblet +1",
     head="Nyame Helm",
     body="Sacro Breastplate",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",

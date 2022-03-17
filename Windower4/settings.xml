@@ -28,10 +28,10 @@
     <addon>instaLS</addon>
     <addon>GearSwap</addon>
     <addon>equipviewer</addon>
-    <addon>lottery</addon>
     <addon>MyHome</addon>
     <addon>Dimmer</addon>
     <addon>DressUp</addon>
+    <addon>temps</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

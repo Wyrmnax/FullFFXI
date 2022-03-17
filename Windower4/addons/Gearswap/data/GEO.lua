@@ -470,17 +470,11 @@ function aftercast(spell,arg)
 		if areas.Town:contains(world.zone) then
 			windower.add_to_chat(121, "Town Gear")
 			equip(sets.misc.Town)
-		else
-			if PDT == 1 or buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
+		else			
+			if pet.isvalid then 
+				equip(sets.idle.Standard.Pet)
 			else
-				if pet.isvalid then 
-					equip(sets.idle.Standard.Pet)
-				else
-					equip(sets.idle.Standard)
-				end
+				equip(sets.idle.Standard)
 			end
 		end
 		if spell.type == 'Geomancy' then

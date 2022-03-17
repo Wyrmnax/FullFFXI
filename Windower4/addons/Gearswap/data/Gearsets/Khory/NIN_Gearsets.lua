@@ -18,16 +18,16 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'WAR' then
-				set_macro_page(1,20)
+				set_macro_page(1,17)
 			elseif player.sub_job == 'DNC' then
-				set_macro_page(1,20)
+				set_macro_page(1,17)
 			elseif player.sub_job == 'DRK' then
-				set_macro_page(1,20)
+				set_macro_page(1,17)
 			elseif player.sub_job == 'RDM' then 
-				set_macro_page(1,20)
+				set_macro_page(1,17)
 			end
 		else
-			set_macro_page(1,20)
+			set_macro_page(1,17)
 		end
 		
 	send_command('wait 3;input /lockstyleset 3')
@@ -116,10 +116,10 @@ sets.midcast.Utsusemi = set_combine(sets.precast.Utsusemi,{
 -- TP Sets 
 sets.TP = { 
 	ammo="Date Shuriken",
-    head="Mpaca's Cap",
+    head="Malignance Chapeau",
     body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
+    legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Lissome Necklace",
     waist="Reiki Yotai",

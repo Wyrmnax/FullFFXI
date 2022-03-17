@@ -44,7 +44,7 @@ if player.name == 'Khory' then
 			right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 			left_ring="Defending Ring",
 			right_ring="Shneddick Ring",
-			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 			}
 		sets.idle.MDT = set_combine(sets.idle.PDT,{
 			})
@@ -69,7 +69,7 @@ if player.name == 'Khory' then
 		right_ear="Brutal Earring",
 		left_ring="Hetairoi Ring",
 		right_ring="Epona's Ring",
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		}
 		-- Accuracy
 		sets.TP.Acc = set_combine(sets.TP, {
@@ -218,7 +218,7 @@ if player.name == 'Khory' then
 			right_ear="Brutal Earring",
 			left_ring="Hetairoi Ring",
 			right_ring="Epona's Ring",
-			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 			}
 				
 		sets.precast.WS.WSD = {

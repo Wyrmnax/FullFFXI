@@ -49,10 +49,10 @@ lua load superwarp
 lua load parse
 lua load myhome
 lua load skillchains
-lua load autosc
 //lua load autorun
 lua load autows
 lua load shout_ml
+lua load autosc
 
 
 // *** ALLIANCE TARGET KEYS ***

@@ -7,8 +7,9 @@
             <abyssea>
                 <1>Monberaux</1>
                 <2>Sylvie (UC)</2>
-                <3>Ulmia</3>
-                <4>Star Sibyl</4>
+                <3>Star Sibyl</3>
+                <4>Ulmia</4>
+                <5>Arciela</5>
             </abyssea>
             <alexander>
                 <1>Selh&apos;teus</1>
@@ -38,10 +39,10 @@
             </geo>
             <gin>
                 <1>Qultada</1>
-                <2>Arciela</2>
-                <3>Monberaux</3>
+                <2>Monberaux</2>
+                <3>Sylvie (UC)</3>
                 <4>Joachim</4>
-                <5>Selh&apos;teus</5>
+                <5>Arciela</5>
             </gin>
             <leveling>
                 <1>AAEV</1>
@@ -78,6 +79,13 @@
                 <4>Karaha-Baruha</4>
                 <5>Qultada</5>
             </odyssey>
+            <omen>
+                <1>Qultada</1>
+                <2>Monberaux</2>
+                <3>Sylvie (UC)</3>
+                <4>Arciela</4>
+                <5>Cherukiki</5>
+            </omen>
             <shinryu>
                 <1>Valaineral</1>
                 <2>AAEV</2>

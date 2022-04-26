@@ -66,16 +66,16 @@
   <plShell>true</plShell>
   <plBlink>false</plBlink>
   <plPhalanx>true</plPhalanx>
-  <plStoneskin>true</plStoneskin>
+  <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
-  <plEnspell_Spell>0</plEnspell_Spell>
+  <plEnspell_Spell>4</plEnspell_Spell>
   <plStormSpell>true</plStormSpell>
   <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>
   <plKlimaform>false</plKlimaform>
-  <plAquaveil>false</plAquaveil>
+  <plAquaveil>true</plAquaveil>
   <plHaste>false</plHaste>
   <plHaste_Level>1</plHaste_Level>
   <plSpikes>false</plSpikes>
@@ -95,8 +95,8 @@
   <phalanxAccession>true</phalanxAccession>
   <stoneskinPerpetuance>false</stoneskinPerpetuance>
   <stoneskinAccession>false</stoneskinAccession>
-  <enspellPerpetuance>false</enspellPerpetuance>
-  <enspellAccession>false</enspellAccession>
+  <enspellPerpetuance>true</enspellPerpetuance>
+  <enspellAccession>true</enspellAccession>
   <stormspellPerpetuance>false</stormspellPerpetuance>
   <stormspellAccession>false</stormspellAccession>
   <adloquiumPerpetuance>true</adloquiumPerpetuance>
@@ -156,7 +156,6 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
-  <Majesty>false</Majesty>
   <plDebuffEnabled>true</plDebuffEnabled>
   <monitoredDebuffEnabled>true</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
@@ -179,9 +178,6 @@
   <naErase>true</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
-  <PrioritizeDoomRemoval>true</PrioritizeDoomRemoval>
-  <AugmentDoomRemoval>false</AugmentDoomRemoval>
-  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>true</plAgiDown>
   <plAccuracyDown>true</plAccuracyDown>
   <plAddle>true</plAddle>
@@ -214,7 +210,7 @@
   <plMaxMpDown>true</plMaxMpDown>
   <plMaxTpDown>true</plMaxTpDown>
   <plParalysis>true</plParalysis>
-  <plPlague>true</plPlague>
+  <plPlague>false</plPlague>
   <plPoison>false</plPoison>
   <plRasp>true</plRasp>
   <plRequiem>true</plRequiem>
@@ -259,7 +255,7 @@
   <monitoredMaxTpDown>true</monitoredMaxTpDown>
   <monitoredParalysis>true</monitoredParalysis>
   <monitoredPetrification>true</monitoredPetrification>
-  <monitoredPlague>true</monitoredPlague>
+  <monitoredPlague>false</monitoredPlague>
   <monitoredPoison>false</monitoredPoison>
   <monitoredRasp>true</monitoredRasp>
   <monitoredRequiem>true</monitoredRequiem>
@@ -289,7 +285,7 @@
   <na_MagicDefenseDown>true</na_MagicDefenseDown>
   <na_MndDown>true</na_MndDown>
   <na_IntDown>true</na_IntDown>
-  <na_Helix>false</na_Helix>
+  <na_Helix>true</na_Helix>
   <na_Frost>true</na_Frost>
   <na_EvasionDown>true</na_EvasionDown>
   <na_Elegy>true</na_Elegy>
@@ -314,7 +310,6 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>400</sublimationMP>
-  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

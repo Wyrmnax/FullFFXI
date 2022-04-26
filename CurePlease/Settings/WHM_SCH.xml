@@ -23,7 +23,7 @@
   <curaga4Amount>965</curaga4Amount>
   <curaga5enabled>true</curaga5enabled>
   <curaga5Amount>1195</curaga5Amount>
-  <curePercentage>75</curePercentage>
+  <curePercentage>65</curePercentage>
   <priorityCurePercentage>95</priorityCurePercentage>
   <monitoredCurePercentage>85</monitoredCurePercentage>
   <curagaCurePercentage>75</curagaCurePercentage>
@@ -129,7 +129,7 @@
   <dummy2>0</dummy2>
   <recastSongTime>2</recastSongTime>
   <LightArts>true</LightArts>
-  <Sublimation>true</Sublimation>
+  <Sublimation>false</Sublimation>
   <AddendumWhite>true</AddendumWhite>
   <Celerity>false</Celerity>
   <Accession>true</Accession>

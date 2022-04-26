@@ -4,7 +4,7 @@
         <azi_x>-11</azi_x>
         <azi_y>37.5</azi_y>
         <end_fight_commands>gs c set AutoBuffMode Off;gs c set AutoWSMode Off</end_fight_commands>
-        <start_fight_commands>gs c set AutoBuffMode On;</start_fight_commands>
+        <start_fight_commands>gs c set AutoBuffMode On; gs autows on</start_fight_commands>
         <teleport_ring>Warp Ring</teleport_ring>
         <trust1>Koru-Moru</trust1>
         <trust1_short>Koru Moru</trust1_short>
@@ -12,8 +12,8 @@
         <trust2_short>Monberaux</trust2_short>
         <trust3>Joachim</trust3>
         <trust3_short>Joachim</trust3_short>
-        <trust4>Yoran-Oran (UC)</trust4>
-        <trust4_short>Yoran Oran</trust4_short>
+        <trust4>Qultada</trust4>
+        <trust4_short>Qultada</trust4_short>
         <trust5>Ulmia</trust5>
         <trust5_short>Ulmia</trust5_short>
     </global>

@@ -33,7 +33,7 @@ if player.name == 'Khory' then
 		-- Auto Sets
 		-- Standard/idle
 		sets.idle.PDT = {    
-	main="Bolelabunga",
+	main="Daybreak",
     sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Inyanga Tiara +2",    
@@ -51,7 +51,7 @@ if player.name == 'Khory' then
 	}
 	
 		sets.idle.MDT = {    
-	main="Bolelabunga",
+	main="Daybreak",
     sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Inyanga Tiara +2",    

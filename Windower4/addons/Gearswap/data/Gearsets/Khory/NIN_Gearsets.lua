@@ -67,6 +67,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 			})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {
+	neck="Magoraga Beads",
 			})
 
 sets.precast.Recast = set_combine(sets.idle.PDT,{

@@ -54,7 +54,7 @@ if player.name == 'Khory' then
 	
 -- Standard/idle
 sets.idle.DT = { 
-	 ammo="Coiste Bodhar",
+	ammo="Coiste Bodhar",
     head="Sakpata's Helm",
     body="Sacro Breastplate",
     hands="Sakpata's Gauntlets",
@@ -81,15 +81,19 @@ sets.Enmity = {}
 -- TP sets
 
 --Standard TP
-sets.TP = {  
-	ammo="Coiste Bodhar",
-    head="Flam. Zucchetto +2",
+sets.TP = {	
+	ammo="Per. Lucky Egg",
+	--ammo="Coiste Bodhar",
+	head="Volte Cap",
+    --head="Flam. Zucchetto +2",
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
-    legs="Pumm. Cuisses +3",
+	legs={ name="Valorous Hose", augments={'Crit. hit damage +2%','MND+13','"Treasure Hunter"+1','Accuracy+1 Attack+1','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+    --legs="Pumm. Cuisses +3",
     feet="Pumm. Calligae +3",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist="Sailfi Belt +1",
+	waist="Chaac Belt",
+    --waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Schere Earring",
 	--left_ear="Suppanomimi",
@@ -101,7 +105,7 @@ sets.TP = {
 					
 sets.TP.DT = set_combine(sets.TP, {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
+    head="Sakpata's Helm",
     body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
@@ -301,8 +305,10 @@ sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
 	})
 				
 -- Dagger
-sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, { 
-	})
+--sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, { 
+--	})
+	
+sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, sets.TH)
 
 -- Polearm
 sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.wsd, 

@@ -57,9 +57,9 @@
   <AOE_Barstatus>false</AOE_Barstatus>
   <plAuspice>false</plAuspice>
   <plRegen>false</plRegen>
-  <plRegen_Level>4</plRegen_Level>
+  <plRegen_Level>5</plRegen_Level>
   <plReraise>false</plReraise>
-  <plReraise_Level>2</plReraise_Level>
+  <plReraise_Level>3</plReraise_Level>
   <plRefresh>false</plRefresh>
   <plRefresh_Level>1</plRefresh_Level>
   <plProtect>false</plProtect>
@@ -144,7 +144,7 @@
   <Devotion>false</Devotion>
   <DivineCaress>false</DivineCaress>
   <Composure>false</Composure>
-  <Convert>false</Convert>
+  <Convert>true</Convert>
   <Entrust>true</Entrust>
   <FullCircle>true</FullCircle>
   <Dematerialize>true</Dematerialize>
@@ -308,7 +308,7 @@
   <healWhenMPBelow>5</healWhenMPBelow>
   <standAtMP>false</standAtMP>
   <standAtMP_Percentage>99</standAtMP_Percentage>
-  <convertMP>300</convertMP>
+  <convertMP>500</convertMP>
   <sublimationMP>100</sublimationMP>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>

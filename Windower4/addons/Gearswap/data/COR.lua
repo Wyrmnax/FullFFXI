@@ -32,7 +32,7 @@ function get_sets()
 	PDT = 0
 	Mode = 'MeleeEvis'
 	ShadowType = 'None'
-	ModeWeapon = sets.MeleeSB
+	ModeWeapon = sets.MeleeEvis
 	
 --includes
 	--include('include/autoexec.lua')

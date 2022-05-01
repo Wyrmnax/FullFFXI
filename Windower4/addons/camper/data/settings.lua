@@ -7,11 +7,11 @@ return {
         ["Abyssea - Uleguerand"] = {
             [17813924] = {
                 ["name"] = "Ogopogo",
-                ["tod"] = 1650997105
+                ["tod"] = 1651063981
             },
             [17813936] = {
                 ["name"] = "Sisyphus",
-                ["tod"] = 1650994529
+                ["tod"] = 1651085073
             }
         }
     }

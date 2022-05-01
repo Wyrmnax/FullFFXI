@@ -155,22 +155,9 @@ function status_change(new,old)
 			end
 		end
 	elseif new == 'Engaged' then
-		slot_lock()
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
+		slot_lock()		
 			-- Equip previous TP set 
-				previous_set()
-		end
+		previous_set()
 	end
 end
 
@@ -449,22 +436,9 @@ function midcast(spell,arg)
 end -- end midcast
 
 function aftercast(spell,arg)
-	if player.status == 'Engaged' then
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
+	if player.status == 'Engaged' then		
 			-- Equip previous TP set 
-				previous_set()
-		end
+		previous_set()
 	else
 		slot_lock()
 		if areas.Town:contains(world.zone) then

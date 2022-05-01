@@ -21,6 +21,15 @@ return {
             }
         },
         ["BRD"] = {
+            ["Club"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            },
             ["Dagger"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -28,7 +37,25 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            },
+            ["Hand-to-Hand"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["COR"] = {
@@ -322,7 +349,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {
@@ -331,7 +358,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -340,7 +367,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Earth Crusher\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -349,7 +376,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -358,7 +385,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Energy Drain\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -421,7 +448,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             }
         },
         ["WHM"] = {

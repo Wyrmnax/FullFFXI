@@ -242,7 +242,7 @@ sets.precast.WS.WSD = {
 	ammo="Knobkierrie",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Caro Necklace",

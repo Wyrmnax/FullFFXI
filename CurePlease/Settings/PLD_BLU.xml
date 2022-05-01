@@ -23,8 +23,8 @@
   <curaga4Amount>0</curaga4Amount>
   <curaga5enabled>false</curaga5enabled>
   <curaga5Amount>0</curaga5Amount>
-  <curePercentage>75</curePercentage>
-  <priorityCurePercentage>95</priorityCurePercentage>
+  <curePercentage>60</curePercentage>
+  <priorityCurePercentage>90</priorityCurePercentage>
   <monitoredCurePercentage>85</monitoredCurePercentage>
   <curagaCurePercentage>75</curagaCurePercentage>
   <curagaTargetType>0</curagaTargetType>
@@ -156,7 +156,6 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
-  <Majesty>true</Majesty>
   <plDebuffEnabled>false</plDebuffEnabled>
   <monitoredDebuffEnabled>false</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>false</enablePartyDebuffRemoval>
@@ -179,9 +178,6 @@
   <naErase>false</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
-  <PrioritizeDoomRemoval>false</PrioritizeDoomRemoval>
-  <AugmentDoomRemoval>false</AugmentDoomRemoval>
-  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>false</plAgiDown>
   <plAccuracyDown>false</plAccuracyDown>
   <plAddle>false</plAddle>
@@ -314,7 +310,6 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>100</sublimationMP>
-  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

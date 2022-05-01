@@ -21,7 +21,8 @@ function get_sets()
 	include('Gearsets/'..player.name..'/BRD_Gearsets.lua')
 	
 -- Define Default Values for Variables
-	Mode = 0
+	Mode = 'Evisceration'
+	ModeWeapon = sets.Evisceration
 	PDT = 0
 	MDT = 0
 	ShadowType = 'None'
@@ -59,86 +60,93 @@ function self_command(command)
 			-- make sure other values are set to default
 			-- Unlock PDT/MDT Variables
 			PDT = 0
-			MDT = 0
 			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
+			previous_set()
 			windower.add_to_chat(121,'PDT Set UnLocked')
 		else
 		-- Make sure other values are set to default
-				MDT = 0
 			-- Set PDT set and equip it
 				PDT = 1
-				equip(sets.idle.PDT)
+				previous_set()
 				windower.add_to_chat(121,'PDT Set Locked')
-		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-		-- Unlock PDT/MDT Variables
-			PDT = 0
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+		end		
+	elseif command == 'Mode' then
+		if Mode == 'Evisceration' then
+			Mode = 'SavageBlade'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SavageBlade			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Savage Blade')
+		elseif Mode == 'SavageBlade' then
+			Mode = 'Rudra'
+			windower.send_command("autows use Rudra's Storm")
+			ModeWeapon = sets.Rudra			
+				previous_set()	
+			windower.add_to_chat(121,'Mode Rudra Storm')
+		elseif Mode == 'Rudra' then
+			Mode = 'AccSB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.AccSB
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'MDT Set UnLocked')
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1	
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode ACC Savage Blade')
+		elseif Mode == 'AccSB' then
+			Mode = 'AccRudra'
+			windower.send_command("autows use Rudra's Storm")
+			ModeWeapon = sets.AccRudra
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'PDT/MDT Set UnLocked')
-		else
-			if Mode >= 1 then
-				-- Reset to 0
-				Mode = 0
-			else
-				-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode ACC Rudra Storm')		
+		elseif Mode == 'AccRudra' then
+			Mode = 'Mordant'
+			windower.send_command('autows use Mordant Rime')
+			ModeWeapon = sets.Mordant
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif command == "fishing" then
-		if fishing == 1 then
-			fishing = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode Mordant Rime')
+		elseif Mode == 'Mordant' then
+			Mode = 'Evisceration'
+			windower.send_command("autows use Evisceration")
+			ModeWeapon = sets.Evisceration
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'Fishing Set UnLocked')
-		else
-			fishing = 1
-			equip(sets.idle.Fishing)
-			windower.add_to_chat(121,'Fishing Set Locked')
-		end
+			windower.add_to_chat(121,'Mode Evisceration')
+		end	
+		
+	elseif command == 'ModeX' then
+		if Mode == 'Evisceration' then
+			Mode = 'Mordant'
+			windower.send_command('autows use Mordant Rime')
+			ModeWeapon = sets.Mordant			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Mordant Rime')
+		elseif Mode == 'SavageBlade' then
+			Mode = 'Evisceration'
+			windower.send_command('autows use Evisceration')
+			ModeWeapon = sets.Evisceration			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Evisceration')
+		elseif Mode == 'Rudra' then
+			Mode = 'SavageBlade'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SavageBlade
+				previous_set()
+			windower.add_to_chat(121,'Mode Savage Blade')
+		elseif Mode == 'AccSB' then
+			Mode = 'Rudra'
+			windower.send_command("autows use Rudra's Storm")
+			ModeWeapon = sets.Rudra
+				previous_set()
+			windower.add_to_chat(121,'Mode Rudra Storm')
+		elseif Mode == 'AccRudra' then
+			Mode = 'AccSB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.AccSB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode ACC Savage Blade')		
+		elseif Mode == 'Mordant' then
+			Mode = 'AccRudra'
+			windower.send_command("autows use Rudra's Storm")
+			ModeWeapon = sets.AccRudra
+				previous_set()
+			windower.add_to_chat(121,'Mode ACC Rudra Storm')
+		end	
 	end
 end
 
@@ -150,31 +158,7 @@ function status_change(new,old)
 			windower.add_to_chat(121, "Town Gear")
 			equip(sets.misc.Town)
 		else
-			if PDT == 1 or buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif new == 'Resting' then
-		equip(sets.Resting)
-	elseif new == 'Engaged' then
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			-- Equip previous TP set 
-				previous_set()
+			previous_set()
 		end
 	end
 end
@@ -325,13 +309,6 @@ function precast(spell,arg)
 					end
 				end
 			end
-		else
-			-- Magian Staff
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.inventory[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast.Song, {main=Fastcast.Staff[spell.element]})
-			else
-				equip(sets.precast.Fastcast.Song,{main="Felibre's Dague"})
-			end	
 		end
 	else
 		-- Special handling to remove Dancer sub job Sneak effect
@@ -563,28 +540,8 @@ function aftercast(spell,arg)
 	if areas.Town:contains(world.zone) then
 		windower.add_to_chat(121, "Town Gear")
 		equip(sets.misc.Town)
-	elseif fishing == 1 then
-		windower.add_to_chat(121, "Fishing Gear")
-		equip(sets.idle.Fishing)
 	else
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
+		previous_set()
 	end
 -- Lullaby
 	if spell.name == "Foe Lullaby II" or spell.name == "Horde Lullaby II" then
@@ -610,13 +567,17 @@ end
 
 function previous_set()
 	slot_lock()
-	if Mode == 0 then
-		equip(sets.TP)
-		windower.add_to_chat(121,'TP Set')
-	elseif Mode == 1 then
-		equip(sets.TP.Acc)
-		windower.add_to_chat(121,'Acc TP Set')
-	end		
+	if player.status == 'Engaged' then
+		if PDT == 0 then
+			equip(ModeWeapon, sets.TP)
+			windower.add_to_chat(121,'Tp Set ' ..Mode)
+		else 
+			equip(ModeWeapon, sets.idle.PDT)
+			windower.add_to_chat(121,'PDT Set Locked')
+		end
+	else 
+		equip(ModeWeapon, sets.idle.Standard)
+	end
 end
 
 function slot_lock()

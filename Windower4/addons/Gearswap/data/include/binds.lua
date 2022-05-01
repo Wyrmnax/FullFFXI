@@ -153,7 +153,8 @@ elseif player.main_job == "BRD" then
 	-- set binds
 	windower.send_command('@bind f10 gs c MDT')
 	windower.send_command('@bind f11 gs c PDT')
-	windower.send_command('@bind f12 gs c TP')
+	windower.send_command('@bind f12 gs c Mode')
+	windower.send_command('@bind ^f12 gs c ModeX')
 	
 elseif player.main_job == "SAM" then
 	basic_binds()

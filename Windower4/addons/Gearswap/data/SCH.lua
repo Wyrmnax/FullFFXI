@@ -377,8 +377,8 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Pixie Hairpin +1",
-    body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+	body="Agwu's Robe",
+    hands="Agwu's Gages",	
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -396,8 +396,8 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Peda. M.Board +3",
-    body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+	body="Agwu's Robe",
+    hands="Agwu's Gages",	
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -415,8 +415,10 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Peda. M.Board +3",
-    body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+    --body="Amalric Doublet +1",
+    --hands="Amalric Gages +1",	
+	body="Agwu's Robe",
+    hands="Agwu's Gages",	
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -441,8 +443,8 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
 	head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},    
-    body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+	body="Agwu's Robe",
+    hands="Agwu's Gages",	
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -457,7 +459,6 @@ function get_sets()
     -- Pieces to swap from freen nuke to Magic Burst
     sets.midcast.MB.normal = set_combine(sets.midcast.nuking.normal, {	
 	head="Peda. M.Board +3",
-    right_ear="Static Earring",
     right_ring="Mujin Band",
     })
 	
@@ -467,8 +468,8 @@ function get_sets()
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Peda. M.Board +3",
-    body="Amalric Doublet +1",
-    hands="Amalric Gages +1",
+	body="Agwu's Robe",
+    hands="Agwu's Gages",	
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
     neck="Argute Stole +2",
@@ -488,7 +489,6 @@ function get_sets()
     -- used with toggle, default: F10
     -- Pieces to swap from freen nuke to Magic Burst
     sets.midcast.MB.acc = set_combine(sets.midcast.nuking.normal, { 
-	right_ear="Static Earring",
     right_ring="Mujin Band",
     })	
 	
@@ -553,7 +553,7 @@ function get_sets()
 	sub="Giuoco Grip",
 	ammo="Staunch Tathlum +1",
     head="Telchine Cap",
-	body="Telchine Chas.",
+	body="Peda. Gown +3",
     hands="Telchine Gloves",
     legs="Telchine Braconi",
     feet="Telchine Pigaches",

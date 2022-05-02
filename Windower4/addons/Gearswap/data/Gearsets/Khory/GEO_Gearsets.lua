@@ -65,7 +65,7 @@ if player.Name == 'Khory' then
 		hands="Geo. Mitaines +3",
 		legs="Nyame Flanchard",
 		waist="Isa Belt",
-		feet="Bagua Sandals +1",
+		feet="Bagua Sandals +3",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 		})
 						
@@ -77,7 +77,7 @@ if player.Name == 'Khory' then
 		sets.precast.JA["Life Circle"] = {body="Geomancy Tunic +1"}
 		sets.precast.JA["Full Circle"] = {hands="Bagua Mitianes +1"}
 		sets.precast.JA["Mending Halation"] = {legs="Bagua Pants +1"}
-		sets.precast.JA["Radial Arcana"] = {feet="Bagua Sandals +1"}
+		sets.precast.JA["Radial Arcana"] = {feet="Bagua Sandals +3"}
 		sets.precast.JA["Cardinal Chant"] = {head="Geomancy Galero +1"}
 		sets.precast.JA["Collimated Fervor"] = {head="Geomancy Galero +1"}
 		

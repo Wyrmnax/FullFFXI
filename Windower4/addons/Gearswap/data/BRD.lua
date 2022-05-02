@@ -164,13 +164,14 @@ function status_change(new,old)
 end
 
 function precast(spell,arg)
+	windower.add_to_chat(121, spell.type)
 -- Job Abilities
 	if spell.type == 'JobAbility' then
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
 		end
 -- Weaponskills
-	elseif spell.type == 'Weaponskill' then
+	elseif spell.type == "WeaponSkill" then
 		if player.status == 'Engaged' then
 			if player.tp >= 100 then
 				if spell.target.distance <= 5 then

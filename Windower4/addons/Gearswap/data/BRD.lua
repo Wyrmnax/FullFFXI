@@ -150,6 +150,7 @@ function self_command(command)
 	end
 end
 
+
 function status_change(new,old)
 -- Auto set
 	if T{'Idle'}:contains(new) then
@@ -162,6 +163,7 @@ function status_change(new,old)
 		end
 	end
 end
+
 
 function precast(spell,arg)
 	windower.add_to_chat(121, spell.type)
@@ -537,13 +539,8 @@ function midcast(spell,arg)
 end 
 
 function aftercast(spell,arg)
--- Autoset
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		previous_set()
-	end
+-- Autoset	
+	previous_set()
 -- Lullaby
 	if spell.name == "Foe Lullaby II" or spell.name == "Horde Lullaby II" then
 		windower.send_command('wait 75;input /echo [ WARNING! Lullaby II : Will wear off within 0:15 ]')
@@ -553,10 +550,6 @@ function aftercast(spell,arg)
 		windower.send_command('wait 45;input /echo [ WARNING! Lullaby : Will wear off within 0:15 ]')
         windower.send_command('wait 50;input /echo [ WARNING! Lullaby : Will wear off within 0:10 ]')
         windower.send_command('wait 55;input /echo [ WARNING! Lullaby : Will wear off within 0:05 ]')
-	end
--- Convert
-	if spell.name == 'Convert' then
-		cancel_spell()
 	end
  -- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
     if spell and spell.name == 'Utsusemi: Ni' then

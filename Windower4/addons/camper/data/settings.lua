@@ -4,6 +4,11 @@ return {
         ["y"] = 0
     },
     ["zones"] = {
+        ["Abyssea - Altepa"] = {
+            [17670568] = {
+                ["name"] = "Hazhdiha"
+            }
+        },
         ["Abyssea - Uleguerand"] = {
             [17813924] = {
                 ["name"] = "Ogopogo",

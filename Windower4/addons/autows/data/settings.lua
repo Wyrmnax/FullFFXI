@@ -376,7 +376,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -385,7 +385,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -448,7 +448,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["WHM"] = {

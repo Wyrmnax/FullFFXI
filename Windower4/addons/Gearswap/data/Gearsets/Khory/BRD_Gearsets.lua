@@ -71,7 +71,7 @@ if player.name == 'Khory' then
 		minuet = {range="Gjallahorn"}
 		madrigal = {range="Gjallahorn"}
 		minne = {range="Gjallahorn"}
-		etude = {range="Gjallahorn"}
+		etude = {range="Daurdabla"}
 		carol = {range="Gjallahorn"}
 		mambo  = {range="Gjallahorn"}
 		mazurka = {range="Gjallahorn"}
@@ -103,7 +103,11 @@ if player.name == 'Khory' then
 			left_ear="Etiolation Earring",
 			right_ear="Eabani Earring",
 			left_ring="Defending Ring",
-			right_ring="Shneddick Ring",}	
+			right_ring="Shneddick Ring",
+			
+			
+			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+			}	
 		sets.idle.Standard = set_combine(sets.idle.PDT,{})
 		sets.misc.Town = set_combine(sets.idle.PDT, {
 				})
@@ -124,6 +128,7 @@ if player.name == 'Khory' then
     left_ear="Etiolation Earring",
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
+	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.Fastcast.Song = set_combine(sets.precast.Fastcast, {
 	feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
@@ -143,10 +148,34 @@ if player.name == 'Khory' then
     right_ear="Lempo Earring",
 	}
 		-- Bard songs
-		sets.midcast.Buffsong = {sub = "Kali"}
+		sets.midcast.Buffsong = {
+	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
+    head="Fili Calot +1",
+    body="Fili Hongreline +1",
+    hands="Fili Manchettes +1",
+    legs="Inyanga Shalwar +2",
+    neck="Incanter's Torque",
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 		-- Target Skill + 800
-		sets.midcast.Skillsong = {sub = "Kali"}
-		sets.midcast.Debuff = {sub = "Kali"}
+		sets.midcast.Skillsong = {
+	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
+    head="Fili Calot +1",
+    body="Fili Hongreline +1",
+    hands="Fili Manchettes +1",
+    legs="Inyanga Shalwar +2",
+    neck="Incanter's Torque",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
+		sets.midcast.Debuff = {
+	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
+    head="Fili Calot +1",
+    body="Fili Hongreline +1",
+    hands="Fili Manchettes +1",
+    legs="Inyanga Shalwar +2",
+    neck="Incanter's Torque",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
 		--Healing Magic
 		sets.midcast.Cure = {
 	main="Daybreak",
@@ -192,6 +221,7 @@ if player.name == 'Khory' then
     right_ear="Crep. Earring",
     left_ring="Petrov Ring",
     right_ring="Ilabrat Ring",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.WS = set_combine(sets.TP, {})
 		sets.precast.WS.WSD = {
@@ -201,12 +231,29 @@ if player.name == 'Khory' then
     hands="Bunzi's Gloves",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Lissome Necklace",
+    neck="Caro Necklace",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Ishvara Earring",
     right_ear="Crep. Earring",
     left_ring="Petrov Ring",
     right_ring="Ilabrat Ring",
+	back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	}
+	
+		sets.precast.WS.MAB = {
+	range={ name="Linos", augments={'Accuracy+18','Weapon skill damage +3%','STR+6 AGI+6',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands="Bunzi's Gloves",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Skrymir Cord",
+    left_ear="Regal Earring",
+    right_ear="Sortiarius Earring",
+    left_ring="Strendu Ring",
+    right_ring="Metamor. Ring +1",
+    back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 	
@@ -221,7 +268,7 @@ if player.name == 'Khory' then
 	right_ear="Moonshade Earring",
 	})
 		
-		sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.WSD, {
+		sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
 	right_ear="Moonshade Earring",
 	})
 	

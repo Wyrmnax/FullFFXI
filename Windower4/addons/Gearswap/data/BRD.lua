@@ -161,7 +161,9 @@ function status_change(new,old)
 		else
 			previous_set()
 		end
-	end
+	else
+		previous_set()
+    end
 end
 
 

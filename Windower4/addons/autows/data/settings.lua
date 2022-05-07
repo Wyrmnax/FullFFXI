@@ -37,7 +37,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -55,7 +55,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["COR"] = {
@@ -459,7 +459,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"realmrazer\" <t>"
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
             }
         }
     },

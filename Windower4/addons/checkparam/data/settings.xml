@@ -22,7 +22,7 @@
         <SMN>blood pact delay|blood pact delay ii|blood pact damage|avatar perpetuation cost|pet: magic attack bonus|pet: attack|pet: double attack|pet: accuracy|pet: magic accuracy|summoning magic skill|pet: blood pact damage|pet: magic damage</SMN>
         <THF>store tp|double attack|triple attack|quadruple attack|dual wield</THF>
         <WAR>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|magic evasion</WAR>
-        <WHM>cure potency|cure potency ii|fast cast|cure spellcasting time|enmity|healing magic casting time|divine benison|damage taken|physical damage taken|magic damage taken</WHM>
+        <WHM>cure potency|cure potency ii|fast cast|cure spellcasting time|enmity|healing magic casting time|divine benison|damage taken|physical damage taken|magic damage taken|magic accuracy</WHM>
         <levelfilter>99</levelfilter>
     </global>
 </settings>

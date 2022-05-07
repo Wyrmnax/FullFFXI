@@ -125,37 +125,37 @@ if player.name == 'Khory' then
     sub="Sors Shield",
     ammo="Impatiens",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-    body="Inyanga Jubbah +2",
-    hands="Inyan. Dastanas +2",
-    legs="Ebers Pant. +1",
+    body="Theo. Bliaut +2",
+    hands="Theophany Mitts +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     neck="Incanter's Torque",
-    waist="Witful Belt",
-    left_ear="Malignance Earring",
+    waist="Embla Sash",
+    left_ear="Lempo Earring",
     right_ear="Mendi. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back="Alaunus's Cape",
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.midcast.EnmityCure = set_combine(sets.midcast.Cure, {
 		})
 
 		sets.midcast.Curaga = {
-	main="Bolelabunga",
+	main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
     sub="Sors Shield",
     ammo="Impatiens",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-    body="Inyanga Jubbah +2",
-    hands="Telchine Gloves",
-    legs="Ebers Pant. +1",
+    body="Theo. Bliaut +2",
+    hands="Theophany Mitts +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     neck="Incanter's Torque",
-    waist="Witful Belt",
-    left_ear="Malignance Earring",
-    right_ear="Hermetic Earring",
+    waist="Embla Sash",
+    left_ear="Lempo Earring",
+    right_ear="Mendi. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back="Alaunus's Cape",
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.midcast.EnmityCuraga = set_combine(sets.midcast.Curaga, {})
 
@@ -168,6 +168,7 @@ if player.name == 'Khory' then
 
 		sets.midcast.Cursna = set_combine(sets.midcast.Recast, {
 				body="Ebers Bliaud +1",
+				legs="Th. Pantaloons +2",
 				})
 				
 		sets.midcast.Esuna = set_combine(sets.midcast.Recast)
@@ -179,28 +180,31 @@ if player.name == 'Khory' then
     sub="Culminus",
     ammo="Impatiens",
     head="Inyanga Tiara +2",
-    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
+    legs="Th. Pantaloons +2",
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
     neck="Incanter's Torque",
     waist="Embla Sash",
 	})
-		sets.midcast.BarElement = {
-		
+		sets.midcast.BarElement = {		
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
 		waist="Embla Sash",		
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
-		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+		feet="Theo. Duckbills +2",
 	}
-		sets.midcast.BarStatus = {
-		
+		sets.midcast.BarStatus = {		
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
 		waist="Embla Sash",		
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
-		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+		feet="Theo. Duckbills +2",
 	}
 		sets.midcast.Boost = {
-		
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
 		waist="Embla Sash",
 		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
-		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+		feet="Theo. Duckbills +2",
 	}
 		sets.midcast.Phalanx = set_combine(sets.midcast.Boost)
 		sets.midcast.Hastespell = {ammo="Impatiens", waist="Witful Belt"}
@@ -223,33 +227,35 @@ if player.name == 'Khory' then
 		sets.midcast.Enfeebling = {main="Daybreak",
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
-    head="Aya. Zucchetto +2",
-    body="Shamash Robe",
-    hands="Inyan. Dastanas +2",
-    legs="Aya. Cosciales +2",
-    feet="Inyan. Crackows +2",
+    head="Theophany Cap +2",
+    body="Theo. Bliaut +2",
+    hands="Theophany Mitts +2",
+    legs="Th. Pantaloons +2",
+    feet="Theo. Duckbills +2",
     neck="Incanter's Torque",
     waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Inyanga Ring",
     right_ring="Kishar Ring",
-    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},}
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
 		sets.midcast.Macc = {main="Daybreak",
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
-    head="Aya. Zucchetto +2",
-    body="Shamash Robe",
-    hands="Inyan. Dastanas +2",
-    legs="Aya. Cosciales +2",
-    feet="Inyan. Crackows +2",
+    head="Theophany Cap +2",
+    body="Theo. Bliaut +2",
+    hands="Theophany Mitts +2",
+    legs="Th. Pantaloons +2",
+    feet="Theo. Duckbills +2",
     neck="Incanter's Torque",
     waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Inyanga Ring",
     right_ring="Kishar Ring",
-    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},}
+    back={ name="Alaunus's Cape", augments={'MP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
 
 		sets.midcast.Dia = set_combine(sets.midcast.ConserveMP,{})
 

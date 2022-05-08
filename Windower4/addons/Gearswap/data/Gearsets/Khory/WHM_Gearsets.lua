@@ -30,6 +30,8 @@ if player.name == 'Khory' then
 			set_macro_page(5,1)
 		end
 		
+	send_command('wait 3;input /lockstyleset 14')
+		
 		-- Auto Sets
 		-- Standard/idle
 		sets.idle.PDT = {    
@@ -127,7 +129,7 @@ if player.name == 'Khory' then
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     body="Theo. Bliaut +2",
     hands="Theophany Mitts +2",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    legs="Ebers Pant. +1",
     feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     neck="Incanter's Torque",
     waist="Embla Sash",
@@ -147,7 +149,7 @@ if player.name == 'Khory' then
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     body="Theo. Bliaut +2",
     hands="Theophany Mitts +2",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    legs="Ebers Pant. +1",
     feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     neck="Incanter's Torque",
     waist="Embla Sash",
@@ -159,7 +161,8 @@ if player.name == 'Khory' then
 	}
 		sets.midcast.EnmityCuraga = set_combine(sets.midcast.Curaga, {})
 
-		sets.midcast.Cura = {}
+		sets.midcast.Cura = set_combine(sets.midcast.Cure, {
+		})
 
 		-- Status Ailments
 		sets.midcast.NaSpells = set_combine(sets.midcast.Recast, {})

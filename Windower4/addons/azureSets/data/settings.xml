@@ -4,6 +4,19 @@
         <setmode>PreserveTraits</setmode>
         <setspeed>0.65</setspeed>
         <spellsets>
+            <70>
+                <slot01>magic fruit</slot01>
+                <slot02>refueling</slot02>
+                <slot03>frenetic rip</slot03>
+                <slot04>dimensional death</slot04>
+                <slot05>sickle slash</slot05>
+                <slot06>uppercut</slot06>
+                <slot07>death scissors</slot07>
+                <slot08>spinal cleave</slot08>
+                <slot09>zephyr mantle</slot09>
+                <slot10>frost breath</slot10>
+                <slot11>metallic body</slot11>
+            </70>
             <dd>
                 <slot01>molting plumage</slot01>
                 <slot02>sinker drill</slot02>

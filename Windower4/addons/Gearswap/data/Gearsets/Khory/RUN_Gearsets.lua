@@ -184,7 +184,7 @@ sets.midcast.Enhancing = {
     head="Erilaz Galea +1",
 	body="Emet Harness +1",
     hands="Regal Gauntlets",
-    legs={ name="Futhark Trousers +1", augments={'Enhances "Inspire" effect',}},
+    legs={ name="Futhark Trousers +2", augments={'Enhances "Inspire" effect',}},
     waist="Rumination Sash",
     left_ear="Odnowa Earring +1",
     left_ring="Defending Ring",

@@ -15,20 +15,20 @@ if player.name == 'Khory' then
 		automacroset = 0
 		if automacroset == 1 then
 			if player.sub_job == 'nin' then
-				set_macro_page(4,1)
+				set_macro_page(1,18)
 			elseif player.sub_job =='whm' then
-				set_macro_page(4,2)
+				set_macro_page(1,18)
 			elseif player.sub_job == 'rdm' then
-				set_macro_page(4,3)
+				set_macro_page(1,18)
 			elseif player.sub_job =='sch' then 
-				set_macro_page(4,4)
+				set_macro_page(1,18)
 			elseif player.sub_job =='dnc' then 
-				set_macro_page(4,5)
+				set_macro_page(1,18)
 			elseif player.sub_job =='blm' then 
-				set_macro_page(4,6)
+				set_macro_page(1,18)
 			end
 		else
-			set_macro_page(4,1)
+			set_macro_page(1,18)
 		end
 		
 	sets.Evisceration = { 
@@ -38,7 +38,7 @@ if player.name == 'Khory' then
 		
 	sets.SavageBlade = { 
 	main="Naegling",
-    sub="Gleti's Knife",
+    sub="Centovente",
 	}
 	
 	sets.AccSB = { 
@@ -53,7 +53,7 @@ if player.name == 'Khory' then
 	
 	sets.Rudra = { 
 	main="Tauret",
-    sub="Gleti's Knife",
+    sub="Centovente",
 	}
 	
 	sets.AccRudra = { 
@@ -71,7 +71,7 @@ if player.name == 'Khory' then
 		minuet = {range="Gjallahorn"}
 		madrigal = {range="Gjallahorn"}
 		minne = {range="Gjallahorn"}
-		etude = {range="Daurdabla"}
+		etude = {range="Gjallahorn"}
 		carol = {range="Gjallahorn"}
 		mambo  = {range="Gjallahorn"}
 		mazurka = {range="Gjallahorn"}
@@ -82,7 +82,7 @@ if player.name == 'Khory' then
 		--Debuffs
 		elegy = {range="Gjallahorn"}
 		threnody = {range="Gjallahorn"}
-		lullaby = {range="Gjallahorn"}
+		lullaby = {range="Daurdabla"}
 		horde = {range="Gjallahorn"}
 		finale = {range="Gjallahorn"}
 		requiem = {range="Gjallahorn"}
@@ -104,9 +104,7 @@ if player.name == 'Khory' then
 			right_ear="Eabani Earring",
 			left_ring="Defending Ring",
 			right_ring="Shneddick Ring",
-			
-			
-			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 			}	
 		sets.idle.Standard = set_combine(sets.idle.PDT,{})
 		sets.misc.Town = set_combine(sets.idle.PDT, {
@@ -128,7 +126,7 @@ if player.name == 'Khory' then
     left_ear="Etiolation Earring",
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
-	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.Fastcast.Song = set_combine(sets.precast.Fastcast, {
 	feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
@@ -153,9 +151,11 @@ if player.name == 'Khory' then
     head="Fili Calot +1",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
+	neck="Mnbw. Whistle+1",
     legs="Inyanga Shalwar +2",
+	feet="Brioso Slippers +3",
     neck="Incanter's Torque",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		-- Target Skill + 800
 		sets.midcast.Skillsong = {
@@ -163,18 +163,26 @@ if player.name == 'Khory' then
     head="Fili Calot +1",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
+	neck="Mnbw. Whistle+1",
     legs="Inyanga Shalwar +2",
+	feet="Brioso Slippers +3",
     neck="Incanter's Torque",
-    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.midcast.Debuff = {
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
-    head="Fili Calot +1",
-    body="Fili Hongreline +1",
-    hands="Fili Manchettes +1",
-    legs="Inyanga Shalwar +2",
-    neck="Incanter's Torque",
-    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+    head="Brioso Roundlet +2",
+    body="Brioso Justau. +2",
+    hands="Brioso Cuffs +2",
+    legs="Brioso Cannions +2",
+    feet="Brioso Slippers +3",
+    neck="Sanctity Necklace",
+    waist="",
+    left_ear="Digni. Earring",
+    right_ear="Regal Earring",
+    left_ring="Vertigo Ring",
+    right_ring="Metamor. Ring +1",
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		--Healing Magic
 		sets.midcast.Cure = {
@@ -253,7 +261,7 @@ if player.name == 'Khory' then
     right_ear="Sortiarius Earring",
     left_ring="Strendu Ring",
     right_ring="Metamor. Ring +1",
-    back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	
@@ -261,11 +269,16 @@ if player.name == 'Khory' then
 		sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
 	neck="Fotia Gorget",
     waist="Fotia Belt",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
-		sets.precast.WS['Mercy Stroke'] = set_combine(sets.precast.WS.WSD, {})
+		sets.precast.WS['Mercy Stroke'] = set_combine(sets.precast.WS.WSD, {
+		
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	})
 		
 		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS.WSD, {
 	right_ear="Moonshade Earring",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 		
 		sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {

@@ -37,7 +37,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -55,7 +55,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["COR"] = {
@@ -67,6 +67,15 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            },
+            ["Hand-to-Hand"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"hot shot\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -367,7 +376,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -376,7 +385,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -448,7 +457,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             }
         },
         ["WHM"] = {

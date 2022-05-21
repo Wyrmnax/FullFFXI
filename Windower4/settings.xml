@@ -32,6 +32,7 @@
     <addon>Dimmer</addon>
     <addon>DressUp</addon>
     <addon>temps</addon>
+    <addon>latentchecker</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

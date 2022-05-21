@@ -6,12 +6,12 @@
   <cure2enabled>false</cure2enabled>
   <cure2amount>60</cure2amount>
   <cure3enabled>true</cure3enabled>
-  <cure3amount>130</cure3amount>
+  <cure3amount>400</cure3amount>
   <cure4enabled>true</cure4enabled>
-  <cure4amount>270</cure4amount>
-  <cure5enabled>true</cure5enabled>
+  <cure4amount>754</cure4amount>
+  <cure5enabled>false</cure5enabled>
   <cure5amount>450</cure5amount>
-  <cure6enabled>true</cure6enabled>
+  <cure6enabled>false</cure6enabled>
   <cure6amount>600</cure6amount>
   <curagaEnabled>false</curagaEnabled>
   <curagaAmount>20</curagaAmount>
@@ -110,14 +110,14 @@
   <EnlightenmentReraise>false</EnlightenmentReraise>
   <EnableGeoSpells>true</EnableGeoSpells>
   <IndiWhenEngaged>false</IndiWhenEngaged>
-  <EnableLuopanSpells>true</EnableLuopanSpells>
+  <EnableLuopanSpells>false</EnableLuopanSpells>
   <GeoWhenEngaged>false</GeoWhenEngaged>
   <specifiedEngageTarget>false</specifiedEngageTarget>
-  <IndiSpell_Spell>10</IndiSpell_Spell>
-  <GeoSpell_Spell>25</GeoSpell_Spell>
-  <EntrustedSpell_Spell>20</EntrustedSpell_Spell>
+  <IndiSpell_Spell>17</IndiSpell_Spell>
+  <GeoSpell_Spell>10</GeoSpell_Spell>
+  <EntrustedSpell_Spell>9</EntrustedSpell_Spell>
   <LuopanSpell_Target />
-  <EntrustedSpell_Target>AAEV</EntrustedSpell_Target>
+  <EntrustedSpell_Target>Sobchek</EntrustedSpell_Target>
   <enableSinging>false</enableSinging>
   <recastSongs_Monitored>false</recastSongs_Monitored>
   <SongsOnlyWhenNear>false</SongsOnlyWhenNear>
@@ -146,12 +146,12 @@
   <Composure>false</Composure>
   <Convert>false</Convert>
   <Entrust>true</Entrust>
-  <FullCircle>true</FullCircle>
-  <Dematerialize>true</Dematerialize>
-  <BlazeOfGlory>true</BlazeOfGlory>
+  <FullCircle>false</FullCircle>
+  <Dematerialize>false</Dematerialize>
+  <BlazeOfGlory>false</BlazeOfGlory>
   <RadialArcana>false</RadialArcana>
-  <EclipticAttrition>true</EclipticAttrition>
-  <LifeCycle>true</LifeCycle>
+  <EclipticAttrition>false</EclipticAttrition>
+  <LifeCycle>false</LifeCycle>
   <Pianissimo>false</Pianissimo>
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
@@ -332,10 +332,10 @@
   <enableMonitoredPriority>false</enableMonitoredPriority>
   <enableOutOfPartyHealing>true</enableOutOfPartyHealing>
   <OvercureOnHighPriority>false</OvercureOnHighPriority>
-  <EnableAddOn>false</EnableAddOn>
+  <EnableAddOn>true</EnableAddOn>
   <pauseOnZoneBox>false</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
-  <pauseOnKO>false</pauseOnKO>
+  <pauseOnKO>true</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
   <autoFollowName />
   <autoFollowDistance>5</autoFollowDistance>
@@ -343,7 +343,7 @@
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>
   <enableHotKeys>false</enableHotKeys>
   <enableFastCast_Mode>false</enableFastCast_Mode>
-  <trackCastingPackets>false</trackCastingPackets>
+  <trackCastingPackets>true</trackCastingPackets>
   <ipAddress>127.0.0.1</ipAddress>
   <listeningPort>19769</listeningPort>
 </MySettings>

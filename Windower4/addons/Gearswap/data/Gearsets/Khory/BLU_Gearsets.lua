@@ -28,6 +28,8 @@ if player.name == 'Khory' then
 				set_macro_page(1,2)
 			end
 		end
+		
+		send_command('wait 3;input /lockstyleset 3')
 
 		-- Auto Sets
 		-- Standard/idle
@@ -38,7 +40,7 @@ if player.name == 'Khory' then
 			hands="Nyame Gauntlets",
 			legs="Rawhide Trousers",
 			feet="Nyame Sollerets",
-			neck="Bathy Choker +1",
+			neck="Sanctity Necklace",
 			waist="Fucho-no-Obi",
 			left_ear="Suppanomimi",
 			right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -58,11 +60,11 @@ if player.name == 'Khory' then
 		-- Melee Sets
 		sets.TP = {
 		ammo="Coiste Bodhar",
-		head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
+		head="Malignance Chapeau",
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
 		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-		feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
+		feet="Malignance Boots",
 		neck="Lissome Necklace",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Suppanomimi",
@@ -106,7 +108,7 @@ if player.name == 'Khory' then
 			feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
 			neck="Voltsurge Torque",
 			lear="Enchntr. Earring +1",
-			rear="Mendi. Earring",
+			rear="Etiolation Earring",
 			left_ring="Kishar Ring",
 			right_ring="Strendu Ring",
 			back={ name="Rosmerta's Cape", augments={'"Fast Cast"+10',}},

@@ -144,7 +144,7 @@
   <Devotion>false</Devotion>
   <DivineCaress>false</DivineCaress>
   <Composure>false</Composure>
-  <Convert>true</Convert>
+  <Convert>false</Convert>
   <Entrust>true</Entrust>
   <FullCircle>true</FullCircle>
   <Dematerialize>true</Dematerialize>
@@ -325,15 +325,15 @@
   <AssistSpecifiedTarget>false</AssistSpecifiedTarget>
   <DisableTargettingCancel>false</DisableTargettingCancel>
   <TargetRemoval_Delay>3</TargetRemoval_Delay>
-  <AcceptRaise>false</AcceptRaise>
+  <AcceptRaise>true</AcceptRaise>
   <AcceptRaiseOnlyWhenNotInCombat>false</AcceptRaiseOnlyWhenNotInCombat>
   <Overcure>true</Overcure>
   <Undercure>true</Undercure>
   <enableMonitoredPriority>false</enableMonitoredPriority>
   <enableOutOfPartyHealing>true</enableOutOfPartyHealing>
   <OvercureOnHighPriority>false</OvercureOnHighPriority>
-  <EnableAddOn>false</EnableAddOn>
-  <pauseOnZoneBox>false</pauseOnZoneBox>
+  <EnableAddOn>true</EnableAddOn>
+  <pauseOnZoneBox>true</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
   <pauseOnKO>false</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
@@ -343,7 +343,7 @@
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>
   <enableHotKeys>false</enableHotKeys>
   <enableFastCast_Mode>false</enableFastCast_Mode>
-  <trackCastingPackets>false</trackCastingPackets>
+  <trackCastingPackets>true</trackCastingPackets>
   <ipAddress>127.0.0.1</ipAddress>
   <listeningPort>19769</listeningPort>
 </MySettings>

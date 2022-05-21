@@ -230,19 +230,20 @@ function precast(spell,arg)
 			end	
 -- Bard Songs
 	elseif spell.type == 'BardSong' then
-		if buffactive.Nightingale then
+			if spell.name == "Honor March" then
+				equip(sets.precast.Fastcast,{range="Marsyas"})			
 			-- Dummy Songs
 			-- 3rd Song
-			if spell.name == "Fowl Aubade" then
+			elseif spell.name == "Fowl Aubade" then
 				if player.inventory["Daurdabla"] or player.wardrobe["Daurdabla"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"] then
-					equip({range="Daurdabla"})
+					equip(sets.precast.Fastcast,{range="Daurdabla"})
 				elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] then
 					equip({range="Terpander"})
 				end
 			-- 4th Song
 			elseif spell.name == "Herb Pastoral" then
 				if player.inventory["Daurdabla"] or player.wardrobe["Daurdabla"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"] then
-					equip({range="Daurdabla"})
+					equip(sets.precast.Fastcast,{range="Daurdabla"})
 				elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] then
 					equip({range="Terpander"})
 				end
@@ -314,7 +315,6 @@ function precast(spell,arg)
 					end
 				end
 			end
-		end
 	else
 		-- Special handling to remove Dancer sub job Sneak effect
 		if spell.name == 'Spectral Jig' and buffactive.Sneak then
@@ -412,8 +412,10 @@ function midcast(spell,arg)
 		end
 -- Songs
 	elseif spell.skill == "Singing" or spell.skill == "Stringed Instrument" or spell.skill == "Wind Instrument" then
+		if spell.name == "Honor March" then
+			equip(sets.midcast.Buffsong,{legs="Fili Rhingrave +1"})
 		-- Dummy Songs
-		if spell.name == "Fowl Aubade" then
+		elseif spell.name == "Fowl Aubade" then
 			if player.inventory["Daurdabla"] or player.wardrobe["Daurdabla"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"] then
 				equip(sets.midcast.Recast, {range="Daurdabla"})
 			elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] or player.wardrobe2["Terpander"] or player.wardrobe3["Terpander"] or player.wardrobe4["Terpander"] then
@@ -424,7 +426,7 @@ function midcast(spell,arg)
 				equip(sets.midcast.Recast, {range="Daurdabla"})
 			elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] or player.wardrobe2["Terpander"] or player.wardrobe3["Terpander"] or player.wardrobe4["Terpander"] then
 				equip(sets.midcast.Recast, {range="Terpander"})
-			end
+			end		
 		else
 			if player.inventory["Gjallarhorn"] or player.wardrobe["Gjallarhorn"] or player.wardrobe2["Gjallarhorn"] or player.wardrobe3["Gjallarhorn"] or player.wardrobe4["Gjallarhorn"] then
 				-- Buff Songs
@@ -432,7 +434,7 @@ function midcast(spell,arg)
 					if string.find(spell.english,'Scherzo') then
 						equip(sets.midcast.Skillsong,{range="Gjallarhorn", feet="Fili Cothurnes +1"})
 					elseif string.find(spell.english,'Ballad') then
-						equip(sets.midcast.Buffsong,{range="Gjallarhorn", legs="Fili Rhingrave +1"})
+						equip(sets.midcast.Buffsong,{range="Gjallarhorn"})
 					elseif string.find(spell.english,'Minuet') then
 						equip(sets.midcast.Buffsong,{range="Gjallarhorn", body="Fili Hongreline +1"})
 					elseif string.find(spell.english,'March') then

@@ -5,8 +5,8 @@ return {
         ["clear"] = L{},
     },
     ["buffs"] = T{
-        ["refresh"] = L{},
         ["haste"] = L{},
+        ["refresh"] = L{},
         ["aurorastorm"] = L{},
         ["firestorm"] = L{},
     },

@@ -39,6 +39,7 @@ function clear_binds()
 	windower.send_command('lua unload autocor')
 	windower.send_command('lua unload autopup')
 	windower.send_command('lua unload autocontrol')
+	windower.send_command('lua unload singer')
 end
 
 if player.main_job == "WAR" then
@@ -155,6 +156,7 @@ elseif player.main_job == "BRD" then
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
+	windower.send_command('lua load singer')
 	
 elseif player.main_job == "SAM" then
 	basic_binds()

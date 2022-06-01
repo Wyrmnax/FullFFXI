@@ -43,12 +43,12 @@ if player.name == 'Khory' then
 	
 	sets.AccSB = { 
 	main="Naegling",
-    sub="Gleti's Knife",
+    sub="Ternion Dagger +1",
 	}
 	
 	sets.Mordant = { 
 	main="Tauret",
-    sub="Gleti's Knife",
+    sub="Ternion Dagger +1",
 	}
 	
 	sets.Rudra = { 
@@ -58,10 +58,10 @@ if player.name == 'Khory' then
 	
 	sets.AccRudra = { 
 	main="Tauret",
-    sub="Gleti's Knife",
+    sub="Ternion Dagger +1",
 	}
 	
-	send_command('wait 3;input /lockstyleset 8')
+	send_command('wait 3;input /lockstyleset 15')
 		
 		-- Instruments
 		default = {range="Gjallahorn"}
@@ -117,7 +117,7 @@ if player.name == 'Khory' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = { 
-	head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
+	head="Bunzi's Hat",
     body="Inyanga Jubbah +2",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     legs="Aya. Cosciales +2",
@@ -218,7 +218,7 @@ if player.name == 'Khory' then
 		-- Melee Sets
 		sets.TP = {
 	range={ name="Linos", augments={'Accuracy+19','"Store TP"+4','Quadruple Attack +3',}},
-    head="Aya. Zucchetto +2",
+    head="Bunzi's Hat",
     body="Ayanmo Corazza +2",
     hands="Bunzi's Gloves",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},

@@ -3,7 +3,10 @@
     <global>
         <filters>
             <players>
-
+                <qianduoduo>qianduoduo</qianduoduo>
+                <quianduoduo>quianduoduo</quianduoduo>
+                <youppoppoyup>youppoppoyup</youppoppoyup>
+                <youppoppoyupfindall>youppoppoyupfindall</youppoppoyupfindall>
             </players>
             <strings>
                 <020>0-20</020>

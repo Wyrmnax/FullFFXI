@@ -11,13 +11,6 @@
                 <4>Ulmia</4>
                 <5>Arciela</5>
             </abyssea>
-            <alexander>
-                <1>Selh&apos;teus</1>
-                <2>Cherukiki</2>
-                <3>Qultada</3>
-                <4>Monberaux</4>
-                <5>Arciela</5>
-            </alexander>
             <default>
                 <1>Valaineral</1>
                 <2>Monberaux</2>
@@ -25,12 +18,6 @@
                 <4>Arciela</4>
                 <5>Cornelia</5>
             </default>
-            <five>
-                <1>Valaineral</1>
-                <2>Qultada</2>
-                <3>Arciela</3>
-                <4>Monberaux</4>
-            </five>
             <geo>
                 <1>Monberaux</1>
                 <2>Arciela</2>
@@ -44,6 +31,13 @@
                 <4>Joachim</4>
                 <5>Arciela</5>
             </gin>
+            <gog>
+                <1>AAHM</1>
+                <2>August</2>
+                <3>Ulmia</3>
+                <4>King of Hearts</4>
+                <5>Karaha-Baruha</5>
+            </gog>
             <leveling>
                 <1>AAEV</1>
                 <2>Monberaux</2>
@@ -65,12 +59,19 @@
                 <4>King of Hearts</4>
                 <5>Valaineral</5>
             </mage>
+            <mboze>
+                <1>Valaineral</1>
+                <2>Cornelia</2>
+                <3>Monberaux</3>
+                <4>Arciela</4>
+                <5>Cherukiki</5>
+            </mboze>
             <notank>
                 <1>Cornelia</1>
                 <2>Sylvie (UC)</2>
                 <3>Arciela</3>
-                <4>Qultada</4>
-                <5>Monberaux</5>
+                <4>Monberaux</4>
+                <5>Cherukiki</5>
             </notank>
             <odyssey>
                 <1>AAEV</1>
@@ -86,6 +87,13 @@
                 <4>Arciela</4>
                 <5>Cherukiki</5>
             </omen>
+            <rask>
+                <1>AAEV</1>
+                <2>Kupipi</2>
+                <3>Star Sibyl</3>
+                <4>Selh&apos;teus</4>
+                <5>Koru-Moru</5>
+            </rask>
             <shinryu>
                 <1>Valaineral</1>
                 <2>AAEV</2>

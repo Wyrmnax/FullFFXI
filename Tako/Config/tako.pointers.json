@@ -127,16 +127,23 @@
   },
   {
     "name": "abilityinfo",
-    "pattern": "8B44240C5657B9FFFFFFFF8D70048B44240C8DB8FFFFFFFFF3A5C680FFFFFFFF015FB0015EC3",
-    "mask": "xxxxxxx????xxxxxxxxx????xxxx????xxxxxx",
-    "offset": 20,
-    "count": 1
+    "pattern": "894124E9FFFFFFFF8B46FF6A006A00508BCEE8",
+    "mask": "xxxx????xx?xxxxxxxx",
+    "offset": 25,
+    "count": 0
   },
   {
     "name": "hasspell",
     "pattern": "568BF1E8FFFFFFFF85C074FF8B8EFFFFFFFF6A00",
     "mask": "xxxx????xxx?xx????xx",
     "offset": 0,
+    "count": 0
+  },
+  {
+    "name": "spelltable",
+    "pattern": "8B0DFFFFFFFF5556E8FFFFFFFFA1FFFFFFFF6A0C6A008BCF",
+    "mask": "xx????xxx????x????xxxxxx",
+    "offset": 14,
     "count": 0
   },
   {

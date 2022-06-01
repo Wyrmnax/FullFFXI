@@ -1,7 +1,7 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
-        <actions>true</actions>
+        <actions>false</actions>
         <active>true</active>
         <aoe>
             <p1>false</p1>
@@ -73,4 +73,17 @@
         <timers>true</timers>
         <troubadour>true</troubadour>
     </global>
+    <khory>
+        <box>
+            <pos>
+                <x>1562</x>
+                <y>62</y>
+            </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
+        </box>
+    </khory>
 </settings>

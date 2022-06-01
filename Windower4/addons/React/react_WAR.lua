@@ -15,18 +15,18 @@ return {
             ["ready_reaction"]="turnadound"
         }
     }, 
-    ["Predataur"]={
-        ["Chthlonic Ray"]={
-            ["complete_reaction"]="facemob", 
-            ["ready_reaction"]="turnaround"
-        }, 
-        ["Mortal Ray"]={
+    ["Bozzetto Frigg"]={
+        ["Chasting Disregard"]={
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         }
     }, 
-    ["Bozzetto Frigg"]={
-        ["Chasting Disregard"]={
+    ["Predataur"]={
+        ["Mortal Ray"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Chthlonic Ray"]={
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         }

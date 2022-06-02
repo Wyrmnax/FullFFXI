@@ -23,7 +23,7 @@
   <curaga4Amount>965</curaga4Amount>
   <curaga5enabled>true</curaga5enabled>
   <curaga5Amount>1195</curaga5Amount>
-  <curePercentage>65</curePercentage>
+  <curePercentage>75</curePercentage>
   <priorityCurePercentage>95</priorityCurePercentage>
   <monitoredCurePercentage>85</monitoredCurePercentage>
   <curagaCurePercentage>75</curagaCurePercentage>
@@ -64,7 +64,7 @@
   <plRefresh_Level>2</plRefresh_Level>
   <plProtect>false</plProtect>
   <plShell>false</plShell>
-  <plBlink>false</plBlink>
+  <plBlink>true</plBlink>
   <plPhalanx>false</plPhalanx>
   <plStoneskin>true</plStoneskin>
   <plTemper>false</plTemper>
@@ -333,9 +333,9 @@
   <enableOutOfPartyHealing>true</enableOutOfPartyHealing>
   <OvercureOnHighPriority>false</OvercureOnHighPriority>
   <EnableAddOn>true</EnableAddOn>
-  <pauseOnZoneBox>false</pauseOnZoneBox>
+  <pauseOnZoneBox>true</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
-  <pauseOnKO>false</pauseOnKO>
+  <pauseOnKO>true</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
   <autoFollowName />
   <autoFollowDistance>5</autoFollowDistance>

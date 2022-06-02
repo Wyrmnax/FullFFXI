@@ -6,7 +6,7 @@
         <sets>
             <abyssea>
                 <1>Monberaux</1>
-                <2>Sylvie (UC)</2>
+                <2>Yoran-Oran (UC)</2>
                 <3>Star Sibyl</3>
                 <4>Ulmia</4>
                 <5>Arciela</5>
@@ -14,7 +14,7 @@
             <default>
                 <1>Valaineral</1>
                 <2>Monberaux</2>
-                <3>Sylvie (UC)</3>
+                <3>Yoran-Oran (UC)</3>
                 <4>Arciela</4>
                 <5>Cornelia</5>
             </default>
@@ -27,7 +27,7 @@
             <gin>
                 <1>Qultada</1>
                 <2>Monberaux</2>
-                <3>Sylvie (UC)</3>
+                <3>Yoran-Oran (UC)</3>
                 <4>Joachim</4>
                 <5>Arciela</5>
             </gin>
@@ -68,7 +68,7 @@
             </mboze>
             <notank>
                 <1>Cornelia</1>
-                <2>Sylvie (UC)</2>
+                <2>Yoran-Oran (UC)</2>
                 <3>Arciela</3>
                 <4>Monberaux</4>
                 <5>Cherukiki</5>
@@ -83,7 +83,7 @@
             <omen>
                 <1>Qultada</1>
                 <2>Monberaux</2>
-                <3>Sylvie (UC)</3>
+                <3>Yoran-Oran (UC)</3>
                 <4>Arciela</4>
                 <5>Cherukiki</5>
             </omen>

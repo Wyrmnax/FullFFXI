@@ -333,9 +333,9 @@
   <enableOutOfPartyHealing>true</enableOutOfPartyHealing>
   <OvercureOnHighPriority>false</OvercureOnHighPriority>
   <EnableAddOn>true</EnableAddOn>
-  <pauseOnZoneBox>false</pauseOnZoneBox>
+  <pauseOnZoneBox>true</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
-  <pauseOnKO>false</pauseOnKO>
+  <pauseOnKO>true</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
   <autoFollowName />
   <autoFollowDistance>5</autoFollowDistance>

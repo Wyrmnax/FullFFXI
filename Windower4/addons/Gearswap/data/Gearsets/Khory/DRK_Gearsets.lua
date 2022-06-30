@@ -43,33 +43,34 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-				    ammo="Staunch Tathlum +1",
-    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
-    body={ name="Jumalik Mail", augments={'HP+50','Attack+15','Enmity+9','"Refresh"+2',}},
-    hands="Sulev. Gauntlets +2",
-    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
-    feet="Sulev. Leggings +2",
-    neck="Loricate Torque +1",
+	ammo="Staunch Tathlum +1",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body="Sacro Breastplate",
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Mache Earring",
+    left_ear="Eabani Earring",
+    right_ear="Etiolation Earring",
     left_ring="Defending Ring",
-    right_ring="Karieyh Ring",
+    right_ring="Shneddick Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
 	}
 
-sets.idle.MDT = {     ammo="Staunch Tathlum +1",
-    head={ name="Jumalik Helm", augments={'MND+10','"Mag.Atk.Bns."+15','Magic burst dmg.+10%','"Refresh"+1',}},
-    body={ name="Jumalik Mail", augments={'HP+50','Attack+15','Enmity+9','"Refresh"+2',}},
-    hands="Sulev. Gauntlets +2",
-    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
-    feet="Sulev. Leggings +2",
-    neck="Loricate Torque +1",
+sets.idle.MDT = {     
+	ammo="Staunch Tathlum +1",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body="Sacro Breastplate",
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Mache Earring",
+    left_ear="Eabani Earring",
+    right_ear="Etiolation Earring",
     left_ring="Defending Ring",
-    right_ring="Karieyh Ring",
+    right_ring="Shneddick Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
 	}
 
@@ -81,68 +82,31 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 sets.Enmity = {}
 
 -- Scythe TP set
-sets.TP = { ammo="Seeth. Bomblet +1",
-    head="Flam. Zucchetto +2",
-    body={ name="Valorous Mail", augments={'Accuracy+25','STR+6','Chance of successful block +5','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
-    hands="Meg. Gloves +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Vim Torque +1",
-    waist="Ioskeha Belt +1",
+sets.TP = { 
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
-    right_ear="Brutal Earring",
+    right_ear="Telos Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
+    right_ring="Petrov Ring",
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
 	}
-sets.TP.Acc = { ammo="Seeth. Bomblet +1",
-    head="Flam. Zucchetto +2",
-    body={ name="Valorous Mail", augments={'Accuracy+25','STR+6','Chance of successful block +5','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
-    hands="Meg. Gloves +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Vim Torque +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Cessance Earring",
-    right_ear="Mache Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
-	}
+sets.TP.Acc = set_combine(sets.TP, {
+				})
 
 -- GreatSword
-sets.TP.GS = {
-	ammo="Seeth. Bomblet +1",
-    head="Flam. Zucchetto +2",
-    body={ name="Valorous Mail", augments={'Accuracy+25','STR+6','Chance of successful block +5','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
-    hands="Meg. Gloves +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Vim Torque +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Cessance Earring",
-    right_ear="Brutal Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
-	}
+sets.TP.GS = set_combine(sets.TP, {
+				})
 
 
-sets.TP.GS.Acc = set_combine(sets.TP.GS,{
-	ammo="Seeth. Bomblet +1",
-    head="Flam. Zucchetto +2",
-    body={ name="Valorous Mail", augments={'Accuracy+25','STR+6','Chance of successful block +5','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
-    hands="Meg. Gloves +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Vim Torque +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Cessance Earring",
-    right_ear="Mache Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
-	})
+sets.TP.GS.Acc = set_combine(sets.TP, {
+				})
 
 -- JA
 sets.precast.JA["Blood Weapon"] = {body="Abyss Cuirass +2"}
@@ -249,141 +213,77 @@ sets.midcast.MAB = set_combine(sets.midcast.Elemental,{})
 -- Weaponskills
 sets.precast.WS = {
 	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ignominy Cuirass +2",
-    hands="Sulev. Gauntlets +2",
-    legs="Ig. Flanchard +3",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Odnowa Earring +1",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Caro Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Cessance Earring",
+    right_ear="Schere Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
+    right_ring="Regal Ring",
+    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	}
+	
+sets.precast.WS.WSD = {
+	ammo="Knobkierrie",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Caro Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Thrud Earring",
+    right_ear="Ishvara Earring",
+	--right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Niqmaddu Ring",
+    right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 -- Scythe
 sets.precast.WS["Insurgency"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ratri Plate",
-    hands="Sulev. Gauntlets +2",
-    legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Odnowa Earring +1",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
-sets.precast.WS["Cross Reaper"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ratri Plate",
-    hands="Sulev. Gauntlets +2",
-    legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Odnowa Earring +1",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	
+sets.precast.WS["Cross Reaper"] = set_combine(sets.precast.WS.WSD, {
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
+	
 sets.precast.WS["Guillotine"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ratri Plate",
-    hands="Sulev. Gauntlets +2",
-    legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Odnowa Earring +1",
-    right_ear="Brutal Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
+	
 sets.precast.WS["Entropy"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ratri Plate",
-    hands="Sulev. Gauntlets +2",
-    legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
-sets.precast.WS["Catastrophe"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ratri Plate",
-    hands="Sulev. Gauntlets +2",
-    legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	
+sets.precast.WS["Catastrophe"] = set_combine(sets.precast.WS.WSD, {
+	
 	})
 
 -- GreatSword
-sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
-    ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Ignominy Cuirass +2",
-    hands={ name="Argosy Mufflers", augments={'STR+10','DEX+10','Attack+15',}},
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
+sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {	
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Odnowa Earring +1",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
-sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS, {
-    ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Weapon skill damage +2%','DEX+10','Accuracy+14','Attack+10',}},
-    body="Ignominy Cuirass +2",
-    hands={ name="Odyssean Gauntlets", augments={'Accuracy+28','Weapon skill damage +4%','AGI+1',}},
-    legs={ name="Odyssean Cuisses", augments={'Weapon skill damage +3%','VIT+10','Accuracy+14',}},
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	
+sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS.WSD, {
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
+	
 sets.precast.WS["Scourge"] = set_combine(sets.precast.WS, {
-    ammo="Knobkierrie",
-    head={ name="Odyssean Helm", augments={'Weapon skill damage +2%','DEX+10','Accuracy+14','Attack+10',}},
-    body="Ignominy Cuirass +2",
-    hands={ name="Odyssean Gauntlets", augments={'Accuracy+28','Weapon skill damage +4%','AGI+1',}},
-    legs={ name="Odyssean Cuisses", augments={'Weapon skill damage +3%','VIT+10','Accuracy+14',}},
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	})
+	
+sets.precast.WS["Gound Strike"] = set_combine(sets.precast.WS.WSD, {
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS["Spinning Slash"] = set_combine(sets.precast.WS.WSD, {
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 
 			

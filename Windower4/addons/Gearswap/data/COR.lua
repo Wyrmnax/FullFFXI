@@ -333,7 +333,7 @@ function midcast(spell,arg)
 		-- Gear change to Damage Taken set when in midcast of Utsusemi
 		-- Special handling to remove Utsusemi, Sneak, and Stoneskin effects if they are active
 		if windower.wc_match(spell.name,'Utsusemi*') then
-			equip(sets.precast.Utsusemi)
+			equip(sets.idle.PDT)
 			if spell.name == 'Utsusemi: Ichi' and ShadowType == 'Ni' then
 				if buffactive['Copy Image'] then
 					windower.ffxi.cancel_buff(66)

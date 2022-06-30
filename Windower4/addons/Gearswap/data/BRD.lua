@@ -247,6 +247,13 @@ function precast(spell,arg)
 				elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] then
 					equip({range="Terpander"})
 				end
+			-- 5th
+			elseif spell.name == "Logical Etude" then
+				if player.inventory["Daurdabla"] or player.wardrobe["Daurdabla"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"] then
+					equip(sets.precast.Fastcast,{range="Daurdabla"})
+				elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] then
+					equip({range="Terpander"})
+				end
 			else
 				-- Instrument check 
 				if player.inventory["Gjallarhorn"] or player.wardrobe["Gjallarhorn"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"] then
@@ -426,7 +433,13 @@ function midcast(spell,arg)
 				equip(sets.midcast.Recast, {range="Daurdabla"})
 			elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] or player.wardrobe2["Terpander"] or player.wardrobe3["Terpander"] or player.wardrobe4["Terpander"] then
 				equip(sets.midcast.Recast, {range="Terpander"})
-			end		
+			end
+		elseif spell.name == "Logical Etude" then
+			if player.inventory["Daurdabla"] or player.wardrobe["Daurdabla"] or player.wardrobe2["Daurdabla"] or player.wardrobe3["Daurdabla"] or player.wardrobe4["Daurdabla"]then
+				equip(sets.midcast.Recast, {range="Daurdabla"})
+			elseif player.inventory["Terpander"] or player.wardrobe["Terpander"] or player.wardrobe2["Terpander"] or player.wardrobe3["Terpander"] or player.wardrobe4["Terpander"] then
+				equip(sets.midcast.Recast, {range="Terpander"})
+			end			
 		else
 			if player.inventory["Gjallarhorn"] or player.wardrobe["Gjallarhorn"] or player.wardrobe2["Gjallarhorn"] or player.wardrobe3["Gjallarhorn"] or player.wardrobe4["Gjallarhorn"] then
 				-- Buff Songs
@@ -452,16 +465,16 @@ function midcast(spell,arg)
 					if string.find(spell.english,'Lullaby') then
 						if buffactive['Troubadour'] then
 							windower.add_to_chat(121,'Nitro Duration')
-							equip(sets.midcast.Debuff.Buffsong,{range="Gjallarhorn"})							
+							equip(sets.midcast.Skillsong,{range="Gjallarhorn"})							
 						else
-							equip(sets.midcast.Debuff,lullaby)
+							equip(sets.midcast.Skillsong,lullaby)
 						end
 					elseif string.find(spell.english,'Horde') then
 						if buffactive['Troubadour'] then
 							windower.add_to_chat(121,'Nitro Duration')
-							equip(sets.midcast.Debuff.Buffsong,{range="Gjallarhorn"})							
+							equip(sets.midcast.Skillsong,{range="Daurdabla"})							
 						else
-							equip(sets.midcast.Debuff,horde)
+							equip(sets.midcast.Skillsong,horde)
 						end
 					else	
 					-- Debuff				

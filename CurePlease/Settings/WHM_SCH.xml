@@ -64,9 +64,9 @@
   <plRefresh_Level>2</plRefresh_Level>
   <plProtect>false</plProtect>
   <plShell>false</plShell>
-  <plBlink>true</plBlink>
+  <plBlink>false</plBlink>
   <plPhalanx>false</plPhalanx>
-  <plStoneskin>true</plStoneskin>
+  <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
@@ -75,7 +75,7 @@
   <plStormSpell_Spell>7</plStormSpell_Spell>
   <plAdloquium>false</plAdloquium>
   <plKlimaform>false</plKlimaform>
-  <plAquaveil>false</plAquaveil>
+  <plAquaveil>true</plAquaveil>
   <plHaste>false</plHaste>
   <plHaste_Level>0</plHaste_Level>
   <plSpikes>false</plSpikes>

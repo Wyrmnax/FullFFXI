@@ -11,6 +11,13 @@
                 <4>Ulmia</4>
                 <5>Arciela</5>
             </abyssea>
+            <boss>
+                <1>Cornelia</1>
+                <2>Monberaux</2>
+                <3>Yoran-Oran (UC)</3>
+                <4>Selh&apos;teus</4>
+                <5>Koru-Moru</5>
+            </boss>
             <default>
                 <1>Valaineral</1>
                 <2>Monberaux</2>
@@ -25,11 +32,11 @@
                 <4>Ulmia</4>
             </geo>
             <gin>
-                <1>Qultada</1>
-                <2>Monberaux</2>
-                <3>Yoran-Oran (UC)</3>
-                <4>Joachim</4>
-                <5>Arciela</5>
+                <1>Yoran-Oran (UC)</1>
+                <2>Cornelia</2>
+                <3>Monberaux</3>
+                <4>Selh&apos;teus</4>
+                <5>Koru-Moru</5>
             </gin>
             <gog>
                 <1>AAHM</1>
@@ -49,8 +56,8 @@
                 <1>Star Sibyl</1>
                 <2>Koru-Moru</2>
                 <3>Cherukiki</3>
-                <4>Kupipi</4>
-                <5>Monberaux</5>
+                <4>Monberaux</4>
+                <5>Yoran-Oran (UC)</5>
             </lilith>
             <mage>
                 <1>Monberaux</1>
@@ -71,21 +78,21 @@
                 <2>Yoran-Oran (UC)</2>
                 <3>Arciela</3>
                 <4>Monberaux</4>
-                <5>Cherukiki</5>
+                <5>Qultada</5>
             </notank>
             <odyssey>
-                <1>AAEV</1>
-                <2>Arciela</2>
-                <3>Selh&apos;teus</3>
-                <4>Karaha-Baruha</4>
-                <5>Qultada</5>
+                <1>Cornelia</1>
+                <2>AAEV</2>
+                <3>Yoran-Oran (UC)</3>
+                <4>Qultada</4>
+                <5>Koru-Moru</5>
             </odyssey>
             <omen>
-                <1>Qultada</1>
-                <2>Monberaux</2>
-                <3>Yoran-Oran (UC)</3>
-                <4>Arciela</4>
-                <5>Cherukiki</5>
+                <1>Cornelia</1>
+                <2>Arciela</2>
+                <3>Monberaux</3>
+                <4>Yoran-Oran (UC)</4>
+                <5>Qultada</5>
             </omen>
             <rask>
                 <1>AAEV</1>
@@ -99,7 +106,7 @@
                 <2>AAEV</2>
                 <3>Monberaux</3>
                 <4>Koru-Moru</4>
-                <5>Selh&apos;teus</5>
+                <5>Yoran-Oran (UC)</5>
             </shinryu>
         </sets>
         <wait>

@@ -28,7 +28,7 @@
             </flags>
             <padding>0</padding>
             <pos>
-                <x>1567</x>
+                <x>1562</x>
                 <y>60</y>
             </pos>
             <text>
@@ -76,8 +76,8 @@
     <khory>
         <box>
             <pos>
-                <x>1562</x>
-                <y>62</y>
+                <x>1548</x>
+                <y>51</y>
             </pos>
         </box>
     </khory>

@@ -17,7 +17,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"black halo\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["BRD"] = {
@@ -107,6 +107,17 @@ return {
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
+        ["DRK"] = {
+            ["Great Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"resolution\" <t>"
+            }
+        },
         ["GEO"] = {
             ["Club"] = {
                 ["hps"] = {
@@ -190,7 +201,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+                ["ws_cmd"] = "/ws \"blade: chi\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -217,7 +228,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Earth Crusher\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["PLD"] = {
@@ -457,7 +468,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             }
         },
         ["WHM"] = {

@@ -3,8 +3,11 @@
     <global>
         <filters>
             <players>
+                <dracopatt>dracopatt</dracopatt>
+                <ducos>ducos</ducos>
                 <qianduoduo>qianduoduo</qianduoduo>
                 <quianduoduo>quianduoduo</quianduoduo>
+                <yaoqianshu>yaoqianshu</yaoqianshu>
                 <youppoppoyup>youppoppoyup</youppoppoyup>
                 <youppoppoyupfindall>youppoppoyupfindall</youppoppoyupfindall>
             </players>

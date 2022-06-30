@@ -228,9 +228,9 @@ sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands="Meg. Gloves +2",
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+    feet="Nyame Sollerets",
     neck="Comm. Charm +2",
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
@@ -309,7 +309,19 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.RAWS["Wildfire"], {
 -- Aftercast
 
 -- Misc Sets
-sets.precast.Fastcast = set_combine(sets.idle.PDT, {head="Athos's Chapeau", lear="Enchntr. Earring +1", rring="Prolix Ring",})
+sets.precast.Fastcast = set_combine(sets.idle.PDT, {
+	body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
+    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+    legs={ name="Rawhide Trousers", augments={'MP+50','"Fast Cast"+5','"Refresh"+1',}},
+    feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
+    neck="Voltsurge Torque",
+    waist="Flume Belt +1",
+    left_ear="Enchntr. Earring +1",
+    right_ear="Etiolation Earring",
+    left_ring="Defending Ring",
+    right_ring="Kishar Ring",
+	back={ name="Camulus's Mantle", augments={'"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})
 

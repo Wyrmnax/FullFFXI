@@ -52,7 +52,8 @@ lua load skillchains
 //lua load autorun
 lua load autows
 lua load shout_ml
-lua load Valkyrie
+//lua load Valkyrie
+lua load react
 
 
 // *** ALLIANCE TARGET KEYS ***

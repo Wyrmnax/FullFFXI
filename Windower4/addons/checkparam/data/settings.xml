@@ -5,10 +5,10 @@
         <BLU>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|fast cast</BLU>
         <BRD>all songs|song effect duration|fast cast|song spellcasting time|damage taken|physical damage taken|magic damage taken|</BRD>
         <BST>pet: double attack|pet: magic attack bonus|pet: damage taken</BST>        
-		<COR>store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|magic accuracy|magic attack bonus|magic damage|damage taken|physical damage taken|magic damage taken</COR>
+		<COR>fast cast|store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</COR>
         <DNC>store tp|double attack|triple attack|quadruple attack</DNC>
-        <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|</DRG>
-        <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage</DRK>
+        <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</DRG>
+        <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|haste</DRK>
         <GEO>pet: regen|pet: damage taken|indicolure effect duration|indi eff dur|fast cast|magic evasion|damage taken|physical damage taken|magic damage taken</GEO>
         <MNK>store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow</MNK>
         <NIN>store tp|double attack|triple attack|quadruple attack|subtle blow|weapon skill damage|magic attack bonus|magic burst damage|magic accuracy|magic damage|fast cast|damage taken|physical damage taken|magic damage taken</NIN>

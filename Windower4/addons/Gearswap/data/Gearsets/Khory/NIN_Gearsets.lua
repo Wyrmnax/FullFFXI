@@ -199,7 +199,7 @@ sets.precast.WS.MAB = {
     left_ear="Crepuscular Earring",
     right_ear="Frimosi Earring",
     left_ring="Ilabrat Ring",
-    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    right_ring="Dingir Ring",
     back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}}
 	}
 -- Mercy Stroke 

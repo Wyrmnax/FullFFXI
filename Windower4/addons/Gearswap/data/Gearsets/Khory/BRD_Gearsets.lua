@@ -47,17 +47,17 @@ if player.name == 'Khory' then
 	}
 	
 	sets.Mordant = { 
-	main="Tauret",
+	main="Carnwenhan",
     sub="Ternion Dagger +1",
 	}
 	
 	sets.Rudra = { 
-	main="Tauret",
+	main="Gleti's Knife",
     sub="Centovente",
 	}
 	
 	sets.AccRudra = { 
-	main="Tauret",
+	main="Gleti's Knife",
     sub="Ternion Dagger +1",
 	}
 	
@@ -93,7 +93,7 @@ if player.name == 'Khory' then
 		-- Standard/idle
 		sets.idle.PDT = {
 			range={ name="Linos", augments={'Accuracy+19','"Store TP"+4','Quadruple Attack +3',}},
-			head={ name="Nyame Helm", augments={'Path: B',}},
+			head="Bunzi's Hat",
 			body={ name="Nyame Mail", augments={'Path: B',}},
 			hands="Bunzi's Gloves",
 			legs="Bunzi's Pants",
@@ -147,32 +147,35 @@ if player.name == 'Khory' then
 	}
 		-- Bard songs
 		sets.midcast.Buffsong = {
+	main="Carnwenhan",
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
     head="Fili Calot +1",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
-	neck="Mnbw. Whistle+1",
+	neck="Mnbw. Whistle +1",
     legs="Inyanga Shalwar +2",
 	feet="Brioso Slippers +3",
-    neck="Incanter's Torque",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		-- Target Skill + 800
 		sets.midcast.Skillsong = {
+	main="Carnwenhan",
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
-    head="Fili Calot +1",
-    body="Fili Hongreline +1",
-    hands="Fili Manchettes +1",
-	neck="Mnbw. Whistle+1",
+    head="Brioso Roundlet +3",
+    body="Brioso Justau. +3",
+    hands="Inyan. Datanas +2",
+	lear="Gersemi Earring",
+	rear="Regal Earring",
+	neck="Mnbw. Whistle +1",
     legs="Inyanga Shalwar +2",
 	feet="Brioso Slippers +3",
-    neck="Incanter's Torque",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.midcast.Debuff = {
+	main="Carnwenhan",
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
-    head="Brioso Roundlet +2",
-    body="Brioso Justau. +2",
+    head="Brioso Roundlet +3",
+    body="Brioso Justau. +3",
     hands="Brioso Cuffs +2",
     legs="Brioso Cannions +2",
     feet="Brioso Slippers +3",
@@ -223,7 +226,7 @@ if player.name == 'Khory' then
     hands="Bunzi's Gloves",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Lissome Necklace",
+    neck="Bard's Charm +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Crep. Earring",
@@ -236,7 +239,7 @@ if player.name == 'Khory' then
 	range={ name="Linos", augments={'Accuracy+18','Weapon skill damage +3%','STR+6 AGI+6',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Bunzi's Gloves",
+    hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Caro Necklace",
@@ -261,7 +264,7 @@ if player.name == 'Khory' then
     right_ear="Sortiarius Earring",
     left_ring="Strendu Ring",
     right_ring="Metamor. Ring +1",
-    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+    back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 	
@@ -272,17 +275,23 @@ if player.name == 'Khory' then
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 		sets.precast.WS['Mercy Stroke'] = set_combine(sets.precast.WS.WSD, {
-		
+	neck="Bard's Charm +2",		
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 		
 		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS.WSD, {
+	neck="Bard's Charm +2",
 	right_ear="Moonshade Earring",
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 		
 		sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
 	right_ear="Moonshade Earring",
+	})
+	
+	sets.precast.WS["Mordant Rime"] = set_combine(sets.precast.WS.WSD, {
+	neck="Bard's Charm +2",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 	
 	-- Sword

@@ -187,12 +187,14 @@ sets.midcast.Enhancing = {
     legs={ name="Futhark Trousers +2", augments={'Enhances "Inspire" effect',}},
     waist="Rumination Sash",
     left_ear="Odnowa Earring +1",
+	right_ear="Mimir Earring",
     left_ring="Defending Ring",
     right_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},}
 	
 sets.midcast.Phalanx = set_combine(sets.midcast.Enhancing,{
-				head="Futhark Bandeau +2"
+				head="Futhark Bandeau +2",
+				hands={ name="Taeon Gloves", augments={'Evasion+24','"Counter"+3','Phalanx +2',}},
 				})
 				
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
@@ -213,6 +215,21 @@ sets.precast.WS = {ammo="Coiste Bodhar",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Sherida Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Niqmaddu Ring",
+    right_ring="Ilabrat Ring",
+    back={ name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	}
+	
+sets.precast.WS.WSD = {ammo="Knobkierrie",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Caro Necklace",
+    waist="Sailfi Belt +1",
+    left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
     right_ring="Ilabrat Ring",
@@ -240,19 +257,7 @@ sets.precast.WS["Shockwave"] = set_combine(sets.precast.WS, {
     right_ring="Kishar Ring",
     back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })				
-sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS, {
-	ammo="Knobkierrie",
-    head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},
-    body={ name="Herculean Vest", augments={'Accuracy+15','Weapon skill damage +5%',}},
-    hands="Meg. Gloves +2",
-    legs="Nyame Flanchard",
-    feet={ name="Lustra. Leggings +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
-    neck="Caro Necklace",
-    waist="Sailfi Belt +1",
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
+sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS.WSD, {
     back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS, {

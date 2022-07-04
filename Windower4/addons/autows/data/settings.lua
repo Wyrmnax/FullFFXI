@@ -201,7 +201,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: chi\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Teki\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -228,7 +228,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["PLD"] = {

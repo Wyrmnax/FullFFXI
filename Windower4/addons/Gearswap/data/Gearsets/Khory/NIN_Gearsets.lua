@@ -252,6 +252,7 @@ sets.precast.WS["Blade: Yu"] = set_combine(sets.precast.WS.MAB, {
 
 sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, { 
 	head="Mpaca's Cap",	
+	neck="Rep. Plat. Medal",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 })
 

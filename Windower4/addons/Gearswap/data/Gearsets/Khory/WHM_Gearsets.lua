@@ -213,6 +213,7 @@ if player.name == 'Khory' then
 		sets.midcast.Aquaveil = {waist="Empahatikos Rope", legs="Shedir Seraweels"}
 		sets.midcast.Blink = set_combine(sets.midcast.Aquaveil)
 		sets.midcast.Reraise = set_combine(sets.midcast.ConserveMP)
+		sets.precast.Protectra = set_combine(sets.midcast.BarElement)
 
 		--Divine Magic
 		sets.midcast.Repose = set_combine(sets.midcast.Recast)

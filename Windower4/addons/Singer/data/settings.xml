@@ -80,5 +80,6 @@
                 <y>51</y>
             </pos>
         </box>
+        <pianissimo>true</pianissimo>
     </khory>
 </settings>

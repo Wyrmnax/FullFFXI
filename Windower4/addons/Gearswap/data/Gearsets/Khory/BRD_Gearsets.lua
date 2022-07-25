@@ -98,7 +98,8 @@ if player.name == 'Khory' then
 			hands="Bunzi's Gloves",
 			legs="Bunzi's Pants",
 			feet={ name="Nyame Sollerets", augments={'Path: B',}},
-			neck="Rep. Plat. Medal",
+			--neck="Rep. Plat. Medal",
+			neck="Bard's Charm +2",
 			waist="Reiki Yotai",
 			left_ear="Etiolation Earring",
 			right_ear="Eabani Earring",
@@ -253,10 +254,10 @@ if player.name == 'Khory' then
 	
 		sets.precast.WS.MAB = {
 	range={ name="Linos", augments={'Accuracy+18','Weapon skill damage +3%','STR+6 AGI+6',}},
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Bunzi's Hat",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Bunzi's Gloves",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    legs="Bunzi's Pants",
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sanctity Necklace",
     waist="Skrymir Cord",
@@ -296,7 +297,11 @@ if player.name == 'Khory' then
 	
 	-- Sword
 	
-		sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, {
+	sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, {
+	right_ear="Moonshade Earring",
+	})
+	
+	sets.precast.WS["Shining Blade"] = set_combine(sets.precast.WS.MAB, {
 	right_ear="Moonshade Earring",
 	})
 		

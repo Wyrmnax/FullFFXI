@@ -444,11 +444,14 @@ function midcast(spell,arg)
 			if player.inventory["Gjallarhorn"] or player.wardrobe["Gjallarhorn"] or player.wardrobe2["Gjallarhorn"] or player.wardrobe3["Gjallarhorn"] or player.wardrobe4["Gjallarhorn"] then
 				-- Buff Songs
 				if spell.target.type == "SELF" then
+					windower.add_to_chat(121,spell.english)
 					if string.find(spell.english,'Scherzo') then
 						equip(sets.midcast.Skillsong,{range="Gjallarhorn", feet="Fili Cothurnes +1"})
 					elseif string.find(spell.english,'Ballad') then
+						windower.add_to_chat(121,'ballad in')
 						equip(sets.midcast.Buffsong,{range="Gjallarhorn"})
 					elseif string.find(spell.english,'Minuet') then
+						windower.add_to_chat(121,'minuet in')
 						equip(sets.midcast.Buffsong,{range="Gjallarhorn", body="Fili Hongreline +1"})
 					elseif string.find(spell.english,'March') then
 						equip(sets.midcast.Buffsong,{range="Gjallarhorn", hands="Fili Manchettes +1"})
@@ -484,7 +487,7 @@ function midcast(spell,arg)
 			-- Not Ghorn
 			else
 			-- BuffSongs
-				if spell.target.type == "SELF" then
+				if spell.target.type == "SELF" then					
 					if string.find(spell.english,'Ballad') then
 						equip(sets.midcast.Buffsong,ballad,{legs="Fili Rhingrave +1"})
 					elseif string.find(spell.english,'March') then

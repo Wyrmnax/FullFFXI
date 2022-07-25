@@ -64,30 +64,32 @@ if player.name == 'Khory' then
 	send_command('wait 3;input /lockstyleset 15')
 		
 		-- Instruments
-		default = {range="Gjallahorn"}
+		defaultinstrument = {range="Gjallarhorn",}
 		-- Buffs
-		ballad = {range="Gjallahorn"}
-		march = {range="Gjallahorn"}
-		minuet = {range="Gjallahorn"}
-		madrigal = {range="Gjallahorn"}
-		minne = {range="Gjallahorn"}
-		etude = {range="Gjallahorn"}
-		carol = {range="Gjallahorn"}
-		mambo  = {range="Gjallahorn"}
-		mazurka = {range="Gjallahorn"}
-		paeon = {range="Gjallahorn"}
-		prelude = {range="Gjallahorn"}
-		scherzo = {range="Gjallahorn"}
-		hymnus = {range="Gjallahorn"}
+		ballad = {range="Gjallarhorn",}
+		march = {range="Gjallarhorn"}
+		minuet = {range="Gjallarhorn"}
+		madrigal = {range="Gjallarhorn"}
+		minne = {range="Gjallarhorn"}
+		etude = {range="Gjallarhorn"}
+		carol = {range="Gjallarhorn"}
+		mambo  = {range="Gjallarhorn"}
+		mazurka = {range="Gjallarhorn"}
+		paeon = {range="Gjallarhorn"}
+		prelude = {range="Gjallarhorn"}
+		scherzo = {range="Gjallarhorn"}
+		hymnus = {range="Gjallarhorn"}
+		honormarch = {range="Marsyas"}
+		dummy = {range="Daurdabla"}
 		--Debuffs
-		elegy = {range="Gjallahorn"}
-		threnody = {range="Gjallahorn"}
+		elegy = {range="Gjallarhorn"}
+		threnody = {range="Gjallarhorn"}
 		lullaby = {range="Daurdabla"}
-		horde = {range="Gjallahorn"}
-		finale = {range="Gjallahorn"}
-		requiem = {range="Gjallahorn"}
-		virelai = {range="Gjallahorn"}
-		nocturne = {range="Gjallahorn"}
+		horde = {range="Daurdabla"}
+		finale = {range="Gjallarhorn"}
+		requiem = {range="Gjallarhorn"}
+		virelai = {range="Gjallarhorn"}
+		nocturne = {range="Gjallarhorn"}
 
 		-- Auto Sets
 		-- Standard/idle
@@ -118,19 +120,21 @@ if player.name == 'Khory' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = { 
-	head="Bunzi's Hat",
+	head={ name="Bunzi's Hat", augments={'Path: A',}},
     body="Inyanga Jubbah +2",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     legs="Aya. Cosciales +2",
     neck="Voltsurge Torque",
     waist="Embla Sash",
     left_ear="Etiolation Earring",
-    right_ear="Enchntr. Earring +1",
-    left_ring="Kishar Ring",
+    right_ear="Enchntr. Earring +1",	
+    left_ring="Defending Ring",
+    right_ring="Kishar Ring",
 	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
-		sets.precast.Fastcast.Song = set_combine(sets.precast.Fastcast, {
-	feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+		sets.precast.Song =set_combine(sets.precast.Fastcast, { 
+	head="Fili Calot +1",    
+    feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 	})
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
 	feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
@@ -164,12 +168,13 @@ if player.name == 'Khory' then
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
     head="Brioso Roundlet +3",
     body="Brioso Justau. +3",
-    hands="Inyan. Datanas +2",
+    hands="Inyan. Dastanas +2",
 	lear="Gersemi Earring",
 	rear="Regal Earring",
 	neck="Mnbw. Whistle +1",
     legs="Inyanga Shalwar +2",
 	feet="Brioso Slippers +3",
+	waist="Harfner's Sash",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.midcast.Debuff = {

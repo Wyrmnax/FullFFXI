@@ -52,7 +52,7 @@ sets.idle.PDT = {
     right_ear="Cessance Earring",
     left_ring="Shneddick Ring",
     right_ring="Defending Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.idle.MDT = { 
 				ammo={ name="Coiste Bodhar", augments={'Path: A',}},
@@ -67,7 +67,7 @@ sets.idle.MDT = {
     right_ear="Cessance Earring",
     left_ring="Shneddick Ring",
     right_ring="Defending Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {})
 				
@@ -86,8 +86,8 @@ ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     left_ear="Sherida Earring",
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    right_ring="Petrov Ring",
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.TP.Ionis = { ammo={ name="Coiste Bodhar", augments={'Path: A',}},
@@ -102,7 +102,7 @@ sets.TP.Ionis = { ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 -- Melee Accuracy TP
 sets.TP.Acc = {	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
@@ -117,7 +117,7 @@ sets.TP.Acc = {	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 -- Ionis Haste +2% Save TP 25+
 sets.TP.Acc.Ionis = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
@@ -131,7 +131,7 @@ sets.TP.Acc.Ionis = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 -- Pet
 sets.precast.HealingBreath = {
@@ -177,7 +177,7 @@ sets.precast.JA["Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.precast.JA["High Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
@@ -191,7 +191,7 @@ sets.precast.JA["High Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.precast.JA["Super Jump"] = {}
 
@@ -207,7 +207,7 @@ sets.precast.JA["Spirit Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: 
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.precast.JA["Soul Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
@@ -221,7 +221,7 @@ sets.precast.JA["Soul Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 -- Weaponskills
 sets.precast.WS = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
@@ -236,7 +236,7 @@ sets.precast.WS = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 	
 sets.precast.WS.WSD = { 
 	ammo="Knobkierrie",
@@ -244,7 +244,7 @@ sets.precast.WS.WSD = {
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Sulev. Leggings +2",
+    feet="Nyame Sollerets",
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
@@ -266,7 +266,7 @@ sets.precast.WS["Stardiver"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS.WSD, {})
 
@@ -282,7 +282,7 @@ sets.precast.WS["Drakesbane"] = {ammo={ name="Coiste Bodhar", augments={'Path: A
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS.WSD, {})
 	

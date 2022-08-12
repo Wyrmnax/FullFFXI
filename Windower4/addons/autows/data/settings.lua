@@ -75,7 +75,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"hot shot\" <t>"
+                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -84,7 +84,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["DRG"] = {
@@ -153,8 +153,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"'Raging Fists'\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["NIN"] = {
@@ -326,8 +327,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"'Tachi: Fudo'\" <t>"
+                ["ws_cmd"] = "/ws \"tachi: jinpu\" <t>"
             }
         },
         ["SCH"] = {

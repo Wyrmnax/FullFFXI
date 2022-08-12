@@ -362,7 +362,9 @@ function midcast(spell,arg)
 		elseif string.find(spell.english,'Lullaby') then
 			equip(sets.midcast.Skillsong,lullaby)							
 		elseif string.find(spell.english,'Horde') then
-			equip(sets.midcast.Skillsong,horde)			
+			equip(sets.midcast.Skillsong,horde)	
+		else
+			equip(sets.midcast.Buffsong,defaultinstrument)
 		end
 	end
 end 

@@ -31,141 +31,143 @@ if player.name == 'Khory' then
 		else
 			set_macro_page(1,13)
 		end
+		
+	send_command('wait 3;input /lockstyleset 7')
 
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
     ammo="Staunch Tathlum +1",
-    head="Loess Barbuta",
-    body="Hiza. Haramaki +2",
-    hands="Sakonji Kote +2",
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Cessance Earring",
+    waist="Ioskeha Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Eabani Earring",
     left_ring="Defending Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Shneddick Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.idle.MDT = {     
 	ammo="Staunch Tathlum +1",
-    head="Loess Barbuta",
-    body="Hiza. Haramaki +2",
-    hands="Sakonji Kote +2",
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Loricate Torque +1",
-    waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Cessance Earring",
+    waist="Ioskeha Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Eabani Earring",
     left_ring="Defending Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Shneddick Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.idle.Evasion = {}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {
-				feet="Danzo Sune-Ate"})
+				})
 				
 sets.idle.Standard = set_combine(sets.idle.PDT, {
-				feet="Danzo Sune-Ate"})
+				})
 -- TP - 49 52
 sets.TP = { 	
-    ammo="Ginsen",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-	body="Ken. Samue +1",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands="Wakido Kote +3",
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.TP.Acc = { 	
-    ammo="Ginsen",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-	body="Ken. Samue +1",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands="Wakido Kote +3",
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 -- TP - 28 18
 sets.TP.Buffed = { 	
-    ammo="Ginsen",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-	body="Ken. Samue +1",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands="Wakido Kote +3",
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Bow TP
 sets.TP.Bow = { 	
-	ammo="Amar Cluster",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands="Wakido Kote +3",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.TP.Bow.Acc = { 	
-	ammo="Amar Cluster",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands="Wakido Kote +3",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.TP.Bow.Buffed = { 	
-	ammo="Amar Cluster",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands="Wakido Kote +3",
+    legs="Mpaca's Hose",
+    feet="Mpaca's Boots",
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+    right_ring="Flamma Ring",
+    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- JA
@@ -173,9 +175,9 @@ sets.precast.JA["Meikyo Shisui"] = {feet="Sakonji Sune-ate"}
 sets.precast.JA["Yaegasumi"] = {}
 
 sets.precast.JA["Meditate"] = set_combine(sets.idle.PDT, {
-				head="Wakido Kabuto",
+				head="Wakido Kabuto +1",
 				hands="Sakonji Kote +2",})
-sets.precast.JA["Hasso"] = {hands="Wakido Kote",legs="Unkai Haidate +2"}
+sets.precast.JA["Hasso"] = {hands="Wakido Kote +3",legs="Unkai Haidate +2"}
 sets.precast.JA["Third Eye"] = {legs="Saotome Haidate"}
 sets.precast.JA["Seigan"] = {head="Unkai Kabuto +2"}
 sets.precast.JA["Blade Bash"] = {hands="Sakonji Kote +2"}
@@ -183,257 +185,114 @@ sets.precast.JA["Sekkanoki"] = {hands="Unkai Kote +2"}
 sets.precast.JA["Sengikori"] = {feet="Unkai Sune-ate +2"}
 sets.precast.JA["Hagakore"] = {feet="Hes. Gaiters"}
 sets.precast.JA["Konzen-ittai"] = {}
-sets.precast.JA["Warding Circle"] = {head="Wakido Kabuto"}
+sets.precast.JA["Warding Circle"] = {head="Wakido Kabuto +1"}
 
 -- Weaponskills
 sets.precast.WS = { 	
-	ammo="Knobkierrie",
+	 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Leg Sweep'] = 	{
-    sub="Utu Grip",
-    ammo="Knobkierrie",
-    head="Volte Cap",
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-    hands={ name="Sakonji Kote +2", augments={'Enhances "Blade Bash" effect',}},
-    legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Eschan Stone",
-    left_ear="Digni. Earring",
-    right_ear="Hermetic Earring",
-    left_ring="Flamma Ring",
-    right_ring="Vertigo Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Thunder Thrust'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-	}
-sets.precast.WS['Raiden Thrust'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-	}	
-sets.precast.WS['Impulse Drive'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Tachi: Jinpu'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-	}
-	
-	sets.precast.WS['Tachi: Ageha'] = set_combine(sets.precast.WS['Leg Sweep'], {})
-	
-sets.precast.WS['Tachi: Fudo'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-	--feet={ name="Valorous Greaves", augments={'Accuracy+24','Weapon skill damage +3%','DEX+1',}},
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-	--waist="Fotia Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Tachi: Shoha'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Tachi: Gekko'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Tachi: Rana'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.WS['Tachi: Kaiten'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
--- Sword 
-sets.precast.WS['Requiescat'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body={ name="Sakonji Domaru +2", augments={'Enhances "Overwhelm" effect',}},
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Sailfi Belt +1",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Karieyh Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
--- Ranged Weaponskill
-sets.precast.RAWS = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.RAWS['Apex Arrow'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.RAWS['Namas Arrow'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
-sets.precast.RAWS.Acc = {}
-sets.precast.RAWS.Acc['Namas Arrow'] = { 	
-	ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
-    neck="Sam. Nodowa +1",
-    waist="Ioskeha Belt +1",
-    left_ear="Odnowa Earring +1",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Flamma Ring",
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
+	
+sets.precast.WS.WSD = {
+	ammo="Knobkierrie",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Sam. Nodowa +1", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Thrud Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+}	
+
+sets.precast.WS.MAB = {
+	ammo="Knobkierrie",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Skrymir Cord",
+    left_ear="Friomisi Earring",
+    right_ear="Sortiarius Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+}
+
+sets.precast.WS["Leg Sweep"] = set_combine(sets.precast.WS.MAB, { 
+	})
+	
+sets.precast.WS['Thunder Thrust'] = set_combine(sets.precast.WS.MAB, {    
+	})
+	
+sets.precast.WS['Raiden Thrust'] = set_combine(sets.precast.WS.MAB, {    
+	})
+	
+sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.WSD, {   
+	head="Mpaca's Cap",
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS['Tachi: Jinpu'] = set_combine(sets.precast.WS.MAB, {    
+	})
+	
+sets.precast.WS['Tachi: Ageha'] = set_combine(sets.precast.WS.MAB, {    
+	})
+	
+sets.precast.WS['Tachi: Fudo'] = set_combine(sets.precast.WS.WSD, {    
+	head="Mpaca's Cap",
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS['Tachi: Shoha'] = set_combine(sets.precast.WS.WSD, {    
+	head="Mpaca's Cap",
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS['Tachi: Gekko'] = set_combine(sets.precast.WS.WSD, {    
+	head="Mpaca's Cap",
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS['Tachi: Rana'] = set_combine(sets.precast.WS, {    	
+	})
+	
+sets.precast.WS['Tachi: Kaiten'] = set_combine(sets.precast.WS.WSD, {    
+	})
+	
+sets.precast.WS['Tachi: Kasha'] = set_combine(sets.precast.WS.WSD, {    
+	head="Mpaca's Cap",
+	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+-- Sword 
+sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {    	
+	})
+-- Ranged Weaponskill
+sets.precast.RAWS = { 
+	}
+sets.precast.RAWS['Apex Arrow'] = { 
+	}
+sets.precast.RAWS['Namas Arrow'] = { 
+	}
+sets.precast.RAWS.Acc = {}
+sets.precast.RAWS.Acc['Namas Arrow'] = {
 	}
 
 -- Misc Sets

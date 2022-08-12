@@ -152,30 +152,34 @@ sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
 -- JA
 sets.precast.JA["Invincible"] = set_combine(sets.Enmity,{legs="Cab. Breeches"})
 sets.precast.JA["Intervene"] = set_combine(sets.precast.JA["Shield Bash"],{
-				hands="Cab. Gauntlets",lear="Knightly Earring"})
+				hands="Cab. Gauntlets +2",lear="Knightly Earring"})
 				
 sets.FullEnmity = set_combine(sets.Enmity,{
 })
 -- MND			
-sets.precast.JA["Chivalry"] = set_combine(sets.idle,{hands="Cab. Gauntlets"},{
+sets.precast.JA["Chivalry"] = set_combine(sets.idle,{hands="Cab. Gauntlets +2"},{
 				head="Yaoyotl Helm", neck="Phalaina Locket",
 				body="Cab. Surcoat", lring="Aquasoul Ring", rring="Aquasoul Ring",
 				legs="Cab. Breeches", feet="Whirlpool Greaves"})
 -- VIT
 sets.precast.JA["Rampart"] = set_combine(sets.Enmity,{
 				head="Cab. Coronet", 
-				body="Cab. Surcoat", hands="Cab. Gauntlets",
+				body="Cab. Surcoat", hands="Cab. Gauntlets +2",
 				waist="Chuq'aba Belt", legs="Cab. Breeches", feet="Whirlpool Greaves"})
 sets.precast.JA["Sentinel"] = set_combine(sets.Enmity,{feet="Cab. Leggings"})
 sets.precast.JA["Holy Circle"] = set_combine(sets.Enmity,{feet="Rev. Leggings +1"})
 sets.precast.JA["Fealty"] = set_combine(sets.Enmity,{body="Cab. Surcoat"})
 sets.precast.JA["Shield Bash"] = set_combine(sets.Enmity,{
-				hands="Cab. Gauntlets",lear="Knightly Earring"})
+				hands="Cab. Gauntlets +2",lear="Knightly Earring"})
 
 -- WS
 sets.precast.WS = set_combine(sets.TP, {
 	ammo="Coiste Bodhar",
 	head="Flam. Zucchetto +2",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+	feet="Nyame Sollerets",
 	neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},    
@@ -187,8 +191,9 @@ sets.precast.WS.WSD = set_combine(sets.TP, {
 	neck="Loricate Torque+1",
 	head="Nyame Helm",
     body="Nyame Mail",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
+	feet="Nyame Sollerets",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
     left_ring="Regal Ring",
@@ -201,9 +206,9 @@ sets.precast.WS.MAB = {
 	ammo="Staunch Tathlum +1",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands={ name="Valorous Mitts", augments={'Accuracy+7','STR+4','Weapon skill damage +9%','Accuracy+19 Attack+19','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet="Sulev. Leggings +2",
+	feet="Nyame Sollerets",
     neck="Moonlight Necklace",
     waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

@@ -84,7 +84,7 @@ if player.Name == 'Khory' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = {
-		main={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+		main="C. Palug Hammer",
 		sub="Sors Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},

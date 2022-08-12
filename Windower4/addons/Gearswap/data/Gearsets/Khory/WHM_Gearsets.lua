@@ -81,7 +81,7 @@ if player.name == 'Khory' then
 		-- Precast
 		-- Magic
 		sets.precast.Fastcast = {
-	main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
+	main="C. Palug Hammer",
     sub="Sors Shield",
     ammo="Impatiens",
     head={ name="Bunzi's Hat", augments={'Path: A',}},

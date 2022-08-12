@@ -39,9 +39,9 @@
   <autoRegen_Minutes>1</autoRegen_Minutes>
   <autoRegen_Spell>3</autoRegen_Spell>
   <autoProtect_Minutes>29</autoProtect_Minutes>
-  <autoProtect_Spell>4</autoProtect_Spell>
+  <autoProtect_Spell>2</autoProtect_Spell>
   <autoShellMinutes>29</autoShellMinutes>
-  <autoShell_Spell>4</autoShell_Spell>
+  <autoShell_Spell>1</autoShell_Spell>
   <autoStorm_Spell>0</autoStorm_Spell>
   <plShellra>false</plShellra>
   <plShellra_Level>5</plShellra_Level>
@@ -61,7 +61,7 @@
   <plReraise>false</plReraise>
   <plReraise_Level>2</plReraise_Level>
   <plRefresh>false</plRefresh>
-  <plRefresh_Level>2</plRefresh_Level>
+  <plRefresh_Level>1</plRefresh_Level>
   <plProtect>false</plProtect>
   <plShell>false</plShell>
   <plBlink>false</plBlink>
@@ -113,11 +113,11 @@
   <EnableLuopanSpells>false</EnableLuopanSpells>
   <GeoWhenEngaged>false</GeoWhenEngaged>
   <specifiedEngageTarget>false</specifiedEngageTarget>
-  <IndiSpell_Spell>17</IndiSpell_Spell>
+  <IndiSpell_Spell>27</IndiSpell_Spell>
   <GeoSpell_Spell>10</GeoSpell_Spell>
-  <EntrustedSpell_Spell>9</EntrustedSpell_Spell>
+  <EntrustedSpell_Spell>7</EntrustedSpell_Spell>
   <LuopanSpell_Target />
-  <EntrustedSpell_Target>Sobchek</EntrustedSpell_Target>
+  <EntrustedSpell_Target>Disastaru</EntrustedSpell_Target>
   <enableSinging>false</enableSinging>
   <recastSongs_Monitored>false</recastSongs_Monitored>
   <SongsOnlyWhenNear>false</SongsOnlyWhenNear>

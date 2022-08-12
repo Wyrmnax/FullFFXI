@@ -37,56 +37,105 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-				head="Malignance Chapeau",
+	ammo="Staunch Tathlum +1",
+    head="Malignance Chapeau",
     body="Malignance Tabard",
-	rring="Defending Ring",
-	legs="Malignance Tights",
-	feet="Malignance Boots",
-    neck="Loricate Torque +1",
-    waist="Flume Belt +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear="Static Earring",
+    right_ear="Eabani Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
                 }
 
 sets.idle.MDT = { 
-				head="Felistris Mask", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Engulfer Cape", waist="Black Belt", legs="Otronif Brais +1", feet="Otronif Boots +1"}
+	ammo="Staunch Tathlum +1",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear="Static Earring",
+    right_ear="Eabani Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 
 sets.idle.Regen = set_combine(sets.idle.PDT, {body="Hes. Cyclas"})
 sets.idle.Evasion = {
-				head="Felistris Mask", neck="Torero Torque", lear="Musical earring", rear="Novia Earring",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Boxer's Mantle", waist="Scouter's Rope",  legs="Otronif Brais +1", feet="Manibozho Boots"}
+				 ammo="Staunch Tathlum +1",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Fotia Belt",
+    left_ear="Static Earring",
+    right_ear="Eabani Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {})
 				
 sets.idle.Standard = set_combine(sets.idle.PDT, {
-				lear="Merman's Earring", rear="Merman's Earring", feet="Hermes' Sandals"})
+				})
 -- TP 
 sets.TP = {     
-	    ammo="Ginsen",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body="Ken. Samue +1",
-    hands="Ken. Tekko",
-    legs="Bhikku Hose +1",
-    feet="Anch. Gaiters +3",
-    neck="Monk's Nodowa",
-    waist="Moonbow Belt",
-    left_ear="Mache Earring",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Mpaca's Cap",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs="Mpaca's Hose",
+    feet="Malignance Boots",
+    neck={ name="Monk's Nodowa", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Epona's Ring",
     back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 -- Accuracy TP
-sets.TP.MidAcc = { ammo="Honed Tathlum",
-				head="Uk'uxkaj Cap", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Thaumas Coat", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Hurch'lan Sash",  legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.TP.MidAcc = { 
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Mpaca's Cap",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs="Mpaca's Hose",
+    feet="Malignance Boots",
+    neck={ name="Monk's Nodowa", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Telos Earring",
+    right_ear="Sherida Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Epona's Ring",
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 -- High Accuracy TP
-sets.TP.HighAcc = { ammo="Honed Tathlum",
-				head="Whirlpool Mask", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Thaumas Coat", hands="Otronif Gloves +1", lring="Rajas Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Hurch'lan Sash",  legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.TP.HighAcc = { 
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Mpaca's Cap",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs="Mpaca's Hose",
+    feet="Malignance Boots",
+    neck={ name="Monk's Nodowa", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Telos Earring",
+    right_ear="Sherida Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Epona's Ring",
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
 
 -- Hybrid PDT/TP
 sets.TP.Hybrid = set_combine(sets.TP, sets.idle.PDT)
@@ -119,18 +168,18 @@ sets.precast.JA["Mantra"] = {feet="Hes. Gaiters"}
 
 -- Weaponskills
 sets.precast.WS = {
-    ammo="Knobkierrie",
-    head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
-    body="Ken. Samue +1",
-    hands="Ken. Tekko",
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+30','"Triple Atk."+3','DEX+1',}},
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Moonshade Earring",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Mpaca's Cap",
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Monk's Nodowa", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Epona's Ring",
     back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	

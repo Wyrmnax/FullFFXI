@@ -159,7 +159,7 @@
     </plugin>
     <plugin>
       <name>Timers</name>
-      <version>3.7.4.39</version>
+      <version>3.7.4.40</version>
       <resources>true</resources>
       <description>
         Tracks ability and spell recast timers, as well as durations on buffs that you cast.

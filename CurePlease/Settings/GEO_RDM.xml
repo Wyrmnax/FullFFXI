@@ -75,7 +75,7 @@
   <plStormSpell_Spell>0</plStormSpell_Spell>
   <plAdloquium>false</plAdloquium>
   <plKlimaform>false</plKlimaform>
-  <plAquaveil>false</plAquaveil>
+  <plAquaveil>true</plAquaveil>
   <plHaste>false</plHaste>
   <plHaste_Level>0</plHaste_Level>
   <plSpikes>false</plSpikes>
@@ -110,14 +110,14 @@
   <EnlightenmentReraise>false</EnlightenmentReraise>
   <EnableGeoSpells>true</EnableGeoSpells>
   <IndiWhenEngaged>false</IndiWhenEngaged>
-  <EnableLuopanSpells>false</EnableLuopanSpells>
+  <EnableLuopanSpells>true</EnableLuopanSpells>
   <GeoWhenEngaged>false</GeoWhenEngaged>
   <specifiedEngageTarget>false</specifiedEngageTarget>
   <IndiSpell_Spell>27</IndiSpell_Spell>
-  <GeoSpell_Spell>10</GeoSpell_Spell>
+  <GeoSpell_Spell>25</GeoSpell_Spell>
   <EntrustedSpell_Spell>7</EntrustedSpell_Spell>
-  <LuopanSpell_Target />
-  <EntrustedSpell_Target>Disastaru</EntrustedSpell_Target>
+  <LuopanSpell_Target>Kujjaku</LuopanSpell_Target>
+  <EntrustedSpell_Target>Cantidosama</EntrustedSpell_Target>
   <enableSinging>false</enableSinging>
   <recastSongs_Monitored>false</recastSongs_Monitored>
   <SongsOnlyWhenNear>false</SongsOnlyWhenNear>
@@ -146,7 +146,7 @@
   <Composure>false</Composure>
   <Convert>false</Convert>
   <Entrust>true</Entrust>
-  <FullCircle>false</FullCircle>
+  <FullCircle>true</FullCircle>
   <Dematerialize>false</Dematerialize>
   <BlazeOfGlory>false</BlazeOfGlory>
   <RadialArcana>false</RadialArcana>
@@ -318,10 +318,10 @@
   <DevotionTargetType>1</DevotionTargetType>
   <DevotionTargetName />
   <DevotionWhenEngaged>false</DevotionWhenEngaged>
-  <autoTarget>false</autoTarget>
+  <autoTarget>true</autoTarget>
   <Hate_SpellType>0</Hate_SpellType>
   <autoTargetSpell>Dia</autoTargetSpell>
-  <autoTarget_Target />
+  <autoTarget_Target>Khory</autoTarget_Target>
   <AssistSpecifiedTarget>false</AssistSpecifiedTarget>
   <DisableTargettingCancel>false</DisableTargettingCancel>
   <TargetRemoval_Delay>3</TargetRemoval_Delay>
@@ -333,11 +333,11 @@
   <enableOutOfPartyHealing>true</enableOutOfPartyHealing>
   <OvercureOnHighPriority>false</OvercureOnHighPriority>
   <EnableAddOn>true</EnableAddOn>
-  <pauseOnZoneBox>false</pauseOnZoneBox>
+  <pauseOnZoneBox>true</pauseOnZoneBox>
   <pauseOnStartBox>false</pauseOnStartBox>
   <pauseOnKO>true</pauseOnKO>
   <MinimiseonStart>false</MinimiseonStart>
-  <autoFollowName />
+  <autoFollowName>Khory</autoFollowName>
   <autoFollowDistance>5</autoFollowDistance>
   <autoFollow_Warning>false</autoFollow_Warning>
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>

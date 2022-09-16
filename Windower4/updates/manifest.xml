@@ -64,7 +64,7 @@
     </plugin>
     <plugin>
       <name>FFXIDB</name>
-      <version>1.0.0.0</version>
+      <version>1.1.0.0</version>
       <description>
         Displays an in-game minimap.
       </description>
@@ -159,7 +159,7 @@
     </plugin>
     <plugin>
       <name>Timers</name>
-      <version>3.7.4.40</version>
+      <version>3.7.4.42</version>
       <resources>true</resources>
       <description>
         Tracks ability and spell recast timers, as well as durations on buffs that you cast.

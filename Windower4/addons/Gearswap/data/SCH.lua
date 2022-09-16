@@ -261,13 +261,13 @@ function get_sets()
     -- Gear that needs to be worn to **actively** enhance a current player buff.
     -- Fill up following with your avaible pieces.
     sets.buff['Rapture'] = {head="Arbatel bonnet +1"}
-    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +1"}
-    sets.buff['Immanence'] = {hands="Arbatel Bracers +1"}
+    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +2"}
+    sets.buff['Immanence'] = {hands="Arbatel Bracers +2"}
     sets.buff['Penury'] = {legs="Arbatel Pants +1"}
     sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +3"}
     sets.buff['Alacrity'] = {feet="Peda. Loafers +3"}
-    sets.buff['Klimaform'] = {feet="Arbatel Loafers +1"}	
+    sets.buff['Klimaform'] = {feet="Arbatel Loafers +2"}	
     -- Ebulience set empy now as we get better damage out of a good Merlinic head
     sets.buff['Ebullience'] = {} -- I left it there still if it becomes needed so the SCH.lua file won't need modification should you want to use this set
    
@@ -380,11 +380,11 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +2",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear="Static Earring",
+    right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -399,11 +399,11 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +2",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear="Static Earring",
+    right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -420,11 +420,11 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +2",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear="Static Earring",
+    right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -446,7 +446,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +2",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
@@ -471,7 +471,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Agwu's Pigaches",
+    feet="Arbatel Loafers +2",
     neck="Argute Stole +2",
     waist="Sacro Cord",
     left_ear="Malignance Earring",

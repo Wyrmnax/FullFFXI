@@ -3,22 +3,35 @@
     <global>
         <filters>
             <players>
+                <ashishas>ashishas</ashishas>
                 <atesk>atesk</atesk>
                 <bugrahan>bugrahan</bugrahan>
+                <carsa>carsa</carsa>
+                <casvelyn>casvelyn</casvelyn>
+                <crisula>crisula</crisula>
+                <delvea>delvea</delvea>
                 <dracopatt>dracopatt</dracopatt>
                 <ducos>ducos</ducos>
+                <liquefier>liquefier</liquefier>
+                <odyseesnm>odyseesnm</odyseesnm>
+                <odyssesnm>odyssesnm</odyssesnm>
+                <ooooosaa>ooooosaa</ooooosaa>
+                <purivantay>purivantay</purivantay>
                 <qianduoduo>qianduoduo</qianduoduo>
                 <quianduoduo>quianduoduo</quianduoduo>
+                <urana>urana</urana>
                 <uuvvuv>uuvvuv</uuvvuv>
                 <yaoqianshu>yaoqianshu</yaoqianshu>
                 <youppoppoyup>youppoppoyup</youppoppoyup>
                 <youppoppoyupfindall>youppoppoyupfindall</youppoppoyupfindall>
+                <zansdiap>zansdiap</zansdiap>
             </players>
             <strings>
                 <020>0-20</020>
                 <500cp5m>500cp/5m</500cp5m>
                 <500jp>500jp</500jp>
                 <500jp5m>500jp/5m</500jp5m>
+                <99999autoin>99999autoin</99999autoin>
                 <cp5m500p>cp5m/500p</cp5m500p>
                 <igeox2fast>igeo x2fast</igeox2fast>
                 <ml02015m>ml0-20/15m</ml02015m>

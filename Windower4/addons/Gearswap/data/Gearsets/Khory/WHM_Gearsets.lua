@@ -46,7 +46,7 @@ if player.name == 'Khory' then
     neck="Loricate Torque +1",
     waist="Embla Sash",
     left_ear="Halasz Earring",
-    right_ear="Hermetic Earring",
+    right_ear="Eabani Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
     back="Alaunus's Cape",

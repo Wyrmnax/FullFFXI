@@ -49,8 +49,8 @@ sets.idle = {
     feet="Rev. Leggings +3",
     neck="Unmoving Collar +1",
     waist="Flume Belt +1",
-    left_ear="Foresti Earring",
-    right_ear="Tuisto Earring",
+    right_ear="Chev. Earring +1",
+    left_ear="Tuisto Earring",
     left_ring="Moonbeam Ring",
     right_ring="Gelatinous Ring +1", 
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
@@ -65,8 +65,8 @@ sets.idle.MDT = {
     feet="Sakpata's Leggings",
     neck="Unmoving Collar +1",
     waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Tuisto Earring",
+    right_ear="Odnowa Earring +1",
+    left_ear="Tuisto Earring",
     left_ring="Moonbeam Ring",
     right_ring="Gelatinous Ring +1", 
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
@@ -75,7 +75,23 @@ sets.idle.MDT = {
 sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
 				})
 -- TP 
-sets.TP = set_combine(sets.idle, { })
+--sets.TP = set_combine(sets.idle, { })
+
+sets.TP= {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs="Sakpata's Cuisses",
+    feet="Sakpata's Leggings",
+    neck="Lissome Necklace",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Telos Earring",
+    right_ear="Cessance Earring",
+    left_ring="Petrov Ring",
+    right_ring="Flamma Ring",
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+	}
 				
 -- Precast 
 -- Enmity Caps at 100 
@@ -85,8 +101,8 @@ sets.Enmity = set_combine(sets.idle,{
 	body="Souv. Cuirass +1",
     neck="Moonlight Necklace",
     waist="Flume Belt +1",
-    left_ear="Odnowa Earring +1",
-    right_ear="Tuisto Earring",
+    right_ear="Odnowa Earring +1",
+    left_ear="Tuisto Earring",
     left_ring="Supershear Ring",
     right_ring="Gelatinous Ring +1",
 	feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
@@ -145,6 +161,7 @@ sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
 	head="Odyssean Helm",
 	hands="Souv. handsch. +1",
+	lear="Mimir Earring",
     legs="Sakpata's Cuisses",
 	feet="Souveran Schuhs +1"
 	})
@@ -182,9 +199,8 @@ sets.precast.WS = set_combine(sets.TP, {
 	feet="Nyame Sollerets",
 	neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},    
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},    
     left_ring={ name="Beithir Ring", augments={'Path: A',}},
-    feet="Sulev. Leggings +2",
 	})
 
 sets.precast.WS.WSD = set_combine(sets.TP, { 
@@ -194,12 +210,10 @@ sets.precast.WS.WSD = set_combine(sets.TP, {
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Thrud Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ear="Thrud Earring",
     left_ring="Regal Ring",
-    right_ring={ name="Beithir Ring", augments={'Path: A',}}, 
-    feet="Sulev. Leggings +2", 
-	
+    right_ring={ name="Beithir Ring", augments={'Path: A',}}, 	
 	})
 	
 sets.precast.WS.MAB = { 
@@ -211,8 +225,8 @@ sets.precast.WS.MAB = {
 	feet="Nyame Sollerets",
     neck="Moonlight Necklace",
     waist="Orpheus's Sash",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ear="Friomisi Earring",
     left_ring={ name="Beithir Ring", augments={'Path: A',}},
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},   
 	}

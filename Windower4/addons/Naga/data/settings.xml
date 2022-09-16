@@ -3,7 +3,7 @@
     <global>
         <end_fight_commands>gs c set AutoBuffMode Off;gs c set AutoWSMode Off</end_fight_commands>
         <naga_x>0</naga_x>
-        <naga_y>-210</naga_y>
+        <naga_y>-220</naga_y>
         <start_fight_commands>gs c set AutoBuffMode On; gs autows on</start_fight_commands>
         <teleport_ring>Dim. Ring (Dem)</teleport_ring>
         <trust1>Koru-Moru</trust1>

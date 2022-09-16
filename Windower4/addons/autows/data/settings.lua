@@ -84,7 +84,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
             }
         },
         ["DRG"] = {
@@ -202,7 +202,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -329,7 +329,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"tachi: jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"tachi: shoha\" <t>"
+            },
+            ["Polearm"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
             }
         },
         ["SCH"] = {
@@ -371,7 +380,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {
@@ -389,7 +398,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Raiden Thrust\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -443,7 +452,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -470,7 +479,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             }
         },
         ["WHM"] = {

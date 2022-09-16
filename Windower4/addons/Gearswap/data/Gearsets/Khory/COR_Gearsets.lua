@@ -161,7 +161,7 @@ sets.precast.JA["Triple Shot"] = {body="Nvrch. Frac +2"}
 sets.precast.JA["Double-Up"] = set_combine(sets.precast.JA["Phantom Roll"])
 
 -- Corsair Rolls
-sets.precast.JA["Phantom Roll"] = {main={ name="Rostam", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +1", rring="Luzaf's Ring"}
+sets.precast.JA["Phantom Roll"] = {main={ name="Rostam", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +2", rring="Luzaf's Ring"}
 sets.precast.JA["Caster's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {legs="Nvrch. Culottes +2"})
 sets.precast.JA["Courser's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {feet="Navarch's Bottes +2"})
 sets.precast.JA["Blitzer's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {head="Navarch's Tricorne +2"})
@@ -179,7 +179,7 @@ sets.precast.QD.ACC = {
     body="Malignance Tabard",
     hands="Nyame Gauntlets",
     legs="Malignance Tights",
-    feet="Chass. Bottes +1",
+    feet="Chass. Bottes +2",
     neck="Comm. Charm +2",
     waist="Eschan Stone",
     left_ear="Lempo Earring",
@@ -195,7 +195,7 @@ sets.precast.QD.MAB = {
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet="Chass. Bottes +1",
+    feet="Chass. Bottes +2",
     neck={ name="Comm. Charm +2", augments={'Path: A',}},    
 	waist="Orpheus's Sash",
     left_ear="Friomisi Earring",

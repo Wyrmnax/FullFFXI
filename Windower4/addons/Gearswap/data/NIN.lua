@@ -234,8 +234,8 @@ function midcast(spell,arg)
 			windower.ffxi.cancel_buff(71)
 		elseif spell.name == "Migawara: Ichi" then
 			equip(sets.midcast.Skill)		
-		elseif windower.wc_match(spell.name,'Katon*|Doton*|Suiton*|Huton*|Hyoton*|Raiton')then
-			if buffactive["Futae"] then				
+		elseif windower.wc_match(spell.name,'Katon*|Doton*|Suiton*|Huton*|Hyoton*|Raiton')then	
+			if buffactive['Futae'] then		
 				equip(sets.midcast.Futae)
 			else
 				equip(sets.midcast.Wheel)

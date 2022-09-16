@@ -111,6 +111,7 @@ function set_Runes(arg1, arg2, arg3)
 	else
 		windower.add_to_chat(2, 'Arg3 is null.')
 	end	
+
 end
 
 function activeBuffs()
@@ -210,6 +211,7 @@ windower.register_event('load', function()
 end)
 
 windower.register_event('prerender', function()
+
 	if enableAddon then
 		local recast = windower.ffxi.get_ability_recasts()
 		activeBuffs()

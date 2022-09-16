@@ -36,10 +36,13 @@ if player.name == 'Khory' then
 sets.idle.PDT = { 
 	ammo="Date Shuriken",
 	head="Nyame Helm",
+	neck="Rep. Plat. Medal",
 	body="Malignance Tabard",
 	hands="Nyame Gauntlets",
 	left_ring="Defending Ring",
 	right_ring="Shneddick Ring",
+	lear="Eabani Earring",
+	rear="Etiolation Earring",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
 	}
@@ -58,12 +61,19 @@ sets.Enmity = {}
 
 -- Precast	
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
-	head={ name="Herculean Helm", augments={'INT+3','"Mag.Atk.Bns."+20','Magic Damage +23','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
-    body={ name="Taeon Tabard", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},	
+	 ammo="Sapience Orb",
+    head={ name="Herculean Helm", augments={'"Fast Cast"+5',}},
+    body={ name="Adhemar Jacket +1", augments={'HP+105','"Fast Cast"+10','Magic dmg. taken -4',}},
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+16','"Fast Cast"+5','Mag. Acc.+7',}},
+    feet={ name="Herculean Boots", augments={'Mag. Acc.+1','"Fast Cast"+5',}},
     neck="Voltsurge Torque",
-	lear="Enchntr. Earring +1",
+    waist="Reiki Yotai",
+    left_ear="Enchntr. Earring +1",
+    right_ear="Telos Earring",
     left_ring="Kishar Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 			})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {
@@ -76,13 +86,13 @@ sets.precast.Recast = set_combine(sets.idle.PDT,{
 -- Midcast
 sets.midcast.Wheel = {
 	ammo="Seeth. Bomblet +1",
-    head="Nyame Helm",
+    head="Mochi. Hatsuburi +3",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Skrymir Cord",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Metamor. Ring +1",
@@ -91,14 +101,14 @@ sets.midcast.Wheel = {
 			}
 			
 sets.midcast.Futae = set_combine(sets.midcast.Wheel,{
-    hands="Hattori Tekko +1"
+    hands="Hattori Tekko +2"
 	})
 			
 sets.midcast.Skill = {
 	ammo="Seeth. Bomblet +1",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands={ name="Herculean Gloves", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Fast Cast"+2','INT+5','"Mag.Atk.Bns."+15',}},
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
@@ -152,7 +162,7 @@ sets.precast.JA["Mikage"] = {}
 sets.precast.JA["Sange"] = {body="Koga Chainmail +2"}
 sets.precast.JA["Yonin"] = {legs="Iga Hakama +2"}
 sets.precast.JA["Innin"] = {head="Iga Zukin +2"}
-sets.precast.JA["Futae"] = {hands="Hattori Tekko +1"}
+sets.precast.JA["Futae"] = {hands="Hattori Tekko +2"}
 
 -- Weaponskills
 sets.precast.WS = { 

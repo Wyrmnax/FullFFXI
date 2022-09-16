@@ -66,7 +66,7 @@
   <plShell>true</plShell>
   <plBlink>false</plBlink>
   <plPhalanx>true</plPhalanx>
-  <plStoneskin>true</plStoneskin>
+  <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
@@ -156,7 +156,6 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
-  <Majesty>false</Majesty>
   <plDebuffEnabled>true</plDebuffEnabled>
   <monitoredDebuffEnabled>true</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
@@ -179,9 +178,6 @@
   <naErase>true</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
-  <PrioritizeDoomRemoval>true</PrioritizeDoomRemoval>
-  <AugmentDoomRemoval>false</AugmentDoomRemoval>
-  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>true</plAgiDown>
   <plAccuracyDown>true</plAccuracyDown>
   <plAddle>true</plAddle>
@@ -314,7 +310,6 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>400</sublimationMP>
-  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

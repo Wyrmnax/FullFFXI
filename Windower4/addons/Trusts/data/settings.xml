@@ -32,8 +32,8 @@
                 <4>Ulmia</4>
             </geo>
             <gin>
-                <1>Yoran-Oran (UC)</1>
-                <2>Cornelia</2>
+				<1>Cornelia</1>
+                <2>Yoran-Oran (UC)</2>                
                 <3>Monberaux</3>
                 <4>Selh&apos;teus</4>
                 <5>Koru-Moru</5>
@@ -60,11 +60,11 @@
                 <5>Yoran-Oran (UC)</5>
             </lilith>
             <mage>
-                <1>Monberaux</1>
-                <2>Star Sibyl</2>
-                <3>Amchuchu</3>
-                <4>King of Hearts</4>
-                <5>Valaineral</5>
+                <1>Star Sibyl</1>
+                <2>Cornelia</2>
+                <3>Valaineral</3>
+                <4>Monberaux</4>
+                <5>Yoran-Oran (UC)</5>
             </mage>
             <mboze>
                 <1>Valaineral</1>
@@ -108,6 +108,13 @@
                 <4>Koru-Moru</4>
                 <5>Yoran-Oran (UC)</5>
             </shinryu>
+            <sortie>
+                <1>Cornelia</1>
+                <2>Yoran-Oran (UC)</2>
+                <3>Star Sibyl</3>
+                <4>Koru-Moru</4>
+                <5>Monberaux</5>
+            </sortie>
         </sets>
         <wait>
             <aftercast>3</aftercast>

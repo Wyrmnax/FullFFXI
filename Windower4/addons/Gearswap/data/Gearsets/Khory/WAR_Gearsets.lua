@@ -60,12 +60,12 @@ sets.idle.DT = {
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",	
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    neck="Rep. Plat. Medal",
     --neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
-    left_ear="Cessance Earring",	
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",	
 	--left_ear="Suppanomimi",
-    right_ear="Schere Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -86,7 +86,7 @@ sets.TP = {
 	--ammo="Coiste Bodhar",
 	head="Volte Cap",
     --head="Flam. Zucchetto +2",
-    body="Sakpata's Plate",
+    body="Boii Lorica +2",
     hands="Sakpata's Gauntlets",
 	legs={ name="Valorous Hose", augments={'Crit. hit damage +2%','MND+13','"Treasure Hunter"+1','Accuracy+1 Attack+1','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
     --legs="Pumm. Cuisses +3",
@@ -94,10 +94,9 @@ sets.TP = {
     neck={ name="Vim Torque +1", augments={'Path: A',}},
 	waist="Chaac Belt",
     --waist="Sailfi Belt +1",
-    left_ear="Telos Earring",
-    right_ear="Schere Earring",
-	--left_ear="Suppanomimi",
-    left_ring="Hetairoi Ring",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Flamma Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
 	}
@@ -105,16 +104,16 @@ sets.TP = {
 					
 sets.TP.DT = set_combine(sets.TP, {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
+    head="Boii Mask +2",
+	body="Boii Lorica +2",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    feet="Tatena. Sune. +1",
+    neck="War. Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
-    right_ear="Schere Earring",
-    left_ring="Hetairoi Ring",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Flamma Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 				})
@@ -165,6 +164,7 @@ sets.precast.JA["Restraint"] = {hands="Ravager's Mufflers +2"}
 sets.precast.JA["Warrior's Charge"] = {legs="Warrior Cuisses +2"}
 sets.precast.JA["Savagery"] = {head="Warrior's Mask +2"}
 sets.precast.JA["Aggressive Aim"] = {body="Warrior's Lorica +2"}
+sets.precast.JA["Blood Rage"] = {body="Boii Lorica +2"}
 
 -- Weaponskills
 sets.precast.WS = {    

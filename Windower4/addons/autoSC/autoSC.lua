@@ -30,11 +30,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 autoSC will attempt to close an open skillchain
 will use the highest tier closing it can, does not care about a specific WS
 ]]
-_addon.version = '0.1.0'
+_addon.version = '1.1.3'
 _addon.name = 'autoSC'
 _addon.author = 'Ekrividus'
 _addon.commands = {'autoskillchain', 'autoSC', 'asc'}
-_addon.lastUpdate = '12/21/2020'
+_addon.lastUpdate = '4/2/2022'
 _addon.windower = '4'
 
 require 'tables'
@@ -50,6 +50,8 @@ chat = require('chat')
 packets = require('packets')
 
 skills = require('skills')
+
+texts = require('texts')
 
 local bags = {[0]='inventory',[8]='wardrobe',[10]='wardrobe2',[11]='wardrobe3',[12]='wardrobe4'}
 local message_ids = T{110,185,187,317,802}
@@ -150,7 +152,6 @@ local last_attempt = 0
 
 local defaults = T{}
 defaults.update_frequency = 0.5
-defaults.display = {text={size=12,font='Consolas'},pos={x=0,y=0},bg={visible=true}}
 defaults.min_ws_window = 2.75
 defaults.max_ws_window = 8
 defaults.min_tp = 1000
@@ -160,17 +161,108 @@ defaults.attempt_delay = 0.5
 -- Newly added settings, may be missing from settings files
 defaults.open_sc = false
 defaults.wait_to_open = true
-defaults.sc_openers = {}
+defaults.sc_openers = T{}
+defaults.ws_filters = T{}
+
 defaults.use_ranged = false
 defaults.prefer_ranged = false
 
+defaults.display = {
+	bg = {
+		visible=true,
+		alpha=64,
+	},
+	font = "Consolas",
+	font_size = 10,
+	padding = 2,
+	pos = {x=100,y=240},
+	stroke = {
+		width = 1,
+	},
+	text = {
+		size=10,
+		font='Consolas'
+	},
+}
+
+
 local settings = T{}
 settings = config.load("data/"..player.name..".xml", defaults)
-settings.open_sc = settings.open_sc or false
-settings.wait_to_open = settings.wait_to_open or true
-settings.sc_openers = settings.sc_openers or {}
-settings.use_ranged = settings.use_ranged or false
-settings.prefer_ranged = settings.prefer_ranged or false
+settings.sc_openers = settings.sc_openers or T{}
+settings.ws_filters = settings.ws_filters or T{}
+
+--[[ UI Display Setup ]]
+local display = texts.new('${addon_title}', settings.display, settings)
+function init_display() 
+	display.addon_title = active and ("--- Auto Skillchains "):text_color(0,255,0) or ("--- Auto Skillchains "):text_color(255,0,0)
+
+	display:appendline('Weapon: ${weapon|None}')
+	display.weapon = title_case(get_weapon_name())
+
+	display:appendline('Open new SC? ${open_sc|No} \n   Using: ${opener|None}')
+	display.open_sc = settings.open_sc and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+	if (settings.sc_openers and settings.sc_openers[player.main_job:lower()] and settings.sc_openers[player.main_job:lower()][get_weapon_name()]) then 
+		display.opener = settings.sc_openers and settings.sc_openers[player.main_job:lower()][get_weapon_name()]
+	else
+		display.opener = "None"
+	end
+
+	display:appendline('Wait for SC effect? ${wait_to_open|No}')
+	display.wait_to_open = settings.wait_to_open and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+
+	display:appendline('Use ranged? ${use_ranged|No} \n   Prefer ranged? ${prefer_ranged|No}')
+	display.use_ranged = settings.use_ranged and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+	display.prefer_ranged = settings.prefer_ranged and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+
+	display:appendline('Close SC Level:\n    1: ${C1|No } 2: ${C2|No } 3: ${C3|No } 4: ${C4|No }')
+	display.C1 = settings.close_levels[1] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C2 = settings.close_levels[2] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C3 = settings.close_levels[3] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C4 = settings.close_levels[4] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+
+	display:appendline('Target SC Level: ${target_sc_level|None}')
+	display.target_sc_level = tostring(settings.target_sc_level)
+	
+	display:appendline('WS Window:\n   Begin: ${min_win|?}  End: ${max_win|?}')
+	display.min_win = tostring(settings.min_ws_window):text_color(0,255,0)
+	display.max_win = tostring(settings.max_ws_window):text_color(255,0,0)
+
+	display:appendline('Filtered WSs:\n   ${ws_filters|None}')
+	display.ws_filters = (settings.ws_filters[get_weapon_name()] ~= nil) and settings.ws_filters[get_weapon_name()]:concat("\n   ") or "None"
+
+	display:show()
+end
+
+function update_display() 
+	display.addon_title = active and ("--- Auto Skillchains "):text_color(0,255,0) or ("--- Auto Skillchains "):text_color(255,0,0)
+
+	display.weapon = title_case(get_weapon_name())
+
+	display.open_sc = settings.open_sc and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+	if (settings.sc_openers and settings.sc_openers[player.main_job:lower()] and settings.sc_openers[player.main_job:lower()][get_weapon_name()]) then 
+		display.opener = settings.sc_openers and settings.sc_openers[player.main_job:lower()][get_weapon_name()]
+	else
+		display.opener = "None"
+	end
+
+	display.wait_to_open = settings.wait_to_open and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+
+	display.use_ranged = settings.use_ranged and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+	display.prefer_ranged = settings.prefer_ranged and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
+
+	display.C1 = settings.close_levels[1] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C2 = settings.close_levels[2] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C3 = settings.close_levels[3] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+	display.C4 = settings.close_levels[4] and tostring("Yes"):text_color(0,255,64) or tostring("No "):text_color(255,0,0)
+
+	display.target_sc_level = tostring(settings.target_sc_level)
+	
+	display.min_win = tostring(settings.min_ws_window):text_color(0,255,0)
+	display.max_win = tostring(settings.max_ws_window):text_color(255,0,0)
+
+	display.ws_filters = settings.ws_filters[get_weapon_name()] and settings.ws_filters[get_weapon_name()]:concat("\n   ") or "None"
+end
+--[[ End UI Display Setup ]]
 
 local function tchelper(first, rest)
     return first:upper()..rest:lower()
@@ -223,7 +315,8 @@ function show_status(which)
 	message('Auto Skillchains: \t\t'..(active and 'On' or 'Off'))
 	if (which == 'display') then
 		message('Display Settings: No display options yet.')
-	elseif (which == 'openers') then
+	-- elseif (which == 'openers') then
+	elseif (which == 'filters') then
 	else
 		for k, v in pairs(settings) do
 			if (k == 'sc_openers') then
@@ -231,6 +324,13 @@ function show_status(which)
 				local job = player.main_job:lower()
 				local opener = tostring(settings.sc_openers[job] and (settings.sc_openers[job][weapon] or 'None for '..job) or 'None for '..weapon:split("_"):concat(" "))
 				message('Opener for '..player.main_job..' using '..title_case(weapon:split("_"):concat(" "))..': '..opener)
+			elseif (k == 'ws_filters') then
+				local weapon = get_weapon_name():lower()
+				if (settings.ws_filters and settings.ws_filters[weapon]) then
+					message('Filters for '..weapon..': '..settings.ws_filters[weapon]:concat(', '))
+				else
+					message('Filters for '..weapon..': None')
+				end
 			elseif (k == 'display') then
 				-- There's no display made (yet?)
 			elseif (type(v) == 'table') then
@@ -320,12 +420,16 @@ function get_weaponskill()
 		for _, v in pairs (last_skillchain.chains) do
 			for _, id in pairs (weapon_skills) do
 				if (id and skills.weapon_skills[id]) then
-					for sc_closer, sc_result in pairs (sc_info[v].closers) do
-						if (T(skills.weapon_skills[id].skillchain):contains(sc_closer)) then
-							if (ranged_weaponskills:contains(skills.weapon_skills[id].en)) then
-								ws_ranged_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
-							else
-								ws_melee_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+					if (settings.ws_filters and settings.ws_filters[get_weapon_name()] and settings.ws_filters[get_weapon_name()]:contains(skills.weapon_skills[id].en)) then
+						debug_message(skills.weapon_skills[id].en.." is filtered out, skipping it.", true)
+					else 
+						for sc_closer, sc_result in pairs (sc_info[v].closers) do
+							if (T(skills.weapon_skills[id].skillchain):contains(sc_closer)) then
+								if (ranged_weaponskills:contains(skills.weapon_skills[id].en)) then
+									ws_ranged_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+								else
+									ws_melee_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+								end
 							end
 						end
 					end
@@ -335,12 +439,16 @@ function get_weaponskill()
 	else
 		for _, id in pairs (weapon_skills) do
 			if (id and id > 0 and skills.weapon_skills[id]) then
-				for sc_closer, sc_result in pairs (sc_info[last_skillchain.english].closers) do
-					if (T(skills.weapon_skills[id].skillchain):contains(sc_closer)) then
-						if (ranged_weaponskills:contains(skills.weapon_skills[id].en)) then
-							ws_ranged_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
-						else
-							ws_melee_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+				if (settings.ws_filters and settings.ws_filters[get_weapon_name()] and settings.ws_filters[get_weapon_name()]:contains(skills.weapon_skills[id].en)) then
+					debug_message(skills.weapon_skills[id].en.." is filtered out, skipping it.", true)
+				else 
+					for sc_closer, sc_result in pairs (sc_info[last_skillchain.english].closers) do
+						if (T(skills.weapon_skills[id].skillchain):contains(sc_closer)) then
+							if (ranged_weaponskills:contains(skills.weapon_skills[id].en)) then
+								ws_ranged_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+							else
+								ws_melee_options:append({name=skills.weapon_skills[id].en,lvl=sc_result[1]})
+							end
 						end
 					end
 				end
@@ -423,7 +531,12 @@ end -- get_weaponskill()
 function use_weaponskill(ws_name) 
 	if (active) then
 		--if (windower.ffxi.get_mob_by_target('t').vitals.hpp < settings.max_hp) then return end
-		windower.send_command('input /ws "'..ws_name..'" <t>')
+		debug_message("Self WS? ".." targets = "..T(res.weapon_skills:with('name', ws_name).targets)[1])
+		if (res.weapon_skills:with('name', ws_name).targets and T(res.weapon_skills:with('name', ws_name).targets)[1] == "Self") then
+			windower.send_command('input /ws "'..ws_name..'" <me>')
+		else
+			windower.send_command('input /ws "'..ws_name..'" <t>')
+		end
 	end
 end
 
@@ -445,7 +558,7 @@ function get_weapon_name()
 	if weapon_name:endswith("+1") or weapon_name:endswith("+2") or weapon_name:endswith("+3") then
 		weapon_name = weapon_name:slice(1, -4)
 	end
-	return weapon_name:lower():split(" "):concat("_")
+	return weapon_name:lower():split("'"):concat(""):split(" "):concat("_")
 end
 
 function open_skillchain()
@@ -460,6 +573,11 @@ function open_skillchain()
 		local ws_name = settings.sc_openers[job][weapon_name]
 		local ws_range = res.weapon_skills:with('name', ws_name).range*2
 		local dist = mob.distance:sqrt()
+
+		-- If this is a self-targeted WS distance doesn't matter
+		if (T(res.weapon_skills:with('name', ws_name).targets)[1] == 'Self') then
+			dist = 1
+		end
 
 		debug_message("Opening SC with "..title_case(ws_name).." Job: "..job:upper().." Weapon: "..title_case(weapon_name))
 		ws_range = ws_range + mob.model_size/2 + windower.ffxi.get_mob_by_id(player.id).model_size/2
@@ -596,7 +714,7 @@ function action_handler(act)
         local delay = ability and ability.delay or 3
         local step = (reson and reson.step or 0)
 
-		sc_effect_duration = (12-step*3) > 3 and (12-step*3) or 3
+		sc_effect_duration = (13-step*3) > 3 and (13-step*3) or 4
 		debug_message("Skillchain effect applied: "..skillchain.." L"..level.." Step: "..step)
 		if (level >= 4 or (level == 3 and last_skillchain and skillchain == last_skillchain.english)) then -- Level 4 and double light/darkness can't be continued
 			skillchain_closed()
@@ -637,6 +755,10 @@ windower.register_event('logout', 'zone change', 'job change', function(...)
 	return
 end)
 
+windower.register_event('load', 'reload', function(...)
+	init_display()
+end)
+
 -- Process incoming commands
 windower.register_event('addon command', function(...)
 	local cmd = 'help'
@@ -650,7 +772,7 @@ windower.register_event('addon command', function(...)
 	elseif (cmd == 'help') then
 		show_help()
 		return
-	elseif (cmd == 'status' or cmd == 'show') then
+	elseif (cmd == 'status') then
 		show_status()
 		return
 	elseif (cmd == 'on') then
@@ -658,11 +780,14 @@ windower.register_event('addon command', function(...)
 		player = windower.ffxi.get_player()
 		active = true
 		last_check_time = os.clock()
-        return
     elseif (cmd == 'off') then
 		message("Stopping")
         active = false
+	elseif (cmd == 'hide') then
+		display:hide()
 		return
+	elseif (cmd == 'show') then
+		display:show()
 	elseif (cmd == 'open') then
 		settings.open_sc = not settings.open_sc
 		message("Will "..(settings.open_sc and "" or "not ").."open new SCs")
@@ -686,7 +811,7 @@ windower.register_event('addon command', function(...)
 			ws_name = "Chant du Cygne"
 		end
 		if (res.weapon_skills:with('name', ws_name) == nil) then
-			message("No weaponskill with name: "..ws_name.." found. SC Opener not added.")
+			message("No weaponskill with name: "..ws_name.." found. SC opener not added.")
 			return
 		end
 
@@ -694,6 +819,35 @@ windower.register_event('addon command', function(...)
 		settings.sc_openers[job][weapon_name] = ws_name
 		message("SC Opener for "..tostring(job:upper()).." using "..title_case(weapon_name):split("_"):concat(" ").." set to "..tostring(settings.sc_openers[job][weapon_name]))
 		settings:save('all')
+	elseif (cmd == 'filter' or cmd == 'filt') then
+		if (#arg < 2) then
+			message("Usage: autoSC filter <weaponskill>\nAdds/Removes named weaponskill from filter list.")
+			return
+		end
+
+		local weapon = get_weapon_name()
+		settings.ws_filters[weapon] = settings.ws_filters[weapon] or {}
+
+		local ws_name = title_case(T(arg):slice(2, #arg):concat(" "))
+		
+		if (ws_name == "Chant Du Cygne") then
+			ws_name = "Chant du Cygne"
+		end
+		if (res.weapon_skills:with('name', ws_name) == nil) then
+			message("No weaponskill with name: "..ws_name.." found. WS filter not added/removed.")
+			return
+		end
+
+		if (settings.ws_filters and settings.ws_filters[weapon] and T(settings.ws_filters[weapon]):contains(ws_name)) then
+			message("WS "..ws_name.." removed from filtered WSs for "..title_case(weapon):split("_"):concat(" ")..".")
+			settings.ws_filters[weapon]:delete(ws_name)
+		else
+			message("WS "..ws_name.." added to filtered WSs for "..title_case(weapon):split("_"):concat(" ")..".")
+			T(settings.ws_filters[weapon]):append(ws_name) 
+		end
+
+		settings:save('all')
+		update_display()
 	elseif (cmd == 'tp') then
 		if (#arg < 2) then
 			message("Usage: autoSC TP #### where #### is a number between 1000~3000")
@@ -707,7 +861,6 @@ windower.register_event('addon command', function(...)
 			return
 		end
 		settings:save('all')
-		return
 	elseif (cmd == 'minwin') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 0) then
@@ -716,7 +869,6 @@ windower.register_event('addon command', function(...)
 		end
 		settings.min_ws_window = n
 		settings:save('all')
-		return
 	elseif (cmd == 'maxwin') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 0) then
@@ -725,7 +877,6 @@ windower.register_event('addon command', function(...)
 		end
 		settings.max_ws_window = n
 		settings:save('all')
-		return
 	elseif (cmd == 'retry') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 0) then
@@ -734,7 +885,6 @@ windower.register_event('addon command', function(...)
 		end
 		settings.attempt_delay = n
 		settings:save('all')
-		return
 	elseif (cmd == 'frequency' or cmd == 'f') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 0) then
@@ -743,7 +893,6 @@ windower.register_event('addon command', function(...)
 		end
 		settings.update_frequency = n
 		settings:save('all')
-		return
 	elseif (cmd == 'level' or cmd == 'l') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 0) then
@@ -752,7 +901,6 @@ windower.register_event('addon command', function(...)
 		end
 		settings.target_sc_level = n
 		settings:save('all')
-		return
 	elseif (cmd == 'close' or cmd == 'c') then
 		local n = tonumber(arg[2])
 		if (n == nil or n < 1 or n > 4) then
@@ -762,17 +910,14 @@ windower.register_event('addon command', function(...)
 		settings.close_levels[n] = not settings.close_levels[n]
 		settings:save('all')
 		message("Will "..(settings.close_levels[n] and "now " or "not ").."close skillchains of level "..n)
-		return
 	elseif (cmd == 'ranged' or cmd == 'r') then
 		settings.use_ranged = not settings.use_ranged
 		message("Ranged WS "..(settings.use_ranged and "On" or "Off"))
 		settings:save('all')
-		return
 	elseif (cmd == 'preferranged' or cmd == 'pr') then
 		settings.prefer_ranged = not settings.prefer_ranged
 		message("Prefer Ranged WS "..(settings.prefer_ranged and "On" or "Off"))
 		settings:save('all')
-		return
 	elseif (cmd == 'reload') then
 		player = windower.ffxi.get_player()
 		settings = config.load("data/"..player.name..".xml", defaults)
@@ -781,4 +926,5 @@ windower.register_event('addon command', function(...)
 		message("Will"..(debug and ' ' or ' not ').."show debug information")
 		return
     end
+	update_display()
 end) -- Addon Command

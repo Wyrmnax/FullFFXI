@@ -41,25 +41,22 @@
 
             </default>
             <magic>
-                <slot01>auroral drape</slot01>
-                <slot02>spectral floe</slot02>
-                <slot03>cocoon</slot03>
-                <slot04>cursed sphere</slot04>
-                <slot05>magic fruit</slot05>
-                <slot06>dream flower</slot06>
-                <slot07>subduction</slot07>
-                <slot08>battery charge</slot08>
-                <slot09>erratic flutter</slot09>
-                <slot10>cannonball</slot10>
-                <slot11>barrier tusk</slot11>
-                <slot12>barbed crescent</slot12>
-                <slot13>tenebral crush</slot13>
-                <slot14>delta thrust</slot14>
-                <slot15>occultation</slot15>
-                <slot16>anvil lightning</slot16>
-                <slot17>reactor cool</slot17>
-                <slot18>entomb</slot18>
-                <slot19>sound blast</slot19>
+                <slot01>cannonball</slot01>
+                <slot02>barbed crescent</slot02>
+                <slot03>spectral floe</slot03>
+                <slot04>searing tempest</slot04>
+                <slot05>entomb</slot05>
+                <slot06>erratic flutter</slot06>
+                <slot07>sound blast</slot07>
+                <slot08>plenilune embrace</slot08>
+                <slot10>dream flower</slot10>
+                <slot11>occultation</slot11>
+                <slot12>auroral drape</slot12>
+                <slot15>cursed sphere</slot15>
+                <slot16>tenebral crush</slot16>
+                <slot17>subduction</slot17>
+                <slot18>delta thrust</slot18>
+                <slot19>anvil lightning</slot19>
             </magic>
             <nyzul>
                 <slot01>sinker drill</slot01>
@@ -83,6 +80,20 @@
                 <slot19>empty thrash</slot19>
                 <slot20>magic fruit</slot20>
             </nyzul>
+            <sortiemagic>
+                <slot01>searing tempest</slot01>
+                <slot02>spectral floe</slot02>
+                <slot03>silent storm</slot03>
+                <slot04>entomb</slot04>
+                <slot05>anvil lightning</slot05>
+                <slot06>scouring spate</slot06>
+                <slot07>blinding fulgor</slot07>
+                <slot08>tenebral crush</slot08>
+                <slot09>dream flower</slot09>
+                <slot10>blazing bound</slot10>
+                <slot11>delta thrust</slot11>
+                <slot12>restoral</slot12>
+            </sortiemagic>
             <tank>
                 <slot01>healing breeze</slot01>
                 <slot02>sheep song</slot02>

@@ -17,7 +17,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"black halo\" <t>"
             }
         },
         ["BRD"] = {
@@ -55,7 +55,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["COR"] = {
@@ -66,7 +66,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -84,7 +84,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DRG"] = {
@@ -166,7 +166,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -175,7 +175,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -184,7 +184,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -193,7 +193,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Raiden Thrust\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Katana"] = {
                 ["hps"] = {
@@ -202,7 +202,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -211,7 +211,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Koki\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -220,7 +220,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -229,7 +229,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
             }
         },
         ["PLD"] = {
@@ -329,7 +329,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"tachi: shoha\" <t>"
+                ["ws_cmd"] = "/ws \"tachI: Fudo\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -338,7 +338,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
+                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
             }
         },
         ["SCH"] = {
@@ -380,7 +380,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {
@@ -398,7 +398,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Raiden Thrust\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -407,7 +407,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -452,7 +452,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -479,7 +479,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             }
         },
         ["WHM"] = {

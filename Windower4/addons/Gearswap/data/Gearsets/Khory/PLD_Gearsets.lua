@@ -117,9 +117,10 @@ sets.precast.Fastcast = {
     head="Sakpata's Helm",
     body="Sacro Breastplate",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
+    feet="Carmine Greaves +1",
     neck="Voltsurge Torque",
 	lear="Enchntr. Earring +1",
+	right_ear="Odnowa Earring +1",
     left_ring="Kishar Ring",
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }
@@ -135,10 +136,12 @@ sets.precast.Cure = set_combine(sets.precast.Fastcast,{
 sets.midcast.SIRD = set_combine(sets.Enmity,{
 	ammo="Staunch Tathlum +1",
     hands="Regal Gauntlets",
+	body="Chev. Cuirass +2",
     legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
     feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
     neck="Moonlight Necklace",
 	lear="Knightly Earring",
+	lring="Defending Ring",
     waist="Audumbla Sash",
 })
 
@@ -153,7 +156,6 @@ sets.midcast.EnhancingMagic = set_combine(sets.midcast.SIRD,{
 sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 	head="Sakpata's Helm",	
 	hands="Regal Gauntlets",
-    body="Sacro Breastplate",
 	left_ring="Defending Ring",
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	})

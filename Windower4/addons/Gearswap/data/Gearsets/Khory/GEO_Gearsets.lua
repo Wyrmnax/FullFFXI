@@ -61,7 +61,7 @@ if player.Name == 'Khory' then
 		sets.idle.Standard = set_combine(sets.idle.PDT, {})
 		sets.idle.Standard.Pet = set_combine(sets.idle.PDT, {
 		main="Idris",
-		head="Azimuth Hood +1",
+		head="Azimuth Hood +2",
 		hands="Geo. Mitaines +3",
 		legs="Nyame Flanchard",
 		waist="Isa Belt",

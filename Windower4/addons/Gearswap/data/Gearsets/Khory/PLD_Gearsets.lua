@@ -140,8 +140,8 @@ sets.midcast.SIRD = set_combine(sets.Enmity,{
     legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
     feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
     neck="Moonlight Necklace",
-	lear="Knightly Earring",
-	lring="Defending Ring",
+	left_ear="Tuisto Earring",
+	lring="Supershear Ring",
     waist="Audumbla Sash",
 })
 
@@ -165,7 +165,8 @@ sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
 	hands="Souv. handsch. +1",
 	lear="Mimir Earring",
     legs="Sakpata's Cuisses",
-	feet="Souveran Schuhs +1"
+	feet="Souveran Schuhs +1",
+	back="Weard Mantle"
 	})
 
 -- JA

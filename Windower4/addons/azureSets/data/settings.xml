@@ -95,17 +95,17 @@
                 <slot12>restoral</slot12>
             </sortiemagic>
             <tank>
-                <slot01>healing breeze</slot01>
-                <slot02>sheep song</slot02>
-                <slot03>grand slam</slot03>
-                <slot04>terror touch</slot04>
+                <slot01>wild oats</slot01>
+                <slot02>jettatura</slot02>
+                <slot03>geist wall</slot03>
+                <slot04>grand slam</slot04>
                 <slot05>cocoon</slot05>
-                <slot06>jettatura</slot06>
-                <slot07>geist wall</slot07>
-                <slot08>wild carrot</slot08>
-                <slot09>pollen</slot09>
-                <slot10>wild oats</slot10>
-                <slot11>blank gaze</slot11>
+                <slot06>pollen</slot06>
+                <slot07>terror touch</slot07>
+                <slot08>healing breeze</slot08>
+                <slot09>blank gaze</slot09>
+                <slot10>wild carrot</slot10>
+                <slot11>frightful roar</slot11>
             </tank>
             <vw1>
                 <slot01>Firespit</slot01>

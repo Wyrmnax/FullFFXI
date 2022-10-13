@@ -93,8 +93,8 @@ sets.Enmity = set_combine(sets.idle.PDT, {
 	body="Emet Harness +1",
     hands="Kurys Gloves",
 	waist="Audumbla Sash",
-    legs="Eri. Leg Guards +1",
-	feet="Erilaz Greaves +1",
+    legs="Eri. Leg Guards +2",
+	feet="Erilaz Greaves +2",
     neck="Unmoving Collar +1",
 	rring="Supershear ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
@@ -102,33 +102,33 @@ sets.Enmity = set_combine(sets.idle.PDT, {
 
 -- TP set
 sets.TP = {
-	--ammo="Staunch Tathlum +1",
-    --head="Nyame helm",
-    --body="Ayanmo Corazza +2",
-    --hands="Turms Mittens +1",
-    --legs="Meg. Chausses +2",
-    --feet="Nyame Sollerets",
-    --neck={ name="Futhark Torque +1", augments={'Path: A',}},
-    --waist="Sailfi Belt +1",
-    --left_ear="Odnowa Earring +1",
-    --right_ear="Tuisto Earring",
-    --left_ring="Defending Ring",
-    --right_ring="Moonbeam Ring",
-    --back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
-
-    ammo="Staunch Tathlum +1",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Ayanmo Corazza +2",
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-    legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Lissome Necklace",
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Telos Earring",
-    left_ring="Niqmaddu Ring",
+	ammo="Staunch Tathlum +1",
+    head="Nyame helm",
+    body="Nyame Mail",
+    hands="Turms Mittens +1",
+    legs="Eri. Leg Guards +2",
+    feet="Erilaz Greaves +2",
+    neck={ name="Futhark Torque +1", augments={'Path: A',}},
+    waist="Sailfi Belt +1",
+    left_ear="Odnowa Earring +1",
+    right_ear="Tuisto Earring",
+    left_ring="Defending Ring",
     right_ring="Moonbeam Ring",
-    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+
+    --ammo="Staunch Tathlum +1",
+    --head={ name="Nyame Helm", augments={'Path: B',}},
+    --body="Ayanmo Corazza +2",
+    --hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    --legs={ name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
+    --feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    --neck="Lissome Necklace",
+    --waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    --left_ear="Sherida Earring",
+    --right_ear="Telos Earring",
+    --left_ring="Niqmaddu Ring",
+    --right_ring="Moonbeam Ring",
+    --back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 			
 sets.TP.Acc = { }
@@ -158,11 +158,11 @@ sets.precast.JA["Valiance"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Vallation"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
 sets.precast.JA["Pflug"] = {feet="Runiest Boots"}
-sets.precast.JA["Battuta"] = {head="Futhark Bandeau +2"}
+sets.precast.JA["Battuta"] = {head="Futhark Bandeau +3"}
 sets.precast.JA["Sleight of Sword"] = {hands="Futhark Mitons"}
 sets.precast.JA["Inspiration"] = {legs="Futhark Trousers"}
 sets.precast.JA["Rayke"] = {feet="Futhark Boots"}
-sets.precast.JA["Vivacious Pulse"] = {head="Erilaz galea +1"}
+sets.precast.JA["Vivacious Pulse"] = {head="Erilaz galea +2"}
 
 -- Magic 
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
@@ -178,7 +178,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 	})
 	
 sets.midcast.Enhancing = {
-    head="Erilaz Galea +1",
+    head="Erilaz galea +2",
 	body="Emet Harness +1",
     hands="Regal Gauntlets",
     legs={ name="Futhark Trousers +2", augments={'Enhances "Inspire" effect',}},
@@ -189,10 +189,21 @@ sets.midcast.Enhancing = {
     right_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},}
 	
-sets.midcast.Phalanx = set_combine(sets.midcast.Enhancing,{
-				head="Futhark Bandeau +2",
-				hands={ name="Taeon Gloves", augments={'Evasion+24','"Counter"+3','Phalanx +2',}},
-				})
+sets.midcast.Phalanx = {
+	ammo="Staunch Tathlum +1",
+    head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
+    body="Emet Harness +1",
+    hands={ name="Taeon Gloves", augments={'Evasion+24','"Counter"+3','Phalanx +3',}},
+    legs={ name="Taeon Tights", augments={'Phalanx +3',}},
+    feet={ name="Taeon Boots", augments={'Phalanx +3',}},
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Flume Belt +1",
+    left_ear="Tuisto Earring",
+    right_ear="Mimir Earring",
+    left_ring="Defending Ring",
+    right_ring="Moonbeam Ring",
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+	}
 				
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
 				head="Rune. Bandeau +1"

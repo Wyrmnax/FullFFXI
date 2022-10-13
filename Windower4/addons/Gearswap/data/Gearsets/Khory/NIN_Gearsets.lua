@@ -199,15 +199,15 @@ sets.precast.WS.WSD = {
 	
 sets.precast.WS.MAB = { 
 	ammo="Seeth. Bomblet +1",
-	head="Nyame Helm",
+	head="Mochi. Hatsuburi +3",
     body="Nyame Mail", 
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
-    neck="Caro Necklace",
+    neck="Fotia Gorget",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Crepuscular Earring",
-    right_ear="Frimosi Earring",
+    right_ear="Friomosi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
     back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}}

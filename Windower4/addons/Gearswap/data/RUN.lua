@@ -329,12 +329,6 @@ function slot_lock()
     end
 end
 
-windower.register_event('hp change', function(hp1,hp2)
-	if hp1<1000 then 
-		windower.send_command('Vivacious Pulse')
-	end
-end)
-
 function weapon_check()
 	if player.equipment.main == 'empty' then
 		windower.add_to_chat(121,"No Weapon Equipped")

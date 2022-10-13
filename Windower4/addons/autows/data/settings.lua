@@ -66,7 +66,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"wildfire\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -75,7 +75,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -329,7 +329,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"tachI: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+            },
+            ["Hand-to-Hand"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -338,7 +347,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {

@@ -25,6 +25,12 @@
                 <4>Arciela</4>
                 <5>Cornelia</5>
             </default>
+            <dyna>
+                <1>Cornelia</1>
+                <2>Sakura</2>
+                <3>Star Sibyl</3>
+                <4>Moogle</4>
+            </dyna>
             <geo>
                 <1>Monberaux</1>
                 <2>Arciela</2>
@@ -32,8 +38,8 @@
                 <4>Ulmia</4>
             </geo>
             <gin>
-				<1>Cornelia</1>
-                <2>Yoran-Oran (UC)</2>                
+                <1>Cornelia</1>
+                <2>Yoran-Oran (UC)</2>
                 <3>Monberaux</3>
                 <4>Selh&apos;teus</4>
                 <5>Koru-Moru</5>

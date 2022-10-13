@@ -33,6 +33,22 @@ if player.name == 'Khory' then
 		end
 		
 	send_command('wait 3;input /lockstyleset 7')
+	
+	sets.mainweapon = {}
+	sets.mainweapon.Masamune = {
+	main="Masamune",
+	sub="Utu Grip",
+	}
+	
+	sets.mainweapon.Doji = {
+	main="Dojikiri Yasutsuna",
+	sub="Utu Grip",
+	}
+ 
+	sets.mainweapon.ShiningOne = {
+	main="Shining One",
+	sub="Utu Grip",
+	}
 
 -- Auto Sets
 -- Standard/idle
@@ -91,37 +107,6 @@ sets.TP = {
     right_ring="Petrov Ring",
     back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
-sets.TP.Acc = { 	
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
-    hands="Wakido Kote +3",
-    legs="Mpaca's Hose",
-    feet="Mpaca's Boots",
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
--- TP - 28 18
-sets.TP.Buffed = { 	
-    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
-    hands="Wakido Kote +3",
-    legs="Mpaca's Hose",
-    feet="Mpaca's Boots",
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
 
 -- Bow TP
 sets.TP.Bow = { 	
@@ -139,37 +124,7 @@ sets.TP.Bow = {
     right_ring="Flamma Ring",
     back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
-sets.TP.Bow.Acc = { 	
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
-    hands="Wakido Kote +3",
-    legs="Mpaca's Hose",
-    feet="Mpaca's Boots",
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-sets.TP.Bow.Buffed = { 	
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
-    hands="Wakido Kote +3",
-    legs="Mpaca's Hose",
-    feet="Mpaca's Boots",
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
+	
 -- JA
 sets.precast.JA["Meikyo Shisui"] = {feet="Sakonji Sune-ate"}
 sets.precast.JA["Yaegasumi"] = {}

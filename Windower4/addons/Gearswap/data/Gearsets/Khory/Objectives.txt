@@ -1,57 +1,19 @@
-DYNAMIS
-Sandy (Feet) - COR (Shard x1, void x3) , WAR (Shard x4, Void x3), SCH (Shard x5, Void x3), SMN (Shard x5, void x3), volte beret, gloves, gaiters, brais, doublet, RUN (Shard X5, Void X5)
-Bastok (Hands) - NECK STUFF, SMN(Shard x5, void X3), COR (Shard x3, void x3), SCH (Shard x5, Void x3), WAR (Shard x3, void x3)
-Windy (Head) - WAR (Shard x3, void X3), RUN (Shard x5, Void x3), SCH (Shard x5, Void x3), COR (Shard X5, Void X5), Volte Haubert, Salade, Brayettes, Sollerets, Moufles
-Jeuno (Legs) - RUN( Shard X5, Void X3), SCH (Shard x5, Void x3), Volte Bracers, Hose, Boots, Jupon
++2 empy missing
 
-Bodies SMN (Shard x5, Void x3)
+COR
+Body*
 
+GEO
+Feet*
 
-FFXI Short term goals
-- Ternion Dagger +1
-- Lustratio Leggings +1 (Tenodera)
-- Lustratio Subligar +1 (Naphula)
+PLD
+Legs*
+Feet*
 
-Medium term
-- 1k domain points - Hauksbok Bullet	
-- Malignance gloves
-- Daybreak (SCH)
-- Leaafy healer trust
-- Perimede Cape (Maju - Reisenjima)
-- Aurgelmir Orb (+1) - 5m / 72m  
+BLU
+All*
 
-Long term
-
-Valka
-- Gendewitha gages +1 
-- Incantor Stone
-- Kishar Ring ( Omen )
-- Prolix Ring
-- Regal Pumps +1 (Valkurm Imperator UNM)
-- Ayanmo Cosciales +2
-- Embla Sash ( DI )
-- Impatiens
-
-- Ebers Bliaut
-- Mendicant earring
-- Glorious Earring
-- Pemphredo Tathlum
-- Kayakus Head
-- Mephitias ring +1
-
-/drg - tp/hit = 87 - 800 dmg/hit
-11.49 (11.5 hits/ws
-46k ws
-
-/sam tp/hit = 96 - 800 d.g/hit
-10.42 his/ws
-43k ws
-
-10000 hits
-= 8m damage
-
-/drg = 870.32 wss = 40.034 m  == 48.034m
-
-/sam = 959.69 Wss = 41.266 m = 49.266m
+PUP
+Head*
 
 

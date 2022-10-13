@@ -54,6 +54,7 @@ lua load autows
 lua load shout_ml
 lua load Valkyrie
 lua load react
+lua load partybuffs
 
 
 // *** ALLIANCE TARGET KEYS ***

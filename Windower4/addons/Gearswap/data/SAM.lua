@@ -25,9 +25,11 @@ function get_sets()
 	-- STP Bow does not go here, only bows for Namas/Apex that us sets.TP.Bow, have to test the other bow.
 	Bow = T{"Yoichinoyumi", "Speleogen Bow"}
 	Ammo = {ammo="Tulfaire Arrow"}
-	Mode = 0
 	PDT = 0
 	MDT = 0
+	Mode = 'Masamune'
+	ModeWeapon = sets.mainweapon.Masamune
+	windower.send_command('autows use Tachi: Fudo')
 	ShadowType = 'None'
 end -- End gear sets
 
@@ -35,6 +37,7 @@ end -- End gear sets
 function file_unload()
 	clear_binds()
 end
+ 
 
 -- Rules
 function self_command(command)
@@ -124,6 +127,46 @@ function self_command(command)
 			-- if i dont have twilight on equip it
 			equip({head="Twilight Helm",body="Twilight Mail"})
 		end
+	elseif command == 'Mode' then
+		if Mode == 'Masamune' then
+			Mode = 'Doji'
+			windower.send_command('autows use Tachi: Jinpu')
+			ModeWeapon = sets.mainweapon.Doji			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Doji - Jinpu')
+		elseif Mode == 'Doji' then
+			Mode = 'Polearm'
+			windower.send_command('autows use Impulse Drive')
+			ModeWeapon = sets.mainweapon.ShiningOne			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Polearm')
+		elseif Mode == 'Polearm' then
+			Mode = 'Masamune'
+			windower.send_command('autows use Tachi: Fudo')
+			ModeWeapon = sets.mainweapon.Masamune
+				previous_set()
+			windower.add_to_chat(121,'Mode Masamune - Fudo')
+		end	
+	elseif command == 'ModeX' then
+		if Mode == 'Masamune' then
+			Mode = 'Polearm'
+			windower.send_command('autows use Impulse Drive')
+			ModeWeapon = sets.mainweapon.ShiningOne			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Polearm')
+		elseif Mode == 'Polearm' then
+			Mode = 'Doji'
+			windower.send_command('autows use Tachi: Jinpu')
+			ModeWeapon = sets.mainweapon.Doji			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Doji - Jinpu')
+		elseif Mode == 'Doji' then
+			Mode = 'Masamune'
+			windower.send_command('autows use Tachi: Fudo')
+			ModeWeapon = sets.mainweapon.Masamune
+				previous_set()
+			windower.add_to_chat(121,'Mode Masamune - Fudo')
+		end	
 	end
 end
 	
@@ -308,29 +351,7 @@ function aftercast(spell,arg)
 end
 
 function previous_set(spell)
-	if player.equipment.range == "Yoichinoyumi" then
-		if Mode == 0 then
-			equip(sets.TP.Bow)
-			--windower.add_to_chat(121,'Bow TP Set')
-		elseif Mode == 1 then 
-			equip(sets.TP.Bow.Acc)
-			--windower.add_to_chat(121,'Bow Acc Set')
-		elseif Mode == 2 then 
-			equip(sets.TP.Bow.Buffed)
-			--windower.add_to_chat(121,'Buffed Bow Acc Set')
-		end		
-	else
-		if Mode == 0 then
-			equip(sets.TP)
-			--windower.add_to_chat(121,'TP Set')
-		elseif Mode == 1 then 
-			equip(sets.TP.Acc)
-			--windower.add_to_chat(121,'Acc Set')
-		elseif Mode == 2 then 
-			equip(sets.TP.Buffed)
-			--windower.add_to_chat(121,'Buffed Set')
-		end
-	end
+	equip(ModeWeapon, sets.TP)
 end
 
 function slot_lock()

@@ -267,7 +267,7 @@ function get_sets()
     sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +3"}
     sets.buff['Alacrity'] = {feet="Peda. Loafers +3"}
-    sets.buff['Klimaform'] = {feet="Arbatel Loafers +2"}	
+    sets.buff['Klimaform'] = {feet="Arbatel Loafers +3"}	
     -- Ebulience set empy now as we get better damage out of a good Merlinic head
     sets.buff['Ebullience'] = {} -- I left it there still if it becomes needed so the SCH.lua file won't need modification should you want to use this set
    
@@ -380,7 +380,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Arbatel Loafers +2",
+    feet="Arbatel Loafers +3",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
@@ -399,7 +399,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Arbatel Loafers +2",
+    feet="Arbatel Loafers +3",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
@@ -420,7 +420,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Arbatel Loafers +2",
+    feet="Arbatel Loafers +3",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
@@ -446,7 +446,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Arbatel Loafers +2",
+    feet="Arbatel Loafers +3",
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
@@ -471,7 +471,7 @@ function get_sets()
 	body="Agwu's Robe",
     hands="Agwu's Gages",	
     legs="Agwu's Slops",
-    feet="Arbatel Loafers +2",
+    feet="Arbatel Loafers +3",
     neck="Argute Stole +2",
     waist="Sacro Cord",
     left_ear="Malignance Earring",

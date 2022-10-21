@@ -258,8 +258,7 @@ function midcast(spell,arg)
 		elseif spell.english:wcmatch("Katon*|Doton*|Suiton*|Huton*|Hyoton*|Raiton") then
 			equip(sets.midcast.Wheel)
 		end
-	elseif spell.skill == 'Enhancing Magic' then
-	
+	elseif spell.skill == 'Enhancing Magic' then	
 		if spell.name == 'Phalanx' then
 	 		equip(sets.midcast.Phalanx) 
 			
@@ -268,7 +267,8 @@ function midcast(spell,arg)
 		else
 			equip(sets.midcast.Enhancing)	
 		end
-	else
+	-- enmity spells
+	elseif spell.type:endswith('Magic') then
 		equip(sets.Enmity)
 	end
 end

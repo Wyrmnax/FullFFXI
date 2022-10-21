@@ -43,46 +43,42 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-	ammo="Staunch Tathlum +1",
-    head="Nyame helm",
-    body="Nyame mail",
-    hands="Turms Mittens +1",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+	   ammo="Staunch Tathlum +1",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Erilaz Surcoat +2",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs="Eri. Leg Guards +2",
+    feet="Erilaz Greaves +2",
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
 
 
 sets.idle.MDT = { 
-	ammo="Staunch Tathlum +1",
-    head="Nyame helm",
-    body="Nyame mail",
-    hands="Turms Mittens +1",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+	   ammo="Staunch Tathlum +1",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Erilaz Surcoat +2",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs="Eri. Leg Guards +2",
+    feet="Erilaz Greaves +2",
     neck={ name="Futhark Torque +1", augments={'Path: A',}},
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
 
 sets.misc.Town = set_combine(sets.idle.PDT, {
-			right_ring="Shneddick Ring",
-			hands="Regal Gauntlets",
 			})
 				
 sets.idle.Standard = set_combine(sets.idle.PDT, {
-				right_ring="Shneddick Ring",				
-				hands="Regal Gauntlets",
 				})
 				
 sets.idle.Evasion = { 
@@ -102,19 +98,19 @@ sets.Enmity = set_combine(sets.idle.PDT, {
 
 -- TP set
 sets.TP = {
-	ammo="Staunch Tathlum +1",
+	ammo="Yamarang",
     head="Nyame helm",
-    body="Nyame Mail",
+    body="Erilaz Surcoat +2",
     hands="Turms Mittens +1",
     legs="Eri. Leg Guards +2",
-    feet="Erilaz Greaves +2",
-    neck={ name="Futhark Torque +1", augments={'Path: A',}},
+    feet="Turms Leggings +1",
+    neck="Futhark Torque +1",
     waist="Sailfi Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
     right_ring="Moonbeam Ring",
-    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 
     --ammo="Staunch Tathlum +1",
     --head={ name="Nyame Helm", augments={'Path: B',}},
@@ -167,8 +163,9 @@ sets.precast.JA["Vivacious Pulse"] = {head="Erilaz galea +2"}
 -- Magic 
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 	ammo="Sapience Orb",
-    head="Rune. Bandeau +1",
+    head="Rune. Bandeau +3",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+	body="Erilaz Surcoat +2",
     legs="Aya. Cosciales +2",
     feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},    
     neck="Unmoving Collar +1",
@@ -206,7 +203,7 @@ sets.midcast.Phalanx = {
 	}
 				
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
-				head="Rune. Bandeau +1"
+				head="Rune. Bandeau +3"
 				})
 
 -- INT

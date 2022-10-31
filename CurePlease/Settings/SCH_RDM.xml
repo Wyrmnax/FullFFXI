@@ -75,7 +75,7 @@
   <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>
   <plKlimaform>false</plKlimaform>
-  <plAquaveil>false</plAquaveil>
+  <plAquaveil>true</plAquaveil>
   <plHaste>false</plHaste>
   <plHaste_Level>1</plHaste_Level>
   <plSpikes>false</plSpikes>
@@ -161,12 +161,12 @@
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
   <SpecifiednaSpellsenable>false</SpecifiednaSpellsenable>
   <PrioritiseOverLowerTier>true</PrioritiseOverLowerTier>
-  <plSilenceItemEnabled>false</plSilenceItemEnabled>
-  <plSilenceItem>0</plSilenceItem>
+  <plSilenceItemEnabled>true</plSilenceItemEnabled>
+  <plSilenceItem>1</plSilenceItem>
   <plDoomEnabled>false</plDoomEnabled>
   <plDoomitem>0</plDoomitem>
-  <wakeSleepEnabled>false</wakeSleepEnabled>
-  <wakeSleepSpell>2</wakeSleepSpell>
+  <wakeSleepEnabled>true</wakeSleepEnabled>
+  <wakeSleepSpell>0</wakeSleepSpell>
   <naBlindness>false</naBlindness>
   <naCurse>true</naCurse>
   <naDisease>true</naDisease>

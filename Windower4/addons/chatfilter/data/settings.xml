@@ -13,6 +13,7 @@
                 <dracopatt>dracopatt</dracopatt>
                 <ducos>ducos</ducos>
                 <fyeyihshety>fyeyihshety</fyeyihshety>
+                <heallok>heallok</heallok>
                 <healokk>healokk</healokk>
                 <liquefier>liquefier</liquefier>
                 <nifibanufihg>nifibanufihg</nifibanufihg>
@@ -31,12 +32,14 @@
             </players>
             <strings>
                 <020>0-20</020>
+                <5003m>500/3m</5003m>
                 <500cp5m>500cp/5m</500cp5m>
                 <500jp>500jp</500jp>
                 <500jp5m>500jp/5m</500jp5m>
                 <99999autoin>99999autoin</99999autoin>
                 <c0m>c0m</c0m>
                 <cp5m500p>cp5m/500p</cp5m500p>
+                <heallok>heallok</heallok>
                 <igeox2fast>igeo x2fast</igeox2fast>
                 <ml02015m>ml0-20/15m</ml02015m>
                 <ml030>ml 0-30/</ml030>

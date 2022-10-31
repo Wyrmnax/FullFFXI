@@ -29,13 +29,13 @@
   <curagaCurePercentage>75</curagaCurePercentage>
   <curagaTargetType>0</curagaTargetType>
   <curagaTargetName />
-  <curagaRequiredMembers>2</curagaRequiredMembers>
+  <curagaRequiredMembers>3</curagaRequiredMembers>
   <autoHasteMinutes>2</autoHasteMinutes>
   <autoAdloquiumMinutes>2</autoAdloquiumMinutes>
   <autoPhalanxIIMinutes>2</autoPhalanxIIMinutes>
   <autoStormspellMinutes>2</autoStormspellMinutes>
   <autoRefresh_Minutes>2</autoRefresh_Minutes>
-  <autoRefresh_Spell>0</autoRefresh_Spell>
+  <autoRefresh_Spell>1</autoRefresh_Spell>
   <autoRegen_Minutes>1</autoRegen_Minutes>
   <autoRegen_Spell>3</autoRegen_Spell>
   <autoProtect_Minutes>29</autoProtect_Minutes>
@@ -65,12 +65,12 @@
   <plProtect>true</plProtect>
   <plShell>true</plShell>
   <plBlink>false</plBlink>
-  <plPhalanx>true</plPhalanx>
+  <plPhalanx>false</plPhalanx>
   <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
-  <plEnspell_Spell>4</plEnspell_Spell>
+  <plEnspell_Spell>0</plEnspell_Spell>
   <plStormSpell>true</plStormSpell>
   <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>
@@ -95,10 +95,10 @@
   <phalanxAccession>true</phalanxAccession>
   <stoneskinPerpetuance>false</stoneskinPerpetuance>
   <stoneskinAccession>false</stoneskinAccession>
-  <enspellPerpetuance>true</enspellPerpetuance>
-  <enspellAccession>true</enspellAccession>
-  <stormspellPerpetuance>false</stormspellPerpetuance>
-  <stormspellAccession>false</stormspellAccession>
+  <enspellPerpetuance>false</enspellPerpetuance>
+  <enspellAccession>false</enspellAccession>
+  <stormspellPerpetuance>true</stormspellPerpetuance>
+  <stormspellAccession>true</stormspellAccession>
   <adloquiumPerpetuance>true</adloquiumPerpetuance>
   <adloquiumAccession>true</adloquiumAccession>
   <aquaveilPerpetuance>false</aquaveilPerpetuance>
@@ -161,8 +161,8 @@
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
   <SpecifiednaSpellsenable>false</SpecifiednaSpellsenable>
   <PrioritiseOverLowerTier>true</PrioritiseOverLowerTier>
-  <plSilenceItemEnabled>false</plSilenceItemEnabled>
-  <plSilenceItem>0</plSilenceItem>
+  <plSilenceItemEnabled>true</plSilenceItemEnabled>
+  <plSilenceItem>1</plSilenceItem>
   <plDoomEnabled>false</plDoomEnabled>
   <plDoomitem>0</plDoomitem>
   <wakeSleepEnabled>true</wakeSleepEnabled>
@@ -173,7 +173,7 @@
   <naParalysis>true</naParalysis>
   <naPetrification>true</naPetrification>
   <naPlague>false</naPlague>
-  <naPoison>false</naPoison>
+  <naPoison>true</naPoison>
   <naSilence>true</naSilence>
   <naErase>true</naErase>
   <Esuna>false</Esuna>
@@ -185,7 +185,7 @@
   <plBane>true</plBane>
   <plBind>true</plBind>
   <plBio>true</plBio>
-  <plBlindness>false</plBlindness>
+  <plBlindness>true</plBlindness>
   <plBurn>true</plBurn>
   <plChrDown>true</plChrDown>
   <plChoke>true</plChoke>
@@ -201,7 +201,7 @@
   <plEvasionDown>true</plEvasionDown>
   <plFlash>false</plFlash>
   <plFrost>true</plFrost>
-  <plHelix>false</plHelix>
+  <plHelix>true</plHelix>
   <plIntDown>true</plIntDown>
   <plMndDown>true</plMndDown>
   <plMagicAccDown>true</plMagicAccDown>
@@ -210,8 +210,8 @@
   <plMaxMpDown>true</plMaxMpDown>
   <plMaxTpDown>true</plMaxTpDown>
   <plParalysis>true</plParalysis>
-  <plPlague>false</plPlague>
-  <plPoison>false</plPoison>
+  <plPlague>true</plPlague>
+  <plPoison>true</plPoison>
   <plRasp>true</plRasp>
   <plRequiem>true</plRequiem>
   <plStrDown>true</plStrDown>
@@ -229,7 +229,7 @@
   <monitoredBane>true</monitoredBane>
   <monitoredBind>true</monitoredBind>
   <monitoredBio>true</monitoredBio>
-  <monitoredBlindness>false</monitoredBlindness>
+  <monitoredBlindness>true</monitoredBlindness>
   <monitoredBurn>true</monitoredBurn>
   <monitoredChrDown>true</monitoredChrDown>
   <monitoredChoke>true</monitoredChoke>
@@ -245,7 +245,7 @@
   <monitoredEvasionDown>true</monitoredEvasionDown>
   <monitoredFlash>false</monitoredFlash>
   <monitoredFrost>true</monitoredFrost>
-  <monitoredHelix>false</monitoredHelix>
+  <monitoredHelix>true</monitoredHelix>
   <monitoredIntDown>true</monitoredIntDown>
   <monitoredMndDown>true</monitoredMndDown>
   <monitoredMagicAccDown>true</monitoredMagicAccDown>
@@ -255,8 +255,8 @@
   <monitoredMaxTpDown>true</monitoredMaxTpDown>
   <monitoredParalysis>true</monitoredParalysis>
   <monitoredPetrification>true</monitoredPetrification>
-  <monitoredPlague>false</monitoredPlague>
-  <monitoredPoison>false</monitoredPoison>
+  <monitoredPlague>true</monitoredPlague>
+  <monitoredPoison>true</monitoredPoison>
   <monitoredRasp>true</monitoredRasp>
   <monitoredRequiem>true</monitoredRequiem>
   <monitoredStrDown>true</monitoredStrDown>

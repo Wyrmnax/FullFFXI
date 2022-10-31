@@ -261,8 +261,8 @@ function get_sets()
     -- Gear that needs to be worn to **actively** enhance a current player buff.
     -- Fill up following with your avaible pieces.
     sets.buff['Rapture'] = {head="Arbatel bonnet +1"}
-    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +2"}
-    sets.buff['Immanence'] = {hands="Arbatel Bracers +2"}
+    sets.buff['Perpetuance'] = {hands="Arbatel Bracers +3"}
+    sets.buff['Immanence'] = {hands="Arbatel Bracers +3"}
     sets.buff['Penury'] = {legs="Arbatel Pants +1"}
     sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +3"}

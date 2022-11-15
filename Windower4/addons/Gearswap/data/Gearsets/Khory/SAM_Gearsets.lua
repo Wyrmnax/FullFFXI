@@ -95,7 +95,7 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 sets.TP = { 	
      ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
+    body="Kasuga Domaru +3",
     hands="Mpaca's Gloves",
     legs="Kasuga Haidate +2",
     feet={ name="Tatena. Sune. +1", augments={'Path: A',}},
@@ -112,7 +112,7 @@ sets.TP = {
 sets.TP.Bow = { 	
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Kasuga Kabuto +2",
-    body="Kasuga Domaru +2",
+    body="Kasuga Domaru +3",
     hands="Wakido Kote +3",
     legs="Mpaca's Hose",
     feet="Mpaca's Boots",
@@ -183,7 +183,7 @@ sets.precast.WS.MAB = {
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sanctity Necklace",
-    waist="Skrymir Cord",
+    waist="Orpheus's sash",
     left_ear="Friomisi Earring",
     right_ear="Sortiarius Earring",
     left_ring="Niqmaddu Ring",

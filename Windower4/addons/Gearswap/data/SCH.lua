@@ -498,7 +498,7 @@ function get_sets()
 	sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
     head="Acad. Mortar. +3",
-    body="Acad. Gown +2",
+    body="Acad. Gown +3",
     hands="Acad. Bracers +3",
     legs="Acad. Pants +2",
     feet="Acad. Loafers +2",
@@ -516,7 +516,7 @@ function get_sets()
 	sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
     head="Acad. Mortar. +3",
-    body="Acad. Gown +2",
+    body="Acad. Gown +3",
     hands="Acad. Bracers +3",
     legs="Acad. Pants +2",
     feet="Acad. Loafers +2",
@@ -534,7 +534,7 @@ function get_sets()
 	sub="Ammurapi Shield",
 	ammo="Pemphredo Tathlum",
     head="Peda. M.Board +3",
-    body="Acad. Gown +2",
+    body="Acad. Gown +3",
     hands="Acad. Bracers +3",
     legs="Acad. Pants +2",
     feet="Acad. Loafers +2",
@@ -587,9 +587,9 @@ function get_sets()
  	
  	sets.midcast.cure = {} -- Leave This Empty
     -- Cure Potency
-    sets.midcast.cure.normal = set_combine(sets.midcast.casting,{	
-	main="Musa",
-	sub="Giuoco Grip",
+    sets.midcast.cure.normal = set_combine(sets.midcast.casting,{		
+	main="Daybreak",
+	sub="Genmei Shield",
 	ammo="Staunch Tathlum +1",
     head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
 	body="Shamash Robe",
@@ -600,7 +600,7 @@ function get_sets()
     waist="Rumination Sash",
     left_ear="Lempo Earring",
     right_ear="Halasz Earring",
-    left_ring="Jhakri Ring",
+    left_ring="Defending Ring",
     right_ring="Lebeche Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     })

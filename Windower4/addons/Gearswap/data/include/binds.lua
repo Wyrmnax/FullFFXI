@@ -189,6 +189,14 @@ elseif player.main_job == "COR" then
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
+	
+elseif player.main_job == "RUN" then
+	clear_binds()
+	-- set binds	
+	send_command('bind f12 input //gs c rune')
+	send_command('bind ^= gs c cycle Runes')
+	send_command('bind ^- gs c cycleback Runes')
+	
 elseif player.main_job == "SMN" then
 	basic_binds()
 	-- set binds
@@ -202,3 +210,5 @@ else
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c TP')
 end
+
+

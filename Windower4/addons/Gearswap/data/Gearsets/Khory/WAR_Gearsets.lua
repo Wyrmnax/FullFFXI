@@ -223,7 +223,6 @@ sets.precast.WS.wsd = {
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 
--- THIS IS NOT WORKING!	
 sets.precast.WS.MAB = {
 	ammo="Seeth. Bomblet +1",
     head="Nyame Helm",
@@ -232,7 +231,7 @@ sets.precast.WS.MAB = {
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Orpheus's sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Beithir Ring",

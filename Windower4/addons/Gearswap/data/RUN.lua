@@ -28,6 +28,7 @@ function get_sets()
 	PDT = 0
 	MDT = 0
 	ShadowType = 'None'
+	Runes = 'Tenebrae'
 end -- End gear sets
 
 -- Called when this job file is unloaded (eg: job change)
@@ -123,6 +124,61 @@ function self_command(command)
 				end
 			end
 		end
+	elseif command == 'rune' then
+		send_command('@input /ja '..Runes..' <me>')
+	elseif command == 'cycleRunes' then
+		if Runes =='Tenebrae' then
+			Runes = 'Lux'
+			windower.add_to_chat(121,'Lux Set')
+		elseif Runes =='Lux' then
+			Runes = 'Ignis'
+			windower.add_to_chat(121,'Ignis Set')		
+		elseif Runes =='Ignis' then
+			Runes = 'Gelus'
+			windower.add_to_chat(121,'Gelus Set')
+		elseif Runes =='Gelus' then
+			Runes = 'Flabra'
+			windower.add_to_chat(121,'Flabra Set')
+		elseif Runes =='Flabra' then
+			Runes = 'Tellus'
+			windower.add_to_chat(121,'Tellus Set')
+		elseif Runes =='Tellus' then
+			Runes = 'Sulpor'
+			windower.add_to_chat(121,'Sulpor Set')
+		elseif Runes =='Sulpor' then
+			Runes = 'Unda'
+			windower.add_to_chat(121,'Unda Set')
+		elseif Runes =='Unda' then
+			Runes = 'Tenebrae'
+			windower.add_to_chat(121,'Tenebrae Set')
+		end	
+	elseif command == 'cyclebackRunes' then
+		if Runes =='Tenebrae' then
+			Runes = 'Unda'
+			windower.add_to_chat(121,'Unda Set')
+		elseif Runes =='Lux' then
+			Runes = 'Tenebrae'
+			windower.add_to_chat(121,'Tenebrae Set')		
+		elseif Runes =='Ignis' then
+			Runes = 'Lux'
+			windower.add_to_chat(121,'Lux Set')
+		elseif Runes =='Gelus' then
+			Runes = 'Ignis'
+			windower.add_to_chat(121,'Ignis Set')
+		elseif Runes =='Flabra' then
+			Runes = 'Gelus'
+			windower.add_to_chat(121,'Gelus Set')
+		elseif Runes =='Tellus' then
+			Runes = 'Flabra'
+			windower.add_to_chat(121,'Flabra Set')
+		elseif Runes =='Sulpor' then
+			Runes = 'Tellus'
+			windower.add_to_chat(121,'Tellus Set')
+		elseif Runes =='Unda' then
+			Runes = 'Sulpor'
+			windower.add_to_chat(121,'Sulpor Set')
+		end	
+		
 	end
 end
 	

@@ -193,9 +193,9 @@ elseif player.main_job == "COR" then
 elseif player.main_job == "RUN" then
 	clear_binds()
 	-- set binds	
-	send_command('bind f12 input //gs c rune')
-	send_command('bind ^= gs c cycle Runes')
-	send_command('bind ^- gs c cycleback Runes')
+	send_command('bind = input //gs c rune')
+	send_command('bind f12 gs c cycleRunes')
+	send_command('bind ^f12 gs c cyclebackRunes')
 	
 elseif player.main_job == "SMN" then
 	basic_binds()

@@ -29,6 +29,10 @@ function get_sets()
 	MDT = 0
 	ShadowType = 'None'
 	Runes = 'Tenebrae'
+	
+	degrade_array = {
+        ['Attack'] = {'Swipe','Lunge'},
+        }
 end -- End gear sets
 
 -- Called when this job file is unloaded (eg: job change)
@@ -125,7 +129,9 @@ function self_command(command)
 			end
 		end
 	elseif command == 'rune' then
-		send_command('@input /ja '..Runes..' <me>')
+		send_command('@input /ja '..Runes..' <me>')		
+	--elseif command == 'Dimidiation' then
+		--send_command('@input /ws Dimidiation <t>')
 	elseif command == 'cycleRunes' then
 		if Runes =='Tenebrae' then
 			Runes = 'Lux'
@@ -224,7 +230,14 @@ end
 
 function precast(spell,arg)
  -- Generic equip command for all Job Abilities and Weaponskills
-	if spell.type == "JobAbility" then
+	if spell.type == 'JobAbility' then
+		if sets.precast.JA[spell.name] then
+			equip(sets.precast.JA[spell.name])
+		end
+	elseif spell.type == 'Effusion' then
+		if spell.name:startswith("Lunge") then
+			refine_various_spells(spell, action, spellMap, eventArgs)
+		end
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
 		end
@@ -291,7 +304,7 @@ function precast(spell,arg)
 end
 
 function midcast(spell,arg)	
-	if spell.type == "Ninjutsu" then
+	if spell.type == 'Ninjutsu' then
 		-- Utsusemi
 		if windower.wc_match(spell.name,'Utsusemi*') then
 			-- Equip PDT then Utsusemi Gear sets
@@ -352,6 +365,25 @@ function aftercast(spell,arg)
     elseif spell and spell.name == 'Utsusemi: Ichi' then
         ShadowType = 'Ichi'
 	end
+end
+
+function refine_various_spells(spell, action, spellMap, eventArgs)
+
+    local newSpell = spell.english
+    local spell_recasts = windower.ffxi.get_ability_recasts()
+    local cancelling = 'All '..spell.english..' are on cooldown. Cancelling.'
+
+    local spell_index
+
+    if spell_recasts[spell.recast_id] > 0 then
+        if spell.name:startswith('Lunge') then
+            spell_index = table.find(degrade_array['Attack'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Attack'][spell_index - 1]
+                send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
+            end
+        end
+    end
 end
 
 function previous_set(spell)

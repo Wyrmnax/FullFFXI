@@ -162,6 +162,9 @@
             <show>false</show>
             <text>
                 <alpha>255</alpha>
+                <fonts>
+
+                </fonts>
             </text>
         </disclaimer>
         <map>
@@ -169,12 +172,24 @@
                 <path>D:\Games\FullFFXI\Windower4\/addons/sheolhelper/maps/3-1.png</path>
             </texture>
         </map>
+        <res_box>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
+        </res_box>
         <seg_box>
             <conserve>false</conserve>
             <pos>
                 <x>1230</x>
                 <y>62</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </seg_box>
     </khory>
 </settings>

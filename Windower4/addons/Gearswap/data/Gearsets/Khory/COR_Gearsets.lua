@@ -105,7 +105,8 @@ sets.TP = {
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    left_ring="Petrov Ring",
+    --left_ring="Petrov Ring",
+	left_ring="Defending Ring",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -161,7 +162,7 @@ sets.precast.JA["Triple Shot"] = {body="Nvrch. Frac +2"}
 sets.precast.JA["Double-Up"] = set_combine(sets.precast.JA["Phantom Roll"])
 
 -- Corsair Rolls
-sets.precast.JA["Phantom Roll"] = {main={ name="Rostam", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +2", rring="Luzaf's Ring"}
+sets.precast.JA["Phantom Roll"] = {main={ name="Rostam", augments={'Path: C',}}, ranged="Compensator", head="Lanun Tricorne", neck="Regal Necklace", hands="Chasseur's Gants +3", rring="Luzaf's Ring"}
 sets.precast.JA["Caster's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {legs="Nvrch. Culottes +2"})
 sets.precast.JA["Courser's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {feet="Navarch's Bottes +2"})
 sets.precast.JA["Blitzer's Roll"] = set_combine(sets.precast.JA["Phantom Roll"], {head="Navarch's Tricorne +2"})
@@ -213,7 +214,7 @@ sets.precast.WS = {
 	ammo="TPBullet",
 	head="Nyame Helm",
     body="Nyame Mail",
-    hands="Meg. Gloves +2",
+    hands="Chasseur's Gants +3",
     legs="Nyame Flanchard",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Fotia Gorget",
@@ -228,7 +229,7 @@ sets.precast.WS["Savage Blade"] = {
 	ammo="WSBullet",
     head="Nyame Helm",
     body="Nyame Mail",
-    hands="Nyame Gauntlets",
+    hands="Chasseur's Gants +3",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Comm. Charm +2",
@@ -245,7 +246,7 @@ sets.precast.RAWS = {
 	ammo="TPBullet",
 	head="Nyame helm",
     body="Laksa. Frac +3",
-    hands="Meg. Gloves +2",
+    hands="Chasseur's Gants +3",
     legs="Nyame Flanchard",
     feet="Lanun Bottes +3",
     neck="Comm. Charm +2",

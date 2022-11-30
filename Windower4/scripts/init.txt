@@ -55,6 +55,8 @@ lua load shout_ml
 lua load Valkyrie
 lua load react
 lua load partybuffs
+lua load sheolhelper
+lua reload partybuffs
 
 
 // *** ALLIANCE TARGET KEYS ***

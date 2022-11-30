@@ -18,24 +18,25 @@
                 <slot11>metallic body</slot11>
             </70>
             <dd>
-                <slot01>molting plumage</slot01>
-                <slot02>sinker drill</slot02>
-                <slot03>empty thrash</slot03>
-                <slot04>delta thrust</slot04>
-                <slot05>quad. continuum</slot05>
-                <slot06>erratic flutter</slot06>
-                <slot07>nat. meditation</slot07>
-                <slot08>occultation</slot08>
+                <slot01>thrashing assault</slot01>
+                <slot02>heavy strike</slot02>
+                <slot03>anvil lightning</slot03>
+                <slot04>subduction</slot04>
+                <slot05>cannonball</slot05>
+                <slot06>empty thrash</slot06>
+                <slot07>erratic flutter</slot07>
+                <slot08>sudden lunge</slot08>
                 <slot09>battery charge</slot09>
-                <slot10>thrashing assault</slot10>
-                <slot11>sheep song</slot11>
-                <slot12>heavy strike</slot12>
-                <slot13>anvil lightning</slot13>
-                <slot15>disseverment</slot15>
-                <slot16>subduction</slot16>
-                <slot17>diffusion ray</slot17>
-                <slot18>sudden lunge</slot18>
-                <slot19>fantod</slot19>
+                <slot10>fantod</slot10>
+                <slot11>delta thrust</slot11>
+                <slot12>diffusion ray</slot12>
+                <slot13>disseverment</slot13>
+                <slot14>occultation</slot14>
+                <slot15>molting plumage</slot15>
+                <slot16>sheep song</slot16>
+                <slot17>quad. continuum</slot17>
+                <slot18>nat. meditation</slot18>
+                <slot19>blazing bound</slot19>
             </dd>
             <default>
 
@@ -95,16 +96,16 @@
                 <slot12>restoral</slot12>
             </sortiemagic>
             <tank>
-                <slot01>wild oats</slot01>
-                <slot02>jettatura</slot02>
-                <slot03>geist wall</slot03>
-                <slot04>grand slam</slot04>
-                <slot05>cocoon</slot05>
-                <slot06>pollen</slot06>
-                <slot07>terror touch</slot07>
-                <slot08>healing breeze</slot08>
-                <slot09>blank gaze</slot09>
-                <slot10>wild carrot</slot10>
+                <slot01>sheep song</slot01>
+                <slot02>wild carrot</slot02>
+                <slot03>terror touch</slot03>
+                <slot04>jettatura</slot04>
+                <slot05>geist wall</slot05>
+                <slot06>cocoon</slot06>
+                <slot07>blank gaze</slot07>
+                <slot08>grand slam</slot08>
+                <slot09>wild oats</slot09>
+                <slot10>healing breeze</slot10>
                 <slot11>frightful roar</slot11>
             </tank>
             <vw1>

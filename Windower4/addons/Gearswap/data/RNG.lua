@@ -167,28 +167,19 @@ function self_command(command)
 end
 
 function status_change(new,old)
-    if T{'Idle','Resting'}:contains(new) then
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
+    if T{'Idle','Resting'}:contains(new) then		
+		if PDT == 1 then
+			equip(sets.idle.PDT)
+		elseif MDT == 1 then
+			equip(sets.idle.MDT)
 		else
-			if PDT == 1 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
+			if new == "Resting" then
+				equip(sets.Resting)
 			else
-				if new == "Resting" then
-					equip(sets.Resting)
-				else
-					equip(sets.idle.Standard)
-				end
+				equip(sets.idle.PDT)
 			end
 		end
 	elseif new == 'Engaged' then
-     	-- Automatically activate Velocity Shot when engaging
-		if not buffactive['Velocity Shot'] and not buffactive.Amnesia and not buffactive.Obliviscence and not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[129] < 1 then
-			windower.send_command('velocityshot')
-        end
 		-- Engaged Sets
 		if PDT == 1 or buffactive['Weakness'] or player.hpp <= 30 then
 			equip(sets.idle.PDT)

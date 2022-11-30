@@ -196,6 +196,9 @@ elseif player.main_job == "RUN" then
 	send_command('bind = input //gs c rune')
 	send_command('bind f12 gs c cycleRunes')
 	send_command('bind ^f12 gs c cyclebackRunes')
+	send_command('bind !q input /ws Dimidiation <t>')
+	send_command('bind !e input /ja "Vivacious Pulse" <me>')
+	send_command('bind !r input /ja Lunge <t>')
 	
 elseif player.main_job == "SMN" then
 	basic_binds()

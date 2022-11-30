@@ -23,8 +23,8 @@ if player.name == 'Khory' then
 				set_macro_page(2,7)
 			elseif player.sub_job == 'WAR' then
 				set_macro_page(3,7)
-			elseif player.sub_job == 'DNC' then 
-				set_macro_page(4,7)
+			elseif player.sub_job == 'BLU' then 
+				set_macro_page(1,7)
 			elseif player.sub_job == 'DRG' then 
 				set_macro_page(5,7)
 			elseif player.sub_job == 'MNK' then 
@@ -35,9 +35,9 @@ if player.name == 'Khory' then
 				set_macro_page(8,7)
 			elseif player.sub_job == 'SCH' then 
 				set_macro_page(9,7)
+			else
+				set_macro_page(1,7)
 			end
-		else
-			set_macro_page(10,7)
 		end
 		
 -- Auto Sets
@@ -45,7 +45,7 @@ if player.name == 'Khory' then
 sets.idle.PDT = { 
 	   ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Erilaz Surcoat +2",
+    body="Runeist's Coat +2",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Eri. Leg Guards +3",
     feet="Erilaz Greaves +2",
@@ -53,7 +53,7 @@ sets.idle.PDT = {
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
-    left_ring="Defending Ring",
+    left_ring="Moonbeam Ring",
     right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
@@ -70,7 +70,7 @@ sets.idle.MDT = {
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
-    left_ring="Defending Ring",
+    left_ring="Moonbeam Ring",
     right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
@@ -138,18 +138,19 @@ sets.precast.JA["Odyllic Subterfuge"] = {}
 sets.precast.JA["Lunge"] = {
 	ammo="Seeth. Bomblet +1",
     head="Nyame Helm",
-    body="Nyame Mail",
-    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    body="Agwu's Robe",
+    hands="Agwu's Gages",
+    legs="Agwu's slops",
+    feet="Agwu's Pigaches",
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
     right_ear="Sortiarius Earring",
-    left_ring="Mujin Band",
-    right_ring="Vertigo Ring",
+    left_ring="Defending Ring",
+    right_ring="Gelatinous Ring +1",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
+sets.precast.JA["Swipe"] = set_combine(sets.precast.JA["Lunge"],{	})
 sets.precast.JA["Valiance"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Vallation"] = {body="Runeist's Coat +2"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
@@ -170,8 +171,8 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
     feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},    
     neck="Unmoving Collar +1",
     left_ear="Odnowa Earring +1",
-    left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Defending Ring",
+    left_ring="Moonbeam Ring",
 	})
 	
 sets.midcast.Enhancing = {
@@ -182,14 +183,14 @@ sets.midcast.Enhancing = {
     waist="Rumination Sash",
     left_ear="Odnowa Earring +1",
 	right_ear="Mimir Earring",
-    left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Defending Ring",
+    left_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},}
 	
 sets.midcast.Phalanx = {
 	ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
-    body="Emet Harness +1",
+    body={ name="Herculean Vest", augments={'VIT+4','Attack+14','Phalanx +4','Mag. Acc.+14 "Mag.Atk.Bns."+14',}},
     hands={ name="Taeon Gloves", augments={'Evasion+24','"Counter"+3','Phalanx +3',}},
     legs={ name="Taeon Tights", augments={'Phalanx +3',}},
     feet={ name="Taeon Boots", augments={'Phalanx +3',}},
@@ -197,8 +198,8 @@ sets.midcast.Phalanx = {
     waist="Flume Belt +1",
     left_ear="Tuisto Earring",
     right_ear="Mimir Earring",
-    left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Defending Ring",
+    left_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 				

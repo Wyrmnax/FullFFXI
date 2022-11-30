@@ -116,7 +116,9 @@ if player.name == 'Khory' then
 			
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {})
 		
-		sets.precast.BlueMagic = set_combine(sets.precast.Fastcast, {})
+		sets.precast.BlueMagic = set_combine(sets.precast.Fastcast, {
+		body="Hashishin Mintan +2",
+		})
 		
 		-- Midcast
 		sets.midcast.Recast = set_combine(sets.idle.PDT, {waist="Witful Belt"})
@@ -126,9 +128,9 @@ if player.name == 'Khory' then
 		-- Skill
 		sets.midcast.BlueMagic = {
 			ammo="Ginsen",
-			head="Nyame Helm",
-			body="Nyame Mail",
-			hands="Nyame Gauntlets",
+			head="Hashishin Kavuk +2",
+			body="Hashishin Mintan +2",
+			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
 			feet="Hashi. Basmak +2",
 			neck="Caro Necklace",
@@ -165,9 +167,9 @@ if player.name == 'Khory' then
 		-- INT
 		sets.midcast.BlueMagic.Nuke = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
-			head="Nyame Helm",
-			body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-			hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			head="Hashishin Kavuk +2",
+			body="Hashishin Mintan +2",
+			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
 			feet="Hashi. Basmak +2",
 			neck="Sanctity Necklace",
@@ -180,7 +182,8 @@ if player.name == 'Khory' then
 			})	
 		
 		sets.midcast.BlueMagic.Nuke["Tenebral Crush"] =	set_combine(sets.midcast.BlueMagic.Nuke, {
-			head="Pixie Hairpin +1",
+			head="Pixie Hairpin +1",			
+			right_ring="Archon Ring",
 			})	
 		sets.midcast.BlueMagic.NukeDark = set_combine(sets.midcast.BlueMagic.Nuke, {
 			head="Pixie Hairpin +1",
@@ -193,9 +196,9 @@ if player.name == 'Khory' then
 		-- Macc 
 		sets.midcast.BlueMagic.Macc = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
-			head="Nyame Helm",
-			body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-			hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			head="Hashishin Kavuk +2",
+			body="Hashishin Mintan +2",
+			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
 			feet="Hashi. Basmak +2",
 			neck="Sanctity Necklace",
@@ -225,7 +228,7 @@ if player.name == 'Khory' then
 				
 		sets.precast.WS.WSD = {
 			ammo="Oshasha's Treatise",
-			head="Nyame helm",
+			head="Hashishin Kavuk +2",
 			body="Nyame Mail",
 			hands="Nyame Gauntlets",
 			legs="Nyame Flanchard",

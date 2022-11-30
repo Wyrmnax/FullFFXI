@@ -17,7 +17,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"black halo\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["BRD"] = {
@@ -84,7 +84,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DRG"] = {
@@ -115,7 +115,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"resolution\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["GEO"] = {
@@ -281,7 +281,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"viper bite\" <t>"
+                ["ws_cmd"] = "/ws \"trueflight\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -290,7 +290,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"fast blade\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["RUN"] = {
@@ -345,9 +345,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {
@@ -488,7 +488,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["WHM"] = {

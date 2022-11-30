@@ -43,6 +43,8 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
+	main="Epeolatry",
+	sub="Utu Grip",
 	   ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Runeist's Coat +2",
@@ -98,6 +100,8 @@ sets.Enmity = set_combine(sets.idle.PDT, {
 
 -- TP set
 sets.TP = {
+	main="Epeolatry",
+	sub="Utu Grip",
 	ammo="Yamarang",
     head="Nyame helm",
     body="Erilaz Surcoat +2",
@@ -169,7 +173,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 	body="Erilaz Surcoat +2",
     legs="Aya. Cosciales +2",
     feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},    
-    neck="Unmoving Collar +1",
+    neck="Voltsurge Torque",
     left_ear="Odnowa Earring +1",
     right_ring="Defending Ring",
     left_ring="Moonbeam Ring",
@@ -206,6 +210,15 @@ sets.midcast.Phalanx = {
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
 				head="Rune. Bandeau +3"
 				})
+				
+sets.midcast.Refresh = set_combine(sets.midcast.Enhancing,{
+				head="Erilaz galea +2",
+				})
+				
+sets.midcast.Cure = set_combine(sets.Enmity,{
+				left_ear="Mendi. Earring"
+				})
+			
 
 -- INT
 sets.midcast.Spikes = set_combine(sets.idle.PDT,{lring="Icesoul Ring", rring="Icesoul Ring"})

@@ -33,6 +33,8 @@ function get_sets()
 	degrade_array = {
         ['Attack'] = {'Swipe','Lunge'},
 		['Ward'] = { 'Vallation','Valiance'},
+		['Defensive'] = { 'Swordplay', 'Battuta'},
+		['MagicRes'] = {'Rayke', 'Gambit'},
         }
 end -- End gear sets
 
@@ -238,6 +240,8 @@ function precast(spell,arg)
 	elseif spell.type == 'Effusion' then
 		if spell.name:startswith("Lunge") then
 			refine_various_spells(spell, action, spellMap, eventArgs)
+		elseif spell.name:startswith("Gambit") then
+			refine_various_spells(spell, action, spellMap, eventArgs)
 		end
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
@@ -336,8 +340,20 @@ function midcast(spell,arg)
 			
 		elseif spell.english:startswith("Regen") then	
 	 		equip(sets.midcast.Regen) 
+			
+		elseif spell.english:startswith("Refresh") then	
+	 		equip(sets.midcast.Regen) 
+		
 		else
 			equip(sets.midcast.Enhancing)	
+		end
+	elseif spell.skill == 'Blue Magic' then
+		if spell.name == 'Healing Breeze' then
+	 		equip(sets.midcast.Cure) 
+		elseif spell.name == 'Wild Carrot' then
+	 		equip(sets.midcast.Cure) 
+		else
+			equip(sets.Enmity)	
 		end
 	-- enmity spells
 	elseif spell.type:endswith('Magic') then
@@ -385,14 +401,30 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
                 newSpell = degrade_array['Attack'][spell_index - 1]
                 send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
             end
+		elseif spell.name:startswith('Gambit') then
+            spell_index = table.find(degrade_array['MagicRes'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['MagicRes'][spell_index - 1]
+                send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
+				send_command('@input /p '..newSpell..' ')
+            end
 		elseif spell.name:startswith('Valiance') then
             spell_index = table.find(degrade_array['Ward'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Ward'][spell_index - 1]
                 send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
             end
+		elseif spell.name:startswith('Battuta') then
+            spell_index = table.find(degrade_array['Defensive'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Defensive'][spell_index - 1]
+                send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
+            end
         end
-		
+	else	
+		if spell.name:startswith('Gambit') then
+			send_command('@input /p '..newSpell..' ')
+		end
     end
 end
 

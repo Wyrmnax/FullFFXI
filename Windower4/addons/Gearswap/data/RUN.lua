@@ -230,8 +230,6 @@ function status_change(new,old)
 end
 
 function precast(spell,arg)
-	windower.add_to_chat(121,'Spell Name ' ..spell.name)
-	windower.add_to_chat(121,'Spell Type ' ..spell.type)
  -- Generic equip command for all Job Abilities and Weaponskills
 	if spell.type == 'JobAbility' then
 		if sets.precast.JA[spell.name] then
@@ -239,7 +237,6 @@ function precast(spell,arg)
 		end
 	elseif spell.type == 'Effusion' then
 		if spell.name:startswith("Lunge") then
-			windower.add_to_chat(121,'Entered Refine ')
 			refine_various_spells(spell, action, spellMap, eventArgs)
 		end
 		if sets.precast.JA[spell.name] then

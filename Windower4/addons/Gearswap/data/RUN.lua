@@ -32,6 +32,7 @@ function get_sets()
 	
 	degrade_array = {
         ['Attack'] = {'Swipe','Lunge'},
+		['Ward'] = { 'Vallation','Valiance'},
         }
 end -- End gear sets
 
@@ -229,6 +230,8 @@ function status_change(new,old)
 end
 
 function precast(spell,arg)
+	windower.add_to_chat(121,'Spell Name ' ..spell.name)
+	windower.add_to_chat(121,'Spell Type ' ..spell.type)
  -- Generic equip command for all Job Abilities and Weaponskills
 	if spell.type == 'JobAbility' then
 		if sets.precast.JA[spell.name] then
@@ -236,12 +239,15 @@ function precast(spell,arg)
 		end
 	elseif spell.type == 'Effusion' then
 		if spell.name:startswith("Lunge") then
+			windower.add_to_chat(121,'Entered Refine ')
 			refine_various_spells(spell, action, spellMap, eventArgs)
 		end
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
 		end
-   elseif spell.type == 'WeaponSkill' then
+	elseif spell.type == 'Ward' then
+		refine_various_spells(spell, action, spellMap, eventArgs)
+	elseif spell.type == 'WeaponSkill' then
 		if player.status == 'Engaged' then
 			if player.tp >= 100 then
 				if spell.target.distance <= 5 then
@@ -382,7 +388,14 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
                 newSpell = degrade_array['Attack'][spell_index - 1]
                 send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
             end
+		elseif spell.name:startswith('Valiance') then
+            spell_index = table.find(degrade_array['Ward'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Ward'][spell_index - 1]
+                send_command('@input /ja '..newSpell..' '..tostring(spell.target.raw))
+            end
         end
+		
     end
 end
 

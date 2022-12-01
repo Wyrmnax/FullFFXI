@@ -40,6 +40,8 @@ if player.name == 'Khory' then
 			end
 		end
 		
+	send_command('wait 3;input /lockstyleset 5')
+		
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 

@@ -2,14 +2,10 @@
 <settings>
     <global>
         <mode>blacklist</mode>
-        <size>10</size>
+        <size>20</size>
     </global>
     <khory>
         <mode>whitelist</mode>
         <size>20</size>
     </khory>
-    <sevii>
-        <mode>whitelist</mode>
-        <size>20</size>
-    </sevii>
 </settings>

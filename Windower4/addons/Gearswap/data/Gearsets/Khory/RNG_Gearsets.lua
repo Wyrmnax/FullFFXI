@@ -125,64 +125,31 @@ sets.RA = {
     left_ear="Telos Earring",
     right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="Dingir Ring",
-    right_ring="Regal Ring",}
-				
-sets.RA.Acc = {
-			head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-            body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Arewe Ring +1", rring="Arewe Ring +1",
-			back="Kayapa Cape", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
-				
--- Gun
-sets.RA.Gun = { 
-	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands={ name="Ikenga's Gloves", augments={'Path: A',}},
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Iskur Gorget",
-    waist="Chr. Bul. Pouch",
-    left_ear="Telos Earring",
-    right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
-    left_ring="Dingir Ring",
     right_ring="Regal Ring",
 	}
 				
-sets.RA.Acc.Gun = { 
-			head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-            body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Arewe Ring +1", rring="Arewe Ring +1",
-            back="Kayapa Cape", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+sets.RA.Acc = set_combine(sets.RA, {})
+				
+-- Gun
+sets.RA.Gun = set_combine(sets.RA, {})
+				
+sets.RA.Acc.Gun = set_combine(sets.RA, {})
 
 -- JA
 -- 	
 sets.precast.JA.Acc = {}
-sets.precast.JA["Barrage"] =  {
-				head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Rajas Ring", rring="Arewe Ring +1",
-                back="Sylvan's Chlamys", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+sets.precast.JA["Barrage"] =  set_combine(sets.RA, {})
 
-sets.precast.JA.Acc["Barrage"] =  {
-				head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Arewe Ring +1", rring="Arewe Ring +1",
-                back="Sylvan's Chlamys", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+sets.precast.JA.Acc["Barrage"] =  set_combine(sets.RA, {})
 -- Eagle Eye Shot
 sets.precast.JA["Eagle Eye Shot"] = set_combine(sets.RA, {legs="Arcadian Braccae +1"})
 
-sets.precast.JA.Acc["Eagle Eye Shot"] = set_combine(sets.RA.Acc, {legs="Arcadian Braccae +1"})
+sets.precast.JA.Acc["Eagle Eye Shot"] = set_combine(sets.RA, {legs="Arcadian Braccae +1"})
 
 -- Overkill
-sets.precast.JA["Overkill"] = {
-				head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Rajas Ring", rring="Arewe Ring +1",
-                back="Sylvan's Chlamys", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+sets.precast.JA["Overkill"] = set_combine(sets.RA, {})
 
-sets.precast.JA.Acc["Overkill"] = set_combine(sets.RA.Acc, {
-				head="Arcadian Beret +1", neck="Ocachi Gorget", lear="Clearview Earring", rear="Volley Earring",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Areew Ring +1", rring="Arewe Ring +1",
-                back="Sylvan's Chlamys", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"})
+sets.precast.JA.Acc["Overkill"] = set_combine(sets.RA, {})
 
 sets.precast.JA["Shadowbind"] = {hands="Orion Bracers +1"}
 sets.precast.JA["Sharpshot"] = {legs="Orion Braccae +1"}
@@ -242,29 +209,89 @@ sets.precast.WS.MAB = {
 	}
 -- Range
 sets.precast.RAWS = {
-				head="Uk'uxkaj Cap", neck="Ocachi Gorget", lear="Clearview Earring", rear="Flame Pearl",
-                body="Orion Jerkin +1", hands="Arc. Bracers +1", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back="Buquwik Cape", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+    range={ name="Fomalhaut", augments={'Path: A',}},
+    ammo="Chrono Bullet",
+    body="Cohort Cloak +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+	}
 -- Bow WS
 sets.precast.RAWS['Jishnu\'s Radiance'] = {
-				head="Uk'uxkaj Cap", neck="Light Gorget", lear="Clearview Earring", rear="Flame Pearl",
-                body="Orion Jerkin +1", hands="Arc. Bracers +1", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back="Buquwik Cape", waist="Light Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+    range={ name="Fomalhaut", augments={'Path: A',}},
+    ammo="Chrono Bullet",
+    body="Cohort Cloak +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+	}
 sets.precast.RAWS['Namas Arrow'] = {
-				head="Orion Beret +1", neck="Light Gorget", lear="Clearview Earring", rear="Flame Pearl",
-                body="Orion Jerkin +1", hands="Arc. Bracers +1", lring="Rajas Ring", rring="Pyrosoul Ring",
-				back="Buquwik Cape", waist="Light Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+    range={ name="Fomalhaut", augments={'Path: A',}},
+    ammo="Chrono Bullet",
+    body="Cohort Cloak +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+	}
 
 -- Gun/Crossbow WS
 sets.precast.RAWS['Last Stand'] = {
-				head="Uk'uxkaj Cap", neck="Light Gorget", lear="Clearview Earring", rear="Flame Pearl",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back="Buquwik Cape", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+    range={ name="Fomalhaut", augments={'Path: A',}},
+    ammo="Chrono Bullet",
+    body="Cohort Cloak +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+	}
 
 sets.precast.RAWS['Coronach'] = {
-				head="Uk'uxkaj Cap", neck="Light Gorget", lear="Clearview Earring", rear="Flame Pearl",
-                body="Orion Jerkin +1", hands="Orion Bracers +1", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back="Buquwik Cape", waist="Scout's Belt", legs="Nahtirah Trousers", feet="Orion Socks +1"}
+	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+    range={ name="Fomalhaut", augments={'Path: A',}},
+    ammo="Chrono Bullet",
+    body="Cohort Cloak +1",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Sanctity Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Friomisi Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring="Ilabrat Ring",
+    right_ring="Dingir Ring",
+	}
 
 sets.precast.RAWS['Wildfire'] = {
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},

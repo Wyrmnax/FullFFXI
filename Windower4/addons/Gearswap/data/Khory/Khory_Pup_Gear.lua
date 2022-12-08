@@ -1,3 +1,5 @@
+include('include/binds.lua')
+
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
     state.OffenseMode:options('Normal','Acc','FullAcc','Fodder')
@@ -68,6 +70,10 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 	send_command('bind @f8 gs c toggle AutoPuppetMode')
 	send_command('bind @f7 gs c toggle AutoRepairMode')
+end
+
+function file_unload()
+	clear_binds()
 end
 
 -- Define sets used by this job file.

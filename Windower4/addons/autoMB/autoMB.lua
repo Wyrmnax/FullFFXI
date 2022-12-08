@@ -33,11 +33,11 @@ job/level is pulled from game and appropriate elements are used
 single bursting only for now, but double may me introduced later
 
 ]]
-_addon.version = '0.7.0'
+_addon.version = '1.3.2'
 _addon.name = 'autoMB'
 _addon.author = 'Ekrividus'
 _addon.commands = {'autoMB','amb'}
-_addon.lastUpdate = '6/11/2020'
+_addon.lastUpdate = '11/22/2022'
 _addon.windower = '4'
 
 require 'tables'
@@ -50,7 +50,6 @@ chat = require('chat')
 packets = require('packets')
 
 defaults = T{}
-defaults.debug = false -- Show debug output
 defaults.frequency = 1 -- How many times per second to update skillchain effects
 defaults.show_skillchain = false -- Whether or not to show skillchain name
 defaults.show_elements = false -- Whether or not to show skillchain element info
@@ -62,7 +61,7 @@ defaults.useAOE = false -- Whether or not to use AOE elements
 defaults.cast_delay = 0.25 -- Delay from when skillchain occurs to when first spell is cast
 defaults.double_burst = false -- Not implemented yet
 defaults.double_burst_delay = 1 -- Time from when first spell starts casting to when second spell starts casting
-defaults.mp = -1 -- Don't burst if it will leave you below this mark
+defaults.mp = 100 -- Don't burst if it will leave you below this mark
 defaults.cast_type = 'spell' -- Type of MB spell|jutsu|helix|ga|ja|ra
 defaults.cast_tier = 1 -- What tier should we try to cast
 defaults.step_down = 0 -- Step down a tier for double bursts (0: Never, 1: If target changed, 2: Always)
@@ -111,6 +110,17 @@ local jutsu_tiers = {
     [1] = {suffix='Ichi'},
     [2] = {suffix='Ni'},
     [3] = {suffix='San'}
+}
+
+local max_tiers = {
+	spell=6,
+	helix=2,
+	ga=3,
+	ja=1,
+	ra=3,
+	jutsu=3,
+	white=3,
+	holy=2,
 }
 
 local spell_priorities = {
@@ -176,6 +186,8 @@ local ability_delay = 1.3
 local after_cast_delay = 2
 local failed_cast_delay = 2
 
+local debug = false -- Show debug output
+
 function message(text, to_log) 
 	if (text == nil or #text < 1) then
 		return
@@ -189,7 +201,7 @@ function message(text, to_log)
 end
 
 function debug_message(text, to_log) 
-	if (settings.debug == false or text == nil or #text < 1) then
+	if (debug == false or text == nil or #text < 1) then
 		return
 	end
 
@@ -207,6 +219,7 @@ end
 
 function show_status()
 	message('Auto Bursts: \t\t'..(active and 'On' or 'Off'))
+	message('Auto Burst Range: \t'..(settings.cast_range)..'y')
 	message('Magic Burst Type: \t'..settings.cast_type..' Tier: \t'..(settings.cast_tier))
 	message('Min MP: \t\t'..settings.mp)
 	message('Cast Delay: '..settings.cast_delay..' seconds')
@@ -218,8 +231,8 @@ function show_status()
 	message('Show Spell: \t'..(settings.show_spell and 'On' or 'Off'))
 end
 
-function buff_active(id)
-    if T(windower.ffxi.get_player().buffs):contains(BuffID) == true then
+function buff_active(buff_id)
+    if T(windower.ffxi.get_player().buffs):contains(buff_id) == true then
         return true
     end
     return false
@@ -236,7 +249,7 @@ function disabled()
         return true
     elseif (buff_active(10)) then -- Stun
         return true
-    elseif (buff_active(14)) then -- Charm
+    elseif (buff_active(14) or buff_active(17)) then -- Charm
         return true
     elseif (buff_active(28)) then -- Terrorize
         return true
@@ -251,7 +264,7 @@ function disabled()
 end
 
 function low_mp(spell)
-	local sp = res.spells:with('name', spell)
+	local sp = res.spells:with('en', spell)
 	if (sp == nil) then
 		return false
 	end
@@ -266,7 +279,7 @@ end
 
 function check_recast(spell_name)
     local recasts = windower.ffxi.get_spell_recasts()
-	local spell = res.spells:with('name', spell_name)
+	local spell = res.spells:with('en', spell_name)
 	if (spell == nil) then
 		return 0
 	end
@@ -306,8 +319,28 @@ function clear_skillchain()
 end
 
 function cast_spell(spell_cmd, target) 
+	target = windower.ffxi.get_mob_by_id(target.id)
+	if (not target.valid_target) then
+		debug_message("Cast Spell: Target is no longer valid")
+		finish_burst()
+		return
+	end
+	if (not target.is_npc) then
+		debug_message("Cast Spell: Target is not an npc")
+		finish_burst()
+		return
+	end
+	if (target.hpp <= 0) then
+		debug_message("Cast Spell: Target is too dead already")
+		finish_burst()
+		return
+	end
+	
 	if (settings.show_spell) then
 		message("Casting - "..spell_cmd..' for the burst!')
+	end
+	if (settings.gearswap) then
+		windower.send_command('gs c bursting')
 	end
 	windower.send_command('input /ma "'..spell_cmd..'" <t>')
 end
@@ -317,7 +350,8 @@ function get_spell(skillchain, last_spell, second_burst, target_change)
 	local weather_element, day_element = get_bonus_elements()
 	local spell = ''
 	local step_down = 0
-
+	local cast_type = settings.cast_type
+	local tier = settings.cast_tier
 
 	debug_message('Getting Spell ...',true)
 	debug_message('Day Element: '..day_element,true)
@@ -328,7 +362,9 @@ function get_spell(skillchain, last_spell, second_burst, target_change)
 	end
 
 	if (second_burst) then
-		if (settings.step_down == 2 or (settings.step_down == 1 and target_change ~= nil and target_change > 0)) then
+		if (cast_type == 'ja') then
+			cast_type = 'spell'
+		elseif (settings.step_down == 2 or (settings.step_down == 1 and target_change ~= nil and target_change > 0)) then
 			step_down = 1
 		end
 	end
@@ -348,24 +384,30 @@ function get_spell(skillchain, last_spell, second_burst, target_change)
 
 	debug_message('Best Spell Element: '..spell_element,true)
 
-	local tier = settings.cast_tier - step_down
+	if (tier > max_tiers[cast_type]) then
+		tier = max_tiers[cast_type]
+	end
+	tier = (tier - step_down > 0 and (tier - step_down) or 1)
+	
 	-- Find spell/helix/jutsu that will be best based on best element
-	if (elements[spell_element] ~= nil and elements[spell_element][settings.cast_type] ~= nil) then
-		spell = elements[spell_element][settings.cast_type]
+	if (elements[spell_element] ~= nil and elements[spell_element][cast_type] ~= nil) then
+		spell = elements[spell_element][cast_type]
 
-		tier = (tier >= 1 and tier or 1)
-		spell = spell..(settings.cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
-		spell = spell..(settings.cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
+		tier = tier >= 1 and tier or 1
+		tier = cast_type == 'jutsu' and tier > 3 and 3 or tier
+
+		spell = spell..(cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
+		spell = spell..(cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
 
 		local recast = check_recast(spell)
 		if (recast > 0) then
 			if (settings.step_down == 2 and tier > 1) then
-				spell = elements[spell_element][settings.cast_type]
+				spell = elements[spell_element][cast_type]
 				while (tier > 1) do
 					tier = tier - 1
 					tier = (tier >= 1 and tier or 1)
-					spell = spell..(settings.cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
-					spell = spell..(settings.cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
+					spell = spell..(cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
+					spell = spell..(cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
 					recast = check_recast(spell)
 					if (not recast or recast <= 0) then
 						break
@@ -382,12 +424,14 @@ function get_spell(skillchain, last_spell, second_burst, target_change)
 
 	if (spell == nil or spell == '') then
 		for _,element in pairs(skillchain.elements) do
-			if (elements[element] ~= nil and elements[element][settings.cast_type] ~= nil) then
-				spell = elements[element][settings.cast_type]
+			if (elements[element] ~= nil and elements[element][cast_type] ~= nil) then
+				spell = elements[element][cast_type]
 
 				tier = (tier >= 1 and tier or 1)
-				spell = spell..(settings.cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
-				spell = spell..(settings.cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
+				spell = spell..(cast_type == 'jutsu' and ':' or '')..(tier > 1 and ' ' or '')
+				if (T{'spell', 'jutsu', 'ga'}:contains(cast_type)) then
+					spell = spell..(cast_type == 'jutsu' and jutsu_tiers[tier].suffix or magic_tiers[tier].suffix)
+				end
 			
 				local recast = check_recast(spell)
 				if (recast == 0) then
@@ -439,11 +483,10 @@ function set_target(target)
 end
 
 function do_burst(target, skillchain, second_burst, last_spell) 
-	windower.send_command('gs c bursting')
-
 	player = windower.ffxi.get_player()
-	if (target == nil or not target.valid_target or target.hpp <= 0) then
-		message("Bad Target!")
+	if (target == nil or not target.is_npc or not target.valid_target or target.hpp <= 0) then
+		debug_message("Bad Target!")
+		finish_burst()
 		return
 	end
 
@@ -458,23 +501,15 @@ function do_burst(target, skillchain, second_burst, last_spell)
 		if (settings.show_spell) then
 			message("No spell found for burst!")
 		end
-		windower.send_command('gs c notbursting')
+		finish_burst()
 		return
 	elseif (disabled()) then
 		message("Unable to cast, disabled!")
-		windower.send_command('gs c notbursting')
+		finish_burst()
 		return
 	elseif (low_mp(spell)) then
 		message("Not enough MP for MB!")
-		windower.send_command('gs c notbursting')
-		return
-	elseif (is_casting) then
-		debug_message("Casting, delaying for 0.5")
-		coroutine.schedule(do_burst:prepare(target, skillchain, second_burst, last_spell), 0.5)
-		return
-	elseif (is_busy > 0) then
-		debug_message("Busy for "..is_busy.." seconds, delaying MB")
-		coroutine.schedule(do_burst:prepare(target, skillchain, second_burst, last_spell), is_busy)
+		finish_burst()
 		return
 	end
 	
@@ -484,15 +519,15 @@ function do_burst(target, skillchain, second_burst, last_spell)
 
 	if (settings.double_burst and not second_burst) then
 		debug_message("Setting up double burst")
-		local cast_time = res.spells:with('name', spell) and res.spells:with('name', spell).cast_time or nil
+		local cast_time = res.spells:with('en', spell) and res.spells:with('en', spell).cast_time or nil
 		if (cast_time == nil) then
 			finish_burst()
 			return
 		end
-		local d = cast_time + settings.double_burst_delay + target_delay + 2
+		local d = cast_time + settings.double_burst_delay + target_delay + 1
 		coroutine.schedule(do_burst:prepare(target, skillchain, true, spell), d)
 	else
-		local cast_time = res.spells:with('name', spell) and res.spells:with('name', spell).cast_time or nil
+		local cast_time = res.spells:with('en', spell) and res.spells:with('en', spell).cast_time or nil
 		if (cast_time == nil) then
 			finish_burst()
 			return
@@ -504,8 +539,11 @@ end
 
 function finish_burst()
 	is_bursting = false
+	debug_message("Finished Burst, clearing chain and telling gearswap")
+	if (settings.gearswap) then
+		windower.send_command('gs c notbursting')
+	end
 	clear_skillchain()
-	windower.send_command('gs c notbursting')
 end
 
 --[[ Windower Events ]]--
@@ -557,7 +595,7 @@ windower.register_event('incoming chunk', function(id, packet, data, modified, i
 		end
 	end
 
-	if (is_casting or is_busy > 0) then
+	if (is_bursting) then
 		debug_message("Bursting: "..(is_bursting and "Yes" or "No").." Casting: "..(is_casting and "Yes" or "No").." Busy: "..is_busy.." second(s)")
 		return
 	end
@@ -571,32 +609,36 @@ windower.register_event('incoming chunk', function(id, packet, data, modified, i
 
 	local cur_t = windower.ffxi.get_mob_by_target('t')
 	local bt = windower.ffxi.get_mob_by_target('bt')
-	
+
 	for _, target in pairs(actions_packet.targets) do
 		local t = windower.ffxi.get_mob_by_id(target.id)
-		-- Make sure the mob is claimed by our alliance then
-		if (t ~= nil and ((cur_t and cur_t.id == t.id) or (bt and bt.id == t.id) or party_ids:contains(t.claim_id))) then
-			-- Make sure the mob is a valid MB target
-			if (t and (t.is_npc and t.valid_target and not t.in_party and not t.charmed) and t.distance:sqrt() < settings.cast_range) then
-				for _, action in pairs(target.actions) do
-					if (skillchains[action.add_effect_message]) then
+		if (t == nil) then
+			debug_message("No target from packet")
+			return
+		end
+		-- Make sure the mob is a valid MB target
+		if (t.valid_target and t.is_npc) then
+			for _, action in pairs(target.actions) do
+				if (skillchains[action.add_effect_message]) then
+					-- Don't MB targets that aren't claimed by us ... this might be meh
+					debug_message("Mob ("..t.name..") claim ID: "..t.claim_id.." in alliance? "..(party_ids:contains(t.claim_id) and "Yes" or "No"))
+					if  (not party_ids:contains(t.claim_id)) then
+						return
+					end
+					-- Don't MB targets too far away
+					if (t.distance:sqrt() < settings.cast_range) then
 						debug_message("Skillchain effect detected on "..t.name)
 						last_skillchain = skillchains[action.add_effect_message]
-						coroutine.schedule(do_burst:prepare(t, last_skillchain, false, '', 0), settings.cast_delay)
+						coroutine.schedule(do_burst:prepare(t, last_skillchain, false, '', 0), settings.cast_delay + is_busy)
+					else
+						debug_message("Target ("..t.name..") out of range "..t.distance:sqrt().."' Max MB Range: "..settings.cast_range.."'")
 					end
 				end
-			else
-				debug_message("MB Target out of range, max range: "..settings.cast_range)
 			end
-		else
-			--debug_message("MB Target is not claimed by party or alliance")
 		end
 	end
 end)
 
-windower.register_event('zone change', function()
-	config.load(defaults)
-end)
 -- Change spell type based on job/sub
 windower.register_event('job change', function(main_id, main_lvl, sub_id, sub_lvl)
 	local main = res.jobs[main_id].english_short
@@ -622,17 +664,16 @@ windower.register_event('job change', function(main_id, main_lvl, sub_id, sub_lv
 end)
 
 -- Stop checking if logout happens or zoning and disable on zone is true
-windower.register_event('logout', function(...)
+windower.register_event('zone change', 'logout', function(...)
 	windower.send_command('autoMB off')
 	player = nil
 	return
 end)
 
-windower.register_event('zone change')
 -- 
 -- Process incoming commands
 windower.register_event('addon command', function(...)
-	local cmd = 'help'
+	local cmd = 'none'
 	if (#arg > 0) then
 		cmd = arg[1]
 	end
@@ -652,15 +693,21 @@ windower.register_event('addon command', function(...)
 	elseif (cmd == 'status' or cmd == 'show') then
 		show_status()
 		return
-	elseif (cmd == 'on') then
-		windower.add_to_chat(207, 'AutoMB activating')
+	elseif (cmd == "none") then
+		active = not active
+		windower.add_to_chat(207, 'AutoMB '..(acitve and 'activating' or 'deactivating'))
 		player = windower.ffxi.get_player()
-		active = true
 		last_check_time = os.clock()
         return
-    elseif (cmd == 'off') then
-        windower.add_to_chat(207, 'AutoMB deactivating')
+	elseif (T{"on","start","run","go"}:contains(cmd)) then
+		active = true
+		windower.add_to_chat(207, 'AutoMB activating')
+		player = windower.ffxi.get_player()
+		last_check_time = os.clock()
+        return
+    elseif (T{"on","start","run","go"}:contains(cmd)) then
         active = false
+        windower.add_to_chat(207, 'AutoMB deactivating')
 		return
 	elseif (cmd == 'cast' or cmd == 'c') then
 		if (#arg < 2) then
@@ -669,6 +716,7 @@ windower.register_event('addon command', function(...)
 		if (T(cast_types):contains(arg[2]:lower())) then
 			settings.cast_type = arg[2]:lower()
 		end
+		windower.add_to_chat(207, "Cast Type set to "..settings.cast_type)
 		settings:save()
 		return
 	elseif (cmd == 'tier' or cmd == 't') then
@@ -678,25 +726,24 @@ windower.register_event('addon command', function(...)
 		end
 		local t = tonumber(arg[2])
 		if (settings.cast_type == 'jutsu') then
-			--if (settings.cast_tier > 0 and settings.cast_tier < 4) then
+			if (t > 0 and t < 4) then
 				settings.cast_tier = t
-			--end
+			end
 		else
 			if (t > 0 and t < 7) then
 				settings.cast_tier = t
 			end		
 		end
-		windower.add_to_chat(207, "t value. " ..t)
-		windower.add_to_chat(207, "UTier set. " ..settings.cast_tier)
-		settings:save()
 		message("Cast Tier set to: "..t.." ["..(settings.cast_type == 'jutsu' and jutsu_tiers[settings.cast_tier].suffix or magic_tiers[settings.cast_tier].suffix).."]")
+		settings:save()
 		return
 	elseif (cmd == 'range' or cmd == 'rng') then
 		if (#arg < 2) then
 			windower.add_to_chat(207, "Usage: autoMB ##\nTells AutoMB what the max cast range to target is (default is 22).")
 		end
 
-		settings.cast_range = arg[2]:lower() or 22
+		settings.cast_range = tonumber(arg[2]) and tonumber(arg[2]) or 22
+		windower.add_to_chat(207, "Cast Range set to "..settings.cast_range)
 		settings:save()
 		return
 	elseif (cmd == 'mp') then
@@ -706,6 +753,7 @@ windower.register_event('addon command', function(...)
 			return
 		end
 		settings.mp = n
+		windower.add_to_chat(207, "Cast Min MP set to "..settings.mp)
 		settings:save()
 		return
 	elseif (cmd == 'delay' or cmd == 'd') then
@@ -715,6 +763,7 @@ windower.register_event('addon command', function(...)
 			return
 		end
 		settings.cast_delay = n
+		windower.add_to_chat(207, "Cast Delay set to "..settings.cast_delay)
 		settings:save()
 		return
 	elseif (cmd == 'frequency' or cmd == 'f') then
@@ -724,10 +773,12 @@ windower.register_event('addon command', function(...)
 			return
 		end
 		settings.frequency = n
+		windower.add_to_chat(207, "Check Frequency set to "..settings.frequency)
 		settings:save()
 		return
 	elseif (cmd == 'doubleburst' or cmd == 'double' or cmd == 'dbl') then
 		settings.double_burst = not settings.double_burst
+		windower.add_to_chat(207, "Double Bursting set to "..(settings.double_burst and "True" or "False"))
 		settings:save()
 		return
 	elseif (cmd == 'doubleburstdelay' or cmd == 'doubledelay' or cmd == 'dbldelay' or cmd == 'dbld') then
@@ -737,14 +788,19 @@ windower.register_event('addon command', function(...)
 			return
 		end
 		settings.double_burst_delay = n
+		windower.add_to_chat(207, "Double Burst Delay set to "..settings.double_burst_delay)
 		settings:save()
 		return
 	elseif (cmd == 'weather') then
 		settings.check_weather = not settings.check_weather
 		message('Will'..(settings.check_weather and ' ' or ' not ')..'use current weather bonuses')
+		settings:save()
+		return
 	elseif (cmd == 'day') then
 		settings.check_day = not settings.check_day
 		message('Will'..(settings.check_day and ' ' or ' not ')..'use current day bonuses')
+		settings:save()
+		return
 	elseif (cmd == 'toggle' or cmd == 'tog') then
 		local what = 'all'
 		local toggle = 'toggle'
@@ -808,8 +864,8 @@ windower.register_event('addon command', function(...)
 			settings.step_down = 0
 			txt = 'never'
 		end
-		settings:save()
 		message("Double burst Step Down set to "..txt)
+		settings:save()
 		return
 	elseif (cmd == 'gearswap' or cmd == 'gs') then
 		if (settings.gearswap) then
@@ -827,13 +883,15 @@ windower.register_event('addon command', function(...)
 		settings.change_target = not settings.change_target
 		message("Auto target swapping "..(settings.change_target and 'enabled' or 'disabled')..".")
 		settings:save()
+		return
 	elseif (cmd == 'zone' or cmd == 'z') then
 		settings.disable_on_zone = settings.disable_on_zone and (not settings.disable_on_zone) or true
 		message("Auto MB will be "..(settings.disable_on_zone and 'enabled' or 'disabled').." when zoning.")
 		settings:save()
+		return
 	elseif (cmd == 'debug') then
-		settings.debug = not settings.debug
-		message("Will "..(settings.debug and '' or ' not ').."show debug information")
+		debug = not debug
+		message("Will "..(debug and '' or ' not ').."show debug information")
 		return
     end
 end) -- Addon Command

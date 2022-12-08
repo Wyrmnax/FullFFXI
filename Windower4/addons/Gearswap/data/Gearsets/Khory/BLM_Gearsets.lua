@@ -38,7 +38,7 @@ if player.Name == 'Khory' then
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Assid. Pants +1",
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Sanctity Necklace",
+    neck="Rep. Plat. Medal",
     waist="Fucho-no-Obi",
     left_ear="Etiolation Earring",
     right_ear="Eabani Earring",
@@ -124,7 +124,24 @@ if player.Name == 'Khory' then
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 		-- Damage
-		sets.midcast.Nuke = {
+	sets.midcast.Nuke = {
+	main="Mpaca's Staff",
+    sub="Enki Strap",
+    ammo="Ghastly Tathlum +1",
+    body="Cohort Cloak +1",
+    hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    legs={ name="Agwu's Slops", augments={'Path: A',}},
+    feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+    neck="Sanctity Necklace",
+    waist="Skrymir Cord",
+    left_ear="Malignance Earring",
+    right_ear="Regal Earring",
+    left_ring="Metamor. Ring +1",
+    right_ring="Freke Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
+	
+	sets.midcast.Nuke.MB = {
 	main="Mpaca's Staff",
     sub="Enki Strap",
     ammo="Ghastly Tathlum +1",
@@ -190,14 +207,69 @@ if player.Name == 'Khory' then
 		
 		-- Melee Sets
 		sets.TP = set_combine(sets.idle.PDT, {
-				head="", neck="", lear="", rear="",
-                body="", hands="", lring="", rring="",
-                back="", waist="", legs="", feet=""})
-		sets.precast.WS = set_combine(sets.TP, {
-				head="", neck="", lear="", rear="",
-                body="", hands="", lring="", rring="",
-                back="", waist="", legs="", feet=""})
+				ammo="Amar Cluster",
+				head={ name="Nyame Helm", augments={'Path: B',}},
+				body={ name="Nyame Mail", augments={'Path: B',}},
+				hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+				legs={ name="Nyame Flanchard", augments={'Path: B',}},
+				feet={ name="Nyame Sollerets", augments={'Path: B',}},
+				neck="Lissome Necklace",
+				waist="Eschan Stone",
+				left_ear="Crep. Earring",
+				right_ear="Telos Earring",
+				left_ring="Petrov Ring",
+				right_ring="Jhakri Ring",
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	})
+		sets.precast.WS = {
+				ammo="Amar Cluster",
+				head={ name="Nyame Helm", augments={'Path: B',}},
+				body={ name="Nyame Mail", augments={'Path: B',}},
+				hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+				legs={ name="Nyame Flanchard", augments={'Path: B',}},
+				feet={ name="Nyame Sollerets", augments={'Path: B',}},
+				neck="Caro Necklace",
+				waist="Eschan Stone",
+				left_ear="Crep. Earring",
+				right_ear="Telos Earring",
+				left_ring="Petrov Ring",
+				right_ring="Jhakri Ring",
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				}
+		sets.precast.WS.WSD = {
+				ammo="Amar Cluster",
+				head={ name="Nyame Helm", augments={'Path: B',}},
+				body={ name="Nyame Mail", augments={'Path: B',}},
+				hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+				legs={ name="Nyame Flanchard", augments={'Path: B',}},
+				feet={ name="Nyame Sollerets", augments={'Path: B',}},
+				neck="Caro Necklace",
+				waist="Eschan Stone",
+				left_ear="Crep. Earring",
+				right_ear="Telos Earring",
+				left_ring="Petrov Ring",
+				right_ring="Jhakri Ring",
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				}
+		sets.precast.WS.MAB = {
+				ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+				body={ name="Cohort Cloak +1", augments={'Path: A',}},
+				hands={ name="Agwu's Gages", augments={'Path: A',}},
+				legs={ name="Agwu's Slops", augments={'Path: A',}},
+				feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+				neck="Sanctity Necklace",
+				waist="Orpheus's Sash",
+				left_ear="Malignance Earring",
+				right_ear={ name="Wicce Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+11','Enmity-1',}},
+				left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+				right_ring="Freke Ring",
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				}
 		sets.precast.WS['Shattersoul'] = set_combine(sets.precast.WS, {})
+		sets.precast.WS['Retribution'] = set_combine(sets.precast.WS.WSD, {})
+		sets.precast.WS['Rock Crusher'] = set_combine(sets.precast.WS.MAB, {})
+		sets.precast.WS['Earth Crusher'] = set_combine(sets.precast.WS.MAB, {})
+		sets.precast.WS['Cataclysm'] = set_combine(sets.precast.WS.MAB, {})
 		
 		-- Misc
 		sets.misc.Waltz = {}

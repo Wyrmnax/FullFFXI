@@ -27,7 +27,10 @@ function get_sets(spell)
 	MDT = 0
 	Skill = 0
 	MP = 0
+	MB = 0
 	ShadowType = 'None'
+	time_start = 0
+	MB_Window = 0
 end 
 
 -- Called when this job file is unloaded (eg: job change)
@@ -433,52 +436,52 @@ function midcast(spell,arg)
 			equip(sets.midcast.Elemental)
 		else
 			-- Normal Nuke
-			if Mode == 0 then
+			if MB == 0 then
 				if MP == 1 then
 					-- High Magic Accuracy
 					if Skill == 1 then
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.Acc, {body="Spaekona's Coat", lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+							equip(sets.midcast.Nuke.Acc, {waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.Acc,{body="Spaekona's Coat"})
+							equip(sets.midcast.Nuke.Acc,{})
 						end
 					else
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke,{body="Spaekona's Coat", lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke,{body="Spaekona's Coat"})
+							equip(sets.midcast.Nuke,{})
 						end
 					end
 				else
 					-- High Magic Accuracy
 					if Skill == 1 then
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.Acc, {lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+							equip(sets.midcast.Nuke.MB, {waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.Acc)
+							equip(sets.midcast.Nuke.MB)
 						end
 					else
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke,{lring="Zodiac Ring", waist="Hachirin-no-Obi", back="Twilight Cape"})
+							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke)
+							equip(sets.midcast.Nuke.MB)
 						end
 					end
 				end
 			-- Magic Burst
-			elseif Mode == 1 then
+			elseif MB == 1 then
 				if MP == 1 then
 					if Skill == 1 then
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB.Acc,{body="Spaekona Coat", waist="Hachirin-no-Obi"})
+							equip(sets.midcast.Nuke.MB.Acc,{waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.MB.Acc,{body="Spaekona Coat"})
+							equip(sets.midcast.Nuke.MB.Acc,{})
 						end
 					else
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB,{body="Spaekona Coat", waist="Hachirin-no-Obi"})
+							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.MB,{body="Spaekona Coat"})
+							equip(sets.midcast.Nuke.MB,{})
 						end
 					end
 				else
@@ -635,15 +638,72 @@ function previous_set()
 	if Mode == 2 then
 		equip(sets.idle.Death)
 	else
-		if Skill == 0 then
+		if player.status == 'Engaged'then
 			equip(sets.TP)
 			windower.add_to_chat(121,'TP Set')
-		elseif Skill >= 1 then
-			equip(sets.TP.Acc)
-			windower.add_to_chat(121,'Acc TP Set')
+		else
+			equip(sets.idle.PDT)
+			windower.add_to_chat(121,'Idle')
 		end
 	end
 end
+
+--SC Listener
+--windower.register_event('incoming chunk', function(id, packet, data, modified, is_injected, is_blocked)
+--	if id == 0x28 then
+--		windower.add_to_chat(121,'Event ID ' ..id)
+--	end
+--end)
+
+local skillchains = {
+	[288] = {id=288,english='Light',elements={'Light','Fire','Lightning','Wind'}},
+	[289] = {id=289,english='Darkness',elements={'Dark','Earth','Water','Ice'}},
+	[290] = {id=290,english='Gravitation',elements={'Earth', 'Dark'}},
+	[291] = {id=291,english='Fragmentation',elements={'Lightning','Wind'}},
+	[292] = {id=292,english='Distortion',elements={'Ice', 'Water'}},
+	[293] = {id=293,english='Fusion',elements={'Fire', 'Light'}},
+	[294] = {id=294,english='Compression',elements={'Dark'}},
+	[295] = {id=295,english='Liquefaction',elements={'Fire'}},
+	[296] = {id=296,english='Induration',elements={'Ice'}},
+	[297] = {id=297,english='Reverberation',elements={'Water'}},
+	[298] = {id=298,english='Transfixion', elements={'Light'}},
+	[299] = {id=299,english='Scission',elements={'Earth'}},
+	[300] = {id=300,english='Detonation',elements={'Wind'}},
+	[301] = {id=301,english='Impaction',elements={'Lightning'}}
+}
+
+windower.register_event('action', function(act)
+	for _, target in pairs(act.targets) do
+		local battle_target = windower.ffxi.get_mob_by_target("t")
+		if battle_target ~= nil and target.id == battle_target.id then
+			for _, action in pairs(target.actions) do
+				if action.add_effect_message > 287 and action.add_effect_message < 302 then
+					last_skillchain = skillchains[action.add_effect_message]
+					equip(sets.midcast.Nuke.MB)
+					MB = 1
+					windower.add_to_chat(121,'Last sc ' ..last_skillchain.english)
+                    MB_Window = 12
+					MB_Time = os.time()
+				end
+			end
+		end
+	end
+end)
+
+windower.register_event('prerender', function()
+	--Items we want to check every second
+	if os.time() > time_start then
+		time_start = os.time()
+		if MB_Window > 0 then
+			MB_Window = 10 - (os.time() - MB_Time)
+        else
+			if MB == 1 then
+				MB = 0
+				previous_set()
+			end
+		end
+	end
+end)
 
 function slot_lock()					
     if player.equipment.left_ear == 'Reraise Earring' then

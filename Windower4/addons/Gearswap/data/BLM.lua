@@ -437,7 +437,7 @@ function midcast(spell,arg)
 		else
 			-- Normal Nuke
 			if MB == 0 then
-				if MP == 1 then
+				if MP == 1 then					
 					-- High Magic Accuracy
 					if Skill == 1 then
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
@@ -449,6 +449,7 @@ function midcast(spell,arg)
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 						else
+							windower.add_to_chat(121,'Nuke Set')
 							equip(sets.midcast.Nuke,{})
 						end
 					end
@@ -456,15 +457,15 @@ function midcast(spell,arg)
 					-- High Magic Accuracy
 					if Skill == 1 then
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB, {waist="Hachirin-no-Obi"})
+							equip(sets.midcast.Nuke, {waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.MB)
+							equip(sets.midcast.Nuke)
 						end
 					else
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
+							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.MB)
+							equip(sets.midcast.Nuke)
 						end
 					end
 				end
@@ -681,7 +682,7 @@ windower.register_event('action', function(act)
 					last_skillchain = skillchains[action.add_effect_message]
 					equip(sets.midcast.Nuke.MB)
 					MB = 1
-					windower.add_to_chat(121,'Last sc ' ..last_skillchain.english)
+					--windower.add_to_chat(121,'Last sc ' ..last_skillchain.english)
                     MB_Window = 12
 					MB_Time = os.time()
 				end

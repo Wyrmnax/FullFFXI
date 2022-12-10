@@ -82,7 +82,7 @@ if player.Name == 'Khory' then
 		sets.precast.Fastcast = {
 	main="Mpaca's Staff",
     sub="Enki Strap",
-    ammo="Sapience Orb",
+    ammo="Impatiens",
     head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
     hands={ name="Agwu's Gages", augments={'Path: A',}},
@@ -93,7 +93,7 @@ if player.Name == 'Khory' then
     left_ear="Etiolation Earring",
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
-    right_ring="Jhakri Ring",
+    right_ring="Lebeche Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 	
@@ -110,10 +110,9 @@ if player.Name == 'Khory' then
 	main="Mpaca's Staff",
     sub="Enki Strap",
     ammo="Ghastly Tathlum +1",
-    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    body="Agwu's Robe",
+    body="Cohort Cloak +1",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs={ name="Agwu's Slops", augments={'Path: A',}},
+    legs="Wicce Chausses +2",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
     waist="Skrymir Cord",
@@ -130,7 +129,7 @@ if player.Name == 'Khory' then
     ammo="Ghastly Tathlum +1",
     body="Cohort Cloak +1",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs={ name="Agwu's Slops", augments={'Path: A',}},
+    legs="Wicce Chausses +2",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
     waist="Skrymir Cord",
@@ -144,17 +143,18 @@ if player.Name == 'Khory' then
 	sets.midcast.Nuke.MB = {
 	main="Mpaca's Staff",
     sub="Enki Strap",
-    ammo="Ghastly Tathlum +1",
-    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    body="Agwu's Robe",
+    ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+    head="Ea Hat +1",
+    body="Ea Houppelande",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs={ name="Agwu's Slops", augments={'Path: A',}},
+    legs="Wicce Chausses +2",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
-    waist="Skrymir Cord",
+    waist="Orpheus's Sash",
+    --waist="Skrymir Cord",
     left_ear="Malignance Earring",
     right_ear="Regal Earring",
-    left_ring="Metamor. Ring +1",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Freke Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
@@ -202,7 +202,23 @@ if player.Name == 'Khory' then
 				head="Appetence Crown", neck="Aesir Torque",
 				hands="Sorcerer's Gloves", 
 				back="Merciful Cape", waist="Fucho-no-Obi", legs="Wizard's Tonban", feet="Goetia Sabots +2"})
-		sets.midcast.Aspir = set_combine(sets.midcast.Dark)
+		sets.midcast.Aspir = set_combine(sets.midcast.Dark, {
+			main="Mpaca's Staff",
+			sub="Enki Strap",
+			ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+			head="Amalric Coif +1",
+			body="Agwu's Robe",
+			hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			legs={ name="Agwu's Slops", augments={'Path: A',}},
+			feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+			neck="Erra Pendant",
+			waist="Fucho-no-Obi",
+			left_ear="Malignance Earring",
+			right_ear="Regal Earring",
+			left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+			right_ring="Evanescence Ring",
+			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	})
 		sets.midcast.Stun = set_combine(sets.midcast.Macc)
 		
 		-- Melee Sets

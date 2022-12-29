@@ -13,19 +13,21 @@ if player.Name == 'Khory' then
 		automacroset = 0
 		if automacroset == 1 then
 			if player.sub_job == 'RDM' then
-				set_macro_page(2,1)
+				set_macro_page(1,8)
 			elseif player.sub_job =='WHM' then
-				set_macro_page(2,2)
+				set_macro_page(1,8)
 			elseif player.sub_job == 'SCH' then
-				set_macro_page(2,3)
+				set_macro_page(1,8)
 			elseif player.sub_job == 'BRD' then
-				set_macro_page(2,4)
+				set_macro_page(1,8)
 			elseif player.sub_job =='NIN' then 
-				set_macro_page(2,5)
+				set_macro_page(1,8)
 			end
 		else
-			set_macro_page(2,3)
+			set_macro_page(1,8)
 		end
+		
+	send_command('wait 3;input /lockstyleset 16')
 
 		-- Auto Sets
 		-- Standard/idle
@@ -41,7 +43,7 @@ if player.Name == 'Khory' then
     neck="Rep. Plat. Medal",
     waist="Fucho-no-Obi",
     left_ear="Etiolation Earring",
-    right_ear="Eabani Earring",
+    right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -59,7 +61,7 @@ if player.Name == 'Khory' then
     neck="Sanctity Necklace",
     waist="Fucho-no-Obi",
     left_ear="Etiolation Earring",
-    right_ear="Eabani Earring",
+    right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -83,14 +85,14 @@ if player.Name == 'Khory' then
 	main="Mpaca's Staff",
     sub="Enki Strap",
     ammo="Impatiens",
-    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    head={ name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+10','"Mag.Atk.Bns."+6',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
     hands={ name="Agwu's Gages", augments={'Path: A',}},
     legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+5','INT+2','Mag. Acc.+9',}},
     neck="Voltsurge Torque",
     waist="Embla Sash",
-    left_ear="Etiolation Earring",
+    left_ear="Malignance Earring",
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
@@ -99,7 +101,10 @@ if player.Name == 'Khory' then
 	
 		sets.precast.Elemental = set_combine(sets.precast.Fastcast,{})
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {})
+		sets.precast.Death = set_combine(sets.precast.Fastcast, {})
 		-- Midcast
+		
+		sets.midcast.Stun = set_combine(sets.precast.Fastcast, {})
 		sets.midcast.Recast = set_combine(sets.idle.PDT, {waist="Witful Belt"})
 		
 		sets.midcast.ConserveMP = {}
@@ -112,7 +117,7 @@ if player.Name == 'Khory' then
     ammo="Ghastly Tathlum +1",
     body="Cohort Cloak +1",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs="Wicce Chausses +2",
+    legs="Wicce Chausses +3",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
     waist="Skrymir Cord",
@@ -127,9 +132,10 @@ if player.Name == 'Khory' then
 	main="Mpaca's Staff",
     sub="Enki Strap",
     ammo="Ghastly Tathlum +1",
-    body="Cohort Cloak +1",
+    head="Ea Hat +1",
+    body="Wicce Coat +3",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs="Wicce Chausses +2",
+    legs="Wicce Chausses +3",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
     waist="Skrymir Cord",
@@ -145,9 +151,9 @@ if player.Name == 'Khory' then
     sub="Enki Strap",
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Ea Hat +1",
-    body="Ea Houppelande",
-    hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs="Wicce Chausses +2",
+    body="Wicce Coat +3",
+    hands="Agwu's gages",
+    legs="Wicce Chausses +3",
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Sanctity Necklace",
     waist="Orpheus's Sash",
@@ -160,15 +166,34 @@ if player.Name == 'Khory' then
 	}
 		
 		--Healing Magic
-		sets.midcast.Cure = {main="Arka IV", 
-				head="", neck="Colossus's Torque", lear="Novia Earring", rear="Lifestorm Earring",
-                body="Heka's Kalasiris", hands="Bokwus Gloves", lring="Aquasoul Ring", rring="Aquasoul Ring",
-                back="Refraction Cape", waist="Cascade Belt", legs="Bokwus Slops", feet="Rubeus Boots"}
+		sets.midcast.Cure = {
+	head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+    body="Shamash Robe",
+    hands="Telchine Gloves",
+    legs={ name="Vanya Slops", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+    feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+    neck="Rep. Plat. Medal",
+    waist="Fucho-no-Obi",
+    left_ear="Lempo Earring",
+    right_ear="Mendi. Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
 		
-		sets.midcast.Curaga = {main="Arka IV", 
-				head="", neck="Colossus's Torque", lear="Novia Earring", rear="Lifestorm Earring",
-                body="Heka's Kalasiris", hands="Bokwus Gloves", lring="Aquasoul Ring", rring="Aquasoul Ring",
-                back="Refraction Cape", waist="Cascade Belt", legs="Bokwus Slops", feet="Rubeus Boots"}
+		sets.midcast.Curaga = {
+	head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+    body="Shamash Robe",
+    hands="Telchine Gloves",
+    legs={ name="Vanya Slops", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+    feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+    neck="Rep. Plat. Medal",
+    waist="Fucho-no-Obi",
+    left_ear="Lempo Earring",
+    right_ear="Mendi. Earring",
+    left_ring="Defending Ring",
+    right_ring="Shneddick Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},}
 	
 		-- Enhancing 
 		-- 
@@ -182,14 +207,40 @@ if player.Name == 'Khory' then
 
 		-- Enfeebling
 		-- Potency
-		sets.midcast.Enfeebling = {main="Atinian Staff", sub="Mephitis Grip", ammo="Aureole",
-				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
-                body="Bokwus Robe", hands="Hagondes Cuffs", lring="Perception ring", rring="Sangoma ring",
-                back="Refraction Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
-		sets.midcast.Macc = {main="Atinian Staff", sub="Mephitis Grip", ammo="Aureole",
-				head="Nahtirah Hat", neck="Eddy Necklace", lear="Lifestorm Earring", rear="Psystorm Earring",
-                body="Bokwus Robe", hands="Hagondes Cuffs", lring="Perception ring", rring="Sangoma ring",
-                back="Refraction Cape", waist="Demonry Sash", legs="Bokwus Slops", feet="Bokwus Boots"}
+		sets.midcast.Enfeebling = {
+		main="Mpaca's Staff",
+		sub="Enki Strap",
+		ammo="Ghastly Tathlum +1",
+		head="Ea Hat +1",
+		body="Wicce Coat +3",
+		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs="Wicce Chausses +3",
+		feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+		neck="Sanctity Necklace",
+		waist="Skrymir Cord",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
+		left_ring="Metamor. Ring +1",
+		right_ring="Freke Ring",
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
+		sets.midcast.Macc = {
+		main="Mpaca's Staff",
+		sub="Enki Strap",
+		ammo="Ghastly Tathlum +1",
+		head="Ea Hat +1",
+		body="Wicce Coat +3",
+		hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+		legs="Wicce Chausses +3",
+		feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+		neck="Sanctity Necklace",
+		waist="Skrymir Cord",
+		left_ear="Malignance Earring",
+		right_ear="Regal Earring",
+		left_ring="Metamor. Ring +1",
+		right_ring="Freke Ring",
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
 		sets.midcast.Dia = set_combine(sets.midcast.ConserveMP)
 		sets.midcast.Paralyze = set_combine(sets.midcast.Macc)
 		sets.midcast.Blind = set_combine(sets.midcast.Macc)
@@ -199,9 +250,22 @@ if player.Name == 'Khory' then
 		
 		-- Dark Magic
 		sets.midcast.Dark = set_combine(sets.midcast.Macc, {
-				head="Appetence Crown", neck="Aesir Torque",
-				hands="Sorcerer's Gloves", 
-				back="Merciful Cape", waist="Fucho-no-Obi", legs="Wizard's Tonban", feet="Goetia Sabots +2"})
+			main="Mpaca's Staff",
+			sub="Enki Strap",
+			ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+			head="Amalric Coif +1",
+			body="Agwu's Robe",
+			hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			legs={ name="Agwu's Slops", augments={'Path: A',}},
+			feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+			neck="Erra Pendant",
+			waist="Fucho-no-Obi",
+			left_ear="Malignance Earring",
+			right_ear="Regal Earring",
+			left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+			right_ring="Evanescence Ring",
+			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				})
 		sets.midcast.Aspir = set_combine(sets.midcast.Dark, {
 			main="Mpaca's Staff",
 			sub="Enki Strap",

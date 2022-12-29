@@ -12,7 +12,7 @@
                 <5>Arciela</5>
             </abyssea>
             <boss>
-                <1>Cornelia</1>
+                <1>Ulmia</1>
                 <2>Monberaux</2>
                 <3>Yoran-Oran (UC)</3>
                 <4>Selh&apos;teus</4>
@@ -23,10 +23,10 @@
                 <2>Monberaux</2>
                 <3>Yoran-Oran (UC)</3>
                 <4>Arciela</4>
-                <5>Cornelia</5>
+                <5>Ulmia</5>
             </default>
             <dyna>
-                <1>Cornelia</1>
+                <1>Ulmia</1>
                 <2>Sakura</2>
                 <3>Star Sibyl</3>
                 <4>Moogle</4>
@@ -38,7 +38,7 @@
                 <4>Ulmia</4>
             </geo>
             <gin>
-                <1>Cornelia</1>
+                <1>Joachim</1>
                 <2>Yoran-Oran (UC)</2>
                 <3>Monberaux</3>
                 <4>Selh&apos;teus</4>
@@ -51,13 +51,6 @@
                 <4>King of Hearts</4>
                 <5>Karaha-Baruha</5>
             </gog>
-            <leveling>
-                <1>AAEV</1>
-                <2>Monberaux</2>
-                <3>Moogle</3>
-                <4>Shantotto II</4>
-                <5>Koru-Moru</5>
-            </leveling>
             <lilith>
                 <1>Star Sibyl</1>
                 <2>Koru-Moru</2>
@@ -67,14 +60,14 @@
             </lilith>
             <mage>
                 <1>Star Sibyl</1>
-                <2>Cornelia</2>
+                <2>Ulmia</2>
                 <3>Valaineral</3>
                 <4>Monberaux</4>
                 <5>Yoran-Oran (UC)</5>
             </mage>
             <mboze>
                 <1>Valaineral</1>
-                <2>Cornelia</2>
+                <2>Ulmia</2>
                 <3>Monberaux</3>
                 <4>Arciela</4>
                 <5>Cherukiki</5>
@@ -87,14 +80,14 @@
                 <5>Monberaux</5>
             </notank>
             <odyssey>
-                <1>Cornelia</1>
+                <1>Ulmia</1>
                 <2>AAEV</2>
                 <3>Yoran-Oran (UC)</3>
                 <4>Qultada</4>
                 <5>Koru-Moru</5>
             </odyssey>
             <omen>
-                <1>Cornelia</1>
+                <1>Ulmia</1>
                 <2>Arciela</2>
                 <3>Monberaux</3>
                 <4>Yoran-Oran (UC)</4>
@@ -115,7 +108,7 @@
                 <5>Yoran-Oran (UC)</5>
             </shinryu>
             <sortie>
-                <1>Cornelia</1>
+                <1>Ulmia</1>
                 <2>Yoran-Oran (UC)</2>
                 <3>Star Sibyl</3>
                 <4>Koru-Moru</4>

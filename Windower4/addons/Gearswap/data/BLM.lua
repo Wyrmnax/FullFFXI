@@ -31,6 +31,15 @@ function get_sets(spell)
 	ShadowType = 'None'
 	time_start = 0
 	MB_Window = 0
+	
+	degrade_array = {
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
+		['Thunder'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
+		['Aero'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
+		['Blizzard'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
+		['Water'] = {'Water','Water II','Water III','Water IV','Water V','Water VI'},
+		['Stone'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+        }
 end 
 
 -- Called when this job file is unloaded (eg: job change)
@@ -259,20 +268,7 @@ function precast(spell,arg)
 			end
 		-- Enhancing Magic
 		elseif spell.skill == 'Enhancing Magic' then
-			if spell.name == "Stoneskin" then 
-				-- Magian Staff
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Stoneskin, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Stoneskin)
-				end
-			else
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Enhancing, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Enhancing)
-				end
-			end
+			equip(sets.precast.Fastcast)
 			-- Cancel Sneak
 			if spell.name == 'Sneak' and buffactive.Sneak and spell.target.type == 'SELF' then
 				windower.ffxi.cancel_buff(71)
@@ -280,15 +276,11 @@ function precast(spell,arg)
 			end
 		-- Elemental Magic 
 		elseif spell.skill == 'Elemental Magic' then
+			refine_various_spells(spell, action, spellMap, eventArgs)		
 			if spell.name == "Impact" or player.equipment.body == "Twilight Cloak" then
 				equip(sets.precast.Elemental, {head="Empty", body="Twilight Cloak"})
-			else
-				-- Magian Staff
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Elemental, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Elemental)
-				end
+			else				
+				equip(sets.precast.Elemental)
 			end
 		-- Dark Magic 
 		elseif spell.skill == 'Dark Magic' then
@@ -297,36 +289,17 @@ function precast(spell,arg)
 			elseif spell.name == "Death" then
 				equip(sets.precast.Death)
 			else
-				if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-					equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-				else
-					equip(sets.precast.Fastcast)
-				end
+				equip(sets.precast.Fastcast)
 			end		
 		else
-			-- Magian Staff
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-			else
-				equip(sets.precast.Fastcast)
-			end	
+			equip(sets.precast.Fastcast)
 		end
 -- Ninjutsu
 	elseif spell.type == 'Ninjutsu' then
-		-- Magian Staff
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-			else
-				equip(sets.precast.Fastcast)
-			end
+			equip(sets.precast.Fastcast)
 -- BardSongs
 	elseif spell.type == 'BardSong' then
-		-- Magian Staff
-			if Fastcast.Staff[spell.element] and (player.inventory[Fastcast.Staff[spell.element]] or player.wardrobe[Fastcast.Staff[spell.element]] or player.wardrobe2[Fastcast.Staff[spell.element]]) then
-				equip(sets.precast.Fastcast, {main=Fastcast.Staff[spell.element]})
-			else
-				equip(sets.precast.Fastcast)
-			end
+			equip(sets.precast.Fastcast)
 	else
 	-- Special handling to remove Dancer sub job Sneak effect
 		if spell.name == 'Spectral Jig' and buffactive.Sneak then
@@ -449,7 +422,7 @@ function midcast(spell,arg)
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 						else
-							windower.add_to_chat(121,'Nuke Set')
+							windower.add_to_chat(121, 'Nuke NOT MB 2')
 							equip(sets.midcast.Nuke,{})
 						end
 					end
@@ -465,6 +438,7 @@ function midcast(spell,arg)
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
 						else
+							windower.add_to_chat(121, 'Nuke NOT MB 2')
 							equip(sets.midcast.Nuke)
 						end
 					end
@@ -482,6 +456,7 @@ function midcast(spell,arg)
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
 						else
+							windower.add_to_chat(121, 'Nuke MB')
 							equip(sets.midcast.Nuke.MB,{})
 						end
 					end
@@ -496,6 +471,7 @@ function midcast(spell,arg)
 						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
 						else
+							windower.add_to_chat(121, 'Nuke MB 2')
 							equip(sets.midcast.Nuke.MB)
 						end
 					end
@@ -643,6 +619,8 @@ function previous_set()
 			equip(sets.TP)
 			windower.add_to_chat(121,'TP Set')
 		else
+			
+			windower.add_to_chat(121,'Trigger 1')
 			equip(sets.idle.PDT)
 			windower.add_to_chat(121,'Idle')
 		end
@@ -690,6 +668,55 @@ windower.register_event('action', function(act)
 		end
 	end
 end)
+
+function refine_various_spells(spell, action, spellMap, eventArgs)
+
+    local newSpell = spell.english
+    local spell_recasts = windower.ffxi.get_spell_recasts()
+    local cancelling = 'All '..spell.english..' are on cooldown. Cancelling.'
+
+    local spell_index
+
+    if spell_recasts[spell.recast_id] > 0 then
+        if spell.name:startswith('Fire') then
+            spell_index = table.find(degrade_array['Fire'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Fire'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+            end
+		elseif spell.name:startswith('Thunder') then
+            spell_index = table.find(degrade_array['Thunder'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Thunder'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Blizzard') then
+            spell_index = table.find(degrade_array['Blizzard'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Blizzard'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Aero') then
+            spell_index = table.find(degrade_array['Aero'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Aero'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Stone') then
+            spell_index = table.find(degrade_array['Stone'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Stone'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+        end
+		elseif spell.name:startswith('Water') then
+            spell_index = table.find(degrade_array['Water'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Water'][spell_index - 1]
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		end	
+	end
+end
 
 windower.register_event('prerender', function()
 	--Items we want to check every second

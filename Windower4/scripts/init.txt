@@ -56,7 +56,7 @@ lua load Valkyrie
 lua load react
 lua load partybuffs
 lua load sheolhelper
-lua reload partybuffs
+lua load sellnpc
 
 
 // *** ALLIANCE TARGET KEYS ***

@@ -176,7 +176,7 @@ function get_sets()
     sets.me.idle.refresh = {
 	main="Daybreak",
 	sub="Genmei Shield",
-    ammo="Staunch Tathlum +1",
+    ammo="Homiliary",
     head="Acad. Mortar. +3",
     body="Shamash Robe",
     hands="Nyame Gauntlets",

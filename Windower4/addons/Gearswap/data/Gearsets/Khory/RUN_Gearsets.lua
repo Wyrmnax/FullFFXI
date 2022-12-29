@@ -47,9 +47,9 @@ if player.name == 'Khory' then
 sets.idle.PDT = { 
 	main="Epeolatry",
 	sub="Utu Grip",
-	   ammo="Staunch Tathlum +1",
+	ammo="Homiliary",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Runeist's Coat +2",
+    body="Runeist Coat +2",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Eri. Leg Guards +3",
     feet="Erilaz Greaves +2",
@@ -64,7 +64,7 @@ sets.idle.PDT = {
 
 
 sets.idle.MDT = { 
-	   ammo="Staunch Tathlum +1",
+	ammo="Homiliary",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Erilaz Surcoat +2",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -157,8 +157,8 @@ sets.precast.JA["Lunge"] = {
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 sets.precast.JA["Swipe"] = set_combine(sets.precast.JA["Lunge"],{	})
-sets.precast.JA["Valiance"] = {body="Runeist's Coat +2"}
-sets.precast.JA["Vallation"] = {body="Runeist's Coat +2"}
+sets.precast.JA["Valiance"] = {body="Runeist Coat +2"}
+sets.precast.JA["Vallation"] = {body="Runeist Coat +2"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
 sets.precast.JA["Pflug"] = {feet="Runiest Boots"}
 sets.precast.JA["Battuta"] = {head="Futhark Bandeau +3"}

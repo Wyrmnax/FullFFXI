@@ -169,7 +169,7 @@ if player.Name == 'Khory' then
 	main={ name="Bunzi's Rod", augments={'Path: A',}},
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
-    head={ name="Amalric Coif +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    head="Ea Hat +1",
     body="Agwu's Robe",
     hands="Agwu's Gages",
     legs={ name="Agwu's Slops", augments={'Path: A',}},

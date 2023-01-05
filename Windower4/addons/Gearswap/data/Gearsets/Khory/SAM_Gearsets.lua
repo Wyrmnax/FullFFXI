@@ -94,7 +94,7 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 -- TP - 49 52
 sets.TP = { 	
      ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
+    head="Kasuga Kabuto +3",
     body="Kasuga Domaru +3",
     hands="Mpaca's Gloves",
     legs="Kasuga Haidate +3",
@@ -111,7 +111,7 @@ sets.TP = {
 -- Bow TP
 sets.TP.Bow = { 	
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Kasuga Kabuto +2",
+    head="Kasuga Kabuto +3",
     body="Kasuga Domaru +3",
     hands="Wakido Kote +3",
     legs="Mpaca's Hose",

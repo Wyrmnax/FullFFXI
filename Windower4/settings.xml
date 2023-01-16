@@ -43,7 +43,6 @@
     <plugin>FFXIDB</plugin>
     <plugin>ChatMon</plugin>
     <plugin>Config</plugin>
-    <plugin>PacketFlow</plugin>
   </autoload>
   <profile name="">
     <consolekey>Insert</consolekey>

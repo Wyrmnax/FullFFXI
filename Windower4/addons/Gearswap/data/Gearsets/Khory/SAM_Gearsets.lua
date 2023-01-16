@@ -185,7 +185,7 @@ sets.precast.WS.MAB = {
     neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
     waist="Orpheus's sash",
     left_ear="Friomisi Earring",
-    right_ear="Sortiarius Earring",
+    right_ear="Kasuga Earring +1",
     left_ring="Niqmaddu Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -212,22 +212,22 @@ sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.WSD, {
 	
 sets.precast.WS['Tachi: Jinpu'] = set_combine(sets.precast.WS.MAB, {    
 	--head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 
 sets.precast.WS['Tachi: Kagero'] = set_combine(sets.precast.WS.MAB, {    
 	--head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Goten'] = set_combine(sets.precast.WS.MAB, {   
 	--head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Koki'] = set_combine(sets.precast.WS.MAB, {  
 	--head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Ageha'] = set_combine(sets.precast.WS.MAB, {    
@@ -235,17 +235,17 @@ sets.precast.WS['Tachi: Ageha'] = set_combine(sets.precast.WS.MAB, {
 	
 sets.precast.WS['Tachi: Fudo'] = set_combine(sets.precast.WS.WSD, {    
 	head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Shoha'] = set_combine(sets.precast.WS.WSD, {    
 	head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Gekko'] = set_combine(sets.precast.WS.WSD, {    
 	head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tachi: Rana'] = set_combine(sets.precast.WS, {    	
@@ -256,7 +256,7 @@ sets.precast.WS['Tachi: Kaiten'] = set_combine(sets.precast.WS.WSD, {
 	
 sets.precast.WS['Tachi: Kasha'] = set_combine(sets.precast.WS.WSD, {    
 	head="Mpaca's Cap",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 
 ------------------- Sword -------------------------

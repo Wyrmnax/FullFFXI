@@ -33,6 +33,7 @@
     <addon>DressUp</addon>
     <addon>temps</addon>
     <addon>latentchecker</addon>
+    <addon>NyzulHelper</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>
@@ -42,6 +43,7 @@
     <plugin>FFXIDB</plugin>
     <plugin>ChatMon</plugin>
     <plugin>Config</plugin>
+    <plugin>PacketFlow</plugin>
   </autoload>
   <profile name="">
     <consolekey>Insert</consolekey>

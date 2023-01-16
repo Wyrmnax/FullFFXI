@@ -1,5 +1,5 @@
-2023-01-03 22:50:57.4568 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
-2023-01-04 08:21:04.9189 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+2023-01-15 16:55:31.1237 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
+2023-01-15 17:36:12.8819 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
 System.OperationCanceledException: The operation was canceled.
    at System.Threading.CancellationToken.ThrowOperationCanceledException()
    at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154

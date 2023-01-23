@@ -49,11 +49,11 @@ sets.idle.PDT = {
 	sub="Utu Grip",
 	ammo="Homiliary",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Runeist Coat +2",
+    body="Runeist Coat +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Eri. Leg Guards +3",
     feet="Erilaz Greaves +2",
-    neck={ name="Futhark Torque +1", augments={'Path: A',}},
+    neck="Rep. Plat. Medal",
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
@@ -157,8 +157,8 @@ sets.precast.JA["Lunge"] = {
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 sets.precast.JA["Swipe"] = set_combine(sets.precast.JA["Lunge"],{	})
-sets.precast.JA["Valiance"] = {body="Runeist Coat +2"}
-sets.precast.JA["Vallation"] = {body="Runeist Coat +2"}
+sets.precast.JA["Valiance"] = {body="Runeist Coat +3"}
+sets.precast.JA["Vallation"] = {body="Runeist Coat +3"}
 sets.precast.JA["Gambit"] = {hands="Runiest Mitons"}
 sets.precast.JA["Pflug"] = {feet="Runiest Boots"}
 sets.precast.JA["Battuta"] = {head="Futhark Bandeau +3"}
@@ -280,6 +280,10 @@ sets.precast.WS["Shockwave"] = set_combine(sets.precast.WS, {
 })				
 sets.precast.WS["Dimidiation"] = set_combine(sets.precast.WS.WSD, {
     back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+})
+sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.WSD, {
+})
+sets.precast.WS["Steel Cyclone"] = set_combine(sets.precast.WS.WSD, {
 })
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS, {
 })

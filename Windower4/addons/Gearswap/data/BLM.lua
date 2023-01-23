@@ -31,6 +31,7 @@ function get_sets(spell)
 	ShadowType = 'None'
 	time_start = 0
 	MB_Window = 0
+	Degraded = 0
 	
 	degrade_array = {
         ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
@@ -50,128 +51,7 @@ end
 -- Rules
 function self_command(command)
 -- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set Locked')
-		end
--- Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
--- Reset	
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-				windower.add_to_chat(121,'PDT/MDT Set UnLocked')
-			end
-		else
-			if Mode >= 3 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				-- Nuke
-				if Mode == 0 then
-					if Skill == 1 then
-						windower.add_to_chat(121,'Nuke.Acc')
-						equip(sets.idle.Standard)
-					else
-						windower.add_to_chat(121,'Nuke Mode')
-						equip(sets.idle.Standard)
-					end
-				-- MB
-				elseif Mode == 1 then 
-					if Skill == 1 then
-						windower.add_to_chat(121,'MB.Acc Mode')
-						equip(sets.idle.Standard)
-					else
-						windower.add_to_chat(121,'MB Mode')
-						equip(sets.idle.Standard)
-					end
-				-- Death
-				elseif Mode == 2 then
-					if Skill == 2 then
-						windower.add_to_chat(121,'Death MB Mode')
-						equip(sets.idle.Death)
-					elseif Skill == 1 then
-						windower.add_to_chat(121,'Death Acc Mode')
-						equip(sets.idle.Death)
-					else
-						windower.add_to_chat(121,'Death Mode')
-						equip(sets.idle.Death)
-					end
-				end
-			end
-		end
-	elseif command == 'skill' or command == "acc" or command == "Skill" then
-		-- Death Mode 
-		if Mode == 2 then
-			if Skill >=2 then
-				--Reset to 0
-				Skill = 0
-			else
-				-- Increment by 1
-				Skill = Skill + 1
-			end
-		-- Nuke or Magic Burst Mode.
-		else
-			if Skill >=1 then
-				-- Reset to 0
-				Skill = 0
-			else
-				-- Increment by 1
-				Skill = Skill + 1
-			end
-		end
-	elseif command == "MP" or command == "mp" then
+	if command == "MP" or command == "mp" then
 		if MP >= 1 then
 			MP = 0
 		else 
@@ -544,7 +424,10 @@ function midcast(spell,arg)
 end -- end midcast
 
 function aftercast(spell,arg)
-	if player.status == 'Engaged' then
+	
+	if Degraded == 1 then
+		Degraded = 0
+	elseif player.status == 'Engaged' then
 		if PDT == 1 or MDT == 1 then
 			if PDT == 1 and MDT == 0 then
 				windower.add_to_chat(121,'PDT Locked')
@@ -597,10 +480,6 @@ function aftercast(spell,arg)
 		windower.send_command('wait 45;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:15 ]')
         windower.send_command('wait 50;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:10 ]')
         windower.send_command('wait 55;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:05 ]')
-	end
--- Convert
-	if spell.name == 'Convert' then
-	  windower.send_command('wait 2;input /ma "Cure IV" me')
 	end
  -- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
     if spell and spell.name == 'Utsusemi: Ni' then
@@ -682,36 +561,42 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
             spell_index = table.find(degrade_array['Fire'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Fire'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
             end
 		elseif spell.name:startswith('Thunder') then
             spell_index = table.find(degrade_array['Thunder'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Thunder'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end
 		elseif spell.name:startswith('Blizzard') then
             spell_index = table.find(degrade_array['Blizzard'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Blizzard'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end
 		elseif spell.name:startswith('Aero') then
             spell_index = table.find(degrade_array['Aero'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Aero'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end
 		elseif spell.name:startswith('Stone') then
             spell_index = table.find(degrade_array['Stone'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Stone'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
         end
 		elseif spell.name:startswith('Water') then
             spell_index = table.find(degrade_array['Water'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Water'][spell_index - 1]
+				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end
 		end	

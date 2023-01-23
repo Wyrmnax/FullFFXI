@@ -168,7 +168,7 @@ if player.name == 'Khory' then
 		sets.midcast.Erase = set_combine(sets.midcast.NaSpells, {neck="Cleric's Torque"})
 
 		sets.midcast.Cursna = set_combine(sets.midcast.Recast, {
-				body="Ebers Bliaud +1",
+				body="Ebers Bliaud +2",
 				legs="Th. Pantaloons +2",
 				})
 				
@@ -214,6 +214,7 @@ if player.name == 'Khory' then
 		sets.midcast.Blink = set_combine(sets.midcast.Aquaveil)
 		sets.midcast.Reraise = set_combine(sets.midcast.ConserveMP)
 		sets.precast.Protectra = set_combine(sets.midcast.BarElement)
+		sets.precast.Shellra = set_combine(sets.midcast.BarElement)
 
 		--Divine Magic
 		sets.midcast.Repose = set_combine(sets.midcast.Recast)

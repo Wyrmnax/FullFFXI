@@ -96,7 +96,7 @@ sets.TP = {
      ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Kasuga Kabuto +3",
     body="Kasuga Domaru +3",
-    hands="Mpaca's Gloves",
+    hands="Tatena. Gote +1",
     legs="Kasuga Haidate +3",
     feet={ name="Tatena. Sune. +1", augments={'Path: A',}},
     neck={ name="Sam. Nodowa +2", augments={'Path: A',}},

@@ -108,7 +108,7 @@ sets.TP.DT = set_combine(sets.TP, {
 	body="Boii Lorica +2",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
-    feet="Tatena. Sune. +1",
+    feet="Pumm. Calligae +3",
     neck="War. Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",

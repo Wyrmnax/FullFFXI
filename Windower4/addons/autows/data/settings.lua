@@ -436,7 +436,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"fell cleave\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {

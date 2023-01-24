@@ -86,7 +86,7 @@ sets.TP = {
 	--ammo="Coiste Bodhar",
 	head="Volte Cap",
     --head="Flam. Zucchetto +2",
-    body="Boii Lorica +2",
+    body="Boii Lorica +3",
     hands="Sakpata's Gauntlets",
 	legs={ name="Valorous Hose", augments={'Crit. hit damage +2%','MND+13','"Treasure Hunter"+1','Accuracy+1 Attack+1','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
     --legs="Pumm. Cuisses +3",
@@ -105,7 +105,7 @@ sets.TP = {
 sets.TP.DT = set_combine(sets.TP, {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Boii Mask +2",
-	body="Boii Lorica +2",
+	body="Boii Lorica +3",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Pumm. Calligae +3",
@@ -164,7 +164,7 @@ sets.precast.JA["Restraint"] = {hands="Ravager's Mufflers +2"}
 sets.precast.JA["Warrior's Charge"] = {legs="Warrior Cuisses +2"}
 sets.precast.JA["Savagery"] = {head="Warrior's Mask +2"}
 sets.precast.JA["Aggressive Aim"] = {body="Warrior's Lorica +2"}
-sets.precast.JA["Blood Rage"] = {body="Boii Lorica +2"}
+sets.precast.JA["Blood Rage"] = {body="Boii Lorica +3"}
 
 -- Weaponskills
 sets.precast.WS = {    

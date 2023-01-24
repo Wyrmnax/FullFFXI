@@ -109,7 +109,8 @@ elseif player.main_job == "BLM" then
 		-- set binds
 	windower.send_command('@bind f10 gs c MDT')
 	windower.send_command('@bind f11 gs c PDT')
-	windower.send_command('@bind f12 gs c TP')
+	windower.send_command('@bind f12 gs c nuke cycle')
+	windower.send_command('@bind ^f12 gs c nuke cycledown')
 
 elseif player.main_job == "THF" then
 	basic_binds()

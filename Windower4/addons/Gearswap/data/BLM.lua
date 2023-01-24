@@ -9,6 +9,9 @@
 	include('include/functions.lua')
 	-- Global Buffs
 	include('include/status.lua')
+	include('Modes.lua')
+	res = require('resources')
+	texts = require('texts')
 	
 -- Gear Sets 
 function get_sets(spell)
@@ -34,13 +37,28 @@ function get_sets(spell)
 	Degraded = 0
 	
 	degrade_array = {
-        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
-		['Thunder'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
-		['Aero'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
-		['Blizzard'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
-		['Water'] = {'Water','Water II','Water III','Water IV','Water V','Water VI'},
-		['Stone'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI','Firaja'},
+		['Thunder'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI','Thundaja'},
+		['Aero'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI','Aeroja'},
+		['Blizzard'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI','Blizzaja'},
+		['Water'] = {'Water','Water II','Water III','Water IV','Water V','Water VI','Waterja'},
+		['Stone'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI','Stoneja'},
+		['Aspir'] = {'Aspir','Aspir II','Aspir III'},
         }
+	nukes = {}
+nukes.t1 = {['Earth']="Stone",      ['Water']="Water",      ['Air']="Aero",     ['Fire']="Fire",    ['Ice']="Blizzard",     ['Lightning']="Thunder"}
+nukes.t2 = {['Earth']="Stone II",   ['Water']="Water II",   ['Air']="Aero II",  ['Fire']="Fire II", ['Ice']="Blizzard II",  ['Lightning']="Thunder II"}
+nukes.t3 = {['Earth']="Stone III",  ['Water']="Water III",  ['Air']="Aero III", ['Fire']="Fire III",['Ice']="Blizzard III", ['Lightning']="Thunder III"}
+nukes.t4 = {['Earth']="Stone IV",   ['Water']="Water IV",   ['Air']="Aero IV",  ['Fire']="Fire IV", ['Ice']="Blizzard IV",  ['Lightning']="Thunder IV"}
+nukes.t5 = {['Earth']="Stone V",    ['Water']="Water V",    ['Air']="Aero V",   ['Fire']="Fire V",  ['Ice']="Blizzard V",   ['Lightning']="Thunder V"}
+nukes.t6 = {['Earth']="Stone VI",    ['Water']="Water VI",    ['Air']="Aero VI",   ['Fire']="Fire VI",  ['Ice']="Blizzard VI",   ['Lightning']="Thunder VI"}
+nukes.ja = {['Earth']="Stoneja",    ['Water']="Waterja",    ['Air']="Aeroja",   ['Fire']="Firaja",  ['Ice']="Blizzaja",   ['Lightning']="Thundaja"}
+nukes.am2 = {['Earth']="Quake II",    ['Water']="Flood II",    ['Air']="Tornado II",   ['Fire']="Flare II",  ['Ice']="Freeze II",   ['Lightning']="Burst II"}
+nukes.helix = {['Earth']="Geohelix",  ['Water']="Hydrohelix", ['Air']="Anemohelix",['Fire']="Pyrohelix", ['Ice']="Cryohelix", ['Lightning']="Ionohelix",    ['Light']="Luminohelix", ['Dark']="Noctohelix"}
+nukes.storm = {['Earth']="Sandstorm", ['Water']="Rainstorm",  ['Air']="Windstorm", ['Fire']="Firestorm", ['Ice']="Hailstorm", ['Lightning']="Thunderstorm", ['Light']="Aurorastorm", ['Dark']="Voidstorm"}
+
+		
+	elementsSet =  M('Ice', 'Air', 'Earth', 'Lightning', 'Water', 'Fire')
 end 
 
 -- Called when this job file is unloaded (eg: job change)
@@ -51,13 +69,57 @@ end
 -- Rules
 function self_command(command)
 -- Lock PDT
+	local commandArgs = command
 	if command == "MP" or command == "mp" then
 		if MP >= 1 then
 			MP = 0
 		else 
 			MP = MP + 1
+		end	
+	end
+	if #commandArgs:split(' ') >= 2 then
+        commandArgs = T(commandArgs:split(' '))
+		if commandArgs[1]:lower() == 'nuke' then
+            if not commandArgs[2] then
+                windower.add_to_chat(123,'No element type given.')
+                return
+            end
+            
+            local nuke = commandArgs[2]:lower()
+            
+            if (nuke == 'cycle' or nuke == 'cycledown') then
+                if nuke == 'cycle' then
+                    elementsSet:cycle()
+                    oldElement = elementsSet.current
+                elseif nuke == 'cycledown' then 
+                    elementsSet:cycleback() 
+                    oldElement = elementsSet.current
+                end         
+                if use_UI == true then                    
+                    validateTextInformation()
+                else
+                    windower.add_to_chat(211,'Nuke now set to element type: '..tostring(elementsSet.current))
+                end   
+
+            elseif (nuke == 'air' or nuke == 'ice' or nuke == 'fire' or nuke == 'water' or nuke == 'lightning' or nuke == 'earth' or nuke == 'light' or nuke == 'dark') then
+                local newType = commandArgs[2]
+                elementsSet:set(newType)
+				oldElement = elementsSet.current
+                if use_UI == true then                    
+                    validateTextInformation()
+                else
+                    windower.add_to_chat(211,'Nuke now set to element type: '..tostring(elementsSet.current))
+                end 
+            elseif not nukes[nuke] then
+                windower.add_to_chat(123,'Unknown element type: '..tostring(commandArgs[2]))
+                return              
+            else        
+                -- Leave out target; let Shortcuts auto-determine it.
+                send_command('@input /ma "'..nukes[nuke][elementsSet.current]..'"')     
+            end  
 		end
 	end
+	
 end
 
 function status_change(new,old)
@@ -164,6 +226,7 @@ function precast(spell,arg)
 			end
 		-- Dark Magic 
 		elseif spell.skill == 'Dark Magic' then
+			refine_various_spells(spell, action, spellMap, eventArgs)
 			if spell.name == "Stun" then
 				equip(sets.midcast.Stun)
 			elseif spell.name == "Death" then
@@ -290,114 +353,40 @@ function midcast(spell,arg)
 		else
 			-- Normal Nuke
 			if MB == 0 then
-				if MP == 1 then					
-					-- High Magic Accuracy
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.Acc, {waist="Hachirin-no-Obi"})
+				if player.mp < 470 then
+					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
+							equip(sets.midcast.Nuke, {body="Spaekona's Coat +2", waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke.Acc,{})
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
-						else
-							windower.add_to_chat(121, 'Nuke NOT MB 2')
-							equip(sets.midcast.Nuke,{})
-						end
+							equip(sets.midcast.Nuke,{body="Spaekona's Coat +2"})
 					end
 				else
-					-- High Magic Accuracy
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
+					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke, {waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke)
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke,{waist="Hachirin-no-Obi"})
-						else
-							windower.add_to_chat(121, 'Nuke NOT MB 2')
-							equip(sets.midcast.Nuke)
-						end
+							equip(sets.midcast.Nuke,{})
 					end
 				end
 			-- Magic Burst
 			elseif MB == 1 then
-				if MP == 1 then
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB.Acc,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Nuke.MB.Acc,{})
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
-						else
-							windower.add_to_chat(121, 'Nuke MB')
-							equip(sets.midcast.Nuke.MB,{})
-						end
+				if player.mp < 470 then
+					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
+								equip(sets.midcast.Nuke.MB,{body="Spaekona's Coat +2",waist="Hachirin-no-Obi"})
+							else
+								equip(sets.midcast.Nuke.MB,{body="Spaekona's Coat +2"})
 					end
 				else
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB.Acc,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Nuke.MB.Acc)
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
-						else
-							windower.add_to_chat(121, 'Nuke MB 2')
-							equip(sets.midcast.Nuke.MB)
-						end
+					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
+								equip(sets.midcast.Nuke.MB,{waist="Hachirin-no-Obi"})
+							else
+								equip(sets.midcast.Nuke.MB,{})
 					end
 				end
 			-- Death
 			elseif Mode == 2 then
-				if MP == 1 then
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Death.Acc,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Death.Acc)
-						end
-					elseif Skill == 2 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
+				if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Death.MB,{waist="Hachirin-no-Obi"})
 						else
 							equip(sets.midcast.Death.MB)
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Death,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Death)
-						end
-					end
-				else
-					if Skill == 1 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Death.Acc,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Death.Acc)
-						end
-					elseif Skill == 2 then
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Death.MB,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Death.MB)
-						end
-					else
-						if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
-							equip(sets.midcast.Death,{waist="Hachirin-no-Obi"})
-						else
-							equip(sets.midcast.Death)
-						end
-					end
 				end
 			end
 		end
@@ -557,21 +546,21 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
     local spell_index
 
     if spell_recasts[spell.recast_id] > 0 then
-        if spell.name:startswith('Fire') then
+        if spell.name:startswith('Fir') then
             spell_index = table.find(degrade_array['Fire'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Fire'][spell_index - 1]
 				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
             end
-		elseif spell.name:startswith('Thunder') then
+		elseif spell.name:startswith('Thund') then
             spell_index = table.find(degrade_array['Thunder'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Thunder'][spell_index - 1]
 				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end
-		elseif spell.name:startswith('Blizzard') then
+		elseif spell.name:startswith('Blizza') then
             spell_index = table.find(degrade_array['Blizzard'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Blizzard'][spell_index - 1]
@@ -596,6 +585,13 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
             spell_index = table.find(degrade_array['Water'],spell.name)
             if spell_index > 1 then
                 newSpell = degrade_array['Water'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Aspir') then
+            spell_index = table.find(degrade_array['Aspir'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Aspir'][spell_index - 1]
 				Degraded = 1
                 send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 			end

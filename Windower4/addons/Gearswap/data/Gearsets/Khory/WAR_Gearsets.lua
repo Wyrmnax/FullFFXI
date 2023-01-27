@@ -104,7 +104,7 @@ sets.TP = {
 					
 sets.TP.DT = set_combine(sets.TP, {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Boii Mask +2",
+    head="Boii Mask +3",
 	body="Boii Lorica +3",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
@@ -169,14 +169,11 @@ sets.precast.JA["Blood Rage"] = {body="Boii Lorica +3"}
 -- Weaponskills
 sets.precast.WS = {    
     ammo="Seeth. Bomblet +1",
-	--head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
-    --feet="Sakpata's Leggings",
-    head="Flam. Zucchetto +2",
-    --body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
-    --hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
-    feet="Flam. Gambieras +2",
+	head="Nyame helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     legs="Nyame Flanchard",
     neck="Fotia Gorget",
     waist="Fotia Belt",
@@ -189,15 +186,11 @@ sets.precast.WS = {
 	
 sets.precast.WS.crit = {    
     ammo="Seeth. Bomblet +1",
-	--head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Sakpata's Gauntlets",
-    --feet="Sakpata's Leggings",
-    head="Nyame helm",
-    --body={ name="Argosy Hauberk +1", augments={'STR+12','DEX+12','Attack+20',}},
-    --hands={ name="Argosy Mufflers +1", augments={'STR+20','"Dbl.Atk."+3','Haste+3%',}},
-    feet="Nyame Sollerets",
+	head="Nyame helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Cessance Earring",

@@ -66,7 +66,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["COR"] = {
@@ -77,7 +77,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -95,7 +95,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DRG"] = {
@@ -262,7 +262,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["RDM"] = {

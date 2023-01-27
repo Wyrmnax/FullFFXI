@@ -6,7 +6,7 @@
         <sets>
             <abyssea>
                 <1>Monberaux</1>
-                <2>Yoran-Oran (UC)</2>
+                <2>Sylvie (UC)</2>
                 <3>Star Sibyl</3>
                 <4>Ulmia</4>
                 <5>Arciela</5>
@@ -14,14 +14,14 @@
             <boss>
                 <1>Ulmia</1>
                 <2>Monberaux</2>
-                <3>Yoran-Oran (UC)</3>
+                <3>Sylvie (UC)</3>
                 <4>Selh&apos;teus</4>
                 <5>Koru-Moru</5>
             </boss>
             <default>
                 <1>Valaineral</1>
                 <2>Monberaux</2>
-                <3>Yoran-Oran (UC)</3>
+                <3>Sylvie (UC)</3>
                 <4>Arciela</4>
                 <5>Ulmia</5>
             </default>
@@ -39,7 +39,7 @@
             </geo>
             <gin>
                 <1>Joachim</1>
-                <2>Yoran-Oran (UC)</2>
+                <2>Sylvie (UC)</2>
                 <3>Monberaux</3>
                 <4>Selh&apos;teus</4>
                 <5>Koru-Moru</5>
@@ -56,14 +56,14 @@
                 <2>Koru-Moru</2>
                 <3>Cherukiki</3>
                 <4>Monberaux</4>
-                <5>Yoran-Oran (UC)</5>
+                <5>Sylvie (UC)</5>
             </lilith>
             <mage>
                 <1>Star Sibyl</1>
                 <2>Ulmia</2>
                 <3>Valaineral</3>
                 <4>Monberaux</4>
-                <5>Yoran-Oran (UC)</5>
+                <5>Sylvie (UC)</5>
             </mage>
             <mboze>
                 <1>Valaineral</1>
@@ -73,7 +73,7 @@
                 <5>Cherukiki</5>
             </mboze>
             <notank>
-                <1>Yoran-Oran (UC)</1>
+                <1>Sylvie (UC)</1>
                 <2>Qultada</2>
                 <3>Ulmia</3>
                 <4>Koru-Moru</4>
@@ -82,7 +82,7 @@
             <odyssey>
                 <1>Ulmia</1>
                 <2>AAEV</2>
-                <3>Yoran-Oran (UC)</3>
+                <3>Sylvie (UC)</3>
                 <4>Qultada</4>
                 <5>Koru-Moru</5>
             </odyssey>
@@ -90,7 +90,7 @@
                 <1>Ulmia</1>
                 <2>Arciela</2>
                 <3>Monberaux</3>
-                <4>Yoran-Oran (UC)</4>
+                <4>Sylvie (UC)</4>
                 <5>Qultada</5>
             </omen>
             <rask>
@@ -105,11 +105,11 @@
                 <2>AAEV</2>
                 <3>Monberaux</3>
                 <4>Koru-Moru</4>
-                <5>Yoran-Oran (UC)</5>
+                <5>Sylvie (UC)</5>
             </shinryu>
             <sortie>
                 <1>Ulmia</1>
-                <2>Yoran-Oran (UC)</2>
+                <2>Sylvie (UC)</2>
                 <3>Star Sibyl</3>
                 <4>Koru-Moru</4>
                 <5>Monberaux</5>

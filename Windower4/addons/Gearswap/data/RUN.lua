@@ -190,9 +190,16 @@ function self_command(command)
 		
 	end
 end
+
+function buff_change(buff,gain)
+	if buffactive.terror or buffactive.petrification or buffactive.sleep or buffactive.Lullaby or buffactive.stun then
+		windower.add_to_chat(121,'Stun Set')
+		previous_set()
+	end
+end
 	
 function status_change(new,old)
--- Autoset
+	-- Autoset
     if T{'Idle','Resting'}:contains(new) then
 		weapon_check()
 		slot_lock()
@@ -214,6 +221,8 @@ function status_change(new,old)
 		end
 	elseif new == 'Engaged' then
 		weapon_check()
+		--windower.add_to_chat(123,'Auto Food')
+        --send_command('wait 1; input /item "Grape Daifuku" <me>')
 		if PDT == 1 or MDT == 1 then
 			if PDT == 1 and MDT == 0 then
 				windower.add_to_chat(121,'PDT Locked')

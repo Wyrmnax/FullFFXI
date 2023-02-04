@@ -107,9 +107,12 @@ sets.TP = {
 	ammo="Yamarang",
     head="Nyame helm",
     body="Erilaz Surcoat +3",
-    hands="Turms Mittens +1",
+	body="Runeist Coat +3",
+    --hands="Turms Mittens +1",
+	hands="Erilaz Gauntlets +3",
     legs="Eri. Leg Guards +3",
-    feet="Turms Leggings +1",
+    --feet="Turms Leggings +1",
+	feet="Erilaz Greaves +3",
     neck="Futhark Torque +1",
     waist="Sailfi Belt +1",
     left_ear="Odnowa Earring +1",
@@ -118,18 +121,18 @@ sets.TP = {
     right_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 
-    --ammo="Staunch Tathlum +1",
-    --head={ name="Nyame Helm", augments={'Path: B',}},
+    --ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    --head="Aya. Zucchetto +2",
     --body="Ayanmo Corazza +2",
     --hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     --legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-    --feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    --feet={ name="Herculean Boots", augments={'Enmity-3','"Mag.Atk.Bns."+17','Quadruple Attack +2','Accuracy+13 Attack+13','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
     --neck="Lissome Necklace",
     --waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     --left_ear="Sherida Earring",
     --right_ear="Telos Earring",
     --left_ring="Niqmaddu Ring",
-    --right_ring="Moonbeam Ring",
+    --right_ring="Ilabrat Ring",
     --back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 			
@@ -173,7 +176,8 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
     head="Rune. Bandeau +3",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
 	body="Erilaz Surcoat +3",
-    legs="Aya. Cosciales +2",
+	legs="Futhark Trousers +2",
+    --legs="Aya. Cosciales +2",
     feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},    
     neck="Voltsurge Torque",
     left_ear="Odnowa Earring +1",
@@ -196,7 +200,7 @@ sets.midcast.Enhancing = {
 sets.midcast.Phalanx = {
 	ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
-    body={ name="Herculean Vest", augments={'VIT+4','Attack+14','Phalanx +4','Mag. Acc.+14 "Mag.Atk.Bns."+14',}},
+    body={ name="Herculean Vest", augments={'Crit. hit damage +2%','AGI+9','Phalanx +5','Accuracy+5 Attack+5',}},
     hands={ name="Taeon Gloves", augments={'Evasion+24','"Counter"+3','Phalanx +3',}},
     legs={ name="Taeon Tights", augments={'Phalanx +3',}},
     feet={ name="Taeon Boots", augments={'Phalanx +3',}},
@@ -292,6 +296,13 @@ sets.precast.WS["Herculean Slash"] = set_combine(sets.precast.WS["Shockwave"], {
 })
 -- Sword
 sets.precast.WS["Requiescat"] = set_combine(sets.precast.WS, {
+})
+
+sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, {
+})
+
+-- Axe
+sets.precast.WS["Decimation"] = set_combine(sets.precast.WS, {
 })
 			
 -- Misc Sets

@@ -239,6 +239,24 @@ sets.precast.WS["Savage Blade"] = {
     left_ring="Ilabrat Ring",
     right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
+	
+sets.precast.WS["Evisceration"] = {
+	ammo="WSBullet",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Chasseur's Gants +3",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+	
+    ammo="Chrono Bullet",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear={ name="Chas. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+    right_ring="Regal Ring",
+    left_ring="Ilabrat Ring",
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    }
 
 
 -- RA WS

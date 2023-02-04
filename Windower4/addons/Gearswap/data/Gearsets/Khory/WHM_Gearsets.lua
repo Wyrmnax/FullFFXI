@@ -141,12 +141,11 @@ if player.name == 'Khory' then
 		})
 
 		sets.midcast.Curaga = {
-	main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},
+	main="Daybreak",
     sub="Sors Shield",
-    ammo="Impatiens",
-    head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
-    body="Theo. Bliaut +2",
-    hands="Theophany Mitts +2",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Ebers Pant. +2",
     feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
     neck="Incanter's Torque",
@@ -180,7 +179,7 @@ if player.name == 'Khory' then
     main="Bolelabunga",
     sub="Culminus",
     ammo="Impatiens",
-    head="Inyanga Tiara +2",
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
     legs="Th. Pantaloons +2",
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
     neck="Incanter's Torque",
@@ -208,7 +207,14 @@ if player.name == 'Khory' then
 		feet="Theo. Duckbills +2",
 	}
 		sets.midcast.Phalanx = set_combine(sets.midcast.Boost)
-		sets.midcast.Hastespell = {ammo="Impatiens", waist="Witful Belt"}
+		sets.midcast.Hastespell = 
+		{		
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
+		waist="Embla Sash",		
+		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
+		feet="Theo. Duckbills +2",
+		}
 		sets.midcast.Stoneskin = {waist="Siegal Sash"}
 		sets.midcast.Aquaveil = {waist="Empahatikos Rope", legs="Shedir Seraweels"}
 		sets.midcast.Blink = set_combine(sets.midcast.Aquaveil)

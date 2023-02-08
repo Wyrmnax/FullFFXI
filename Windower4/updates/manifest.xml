@@ -116,7 +116,7 @@
     </plugin>
     <plugin>
       <name>PacketFlow</name>
-      <version>0.0.0.5</version>
+      <version>0.0.0.6</version>
       <description>
         Increase your bandwidth to decrease the odds messages will be dropped.
       </description>

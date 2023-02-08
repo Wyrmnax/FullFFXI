@@ -24,10 +24,12 @@ function get_sets()
 	include('Gearsets/'..player.name..'/NIN_Gearsets.lua')
 	
 -- Define Default Values for Variables
-	Mode = 0
+	Mode = 'Chi'
 	PDT = 0
 	MDT = 0
 	ShadowType = 'None'
+	ModeWeapon = sets.Chi
+	windower.send_command('autows use Blade: Chi')
 end -- End gear sets
 
 -- Called when this job file is unloaded (eg: job change)
@@ -37,133 +39,53 @@ end
 
 -- Rules
 function self_command(command)
--- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+	if command == 'Mode' then
+		if Mode == 'Chi' then
+			Mode = 'SB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'SB' then
+			Mode = 'Evis'
+			windower.send_command('autows use Evisceration')
+			ModeWeapon = sets.Evis			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Evisceration')
+		elseif Mode == 'Evis' then
+			Mode = 'Chi'
+			windower.send_command('autows use Blade: Chi')
+			ModeWeapon = sets.Chi
 				previous_set()
-			else
-				if Mode == 4 then
-					equip(sets.idle.Standard,sets.idle.Evasion)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set Locked')
+			windower.add_to_chat(121,'Mode Blade: Chi')
 		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+	elseif command == 'ModeX' then
+		if Mode == 'Chi' then
+			Mode = 'Evis'
+			windower.send_command('autows use Evisceration')
+			ModeWeapon = sets.Evis			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Evisceration')
+		elseif Mode == 'Evis' then
+			Mode = 'SB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'SB' then
+			Mode = 'Chi'
+			windower.send_command('autows use Blade: Chi')
+			ModeWeapon = sets.Chi
 				previous_set()
-			else
-				if Mode == 4 then
-					equip(sets.idle.Standard,sets.idle.Evasion)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				if Mode == 4 then
-					equip(sets.idle.Standard,sets.idle.Evasion)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
-		else
-			if Mode >= 4 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				if Mode == 4 then
-					equip(sets.idle.Standard,sets.idle.Evasion)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
+			windower.add_to_chat(121,'Mode Blade: Chi')
 		end
 	end
 end
 	
 function status_change(new,old)
 -- Autoset
-    if T{'Idle','Resting'}:contains(new) then
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
-			if PDT == 1 or player.hpp < 30 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			elseif Mode == 4 then
-				windower.add_to_chat(121,'Evasion Set')
-				equip(sets.idle.Standard,sets.idle.Evasion)
-			else
-				if new == "Resting" then		
-					equip(sets.Resting)
-				else
-					windower.add_to_chat(121,'Idle/Resting Set')
-					equip(sets.idle.Standard)
-				end	
-			end
-		end
-	elseif new == 'Engaged' then
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			previous_set()
-		end
+    previous_set()
+	if player.status == 'Engaged' then
 	end
 end
 
@@ -208,7 +130,7 @@ function precast(spell,arg)
 		elseif windower.wc_match(spell.name,'Curing*') then
 			equip(sets.misc.Waltz)
 		elseif windower.wc_match(spell.name,'*Step') then
-			equip(sets.TP.Acc)
+			equip(ModeWeapon, sets.TP.Acc)
 		end
 	end
 end
@@ -248,21 +170,7 @@ end
 
 function aftercast(spell,arg)
 -- Autoset
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if player.status == 'Engaged' then
-			-- Equip Previous TP set
-			previous_set()
-		else
-			if Mode == 4 then
-				equip(sets.idle.Standard,sets.idle.Evasion)
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	end
+	previous_set()
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
@@ -272,21 +180,10 @@ function aftercast(spell,arg)
 end
 
 function previous_set(spell)
-	if Mode == 0 then
-		equip(sets.TP)
-		windower.add_to_chat(121,'TP Set')
-	elseif Mode == 1 then 
-		equip(sets.TP.Acc)
-		windower.add_to_chat(121,'Acc Set')
-	elseif Mode == 2 then
-		equip(sets.TP.Buffed)
-		windower.add_to_chat(121,'Alliance Buff Set')
-	elseif Mode == 3 then
-		equip(sets.TP.Hybrid)
-		windower.add_to_chat(121,'Hybrid Evasion Set')
-	elseif Mode == 4 then
-		equip(sets.idle.Evasion)
-		windower.add_to_chat(121,'Full Evasion Set')
-	end		
-end
 
+	if player.status == 'Engaged' then
+		equip(ModeWeapon, sets.TP)
+	else
+		equip(ModeWeapon, sets.idle.PDT)
+	end
+end

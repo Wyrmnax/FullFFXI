@@ -327,8 +327,8 @@ function init_gear_sets()
         back="Visucius's Mantle",waist="Klouskap Sash",legs="Ryuo Hakama",feet=gear.herculean_ta_feet}
 		
 	-- Weapons sets
-	sets.weapons.PetWeapons = {main="Ohtas",range="Animator P +1",}
-	sets.weapons.Godhands = {main="Godhands",range="Animator P +1",}
+	sets.weapons.PetWeapons = {main="Ohtas",range="Neo Animator +1",}
+	sets.weapons.Godhands = {main="Godhands",range="Neo Animator +1",}
 end
 
 -- Select default macro book on initial load or subjob change.

@@ -20,7 +20,7 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'DNC' then
-				set_macro_page(1,4)
+				set_macro_page(2,4)
 			elseif player.sub_job == 'NIN' then
 				set_macro_page(1,4)
 			elseif player.sub_job == 'RNG' then
@@ -180,7 +180,7 @@ sets.precast.QD.ACC = {
     body="Malignance Tabard",
     hands="Nyame Gauntlets",
     legs="Malignance Tights",
-    feet="Chass. Bottes +2",
+    feet="Chass. Bottes +3",
     neck="Comm. Charm +2",
     waist="Eschan Stone",
     left_ear="Lempo Earring",
@@ -196,7 +196,7 @@ sets.precast.QD.MAB = {
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
-    feet="Chass. Bottes +2",
+    feet="Chass. Bottes +3",
     neck={ name="Comm. Charm +2", augments={'Path: A',}},    
 	waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
@@ -243,10 +243,13 @@ sets.precast.WS["Savage Blade"] = {
 sets.precast.WS["Evisceration"] = {
 	ammo="WSBullet",
     head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Chasseur's Gants +3",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+    --body="Nyame Mail",
+	body="Abnoba Kaftan",
+	--hands="Chasseur's Gants +3",
+    hands="Mummu Wrists +2",
+    legs="Nyame Flanchard",	
+    --feet="Nyame Sollerets",
+    feet="Mummu Gamash. +2",
 	
     ammo="Chrono Bullet",
     neck="Fotia Gorget",

@@ -27,13 +27,13 @@
     <addon>instaLS</addon>
     <addon>GearSwap</addon>
     <addon>equipviewer</addon>
-    <addon>MyHome</addon>
     <addon>DressUp</addon>
     <addon>temps</addon>
     <addon>latentchecker</addon>
     <addon>NyzulHelper</addon>
     <addon>Dimmer</addon>
     <addon>timestamp</addon>
+    <addon>MyHome</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

@@ -66,7 +66,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["COR"] = {
@@ -126,7 +126,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"torcleaver\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -195,7 +195,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -222,7 +222,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"blade: shun\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -249,7 +249,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             }
         },
         ["PLD"] = {
@@ -357,9 +357,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -375,9 +375,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             }
         },
         ["SCH"] = {

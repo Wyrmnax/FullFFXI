@@ -280,6 +280,12 @@ if player.name == 'Khory' then
     waist="Fotia Belt",
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
+	
+	sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS.WSD, {
+	neck="Fotia Gorget",
+    waist="Fotia Belt",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	})
 		sets.precast.WS['Mercy Stroke'] = set_combine(sets.precast.WS.WSD, {
 	neck="Bard's Charm +2",		
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},

@@ -263,7 +263,7 @@ function init_gear_sets()
 
     sets.idle = {
 	main="Xiucoatl",
-    range="Animator P",
+    range="Neo Animator",
     ammo="Automat. Oil +3",
     head="Rawhide Mask",
 	body="Nyame Mail",
@@ -281,7 +281,7 @@ function init_gear_sets()
 		
 	sets.idle.Refresh = {
 	main="Xiucoatl",
-    range="Animator P",
+    range="Neo Animator",
     ammo="Automat. Oil +3",
     head="Rawhide Mask",
 	body="Nyame Mail",    
@@ -300,7 +300,7 @@ function init_gear_sets()
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = {
 	main="Xiucoatl",
-    range="Animator P",
+    range="Neo Animator",
     ammo="Automat. Oil +3",
     head="Rawhide Mask",
 	body="Nyame Mail",    
@@ -319,7 +319,7 @@ function init_gear_sets()
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
 	main="Xiucoatl",
-    range="Animator P",
+    range="Neo Animator",
     ammo="Automat. Oil +3",
 	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
     --head="Karagoz Capello +1",
@@ -405,8 +405,8 @@ function init_gear_sets()
         }
 		
 	-- Weapons sets
-	sets.weapons.PetWeapons = {main="Ohtas",range="Animator P +1",}
-	sets.weapons.Godhands = {main="Godhands",range="Animator P +1",}
+	sets.weapons.PetWeapons = {main="Ohtas",range="Neo Animator +1",}
+	sets.weapons.Godhands = {main="Godhands",range="Neo Animator +1",}
 end
 
 -- Select default macro book on initial load or subjob change.

@@ -25,6 +25,7 @@ function get_sets()
 	ShadowType = 'None'
 	Mode = 0
 	PDT = 0
+	PDT = 0
 	MDT = 0
 end
 
@@ -287,7 +288,7 @@ function midcast(spell,arg)
 		elseif spell.name == 'Haste' then
 			equip(sets.midcast.Hastespell)
 		elseif spell.name == 'Auspice' then
-			equip(sets.midcast.ConserveMP, sets.precast.Auspice)
+			equip(sets.midcast.BarElement)
 		elseif spell.english:wcmatch('Protectra*') then
 			equip(sets.midcast.ConserveMP, sets.precast.Protectra)
 		elseif spell.english:wcmatch('Shellra*') then

@@ -30,7 +30,23 @@ if player.name == 'Khory' then
 			set_macro_page(1,17)
 		end
 		
-	send_command('wait 3;input /lockstyleset 3')
+	send_command('wait 3;input /lockstyleset 3')	
+	
+	sets.Chi = { 
+	main={ name="Heishi Shorinken", augments={'Path: A',}},
+    sub="Kunimitsu"
+	}	
+		
+	sets.SB = { 
+	main="Naegling",
+    sub={ name="Ternion Dagger +1", augments={'Path: A',}}
+	}
+	
+	sets.Evis = { 
+	main="Tauret",
+    sub={ name="Gleti's Knife", augments={'Path: A',}}
+	}
+	
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 

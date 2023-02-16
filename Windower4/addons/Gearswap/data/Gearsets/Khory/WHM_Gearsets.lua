@@ -175,16 +175,18 @@ if player.name == 'Khory' then
 		sets.midcast.Sacrifice = set_combine(sets.midcast.Recast)
 
 		-- Enhancing
-		sets.midcast.Regen = set_combine(sets.midcast.ConserveMP,{
+		sets.midcast.Regen = {
     main="Bolelabunga",
-    sub="Culminus",
+    sub="Ammurapi Shield",
     ammo="Impatiens",
     head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+	body="Telchine Chas.",
+	hands="Ebers Mitts +1",
     legs="Th. Pantaloons +2",
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
     neck="Incanter's Torque",
     waist="Embla Sash",
-	})
+	}
 		sets.midcast.BarElement = {		
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
 		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
@@ -220,7 +222,10 @@ if player.name == 'Khory' then
 		sets.midcast.Blink = set_combine(sets.midcast.Aquaveil)
 		sets.midcast.Reraise = set_combine(sets.midcast.ConserveMP)
 		sets.precast.Protectra = set_combine(sets.midcast.BarElement)
-		sets.precast.Shellra = set_combine(sets.midcast.BarElement)
+		sets.precast.Shellra = set_combine(sets.midcast.BarElement)		
+		sets.midcast.Auspice = set_combine(sets.midcast.Hastespell, {
+		feet="Ebers Duckbills +1",
+		})
 
 		--Divine Magic
 		sets.midcast.Repose = set_combine(sets.midcast.Recast)

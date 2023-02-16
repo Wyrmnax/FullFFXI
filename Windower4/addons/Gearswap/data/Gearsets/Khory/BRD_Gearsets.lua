@@ -133,7 +133,7 @@ if player.name == 'Khory' then
 	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.Song =set_combine(sets.precast.Fastcast, { 
-	head="Fili Calot +2",    
+	head="Fili Calot +3",    
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 	})
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
@@ -154,7 +154,7 @@ if player.name == 'Khory' then
 		sets.midcast.Buffsong = {
 	main="Carnwenhan",
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
-    head="Fili Calot +2",
+    head="Fili Calot +3",
     body="Fili Hongreline +2",
     hands="Fili Manchettes +2",
 	neck="Mnbw. Whistle +1",

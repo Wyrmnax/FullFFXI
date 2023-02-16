@@ -439,7 +439,8 @@ function get_sets()
     
     sets.midcast.nuking.normal = {
 	main="Bunzi's Rod",
-	sub="Ammurapi Shield",
+	--sub="Ammurapi Shield",
+	sub="Culminus",
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
 	head="Peda. M.Board +3",   
@@ -450,7 +451,7 @@ function get_sets()
     neck="Argute Stole +2",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear="Regal Earring",
+    right_ear="Arbatel Earring +1",
     left_ring="Freke Ring",
     right_ring="Jhakri Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -464,7 +465,8 @@ function get_sets()
 	
     sets.midcast.nuking.acc = {
 	main="Bunzi's Rod",
-	sub="Ammurapi Shield",
+	--sub="Ammurapi Shield",
+	sub="Culminus",
     ammo="Seeth. Bomblet +1",
     ammo="Ghastly Tathlum +1",
     head="Peda. M.Board +3",
@@ -475,7 +477,7 @@ function get_sets()
     neck="Argute Stole +2",
     waist="Sacro Cord",
     left_ear="Malignance Earring",
-    right_ear="Regal Earring",
+    right_ear="Arbatel Earring +1",
     left_ring="Freke Ring",
     right_ring="Jhakri Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},

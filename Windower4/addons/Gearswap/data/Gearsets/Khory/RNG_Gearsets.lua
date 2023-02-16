@@ -59,6 +59,7 @@ sets.idle.PDT = {
     right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.idle.MDT = { 
@@ -77,6 +78,7 @@ sets.idle.MDT = {
     right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.misc.Town = set_combine(sets.idle.PDT,{})
@@ -99,14 +101,21 @@ sets.TP = {
     right_ear="Cessance Earring",
     left_ring="Defending Ring",
     right_ring="Epona's Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 -- Melee Accuracy TP
 sets.TP.Acc = set_combine(sets.TP,{})
 
 -- RA Sets
 sets.precast.Snapshot = {    
+	body= "Amini Caban +2",
+	neck="Scout's Gorget +2",
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-    feet="Meg. Jam. +2",}
+	left_ring="Crepuscular Ring",	
+	waist="Yemaya Belt",
+    feet="Meg. Jam. +2",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	}
 sets.precast.Snapshot.Overkill = set_combine(sets.precast.Snapshot,{})
 
 -- Bow
@@ -115,17 +124,18 @@ sets.RA = {
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
     ammo="Chrono Bullet",
-    head="Malignance Chapeau",
+    head="Arcadian Beret +3",
     body="Malignance Tabard",
-    hands={ name="Ikenga's Gloves", augments={'Path: A',}},
+    hands="Amini Glove. +2",
     legs="Malignance Tights",
     feet="Malignance Boots",
-    neck="Iskur Gorget",
-    waist="Chr. Bul. Pouch",
-    left_ear="Telos Earring",
-    right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
-    left_ring="Dingir Ring",
+    neck="Scout's Gorget +2",
+    waist="K. Kachina Belt +1",
+    left_ear="Beyla Earring",
+    right_ear="Amini Earring +1",
+    left_ring="Crepuscular Ring",
     right_ring="Regal Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 				
 sets.RA.Acc = set_combine(sets.RA, {})
@@ -177,6 +187,7 @@ sets.precast.WS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.WSD = {
@@ -192,6 +203,7 @@ sets.precast.WS.WSD = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.MAB = {
@@ -206,14 +218,16 @@ sets.precast.WS.MAB = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 -- Range
-sets.precast.RAWS = {
+sets.precast.RAWS = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -223,14 +237,16 @@ sets.precast.RAWS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 -- Bow WS
-sets.precast.RAWS['Jishnu\'s Radiance'] = {
+sets.precast.RAWS['Jishnu\'s Radiance'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -240,13 +256,15 @@ sets.precast.RAWS['Jishnu\'s Radiance'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
-sets.precast.RAWS['Namas Arrow'] = {
+sets.precast.RAWS['Namas Arrow'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -256,15 +274,17 @@ sets.precast.RAWS['Namas Arrow'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Gun/Crossbow WS
-sets.precast.RAWS['Last Stand'] = {
+sets.precast.RAWS['Last Stand'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -274,14 +294,16 @@ sets.precast.RAWS['Last Stand'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.RAWS['Coronach'] = {
+sets.precast.RAWS['Coronach'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -291,14 +313,16 @@ sets.precast.RAWS['Coronach'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.RAWS['Wildfire'] = {
+sets.precast.RAWS['Wildfire'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -308,14 +332,16 @@ sets.precast.RAWS['Wildfire'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.precast.RAWS['Trueflight'] = {				
 	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
     sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
     range={ name="Fomalhaut", augments={'Path: A',}},
-    ammo="Chrono Bullet",    
-    body="Cohort Cloak +1",
+    ammo="Chrono Bullet", 		 
+    head="Nyame Helm",
+    body="Nyame Mail",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
@@ -325,6 +351,7 @@ sets.precast.RAWS['Trueflight'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB,{})

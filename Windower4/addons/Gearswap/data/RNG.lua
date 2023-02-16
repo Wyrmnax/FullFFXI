@@ -303,30 +303,17 @@ function precast(spell,arg)
 end
 
 function midcast(spell,arg)
+	windower.add_to_chat(121, "Spell name " ..spell.name)
     if spell.name == 'Ranged' then
-		if Mode == 1 or Mode == 3 then
-			if buffactive.Barrage then
-				equip(sets.precast.JA.Acc["Barrage"])
-			elseif buffactive.Overkill then
-				equip(sets.precast.JA.Acc["Overkill"])
-			else
-				if ranged_Bow:contains(player.equipment.range) then
-					equip(sets.RA.Acc)
-				elseif ranged_Gun:contains(player.equipment.range) then
-					equip(sets.RA.Acc.Gun)
-				end
-			end
+		if buffactive.Barrage then
+			equip(sets.precast.JA["Barrage"])
+		elseif buffactive.Overkill then
+			equip(sets.precast.JA["Overkill"])
 		else
-			if buffactive.Barrage then
-				equip(sets.precast.JA["Barrage"])
-			elseif buffactive.Overkill then
-				equip(sets.precast.JA["Overkill"])
-			else
-				if ranged_Bow:contains(player.equipment.range) then
-					equip(sets.RA)
-				elseif ranged_Gun:contains(player.equipment.range) then
-					equip(sets.RA.Gun)
-				end
+			if ranged_Bow:contains(player.equipment.range) then
+				equip(sets.RA)
+			elseif ranged_Gun:contains(player.equipment.range) then
+				equip(sets.RA.Gun)
 			end
 		end
     end

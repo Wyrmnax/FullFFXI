@@ -70,7 +70,7 @@
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>false</plEnspell>
-  <plEnspell_Spell>0</plEnspell_Spell>
+  <plEnspell_Spell>2</plEnspell_Spell>
   <plStormSpell>true</plStormSpell>
   <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>
@@ -95,8 +95,8 @@
   <phalanxAccession>true</phalanxAccession>
   <stoneskinPerpetuance>false</stoneskinPerpetuance>
   <stoneskinAccession>false</stoneskinAccession>
-  <enspellPerpetuance>false</enspellPerpetuance>
-  <enspellAccession>false</enspellAccession>
+  <enspellPerpetuance>true</enspellPerpetuance>
+  <enspellAccession>true</enspellAccession>
   <stormspellPerpetuance>false</stormspellPerpetuance>
   <stormspellAccession>false</stormspellAccession>
   <adloquiumPerpetuance>true</adloquiumPerpetuance>

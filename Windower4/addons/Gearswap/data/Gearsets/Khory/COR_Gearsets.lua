@@ -77,7 +77,7 @@ sets.idle.PDT = {
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="Malignance Tights",
     feet="Malignance Boots",
-    neck="Lissome Necklace",
+    neck="Rep. Plat. Medal",
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",

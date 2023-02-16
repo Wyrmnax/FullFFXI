@@ -189,6 +189,7 @@ return {
     [186] = {id=186,en="Dynamis - Bastok",ja="デュナミス-バストゥーク",can_invite_cross_zone=true,can_pet=true,search="DynamisBas"},
     [187] = {id=187,en="Dynamis - Windurst",ja="デュナミス-ウィンダス",can_invite_cross_zone=true,can_pet=true,search="DynamisWin"},
     [188] = {id=188,en="Dynamis - Jeuno",ja="デュナミス-ジュノ",can_invite_cross_zone=true,can_pet=true,search="DynamisJeu"},
+    [189] = {id=189,en="Outer Ra'Kaznar [U3]",ja="ラ・カザナル宮外郭〔Ｕ３〕",can_pet=true,is_layered=true,search="OutRaKaz_U3"},
     [190] = {id=190,en="King Ranperre's Tomb",ja="龍王ランペールの墓",can_invite_cross_zone=true,can_pet=true,search="RanpsTomb"},
     [191] = {id=191,en="Dangruf Wadi",ja="ダングルフの涸れ谷",can_invite_cross_zone=true,can_pet=true,search="Dangruf"},
     [192] = {id=192,en="Inner Horutoto Ruins",ja="内ホルトト遺跡",can_invite_cross_zone=true,can_pet=true,search="InHorutoto"},

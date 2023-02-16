@@ -84,7 +84,7 @@ skillchain_elements.Reverberation = S{'Water'}
 -- Equipment Mappings
 
 	ranged_Bow = T{"Yoichinoyumi", "Echidna's Bow"}
-	ranged_Gun = T{"Annihilator", "Eminence Gun", "Armageddon", "Malison"}
+	ranged_Gun = T{"Annihilator", "Eminence Gun", "Armageddon", "Malison", "Fomalhaut"}
 	
 -- Areas based Equipment
 	areas = {}

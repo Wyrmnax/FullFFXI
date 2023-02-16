@@ -288,7 +288,7 @@ function midcast(spell,arg)
 		elseif spell.name == 'Haste' then
 			equip(sets.midcast.Hastespell)
 		elseif spell.name == 'Auspice' then
-			equip(sets.midcast.BarElement)
+			equip(sets.midcast.Auspice)
 		elseif spell.english:wcmatch('Protectra*') then
 			equip(sets.midcast.ConserveMP, sets.precast.Protectra)
 		elseif spell.english:wcmatch('Shellra*') then

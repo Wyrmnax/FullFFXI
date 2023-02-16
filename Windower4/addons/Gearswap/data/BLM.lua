@@ -357,13 +357,13 @@ function midcast(spell,arg)
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke, {body="Spaekona's Coat +3", waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke,{body="Spaekona's Coat +3"})
+							equip(sets.midcast.Nuke.MB,{body="Spaekona's Coat +3"})
 					end
 				else
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke, {waist="Hachirin-no-Obi"})
 						else
-							equip(sets.midcast.Nuke,{})
+							equip(sets.midcast.Nuke.MB,{})
 					end
 				end
 			-- Magic Burst

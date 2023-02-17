@@ -24,7 +24,10 @@ function get_sets()
 	
 	
 -- Define Default Values for Variables
-	Mode = 0
+	Mode = 'MeleeSB'
+	ModeRanged = 'SBRanged'
+	ModeWeapon = sets.MeleeSB
+	ModeRangedWeapon = sets.RangedSB
 	PDT = 0
 	MDT = 0
 	ShadowType = 'None'
@@ -37,86 +40,28 @@ function file_unload()
 end
  
 function self_command(command)
+	windower.send_command('command ' ..command)
    -- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			-- make sure other values are set to default
-			-- Unlock PDT/MDT Variables
-			PDT = 0
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+	if command == 'ModeMelee' then
+		if Mode == 'RangedWeapons' then
+			Mode = 'MeleeSB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.MeleeSB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'MeleeSB' then
+			Mode = 'DaggersTrueflight'
+			windower.send_command('autows use Trueflight')
+			ModeWeapon = sets.DaggersTrueflight			
+				previous_set()		
+			windower.add_to_chat(121,'Mode DaggersTrueflight')
+		elseif Mode == 'DaggersTrueflight' then
+			Mode = 'RangedWeapons'
+			windower.send_command('autows use Last Stand')
+			ModeWeapon = sets.RangedWeapons
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'PDT Set UnLocked')
-		else
-		-- Make sure other values are set to default
-				MDT = 0
-			-- Set PDT set and equip it
-				PDT = 1
-				equip(sets.idle.PDT)
-				windower.add_to_chat(121,'PDT Set Locked')
-		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-		-- Unlock PDT/MDT Variables
-			PDT = 0
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'MDT Set UnLocked')
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1	
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-			if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121,'PDT/MDT Set UnLocked')
-		else
-			if Mode >= 3 then
-				-- Reset to 0
-				Mode = 0
-			else
-				-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				if Mode == 0 then
-					windower.add_to_chat(121,'Ranged TP Set')
-				elseif Mode == 1 then
-					windower.add_to_chat(121,'Ranged Acc TP Set')
-				elseif Mode == 2 then
-					windower.add_to_chat(121,'Melee TP Set')
-				elseif Mode == 3 then
-					windower.add_to_chat(121,'Melee Acc TP Set')
-				end
-				equip(sets.idle.Standard)
-			end
-		end
+			windower.add_to_chat(121,'Mode RangedWeapons')
+		end	
 	elseif command == 'RA' then
 		if player.status == 'Engaged' then
 			if not buffactive['Decoy Shot'] and not buffactive['Camouflage'] and windower.ffxi.get_ability_recasts()[52] < 1 then 

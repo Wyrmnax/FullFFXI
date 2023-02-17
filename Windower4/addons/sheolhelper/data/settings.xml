@@ -162,30 +162,18 @@
             <show>false</show>
             <text>
                 <alpha>255</alpha>
-                <fonts>
-
-                </fonts>
             </text>
         </disclaimer>
         <map>
             <texture>
-                <path>D:\Games\FullFFXI\Windower4\/addons/sheolhelper/maps/3-1.png</path>
+                <path>D:\Games\FullFFXI\Windower4\/addons/sheolhelper/maps/3-4.png</path>
             </texture>
         </map>
-        <res_box>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
-        </res_box>
         <seg_box>
             <disclaimer>false</disclaimer>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
+            <pos>
+                <y>503</y>
+            </pos>
         </seg_box>
     </khory>
 </settings>

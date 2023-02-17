@@ -157,7 +157,7 @@ elseif player.main_job == "BRD" then
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
-	windower.send_command('lua load singer')
+	--windower.send_command('lua load singer')
 	
 elseif player.main_job == "SAM" then
 	basic_binds()
@@ -183,11 +183,11 @@ elseif player.main_job == "DRG" then
 
 elseif player.main_job == "RNG" then
 	basic_binds()
-	-- set binds
-	windower.send_command('@bind f10 gs c RA')
-	windower.send_command('@bind f11 gs c ws')
-	windower.send_command('@bind f12 gs c MDT')
-	--windower.send_command('@bind f12 gs c TP')
+	-- set binds	
+	windower.send_command('@bind f11 gs c ModeRanged')
+	windower.send_command('@bind ^f11 gs c ModeRangedX')
+	windower.send_command('@bind f12 gs c ModeMelee')
+	windower.send_command('@bind ^f12 gs c ModeMeleeX')
 	
 elseif player.main_job == "COR" then
 	clear_binds()

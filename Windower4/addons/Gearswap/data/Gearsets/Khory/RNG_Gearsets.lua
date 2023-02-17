@@ -40,6 +40,28 @@ if player.name == 'Khory' then
 		else
 			set_macro_page(13,1)
 		end
+	
+		
+	sets.MeleeSB = { 
+	main="Naegling",
+    sub="Ternion Dagger +1",
+	}
+	
+	sets.DaggersTrueflight = { 
+	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
+    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
+	}
+	
+	sets.RangedWeapons = {  
+	main={ name="Kustawi +1", augments={'Path: A',}},
+    sub="Nusku Shield",
+	}
+	
+	sets.RangedSB = {  
+	Ranged="Anarchy +3",
+	}
+	
+	
 		
 -- Auto Sets
 -- Standard/idle
@@ -127,7 +149,7 @@ sets.RA = {
     head="Arcadian Beret +3",
     body="Malignance Tabard",
     hands="Amini Glove. +2",
-    legs="Malignance Tights",
+    legs="Amini Bragues +2",
     feet="Malignance Boots",
     neck="Scout's Gorget +2",
     waist="K. Kachina Belt +1",

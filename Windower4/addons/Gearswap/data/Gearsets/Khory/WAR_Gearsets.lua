@@ -9,7 +9,7 @@ if player.name == 'Khory' then
 	include('include/utility.lua')
 	include('include/mappings.lua')
 	include('include/equipment.lua')
-	include('../include/autoexec.lua')	
+	--include('../include/autoexec.lua')	
 	
 	--send_command('wait 6;input /lockstyleset 1')
 	

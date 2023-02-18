@@ -17,6 +17,25 @@
                 <slot10>frost breath</slot10>
                 <slot11>metallic body</slot11>
             </70>
+            <DD>
+                <slot01>battery charge</slot01>
+                <slot02>restoral</slot02>
+                <slot03>sheep song</slot03>
+                <slot04>dream flower</slot04>
+                <slot05>spectral floe</slot05>
+                <slot06>subduction</slot06>
+                <slot07>tenebral crush</slot07>
+                <slot08>animating wail</slot08>
+                <slot09>blazing bound</slot09>
+                <slot10>molting plumage</slot10>
+                <slot11>acrid stream</slot11>
+                <slot12>demoralizing roar</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>sickle slash</slot14>
+                <slot15>sudden lunge</slot15>
+                <slot16>disseverment</slot16>
+                <slot17>vanity dive</slot17>
+            </DD>
             <dd>
                 <slot01>thrashing assault</slot01>
                 <slot02>heavy strike</slot02>

@@ -286,6 +286,22 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 })
 
+sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS, { 
+	ammo="Seeth. Bomblet +1",
+	head={ name="Mpaca's Cap", augments={'Path: A',}},
+    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    hands="Mpaca's Gloves",
+    legs="Mpaca's Hose",
+    feet="Mummu Gamash. +2",
+    neck="Fotia Gorget",
+	waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Friomosi Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Regal Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+})
+
 sets.misc.Waltz = {}
 sets.misc.Steps = set_combine(sets.TP.Acc)
 sets.misc.flourish = {}

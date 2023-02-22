@@ -231,7 +231,7 @@ function init_gear_sets()
 	sets.midcast.Pet.PetEnmityGear = {}
 	sets.midcast.Pet.PetWSGear = {}
 	
-    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {head="Karagoz Capello +1", hands="Mpaca's Gloves", feet= "Mpaca's Boots"})
+    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {head="Karagoz Capello +2", hands="Mpaca's Gloves", feet= "Mpaca's Boots"})
 	sets.midcast.Pet.PetWSGear.Melee = set_combine(sets.midcast.Pet.PetWSGear, {ring2="C. Palug Ring"})
 	sets.midcast.Pet.PetWSGear.Tank = set_combine(sets.midcast.Pet.PetWSGear, {})
 	sets.midcast.Pet.PetWSGear.LightTank = set_combine(sets.midcast.Pet.PetWSGear, {})
@@ -322,7 +322,7 @@ function init_gear_sets()
     range="Neo Animator",
     ammo="Automat. Oil +3",
 	head={ name="Taeon Chapeau", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
-    --head="Karagoz Capello +1",
+    --head="Karagoz Capello +2",
     body="Pitre Tobe +2",
     hands="Mpaca's Gloves",
 	--hands={ name="Taeon Gloves", augments={'Pet: Accuracy+22 Pet: Rng. Acc.+22','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},

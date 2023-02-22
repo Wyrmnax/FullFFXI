@@ -17,25 +17,27 @@
                 <slot10>frost breath</slot10>
                 <slot11>metallic body</slot11>
             </70>
-            <DD>
-                <slot01>battery charge</slot01>
-                <slot02>restoral</slot02>
-                <slot03>sheep song</slot03>
-                <slot04>dream flower</slot04>
-                <slot05>spectral floe</slot05>
-                <slot06>subduction</slot06>
-                <slot07>tenebral crush</slot07>
-                <slot08>animating wail</slot08>
-                <slot09>blazing bound</slot09>
-                <slot10>molting plumage</slot10>
-                <slot11>acrid stream</slot11>
-                <slot12>demoralizing roar</slot12>
-                <slot13>thrashing assault</slot13>
-                <slot14>sickle slash</slot14>
+            <aoe>
+                <slot01>spectral floe</slot01>
+                <slot02>tenebral crush</slot02>
+                <slot03>subduction</slot03>
+                <slot04>battery charge</slot04>
+                <slot05>occultation</slot05>
+                <slot06>cocoon</slot06>
+                <slot07>barrier tusk</slot07>
+                <slot08>plasma charge</slot08>
+                <slot09>sheep song</slot09>
+                <slot10>dream flower</slot10>
+                <slot11>animating wail</slot11>
+                <slot12>molting plumage</slot12>
+                <slot13>nat. meditation</slot13>
+                <slot14>diffusion ray</slot14>
                 <slot15>sudden lunge</slot15>
-                <slot16>disseverment</slot16>
-                <slot17>vanity dive</slot17>
-            </DD>
+                <slot16>fantod</slot16>
+                <slot17>plenilune embrace</slot17>
+                <slot18>frenetic rip</slot18>
+                <slot19>vanity dive</slot19>
+            </aoe>
             <dd>
                 <slot01>thrashing assault</slot01>
                 <slot02>heavy strike</slot02>
@@ -127,6 +129,25 @@
                 <slot10>healing breeze</slot10>
                 <slot11>frightful roar</slot11>
             </tank>
+            <tpdown>
+                <slot01>battery charge</slot01>
+                <slot02>restoral</slot02>
+                <slot03>sheep song</slot03>
+                <slot04>dream flower</slot04>
+                <slot05>spectral floe</slot05>
+                <slot06>subduction</slot06>
+                <slot07>tenebral crush</slot07>
+                <slot08>feather tickle</slot08>
+                <slot09>blazing bound</slot09>
+                <slot10>molting plumage</slot10>
+                <slot11>light of penance</slot11>
+                <slot12>reaving wind</slot12>
+                <slot13>bad breath</slot13>
+                <slot14>erratic flutter</slot14>
+                <slot15>auroral drape</slot15>
+                <slot16>diffusion ray</slot16>
+                <slot17>fantod</slot17>
+            </tpdown>
             <vw1>
                 <slot01>Firespit</slot01>
                 <slot02>Heat Breath</slot02>

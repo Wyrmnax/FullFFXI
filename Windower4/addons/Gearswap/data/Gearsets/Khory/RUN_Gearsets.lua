@@ -107,12 +107,12 @@ sets.TP = {
 	ammo="Yamarang",
     head="Nyame helm",
     body="Erilaz Surcoat +3",
-	body="Runeist Coat +3",
-    --hands="Turms Mittens +1",
-	hands="Erilaz Gauntlets +3",
+	--body="Runeist Coat +3",
+    hands="Turms Mittens +1",
+	--hands="Erilaz Gauntlets +3",
     legs="Eri. Leg Guards +3",
-    --feet="Turms Leggings +1",
-	feet="Erilaz Greaves +3",
+    feet="Turms Leggings +1",
+	--feet="Erilaz Greaves +3",
     neck="Futhark Torque +1",
     waist="Sailfi Belt +1",
     left_ear="Odnowa Earring +1",
@@ -168,7 +168,7 @@ sets.precast.JA["Battuta"] = {head="Futhark Bandeau +3"}
 sets.precast.JA["Sleight of Sword"] = {hands="Futhark Mitons"}
 sets.precast.JA["Inspiration"] = {legs="Futhark Trousers"}
 sets.precast.JA["Rayke"] = {feet="Futhark Boots"}
-sets.precast.JA["Vivacious Pulse"] = {head="Erilaz galea +2"}
+sets.precast.JA["Vivacious Pulse"] = {head="Erilaz galea +3"}
 
 -- Magic 
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
@@ -186,7 +186,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
 	})
 	
 sets.midcast.Enhancing = {
-    head="Erilaz galea +2",
+    head="Erilaz galea +3",
 	body="Emet Harness +1",
     hands="Regal Gauntlets",
     legs={ name="Futhark Trousers +2", augments={'Enhances "Inspire" effect',}},
@@ -218,7 +218,7 @@ sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
 				})
 				
 sets.midcast.Refresh = set_combine(sets.midcast.Enhancing,{
-				head="Erilaz galea +2",
+				head="Erilaz galea +3",
 				})
 				
 sets.midcast.Cure = set_combine(sets.Enmity,{

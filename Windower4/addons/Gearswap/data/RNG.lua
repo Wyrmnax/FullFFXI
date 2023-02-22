@@ -25,7 +25,7 @@ function get_sets()
 	
 -- Define Default Values for Variables
 	Mode = 'MeleeSB'
-	ModeRanged = 'SBRanged'
+	ModeRanged = 'RangedSB'
 	ModeWeapon = sets.MeleeSB
 	ModeRangedWeapon = sets.RangedSB
 	PDT = 0
@@ -40,7 +40,7 @@ function file_unload()
 end
  
 function self_command(command)
-	windower.send_command('command ' ..command)
+	--windower.add_to_chat(121, 'command ' ..command)
    -- Lock PDT
 	if command == 'ModeMelee' then
 		if Mode == 'RangedWeapons' then
@@ -61,6 +61,66 @@ function self_command(command)
 			ModeWeapon = sets.RangedWeapons
 				previous_set()
 			windower.add_to_chat(121,'Mode RangedWeapons')
+		end	
+	elseif command == 'ModeMeleeX' then
+		if Mode == 'RangedWeapons' then
+			Mode = 'DaggersTrueflight'
+			windower.send_command('autows use Trueflight')
+			ModeWeapon = sets.DaggersTrueflight			
+				previous_set()		
+			windower.add_to_chat(121,'Mode DaggersTrueflight')
+		elseif Mode == 'DaggersTrueflight' then
+			Mode = 'MeleeSB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.MeleeSB			
+				previous_set()		
+			windower.add_to_chat(121,'Mode MeleeSB')
+		elseif Mode == 'MeleeSB' then
+			Mode = 'RangedWeapons'
+			windower.send_command('autows use Last Stand')
+			ModeWeapon = sets.RangedWeapons
+				previous_set()
+			windower.add_to_chat(121,'Mode RangedWeapons')
+		end	
+	elseif command == 'ModeRanged' then
+		if ModeRanged == 'RangedSB' then
+			ModeRanged = 'RangedMagic'
+			windower.send_command('autows use Trueflight')
+			ModeRangedWeapon = sets.RangedMagic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Ranged Magic')
+		elseif ModeRanged == 'RangedMagic' then
+			ModeRanged = 'RangedPhys'
+			windower.send_command('autows use Last Stand')
+			ModeRangedWeapon = sets.RangedPhys			
+				previous_set()		
+			windower.add_to_chat(121,'Mode RangedPhys')
+		elseif ModeRanged == 'RangedPhys' then
+			ModeRanged = 'RangedSB'
+			windower.send_command('autows use Savage Blade')
+			ModeRangedWeapon = sets.RangedSB
+				previous_set()
+			windower.add_to_chat(121,'Mode RangedSB')
+		end	
+	elseif command == 'ModeRangedX' then
+		if ModeRanged == 'RangedSB' then
+			ModeRanged = 'RangedPhys'
+			windower.send_command('autows use Last Stand')
+			ModeRangedWeapon = sets.RangedPhys			
+				previous_set()		
+			windower.add_to_chat(121,'Mode RangedPhys')
+		elseif ModeRanged == 'RangedPhys' then
+			ModeRanged = 'RangedMagic'
+			windower.send_command('autows use Trueflight')
+			ModeRangedWeapon = sets.RangedMagic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode RangedMagic')
+		elseif ModeRanged == 'RangedMagic' then
+			ModeRanged = 'RangedSB'
+			windower.send_command('autows use Savage Blade')
+			ModeRangedWeapon = sets.RangedSB
+				previous_set()
+			windower.add_to_chat(121,'Mode RangedSB')
 		end	
 	elseif command == 'RA' then
 		if player.status == 'Engaged' then
@@ -112,29 +172,12 @@ function self_command(command)
 end
 
 function status_change(new,old)
-    if T{'Idle','Resting'}:contains(new) then		
-		if PDT == 1 then
-			equip(sets.idle.PDT)
-		elseif MDT == 1 then
-			equip(sets.idle.MDT)
-		else
-			if new == "Resting" then
-				equip(sets.Resting)
-			else
-				equip(sets.idle.PDT)
-			end
-		end
-	elseif new == 'Engaged' then
-		-- Engaged Sets
-		if PDT == 1 or buffactive['Weakness'] or player.hpp <= 30 then
-			equip(sets.idle.PDT)
-		elseif MDT == 1 then
-			equip(sets.idle.MDT)
-		--else
-		-- Equip previous TP set 
-		--	previous_set()
-		end
-    end
+    previous_set()
+	if new == 'Engaged' then
+		--auto food
+		windower.add_to_chat(123,'Auto Food')
+        send_command('wait 1; input /item "Grape Daifuku" <me>')
+	end
 end
 
 function precast(spell,arg)
@@ -175,25 +218,14 @@ function precast(spell,arg)
 			end
 		end
     elseif spell.type == "WeaponSkill" then
-		-- when /war Make sure Berserk is up when using a WS
-		if (spell.name == 'Jishnu\'s Radiance' or spell.name == 'Namas Arrow') and not buffactive.Berserk and not buffactive.Amnesia and not buffactive.Obliviscence and not buffactive.Paralysis and player.sub_job == 'WAR' and windower.ffxi.get_ability_recasts()[1] < 1 then
-			windower.send_command('berserk; wait 1; warcry; wait 1; '..spell.name..' '..spell.target.raw)
-			cancel_spell()
-			return
-		end
 		-- Ranged Weaponskills
 		if ranged_weaponskills:contains(spell.name) then
 			if player.status == 'Engaged' then
-				if player.tp >= 100 then
-					if spell.target.distance <= ranged_weaponskills_Distance[spell.name] then
-						if sets.precast.RAWS[spell.name] then
-							equip(sets.precast.RAWS[spell.name])
-						else
-							equip(sets.precast.RAWS)
-						end
+				if player.tp >= 100 then					
+					if sets.precast.RAWS[spell.name] then
+						equip(sets.precast.RAWS[spell.name])
 					else
-						cancel_spell()
-						windower.add_to_chat(121, 'Canceled '..spell.name..'. '..ranged_weaponskills_Distance[spell.name]..' is Too Far from '..spell.target.name..'.')
+						equip(sets.precast.RAWS)
 					end
 				else 
 					cancel_spell()
@@ -285,25 +317,7 @@ end
 
 function aftercast(spell,arg)
 	-- Autoset 
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if PDT == 1 or MDT == 1 or buffactive['Weakness'] then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			equip(sets.idle.Standard)
-		end
-	end
+	previous_set()
     -- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
     if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
@@ -326,25 +340,12 @@ end
 
 function previous_set()
 slot_lock()
-	if Mode == 0 then
-		if ranged_Bow:contains(player.equipment.range) then
-			equip(sets.RA)
-		elseif ranged_Gun:contains(player.equipment.range) then
-			equip(sets.RA.Gun)
-		end
-		windower.add_to_chat(121,'Ranged TP Set')
-	elseif Mode == 1 then
-		if ranged_Bow:contains(player.equipment.range) then
-			equip(sets.RA.Acc)
-		elseif ranged_Gun:contains(player.equipment.range) then
-			equip(sets.RA.Acc.Gun)
-		end
-		windower.add_to_chat(121,'Ranged Acc TP Set')		
-	elseif Mode == 2 then
-		equip(sets.TP)
-		windower.add_to_chat(121,'Melee TP Set')
-	elseif Mode == 3 then
-		equip(sets.TP.Acc)
-		windower.add_to_chat(121,'Melee Acc TP Set')
+	if areas.Town:contains(world.zone) then
+		windower.add_to_chat(121, "Town Gear")
+		equip(ModeWeapon, ModeRangedWeapon, sets.misc.Town)
+	elseif player.status == 'Engaged' then
+		equip(ModeWeapon, ModeRangedWeapon, sets.TP)
+	else
+		equip(ModeWeapon, ModeRangedWeapon, sets.idle.Standard)
 	end		
 end

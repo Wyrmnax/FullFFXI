@@ -188,6 +188,7 @@ elseif player.main_job == "RNG" then
 	windower.send_command('@bind ^f11 gs c ModeRangedX')
 	windower.send_command('@bind f12 gs c ModeMelee')
 	windower.send_command('@bind ^f12 gs c ModeMeleeX')
+	windower.send_command('lua reload autora')
 	
 elseif player.main_job == "COR" then
 	clear_binds()
@@ -196,6 +197,7 @@ elseif player.main_job == "COR" then
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
+	windower.send_command('lua reload autora')
 	
 elseif player.main_job == "RUN" then
 	clear_binds()

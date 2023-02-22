@@ -58,7 +58,7 @@
         <!--List of spell names to display recasts for if in whitelistMode and to exclude otherwise-->
         <SpellRecastFilter />
         <!--List of ability names to display buffs for if in whitelistMode and to exclude otherwise-->
-        <AbilityBuffFilter>Sublimation|Dark Arts|Addendum: Black|Light Arts| Addendum: White</AbilityBuffFilter>
+        <AbilityBuffFilter>Sublimation|Dark Arts|Addendum: Black|Light Arts| Addendum: White|Velocity Shot</AbilityBuffFilter>
         <!--List of spell names to display buffs for if in whitelistMode and to exclude otherwise-->
         <SpellBuffFilter />
         <!--If true will show a font outline-->

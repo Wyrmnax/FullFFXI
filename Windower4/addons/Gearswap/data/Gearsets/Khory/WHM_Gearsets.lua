@@ -181,7 +181,7 @@ if player.name == 'Khory' then
     ammo="Impatiens",
     head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
 	body="Telchine Chas.",
-	hands="Ebers Mitts +1",
+	hands="Ebers Mitts +2",
     legs="Th. Pantaloons +2",
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
     neck="Incanter's Torque",

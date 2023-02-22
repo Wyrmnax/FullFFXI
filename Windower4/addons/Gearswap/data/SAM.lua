@@ -131,21 +131,18 @@ function self_command(command)
 		if Mode == 'Masamune' then
 			Mode = 'Doji'
 			windower.send_command('autows use Tachi: Jinpu')
-			windower.send_command('autows noam')
 			ModeWeapon = sets.mainweapon.Doji			
 				previous_set()		
 			windower.add_to_chat(121,'Mode Doji - Jinpu')
 		elseif Mode == 'Doji' then
 			Mode = 'Polearm'
 			windower.send_command('autows use Impulse Drive')
-			windower.send_command('autows noam')
 			ModeWeapon = sets.mainweapon.ShiningOne			
 				previous_set()		
 			windower.add_to_chat(121,'Mode Polearm')
 		elseif Mode == 'Polearm' then
 			Mode = 'Masamune'
 			windower.send_command('autows use Tachi: Fudo')
-			windower.send_command('autows keepam')
 			ModeWeapon = sets.mainweapon.Masamune
 				previous_set()
 			windower.add_to_chat(121,'Mode Masamune - Fudo')
@@ -154,21 +151,18 @@ function self_command(command)
 		if Mode == 'Masamune' then
 			Mode = 'Polearm'
 			windower.send_command('autows use Impulse Drive')
-			windower.send_command('autows noam')
 			ModeWeapon = sets.mainweapon.ShiningOne			
 				previous_set()		
 			windower.add_to_chat(121,'Mode Polearm')
 		elseif Mode == 'Polearm' then
 			Mode = 'Doji'
 			windower.send_command('autows use Tachi: Jinpu')
-			windower.send_command('autows noam')
 			ModeWeapon = sets.mainweapon.Doji			
 				previous_set()		
 			windower.add_to_chat(121,'Mode Doji - Jinpu')
 		elseif Mode == 'Doji' then
 			Mode = 'Masamune'
 			windower.send_command('autows use Tachi: Fudo')
-			windower.send_command('autows keepam')
 			ModeWeapon = sets.mainweapon.Masamune
 				previous_set()
 			windower.add_to_chat(121,'Mode Masamune - Fudo')

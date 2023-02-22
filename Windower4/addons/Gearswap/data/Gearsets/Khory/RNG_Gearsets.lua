@@ -16,29 +16,13 @@ if player.name == 'Khory' then
 -- Auto macro sets off = 0  on = 1
 		automacroset = 1
 		if automacroset == 1 then
-			if ranged_Bow:contains(player.equipment.range) then
-				if player.sub_job == 'NIN' then
-					set_macro_page(13,1)
-				elseif player.sub_job == 'SAM' then
-					set_macro_page(13,2)
-				elseif player.sub_job == 'WAR' then
-					set_macro_page(13,3)
-				elseif player.sub_job == 'DRG' then 
-					set_macro_page(13,4)
-				end
-			elseif ranged_Gun:contains(player.equipment.range) then
-				if player.sub_job == 'NIN' then
-					set_macro_page(13,5)
-				elseif player.sub_job == 'SAM' then
-					set_macro_page(13,6)
-				elseif player.sub_job == 'WAR' then
-					set_macro_page(13,7)
-				elseif player.sub_job == 'DRG' then 
-					set_macro_page(13,8)
-				end
-			end			
+			if player.sub_job == 'NIN' then
+				set_macro_page(1,6)
+			elseif player.sub_job == 'DNC' then
+				set_macro_page(1,6)			
+			end
 		else
-			set_macro_page(13,1)
+			set_macro_page(1,6)
 		end
 	
 		
@@ -58,7 +42,15 @@ if player.name == 'Khory' then
 	}
 	
 	sets.RangedSB = {  
-	Ranged="Anarchy +3",
+	range="Anarchy +3",
+	}
+	
+	sets.RangedMagic = {  
+	range="Fomalhaut",
+	}
+	
+	sets.RangedPhys = {  
+	range="Fomalhaut",
 	}
 	
 	
@@ -66,9 +58,6 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 				
-	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
     ammo="Chrono Bullet",
     head="Malignance Chapeau",
     body="Malignance Tabard",
@@ -81,13 +70,10 @@ sets.idle.PDT = {
     right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 sets.idle.MDT = { 
-	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
     ammo="Chrono Bullet",
     head="Malignance Chapeau",
     body="Malignance Tabard",
@@ -100,7 +86,7 @@ sets.idle.MDT = {
     right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 sets.misc.Town = set_combine(sets.idle.PDT,{})
@@ -108,9 +94,6 @@ sets.misc.Town = set_combine(sets.idle.PDT,{})
 sets.idle.Standard = set_combine(sets.idle.PDT, {})
 -- Melee TP 
 sets.TP = { 
-	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
     ammo="Chrono Bullet",
     head="Malignance Chapeau",
     body="Malignance Tabard",
@@ -123,7 +106,7 @@ sets.TP = {
     right_ear="Cessance Earring",
     left_ring="Defending Ring",
     right_ring="Epona's Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 -- Melee Accuracy TP
 sets.TP.Acc = set_combine(sets.TP,{})
@@ -136,15 +119,12 @@ sets.precast.Snapshot = {
 	left_ring="Crepuscular Ring",	
 	waist="Yemaya Belt",
     feet="Meg. Jam. +2",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
 	}
 sets.precast.Snapshot.Overkill = set_combine(sets.precast.Snapshot,{})
 
 -- Bow
 sets.RA = { 
-	main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
     ammo="Chrono Bullet",
     head="Arcadian Beret +3",
     body="Malignance Tabard",
@@ -157,7 +137,7 @@ sets.RA = {
     right_ear="Amini Earring +1",
     left_ring="Crepuscular Ring",
     right_ring="Regal Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 				
 sets.RA.Acc = set_combine(sets.RA, {})
@@ -209,7 +189,7 @@ sets.precast.WS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.WSD = {
@@ -225,7 +205,7 @@ sets.precast.WS.WSD = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS.MAB = {
@@ -240,13 +220,15 @@ sets.precast.WS.MAB = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
+	
+sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, { 
+	neck="Rep. Plat. Medal",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+})
 -- Range
-sets.precast.RAWS = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS = {			
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -259,7 +241,7 @@ sets.precast.RAWS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 -- Bow WS
 sets.precast.RAWS['Jishnu\'s Radiance'] = {				
@@ -278,12 +260,9 @@ sets.precast.RAWS['Jishnu\'s Radiance'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
-sets.precast.RAWS['Namas Arrow'] = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS['Namas Arrow'] = {
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -296,14 +275,11 @@ sets.precast.RAWS['Namas Arrow'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Gun/Crossbow WS
-sets.precast.RAWS['Last Stand'] = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS['Last Stand'] = {		
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -316,13 +292,10 @@ sets.precast.RAWS['Last Stand'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.RAWS['Coronach'] = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS['Coronach'] = {		
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -335,13 +308,10 @@ sets.precast.RAWS['Coronach'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.RAWS['Wildfire'] = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS['Wildfire'] = {			
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -354,13 +324,10 @@ sets.precast.RAWS['Wildfire'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.RAWS['Trueflight'] = {				
-	 main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
-    sub={ name="Malevolence", augments={'INT+10','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Fast Cast"+5',}},
-    range={ name="Fomalhaut", augments={'Path: A',}},
+sets.precast.RAWS['Trueflight'] = {			
     ammo="Chrono Bullet", 		 
     head="Nyame Helm",
     body="Nyame Mail",
@@ -373,7 +340,7 @@ sets.precast.RAWS['Trueflight'] = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-	back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Snapshot"+10','Phys. dmg. taken-10%',}},
+	back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB,{})

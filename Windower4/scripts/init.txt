@@ -57,6 +57,7 @@ lua load react
 lua load partybuffs
 lua load sheolhelper
 lua load sellnpc
+lua load hovershot
 
 
 // *** ALLIANCE TARGET KEYS ***

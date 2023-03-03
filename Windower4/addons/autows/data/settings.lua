@@ -28,7 +28,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"black halo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -75,7 +75,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Mordant Rime\" <t>"
             }
         },
         ["BST"] = {
@@ -97,7 +97,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -115,7 +115,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DRG"] = {
@@ -166,7 +166,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -330,7 +330,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Trueflight\" <t>"
             }
         },
         ["RUN"] = {
@@ -379,7 +379,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -397,7 +397,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {
@@ -428,7 +428,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["THF"] = {
@@ -468,7 +468,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -549,7 +549,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["WHM"] = {

@@ -183,6 +183,14 @@ function job_pet_change(pet, gain)
     update_pet_mode()
 end
 
+function user_status_change (new,old)
+	if new == 'Engaged' then
+		--auto food
+		windower.add_to_chat(123,'Auto Food')
+        send_command('wait 1; input /item "Grape Daifuku" <me>')
+	end
+end
+
 -- Called when the pet's status changes.
 function job_status_change(newStatus, oldStatus, eventArgs)
 	if newStatus == "Engaged" and pet.isvalid and pet.status == "Idle" and player.target.type == "MONSTER" and state.AutoDeployMode.value and player.target.distance < 20 then

@@ -156,7 +156,7 @@ if player.name == 'Khory' then
 	sub={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
     head="Fili Calot +3",
     body="Fili Hongreline +3",
-    hands="Fili Manchettes +2",
+    hands="Fili Manchettes +3",
 	neck="Mnbw. Whistle +1",
     legs="Inyanga Shalwar +2",
 	feet="Brioso Slippers +3",

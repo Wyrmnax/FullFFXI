@@ -116,6 +116,7 @@ sets.precast.Snapshot = {
 	body= "Amini Caban +2",
 	neck="Scout's Gorget +2",
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+	legs="Adhemar Kecks",
 	left_ring="Crepuscular Ring",	
 	waist="Yemaya Belt",
     feet="Meg. Jam. +2",

@@ -95,7 +95,7 @@ sets.TP = {
 	waist="Chaac Belt",
     --waist="Sailfi Belt +1",
     left_ear="Cessance Earring",
-    right_ear="Telos Earring",
+    right_ear="Boii Earring",
     left_ring="Flamma Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
@@ -112,21 +112,22 @@ sets.TP.DT = set_combine(sets.TP, {
     neck="War. Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
-    right_ear="Telos Earring",
+    right_ear="Boii Earring",
     left_ring="Flamma Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 				})
 	
 sets.TP.DW = set_combine(sets.TP,{
-	hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
+	hands="Emi. Gauntlets +1", 
     left_ear="Suppanomimi",
 	waist="Reiki Yotai",
 	})
 
 sets.TP.DW.DT = set_combine(sets.TP.DT, {
-	hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
+	hands="Emi. Gauntlets +1", 
     left_ear="Suppanomimi",
+	waist="Reiki Yotai",
 				})	
 
 --sets.TP.DW.ATK = set_combine(sets.TP, {
@@ -168,18 +169,19 @@ sets.precast.JA["Blood Rage"] = {body="Boii Lorica +3"}
 
 -- Weaponskills
 sets.precast.WS = {    
-    ammo="Seeth. Bomblet +1",
+    ammo="Coiste Bodhar",
 	head="Nyame helm",
     body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
+	hands="Sakpata's Gauntlets",
+    feet="Sakpata's Leggings",
+    --hands="Nyame Gauntlets",
+    --feet="Nyame Sollerets",
     legs="Nyame Flanchard",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Cessance Earring",
-    right_ear="Schere Earring",
-    left_ring="Flamma Ring",
+    left_ear="Schere Earring",
+	right_ear="Boii Earring",
+    left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
@@ -193,8 +195,8 @@ sets.precast.WS.crit = {
     feet="Nyame Sollerets",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Cessance Earring",
-    right_ear="Schere Earring",
+    left_ear="Schere Earring",
+	right_ear="Boii Earring",
     left_ring="Flamma Ring",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
@@ -236,7 +238,8 @@ sets.precast.WS.MAB = {
 	sets.precast.WS["Decimation"] = set_combine(sets.precast.WS, { 
 	})
 	
-	sets.precast.WS["Mistral Axe"] = set_combine(sets.precast.WS.wsd, { 
+	sets.precast.WS["Mistral Axe"] = set_combine(sets.precast.WS.wsd, { 	
+    neck="War. Beads +2",
 	})
 	
 	sets.precast.WS["Cloudsplitter"] = set_combine(sets.precast.WS.MAB, { 	

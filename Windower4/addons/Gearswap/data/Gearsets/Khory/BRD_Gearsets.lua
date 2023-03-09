@@ -52,12 +52,12 @@ if player.name == 'Khory' then
 	}
 	
 	sets.Rudra = { 
-	main="Gleti's Knife",
+	main="Aeneas",
     sub="Centovente",
 	}
 	
 	sets.AccRudra = { 
-	main="Gleti's Knife",
+	main="Aeneas",
     sub="Ternion Dagger +1",
 	}
 	

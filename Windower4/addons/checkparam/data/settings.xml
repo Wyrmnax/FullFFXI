@@ -4,7 +4,7 @@
         <BLM>magic accuracy|magic damage|magic attack bonus|magic burst damage|magic burst damage ii|int|fast cast|elemental magic casting time|damage taken|physical damage taken|magic damage taken</BLM>
         <BLU>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|fast cast|magic accuracy|magic damage|magic attack bonus|magic burst damage</BLU>
         <BRD>all songs|song effect duration|fast cast|song spellcasting time|damage taken|physical damage taken|magic damage taken|</BRD>
-        <BST>pet: double attack|pet: magic attack bonus|pet: damage taken</BST>        
+        <BST>pet: double attack|pet: magic attack bonus|pet: damage taken|damage taken|physical damage taken|magic damage taken</BST>        
 		<COR>fast cast|store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</COR>
         <DNC>store tp|double attack|triple attack|quadruple attack</DNC>
         <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</DRG>

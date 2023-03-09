@@ -145,13 +145,13 @@ sets.TP = {
 	ammo="Date Shuriken",
     head="Malignance Chapeau",
     body={ name="Mpaca's Doublet", augments={'Path: A',}},
-    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Ninja Nodowa +2",
     waist="Reiki Yotai",
-    left_ear="Brutal Earring",
-    right_ear="Telos Earring",
+    left_ear="Telos Earring",
+    right_ear="Hattori Earring +1",
     left_ring="Hetairoi Ring",
     right_ring="Epona's Ring",
     back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -256,6 +256,7 @@ sets.precast.WS["Blade: Kamu"] = set_combine(sets.precast.WS, {
 })
 
 sets.precast.WS["Blade: Ku"] = set_combine(sets.precast.WS, { 
+	head="Nyame Helm",
 	left_ear= "Telos Earring",
 })
 
@@ -289,7 +290,7 @@ sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
 sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS, { 
 	ammo="Seeth. Bomblet +1",
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
-    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    body="Abnoba Kaftan",
     hands="Mpaca's Gloves",
     legs="Mpaca's Hose",
     feet="Mummu Gamash. +2",

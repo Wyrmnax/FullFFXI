@@ -62,7 +62,7 @@ if player.name == 'Khory' then
 		ammo="Coiste Bodhar",
 		head="Malignance Chapeau",
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
-		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+		hands="Gleti's Gauntlets",
 		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
 		feet="Malignance Boots",
 		neck="Lissome Necklace",

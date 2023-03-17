@@ -28,34 +28,34 @@ sets.idle.PDT = {
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Sacro Breastplate",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    hands="Gleti's Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Gleti's Boots",
     neck="Rep. Plat. Medal",
     waist="Flume Belt +1",
     left_ear="Eabani Earring",
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back="Sacro Mantle",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
 
 sets.idle.MDT = {
-				main="Agwu's Axe",
+	main="Agwu's Axe",
     sub="Sacro Bulwark",
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Sacro Breastplate",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    hands="Gleti's Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Gleti's Boots",
     neck="Rep. Plat. Medal",
     waist="Flume Belt +1",
     left_ear="Eabani Earring",
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back="Sacro Mantle",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
 
 sets.idle.Standard = set_combine(sets.idle.PDT, {
@@ -87,10 +87,10 @@ sets.precast.JA["Feral Howl"] = {}
 sets.precast.JA["Call Beast"] = {}
 sets.precast.JA["Beast Loyality"] = set_combine(sets.precast.JA["Call Beast"])
 sets.precast.JA["Tame"] = {}
-sets.precast.JA["Spur"] = {}
+sets.precast.JA["Spur"] = {back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},}
 
 -- Reward + MND
-sets.precast.JA["Reward"] = {}
+sets.precast.JA["Reward"] = {ammo = "Pet Food Theta", back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},}
 -- Charm + CHR 
 sets.precast.JA["Charm"] = {}
 				
@@ -106,14 +106,14 @@ sets.midcast.Pet.WS = {
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Emi. Gauntlets +1", augments={'Pet: Accuracy+20','Pet: Attack+20','Pet: "Dbl. Atk."+4',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Gleti's Boots",
     neck="Shulmanu Collar",
     waist="Klouskap Sash",
     left_ear="Crep. Earring",
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Varar Ring",
     right_ring="C. Palug Ring",
-    back="Sacro Mantle",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
  
 sets.midcast.Pet.WS.MAB = {
@@ -122,16 +122,16 @@ sets.midcast.Pet.WS.MAB = {
     ammo={ name="Hesperiidae", augments={'Path: A',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Nyame Gauntlets",
+    hands="Gleti's Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Shulmanu Collar",
+    feet="Gleti's Boots",
+    neck="Adad Amulet",
     waist="Klouskap Sash",
     left_ear="Crep. Earring",
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Varar Ring",
     right_ring="C. Palug Ring",
-    back="Sacro Mantle",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
  
 sets.midcast.Pet.WS.Macc = {main="Agwu's Axe",
@@ -139,67 +139,107 @@ sets.midcast.Pet.WS.Macc = {main="Agwu's Axe",
     ammo={ name="Hesperiidae", augments={'Path: A',}},
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Nyame Gauntlets",
+    hands="Gleti's Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Shulmanu Collar",
+    feet="Gleti's Boots",
+    neck="Adad Amulet",
     waist="Klouskap Sash",
     left_ear="Crep. Earring",
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Varar Ring",
     right_ring="C. Palug Ring",
-    back="Sacro Mantle",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
  
 
 sets.midcast.Pet.TPBonus = {hands="Nukumi Manoplas"}
 
 -- Master Priority - TP set - Pet Idle
-sets.TP = {	ammo="Paeapua",
-			head=Aug.Skirmish.Taeon.Head.TA, neck="Asperity Necklace", lear="Brutal Earring", rear="Suppanomimi",
-			body=Aug.Skirmish.Taeon.Body.TA, hands=Aug.Skirmish.Taeon.Hands.TA, lring="Rajas ring", rring="Epona's Ring",
-			back="Atheling Mantle", waist="Patentia Sash", legs=Aug.Skirmish.Taeon.Legs.DW, feet=Aug.Skirmish.Taeon.Feet.TA}
+sets.TP = {	
+	main="Agwu's Axe",
+    sub="Sacro Bulwark",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Emi. Gauntlets +1", augments={'Pet: Accuracy+20','Pet: Attack+20','Pet: "Dbl. Atk."+4',}},
+    legs="Gleti's Breeches",
+    feet="Malignance Boots",
+    neck="Shulmanu Collar",
+    waist="Reiki Yotai",
+    left_ear="Sherida Earring",
+    right_ear="Suppanomimi",
+    left_ring="Epona's Ring",
+    right_ring="Hetairoi Ring",
+    back="Sacro Mantle",
+	}
 
 -- Master Priority - Acc TP set - Pet Not Engaged
-sets.TP.Acc = {	ammo="Ginsen",
-			head=Aug.Skirmish.Taeon.Head.DW, neck="Iqabi Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-			body=Aug.Skirmish.Taeon.Body.DW, hands=Aug.Skirmish.Taeon.Hands.DW, lring="Rajas ring", rring="Ramuh Ring +1",
-			back="Atheling Mantle", waist="Patentia Sash", legs=Aug.Skirmish.Taeon.Legs.DW,feet=Aug.Skirmish.Taeon.Feet.DW}
+sets.TP.Acc = {	
+	main="Agwu's Axe",
+    sub="Sacro Bulwark",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Emi. Gauntlets +1", augments={'Pet: Accuracy+20','Pet: Attack+20','Pet: "Dbl. Atk."+4',}},
+    legs="Gleti's Breeches",
+    feet="Malignance Boots",
+    neck="Shulmanu Collar",
+    waist="Reiki Yotai",
+    left_ear="Sherida Earring",
+    right_ear="Suppanomimi",
+    left_ring="Epona's Ring",
+    right_ring="Hetairoi Ring",
+    back="Sacro Mantle",
+	}
 
 -- Master Priority - Acc TP set - Pet Not Engaged
-sets.TP.Buffed = {ammo="Ginsen",
-			head=Aug.Skirmish.Taeon.Head.TA, neck="Asperity Necklace", lear="Brutal Earring", rear="Suppanomimi",
-			body=Aug.Skirmish.Taeon.Body.TA, hands=Aug.Skirmish.Taeon.Hands.TA, lring="Rajas ring", rring="Epona's Ring",
-			back="Atheling Mantle", waist="Windbuffet Belt +1", legs=Aug.Skirmish.Taeon.Legs.TA,feet=Aug.Skirmish.Taeon.Feet.TA}
+sets.TP.Buffed = {
+	main="Agwu's Axe",
+    sub="Sacro Bulwark",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Emi. Gauntlets +1", augments={'Pet: Accuracy+20','Pet: Attack+20','Pet: "Dbl. Atk."+4',}},
+    legs="Gleti's Breeches",
+    feet="Malignance Boots",
+    neck="Shulmanu Collar",
+    waist="Reiki Yotai",
+    left_ear="Sherida Earring",
+    right_ear="Suppanomimi",
+    left_ring="Epona's Ring",
+    right_ring="Hetairoi Ring",
+    back="Sacro Mantle",
+	}
 
 -- Pet Priority - Master Engaged - Pet Engaged - TP set
-sets.TP.Pet = {	main="Agwu's Axe",
+sets.TP.Pet = {	
+	main="Agwu's Axe",
     sub="Sacro Bulwark",
-    ammo={ name="Hesperiidae", augments={'Path: A',}},
-    head="Tali'ah Turban +2",
-    body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands="Gleti's Gauntlets",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands={ name="Emi. Gauntlets +1", augments={'Pet: Accuracy+20','Pet: Attack+20','Pet: "Dbl. Atk."+4',}},
+    legs="Gleti's Breeches",
+    feet="Malignance Boots",
     neck="Shulmanu Collar",
-    waist="Klouskap Sash",
-    left_ear="Enmerkar Earring",
-    right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
-    left_ring="Varar Ring",
-    right_ring="C. Palug Ring",
-    back="Sacro Mantle",
+    waist="Reiki Yotai",
+    left_ear="Sherida Earring",
+    right_ear="Suppanomimi",
+    left_ring="Epona's Ring",
+    right_ring="Hetairoi Ring",
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
 				
 -- Pet Priority - Master Idle - Pet Engaged
 sets.TP.Pet.Tank = {			
-			main="Agwu's Axe",
+	main="Agwu's Axe",
     sub="Sacro Bulwark",
     ammo={ name="Hesperiidae", augments={'Path: A',}},
     head="Tali'ah Turban +2",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},
     hands="Gleti's Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet="Gleti's Boots",
     neck="Shulmanu Collar",
     waist="Klouskap Sash",
     left_ear="Enmerkar Earring",
@@ -214,52 +254,54 @@ sets.idle.Pet = set_combine(sets.TP.Pet.Tank, {})
 
 
 -- Weaponskills
-sets.precast.WS = {ammo="Ginsen",
-			head="Otomi Helm", neck="Fotia Gorget", lear="Brutal earring", rear="Vulcan's Pearl",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP}
-sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Hasty Pinion +1",
-			head="Otomi Helm", neck="Fotia Gorget", lear="Bladeborn Earring", rear="SteelFlash Earring",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP})
+sets.precast.WS = {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Sherida Earring",
+    right_ear="Thrud Earring",
+    left_ring="Epona's Ring",
+    right_ring="Regal Ring",
+    back="Sacro Mantle",
+	}
+	
+sets.precast.WS.Acc = {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Sherida Earring",
+    right_ear="Thrud Earring",
+    left_ring="Epona's Ring",
+    right_ring="Regal Ring",
+    back="Sacro Mantle",
+	}
 
 -- Ruinator
-sets.precast.WS["Ruinator"] = set_combine(sets.precast.WS, {ammo="Ginsen",
-			head="Otomi Helm", neck="Fotia Gorget", lear="Brutal earring", rear="Vulcan's Pearl",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP})
-sets.precast.WS.Acc["Ruinator"] = set_combine(sets.precast.WS, {ammo="Hasty Pinion +1",
-			head=Aug.Skirmish.Acro.Head.TP, neck="Fotia Gorget", lear="Bladeborn Earring", rear="SteelFlash Earring",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP})
+sets.precast.WS["Ruinator"] = set_combine(sets.precast.WS, {})
+sets.precast.WS.Acc["Ruinator"] = set_combine(sets.precast.WS, {})
 
 -- Rampage 
-sets.precast.WS["Rampage"] = set_combine(sets.precast.WS, {ammo="Ginsen",
-			head=Aug.Skirmish.Acro.Head.TP, neck="Fotia Gorget", lear="Brutal earring", rear="Moonshade Earring",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP})
-sets.precast.WS.Acc["Rampage"] = set_combine(sets.precast.WS, {ammo="Hasty Pinion +1",
-			head=Aug.Skirmish.Acro.Head.TP, neck="Fotia Gorget", lear="Bladeborn Earring", rear="SteelFlash Earring",
-			body=Aug.Skirmish.Acro.Body.TP, hands=Aug.Skirmish.Acro.Hands.TP, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Buquwik Cape", waist="Fotia Belt", legs=Aug.Skirmish.Acro.Legs.TP, feet=Aug.Skirmish.Acro.Feet.TP})
+sets.precast.WS["Rampage"] = set_combine(sets.precast.WS, {})
+sets.precast.WS.Acc["Rampage"] = set_combine(sets.precast.WS, {})
 
 -- Onslaught
-sets.precast.WS["Onslaught"] = set_combine(sets.precast.WS,{ammo="Ginsen",
-			head=Aug.Skirmish.Taeon.Head.TA, neck="Asperity Necklace", lear="Brutal Earring", rear="Moonshade Earring",
-			body=Aug.Skirmish.Taeon.Body.TA, hands=Aug.Skirmish.Taeon.Hands.TA, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Vespid Mantle", waist="Windbuffet Belt +1", legs=Aug.Skirmish.Taeon.Legs.TA, feet=Aug.Skirmish.Taeon.Feet.TA})
+sets.precast.WS["Onslaught"] = set_combine(sets.precast.WS,{})
 
-sets.precast.WS.Acc["Onslaught"] = set_combine(sets.precast.WS, {ammo="Ginsen",
-			head=Aug.Skirmish.Taeon.Head.TA, neck="Asperity Necklace", lear="Brutal Earring", rear="Moonshade Earring",
-			body=Aug.Skirmish.Taeon.Body.TA, hands=Aug.Skirmish.Taeon.Hands.TA, lring="Ramuh Ring +1", rring="Epona's Ring",
-			back="Vespid Mantle", waist="Windbuffet Belt +1", legs=Aug.Skirmish.Taeon.Legs.TA, feet=Aug.Skirmish.Taeon.Feet.TA})
+sets.precast.WS.Acc["Onslaught"] = set_combine(sets.precast.WS, {})
 
 -- Primal Rend - Magic WS
-sets.precast.WS["Primal Rend"] = set_combine(sets.precast.WS, {ammo="Ginsen",
-			head=Aug.Skirmish.Acro.Head.WS, neck="Asperity Necklace", lear="Brutal Earring", rear="Moonshade Earring",
-			body=Aug.Skirmish.Acro.Body.WS, hands=Aug.Skirmish.Taeon.Hands.TA, lring="Ifrit Ring +1", rring="Epona's Ring",
-			back="Vespid Mantle", waist="Windbuffet Belt +1", legs=Aug.Skirmish.Acro.Legs.WS, feet=Aug.Skirmish.Acro.Feet.WS})
+sets.precast.WS["Primal Rend"] = set_combine(sets.precast.WS, {})
 
 -- Cloudslitter - Magic WS
-sets.precast.WS["Cloudsplitter"] = set_combine(sets.precast.WS['Primal Rend'], {})
+sets.precast.WS["Cloudsplitter"] = set_combine(sets.precast.WS, {})
 end

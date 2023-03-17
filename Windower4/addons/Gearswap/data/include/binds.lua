@@ -56,6 +56,13 @@ elseif player.main_job == "MNK" then
 	windower.send_command('@bind f11 gs c PDT')
 	windower.send_command('@bind f12 gs c TP')
 	
+elseif player.main_job == "BST" then
+	basic_binds()
+	-- set binds
+	windower.send_command('@bind f10 gs c MDT')
+	windower.send_command('@bind f11 gs c PDT')
+	windower.send_command('@bind f12 gs c master')
+	
 elseif player.main_job == "WHM" then
 	basic_binds()
 --	windower.send_command('bind f1 input /ma "Cure IV" <p0>')

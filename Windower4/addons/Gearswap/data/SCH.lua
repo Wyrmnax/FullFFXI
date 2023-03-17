@@ -171,6 +171,10 @@ function get_sets()
     sets.me = {}        		-- leave this empty
     sets.buff = {} 				-- leave this empty
     sets.me.idle = {}			-- leave this empty
+	
+	sets.wakeup = {
+	main = "Opashoro"
+	}
 
     -- Your idle set
     sets.me.idle.refresh = {

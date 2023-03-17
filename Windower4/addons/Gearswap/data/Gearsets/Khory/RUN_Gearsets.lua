@@ -109,17 +109,18 @@ sets.TP = {
     body="Erilaz Surcoat +3",
 	--body="Runeist Coat +3",
     hands="Turms Mittens +1",
-	--hands="Erilaz Gauntlets +3",
+	--hands="Erilaz Gauntlets +3",	
     legs="Eri. Leg Guards +3",
     feet="Turms Leggings +1",
 	--feet="Erilaz Greaves +3",
     neck="Futhark Torque +1",
-    waist="Sailfi Belt +1",
+    --waist="Sailfi Belt +1",
+	waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
     right_ring="Moonbeam Ring",
-    back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 
     --ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     --head="Aya. Zucchetto +2",
@@ -185,7 +186,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
     left_ring="Moonbeam Ring",
 	})
 	
-sets.midcast.Enhancing = {
+sets.midcast.Enhancing = set_combine(sets.idle.PDT, {
     head="Erilaz galea +3",
 	body="Emet Harness +1",
     hands="Regal Gauntlets",
@@ -195,9 +196,10 @@ sets.midcast.Enhancing = {
 	right_ear="Mimir Earring",
     right_ring="Defending Ring",
     left_ring="Moonbeam Ring",
-    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},}
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+	})
 	
-sets.midcast.Phalanx = {
+sets.midcast.Phalanx = set_combine(sets.idle.PDT, {
 	ammo="Staunch Tathlum +1",
     head={ name="Fu. Bandeau +3", augments={'Enhances "Battuta" effect',}},
     body={ name="Herculean Vest", augments={'Crit. hit damage +2%','AGI+9','Phalanx +5','Accuracy+5 Attack+5',}},
@@ -211,7 +213,7 @@ sets.midcast.Phalanx = {
     right_ring="Defending Ring",
     left_ring="Moonbeam Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
-	}
+	})
 				
 sets.midcast.Regen = set_combine(sets.midcast.Enhancing,{
 				head="Rune. Bandeau +3"

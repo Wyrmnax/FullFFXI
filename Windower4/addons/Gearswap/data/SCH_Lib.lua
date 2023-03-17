@@ -226,6 +226,8 @@ function validateTextInformation()
     main_text_hub.sc_element_color = scColor
 end
 
+
+
 --Default To Set Up the Text Window
 function setupTextWindow()
 
@@ -504,6 +506,9 @@ function buff_change(name,gain,buff_details)
     if use_UI == true then
         validateTextInformation()
     end
+	if buffactive.sleep or buffactive.Lullaby then
+		equip(sets.wakeup)
+	end
 end
  
 function precast(spell)

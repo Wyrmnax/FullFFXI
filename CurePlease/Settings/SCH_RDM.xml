@@ -49,10 +49,10 @@
   <plProtectra_Level>5</plProtectra_Level>
   <plGainBoost>false</plGainBoost>
   <plGainBoost_Spell>10</plGainBoost_Spell>
-  <plBarElement>false</plBarElement>
-  <plBarElement_Spell>5</plBarElement_Spell>
+  <plBarElement>true</plBarElement>
+  <plBarElement_Spell>2</plBarElement_Spell>
   <AOE_Barelemental>false</AOE_Barelemental>
-  <plBarStatus>false</plBarStatus>
+  <plBarStatus>true</plBarStatus>
   <plBarStatus_Spell>2</plBarStatus_Spell>
   <AOE_Barstatus>false</AOE_Barstatus>
   <plAuspice>false</plAuspice>
@@ -69,7 +69,7 @@
   <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
-  <plEnspell>false</plEnspell>
+  <plEnspell>true</plEnspell>
   <plEnspell_Spell>2</plEnspell_Spell>
   <plStormSpell>true</plStormSpell>
   <plStormSpell_Spell>15</plStormSpell_Spell>
@@ -156,6 +156,7 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
+  <Majesty>false</Majesty>
   <plDebuffEnabled>true</plDebuffEnabled>
   <monitoredDebuffEnabled>true</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>true</enablePartyDebuffRemoval>
@@ -167,7 +168,7 @@
   <plDoomitem>0</plDoomitem>
   <wakeSleepEnabled>true</wakeSleepEnabled>
   <wakeSleepSpell>0</wakeSleepSpell>
-  <naBlindness>false</naBlindness>
+  <naBlindness>true</naBlindness>
   <naCurse>true</naCurse>
   <naDisease>true</naDisease>
   <naParalysis>true</naParalysis>
@@ -178,6 +179,9 @@
   <naErase>true</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
+  <PrioritizeDoomRemoval>false</PrioritizeDoomRemoval>
+  <AugmentDoomRemoval>false</AugmentDoomRemoval>
+  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>true</plAgiDown>
   <plAccuracyDown>true</plAccuracyDown>
   <plAddle>true</plAddle>
@@ -310,6 +314,7 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>400</sublimationMP>
+  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>

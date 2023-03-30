@@ -41,25 +41,25 @@ magicalshield = {sub="Aegis"}
 
 -- Standard/idle
 sets.idle = {
-	ammo="Staunch Tathlum +1",
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands="Souv. Handsch. +1",
-    legs="Sakpata's Cuisses",
-    feet="Rev. Leggings +3",
-    neck="Unmoving Collar +1",
+	ammo="Homiliary",
+    head="Chev. Armet +3",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands="Regal Gauntlets",
+    legs="Chev. Cuisses +2",
+    feet="Sakpata's Leggings",
+    neck={ name="Unmoving Collar +1", augments={'Path: A',}},
     waist="Flume Belt +1",
-    right_ear="Chev. Earring +1",
     left_ear="Tuisto Earring",
-    left_ring="Moonbeam Ring",
-    right_ring="Gelatinous Ring +1", 
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+    left_ring="Shneddick Ring",
+    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
 	
 sets.idle.MDT = {
 	ammo="Staunch Tathlum +1",
     head="Sakpata's Helm",
-    body="Sacro Breastplate",
+    body="Sakpata's Plate",
     hands="Sakpata's Gauntlets",
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
@@ -69,7 +69,7 @@ sets.idle.MDT = {
     left_ear="Tuisto Earring",
     left_ring="Moonbeam Ring",
     right_ring="Gelatinous Ring +1", 
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
 				
 sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
@@ -90,7 +90,7 @@ sets.TP= {
     right_ear="Cessance Earring",
     left_ring="Petrov Ring",
     right_ring="Flamma Ring",
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
 				
 -- Precast 
@@ -105,8 +105,8 @@ sets.Enmity = set_combine(sets.idle,{
     left_ear="Tuisto Earring",
     left_ring="Supershear Ring",
     right_ring="Gelatinous Ring +1",
-	feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+	feet="Chev.Sabatons +2",
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 })
 
 sets.HPDown = set_combine(sets.idle,{
@@ -114,7 +114,7 @@ sets.HPDown = set_combine(sets.idle,{
 
 sets.precast.Fastcast = { 
 	ammo="Sapience Orb",
-    head="Sakpata's Helm",
+    head="Chev. Armet +3",
     body="Sacro Breastplate",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     feet="Carmine Greaves +1",
@@ -136,7 +136,7 @@ sets.precast.Cure = set_combine(sets.precast.Fastcast,{
 sets.midcast.SIRD = set_combine(sets.Enmity,{
 	ammo="Staunch Tathlum +1",
     hands="Regal Gauntlets",
-	body="Chev. Cuirass +2",
+	body="Sakpata's Plate",
     legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
     feet={ name="Odyssean Greaves", augments={'Attack+26','Enmity+6','DEX+7',}},
     neck="Moonlight Necklace",
@@ -145,8 +145,21 @@ sets.midcast.SIRD = set_combine(sets.Enmity,{
     waist="Audumbla Sash",
 })
 
-sets.midcast.Cure = set_combine(sets.midcast.SIRD,{
-})
+sets.midcast.Cure = {
+     ammo="Staunch Tathlum +1",
+    head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    hands="Regal Gauntlets",
+    legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Moonlight Necklace",
+    waist="Audumbla Sash",
+    left_ear="Mendi. Earring",
+    right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+    left_ring="Defending Ring",
+    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
+}
 
 sets.midcast.DivineMagic = set_combine(sets.midcast.SIRD,{body="Reverence Surcoat"})
 
@@ -160,14 +173,21 @@ sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	})
 
-sets.midcast.EnhancingMagic.Phalanx = set_combine(sets.midcast.SIRD,{
-	head="Odyssean Helm",
-	hands="Souv. handsch. +1",
-	lear="Mimir Earring",
-    legs="Sakpata's Cuisses",
-	feet="Souveran Schuhs +1",
-	back="Weard Mantle"
-	})
+sets.midcast.EnhancingMagic.Phalanx ={
+	ammo="Staunch Tathlum +1",
+    head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    body={ name="Yorium Cuirass", augments={'Spell interruption rate down -10%','Phalanx +3',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+    legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Moonlight Necklace",
+    waist="Audumbla Sash",
+    left_ear="Knightly Earring",
+    right_ear="Mimir Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    back={ name="Weard Mantle", augments={'VIT+2','DEX+1','Enmity+2','Phalanx +5',}},
+	}
 
 -- JA
 sets.precast.JA["Invincible"] = set_combine(sets.Enmity,{legs="Cab. Breeches"})
@@ -231,7 +251,7 @@ sets.precast.WS.MAB = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Friomisi Earring",
     left_ring={ name="Beithir Ring", augments={'Path: A',}},
-    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},   
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},   
 	}
 				
 sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {

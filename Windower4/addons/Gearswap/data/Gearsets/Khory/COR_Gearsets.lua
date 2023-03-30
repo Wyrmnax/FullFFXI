@@ -36,10 +36,10 @@ if player.name == 'Khory' then
 			set_macro_page(1,4)
 		end
 		
-	sets.MeleeEvis = { 
-	main="Tauret",
+	sets.MeleeLastStand = { 
+	main={ name="Rostam", augments={'Path: A',}},
     sub={ name="Demers. Degen +1", augments={'Path: A',}},
-    range={ name="Anarchy +3", augments={'Delay:+60','TP Bonus +1000',}},
+    range="Fomalhaut",
 	}
 		
 	sets.MeleeSB = { 

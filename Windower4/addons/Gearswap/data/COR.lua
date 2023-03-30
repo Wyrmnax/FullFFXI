@@ -30,9 +30,9 @@ function get_sets()
 	
 	KillTpRoll = 1
 	PDT = 0
-	Mode = 'MeleeEvis'
+	Mode = 'MeleeLastStand'
 	ShadowType = 'None'
-	ModeWeapon = sets.MeleeEvis
+	ModeWeapon = sets.MeleeLastStand
 	
 --includes
 	--include('include/autoexec.lua')
@@ -77,7 +77,7 @@ function self_command(command)
 		end
 --  Lock Acc	
 	elseif command == 'Mode' then
-		if Mode == 'MeleeEvis' then
+		if Mode == 'MeleeLastStand' then
 			Mode = 'MeleeSB'
 			windower.send_command('autows use Savage Blade')
 			ModeWeapon = sets.MeleeSB			
@@ -102,11 +102,11 @@ function self_command(command)
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Leaden')
 		elseif Mode == 'RangedLeaden' then
-			Mode = 'MeleeEvis'
-			windower.send_command('autows use Evisceration')
-			ModeWeapon = sets.MeleeEvis
+			Mode = 'MeleeLastStand'
+			windower.send_command('autows use Last Stand')
+			ModeWeapon = sets.MeleeLastStand
 				previous_set()
-			windower.add_to_chat(121,'Mode Melee Evisceration')
+			windower.add_to_chat(121,'Mode Melee Last Stand')
 		end	
 	elseif command == 'ModeX' then
 		if Mode == 'MeleeLeaden' then
@@ -127,18 +127,18 @@ function self_command(command)
 			ModeWeapon = sets.RangedLastStand
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Last Stand')
-		elseif Mode == 'MeleeEvis' then
+		elseif Mode == 'MeleeLastStand' then
 			Mode = 'RangedLeaden'
 			windower.send_command('autows use Leaden Salute')
 			ModeWeapon = sets.RangedLeaden
 				previous_set()
 			windower.add_to_chat(121,'Mode Ranged Leaden')
 		elseif Mode == 'MeleeSB' then
-			Mode = 'MeleeEvis'
-			windower.send_command('autows use Evisceration')
-			ModeWeapon = sets.MeleeEvis
+			Mode = 'MeleeLastStand'
+			windower.send_command('autows use Last Stand')
+			ModeWeapon = sets.MeleeLastStand
 				previous_set()
-			windower.add_to_chat(121,'Mode Melee Evisceration')
+			windower.add_to_chat(121,'Mode Melee Last Stand')
 		end	
 	end
 end

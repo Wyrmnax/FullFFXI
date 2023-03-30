@@ -188,10 +188,6 @@ function status_change(new,old)
 		windower.add_to_chat(121, 'Resting')
 		equip(sets.Resting)
 	elseif new == 'Engaged' then
-		--auto food
-		windower.add_to_chat(123,'Auto Food')
-        send_command('wait 1; input /item "Grape Daifuku" <me>')
-		send_command('wait 1; input /pet "Fight" <t>')
 		-- Engaged Sets
 		if PDT == 1 then
 			equip(sets.idle.PDT)

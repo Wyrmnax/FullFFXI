@@ -137,9 +137,6 @@ function status_change(new,old)
 			end
 		end
 	elseif new == 'Engaged' then
-		--auto food
-		windower.add_to_chat(123,'Auto Food')
-        send_command('wait 1; input /item "Grape Daifuku" <me>')
  		-- Automatically activate Hasso when engaging
 		if player.sub_job == 'SAM' and not buffactive['Hasso'] and not buffactive.Amnesia and not buffactive.Obliviscence and	not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[138] < 1 then
 			windower.send_command('Hasso')

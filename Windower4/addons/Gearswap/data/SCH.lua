@@ -267,8 +267,8 @@ function get_sets()
     sets.buff['Rapture'] = {head="Arbatel bonnet +1"}
     sets.buff['Perpetuance'] = {hands="Arbatel Bracers +3"}
     sets.buff['Immanence'] = {hands="Arbatel Bracers +3"}
-    sets.buff['Penury'] = {legs="Arbatel Pants +1"}
-    sets.buff['Parsimony'] = {legs="Arbatel Pants +1"}
+    sets.buff['Penury'] = {legs="Arbatel Pants +3"}
+    sets.buff['Parsimony'] = {legs="Arbatel Pants +3"}
     sets.buff['Celerity'] = {feet="Peda. Loafers +3"}
     sets.buff['Alacrity'] = {feet="Peda. Loafers +3"}
     sets.buff['Klimaform'] = {feet="Arbatel Loafers +3"}	
@@ -506,7 +506,7 @@ function get_sets()
     head="Acad. Mortar. +3",
     body="Acad. Gown +3",
     hands="Acad. Bracers +3",
-    legs="Arbatel Pants +2",
+    legs="Arbatel Pants +3",
     feet="Acad. Loafers +2",
     neck="Argute Stole +2",
     waist="Sacro Cord",
@@ -524,7 +524,7 @@ function get_sets()
     head="Acad. Mortar. +3",
     body="Acad. Gown +3",
     hands="Acad. Bracers +3",
-    legs="Arbatel Pants +2",
+    legs="Arbatel Pants +3",
     feet="Acad. Loafers +2",
     neck="Argute Stole +2",
     waist="Sacro Cord",
@@ -542,7 +542,7 @@ function get_sets()
     head="Peda. M.Board +3",
     body="Acad. Gown +3",
     hands="Acad. Bracers +3",
-    legs="Arbatel Pants +2",
+    legs="Arbatel Pants +3",
     feet="Acad. Loafers +2",
     neck="Argute Stole +2",
     waist="Sacro Cord",

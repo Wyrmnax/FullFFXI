@@ -381,7 +381,7 @@ function init_gear_sets()
     head="Kara. Cappello +2",
     body={ name="Pitre Tobe +2", augments={'Enhances "Overdrive" effect',}},
     hands="Mpaca's Gloves",
-    legs="Mpaca's Hose",
+    legs={ name="Taeon Tights", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}},
     feet={ name="Mpaca's Boots", augments={'Path: A',}},
     neck="Shulmanu Collar",
     waist="Klouskap Sash",

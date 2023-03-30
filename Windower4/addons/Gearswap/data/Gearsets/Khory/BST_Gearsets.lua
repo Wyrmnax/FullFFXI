@@ -224,7 +224,7 @@ sets.TP.Pet = {
     neck="Shulmanu Collar",
     waist="Reiki Yotai",
     left_ear="Sherida Earring",
-    right_ear="Suppanomimi",
+    right_ear="Nukumi Earring +1",
     left_ring="Epona's Ring",
     right_ring="Hetairoi Ring",
     back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
@@ -246,8 +246,8 @@ sets.TP.Pet.Tank = {
     right_ear={ name="Nukumi Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Pet: "Dbl. Atk."+7',}},
     left_ring="Varar Ring",
     right_ring="C. Palug Ring",
-    back="Sacro Mantle",
-	}
+    back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+}
 
 -- Pet Priority - Master Idle - Pet Idle
 sets.idle.Pet = set_combine(sets.TP.Pet.Tank, {})		

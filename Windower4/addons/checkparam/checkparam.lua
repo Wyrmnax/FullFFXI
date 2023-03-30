@@ -157,6 +157,10 @@ function split_text(id,text,arg)
             tbl['physical damage taken'] = tonumber(value)+(tbl['physical damage taken'] or 0)
             tbl['magic damage taken'] = tonumber(value)+(tbl['magic damage taken'] or 0)
             tbl['breath damage taken'] = tonumber(value)+(tbl['breath damage taken'] or 0)
+		elseif key == "spell interruption rate down" then
+			tbl['spell interruption rate down'] = tonumber(math.abs(value))+(tbl['spell interruption rate down'] or 0) 
+		elseif key == "spell interruption rate" then
+			tbl['spell interruption rate down'] = tonumber(math.abs(value))+(tbl['spell interruption rate'] or 0) 
         else
             tbl[key] = tonumber(value)+(tbl[key] or 0)
         end
@@ -238,6 +242,7 @@ integrate = {
     ['occ. quickens spellcasting']="quick cast",
     ['occassionally quickens spellcasting']="quick cast",
     ['song duration']="song effect duration",
+	['phalanx received']="phalanx",
 }
 enhanced = {
     [10392] = 'cursna+10', --Malison Medallion

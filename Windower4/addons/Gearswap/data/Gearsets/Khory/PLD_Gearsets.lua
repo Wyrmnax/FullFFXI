@@ -79,16 +79,16 @@ sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
 
 sets.TP= {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    head="Flam. Zucchetto +2",
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck="Lissome Necklace",
+    neck="Vim Torque +1",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
-    left_ring="Petrov Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Flamma Ring",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
@@ -227,12 +227,13 @@ sets.precast.WS = set_combine(sets.TP, {
 	})
 
 sets.precast.WS.WSD = set_combine(sets.TP, { 
-	neck="Loricate Torque+1",
+	neck="Rep. Plat. Medal",
 	head="Nyame Helm",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
+	waist="Sailfi Belt +1",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Thrud Earring",
     left_ring="Regal Ring",

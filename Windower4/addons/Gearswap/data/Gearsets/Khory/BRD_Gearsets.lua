@@ -237,7 +237,7 @@ if player.name == 'Khory' then
     left_ear="Telos Earring",
     right_ear="Crep. Earring",
     left_ring="Petrov Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Chirich Ring +1",
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.WS = set_combine(sets.TP, {})

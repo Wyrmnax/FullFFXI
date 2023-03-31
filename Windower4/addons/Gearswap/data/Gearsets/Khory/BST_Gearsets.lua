@@ -169,7 +169,7 @@ sets.TP = {
     left_ear="Sherida Earring",
     right_ear="Suppanomimi",
     left_ring="Epona's Ring",
-    right_ring="Hetairoi Ring",
+    right_ring="Chirich Ring +1",
     back="Sacro Mantle",
 	}
 
@@ -188,7 +188,7 @@ sets.TP.Acc = {
     left_ear="Sherida Earring",
     right_ear="Suppanomimi",
     left_ring="Epona's Ring",
-    right_ring="Hetairoi Ring",
+    right_ring="Chirich Ring +1",
     back="Sacro Mantle",
 	}
 
@@ -207,7 +207,7 @@ sets.TP.Buffed = {
     left_ear="Sherida Earring",
     right_ear="Suppanomimi",
     left_ring="Epona's Ring",
-    right_ring="Hetairoi Ring",
+    right_ring="Chirich Ring +1",
     back="Sacro Mantle",
 	}
 
@@ -226,7 +226,7 @@ sets.TP.Pet = {
     left_ear="Sherida Earring",
     right_ear="Nukumi Earring +1",
     left_ring="Epona's Ring",
-    right_ring="Hetairoi Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	}
 				

@@ -69,7 +69,7 @@ if player.name == 'Khory' then
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Suppanomimi",
 		right_ear="Brutal Earring",
-		left_ring="Hetairoi Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Epona's Ring",
 		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		}

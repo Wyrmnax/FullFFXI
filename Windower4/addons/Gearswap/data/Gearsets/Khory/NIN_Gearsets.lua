@@ -152,7 +152,7 @@ sets.TP = {
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Hattori Earring +1",
-    left_ring="Hetairoi Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Epona's Ring",
     back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}

@@ -96,7 +96,7 @@ sets.TP = {
     --waist="Sailfi Belt +1",
     left_ear="Cessance Earring",
     right_ear="Boii Earring",
-    left_ring="Flamma Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
 	}
@@ -113,7 +113,7 @@ sets.TP.DT = set_combine(sets.TP, {
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear="Boii Earring",
-    left_ring="Flamma Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Niqmaddu Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 				})

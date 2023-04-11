@@ -264,7 +264,7 @@ function get_sets()
     ------------	
     -- Gear that needs to be worn to **actively** enhance a current player buff.
     -- Fill up following with your avaible pieces.
-    sets.buff['Rapture'] = {head="Arbatel bonnet +1"}
+    sets.buff['Rapture'] = {head="Arbatel bonnet +2"}
     sets.buff['Perpetuance'] = {hands="Arbatel Bracers +3"}
     sets.buff['Immanence'] = {hands="Arbatel Bracers +3"}
     sets.buff['Penury'] = {legs="Arbatel Pants +3"}
@@ -622,7 +622,7 @@ function get_sets()
 	main="Musa",
 	sub="Giuoco Grip",
 	ammo="Staunch Tathlum +1",
-    head="Telchine Cap",
+    head="Arbatel bonnet +2",
 	body="Telchine Chas.",
     hands="Telchine Gloves",
     legs="Telchine Braconi",

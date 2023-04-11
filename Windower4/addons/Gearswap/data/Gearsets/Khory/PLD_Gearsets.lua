@@ -35,6 +35,8 @@ if player.name == 'Khory' then
 		else
 			windower.send_command('input /macro book 16')
 		end
+		
+		send_command('wait 3;input /lockstyleset 18')
 -- Auto Sets
 physicalshield = {sub="Priwen"}
 magicalshield = {sub="Aegis"}
@@ -45,9 +47,10 @@ sets.idle = {
     head="Chev. Armet +3",
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands="Regal Gauntlets",
-    legs="Chev. Cuisses +2",
+    legs="Chev. Cuisses +3",
     feet="Sakpata's Leggings",
-    neck={ name="Unmoving Collar +1", augments={'Path: A',}},
+    --neck={ name="Unmoving Collar +1", augments={'Path: A',}},
+	neck="Rep. Plat. Medal",
     waist="Flume Belt +1",
     left_ear="Tuisto Earring",
     right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
@@ -226,7 +229,8 @@ sets.precast.WS = set_combine(sets.TP, {
     left_ring={ name="Beithir Ring", augments={'Path: A',}},
 	})
 
-sets.precast.WS.WSD = set_combine(sets.TP, { 
+sets.precast.WS.WSD = set_combine(sets.TP, { 	
+	ammo="Oshasha's Treatise",
 	neck="Rep. Plat. Medal",
 	head="Nyame Helm",
     body="Nyame Mail",
@@ -261,10 +265,9 @@ sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {
 sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
 	body="Hjarrandi Breast.",
 	})
-	
-sets.precast.WS['Atonement'] = set_combine(sets.precast.WS, sets.Enmity,{
 				
-				})
+sets.precast.WS['Atonement'] = set_combine(sets.precast.WS.WSD, {
+	})
 
 sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS.WSD, {
 	})

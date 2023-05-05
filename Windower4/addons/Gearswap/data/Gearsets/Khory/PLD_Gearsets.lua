@@ -108,7 +108,7 @@ sets.Enmity = set_combine(sets.idle,{
     left_ear="Tuisto Earring",
     left_ring="Supershear Ring",
     right_ring="Gelatinous Ring +1",
-	feet="Chev.Sabatons +2",
+	feet="Chev.Sabatons +3",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 })
 
@@ -240,7 +240,7 @@ sets.precast.WS.WSD = set_combine(sets.TP, {
 	waist="Sailfi Belt +1",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Thrud Earring",
-    left_ring="Regal Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}}, 	
 	})
 	
@@ -256,6 +256,7 @@ sets.precast.WS.MAB = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Friomisi Earring",
     left_ring={ name="Beithir Ring", augments={'Path: A',}},
+	right_ring="Epaminondas's Ring",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},   
 	}
 				

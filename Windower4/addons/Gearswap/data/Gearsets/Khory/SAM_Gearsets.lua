@@ -16,13 +16,13 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'WAR' then
-				set_macro_page(1,13)
+				set_macro_page(1,13)				
+			elseif player.sub_job == 'DRG' then 
+				set_macro_page(2,13)
 			elseif player.sub_job == 'NIN' then
 				set_macro_page(2,13)
 			elseif player.sub_job == 'DNC' then
 				set_macro_page(3,13)
-			elseif player.sub_job == 'DRG' then 
-				set_macro_page(4,13)
 			elseif player.sub_job == 'RNG' then 
 				set_macro_page(5,13)
 			elseif player.sub_job == 'RUN' then 
@@ -68,14 +68,14 @@ sets.idle.PDT = {
     back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.idle.MDT = {     
-	ammo="Staunch Tathlum +1",
+sets.idle.MDT = { 
+    ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
+    body="Sacro Breastplate",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Loricate Torque +1",
+    neck="Rep. Plat. Medal",
     waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
     right_ear="Eabani Earring",
@@ -93,18 +93,18 @@ sets.idle.Standard = set_combine(sets.idle.PDT, {
 				})
 -- TP - 49 52
 sets.TP = { 	
-     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+     ammo="Ginsen",
     head="Kasuga Kabuto +3",
     body="Kasuga Domaru +3",
-    hands="Tatena. Gote +1",
+    hands={ name="Tatena. Gote +1", augments={'Path: A',}},
     legs="Kasuga Haidate +3",
-    feet={ name="Tatena. Sune. +1", augments={'Path: A',}},
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
+    feet={ name="Ryuo Sune-Ate +1", augments={'HP+65','"Store TP"+5','"Subtle Blow"+8',}},
+    neck="Moonlight Nodowa",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear="Kasuga Earring +1",
+    left_ear="Crep. Earring",
+    right_ear={ name="Kasuga Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','Weapon skill damage +3%',}},
     left_ring="Niqmaddu Ring",
-    right_ring="Petrov Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -170,7 +170,7 @@ sets.precast.WS.WSD = {
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
     right_ear="Kasuga Earring +1",
-    left_ring="Niqmaddu Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }	
@@ -186,7 +186,7 @@ sets.precast.WS.MAB = {
     waist="Orpheus's sash",
     left_ear="Friomisi Earring",
     right_ear="Kasuga Earring +1",
-    left_ring="Niqmaddu Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }

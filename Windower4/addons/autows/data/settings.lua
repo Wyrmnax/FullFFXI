@@ -52,7 +52,7 @@ return {
             },
             ["Dagger"] = {
                 ["hps"] = {
-                    ["<"] = 30,
+                    ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
@@ -70,12 +70,12 @@ return {
             },
             ["Sword"] = {
                 ["hps"] = {
-                    ["<"] = 30,
+                    ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["BST"] = {
@@ -134,6 +134,17 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            }
+        },
+        ["DNC"] = {
+            ["Dagger"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["DRG"] = {
@@ -322,7 +333,7 @@ return {
         ["PUP"] = {
             ["Hand-to-Hand"] = {
                 ["hps"] = {
-                    ["<"] = 20,
+                    ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
@@ -424,7 +435,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Impulse Drive\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -453,7 +464,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {

@@ -221,7 +221,7 @@ sets.precast.WS = {
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Ilabrat Ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
 
@@ -236,7 +236,7 @@ sets.precast.WS["Savage Blade"] = {
     waist="Sailfi Belt +1",
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Ilabrat Ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Regal Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},}
 	
@@ -291,7 +291,7 @@ sets.precast.RAWS['Wildfire'] = {
     left_ear="Friomisi Earring",
     right_ear="Sortiarius Earring",
     left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Epaminondas's Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 	
@@ -318,7 +318,7 @@ sets.precast.RAWS['Hot Shot'] = set_combine(sets.precast.RAWS, {
     left_ear="Friomisi Earring",
     right_ear="Sortiarius Earring",
     left_ring="Dingir Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Epaminondas's Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
 	

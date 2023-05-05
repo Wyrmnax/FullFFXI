@@ -208,7 +208,7 @@ sets.precast.WS.WSD = {
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear="Ishvara Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Beithir Ring", augments={'Path: A',}},
     back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
@@ -224,7 +224,7 @@ sets.precast.WS.MAB = {
 	waist="Orpheus's sash",
     left_ear="Crepuscular Earring",
     right_ear="Friomosi Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Dingir Ring",
     back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}}
 	}

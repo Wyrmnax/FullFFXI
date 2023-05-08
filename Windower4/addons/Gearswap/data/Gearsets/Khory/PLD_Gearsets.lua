@@ -38,8 +38,14 @@ if player.name == 'Khory' then
 		
 		send_command('wait 3;input /lockstyleset 18')
 -- Auto Sets
-physicalshield = {sub="Priwen"}
-magicalshield = {sub="Aegis"}
+sets.Duban = { 
+	main="Burtgang",
+    sub="Duban",
+	}
+sets.Aegis = { 
+	main="Burtgang",
+    sub="Aegis",
+	}
 
 -- Standard/idle
 sets.idle = {
@@ -74,6 +80,12 @@ sets.idle.MDT = {
     right_ring="Gelatinous Ring +1", 
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
+	
+sets.Ochain = set_combine(sets.idle, { sub="Ochain",
+				})
+				
+sets.Sleep = set_combine(sets.idle, { sub="Duban",
+				})
 				
 sets.idle.Standard = set_combine(sets.idle, { lring="Shneddick Ring",
 				})
@@ -149,7 +161,7 @@ sets.midcast.SIRD = set_combine(sets.Enmity,{
 })
 
 sets.midcast.Cure = {
-     ammo="Staunch Tathlum +1",
+    ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     hands="Regal Gauntlets",

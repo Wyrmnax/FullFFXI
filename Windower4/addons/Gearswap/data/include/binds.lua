@@ -136,7 +136,8 @@ elseif player.main_job == "RDM" then
 elseif player.main_job == "PLD" then
 	basic_binds()
 	-- set binds
-	windower.send_command('@bind f11 gs c Mode')
+	windower.send_command('@bind f12 gs c Mode')
+	windower.send_command('@bind ^f12 gs c ModeX')
 	windower.send_command('@bind #g input /echo test')
 --	windower.send_command('bind f1 input /ma "Cure IV" <p0>')
 --	windower.send_command('bind f2 input /ma "Cure IV" <p1>')

@@ -16,5 +16,11 @@
         <AutoDisconnectTime>0</AutoDisconnectTime>
         <!--2 for 30 FPS, 1 for 60 FPS, 0 for uncapped frame rates-->
         <FrameRateDivisor>2</FrameRateDivisor>
+        <frameratedivisor>1</frameratedivisor>
     </global>
+    <Khory>
+        <frameratedivisor>2</frameratedivisor>
+        <!--2 for 30 FPS, 1 for 60 FPS, 0 for uncapped frame rates-->
+        <FrameRateDivisor>1</FrameRateDivisor>
+    </Khory>
 </settings>

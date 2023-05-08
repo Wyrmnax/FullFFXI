@@ -23,7 +23,8 @@ function get_sets()
 		include('Gearsets/'..player.name..'/PLD_Gearsets.lua')
 		
 	-- Define Default Values for Variables
-		Mode = 0
+		Mode = 'Duban'
+		ModeWeapon = sets.Duban			
 		PDT = 0
 		MDT = 0
 		ShadowType = 'None'
@@ -43,19 +44,28 @@ end
 
 function self_command(command)
 	if command == 'Mode' then
-		if Mode == 0 then
-			-- make sure other values are set to default
-			-- Unlock PDT/MDT Variables
-			Mode = 1
-			-- Place Me in my previous set.			
-			previous_set()			
-			windower.add_to_chat(121,'MDT Set Locked')
-		else
-		-- Make sure other values are set to default
-			-- Set PDT set and equip it
-			Mode = 0
-			previous_set()
-			windower.add_to_chat(121,'PDT Set Locked')
+		if Mode == 'Aegis' then
+			Mode = 'Duban'
+			ModeWeapon = sets.Duban			
+				previous_set()	
+			windower.add_to_chat(121,'Mode Duban')
+		elseif Mode == 'Duban' then
+			Mode = 'Aegis'
+			ModeWeapon = sets.Aegis			
+				previous_set()			
+			windower.add_to_chat(121,'Mode Aegis')
+		end
+		elseif command == 'ModeX' then
+		if Mode == 'Duban' then
+			Mode = 'Aegis'
+			ModeWeapon = sets.Aegis			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Aegis')
+		elseif Mode == 'Aegis' then
+			Mode = 'Duban'
+			ModeWeapon = sets.Duban			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Duban')
 		end
 	end
 end
@@ -63,9 +73,12 @@ end
 function status_change(new,old)
 -- Autoset
 	if T{'Idle','Resting'}:contains(new) then
-		previous_set()
+		equip(sets.Ochain)
 	elseif new == 'Engaged' then
 		previous_set()
+	end
+	if buffactive.sleep then
+		equip(sets.Sleep)
 	end
 end
 
@@ -235,30 +248,19 @@ end
 function previous_set()
 	slot_lock()
 	weapon_check()
-	if Mode == 0 then
 		if areas.Town:contains(world.zone) then
-			equip(sets.idle.Standard)
+			equip(ModeWeapon, sets.idle.Standard)
 		elseif player.status == 'Engaged' then
-			equip(sets.TP)
+			equip(ModeWeapon, sets.TP)
 		else 
-			equip(sets.idle.Standard)
+			equip(ModeWeapon, sets.idle.Standard)
 		end
-	elseif Mode == 1 then
-		if areas.Town:contains(world.zone) then
-			equip(sets.idle.Standard)
-		elseif player.status == 'Engaged' then
-			equip(sets.idle.MDT)
-		else 
-			equip(sets.idle.MDT)
-		end
-	end
 end
-	
 
 function weapon_check()
 	if player.equipment.main == 'empty' then
-		equip({main={name=Sword,priority=2}, sub={name=Shield,priority=1}})
+		previous_set()
 	elseif player.equipment.sub == 'empty' then
-		equip({main={name=Sword,priority=2}, sub={name=Shield,priority=1}})
+		previous_set()
 	end
 end

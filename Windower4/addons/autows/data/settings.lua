@@ -30,6 +30,15 @@ return {
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"black halo\" <t>"
             },
+            ["Dagger"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+            },
             ["Sword"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -37,7 +46,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"requiescat\" <t>"
             }
         },
         ["BRD"] = {
@@ -322,12 +331,12 @@ return {
             },
             ["Sword"] = {
                 ["hps"] = {
-                    ["<"] = 30,
+                    ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"atonement\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["PUP"] = {
@@ -453,7 +462,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {

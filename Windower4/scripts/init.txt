@@ -22,6 +22,7 @@ game_allowresize 0
 // FPS Position - Use -75 1 to position it on the top right corner.
 //fps_position 5 5 //top left
 fps_position -75 1 //top right
+config FrameRateDivisor 1
 
 drawdistance set 10
 //Bind keys

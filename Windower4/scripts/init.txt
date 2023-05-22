@@ -59,7 +59,6 @@ lua load partybuffs
 lua load sheolhelper
 lua load sellnpc
 lua load hovershot
-lua load sortie
 
 
 // *** ALLIANCE TARGET KEYS ***

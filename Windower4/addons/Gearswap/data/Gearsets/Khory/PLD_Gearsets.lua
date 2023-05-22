@@ -54,7 +54,7 @@ sets.idle = {
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands="Regal Gauntlets",
     legs="Chev. Cuisses +3",
-    feet="Sakpata's Leggings",
+    feet="Chev. Sabatons +3",
     --neck={ name="Unmoving Collar +1", augments={'Path: A',}},
 	neck="Rep. Plat. Medal",
     waist="Flume Belt +1",
@@ -176,6 +176,23 @@ sets.midcast.Cure = {
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 }
 
+sets.midcast.Macc = {
+	ammo="Pemphredo Tathlum",
+    head="Chev. Armet +3",
+    body="Chev. Cuirass +2",
+    hands="Chev. Gauntlets +2",
+    legs="Chev. Cuisses +3",
+    feet="Chev. Sabatons +3",
+    neck="Sanctity Necklace",
+    waist="Acuity Belt +1",
+    left_ear="Crep. Earring",
+    right_ear="Digni. Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
+	}
+	
+
 sets.midcast.DivineMagic = set_combine(sets.midcast.SIRD,{body="Reverence Surcoat"})
 
 sets.midcast.EnhancingMagic = set_combine(sets.midcast.SIRD,{
@@ -189,12 +206,14 @@ sets.midcast.EnhancingMagic.Reprisal = set_combine(sets.midcast.SIRD,{
 	})
 
 sets.midcast.EnhancingMagic.Phalanx ={
-	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+    sub={ name="Priwen", augments={'HP+50','Mag. Evasion+50','Damage Taken -3%',}},
+    ammo="Staunch Tathlum +1",
     head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     body={ name="Yorium Cuirass", augments={'Spell interruption rate down -10%','Phalanx +3',}},
     hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
-    legs={ name="Founder's Hose", augments={'MND+6','Mag. Acc.+10','Attack+7','Breath dmg. taken -2%',}},
-    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    legs="Sakpata's Cuisses",
+    feet={ name="Odyssean Greaves", augments={'Enmity+5','Crit.hit rate+1','Phalanx +3','Accuracy+8 Attack+8','Mag. Acc.+10 "Mag.Atk.Bns."+10',}},
     neck="Moonlight Necklace",
     waist="Audumbla Sash",
     left_ear="Knightly Earring",

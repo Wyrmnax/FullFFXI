@@ -72,9 +72,11 @@ end
 
 function status_change(new,old)
 -- Autoset
-	if T{'Idle','Resting'}:contains(new) then
+	if T{'Resting'}:contains(new) then
 		equip(sets.Ochain)
 	elseif new == 'Engaged' then
+		previous_set()
+	else
 		previous_set()
 	end
 	if buffactive.sleep then
@@ -187,6 +189,8 @@ function midcast(spell,arg)
 		else
 			equip(sets.midcast.SIRD)
 		end
+	elseif spell.name == "Frightful Roar" then
+		equip(sets.midcast.Macc)
 	elseif spell.skill == 'Blue Magic' then
 		equip(sets.midcast.SIRD)
 	elseif spell.skill == 'Elemental Magic' then

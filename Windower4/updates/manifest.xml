@@ -115,6 +115,13 @@
       </description>
     </plugin>
     <plugin>
+      <name>MipmapFix</name>
+      <version>1.0.0.0</version>
+      <description>
+        Fixes the issue SE introduced to make textures look smoother again.
+      </description>
+    </plugin>
+    <plugin>
       <name>PacketFlow</name>
       <version>0.0.0.7</version>
       <description>

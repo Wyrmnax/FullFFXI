@@ -290,8 +290,8 @@ sets.precast.RAWS['Wildfire'] = {
     waist="Orpheus's Sash",
     left_ear="Friomisi Earring",
     right_ear="Sortiarius Earring",
-    left_ring="Dingir Ring",
-    right_ring="Epaminondas's Ring",
+    right_ring="Dingir Ring",
+    left_ring="Epaminondas's Ring",
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 	

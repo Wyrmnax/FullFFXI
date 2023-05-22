@@ -166,14 +166,14 @@
         </disclaimer>
         <map>
             <texture>
-                <path>D:\Games\FullFFXI\Windower4\/addons/sheolhelper/maps/3-4.png</path>
+                <path>D:\Games\FullFFXI\Windower4\/addons/sheolhelper/maps/3-3.png</path>
             </texture>
         </map>
         <seg_box>
             <disclaimer>false</disclaimer>
             <pos>
                 <x>495</x>
-                <y>486</y>
+                <y>485</y>
             </pos>
         </seg_box>
     </khory>

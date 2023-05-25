@@ -154,8 +154,8 @@ sets.precast.WS = {
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear="Kasuga Earring +1",
-    left_ring="Niqmaddu Ring",
-    right_ring="Flamma Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	
@@ -171,7 +171,7 @@ sets.precast.WS.WSD = {
     left_ear="Thrud Earring",
     right_ear="Kasuga Earring +1",
     left_ring="Epaminondas's Ring",
-    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    right_ring="Cornelia's Ring", 	
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }	
 
@@ -187,7 +187,7 @@ sets.precast.WS.MAB = {
     left_ear="Friomisi Earring",
     right_ear="Kasuga Earring +1",
     left_ring="Epaminondas's Ring",
-    right_ring={ name="Beithir Ring", augments={'Path: A',}},
+    right_ring="Cornelia's Ring", 	
     back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }
 

@@ -256,8 +256,9 @@ sets.precast.WS = set_combine(sets.TP, {
 	feet="Nyame Sollerets",
 	neck="Fotia Gorget",
     waist="Fotia Belt",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},    
-    left_ring={ name="Beithir Ring", augments={'Path: A',}},
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}, 
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
 	})
 
 sets.precast.WS.WSD = set_combine(sets.TP, { 	
@@ -272,7 +273,7 @@ sets.precast.WS.WSD = set_combine(sets.TP, {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Thrud Earring",
     left_ring="Epaminondas's Ring",
-    right_ring={ name="Beithir Ring", augments={'Path: A',}}, 	
+    right_ring="Cornelia's Ring", 	
 	})
 	
 sets.precast.WS.MAB = { 
@@ -286,8 +287,8 @@ sets.precast.WS.MAB = {
     waist="Orpheus's Sash",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ear="Friomisi Earring",
-    left_ring={ name="Beithir Ring", augments={'Path: A',}},
-	right_ring="Epaminondas's Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},   
 	}
 				

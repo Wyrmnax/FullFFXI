@@ -265,8 +265,8 @@ sets.precast.WS = {
     waist="Fotia Belt",
     left_ear="Sherida Earring",
     right_ear="Thrud Earring",
-    left_ring="Epona's Ring",
-    right_ring="Regal Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back="Sacro Mantle",
 	}
 	
@@ -281,8 +281,8 @@ sets.precast.WS.Acc = {
     waist="Fotia Belt",
     left_ear="Sherida Earring",
     right_ear="Thrud Earring",
-    left_ring="Epona's Ring",
-    right_ring="Regal Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back="Sacro Mantle",
 	}
 

@@ -213,8 +213,8 @@ sets.precast.WS.wsd = {
     waist="Sailfi Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
-    right_ring="Epaminondas's Ring",
-    left_ring="Beithir Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 
@@ -229,8 +229,8 @@ sets.precast.WS.MAB = {
     waist="Orpheus's sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
-    left_ring="Beithir Ring",
-    right_ring="Epaminondas's Ring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 	
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 		

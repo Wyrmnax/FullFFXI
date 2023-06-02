@@ -192,7 +192,7 @@ function get_sets()
     right_ear="Savant's Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 
     -- Your idle Sublimation set combine from refresh or DT depening on mode.
@@ -233,7 +233,7 @@ function get_sets()
     right_ear="Crep. Earring",
     left_ring="Crepuscular Ring",
     right_ring="Metamor. Ring +1",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 
     }
 	
@@ -250,7 +250,7 @@ function get_sets()
     right_ear="Crep. Earring",
     left_ring="Crepuscular Ring",
     right_ring="Metamor. Ring +1",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 
     }
     sets.me["Myrkr"] = {
@@ -391,7 +391,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 	-- Make sure you have a non weather obi in this set. Helix get bonus naturally no need Obi.	
     sets.midcast.LightHelix = {
@@ -410,7 +410,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
     -- Make sure you have a non weather obi in this set. Helix get bonus naturally no need Obi.	
     sets.midcast.Helix = {
@@ -431,7 +431,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }	
 
     -- Whatever you want to equip mid-cast as a catch all for all spells, and we'll overwrite later for individual spells
@@ -458,7 +458,7 @@ function get_sets()
     right_ear="Arbatel Earring +2",
     left_ring="Freke Ring",
     right_ring="Jhakri Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
     -- used with toggle, default: F10
     -- Pieces to swap from freen nuke to Magic Burst
@@ -484,7 +484,7 @@ function get_sets()
     right_ear="Arbatel Earring +2",
     left_ring="Freke Ring",
     right_ring="Jhakri Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 	
 	sets.midcast.nuking.lowtier = set_combine(sets.midcast.nuking.normal, {
@@ -514,7 +514,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Metamor. Ring +1",
     right_ring="Jhakri Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}	
 	
     sets.midcast.IntEnfeebling = {
@@ -532,7 +532,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Metamor. Ring +1",
     right_ring="Jhakri Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 	
     sets.midcast.MndEnfeebling = {
@@ -550,7 +550,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Metamor. Ring +1",
     right_ring="Jhakri Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 	
     -- Enhancing
@@ -569,7 +569,7 @@ function get_sets()
     right_ear="Halasz Earring",
     left_ring="Jhakri Ring",
     right_ring="Lebeche Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     })
     sets.midcast.storm = set_combine(sets.midcast.enhancing,{
 
@@ -608,7 +608,7 @@ function get_sets()
     right_ear="Halasz Earring",
     left_ring="Defending Ring",
     right_ring="Lebeche Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     })
     sets.midcast.cure.weather = set_combine(sets.midcast.cure.normal,{
     })    
@@ -633,7 +633,7 @@ function get_sets()
     right_ear="Halasz Earring",
     left_ring="Jhakri Ring",
     right_ring="Lebeche Ring",
-    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }
 	-- Focus on Regen Duration 	
     sets.midcast.regen.duration = set_combine(sets.midcast.regen.hybrid,{

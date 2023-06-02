@@ -202,7 +202,7 @@ sets.precast.WS.crit = {
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 		
-sets.precast.WS.wsd = {
+sets.precast.WS.WSD = {
 	ammo="Knobkierrie",
     head="Nyame helm",
     body="Nyame Mail",
@@ -238,7 +238,7 @@ sets.precast.WS.MAB = {
 	sets.precast.WS["Decimation"] = set_combine(sets.precast.WS, { 
 	})
 	
-	sets.precast.WS["Mistral Axe"] = set_combine(sets.precast.WS.wsd, { 	
+	sets.precast.WS["Mistral Axe"] = set_combine(sets.precast.WS.WSD, { 	
     neck="War. Beads +2",
 	})
 	
@@ -246,7 +246,7 @@ sets.precast.WS.MAB = {
 	})
 	
 --Sword
-	sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.wsd, { 	
+	sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, { 	
     neck="War. Beads +2",
 	--hands="Sakpata's Gauntlets",
     --legs="Sakpata's Cuisses",
@@ -265,34 +265,34 @@ sets.precast.WS.MAB = {
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
-	sets.precast.WS["Circle Blade"] = set_combine(sets.precast.WS.wsd, sets.TH)
+	sets.precast.WS["Circle Blade"] = set_combine(sets.precast.WS.WSD, sets.TH)
 	
 	sets.precast.WS["Requiescat"] = set_combine(sets.precast.WS, sets.TH)
 	
 -- Great Axe
-sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS.wsd, { 
+sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS.WSD, { 
 
 })
 
-sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS.wsd, {   
+sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS.WSD, {   
 })
 				
-sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.wsd, {   
+sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.WSD, {   
     neck="War.Beads +2",	
 	waist="Ioskeha Belt +1",	
 	lring="Gelatinouse Ring +1",
     back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 				
-sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.wsd, {
+sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.WSD, {
 	ammo="Per. Lucky Egg",
 	waist="Chaac Belt",
 	})
 
-sets.precast.WS["Full Break"] = set_combine(sets.precast.WS.wsd, {    
+sets.precast.WS["Full Break"] = set_combine(sets.precast.WS.WSD, {    
 })
 
-sets.precast.WS["Steel Cyclone"] = set_combine(sets.precast.WS.wsd, {  
+sets.precast.WS["Steel Cyclone"] = set_combine(sets.precast.WS.WSD, {  
 })
 
 -- GreatSword
@@ -306,20 +306,20 @@ sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {
 sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, sets.TH)
 
 -- Polearm
-sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.wsd, 
+sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS.WSD, 
 {
 })
 
-sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS.wsd, 
+sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS.WSD, 
 {
 })
 
 -- Club
-sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS.wsd, 
+sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS.WSD, 
 {
 })
 
-sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.wsd, 
+sets.precast.WS['Judgment'] = set_combine(sets.precast.WS.WSD, 
 {
 })
 

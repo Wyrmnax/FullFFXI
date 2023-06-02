@@ -46,7 +46,7 @@ if player.Name == 'Khory' then
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 	
 		sets.idle.MDT = {
@@ -64,7 +64,7 @@ if player.Name == 'Khory' then
     right_ear="Lugalbanda Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}			
 	
 		sets.Resting = set_combine(sets.idle.PDT, {})
@@ -96,7 +96,7 @@ if player.Name == 'Khory' then
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 	
 		sets.precast.Elemental = set_combine(sets.precast.Fastcast,{})
@@ -125,7 +125,7 @@ if player.Name == 'Khory' then
     right_ear="Regal Earring",
     left_ring="Metamor. Ring +1",
     right_ring="Freke Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 		-- Damage
 	sets.midcast.Nuke = {
@@ -143,7 +143,7 @@ if player.Name == 'Khory' then
     right_ear="Wicce Earring +1",
     left_ring="Metamor. Ring +1",
     right_ring="Freke Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 	
 	sets.midcast.Nuke.MB = {
@@ -162,7 +162,7 @@ if player.Name == 'Khory' then
     right_ear="Wicce Earring +1",
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Freke Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 		
 		--Healing Magic
@@ -178,7 +178,7 @@ if player.Name == 'Khory' then
     right_ear="Mendi. Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 		
 		sets.midcast.Curaga = {
@@ -193,7 +193,7 @@ if player.Name == 'Khory' then
     right_ear="Mendi. Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},}
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},}
 	
 		-- Enhancing 
 		-- 
@@ -222,7 +222,7 @@ if player.Name == 'Khory' then
 		right_ear="Regal Earring",
 		left_ring="Metamor. Ring +1",
 		right_ring="Freke Ring",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 		sets.midcast.Macc = {
 		main="Mpaca's Staff",
@@ -239,7 +239,7 @@ if player.Name == 'Khory' then
 		right_ear="Regal Earring",
 		left_ring="Metamor. Ring +1",
 		right_ring="Freke Ring",
-		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
 		sets.midcast.Dia = set_combine(sets.midcast.ConserveMP)
 		sets.midcast.Paralyze = set_combine(sets.midcast.Macc)
@@ -264,7 +264,7 @@ if player.Name == 'Khory' then
 			right_ear="Regal Earring",
 			left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 			right_ring="Evanescence Ring",
-			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 				})
 		sets.midcast.Aspir = set_combine(sets.midcast.Dark, {
 			main="Mpaca's Staff",
@@ -281,7 +281,7 @@ if player.Name == 'Khory' then
 			right_ear="Regal Earring",
 			left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 			right_ring="Evanescence Ring",
-			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+			back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	})
 		sets.midcast.Stun = set_combine(sets.midcast.Macc)
 		
@@ -299,7 +299,7 @@ if player.Name == 'Khory' then
 				right_ear="Telos Earring",
 				left_ring="Petrov Ring",
 				right_ring="Jhakri Ring",
-				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	})
 		sets.precast.WS = {
 				ammo="Amar Cluster",
@@ -314,7 +314,7 @@ if player.Name == 'Khory' then
 				right_ear="Telos Earring",
 				left_ring="Petrov Ring",
 				right_ring="Jhakri Ring",
-				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 				}
 		sets.precast.WS.WSD = {
 				ammo="Amar Cluster",
@@ -329,7 +329,7 @@ if player.Name == 'Khory' then
 				right_ear="Telos Earring",
 				left_ring="Petrov Ring",
 				right_ring="Jhakri Ring",
-				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 				}
 		sets.precast.WS.MAB = {
 				ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
@@ -343,7 +343,7 @@ if player.Name == 'Khory' then
 				right_ear={ name="Wicce Earring +1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+11','Enmity-1',}},
 				left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 				right_ring="Freke Ring",
-				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+				back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 				}
 		sets.precast.WS['Shattersoul'] = set_combine(sets.precast.WS, {})
 		sets.precast.WS['Retribution'] = set_combine(sets.precast.WS.WSD, {})

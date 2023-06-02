@@ -156,7 +156,7 @@ sets.precast.WS = {
     right_ear="Kasuga Earring +1",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring", 	
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 	
 sets.precast.WS.WSD = {
@@ -172,7 +172,7 @@ sets.precast.WS.WSD = {
     right_ear="Kasuga Earring +1",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring", 	
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }	
 
 sets.precast.WS.MAB = {
@@ -182,13 +182,13 @@ sets.precast.WS.MAB = {
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
+    neck="Fotia Gorget",
     waist="Orpheus's sash",
     left_ear="Friomisi Earring",
     right_ear="Kasuga Earring +1",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring", 	
-    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }
 
 

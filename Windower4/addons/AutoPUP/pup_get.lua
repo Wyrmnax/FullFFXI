@@ -9,35 +9,18 @@ get.maneuvers = {
 	water = {'Water Maneuver'},
 	light = {'Light Maneuver'},
 	dark = {'Dark Maneuver'},
-    }
+	}
 
-function get.maneuver_list(maneuvers) 
-	local list = {}
-	for k,v in pairs(maneuvers) do
-		list[k] = v
-	end
-	return list
+-- Index buffs by lowercase name and store a count as value
+function get.buffs()
+  local set_buff = {}
+  for _, buff_id in ipairs(windower.ffxi.get_player().buffs) do
+    local buff_en = res.buffs[buff_id].en:lower()
+		-- sets the value for index buff_en to the value of buff_en if it already exists OR 0, then adds 1
+		-- effectively increments existing indexes and sets new indexes to 1
+    set_buff[buff_en] = (set_buff[buff_en] or 0) + 1
+  end
+  return set_buff
 end
-
-function get.maneuver(name)
-    name = string.lower(name)
-    for k,v in pairs(ids.maneuvers) do
-        if k ~= 'n' and string.lower(v) == name then
-            return {id=k,enl=v}
-        end
-    end
-    return nil
-end
-
-function get.buffs(curbuffs)
-    local buffs = {}
-    for i,v in pairs(curbuffs) do
-        if res.buffs[v] and res.buffs[v].english then
-            buffs[res.buffs[v].english:lower()] = (buffs[res.buffs[v].english:lower()] or 0) + 1
-        end
-    end
-    return buffs
-end
-
 
 return get

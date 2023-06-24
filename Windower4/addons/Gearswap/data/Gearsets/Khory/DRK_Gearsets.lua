@@ -92,9 +92,9 @@ sets.TP = {
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
-    right_ear="Heath. Earring +1",
+    right_ear="Heath. Earring +2",
     left_ring="Niqmaddu Ring",
-    right_ring="Petrov Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
 	}
 sets.TP.Acc = set_combine(sets.TP, {
@@ -154,7 +154,7 @@ sets.midcast.DarkMagic = {
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
@@ -169,7 +169,7 @@ sets.midcast.Aspir = {
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
@@ -184,7 +184,7 @@ sets.midcast.Absorb = {
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
@@ -199,7 +199,7 @@ sets.midcast.Dread = {
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
@@ -222,9 +222,9 @@ sets.precast.WS = {
     neck="Caro Necklace",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
-    right_ear="Heath. Earring +1",
+    right_ear="Heath. Earring +2",
     left_ring="Niqmaddu Ring",
-    right_ring="Regal Ring",
+    right_ring="Cornelia's Ring", 
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 	
@@ -238,19 +238,18 @@ sets.precast.WS.WSD = {
     neck="Caro Necklace",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
-    right_ear="Heath. Earring +1",
-	--right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Regal Ring",
+    right_ear="Heath. Earring +2",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring", 
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 -- Scythe
 sets.precast.WS["Insurgency"] = set_combine(sets.precast.WS, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Cross Reaper"] = set_combine(sets.precast.WS.WSD, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Guillotine"] = set_combine(sets.precast.WS, {
@@ -269,22 +268,22 @@ sets.precast.WS["Catastrophe"] = set_combine(sets.precast.WS.WSD, {
 sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {	
     neck="Fotia Gorget",
     waist="Fotia Belt",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS.WSD, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Scourge"] = set_combine(sets.precast.WS, {
 	})
 	
 sets.precast.WS["Gound Strike"] = set_combine(sets.precast.WS.WSD, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Spinning Slash"] = set_combine(sets.precast.WS.WSD, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 
 			

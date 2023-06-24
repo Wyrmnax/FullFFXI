@@ -193,8 +193,8 @@ function status_change(new,old)
 		end
 	elseif new == 'Engaged' then	
 		--auto food
-		windower.add_to_chat(123,'Auto Food')
-        send_command('wait 1; input /item "Grape Daifuku" <me>')
+		--windower.add_to_chat(123,'Auto Food')
+        --send_command('wait 1; input /item "Grape Daifuku" <me>')
 		if PDT == 1 or MDT == 1 then
 			if PDT == 1 and MDT == 0 then
 				windower.add_to_chat(121,'PDT Locked')

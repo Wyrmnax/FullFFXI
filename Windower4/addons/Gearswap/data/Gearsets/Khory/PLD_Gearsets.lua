@@ -106,6 +106,20 @@ sets.TP= {
     left_ring="Chirich Ring +1",
     right_ring="Flamma Ring",
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
+	
+	--ammo="Homiliary",
+    --head="Chev. Armet +3",
+    --body={ name="Sakpata's Plate", augments={'Path: A',}},
+    --hands="Regal Gauntlets",
+    --legs="Chev. Cuisses +3",
+    --feet="Chev. Sabatons +3",
+	--neck="Rep. Plat. Medal",
+    --waist="Flume Belt +1",
+    --left_ear="Tuisto Earring",
+    --right_ear={ name="Chev. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+    --left_ring="Shneddick Ring",
+    --right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    --back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
 				
 -- Precast 

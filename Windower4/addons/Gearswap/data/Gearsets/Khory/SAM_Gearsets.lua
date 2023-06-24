@@ -100,7 +100,7 @@ sets.TP = {
     legs="Kasuga Haidate +3",
     feet={ name="Ryuo Sune-Ate +1", augments={'HP+65','"Store TP"+5','"Subtle Blow"+8',}},
     neck="Moonlight Nodowa",
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    waist="Sweordfaetels +1",
     left_ear="Crep. Earring",
     right_ear={ name="Kasuga Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','Weapon skill damage +3%',}},
     left_ring="Niqmaddu Ring",

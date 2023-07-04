@@ -17,3 +17,5 @@ wait 4
 input /ja "Immanence" <me>
 wait 2
 input /ma "Fire" <t>
+wait 1
+input /p Finished 4-step on <t>

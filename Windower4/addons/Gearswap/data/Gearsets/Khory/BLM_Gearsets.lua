@@ -33,7 +33,7 @@ if player.Name == 'Khory' then
 		-- Standard/idle
 		sets.idle.PDT = { 
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
@@ -51,7 +51,7 @@ if player.Name == 'Khory' then
 	
 		sets.idle.MDT = {
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
@@ -83,7 +83,7 @@ if player.Name == 'Khory' then
 		sets.precast.MinusHP = {}
 		sets.precast.Fastcast = {
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo="Impatiens",
     head={ name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+10','"Mag.Atk.Bns."+6',}},
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1 "Mag.Atk.Bns."+1','"Fast Cast"+6','INT+8','Mag. Acc.+7','"Mag.Atk.Bns."+5',}},
@@ -113,7 +113,7 @@ if player.Name == 'Khory' then
 		-- High Resist
 		sets.midcast.Elemental = {
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo="Ghastly Tathlum +1",
     body="Cohort Cloak +1",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
@@ -130,7 +130,7 @@ if player.Name == 'Khory' then
 		-- Damage
 	sets.midcast.Nuke = {
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo="Ghastly Tathlum +1",
     head="Ea Hat +1",
     body="Wicce Coat +3",
@@ -148,7 +148,7 @@ if player.Name == 'Khory' then
 	
 	sets.midcast.Nuke.MB = {
 	main="Mpaca's Staff",
-    sub="Enki Strap",
+    sub="Khonsu",
     ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
     head="Ea Hat +1",
     body="Wicce Coat +3",
@@ -209,7 +209,7 @@ if player.Name == 'Khory' then
 		-- Potency
 		sets.midcast.Enfeebling = {
 		main="Mpaca's Staff",
-		sub="Enki Strap",
+		sub="Khonsu",
 		ammo="Ghastly Tathlum +1",
 		head="Ea Hat +1",
 		body="Wicce Coat +3",
@@ -226,7 +226,7 @@ if player.Name == 'Khory' then
 	}
 		sets.midcast.Macc = {
 		main="Mpaca's Staff",
-		sub="Enki Strap",
+		sub="Khonsu",
 		ammo="Ghastly Tathlum +1",
 		head="Ea Hat +1",
 		body="Wicce Coat +3",
@@ -251,7 +251,7 @@ if player.Name == 'Khory' then
 		-- Dark Magic
 		sets.midcast.Dark = set_combine(sets.midcast.Macc, {
 			main="Mpaca's Staff",
-			sub="Enki Strap",
+			sub="Khonsu",
 			ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 			head="Amalric Coif +1",
 			body="Agwu's Robe",
@@ -268,7 +268,7 @@ if player.Name == 'Khory' then
 				})
 		sets.midcast.Aspir = set_combine(sets.midcast.Dark, {
 			main="Mpaca's Staff",
-			sub="Enki Strap",
+			sub="Khonsu",
 			ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 			head="Amalric Coif +1",
 			body="Agwu's Robe",

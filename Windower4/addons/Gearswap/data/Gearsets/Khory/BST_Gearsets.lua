@@ -84,7 +84,7 @@ sets.precast.JA["Unleash"] = {}
 
 sets.precast.JA["Killer Instinct"] = {}
 sets.precast.JA["Feral Howl"] = {}
-sets.precast.JA["Call Beast"] = {}
+sets.precast.JA["Call Beast"] = {hands="Ankusa Gloves +2"}
 sets.precast.JA["Beast Loyality"] = set_combine(sets.precast.JA["Call Beast"])
 sets.precast.JA["Tame"] = {}
 sets.precast.JA["Spur"] = {back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},}

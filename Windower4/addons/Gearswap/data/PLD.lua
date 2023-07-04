@@ -251,7 +251,6 @@ end
 
 function previous_set()
 	slot_lock()
-	weapon_check()
 		if areas.Town:contains(world.zone) then
 			equip(ModeWeapon, sets.idle.Standard)
 		elseif player.status == 'Engaged' then
@@ -259,12 +258,4 @@ function previous_set()
 		else 
 			equip(ModeWeapon, sets.idle.Standard)
 		end
-end
-
-function weapon_check()
-	if player.equipment.main == 'empty' then
-		previous_set()
-	elseif player.equipment.sub == 'empty' then
-		previous_set()
-	end
 end

@@ -206,13 +206,13 @@
                 <slot02>optic fiber</slot02>
                 <slot03>armor plate ii</slot03>
                 <slot04>armor plate iii</slot04>
-                <slot05>steam jacket</slot05>
+                <slot05>magniplug</slot05>
                 <slot06>turbo charger</slot06>
                 <slot07>turbo charger ii</slot07>
                 <slot08>stabilizer ii</slot08>
-                <slot09>coiler</slot09>
-                <slot10>tension spring ii</slot10>
-                <slot11>tension spring iii</slot11>
+                <slot09>coiler ii</slot09>
+                <slot10>magniplug ii</slot10>
+                <slot11>tension spring iv</slot11>
                 <slot12>heatsink</slot12>
             </upinarms>
             <whm>

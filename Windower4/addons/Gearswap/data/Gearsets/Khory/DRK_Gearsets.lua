@@ -55,7 +55,7 @@ sets.idle.PDT = {
     right_ear="Etiolation Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.idle.MDT = {     
@@ -71,7 +71,7 @@ sets.idle.MDT = {
     right_ear="Etiolation Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {})
@@ -95,7 +95,7 @@ sets.TP = {
     right_ear="Heath. Earring +2",
     left_ring="Niqmaddu Ring",
     right_ring="Chirich Ring +1",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.TP.Acc = set_combine(sets.TP, {
 				})
@@ -157,7 +157,7 @@ sets.midcast.DarkMagic = {
     right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Aspir = {
 	ammo="Pemphredo Tathlum",
@@ -172,7 +172,7 @@ sets.midcast.Aspir = {
     right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Absorb = {
 	ammo="Pemphredo Tathlum",
@@ -187,7 +187,7 @@ sets.midcast.Absorb = {
     right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Dread = {
 	ammo="Pemphredo Tathlum",
@@ -202,7 +202,7 @@ sets.midcast.Dread = {
     right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.midcast.Macc = {}

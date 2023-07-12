@@ -3,7 +3,7 @@
     <global>
         <BLM>magic accuracy|magic damage|magic attack bonus|magic burst damage|magic burst damage ii|int|fast cast|elemental magic casting time|damage taken|physical damage taken|magic damage taken</BLM>
         <BLU>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|fast cast|magic accuracy|magic damage|magic attack bonus|magic burst damage</BLU>
-        <BRD>all songs|song effect duration|fast cast|song spellcasting time|damage taken|physical damage taken|magic damage taken|</BRD>
+        <BRD>store tp|double attack|triple attack|quadruple attack|weapon skill damage|haste|damage taken|physical damage taken|magic damage taken|</BRD>
         <BST>pet: double attack|pet: magic attack bonus|pet: damage taken|damage taken|physical damage taken|magic damage taken</BST>        
 		<COR>fast cast|store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</COR>
         <DNC>store tp|double attack|triple attack|quadruple attack</DNC>
@@ -20,7 +20,7 @@
         <SAM>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</SAM>
         <SCH>magic attack bonus|magic burst damage|magic burst damage ii|magic accuracy|magic damage|fast cast|elemental magic casting time|cure potency|enh mag eff dur|enhancing magic effect duration|damage taken|physical damage taken|magic damage taken</SCH>
         <SMN>blood pact delay|blood pact delay ii|blood pact damage|avatar perpetuation cost|pet: magic attack bonus|pet: attack|pet: double attack|pet: accuracy|pet: magic accuracy|summoning magic skill|pet: blood pact damage|pet: magic damage</SMN>
-        <THF>store tp|double attack|triple attack|quadruple attack|dual wield</THF>
+        <THF>store tp|double attack|triple attack|quadruple attack|dual wield|weapon skill damage|damage taken|physical damage taken|magic damage taken</THF>
         <WAR>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|magic evasion</WAR>
         <WHM>cure potency|cure potency ii|fast cast|cure spellcasting time|enmity|healing magic casting time|divine benison|damage taken|physical damage taken|magic damage taken|magic accuracy</WHM>
         <levelfilter>99</levelfilter>

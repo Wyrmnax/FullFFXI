@@ -18,13 +18,6 @@
                 <4>Cherukiki</4>
                 <5>Moogle</5>
             </alex>
-            <boss>
-                <1>Ulmia</1>
-                <2>Monberaux</2>
-                <3>Sylvie (UC)</3>
-                <4>Selh&apos;teus</4>
-                <5>Koru-Moru</5>
-            </boss>
             <default>
                 <1>Valaineral</1>
                 <2>Monberaux</2>
@@ -94,11 +87,11 @@
                 <5>Koru-Moru</5>
             </odyssey>
             <omen>
-                <1>Ulmia</1>
-                <2>Arciela</2>
-                <3>Monberaux</3>
-                <4>Sylvie (UC)</4>
-                <5>Qultada</5>
+                <1>Sylvie (UC)</1>
+                <2>Koru-Moru</2>
+                <3>Ulmia</3>
+                <4>Monberaux</4>
+                <5>Selh&apos;teus</5>
             </omen>
             <rask>
                 <1>AAEV</1>

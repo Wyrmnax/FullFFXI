@@ -29,24 +29,24 @@ if player.name == 'Khory' then
 			end
 		end
 		
-		send_command('wait 3;input /lockstyleset 3')
+		send_command('wait 3;input /lockstyleset 19')
 
 		-- Auto Sets
 		-- Standard/idle
 		sets.idle.PDT = {
 			ammo="Staunch Tathlum +1",
-			head="Rawhide Mask",
+			head="Gleti's Mask",
 			body="Shamash Robe",
 			hands="Nyame Gauntlets",
-			legs="Rawhide Trousers",
+			legs="Gleti's Breeches",
 			feet="Nyame Sollerets",
 			neck="Rep. Plat. Medal",
-			waist="Fucho-no-Obi",
-			left_ear="Suppanomimi",
-			right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+			waist="Flume Belt +1",
+			left_ear="Etiolation Earring",
+			right_ear="Eabani Earring",
 			left_ring="Defending Ring",
 			right_ring="Shneddick Ring",
-			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 			}
 		sets.idle.MDT = set_combine(sets.idle.PDT,{
 			})
@@ -62,16 +62,16 @@ if player.name == 'Khory' then
 		ammo="Coiste Bodhar",
 		head="Malignance Chapeau",
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
-		hands="Gleti's Gauntlets",
-		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
 		feet="Malignance Boots",
 		neck="Lissome Necklace",
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Suppanomimi",
-		right_ear="Brutal Earring",
+		waist="Reiki Yotai",
+		left_ear="Telos Earring",
+		right_ear="Hashi. Earring +1",
 		left_ring="Chirich Ring +1",
 		right_ring="Epona's Ring",
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 		}
 		-- Accuracy
 		sets.TP.Acc = set_combine(sets.TP, {
@@ -124,11 +124,19 @@ if player.name == 'Khory' then
 		sets.midcast.Recast = set_combine(sets.idle.PDT, {waist="Witful Belt"})
 		sets.midcast.ConserveMP = {}
 		
+		sets.midcast.Enhancing = {
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+		body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +9',}},
+		hands="Telchine Gloves",
+		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
+		feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+		}
+		
 		-- Blue Magic
 		-- Skill
 		sets.midcast.BlueMagic = {
 			ammo="Ginsen",
-			head="Hashishin Kavuk +2",
+			head="Hashishin Kavuk +3",
 			body="Hashishin Mintan +2",
 			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
@@ -139,7 +147,7 @@ if player.name == 'Khory' then
 			right_ear="Digni. Earring",
 			left_ring="Regal Ring",
 			right_ring={ name="Beithir Ring", augments={'Path: A',}},
-			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			}
 		sets.idle.BlueMagic = {}
 		sets.idle.BlueMagic.Learn = set_combine(sets.midcast.BlueMagic,{hands="Assim. Bazu.", back="Atheling Mantle"})
@@ -167,7 +175,7 @@ if player.name == 'Khory' then
 		-- INT
 		sets.midcast.BlueMagic.Nuke = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
-			head="Hashishin Kavuk +2",
+			head="Hashishin Kavuk +3",
 			body="Hashishin Mintan +2",
 			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
@@ -196,7 +204,7 @@ if player.name == 'Khory' then
 		-- Macc 
 		sets.midcast.BlueMagic.Macc = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
-			head="Hashishin Kavuk +2",
+			head="Hashishin Kavuk +3",
 			body="Hashishin Mintan +2",
 			hands="Hashi. Bazu. +2",
 			legs="Nyame Flanchard",
@@ -223,12 +231,12 @@ if player.name == 'Khory' then
 			right_ear="Brutal Earring",
 			left_ring="Hetairoi Ring",
 			right_ring="Epona's Ring",
-			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 			}
 				
 		sets.precast.WS.WSD = {
 			ammo="Oshasha's Treatise",
-			head="Hashishin Kavuk +2",
+			head="Hashishin Kavuk +3",
 			body="Nyame Mail",
 			hands="Nyame Gauntlets",
 			legs="Nyame Flanchard",
@@ -239,14 +247,14 @@ if player.name == 'Khory' then
 			right_ear="Ishvara Earring",
 			left_ring={ name="Beithir Ring", augments={'Path: A',}},
 			right_ring="Ilabrat Ring",
-			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			}
 			
 		sets.precast.WS.MAB = {	
 			ammo="Pemphredo Tathlum",
 			head="Nyame Helm",
-			body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-			hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+			body="Nyame Mail",
+			hands="Nyame Gauntlets",
 			legs="Nyame Flanchard",
 			feet="Nyame Sollerets",
 			neck="Sanctity Necklace",
@@ -267,9 +275,37 @@ if player.name == 'Khory' then
 		sets.precast.WS.Acc = set_combine(sets.precast.WS, {
 		})
 		sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
+		 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Gleti's Cuirass", augments={'Path: A',}},
+		hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear={ name="Hashi. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
+		left_ring="Ilabrat Ring",
+		right_ring="Epona's Ring",
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+	
 		})
 		
 		sets.precast.WS.Acc['Chant du Cygne'] = set_combine(sets.precast.WS, {
+		 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Gleti's Cuirass", augments={'Path: A',}},
+		hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear={ name="Hashi. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
+		left_ring="Ilabrat Ring",
+		right_ring="Epona's Ring",
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+	
 		})
 		
 		sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {

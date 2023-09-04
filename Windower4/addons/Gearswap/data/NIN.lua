@@ -40,13 +40,13 @@ end
 -- Rules
 function self_command(command)
 	if command == 'Mode' then
-		if Mode == 'Chi' then
-			Mode = 'SB'
+		if Mode == 'ChiAcc' then
+			Mode = 'SBAcc'
 			windower.send_command('autows use Savage Blade')
-			ModeWeapon = sets.SB			
+			ModeWeapon = sets.SBAcc			
 				previous_set()		
-			windower.add_to_chat(121,'Mode SB')
-		elseif Mode == 'SB' then
+			windower.add_to_chat(121,'Mode SB ACC')
+		elseif Mode == 'SBAcc' then
 			Mode = 'Evis'
 			windower.send_command('autows use Evisceration')
 			ModeWeapon = sets.Evis			
@@ -58,26 +58,62 @@ function self_command(command)
 			ModeWeapon = sets.Chi
 				previous_set()
 			windower.add_to_chat(121,'Mode Blade: Chi')
+		elseif Mode == 'Chi' then
+			Mode = 'SB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SB
+				previous_set()
+			windower.add_to_chat(121,'Mode SB')
+		elseif Mode == 'SB' then
+			Mode = 'Raging'
+			windower.send_command('autows use Raging Fists')
+			ModeWeapon = sets.Raging
+				previous_set()
+			windower.add_to_chat(121,'Mode Raging')
+		elseif Mode == 'Raging' then
+			Mode = 'ChiAcc'
+			windower.send_command('autows use Blade: Chi')
+			ModeWeapon = sets.ChiAcc
+				previous_set()
+			windower.add_to_chat(121,'Mode Blade: Chi Acc')		
 		end
 	elseif command == 'ModeX' then
-		if Mode == 'Chi' then
+		if Mode == 'ChiAcc' then
+			Mode = 'Raging'
+			windower.send_command('autows use Raging Fists')
+			ModeWeapon = sets.Raging			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Raging')
+		elseif Mode == 'SBAcc' then
+			Mode = 'ChiAcc'
+			windower.send_command('autows use Blade: Chi')
+			ModeWeapon = sets.ChiAcc			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Blade: Chi Acc')
+		elseif Mode == 'Evis' then
+			Mode = 'SBAcc'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SBAcc
+				previous_set()
+			windower.add_to_chat(121,'Mode SB Acc')
+		elseif Mode == 'Chi' then
 			Mode = 'Evis'
 			windower.send_command('autows use Evisceration')
-			ModeWeapon = sets.Evis			
-				previous_set()		
+			ModeWeapon = sets.Evis
+				previous_set()
 			windower.add_to_chat(121,'Mode Evisceration')
-		elseif Mode == 'Evis' then
-			Mode = 'SB'
-			windower.send_command('autows use Savage Blade')
-			ModeWeapon = sets.SB			
-				previous_set()		
-			windower.add_to_chat(121,'Mode SB')
 		elseif Mode == 'SB' then
 			Mode = 'Chi'
 			windower.send_command('autows use Blade: Chi')
 			ModeWeapon = sets.Chi
 				previous_set()
 			windower.add_to_chat(121,'Mode Blade: Chi')
+		elseif Mode == 'Raging' then
+			Mode = 'SB'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.SB
+				previous_set()
+			windower.add_to_chat(121,'Mode SB')
 		end
 	end
 end
@@ -183,6 +219,9 @@ function previous_set(spell)
 
 	if player.status == 'Engaged' then
 		equip(ModeWeapon, sets.TP)
+		if buffactive.innin then
+			equip({head="Hattori Zukin +3"})
+		end
 	else
 		equip(ModeWeapon, sets.idle.PDT)
 	end

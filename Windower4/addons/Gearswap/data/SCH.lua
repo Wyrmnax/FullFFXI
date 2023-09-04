@@ -326,6 +326,23 @@ function get_sets()
     right_ring="Lebeche Ring",
     back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
 	}
+	
+	sets.precast["Impact"] = {	
+	main="Musa",
+	sub="Clerisy Strap",
+	ammo="Impatiens",
+    body="Crepuscular Cloak",
+    hands="Acad. Bracers +3",
+    legs="Agwu's Slops",
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+5','INT+2','Mag. Acc.+9',}},
+    neck="Voltsurge Torque",
+    waist="Embla Sash",
+    left_ear="Malignance Earring",
+    right_ear="Enchntr. Earring +1",
+    left_ring="Kishar Ring",
+    right_ring="Lebeche Ring",
+    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+	}
 
     -- When spell school is aligned with grimoire, swap relevent pieces -- Can also use Arbatel +1 set here if you value 1% quickcast procs per piece. (2+ pieces)  
     -- Dont set_combine here, as this is the last step of the precast, it will have sorted all the needed pieces already based on type of spell.
@@ -515,7 +532,24 @@ function get_sets()
     left_ring="Metamor. Ring +1",
     right_ring="Jhakri Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
-	}	
+	}
+
+	sets.midcast.impact = {
+	main="Bunzi's Rod",
+	sub="Ammurapi Shield",
+    ammo="Pemphredo Tathlum",
+    body="Crepuscular Cloak",
+    hands="Acad. Bracers +3",
+    legs="Arbatel Pants +3",
+    feet="Acad. Loafers +2",
+    neck={ name="Argute Stole +2", augments={'Path: A',}},
+    waist={ name="Acuity Belt +1", augments={'Path: A',}},
+    left_ear="Malignance Earring",
+    right_ear="Regal Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Crepuscular Ring",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+	}		
 	
     sets.midcast.IntEnfeebling = {
 	main="Bunzi's Rod",

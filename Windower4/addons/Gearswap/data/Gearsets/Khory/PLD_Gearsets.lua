@@ -80,9 +80,6 @@ sets.idle.MDT = {
     right_ring="Gelatinous Ring +1", 
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}
-	
-sets.Ochain = set_combine(sets.idle, { sub="Ochain",
-				})
 				
 sets.Sleep = set_combine(sets.idle, { sub="Duban",
 				})

@@ -71,17 +71,7 @@ function self_command(command)
 end
 
 function status_change(new,old)
--- Autoset
-	if T{'Resting'}:contains(new) then
-		equip(sets.Ochain)
-	elseif new == 'Engaged' then
-		previous_set()
-	else
-		previous_set()
-	end
-	if buffactive.sleep then
-		equip(sets.Sleep)
-	end
+	previous_set()
 end
 
 function precast(spell,arg)

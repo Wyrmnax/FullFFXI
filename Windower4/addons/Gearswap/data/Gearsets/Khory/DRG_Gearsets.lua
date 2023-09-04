@@ -78,60 +78,66 @@ sets.TP = {
 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body="Gleti's Cuirass",
-    hands="Nyame Gauntlets",
+    hands="Gleti's Gauntlets",
     legs="Sulev. Cuisses +2",
-    feet="Nyame Sollerets",
+    feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
+    right_ear="Pel. Earring +1",
     left_ring="Niqmaddu Ring",
-    right_ring="Petrov Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.TP.Ionis = { ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+sets.TP.Ionis = {     
+ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
+    hands="Gleti's Gauntlets",
     legs="Sulev. Cuisses +2",
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
+    right_ear="Pel. Earring +1",
     left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+    right_ring="Chirich Ring +1",
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 
 -- Melee Accuracy TP
-sets.TP.Acc = {	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+sets.TP.Acc = {     
+ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
+    hands="Gleti's Gauntlets",
     legs="Sulev. Cuisses +2",
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
+    right_ear="Pel. Earring +1",
     left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+    right_ring="Chirich Ring +1",
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 -- Ionis Haste +2% Save TP 25+
-sets.TP.Acc.Ionis = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+sets.TP.Acc.Ionis = {     
+ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
+    hands="Gleti's Gauntlets",
     legs="Sulev. Cuisses +2",
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
+    right_ear="Pel. Earring +1",
     left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+    right_ring="Chirich Ring +1",
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 
 -- Pet
 sets.precast.HealingBreath = {
@@ -224,19 +230,21 @@ sets.precast.JA["Soul Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
 
 -- Weaponskills
-sets.precast.WS = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Flam. Zucchetto +2",
-    body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
+sets.precast.WS = { 
+	ammo="Knobkierrie",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    feet="Nyame Sollerets",
+    neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
+    left_ear="Thrud Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+    right_ring="Regal Ring",
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	}
 	
 sets.precast.WS.WSD = { 
 	ammo="Knobkierrie",
@@ -254,37 +262,34 @@ sets.precast.WS.WSD = {
     back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
-sets.precast.WS["Stardiver"] = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Flam. Zucchetto +2",
-    body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
-    legs="Sulev. Cuisses +2",
+sets.precast.WS["Stardiver"] = set_combine(sets.precast.WS, {
+	head="Flam. Zucchetto +2",
+	body="Gleti's Cuirass",
+    hands="Gleti's Gauntlets",
+    legs="Gleti's Breeches",
     feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+	neck="Fotia Gorget",
+	waist="Fotia Belt",
+    right_ear="Pel. Earring +1",
+	})
 
-sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS.WSD, {})
+sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS.WSD, {
+	body="Gleti's Cuirass",
+	})
 
-sets.precast.WS["Drakesbane"] = {ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Flam. Zucchetto +2",
-    body="Gleti's Cuirass",
-    hands="Sulev. Gauntlets +2",
-    legs="Sulev. Cuisses +2",
-    feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Hetairoi Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
+sets.precast.WS["Drakesbane"] = set_combine(sets.precast.WS, {
+	body="Gleti's Cuirass",
+    hands="Gleti's Gauntlets",
+    legs="Gleti's Breeches",
+    feet="Gleti's Boots",
+    right_ear="Pel. Earring +1",
+	})
 
-sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS.WSD, {})
+sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS.WSD, {
+})
+
+sets.precast.WS["Wheeling Thrust"] = set_combine(sets.precast.WS.WSD, {
+})
 	
 sets.precast.WS["Savage Blade"] = set_combine(sets.precast.WS.WSD, {})
 

@@ -219,8 +219,8 @@ function precast(spell,arg)
 		-- Elemental Magic 
 		elseif spell.skill == 'Elemental Magic' then
 			refine_various_spells(spell, action, spellMap, eventArgs)		
-			if spell.name == "Impact" or player.equipment.body == "Twilight Cloak" then
-				equip(sets.precast.Elemental, {head="Empty", body="Twilight Cloak"})
+			if spell.name == "Impact" or player.equipment.body == "Crepuscular Cloak" then
+				equip(sets.precast.Elemental, {head="Empty", body="Crepuscular Cloak"})
 			else				
 				equip(sets.precast.Elemental)
 			end
@@ -346,8 +346,8 @@ function midcast(spell,arg)
 		end
 -- Elemental Magic
 	elseif spell.skill == 'Elemental Magic' then
-		if spell.name == "Impact" or player.equipment.body == "Twilight Cloak" then
-			equip(sets.midcast.Macc, {head="Empty", body="Twilight Cloak"})
+		if spell.name == "Impact" or player.equipment.body == "Crepuscular Cloak" then
+			equip(sets.midcast.Macc, {head="Empty", body="Crepuscular Cloak"})
 		elseif spell.english:wcmatch('Frost|Drown|Rasp|Burn|Shock|Choke') then
 			equip(sets.midcast.Elemental)
 		else

@@ -39,14 +39,23 @@ return {
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
-            ["Sword"] = {
+            ["Hand-to-Hand"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"requiescat\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+            },
+            ["Sword"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = true,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"expiacion\" <t>"
             }
         },
         ["BRD"] = {
@@ -95,7 +104,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -159,12 +168,12 @@ return {
         ["DRG"] = {
             ["Polearm"] = {
                 ["hps"] = {
-                    ["<"] = 20,
+                    ["<"] = 100,
                     [">"] = 0
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -253,7 +262,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -273,7 +282,7 @@ return {
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
-            ["Katana"] = {
+            ["Hand-to-Hand"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
@@ -281,6 +290,15 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+            },
+            ["Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Raging Fists\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -307,7 +325,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Evisceration\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             }
         },
         ["PLD"] = {
@@ -336,10 +354,19 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             }
         },
         ["PUP"] = {
+            ["Great Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+            },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -347,7 +374,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             }
         },
         ["RDM"] = {
@@ -453,7 +480,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -462,7 +489,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -471,7 +498,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             }
         },
         ["SCH"] = {
@@ -483,6 +510,15 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+            },
+            ["Great Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -542,7 +578,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -605,7 +641,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -632,7 +668,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             }
         },
         ["WHM"] = {

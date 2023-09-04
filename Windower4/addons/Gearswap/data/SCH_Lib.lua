@@ -573,6 +573,8 @@ function midcast(spell)
         else
             equip(sets.midcast.cure.normal)
         end
+	elseif spell.name:match('Impact') then
+		equip(sets.midcast.impact)
     elseif spell.skill == 'Enhancing Magic' then
         equip(sets.midcast.enhancing)
         if spellMap == 'Storm' then

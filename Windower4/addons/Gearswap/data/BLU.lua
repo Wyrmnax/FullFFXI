@@ -318,7 +318,7 @@ function midcast(spell,arg)
 		end
 -- Enhancing Magic
 	elseif spell.skill == 'Enhancing Magic' then
-		equip(sets.midcast.ConserveMP)
+		equip(sets.midcast.Enhancing)
 -- Enfeebling Magic
 	elseif spell.skill == 'Enfeebling Magic' then
 		if spell.english:startswith('Dia') then

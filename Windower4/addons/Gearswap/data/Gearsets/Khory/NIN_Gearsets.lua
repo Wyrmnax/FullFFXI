@@ -247,7 +247,7 @@ sets.precast.WS.Crit = {
 	ammo="Yetshila +1",
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
     body="Mpaca's Doublet",
-    hands="Mpaca's Gloves",
+    hands="Ryuo Tekko +1",
     legs="Mpaca's Hose",
     feet="Mummu Gamash. +2",
     neck="Fotia Gorget",

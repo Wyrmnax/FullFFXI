@@ -117,7 +117,7 @@ if player.name == 'Khory' then
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {})
 		
 		sets.precast.BlueMagic = set_combine(sets.precast.Fastcast, {
-		body="Hashishin Mintan +2",
+		body="Hashishin Mintan +3",
 		})
 		
 		-- Midcast
@@ -137,10 +137,10 @@ if player.name == 'Khory' then
 		sets.midcast.BlueMagic = {
 			ammo="Ginsen",
 			head="Hashishin Kavuk +3",
-			body="Hashishin Mintan +2",
-			hands="Hashi. Bazu. +2",
+			body="Hashishin Mintan +3",
+			hands="Hashi. Bazu. +3",
 			legs="Nyame Flanchard",
-			feet="Hashi. Basmak +2",
+			feet="Hashi. Basmak +3",
 			neck="Caro Necklace",
 			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 			left_ear="Telos Earring",
@@ -176,10 +176,10 @@ if player.name == 'Khory' then
 		sets.midcast.BlueMagic.Nuke = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
 			head="Hashishin Kavuk +3",
-			body="Hashishin Mintan +2",
-			hands="Hashi. Bazu. +2",
+			body="Hashishin Mintan +3",
+			hands="Hashi. Bazu. +3",
 			legs="Nyame Flanchard",
-			feet="Hashi. Basmak +2",
+			feet="Hashi. Basmak +3",
 			neck="Sanctity Necklace",
 			waist="Orpheus's Sash",
 			left_ear="Friomisi Earring",
@@ -205,10 +205,10 @@ if player.name == 'Khory' then
 		sets.midcast.BlueMagic.Macc = set_combine(sets.midcast.BlueMagic, {
 			ammo="Pemphredo Tathlum",
 			head="Hashishin Kavuk +3",
-			body="Hashishin Mintan +2",
-			hands="Hashi. Bazu. +2",
+			body="Hashishin Mintan +3",
+			hands="Hashi. Bazu. +3",
 			legs="Nyame Flanchard",
-			feet="Hashi. Basmak +2",
+			feet="Hashi. Basmak +3",
 			neck="Sanctity Necklace",
 			waist="Sacro Cord",
 			left_ear="Friomisi Earring",

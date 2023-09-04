@@ -53,7 +53,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"expiacion\" <t>"
             }
@@ -298,7 +298,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Raging Fists\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -480,7 +480,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Impulse Drive\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -498,7 +498,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
             }
         },
         ["SCH"] = {

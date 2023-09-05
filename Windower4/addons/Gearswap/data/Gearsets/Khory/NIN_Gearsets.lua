@@ -245,7 +245,7 @@ sets.precast.WS.MAB = {
 	
 sets.precast.WS.Crit = { 	
 	ammo="Yetshila +1",
-	head={ name="Mpaca's Cap", augments={'Path: A',}},
+	head="Blistering Sallet +1",
     body="Mpaca's Doublet",
     hands="Ryuo Tekko +1",
     legs="Mpaca's Hose",

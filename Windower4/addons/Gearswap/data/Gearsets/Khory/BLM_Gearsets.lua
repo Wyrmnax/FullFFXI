@@ -43,8 +43,8 @@ if player.Name == 'Khory' then
     neck="Rep. Plat. Medal",
     waist="Fucho-no-Obi",
     left_ear="Etiolation Earring",
-    right_ear="Lugalbanda Earring",
-    left_ring="Defending Ring",
+    right_ear="Eabani Earring",
+    left_ring="Stikini Ring +1",
     right_ring="Shneddick Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}
@@ -61,8 +61,8 @@ if player.Name == 'Khory' then
     neck="Sanctity Necklace",
     waist="Fucho-no-Obi",
     left_ear="Etiolation Earring",
-    right_ear="Lugalbanda Earring",
-    left_ring="Defending Ring",
+    right_ear="Eabani Earring",
+    left_ring="Stikini Ring +1",
     right_ring="Shneddick Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 	}			

@@ -190,7 +190,7 @@ function get_sets()
     waist="Embla Sash",
     left_ear="Eabani Earring",
     right_ear="Savant's Earring",
-    left_ring="Defending Ring",
+    left_ring="Stikini Ring +1",
     right_ring="Shneddick Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
     }

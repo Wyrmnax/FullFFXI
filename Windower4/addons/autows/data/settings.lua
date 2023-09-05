@@ -39,6 +39,15 @@ return {
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
+            ["Great Katana"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+            },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
                     ["<"] = 100,
@@ -55,7 +64,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["BRD"] = {
@@ -480,7 +489,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Impulse Drive\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -498,7 +507,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"sonic thrust\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             }
         },
         ["SCH"] = {

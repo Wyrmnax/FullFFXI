@@ -44,7 +44,7 @@ if player.name == 'Khory' then
 			waist="Flume Belt +1",
 			left_ear="Etiolation Earring",
 			right_ear="Eabani Earring",
-			left_ring="Defending Ring",
+			left_ring="Stikini Ring +1",
 			right_ring="Shneddick Ring",
 			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 			}

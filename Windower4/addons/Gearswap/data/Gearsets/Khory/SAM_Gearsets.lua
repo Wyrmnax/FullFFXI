@@ -182,7 +182,7 @@ sets.precast.WS.MAB = {
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Fotia Gorget",
+    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
     waist="Orpheus's sash",
     left_ear="Friomisi Earring",
     right_ear="Kasuga Earring +1",

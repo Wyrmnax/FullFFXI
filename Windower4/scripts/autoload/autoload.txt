@@ -32,6 +32,7 @@ lua load DistancePlus;
 lua load DressUp;
 lua load enternity;
 lua load equipviewer;
+lua load FastCS;
 lua load findAll;
 lua load GearSwap;
 lua load instaLS;

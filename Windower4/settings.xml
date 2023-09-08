@@ -34,6 +34,7 @@
     <addon>Dimmer</addon>
     <addon>timestamp</addon>
     <addon>MyHome</addon>
+    <addon>FastCS</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

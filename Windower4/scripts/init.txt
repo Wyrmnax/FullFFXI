@@ -48,7 +48,7 @@ consolebg position 15 50
 lua load chatfilter
 lua load superwarp
 lua load parse
-lua load myhome
+//lua load myhome
 lua load skillchains
 //lua load autorun
 lua load autows
@@ -58,7 +58,7 @@ lua load react
 lua load partybuffs
 lua load sheolhelper
 lua load sellnpc
-lua load hovershot
+//lua load hovershot
 
 
 // *** ALLIANCE TARGET KEYS ***

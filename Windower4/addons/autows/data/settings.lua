@@ -62,9 +62,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"expiacion\" <t>"
             }
         },
         ["BRD"] = {
@@ -102,7 +102,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["BST"] = {
@@ -383,7 +383,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["RDM"] = {
@@ -489,7 +489,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Impulse Drive\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -518,7 +518,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {

@@ -245,8 +245,8 @@ if player.name == 'Khory' then
 			waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 			left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 			right_ear="Ishvara Earring",
-			left_ring={ name="Beithir Ring", augments={'Path: A',}},
-			right_ring="Ilabrat Ring",
+			left_ring="Cornelia's Ring",
+			right_ring="Epaminondas's Ring",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			}
 			
@@ -261,9 +261,9 @@ if player.name == 'Khory' then
 			waist="Orpheus's Sash",
 			left_ear="Friomisi Earring",
 			right_ear="Sortiarius Earring",
-			left_ring="Jhakri Ring",
-			right_ring="Strendu Ring",
-			back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+			left_ring="Cornelia's Ring",
+			right_ring="Epaminondas's Ring",
+			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			}
 			
 		sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS.WSD, {
@@ -276,14 +276,14 @@ if player.name == 'Khory' then
 		})
 		sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
 		 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		head="Blistering Sallet +1",
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
 		hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
-		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		left_ear="Odr Earring",
 		right_ear={ name="Hashi. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
 		left_ring="Ilabrat Ring",
 		right_ring="Epona's Ring",
@@ -293,14 +293,14 @@ if player.name == 'Khory' then
 		
 		sets.precast.WS.Acc['Chant du Cygne'] = set_combine(sets.precast.WS, {
 		 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		head="Blistering Sallet +1",
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
 		hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
-		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		left_ear="Odr Earring",
 		right_ear={ name="Hashi. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
 		left_ring="Ilabrat Ring",
 		right_ring="Epona's Ring",

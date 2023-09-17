@@ -130,10 +130,10 @@ function self_command(command)
 	elseif command == 'Mode' then
 		if Mode == 'Masamune' then
 			Mode = 'Doji'
-			windower.send_command('autows use Tachi: Jinpu')
+			windower.send_command('autows use Tachi: Kagero')
 			ModeWeapon = sets.mainweapon.Doji			
 				previous_set()		
-			windower.add_to_chat(121,'Mode Doji - Jinpu')
+			windower.add_to_chat(121,'Mode Doji - Kagero')
 		elseif Mode == 'Doji' then
 			Mode = 'Polearm'
 			windower.send_command('autows use Impulse Drive')
@@ -156,10 +156,10 @@ function self_command(command)
 			windower.add_to_chat(121,'Mode Polearm')
 		elseif Mode == 'Polearm' then
 			Mode = 'Doji'
-			windower.send_command('autows use Tachi: Jinpu')
+			windower.send_command('autows use Tachi: Kagero')
 			ModeWeapon = sets.mainweapon.Doji			
 				previous_set()		
-			windower.add_to_chat(121,'Mode Doji - Jinpu')
+			windower.add_to_chat(121,'Mode Doji - Kagero')
 		elseif Mode == 'Doji' then
 			Mode = 'Masamune'
 			windower.send_command('autows use Tachi: Fudo')

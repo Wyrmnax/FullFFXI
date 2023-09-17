@@ -174,7 +174,7 @@
   <naParalysis>true</naParalysis>
   <naPetrification>true</naPetrification>
   <naPlague>false</naPlague>
-  <naPoison>true</naPoison>
+  <naPoison>false</naPoison>
   <naSilence>true</naSilence>
   <naErase>true</naErase>
   <Esuna>false</Esuna>
@@ -215,7 +215,7 @@
   <plMaxTpDown>true</plMaxTpDown>
   <plParalysis>true</plParalysis>
   <plPlague>true</plPlague>
-  <plPoison>true</plPoison>
+  <plPoison>false</plPoison>
   <plRasp>true</plRasp>
   <plRequiem>true</plRequiem>
   <plStrDown>true</plStrDown>
@@ -260,7 +260,7 @@
   <monitoredParalysis>true</monitoredParalysis>
   <monitoredPetrification>true</monitoredPetrification>
   <monitoredPlague>true</monitoredPlague>
-  <monitoredPoison>true</monitoredPoison>
+  <monitoredPoison>false</monitoredPoison>
   <monitoredRasp>true</monitoredRasp>
   <monitoredRequiem>true</monitoredRequiem>
   <monitoredStrDown>true</monitoredStrDown>

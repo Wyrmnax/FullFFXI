@@ -62,9 +62,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["BRD"] = {
@@ -142,7 +142,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"hot shot\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -160,7 +160,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
+                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
             }
         },
         ["DNC"] = {
@@ -251,7 +251,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"howling fist\" <t>"
             }
         },
         ["NIN"] = {
@@ -307,7 +307,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -363,7 +363,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["PUP"] = {
@@ -489,7 +489,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Impulse Drive\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -507,7 +507,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             }
         },
         ["SCH"] = {
@@ -518,7 +518,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -587,7 +587,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -596,7 +596,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -605,7 +605,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -614,7 +614,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Energy Drain\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -623,7 +623,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -641,7 +641,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Decimation\" <t>"
+                ["ws_cmd"] = "/ws \"Earth Crusher\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -650,7 +650,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -659,7 +659,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Ei\" <t>"
+                ["ws_cmd"] = "/ws \"Decimation\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -677,7 +677,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
             }
         },
         ["WHM"] = {

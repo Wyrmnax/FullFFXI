@@ -64,7 +64,7 @@ if player.name == 'Khory' then
 -- Auto Sets
 -- Standard/idle
 sets.idle.PDT = { 
-	ammo="Date Shuriken",
+	ammo="Seki Shuriken",
 	head="Nyame Helm",
 	neck="Rep. Plat. Medal",
 	body="Malignance Tabard",
@@ -156,7 +156,7 @@ sets.midcast.Utsusemi = set_combine(sets.precast.Utsusemi,{
 			
 -- TP Sets 
 sets.TP = { 
-	ammo="Date Shuriken",
+	ammo="Seki Shuriken",
     head="Malignance Chapeau",
     body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands="Malignance Gloves",
@@ -329,6 +329,13 @@ sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS.Crit, {
 })
 
 sets.precast.WS["Raging Fists"] = set_combine(sets.precast.WS, { 
+	neck="Fotia Gorget",
+	lring="Regal Ring",
+	rear="Cessance Earring",
+	back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+})
+
+sets.precast.WS["Asuran Fists"] = set_combine(sets.precast.WS, { 
 	neck="Fotia Gorget",
 	lring="Regal Ring",
 	rear="Cessance Earring",

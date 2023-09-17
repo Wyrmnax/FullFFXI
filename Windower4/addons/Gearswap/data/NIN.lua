@@ -66,10 +66,10 @@ function self_command(command)
 			windower.add_to_chat(121,'Mode SB')
 		elseif Mode == 'SB' then
 			Mode = 'Raging'
-			windower.send_command('autows use Raging Fists')
+			windower.send_command('autows use Asuran Fists')
 			ModeWeapon = sets.Raging
 				previous_set()
-			windower.add_to_chat(121,'Mode Raging')
+			windower.add_to_chat(121,'Mode Asuran Fists')
 		elseif Mode == 'Raging' then
 			Mode = 'ChiAcc'
 			windower.send_command('autows use Blade: Chi')
@@ -80,10 +80,10 @@ function self_command(command)
 	elseif command == 'ModeX' then
 		if Mode == 'ChiAcc' then
 			Mode = 'Raging'
-			windower.send_command('autows use Raging Fists')
+			windower.send_command('autows use Asuran Fists')
 			ModeWeapon = sets.Raging			
 				previous_set()		
-			windower.add_to_chat(121,'Mode Raging')
+			windower.add_to_chat(121,'Mode Asuran Fists')
 		elseif Mode == 'SBAcc' then
 			Mode = 'ChiAcc'
 			windower.send_command('autows use Blade: Chi')

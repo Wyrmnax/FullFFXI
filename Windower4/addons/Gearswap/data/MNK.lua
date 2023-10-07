@@ -22,6 +22,8 @@ function get_sets()
 	include('Gearsets/'..player.name..'/Mnk_Gearsets.lua')
 	
 -- Define Default Values for Variables
+	nexttime = os.clock()	
+	del = 0
 	boostCount = 0
 	Mode = 0
 	PDT = 0
@@ -40,9 +42,28 @@ function self_command(command)
 end
 	
 function status_change(new,old)
--- Autoset
     previous_set()
 end
+
+windower.register_event('prerender',function ()	
+	-------------------------------------------------------
+    local curtime = os.clock()
+    if nexttime + del <= curtime then
+        nexttime = curtime
+        del = 0.3
+        local play = windower.ffxi.get_player()
+        local abil_recasts = windower.ffxi.get_ability_recasts()
+			if player.status == 'Engaged' then
+				if not buffactive['Impetus'] and not buffactive['Footwork'] then
+					if abil_recasts[31] == 0 then
+						windower.send_command('Impetus')
+					elseif abil_recasts[21] == 0 then
+						windower.send_command('Footwork')
+					end
+				end
+            end
+    end
+end)
 
 function self_command(cmd)
     if cmd == 'ws' then
@@ -144,16 +165,10 @@ function aftercast(spell,arg)
 end
 
 function previous_set()
-	windower.add_to_chat(121, "Previous set")
 	if player.status == 'Engaged' then
-		windower.add_to_chat(121, "Engaged")
-		--windower.add_to_chat(121, "buffactive['Impetus']" ..buffactive['Impetus'])
-		--windower.add_to_chat(121, "buffactive['Footwork']" ..buffactive['Footwork'])
 		if buffactive['Impetus'] then
-			windower.add_to_chat(121, "Impetus Up")
 			equip(sets.TP.Impetus)
 		elseif buffactive['Footwork'] then
-			windower.add_to_chat(121, "Footwork Up")
 			equip(sets.TP.Footwork)
 		else
 			equip(sets.TP)

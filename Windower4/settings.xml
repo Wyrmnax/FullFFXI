@@ -9,7 +9,6 @@
     <addon>Omen</addon>
     <addon>rolltracker</addon>
     <addon>TParty</addon>
-    <addon>send</addon>
     <addon>HealBot</addon>
     <addon>shortcuts</addon>
     <addon>findAll</addon>
@@ -35,6 +34,8 @@
     <addon>timestamp</addon>
     <addon>MyHome</addon>
     <addon>FastCS</addon>
+    <addon>vwhl</addon>
+    <addon>thtracker</addon>
     <plugin>AutoExec</plugin>
     <plugin>JaZero</plugin>
     <plugin>Timers</plugin>

@@ -60,7 +60,7 @@
             <p4>false</p4>
             <p5>false</p5>
         </aoe>
-        <roll>Samurai Roll,Chaos Roll</roll>
+        <roll>Chaos Roll,Samurai Roll</roll>
         <text>
             <pos>
                 <x>1638</x>

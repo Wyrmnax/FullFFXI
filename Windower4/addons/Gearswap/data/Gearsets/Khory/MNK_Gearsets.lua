@@ -36,10 +36,10 @@ if player.name == 'Khory' then
 
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = { 
+sets.idle.DT = { 
 	ammo="Staunch Tathlum +1",
     head="Malignance Chapeau",
-    body="Malignance Tabard",
+    body="Mpaca's Doublet",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Malignance Tights",
     feet="Malignance Boots",
@@ -49,41 +49,9 @@ sets.idle.PDT = {
     right_ear="Eabani Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
                 }
 
-sets.idle.MDT = { 
-	ammo="Staunch Tathlum +1",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Rep. Plat. Medal",
-    waist="Fotia Belt",
-    left_ear="Etiolation Earring",
-    right_ear="Eabani Earring",
-    left_ring="Defending Ring",
-    right_ring="Shneddick Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-	}
-
-sets.idle.Regen = set_combine(sets.idle.PDT, {body="Hes. Cyclas"})
-sets.idle.Evasion = {
-	ammo="Staunch Tathlum +1",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Rep. Plat. Medal",
-    waist="Fotia Belt",
-    left_ear="Etiolation Earring",
-    right_ear="Eabani Earring",
-    left_ring="Defending Ring",
-    right_ring="Shneddick Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-	}
 
 sets.misc.Town = set_combine(sets.idle.PDT, {})
 				
@@ -95,7 +63,7 @@ sets.TP = {
     head="Mpaca's Cap",
     body={ name="Mpaca's Doublet", augments={'Path: A',}},
     hands="Malignance Gloves",
-    legs="Bhikku Hose +2",
+    legs="Bhikku Hose +3",
     feet="Anch. Gaiters +3",
     neck={ name="Monk's Nodowa", augments={'Path: A',}},
     waist="Reiki Yotai",
@@ -103,15 +71,15 @@ sets.TP = {
     right_ear="Bhikku Earring +1",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
--- Accuracy TP
-sets.TP.MidAcc = { 
+-- Impetus
+sets.TP.Impetus = { 
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Mpaca's Cap",
-    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    body="Bhikky Cyclas +3",
     hands="Malignance Gloves",
-    legs="Bhikku Hose +2",
+    legs="Bhikku Hose +3",
     feet="Anch. Gaiters +3",
     neck={ name="Monk's Nodowa", augments={'Path: A',}},
     waist="Reiki Yotai",
@@ -119,15 +87,15 @@ sets.TP.MidAcc = {
     right_ear="Bhikku Earring +1",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
--- High Accuracy TP
-sets.TP.HighAcc = { 
+-- Footwork
+sets.TP.Footwork = { 
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Mpaca's Cap",
-    body={ name="Mpaca's Doublet", augments={'Path: A',}},
+    body="Nyame Mail",
     hands="Malignance Gloves",
-    legs="Bhikku Hose +2",
+    legs="Bhikku Hose +3",
     feet="Anch. Gaiters +3",
     neck={ name="Monk's Nodowa", augments={'Path: A',}},
     waist="Reiki Yotai",
@@ -135,31 +103,14 @@ sets.TP.HighAcc = {
     right_ear="Bhikku Earring +1",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
-
--- Hybrid PDT/TP
-sets.TP.Hybrid = set_combine(sets.TP, sets.idle.PDT)
-				
--- Hundred Fists
-sets.TP.HF = set_combine(sets.TP,{body="Tantra Cyclas +2"})
-
--- Impetus Sets
-sets.TP.Impetus = set_combine(sets.TP, {body="Bhikku Cyclas +1"})
-sets.TP.MidAcc.Impetus = set_combine(sets.TP.MidAcc, {body="Bhikku Cyclas +1"})
-sets.TP.HighAcc.Impetus =  set_combine(sets.TP.HighAcc, {body="Bhikku Cyclas +1"})
 
 -- JA
 sets.precast.JA["Formless Strikes"] = {body="Hes. Cyclas"}
-sets.precast.JA["Chakra"] = set_combine(sets.idle.PDT, { ammo="Tantra Tahtlum",
-				head="Whirlpool Mask",
-				body="Anchorite's Cyclas", hands="Hes. Gloves", 
-				legs="Nahtirah Trousers"})
-sets.precast.JA["Chi Blast"] = set_combine(sets.idle.PDT, {
-				head="Uk'uxkaj Cap", neck="Morgana's Choker",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Aquasoul Ring", rring="Aquasoul Ring",
-                back="", waist="", legs="Nahtirah Trousers"})
-sets.precast.JA["Impetus"] = {body="Tantra Cyclas +2"}
+sets.precast.JA["Chakra"] = set_combine(sets.idle.PDT, { })
+sets.precast.JA["Chi Blast"] = set_combine(sets.idle.PDT, {})
+sets.precast.JA["Impetus"] = {body="Tantra Cyclas +3"}
 sets.precast.JA["Hundred Fists"] = {legs="Hes. Hose"}
 sets.precast.JA["Focus"] = {head="Anchorite's Crown"}
 sets.precast.JA["Dodge"] = {feet="Anch. Gaiters"}
@@ -181,7 +132,7 @@ sets.precast.WS = {
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {})
@@ -195,7 +146,7 @@ sets.precast.WS['Howling Fist'] = set_combine(sets.precast.WS, {
 sets.precast.WS['Tornado Kick'] = set_combine(sets.precast.WS, {
 	neck="Monk's Nodowa",
     waist="Moonbow Belt",
-	legs="Bhikku Hose +1",
+	legs="Bhikku Hose +3",
     feet="Anch. Gaiters +3",})
 
 sets.precast.WS["Asuran Fists"] = set_combine(sets.precast.WS, {
@@ -223,23 +174,23 @@ sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS), {
 sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {ammo="Potestas Bomblet",
 				head="Uk'uxkaj Cap", neck="Justiciar's Torque", lear="Bladeborn Earring", rear="Steelflash Earring",
                 body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Thundersoul Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
+                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
 
 sets.precast.WS.MidAcc = {}
 sets.precast.WS.HighAcc = {}
 sets.precast.WS.MidAcc['Shijin Spiral'] = set_combine(sets.precast.WS['Shijin Spiral'], {
 				head="Uk'uxkaj Cap", neck="Justiciar's Torque", lear="Bladeborn Earring", rear="Steelflash Earring",
                 body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Thundersoul Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt", legs="Manibozho Brais", feet="Manibozho Boots"})
+                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt", legs="Manibozho Brais", feet="Manibozho Boots"})
 sets.precast.WS.HighAcc['Shijin Spiral'] = set_combine(sets.precast.WS['Shijin Spiral'], {ammo="Potestas Bomblet",
 				head="Whirlpool Mask", neck="Light Gorget", lear="Bladeborn Earring", rear="Steelflash Earring",
                 body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Mars's Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
+                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
 
 sets.precast.WS["Ascetic's Fury"] = set_combine(sets.precast.WS, {
 				head="Uk'uxkaj Cap", neck="Light Gorget", lear="Bladeborn Earring", rear="Steelflash Earring",
                 body="Manibozho Jerkin", hands="Manibozho Gloves", lring="Rajas Ring", rring="Pyrosoul Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
+                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
 
 
 -- Misc Sets

@@ -37,119 +37,11 @@ end
 -- Rules
 function self_command(command)
 -- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set')
-		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-			if Mode >= 3 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif command == 'testing' then
-		windower.add_to_chat(121,'PDT:'..PDT..'MDT:'..MDT..'Mode:'..Mode)
-	end
 end
 	
 function status_change(new,old)
 -- Autoset
-    if T{'Idle'}:contains(new) then
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
-			if PDT == 1 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				windower.add_to_chat(121,'Idle/Resting Set')
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif new == 'Resting' then
-		equip(sets.Resting)
-	elseif new == 'Engaged' then
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			-- Automatically activate Impetus when engaging
-            --if not buffactive.Impetus and not buffactive.Amnesia and not buffactive.Obliviscence and not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[31] < 1 then
-            --    windower.send_command('impetus')
-            --end
-			-- Equip Previous TP
-			previous_set()
-		end
-	end
+    previous_set()
 end
 
 function self_command(cmd)
@@ -176,26 +68,14 @@ function precast(spell,arg)
 			if player.tp >= 100 then
 				if spell.target.distance <= 5 then
 					if sets.precast.WS[spell.name] then
-						if Mode	>= 1 then
-							if buffactive['Impetus'] and player.inventory['Bhikku Cyclas'] then
-								equip(sets.precast.WS.Acc[spell.name],{body="Bhikku Cyclas"})
-							else
-								equip(sets.precast.WS.Acc[spell.name])
-							end
+						if buffactive['Impetus'] then
+							equip(sets.precast.WS[spell.name],{body="Bhikku Cyclas +3"})
 						else
-							if buffactive['Impetus'] then
-								equip(sets.precast.WS[spell.name],{body="Bhikku Cyclas"})
-							else
-								equip(sets.precast.WS[spell.name])
-							end
-						end
+							equip(sets.precast.WS[spell.name])
+						end						
 					else
 						windower.add_to_chat(121,'Default WS Gear')
-						if Mode	>= 1 then
-							equip(sets.precast.WS)
-						else
-							equip(sets.precast.WS.Acc)
-						end
+						equip(sets.precast.WS)
 					end
 				else
 					cancel_spell()
@@ -254,48 +134,36 @@ end
 
 function aftercast(spell,arg)
 -- Autoset
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if player.status == 'Engaged' then
-			previous_set()
-		else
-			equip(sets.idle.Standard)
-		end
-	end
+	previous_set()
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
     elseif spell and spell.name == 'Utsusemi: Ichi' then
         ShadowType = 'Ichi'
-    elseif spell and spell.name == 'Boost' then
-        boostCount = boostCount +1
-        windower.add_to_chat(8,'Boost Count - [ '..boostCount..' / 12 ] ('..math.floor(100*boostCount/12)..'% Boosted!)')
     end
 end
 
 function previous_set()
-	if Mode == 0 then	
-		if  buffactive['Hundred Fists'] then
-			windower.add_to_chat(121,'Hundred Fists')
-			if Mode	>= 1 then
-				equip(sets.TP.HF.Acc)
-			else
-				equip(sets.TP.HF)
-			end
+	windower.add_to_chat(121, "Previous set")
+	if player.status == 'Engaged' then
+		windower.add_to_chat(121, "Engaged")
+		--windower.add_to_chat(121, "buffactive['Impetus']" ..buffactive['Impetus'])
+		windower.add_to_chat(121, "buffactive['Footwork']" ..buffactive['Footwork'])
+		if buffactive['Impetus'] then
+			windower.add_to_chat(121, "Impetus Up")
+			equip(sets.TP.Impetus)
+		elseif buffactive['Footwork'] then
+			windower.add_to_chat(121, "Footwork Up")
+			equip(sets.TP.Footwork)
 		else
-			windower.add_to_chat(121,'TP')
 			equip(sets.TP)
 		end
-	elseif Mode == 1 then
-		windower.add_to_chat(121,'MidAcc TP')
-		equip(sets.TP.MidAcc)
-	elseif Mode == 2 then
-		windower.add_to_chat(121,'HighAcc TP')
-		equip(sets.TP.HighAcc)
-	elseif Mode == 3 then
-		windower.add_to_chat(121,'Hybrid TP')
-		equip(sets.TP.Hybrid)
+	else 
+		if areas.Town:contains(world.zone) then
+			windower.add_to_chat(121, "Town Gear")
+			equip(sets.misc.Town)
+		else
+			equip(sets.idle.DT)
+		end
 	end
 end

@@ -7,7 +7,7 @@
             <abyssea>
                 <1>Monberaux</1>
                 <2>Ulmia</2>
-                <3>Arciela</3>
+                <3>Koru-Moru</3>
             </abyssea>
             <alex>
                 <1>Arciela II</1>
@@ -44,10 +44,10 @@
             </gin>
             <gog>
                 <1>August</1>
-                <2>Qultada</2>
-                <3>Arciela II</3>
-                <4>Joachim</4>
-                <5>Karaha-Baruha</5>
+                <2>Arciela II</2>
+                <3>Joachim</3>
+                <4>Karaha-Baruha</4>
+                <5>Shantotto II</5>
             </gog>
             <lilith>
                 <1>Star Sibyl</1>
@@ -91,12 +91,12 @@
                 <4>Monberaux</4>
                 <5>Selh&apos;teus</5>
             </omen>
-            <rask>
-                <1>Amchuchu</1>
-                <2>Kupipi</2>
-                <3>Star Sibyl</3>
-                <4>Selh&apos;teus</4>
-                <5>Koru-Moru</5>
+            <rask>			
+                <1>AAEV</1>
+                <2>Selh&apos;teus</2>
+                <3>Koru-Moru</3>
+                <4>Qultada</4>				
+                <5>Kupipi</5>
             </rask>
             <shinryu>
                 <1>Valaineral</1>

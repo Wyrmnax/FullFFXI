@@ -186,8 +186,6 @@ end
 function user_status_change (new,old)
 	if new == 'Engaged' then
 		--auto food
-		windower.add_to_chat(123,'Auto Food')
-        send_command('wait 1; input /item "Grape Daifuku" <me>')
 	end
 end
 

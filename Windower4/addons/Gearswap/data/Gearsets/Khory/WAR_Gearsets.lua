@@ -281,6 +281,7 @@ sets.precast.WS["Upheaval"] = set_combine(sets.precast.WS.WSD, {
     neck="War.Beads +2",	
 	waist="Ioskeha Belt +1",	
 	lring="Gelatinouse Ring +1",
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 })
 				

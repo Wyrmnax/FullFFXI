@@ -6,7 +6,14 @@ return {
     ["zones"] = {
         ["Abyssea - Altepa"] = {
             [17670568] = {
-                ["name"] = "Hazhdiha"
+                ["name"] = "Hazhdiha",
+                ["tod"] = 1696637065
+            }
+        },
+        ["Abyssea - Attohwa"] = {
+            [17658287] = {
+                ["name"] = "Amun",
+                ["tod"] = 1696289984
             }
         },
         ["Abyssea - Uleguerand"] = {

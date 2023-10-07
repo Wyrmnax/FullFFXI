@@ -77,7 +77,7 @@ sets.TP = {
 sets.TP.Impetus = { 
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Mpaca's Cap",
-    body="Bhikky Cyclas +3",
+    body="Bhikku Cyclas +3",
     hands="Malignance Gloves",
     legs="Bhikku Hose +3",
     feet="Anch. Gaiters +3",
@@ -111,9 +111,9 @@ sets.precast.JA["Formless Strikes"] = {body="Hes. Cyclas"}
 sets.precast.JA["Chakra"] = set_combine(sets.idle.PDT, { })
 sets.precast.JA["Chi Blast"] = set_combine(sets.idle.PDT, {})
 sets.precast.JA["Impetus"] = {body="Tantra Cyclas +3"}
-sets.precast.JA["Hundred Fists"] = {legs="Hes. Hose"}
+sets.precast.JA["Hundred Fists"] = {legs="Hes. Hose +1"}
 sets.precast.JA["Focus"] = {head="Anchorite's Crown"}
-sets.precast.JA["Dodge"] = {feet="Anch. Gaiters"}
+sets.precast.JA["Dodge"] = {feet="Anch. Gaiters +3"}
 sets.precast.JA["Boost"] = {hands="Anchorite's Gloves"}
 sets.precast.JA["Counterstance"] = {feet="Hes. Gaiters"}
 sets.precast.JA["Mantra"] = {feet="Hes. Gaiters"}
@@ -136,6 +136,8 @@ sets.precast.WS = {
 	}
 	
 sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {})
+
+sets.precast.WS['Victory Smite'].Impetus = set_combine(sets.precast.WS, {})
 
 sets.precast.WS['Raging Fists'] = set_combine(sets.precast.WS, {})
 
@@ -161,10 +163,6 @@ sets.precast.WS["Asuran Fists"] = set_combine(sets.precast.WS, {
     right_ring="Moonbeam Ring",
 	})
 
-sets.precast.WS.Impetus = set_combine(sets.precast.WS, {
-	neck="Monk's Nodowa",
-    waist="Moonbow Belt",})
-
 sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS), {
 	ammo="Knobkierrie",
     head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},	
@@ -174,22 +172,6 @@ sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS), {
 sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {ammo="Potestas Bomblet",
 				head="Uk'uxkaj Cap", neck="Justiciar's Torque", lear="Bladeborn Earring", rear="Steelflash Earring",
                 body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Thundersoul Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
-
-sets.precast.WS.MidAcc = {}
-sets.precast.WS.HighAcc = {}
-sets.precast.WS.MidAcc['Shijin Spiral'] = set_combine(sets.precast.WS['Shijin Spiral'], {
-				head="Uk'uxkaj Cap", neck="Justiciar's Torque", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Thundersoul Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt", legs="Manibozho Brais", feet="Manibozho Boots"})
-sets.precast.WS.HighAcc['Shijin Spiral'] = set_combine(sets.precast.WS['Shijin Spiral'], {ammo="Potestas Bomblet",
-				head="Whirlpool Mask", neck="Light Gorget", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="Mars's Ring", rring="Epona's Ring",
-                back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Anguinus Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
-
-sets.precast.WS["Ascetic's Fury"] = set_combine(sets.precast.WS, {
-				head="Uk'uxkaj Cap", neck="Light Gorget", lear="Bladeborn Earring", rear="Steelflash Earring",
-                body="Manibozho Jerkin", hands="Manibozho Gloves", lring="Rajas Ring", rring="Pyrosoul Ring",
                 back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, waist="Wanion Belt",  legs="Manibozho Brais", feet="Manibozho Boots"})
 
 
@@ -203,12 +185,5 @@ sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads
 sets.misc.Waltz = {}
 sets.misc.Steps = set_combine(sets.TP.MidAcc,{})
 sets.misc.flourish = {}
-
-
-elseif player.name == 'Derion' then
-
-elseif player.name == 'Aniyah' then
-
-elseif player.name == 'Firetoplay' then
 
 end

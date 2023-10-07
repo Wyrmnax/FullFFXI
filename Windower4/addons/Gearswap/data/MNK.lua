@@ -69,7 +69,7 @@ function precast(spell,arg)
 				if spell.target.distance <= 5 then
 					if sets.precast.WS[spell.name] then
 						if buffactive['Impetus'] then
-							equip(sets.precast.WS[spell.name],{body="Bhikku Cyclas +3"})
+							equip(sets.precast.WS[spell.name].Impetus)
 						else
 							equip(sets.precast.WS[spell.name])
 						end						
@@ -148,7 +148,7 @@ function previous_set()
 	if player.status == 'Engaged' then
 		windower.add_to_chat(121, "Engaged")
 		--windower.add_to_chat(121, "buffactive['Impetus']" ..buffactive['Impetus'])
-		windower.add_to_chat(121, "buffactive['Footwork']" ..buffactive['Footwork'])
+		--windower.add_to_chat(121, "buffactive['Footwork']" ..buffactive['Footwork'])
 		if buffactive['Impetus'] then
 			windower.add_to_chat(121, "Impetus Up")
 			equip(sets.TP.Impetus)

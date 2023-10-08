@@ -64,7 +64,7 @@ return {
                 },
                 ["keepam"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["BRD"] = {
@@ -363,7 +363,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
         ["PUP"] = {
@@ -489,7 +489,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {

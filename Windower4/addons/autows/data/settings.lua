@@ -102,7 +102,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["BST"] = {
@@ -160,7 +160,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["DNC"] = {
@@ -250,8 +250,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"victory smite\" <t>"
+                ["monkstring"] = "True",
+                ["ws_cmd"] = "/ws \"howling fist\" <t>"
             }
         },
         ["NIN"] = {
@@ -587,7 +589,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -605,7 +607,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -650,7 +652,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"impulse drive\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -677,7 +679,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             }
         },
         ["WHM"] = {

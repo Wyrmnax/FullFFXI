@@ -24,6 +24,10 @@ local ws_cmd = ''
 local autowsDelay = 0.5
 local keepAM = false
 local haveAM = false
+local mnk = false
+local monkstring = 'False'
+local impetus = false
+local footwork = false
 local defaults = {hps = {['<']=100, ['>']=0}}
 settings = _libs.lor.settings.load('data/settings.lua', defaults)
 local settings_loaded = false
@@ -52,7 +56,9 @@ function save_settings()
     settings[name][job][skill].hps = hps
     settings[name][job][skill].mobs = mobs
     settings[name][job][skill].ws_cmd = ws_cmd
-	settings[name][job][skill].keepam = keepAM
+	settings[name][job][skill].keepam = keepAM	
+	settings[name][job][skill].mnk = mnk	
+	settings[name][job][skill].monkstring = monkstring	
     settings:save()
 end
 
@@ -64,6 +70,8 @@ function load_settings()
     hps = s.hps or defaults.hps
     mobs = s.mobs or {}
     ws_cmd = s.ws_cmd or ''
+	mnk = s.mnk or false
+	monkstring = s.monkstring or 'False'
     settings_loaded = true
 end
 
@@ -140,6 +148,18 @@ windower.register_event('addon command', function (command,...)
 		keepAM = false
 		save_settings()
         print_status()
+	elseif command == 'mnk' then
+		mnk = not mnk
+		if mnk == true then
+			monkstring = 'True'
+		else
+			monkstring = 'False'
+		end		
+		save_settings()
+		print_status()
+	elseif command == 'toggle' then
+		toggle = not toggle
+		print_status()
 	elseif command == 'mob' then
         local mob_name = arg_str:match('[<>%d%s]*([^<>%d]+)[<>%d%s]*'):trim()
         if mob_name == nil or #mob_name < 1 then
@@ -240,10 +260,24 @@ windower.register_event('prerender', function()
                 local hp_gt = table.get_nested_value(mobs, mob.name, '>') or hps['>']
                 if player.vitals.tp > 999 then
 				--if player.vitals.tp > 1450 then
-                    if useAutoRA and (araDelayed < 2) then
-                        araDelayed = araDelayed + 1
-                    else
-                        if hp_gt < mob.hpp and mob.hpp < hp_lt then
+					if useAutoRA and (araDelayed < 2) then
+						araDelayed = araDelayed + 1
+					else
+						if hp_gt < mob.hpp and mob.hpp < hp_lt then
+							
+						if mnk == true then
+							--if player.vitals.tp > 1500 then
+							if impetus == true then
+								ws_cmd = ('/ws "Victory Smite" <t>')
+							elseif footwork == true then
+								ws_cmd = ('/ws "Tornado Kick" <t>')
+							elseif player.vitals.tp > 1500 then
+								ws_cmd = ('/ws "Raging Fists" <t>')
+							else
+								ws_cmd = ('/ws "Victory Smite" <t>')
+							end
+						end
+							
 							if keepAM then
 								if haveAM then									
 									windower.send_command(('input %s'):format(ws_cmd))
@@ -255,12 +289,12 @@ windower.register_event('prerender', function()
 							else							
 								windower.send_command(('input %s'):format(ws_cmd))
 							end
-                        end
-                        araDelayed = 0
-                        if useAutoRA then
-                            windower.send_command('wait 4;ara start')
-                        end
-                    end
+						end
+						araDelayed = 0
+						if useAutoRA then
+							windower.send_command('wait 4;ara start')
+						end
+					end
                 end
 			end
 			autowsLastCheck = now
@@ -276,18 +310,26 @@ function print_status()
 		AM = 'ON'
 	end
     local ws_msg = #ws_cmd > 1 and ws_cmd or '(no ws specified)'
-    atcf('[AutoWS: %s] %s %s mobs @ %d < HP%% < %s - Keep AM %s', power, ws_msg, rarr, hps['>'], hps['<'], AM)
+    atcf('[AutoWS: %s] %s %s mobs @ %d < HP%% < %s - Keep AM %s - Monk %s', power, ws_msg, rarr, hps['>'], hps['<'], AM, monkstring)
 end
 
 windower.register_event('gain buff', function(buff)
     if buff == 272 then
 		haveAM = true
+	elseif buff == 461 then
+		impetus = true
+	elseif buff == 406 then
+		footwork = true
     end
 end)
 
 windower.register_event('lose buff', function(buff)
     if buff == 272 then
-		haveAM = false
+		haveAM = false		
+	elseif buff == 461 then
+		impetus = false
+	elseif buff == 406 then
+		footwork = false
     end
 end)
 

@@ -82,21 +82,6 @@ windower.register_event('prerender',function ()
     end
 end)
 
-function self_command(cmd)
-    if cmd == 'ws' then
-		--if player.tp == 3000 and not buffactive.Aftermath then
-		--	windower.send_command('input /ws "Final Heaven" <t>')
-		--elseif buffactive.Footwork then
-		if buffactive.Footwork then
-			windower.send_command('input /ws "Tornado Kick" <t>')	
-        elseif player.tp < 1500 then
-            windower.send_command('input /ws "Victory Smite" <t>')
-        else
-            windower.send_command('input /ws "Raging Fists" <t>')
-        end
-    end
-end
-
 function precast(spell,arg)
  -- Generic equip command for all Job Abilities and Weaponskills
     if sets.precast.JA[spell.name] then

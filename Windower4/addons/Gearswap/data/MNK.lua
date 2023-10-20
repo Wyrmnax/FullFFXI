@@ -16,7 +16,7 @@ function get_sets()
 	--include('include/autoexec.lua')
 	include('include/binds.lua')
 	include('include/utility.lua')
-	include('include/macro.lua')
+	--include('include/macro.lua')
 
 	-- Get MNK Gearsets
 	include('Gearsets/'..player.name..'/Mnk_Gearsets.lua')
@@ -86,7 +86,7 @@ function precast(spell,arg)
  -- Generic equip command for all Job Abilities and Weaponskills
     if sets.precast.JA[spell.name] then
         equip(sets.precast.JA[spell.name])
-   elseif sets.precast.WS[spell.name] then
+    elseif sets.precast.WS[spell.name] then
 		if player.status == 'Engaged' then
 			if player.tp >= 100 then
 				if spell.target.distance <= 5 then
@@ -180,7 +180,7 @@ function previous_set()
 			windower.add_to_chat(121, "Town Gear")
 			equip(sets.misc.Town)
 		else
-			equip(sets.idle.DT)
+			equip(sets.idle)
 		end
 	end
 end

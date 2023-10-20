@@ -44,8 +44,10 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
+                ["monkstring"] = "False",
                 ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             },
             ["Hand-to-Hand"] = {
@@ -63,8 +65,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = true,
+                ["mnk"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["monkstring"] = "False",
+                ["ws_cmd"] = "/ws \"expiacion\" <t>"
             }
         },
         ["BRD"] = {
@@ -83,7 +87,9 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
+                ["monkstring"] = "False",
                 ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Hand-to-Hand"] = {
@@ -101,7 +107,9 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
+                ["monkstring"] = "False",
                 ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
@@ -181,8 +189,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["monkstring"] = "False",
+                ["ws_cmd"] = "/ws \"drakesbane\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -253,7 +263,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"howling fist\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["NIN"] = {
@@ -384,8 +394,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"victory smite\" <t>"
+                ["monkstring"] = "False",
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["RDM"] = {
@@ -490,8 +502,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
+                ["monkstring"] = "False",
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -508,7 +522,9 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
+                ["monkstring"] = "False",
                 ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
@@ -588,8 +604,10 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["monkstring"] = "False",
+                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {

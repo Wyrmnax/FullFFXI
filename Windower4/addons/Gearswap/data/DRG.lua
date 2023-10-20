@@ -31,6 +31,16 @@ function file_unload()
 	clear_binds()
 end
 
+windower.register_event('lose buff', function(buff)
+	--loosing Hasso
+    if buff == 353 and not buffactive['Seigan'] then
+		local abil_recasts = windower.ffxi.get_ability_recasts()
+		if player.status == 'Engaged' and abil_recasts[138]==0  then
+			windower.send_command('hasso')
+		end
+	end
+end)
+
 function self_command(command)
    -- Lock PDT
 	if command == 'PDT' then

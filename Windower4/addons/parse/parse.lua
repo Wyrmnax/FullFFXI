@@ -38,9 +38,9 @@ default_settings.display = {}
 default_settings.display.melee = {
 		["visible"] = true,
 		["type"] = "offense",
-		["pos"] = {x=770,y=50},
+		["pos"] = {x=570,y=50},
 		["order"] = L{"damage","melee","ws"},
-		["max"] = 20,
+		["max"] = 6,
 		["data_types"] = {
 			["damage"] = S{'total','total-percent'},
 			["melee"] = S{'percent'},
@@ -61,7 +61,7 @@ default_settings.display.defense = {
 		["type"] = "defense",
 		["pos"] = {x=150,y=440},
 		["order"] = L{"block","hit","parry",},
-		["max"] = 8,
+		["max"] = 2,
 		["data_types"] = {
 			["block"] = S{'avg','percent'},
 			["evade"] = S{'percent'},
@@ -78,9 +78,9 @@ default_settings.display.defense = {
 default_settings.display.ranged = {
 		["visible"] = false,
 		["type"] = "offense",
-		["pos"] = {x=770,y=200},
+		["pos"] = {x=570,y=200},
 		["order"] = L{"damage","ranged","ws"},
-		["max"] = 14,
+		["max"] = 6,
 		["data_types"] = {
 			["damage"] = S{'total','total-percent'},
 			["ranged"] = S{'percent'},
@@ -95,9 +95,9 @@ default_settings.display.ranged = {
 default_settings.display.magic = {
 		["visible"] = false,
 		["type"] = "offense",
-		["pos"] = {x=770,y=50},		
+		["pos"] = {x=570,y=50},		
 		["order"] = L{"damage","spell"},
-		["max"] = 8,
+		["max"] = 6,
 		["data_types"] = {
 			["damage"] = S{'total','total-percent'},
 			["spell"] = S{'avg'},

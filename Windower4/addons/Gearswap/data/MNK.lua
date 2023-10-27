@@ -51,10 +51,10 @@ windower.register_event('prerender',function ()
         del = 1.3
         local play = windower.ffxi.get_player()
         local abil_recasts = windower.ffxi.get_ability_recasts()
-		if buffactive['Impetus'] then
+		if buffactive['Impetus'] or (abil_recasts[31] ~= 0) then
 			casting_impetus = false
 		end
-		if buffactive['Footwork'] then
+		if buffactive['Footwork'] or (abil_recasts[21] ~= 0) then
 			casting_footwork = false
 		end
 		if player.status == 'Engaged' then

@@ -114,12 +114,14 @@ sets.precast.WS = {
 	}
 	
 sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {
+	head="Adhemar Bonnet +1",
 	hands="Ryuo Tekko +1",
 	feet="Mpaca's Boots",
     right_ear="Odr Earring",
 	})
 
 sets.precast.WS['Victory Smite'].Impetus = set_combine(sets.precast.WS, {
+	head="Adhemar Bonnet +1",
     body="Bhikku Cyclas +3",
 	hands="Ryuo Tekko +1",
 	feet="Mpaca's Boots"

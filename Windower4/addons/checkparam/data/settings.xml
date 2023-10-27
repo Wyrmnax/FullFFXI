@@ -10,7 +10,7 @@
         <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</DRG>
         <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|haste</DRK>
         <GEO>pet: regen|pet: damage taken|indicolure effect duration|indi eff dur|fast cast|magic evasion|damage taken|physical damage taken|magic damage taken</GEO>
-        <MNK>store tp|double attack|triple attack|quadruple attack|martial arts|subtle blow|damage taken|physical damage taken|magic damage taken</MNK>
+        <MNK>store tp|double attack|triple attack|quadruple attack|Critical Hit Rate|Critical Hit Damage|subtle blow|damage taken|physical damage taken|magic damage taken</MNK>
         <NIN>store tp|double attack|triple attack|quadruple attack|weapon skill damage|critical hit rate|critical hit damage|magic attack bonus|magic accuracy|magic damage|fast cast|damage taken|physical damage taken|magic damage taken</NIN>
         <PLD>enmity|damage taken|physical damage taken|magic damage taken|spell interruption rate down|phalanx|cure potency|fast cast|magic Evasion</PLD>
         <PUP>pet: hp|pet: damage taken|pet: regen|martial arts|store tp|double attack|triple attack|quadruple attack</PUP>

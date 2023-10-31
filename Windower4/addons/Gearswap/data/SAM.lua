@@ -27,6 +27,9 @@ function get_sets()
 	Ammo = {ammo="Tulfaire Arrow"}
 	PDT = 0
 	MDT = 0
+	Seigan = 0
+	nexttime = os.clock()	
+	del = 0
 	Mode = 'Masamune'
 	ModeWeapon = sets.mainweapon.Masamune
 	windower.send_command('autows use Tachi: Fudo')
@@ -38,105 +41,16 @@ function file_unload()
 	clear_binds()
 end
 
-windower.register_event('lose buff', function(buff)
-	--loosing Hasso
-    if buff == 353 and not buffactive['Seigan'] then
-		local abil_recasts = windower.ffxi.get_ability_recasts()
-		if player.status == 'Engaged' and abil_recasts[138]==0  then
-			windower.send_command('hasso')
-		end
-	end
-end)
- 
-
 -- Rules
 function self_command(command)
--- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set Locked')
-		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-			if Mode >= 2 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif command == 'twilight' or command == "t" then
-		-- Twilight Helm/Mail logic
-		-- if i have twilight gear on, put on my tp set 
-		if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then
-			enable('head','body')
-			if player.status == "Engaged" then
-				-- equip appropriate set
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121, 'Twilight Unequipped')
-		else
-			-- if i dont have twilight on equip it
-			equip({head="Twilight Helm",body="Twilight Mail"})
-		end
+	if command == 'Seigan' then
+		if Seigan == 1 then
+			windower.add_to_chat(121,'Seigan OFF')
+			Seigan = 0
+		else 
+			windower.add_to_chat(121,'Seigan ON')
+			Seigan = 1
+		end	
 	elseif command == 'Mode' then
 		if Mode == 'Masamune' then
 			Mode = 'Doji'
@@ -179,56 +93,39 @@ function self_command(command)
 		end	
 	end
 end
+
+
+windower.register_event('prerender',function ()	
+	-------------------------------------------------------
+    local curtime = os.clock()
+    if nexttime + del <= curtime then
+        nexttime = curtime
+        del = 1.3
+        local play = windower.ffxi.get_player()
+        local abil_recasts = windower.ffxi.get_ability_recasts()
+		if player.status == 'Engaged' then
+			if not buffactive['Hasso'] and Seigan == 0 then 
+				if abil_recasts[138] == 0 then
+					windower.send_command('Hasso')		
+				end	
+			elseif not buffactive['Seigan'] and Seigan == 1 then 
+				if abil_recasts[139] == 0 then
+					windower.send_command('Seigan')
+				end
+			end
+			if buffactive['Seigan'] and abil_recasts[133] == 0 then
+				windower.send_command('Third Eye')
+			end
+        end
+    end
+end)
 	
 function status_change(new,old)
 -- Autoset
-    if T{'Idle','Resting'}:contains(new) then
-		slot_lock()
-		windower.add_to_chat(121,'Idle/Resting Set')
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
-			if buffactive['Weakness'] then
-				windower.send_command('gs c twilight')
-			elseif PDT == 1 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			elseif new == 'Resting' then
-				equip(sets.Resting)
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif new == 'Engaged' then	
 		--auto food
 		--windower.add_to_chat(123,'Auto Food')
-        --send_command('wait 1; input /item "Grape Daifuku" <me>')
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		elseif player.hpp <= 30 or buffactive['Weakness'] then
-			windower.send_command('gs c twilight')
-			slot_lock()
-			previous_set()
-		else
-			 -- Automatically activate Hasso when engaging if Seigan isn't active
-            if not buffactive.Hasso and not buffactive.Seigan and not buffactive.Amnesia and not buffactive.Obliviscence and not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[138] < 1 then
-			   windower.send_command('hasso')
-            end
-			slot_lock()
-			previous_set()
-		end
-	end
+        --send_command('wait 1; input /item "Grape Daifuku" <me>')	
+	previous_set()
 end
 
 function precast(spell,arg)
@@ -322,7 +219,7 @@ function midcast(spell,arg)
 		-- Utsusemi
 		if windower.wc_match(spell.name,'Utsusemi*') then
 			-- Equip PDT then Utsusemi Gear sets
-			equip(sets.idle.PDT, sets.precast.Utsusemi)
+			equip(sets.idle, sets.precast.Utsusemi)
 			if spell.name == 'Utsusemi: Ichi' and ShadowType == 'Ni' then
 				if buffactive['Copy Image'] then
 					windower.ffxi.cancel_buff(66)
@@ -342,19 +239,7 @@ end
 
 function aftercast(spell,arg)
 -- Autoset
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if player.status == 'Engaged' then
-			slot_lock()
-			-- Equip appropriate TP set
-				previous_set()
-		else
-			slot_lock()
-			equip(sets.idle.Standard)
-		end
-	end
+	previous_set()
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
@@ -367,7 +252,7 @@ function previous_set(spell)
 	if player.status == 'Engaged' then
 		equip(ModeWeapon, sets.TP)
 	else
-		equip(ModeWeapon, sets.idle.PDT)
+		equip(ModeWeapon, sets.idle)
 	end
 end
 

@@ -263,7 +263,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["NIN"] = {
@@ -374,7 +374,9 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
+                ["mnk"] = false,
                 ["mobs"] = {},
+                ["monkstring"] = "False",
                 ["ws_cmd"] = "/ws \"savage blade\" <t>"
             }
         },
@@ -394,9 +396,9 @@ return {
                     [">"] = 0
                 },
                 ["keepam"] = false,
-                ["mnk"] = false,
+                ["mnk"] = true,
                 ["mobs"] = {},
-                ["monkstring"] = "False",
+                ["monkstring"] = "True",
                 ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
@@ -505,7 +507,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -525,7 +527,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {

@@ -28,6 +28,8 @@
 				set_macro_page(5,11)
 			elseif player.sub_job == 'RUN' then 
 				set_macro_page(6,11)
+			else
+				set_macro_page(1,11)
 			end
 		else
 			set_macro_page(1,11)

@@ -52,7 +52,7 @@ if player.name == 'Khory' then
 
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = { 
+sets.idle = { 
     ammo="Staunch Tathlum +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Sacro Breastplate",
@@ -68,29 +68,6 @@ sets.idle.PDT = {
     back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.idle.MDT = { 
-    ammo="Staunch Tathlum +1",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Sacro Breastplate",
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Rep. Plat. Medal",
-    waist="Ioskeha Belt +1",
-    left_ear="Telos Earring",
-    right_ear="Eabani Earring",
-    left_ring="Defending Ring",
-    right_ring="Shneddick Ring",
-    back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
-sets.idle.Evasion = {}
-
-sets.misc.Town = set_combine(sets.idle.PDT, {
-				})
-				
-sets.idle.Standard = set_combine(sets.idle.PDT, {
-				})
 -- TP - 49 52
 sets.TP = { 	
      ammo="Ginsen",

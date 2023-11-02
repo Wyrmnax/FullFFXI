@@ -57,8 +57,6 @@ function save_settings()
     settings[name][job][skill].mobs = mobs
     settings[name][job][skill].ws_cmd = ws_cmd
 	settings[name][job][skill].keepam = keepAM	
-	settings[name][job][skill].mnk = mnk	
-	settings[name][job][skill].monkstring = monkstring	
     settings:save()
 end
 
@@ -70,8 +68,6 @@ function load_settings()
     hps = s.hps or defaults.hps
     mobs = s.mobs or {}
     ws_cmd = s.ws_cmd or ''
-	mnk = s.mnk or false
-	monkstring = s.monkstring or 'False'
     settings_loaded = true
 end
 
@@ -155,7 +151,6 @@ windower.register_event('addon command', function (command,...)
 		else
 			monkstring = 'False'
 		end		
-		save_settings()
 		print_status()
 	elseif command == 'toggle' then
 		toggle = not toggle

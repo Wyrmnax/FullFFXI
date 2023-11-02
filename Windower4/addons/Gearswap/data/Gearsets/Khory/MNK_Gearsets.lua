@@ -68,7 +68,7 @@ sets.TP = {
     hands="Malignance Gloves",
     legs="Bhikku Hose +3",
     feet={ name="Herculean Boots", augments={'Enmity-3','"Mag.Atk.Bns."+17','Quadruple Attack +2','Accuracy+13 Attack+13','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-    neck={ name="Monk's Nodowa", augments={'Path: A',}},
+    neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
     waist="Moonbow Belt +1",
     left_ear="Sherida Earring",
     right_ear="Schere Earring",
@@ -130,15 +130,19 @@ sets.precast.WS['Victory Smite'].Impetus = set_combine(sets.precast.WS, {
 	})
 
 sets.precast.WS['Raging Fists'] = set_combine(sets.precast.WS, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 
 sets.precast.WS['Howling Fist'] = set_combine(sets.precast.WS, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS['Tornado Kick'] = set_combine(sets.precast.WS, {
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},	
+	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},		
+    neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
+	body="Nyame Mail",
+	hands="Nyame Gauntlets",
+	legs="Nyame Flanchard",
     feet="Anch. Gaiters +3",
 	})
 

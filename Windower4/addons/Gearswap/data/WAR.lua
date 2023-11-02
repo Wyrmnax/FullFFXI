@@ -23,6 +23,9 @@ function get_sets()
 -- Define Default Values for Variables
 	DW = 0
 	DT = 1
+	Seigan = 0
+	nexttime = os.clock()	
+	del = 0
 	ShadowType = 'None'
 	FighterRoll = false
 	
@@ -34,16 +37,6 @@ end
 function file_unload()
 	clear_binds()
 end
-
-windower.register_event('lose buff', function(buff)
-	--loosing Hasso
-    if buff == 353 and not buffactive['Seigan'] then
-		local abil_recasts = windower.ffxi.get_ability_recasts()
-		if player.status == 'Engaged' and abil_recasts[138]==0  then
-			windower.send_command('hasso')
-		end
-	end
-end)
 
 function self_command(command)
    -- Lock DT
@@ -114,6 +107,33 @@ function self_command(command)
 	end
 end
 
+windower.register_event('prerender',function ()	
+	-------------------------------------------------------
+    local curtime = os.clock()
+    if nexttime + del <= curtime then
+        nexttime = curtime
+        del = 1.3
+        local play = windower.ffxi.get_player()
+        local abil_recasts = windower.ffxi.get_ability_recasts()
+		if player.sub_job == 'SAM' then
+			if player.status == 'Engaged' then
+				if not buffactive['Hasso'] and Seigan == 0 then 
+					if abil_recasts[138] == 0 then
+						windower.send_command('Hasso')		
+					end	
+				elseif not buffactive['Seigan'] and Seigan == 1 then 
+					if abil_recasts[139] == 0 then
+						windower.send_command('Seigan')
+					end
+				end
+				if buffactive['Seigan'] and abil_recasts[133] == 0 then
+					windower.send_command('Third Eye')
+				end
+			end
+		end
+    end
+end)
+
 function status_change(new,old)
     if T{'Idle','Resting'}:contains(new) then
 		if areas.Town:contains(world.zone) then
@@ -135,10 +155,6 @@ function status_change(new,old)
 			end
 		end
 	elseif new == 'Engaged' then
- 		-- Automatically activate Hasso when engaging
-		if player.sub_job == 'SAM' and not buffactive['Hasso'] and not buffactive.Amnesia and not buffactive.Obliviscence and	not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[138] < 1 then
-			windower.send_command('Hasso')
-        end
 		-- Engaged Sets
 		if DT == 1 then
 			if buffactive['Weakness'] or player.hpp < 30 then

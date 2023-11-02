@@ -39,25 +39,21 @@
                 <slot19>vanity dive</slot19>
             </aoe>
             <dd>
-                <slot01>thrashing assault</slot01>
-                <slot02>heavy strike</slot02>
-                <slot03>anvil lightning</slot03>
-                <slot04>subduction</slot04>
-                <slot05>cannonball</slot05>
-                <slot06>empty thrash</slot06>
-                <slot07>erratic flutter</slot07>
-                <slot08>sudden lunge</slot08>
-                <slot09>battery charge</slot09>
-                <slot10>fantod</slot10>
-                <slot11>delta thrust</slot11>
-                <slot12>diffusion ray</slot12>
-                <slot13>disseverment</slot13>
-                <slot14>occultation</slot14>
-                <slot15>molting plumage</slot15>
-                <slot16>sheep song</slot16>
-                <slot17>quad. continuum</slot17>
-                <slot18>nat. meditation</slot18>
-                <slot19>blazing bound</slot19>
+                <slot01>animating wail</slot01>
+                <slot02>quad. continuum</slot02>
+                <slot03>tenebral crush</slot03>
+                <slot04>nat. meditation</slot04>
+                <slot05>restoral</slot05>
+                <slot06>spectral floe</slot06>
+                <slot07>dream flower</slot07>
+                <slot08>occultation</slot08>
+                <slot09>diffusion ray</slot09>
+                <slot10>subduction</slot10>
+                <slot12>heavy strike</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>empty thrash</slot14>
+                <slot15>mortal ray</slot15>
+                <slot16>anvil lightning</slot16>
             </dd>
             <default>
 

@@ -24,8 +24,6 @@ function get_sets()
 -- Define Default Values for Variables
 	nexttime = os.clock()	
 	del = 0
-	casting_impetus = false
-	casting_footwork = false
 	ShadowType = 'None'
 end -- End gear sets
 
@@ -51,27 +49,15 @@ windower.register_event('prerender',function ()
         del = 1.3
         local play = windower.ffxi.get_player()
         local abil_recasts = windower.ffxi.get_ability_recasts()
-		if buffactive['Impetus'] or (abil_recasts[31] ~= 0) then
-			casting_impetus = false
-		end
-		if buffactive['Footwork'] or (abil_recasts[21] ~= 0) then
-			casting_footwork = false
-		end
 		if player.status == 'Engaged' then
-			if not buffactive['Impetus'] and casting_impetus == false then 
-				if not buffactive['Footwork'] and casting_footwork == false then
-					if abil_recasts[31] == 0 then
-						windower.send_command('Impetus')
-						casting_impetus = true
-					elseif abil_recasts[21] == 0 then
-						windower.send_command('Footwork')
-						casting_footwork = true
-					end
-				end
-			else
-				if abil_recasts[13] == 0 then
-					windower.send_command('Focus')					
-				end
+			if not buffactive['Impetus'] and not buffactive['Footwork'] and abil_recasts[31] == 0 then 				
+				windower.send_command('Impetus')
+			end	
+			if not buffactive['Impetus'] and not buffactive['Footwork'] and abil_recasts[31] ~= 0 and abil_recasts[21] == 0 then
+				windower.send_command('Footwork')
+			end
+			if buffactive['Impetus'] and abil_recasts[13] == 0 then
+				windower.send_command('Focus')					
 			end
         end
 		if player.hpp < 50 then
@@ -158,6 +144,11 @@ end
 function aftercast(spell,arg)
 -- Autoset
 	previous_set()
+	if player.status == 'Engaged' then
+		if spell and spell.name == 'Footwork' then
+			equip(sets.TP.Footwork)
+		end
+	end
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'

@@ -26,7 +26,9 @@ if player.name == 'Khory' then
 			elseif player.sub_job == 'RNG' then 
 				set_macro_page(5,13)
 			elseif player.sub_job == 'RUN' then 
-				set_macro_page(6,13)
+				set_macro_page(6,13)			
+			else
+				set_macro_page(2,13)
 			end
 		else
 			set_macro_page(1,13)

@@ -1,1 +1,16 @@
 2023-11-01 23:38:32.7431 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
+2023-11-01 23:49:20.2798 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
+2023-11-02 08:17:53.6666 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99
+2023-11-02 09:56:52.2935 EasyFarm.Logging.NLogTextFileLogger FSM thread cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 154
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99

@@ -263,7 +263,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Howling Fist\" <t>"
             }
         },
         ["NIN"] = {

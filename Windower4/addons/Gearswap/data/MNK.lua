@@ -23,7 +23,8 @@ function get_sets()
 	
 -- Define Default Values for Variables
 	nexttime = os.clock()	
-	del = 0
+	del = 1.3
+	castingimpetus = 0
 	ShadowType = 'None'
 end -- End gear sets
 
@@ -46,14 +47,16 @@ windower.register_event('prerender',function ()
     local curtime = os.clock()
     if nexttime + del <= curtime then
         nexttime = curtime
-        del = 1.3
+		castingimpetus = castingimpetus - del
+        --del = 1.3
         local play = windower.ffxi.get_player()
         local abil_recasts = windower.ffxi.get_ability_recasts()
-		if player.status == 'Engaged' then
+		if player.status == 'Engaged' then	
 			if not buffactive['Impetus'] and not buffactive['Footwork'] and abil_recasts[31] == 0 then 				
 				windower.send_command('Impetus')
-			end	
-			if not buffactive['Impetus'] and not buffactive['Footwork'] and abil_recasts[31] ~= 0 and abil_recasts[21] == 0 then
+				castingimpetus = 10
+			end						
+			if (not buffactive['Impetus']) and (not buffactive['Footwork']) and (abil_recasts[31] ~= 0) and (abil_recasts[21] == 0) and (castingimpetus < 0) then
 				windower.send_command('Footwork')
 			end
 			if buffactive['Impetus'] and abil_recasts[13] == 0 then

@@ -64,7 +64,7 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
@@ -168,7 +168,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
             }
         },
         ["DNC"] = {
@@ -263,7 +263,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Howling Fist\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["NIN"] = {
@@ -377,7 +377,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["PUP"] = {
@@ -399,7 +399,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["RDM"] = {
@@ -507,7 +507,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -527,7 +527,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             }
         },
         ["SCH"] = {

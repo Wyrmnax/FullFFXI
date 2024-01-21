@@ -50,7 +50,7 @@
   <plGainBoost>false</plGainBoost>
   <plGainBoost_Spell>10</plGainBoost_Spell>
   <plBarElement>true</plBarElement>
-  <plBarElement_Spell>5</plBarElement_Spell>
+  <plBarElement_Spell>2</plBarElement_Spell>
   <AOE_Barelemental>false</AOE_Barelemental>
   <plBarStatus>true</plBarStatus>
   <plBarStatus_Spell>2</plBarStatus_Spell>
@@ -62,15 +62,15 @@
   <plReraise_Level>3</plReraise_Level>
   <plRefresh>false</plRefresh>
   <plRefresh_Level>1</plRefresh_Level>
-  <plProtect>true</plProtect>
-  <plShell>true</plShell>
+  <plProtect>false</plProtect>
+  <plShell>false</plShell>
   <plBlink>false</plBlink>
   <plPhalanx>true</plPhalanx>
-  <plStoneskin>true</plStoneskin>
+  <plStoneskin>false</plStoneskin>
   <plTemper>false</plTemper>
   <plTemper_Level>0</plTemper_Level>
   <plEnspell>true</plEnspell>
-  <plEnspell_Spell>4</plEnspell_Spell>
+  <plEnspell_Spell>2</plEnspell_Spell>
   <plStormSpell>true</plStormSpell>
   <plStormSpell_Spell>15</plStormSpell_Spell>
   <plAdloquium>true</plAdloquium>

@@ -9,7 +9,8 @@ function user_job_setup()
 	state.IdleMode:options('Normal','PDT','Refresh')
 	state.Weapons:options('None','Godhands','PetWeapons')
 	send_command('lua reload autopup')
-	send_command('lua reload autocontrol')
+	send_command('lua reload autocontrol')	
+	send_command('wait 3;input /lockstyleset 20')
 
     -- Default/Automatic maneuvers for each pet mode.  Define at least 3.
 	defaultManeuvers = {

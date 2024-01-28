@@ -57,7 +57,7 @@ sets.idle.PDT = {
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
     right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
@@ -74,7 +74,7 @@ sets.idle.MDT = {
     waist="Flume Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
     right_ring="Shneddick Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 }
@@ -119,7 +119,7 @@ sets.TP = {
     left_ear="Odnowa Earring +1",
     right_ear="Tuisto Earring",
     left_ring="Defending Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Moonlight Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 
     --ammo={ name="Coiste Bodhar", augments={'Path: A',}},
@@ -183,7 +183,7 @@ sets.precast.Fastcast = set_combine(sets.idle.PDT, {
     neck="Voltsurge Torque",
     left_ear="Odnowa Earring +1",
     right_ring="Defending Ring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
 	})
 	
 sets.midcast.Enhancing = set_combine(sets.idle.PDT, {
@@ -195,7 +195,7 @@ sets.midcast.Enhancing = set_combine(sets.idle.PDT, {
     left_ear="Odnowa Earring +1",
 	right_ear="Mimir Earring",
     right_ring="Defending Ring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	})
 	
@@ -211,7 +211,7 @@ sets.midcast.Phalanx = set_combine(sets.idle.PDT, {
     left_ear="Tuisto Earring",
     right_ear="Mimir Earring",
     right_ring="Defending Ring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	})
 				

@@ -155,7 +155,7 @@ sets.precast.WS["Asuran Fists"] = set_combine(sets.precast.WS, {
     left_ear="Digni. Earring",
     right_ear="Telos Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Moonbeam Ring",
+    right_ring="Moonlight Ring",
 	})
 
 sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS), {

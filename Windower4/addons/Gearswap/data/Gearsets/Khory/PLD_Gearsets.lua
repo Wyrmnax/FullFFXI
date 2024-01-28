@@ -76,7 +76,7 @@ sets.idle.MDT = {
     waist="Flume Belt +1",
     right_ear="Odnowa Earring +1",
     left_ear="Tuisto Earring",
-    left_ring="Moonbeam Ring",
+    left_ring="Moonlight Ring",
     right_ring="Gelatinous Ring +1", 
     back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Damage taken-5%',}},
 	}

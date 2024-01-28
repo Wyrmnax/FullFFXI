@@ -229,16 +229,16 @@ if player.name == 'Khory' then
 		sets.TP = {
 	range={ name="Linos", augments={'Accuracy+19','"Store TP"+4','Quadruple Attack +3',}},
     head="Bunzi's Hat",
-    body="Ayanmo Corazza +2",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Bunzi's Gloves",
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    legs="Volte Tights",
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Bard's Charm +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Crep. Earring",
     left_ring="Chirich Ring +1",
-    right_ring="Crepuscular Ring", 	
+    right_ring="Moonlight Ring", 	
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 		sets.precast.WS = set_combine(sets.TP, {})

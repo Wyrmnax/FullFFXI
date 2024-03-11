@@ -35,7 +35,24 @@ if player.name == 'Khory' then
 			end
 		else
 			set_macro_page(12,1)
-		end
+		end		
+	
+	
+	sets.mainweapon = {}
+	sets.mainweapon.Trishula = {
+	main="Trishula",
+	sub="Utu Grip",
+	}
+	
+	sets.mainweapon.Naegling = {
+	main="Naegling",
+	--sub="Utu Grip",
+	}
+ 
+	sets.mainweapon.Judge = {
+	main="Shining One",
+	--sub="Utu Grip",
+	}
 		
 -- Auto Sets
 -- Standard/idle
@@ -74,68 +91,68 @@ sets.misc.Town = set_combine(sets.idle.PDT, {})
 sets.idle.Standard = set_combine(sets.idle.PDT, {
 				})
 -- Melee TP 
-sets.TP = {     
-ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+sets.TP = {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Sulev. Cuisses +2",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Pel. Earring +1",
+    right_ear="Brutal Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Chirich Ring +1",
+    right_ring="Moonlight Ring",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 sets.TP.Ionis = {     
-ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Sulev. Cuisses +2",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Pel. Earring +1",
+    right_ear="Brutal Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Chirich Ring +1",
+    right_ring="Moonlight Ring",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
 -- Melee Accuracy TP
-sets.TP.Acc = {     
-ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+sets.TP.Acc = { 
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Sulev. Cuisses +2",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Pel. Earring +1",
+    right_ear="Brutal Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Chirich Ring +1",
+    right_ring="Moonlight Ring",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 -- Ionis Haste +2% Save TP 25+
 sets.TP.Acc.Ionis = {     
-ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Sulev. Cuisses +2",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Pel. Earring +1",
+    right_ear="Brutal Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Chirich Ring +1",
+    right_ring="Moonlight Ring",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -232,7 +249,7 @@ sets.precast.JA["Soul Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
 -- Weaponskills
 sets.precast.WS = { 
 	ammo="Knobkierrie",
-    head="Nyame Helm",
+    head="Peltast's Mezail +3",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -248,7 +265,7 @@ sets.precast.WS = {
 	
 sets.precast.WS.WSD = { 
 	ammo="Knobkierrie",
-    head="Nyame Helm",
+    head="Peltast's Mezail +3",
     body="Nyame Mail",
     hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -256,36 +273,48 @@ sets.precast.WS.WSD = {
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
-    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Regal Ring",
+    right_ear="Ishivara Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
     back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 sets.precast.WS["Stardiver"] = set_combine(sets.precast.WS, {
-	head="Flam. Zucchetto +2",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	body="Gleti's Cuirass",
     hands="Gleti's Gauntlets",
-    legs="Gleti's Breeches",
-    feet="Flam. Gambieras +2",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
-    right_ear="Pel. Earring +1",
+	lear="Sherida Earring",
 	})
 
 sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS.WSD, {
 	body="Gleti's Cuirass",
 	})
 
-sets.precast.WS["Drakesbane"] = set_combine(sets.precast.WS, {
-	body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Gleti's Breeches",
+sets.precast.WS["Drakesbane"] = set_combine(sets.precast.WS, { 
+	head={ name="Blistering Sallet +1", augments={'Path: A',}},
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs="Pelt. Cuissots +3",
     feet="Gleti's Boots",
-    right_ear="Pel. Earring +1",
+    neck="Rep. Plat. Medal",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Thrud Earring",
+    right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+    left_ring="Niqmaddu Ring",
+    right_ring="Regal Ring",
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 
 sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS.WSD, {
+    right_ear="Pel. Earring +1",
+})
+
+sets.precast.WS["Sonic Thrust"] = set_combine(sets.precast.WS.WSD, {
+    head="Peltast's Mezail +3",
 })
 
 sets.precast.WS["Wheeling Thrust"] = set_combine(sets.precast.WS.WSD, {

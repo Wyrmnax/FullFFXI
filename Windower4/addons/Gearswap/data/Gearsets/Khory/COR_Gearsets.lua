@@ -260,7 +260,22 @@ sets.precast.WS["Evisceration"] = {
     right_ring="Cornelia's Ring", 	
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
-
+	
+sets.precast.WS["Exenterator"] = {
+	ammo="WSBullet",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck="Lissome Necklace",
+    waist="Eschan Stone",
+    left_ear="Telos Earring",
+    right_ear={ name="Chas. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
+    left_ring="Chirich Ring +1",
+    right_ring="Regal Ring",
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}
 
 -- RA WS
 sets.precast.RAWS = {

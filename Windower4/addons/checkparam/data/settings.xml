@@ -7,7 +7,7 @@
         <BST>pet: double attack|pet: magic attack bonus|pet: damage taken|damage taken|physical damage taken|magic damage taken</BST>        
 		<COR>fast cast|store tp|snapshot|rapid shot|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</COR>
         <DNC>store tp|double attack|triple attack|quadruple attack</DNC>
-        <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken</DRG>
+        <DRG>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|haste</DRG>
         <DRK>store tp|double attack|triple attack|quadruple attack|weapon skill damage|damage taken|physical damage taken|magic damage taken|haste</DRK>
         <GEO>pet: regen|pet: damage taken|indicolure effect duration|indi eff dur|fast cast|magic evasion|damage taken|physical damage taken|magic damage taken</GEO>
         <MNK>store tp|double attack|triple attack|quadruple attack|Critical Hit Rate|Critical Hit Damage|subtle blow|damage taken|physical damage taken|magic damage taken</MNK>

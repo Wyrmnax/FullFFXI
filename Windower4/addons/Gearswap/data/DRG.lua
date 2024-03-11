@@ -21,9 +21,12 @@ function get_sets()
 	include('Gearsets/'..player.name..'/DRG_Gearsets.lua')
 
 -- Define Default Values for Variables
-	Mode = 0
-	PDT = 0
-	MDT = 0
+	Mode = 'Trishula'
+	Seigan = 0
+	nexttime = os.clock()			
+	ModeWeapon = sets.mainweapon.Trishula
+	windower.send_command('autows use Stardiver')
+	del = 0
 	ShadowType = 'None'
 end 
 
@@ -31,103 +34,84 @@ function file_unload()
 	clear_binds()
 end
 
-windower.register_event('lose buff', function(buff)
-	--loosing Hasso
-    if buff == 353 and not buffactive['Seigan'] then
-		local abil_recasts = windower.ffxi.get_ability_recasts()
-		if player.status == 'Engaged' and abil_recasts[138]==0  then
-			windower.send_command('hasso')
-		end
-	end
-end)
-
-function self_command(command)
-   -- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+function self_command(command)	
+	if command == 'Seigan' then
+		if Seigan == 1 then
+			windower.add_to_chat(121,'Seigan OFF')
+			Seigan = 0
+		else 
+			windower.add_to_chat(121,'Seigan ON')
+			Seigan = 1
+		end	
+	elseif command == 'Mode' then
+		if Mode == 'Trishula' then
+			Mode = 'Savage'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.mainweapon.Naegling			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Savage Blade')
+		elseif Mode == 'Savage' then
+			Mode = 'Blunt'
+			windower.send_command('autows use Judgement')
+			ModeWeapon = sets.mainweapon.Judge			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Judgement')
+		elseif Mode == 'Blunt' then
+			Mode = 'Trishula'
+			windower.send_command('autows use Stardiver')
+			ModeWeapon = sets.mainweapon.Trishula
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set Locked')
-		end
---  Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode Stardiver')
+		end	
+	elseif command == 'ModeX' then
+		if Mode == 'Trishula' then
+			Mode = 'Blunt'
+			windower.send_command('autows use Judgement')
+			ModeWeapon = sets.mainweapon.Judge			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Judgement')
+		elseif Mode == 'Blunt' then
+			Mode = 'Savage'
+			windower.send_command('autows use Savage Blade')
+			ModeWeapon = sets.mainweapon.Naegling			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Savage Blade')
+		elseif Mode == 'Savage' then
+			Mode = 'Trishula'
+			windower.send_command('autows use Stardiver')
+			ModeWeapon = sets.mainweapon.Trishula
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-			if Mode >= 1 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif command == 'twilight' then
-		-- Twilight Helm/Mail logic
-		if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then
-			enable('head','body')
-			if player.status == "Engaged" then
-				-- equip appropriate set
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-			windower.add_to_chat(121, 'Twilight Unequipped')
-		else
-			equip({head="Twilight Helm",body="Twilight Mail"})
-		end
+			windower.add_to_chat(121,'Mode Stardiver')
+		end	
 	end
 end
+
+windower.register_event('prerender',function ()	
+	-------------------------------------------------------
+    local curtime = os.clock()
+    if nexttime + del <= curtime then
+        nexttime = curtime
+        del = 1.3
+        local play = windower.ffxi.get_player()
+        local abil_recasts = windower.ffxi.get_ability_recasts()
+		if player.sub_job == "SAM" then
+			if player.status == 'Engaged' then
+				if not buffactive['Hasso'] and Seigan == 0 then 
+					if abil_recasts[138] == 0 then
+						windower.send_command('Hasso')		
+					end	
+				elseif not buffactive['Seigan'] and Seigan == 1 then 
+					if abil_recasts[139] == 0 then
+						windower.send_command('Seigan')
+					end
+				end
+				if buffactive['Seigan'] and abil_recasts[133] == 0 then
+					windower.send_command('Third Eye')
+				end
+			end
+		end
+    end
+end)
 
 function status_change(new,old)
     if T{'Idle','Resting'}:contains(new) then
@@ -152,10 +136,6 @@ function status_change(new,old)
 			end
 		--end
 	elseif new == 'Engaged' then
- 		-- Automatically activate Hasso when engaging
-		if player.sub_job:wcmatch('SAM') and not buffactive['Hasso'] and not buffactive.Amnesia and not buffactive.Obliviscence and	not buffactive.Paralysis and windower.ffxi.get_ability_recasts()[138] < 1 then
-			windower.send_command('Hasso')
-        end
 		-- Engaged Sets
 		if PDT == 1 then
 			if buffactive['Weakness'] or player.hpp < 30 then

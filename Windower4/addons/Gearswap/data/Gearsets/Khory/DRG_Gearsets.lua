@@ -248,10 +248,10 @@ sets.precast.JA["Soul Jump"] = {ammo={ name="Coiste Bodhar", augments={'Path: A'
 
 -- Weaponskills
 sets.precast.WS = { 
-	ammo="Knobkierrie",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Peltast's Mezail +3",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
+	body="Gleti's Cuirass",
+    hands="Pel. Vambraces +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Nyame Sollerets",
     neck="Rep. Plat. Medal",
@@ -260,7 +260,7 @@ sets.precast.WS = {
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
-    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
 sets.precast.WS.WSD = { 
@@ -273,16 +273,13 @@ sets.precast.WS.WSD = {
     neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
-    right_ear="Ishivara Earring",
+    right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring",
     back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 sets.precast.WS["Stardiver"] = set_combine(sets.precast.WS, {
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-	body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
 	neck="Fotia Gorget",
@@ -292,6 +289,7 @@ sets.precast.WS["Stardiver"] = set_combine(sets.precast.WS, {
 
 sets.precast.WS["Impulse Drive"] = set_combine(sets.precast.WS.WSD, {
 	body="Gleti's Cuirass",
+    legs="Pelt. Cuissots +3",
 	})
 
 sets.precast.WS["Drakesbane"] = set_combine(sets.precast.WS, { 

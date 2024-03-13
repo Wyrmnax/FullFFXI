@@ -15,26 +15,12 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'SAM' then
-				set_macro_page(12,1)
-			elseif player.sub_job == 'NIN' then
-				set_macro_page(12,2)
-			elseif player.sub_job == 'DNC' then
-				set_macro_page(12,3)
+				set_macro_page(1,16)
 			elseif player.sub_job == 'WAR' then 
-				set_macro_page(12,4)
-			elseif player.sub_job == 'BLU' then 
-				set_macro_page(12,5)
-			elseif player.sub_job == 'RDM' then 
-				set_macro_page(12,6)
-			elseif player.sub_job == 'WHM' then 
-				set_macro_page(12,7)	
-			elseif player.sub_job == 'SCH' then 
-				set_macro_page(12,8)	
-			elseif player.sub_job == 'PLD' then 
-				set_macro_page(12,9)	
+				set_macro_page(2,16)
 			end
 		else
-			set_macro_page(12,1)
+			set_macro_page(1,16)
 		end		
 	
 	
@@ -46,17 +32,17 @@ if player.name == 'Khory' then
 	
 	sets.mainweapon.Naegling = {
 	main="Naegling",
-	--sub="Utu Grip",
+	sub="Regis",
 	}
  
 	sets.mainweapon.Judge = {
-	main="Shining One",
-	--sub="Utu Grip",
+	main="Mafic Cudgel",
+	sub="Regis",
 	}
 		
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = { 
+sets.idle = { 
 				ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Nyame Helm",
     body="Gleti's Cuirass",
@@ -70,77 +56,13 @@ sets.idle.PDT = {
     left_ring="Shneddick Ring",
     right_ring="Defending Ring",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
-
-sets.idle.MDT = { 
-				ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Nyame Helm",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Gleti's Breeches",
-    feet="Nyame Sollerets",
-    neck="Rep. Plat. Medal",
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Cessance Earring",
-    left_ring="Shneddick Ring",
-    right_ring="Defending Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},}
-
-sets.misc.Town = set_combine(sets.idle.PDT, {})
+	
+sets.misc.Town = set_combine(sets.idle, {})
 				
-sets.idle.Standard = set_combine(sets.idle.PDT, {
+sets.idle.Standard = set_combine(sets.idle, {
 				})
 -- Melee TP 
 sets.TP = {
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
-    body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
-    legs={ name="Gleti's Breeches", augments={'Path: A',}},
-    feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Brutal Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Moonlight Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
-sets.TP.Ionis = {     
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
-    body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
-    legs={ name="Gleti's Breeches", augments={'Path: A',}},
-    feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Brutal Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Moonlight Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
--- Melee Accuracy TP
-sets.TP.Acc = { 
-	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
-    body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
-    legs={ name="Gleti's Breeches", augments={'Path: A',}},
-    feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Sherida Earring",
-    right_ear="Brutal Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Moonlight Ring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
--- Ionis Haste +2% Save TP 25+
-sets.TP.Acc.Ionis = {     
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},

@@ -52,10 +52,10 @@ function self_command(command)
 			windower.add_to_chat(121,'Mode Savage Blade')
 		elseif Mode == 'Savage' then
 			Mode = 'Blunt'
-			windower.send_command('autows use Judgement')
+			windower.send_command('autows use Judgment')
 			ModeWeapon = sets.mainweapon.Judge			
 				previous_set()		
-			windower.add_to_chat(121,'Mode Judgement')
+			windower.add_to_chat(121,'Mode Judgment')
 		elseif Mode == 'Blunt' then
 			Mode = 'Trishula'
 			windower.send_command('autows use Stardiver')
@@ -66,10 +66,10 @@ function self_command(command)
 	elseif command == 'ModeX' then
 		if Mode == 'Trishula' then
 			Mode = 'Blunt'
-			windower.send_command('autows use Judgement')
+			windower.send_command('autows use Judgment')
 			ModeWeapon = sets.mainweapon.Judge			
 				previous_set()		
-			windower.add_to_chat(121,'Mode Judgement')
+			windower.add_to_chat(121,'Mode Judgment')
 		elseif Mode == 'Blunt' then
 			Mode = 'Savage'
 			windower.send_command('autows use Savage Blade')
@@ -94,7 +94,7 @@ windower.register_event('prerender',function ()
         del = 1.3
         local play = windower.ffxi.get_player()
         local abil_recasts = windower.ffxi.get_ability_recasts()
-		if player.sub_job == "SAM" then
+		if player.sub_job == "SAM" and Mode == 'Trishula' then
 			if player.status == 'Engaged' then
 				if not buffactive['Hasso'] and Seigan == 0 then 
 					if abil_recasts[138] == 0 then
@@ -114,42 +114,7 @@ windower.register_event('prerender',function ()
 end)
 
 function status_change(new,old)
-    if T{'Idle','Resting'}:contains(new) then
-		--if areas.Town:contains(world.zone) then
-			--windower.add_to_chat(121, "Town Gear")
-			--equip(sets.misc.Town)
-		--else
-			if PDT == 1 then
-				if buffactive['Weakness'] then
-					equip(sets.idle.PDT,{head="Twilight Helm", body="Twilight Mail"})
-				else
-					equip(sets.idle.PDT)
-				end
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				if new == 'Resting' then
-					equip(sets.Resting)
-				else
-					equip(sets.idle.PDT)
-				end
-			end
-		--end
-	elseif new == 'Engaged' then
-		-- Engaged Sets
-		if PDT == 1 then
-			if buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
-			else
-				equip(sets.idle.PDT)
-			end
-		elseif MDT == 1 then
-			equip(sets.idle.MDT)
-		else
-			-- Equip apporiate sets
-				previous_set()
-		end
-    end
+    previous_set()
 end
 
 function precast(spell,arg)
@@ -296,86 +261,28 @@ function aftercast(spell,arg)
 				equip(sets.midcast.HealingBreath)
 		else
 		-- Engaged
-			if player.status == 'Engaged' then
-				if PDT == 1 then
-					if buffactive['Weakness'] or player.hpp < 30 then
-						equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
-					else
-						equip(sets.idle.PDT)
-					end
-				elseif MDT == 1 then
-					equip(sets.idle.MDT)
-				else
-					previous_set()
-				end
-			else
-				if PDT == 1 then
-					if buffactive['Weakness'] or player.hpp < 30 then
-						equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
-					else
-						equip(sets.idle.PDT)
-					end
-				elseif MDT == 1 then
-					equip(sets.idle.MDT)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
+			previous_set()
+		end
 			-- Changes shadow type variable to allow cancel Copy Image if last cast was Utsusemi: Ni
-			if spell and spell.name == 'Utsusemi: Ni' then
-				ShadowType = 'Ni'
-			elseif spell and spell.name == 'Utsusemi: Ichi' then
-				ShadowType = 'Ichi'
-			end
+		if spell and spell.name == 'Utsusemi: Ni' then
+			ShadowType = 'Ni'
+		elseif spell and spell.name == 'Utsusemi: Ichi' then
+			ShadowType = 'Ichi'
 		end
 	end
 end
 
 function pet_aftercast(spell,arg)
 -- Engaged
-	if player.status == 'Engaged' or spell.english:wcmatch("Stone|Bar") then
-		if PDT == 1 then
-			if buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
-			else
-				equip(sets.idle.PDT)
-			end
-		elseif MDT == 1 then
-			equip(sets.idle.MDT)
-		else
-			previous_set()
-		end
-	else
-		if PDT == 1 then
-			if buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT,{head="Twilight Helm",body="Twilight Mail"})
-			else
-				equip(sets.idle.PDT)
-			end
-		elseif MDT == 1 then
-			equip(sets.idle.MDT)
-		else
-			equip(sets.idle.Standard)
-		end
-	end
+	previous_set()
 end
 
 function previous_set()
 	slot_lock()
-	if Mode == 1 then
-		if buffactive.Ionis and areas.Adoulin:contains(world.area) then
-			equip(sets.TP.Acc.Ionis)
-			--windower.add_to_chat(121,'Ionis buffed')
-		else
-			equip(sets.TP.Acc)
-		end
+	if player.status == 'Engaged' then
+		equip(ModeWeapon, sets.TP)
 	else
-		if buffactive.Ionis and areas.Adoulin:contains(world.area) then
-			equip(sets.TP.Ionis)
-			--windower.add_to_chat(121,'Ionis buffed')
-		else
-			equip(sets.TP)
-		end
+		equip(ModeWeapon, sets.idle)
 	end
 end
 

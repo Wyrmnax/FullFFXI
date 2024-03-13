@@ -110,7 +110,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["BST"] = {
@@ -183,7 +183,7 @@ return {
             }
         },
         ["DRG"] = {
-            ["Hand-to-Hand"] = {
+            ["Club"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
@@ -191,6 +191,15 @@ return {
                 ["keepam"] = false,
                 ["mobs"] = {},
                 ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+            },
+            ["Hand-to-Hand"] = {
+                ["hps"] = {
+                    ["<"] = 100,
+                    [">"] = 0
+                },
+                ["keepam"] = false,
+                ["mobs"] = {},
+                ["ws_cmd"] = "/ws \"Judgement\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -201,7 +210,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"camlann's torment\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -210,7 +219,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"savage blade\" <t>"
+                ["ws_cmd"] = "/ws \"Judgment\" <t>"
             }
         },
         ["DRK"] = {
@@ -386,7 +395,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             }
         },
         ["PUP"] = {
@@ -408,7 +417,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             }
         },
         ["RDM"] = {
@@ -719,7 +728,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             }
         }
     },

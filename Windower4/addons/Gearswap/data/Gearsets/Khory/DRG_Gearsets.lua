@@ -24,6 +24,9 @@ if player.name == 'Khory' then
 		end		
 	
 	
+	send_command('wait 3;input /lockstyleset 4')
+	
+	
 	sets.mainweapon = {}
 	sets.mainweapon.Trishula = {
 	main="Trishula",

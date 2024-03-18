@@ -26,9 +26,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -64,11 +64,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
             }
         },
         ["BRD"] = {
@@ -199,7 +199,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgement\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -219,7 +219,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             }
         },
         ["DRK"] = {
@@ -328,7 +328,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Chi\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Katana"] = {
                 ["hps"] = {
@@ -417,7 +417,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["RDM"] = {

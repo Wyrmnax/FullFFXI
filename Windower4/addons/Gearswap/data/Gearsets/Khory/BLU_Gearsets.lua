@@ -30,6 +30,23 @@ if player.name == 'Khory' then
 		end
 		
 		send_command('wait 3;input /lockstyleset 19')
+		
+		
+	sets.mainweapon = {}
+	sets.mainweapon.Melee = {
+	main="Tizona",
+	sub="Thibron",
+	}
+	
+	sets.mainweapon.Melagic = {
+	main="Tizona",
+	sub="Bunzi's Rod",
+	}
+ 
+	sets.mainweapon.Magic = {
+	main="Maxentius",
+	sub="Bunzi's Rod",
+	}
 
 		-- Auto Sets
 		-- Standard/idle

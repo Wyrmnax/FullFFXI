@@ -187,6 +187,12 @@ elseif player.main_job == "DRG" then
 	windower.send_command('@bind f11 gs c Seigan')	
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
+	
+elseif player.main_job == "BLU" then
+	basic_binds()
+	-- set binds
+	windower.send_command('@bind f12 gs c Mode')
+	windower.send_command('@bind ^f12 gs c ModeX')
 
 elseif player.main_job == "RNG" then
 	basic_binds()

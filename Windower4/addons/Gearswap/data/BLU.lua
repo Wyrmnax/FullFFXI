@@ -22,11 +22,12 @@ function get_sets(spell)
 	include('Gearsets/'..player.name..'/BLU_Gearsets.lua')
 	
 -- Define Default Values for Variables
-	Mode = 0
+	
+	windower.send_command('autows use Expiacion')			
+	windower.send_command('autows keepam')
+	ModeWeapon = sets.mainweapon.Melee
+	Mode = 'Melee'
 	Type = 0
-	PDT = 0
-	MDT = 0
-	Skill = 0
 	ShadowType = 'None'
 	
 	-- Maps Blue Mage spell Stats per spell for the midcast function, can expand mapping as needed
@@ -68,141 +69,58 @@ end
 -- Rules
 function self_command(command)
 -- Lock PDT
-	if command == 'PDT' then
-		if PDT == 1 then
-			windower.add_to_chat(121,'PDT Unlocked')
-			-- make sure other values are set to default
-			PDT = 0
-			-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+	if command == 'Mode' then
+		if Mode == 'Melee' then
+			Mode = 'Melagic'
+			windower.send_command('autows use Expiacion')			
+			windower.send_command('autows keepam')
+			ModeWeapon = sets.mainweapon.Melagic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Melagic')
+		elseif Mode == 'Melagic' then
+			Mode = 'Magic'
+			windower.send_command('autows use Black Halo')					
+			windower.send_command('autows noam')
+			ModeWeapon = sets.mainweapon.Magic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Magic')
+		elseif Mode == 'Magic' then
+			Mode = 'Melee'
+			windower.send_command('autows use Expiacion')			
+			windower.send_command('autows keepam')
+			ModeWeapon = sets.mainweapon.Melee
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- Make sure other values are set to default
-			MDT = 0
-		-- Set PDT set and equip it
-			PDT = 1
-			equip(sets.idle.PDT)
-			windower.add_to_chat(121,'PDT Set Locked')
-		end
--- Lock MDT
-	elseif command == 'MDT' then
-		if MDT == 1 then
-		-- make sure other values are set to default
-			PDT = 0
-		-- Unlock MDT set and equip Current TP set
-			MDT = 0
-			windower.add_to_chat(121,'MDT Unlocked')
-		-- Place Me in my previous set.
-			if player.status == 'Engaged' then
+			windower.add_to_chat(121,'Mode Melee')
+		end	
+	elseif command == 'ModeX' then
+		if Mode == 'Melee' then
+			Mode = 'Magic'
+			windower.send_command('autows use Black Halo')			
+			windower.send_command('autows noam')
+			ModeWeapon = sets.mainweapon.Magic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Magic')
+		elseif Mode == 'Magic' then
+			Mode = 'Melagic'
+			windower.send_command('autows use Expiacion')			
+			windower.send_command('autows keepam')
+			ModeWeapon = sets.mainweapon.Melagic			
+				previous_set()		
+			windower.add_to_chat(121,'Mode Melagic')
+		elseif Mode == 'Melagic' then
+			Mode = 'Melee'
+			windower.send_command('autows use Expiacion')			
+			windower.send_command('autows keepam')
+			ModeWeapon = sets.mainweapon.Melee
 				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		else
-		-- make sure other values are set to default
-			PDT = 0
-		-- lock MDT set and equip it
-			MDT = 1
-			equip(sets.idle.MDT)
-			windower.add_to_chat(121,'MDT Set Locked')
-		end
--- Reset	
-	elseif command == 'TP' then
-		if PDT == 1 or MDT == 1 then
-			-- Reset to Default
-			PDT = 0
-			MDT = 0
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-				windower.add_to_chat(121,'PDT/MDT Set UnLocked')
-			end
-		else
-			if Mode >= 4 then
-			-- Reset to 0
-				Mode = 0
-			else
-			-- Increment by 1
-				Mode = Mode + 1
-			end
-			if Mode == 0 then
-				windower.add_to_chat(121,'TP Set')
-			elseif Mode == 1 then
-				windower.add_to_chat(121,'Acc TP Set')
-			elseif Mode == 2 then
-				windower.add_to_chat(121,'Buffed TP Set')
-			elseif Mode == 3 then
-				windower.add_to_chat(121,'Hybrid TP Set')
-			elseif Mode == 4 then
-				windower.add_to_chat(121,'Learning TP Set')
-			end
-			-- Place me in previous set
-			if player.status == 'Engaged' then
-				previous_set()
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	elseif command == 'type' then
-		
-		if Type >= 2 then
-			--Reset to 0
-			Type = 0
-		else
-			-- Increment By 1 
-			Type = Type + 1 
-		end 
-		
+			windower.add_to_chat(121,'Mode Melee')
+		end	
 	end
 end
 
 function status_change(new,old)
 -- Auto set
-    if T{'Idle'}:contains(new) then
-		slot_lock()
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else	
-			if PDT == 1 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				if Mode == 4 then
-					equip(sets.idle.Standard,sets.idle.BlueMagic.Learn)
-				else
-					equip(sets.idle.Standard)
-				end
-			end
-		end
-	elseif new == "Resting" then
-		equip(sets.Resting)
-	elseif new == 'Engaged' then
-		slot_lock()
-		if PDT == 1 or MDT == 1 then
-			if PDT == 1 and MDT == 0 then
-				windower.add_to_chat(121,'PDT Locked')
-				equip(sets.idle.PDT)
-			elseif MDT == 1 and PDT == 0 then
-				windower.add_to_chat(121,'MDT Locked')
-				equip(sets.idle.MDT)
-			else
-				MDT = 0
-				PDT = 0
-			end
-		else
-			-- Equip previous TP set 
-				previous_set()
-		end
-	end
+    previous_set()
 end
 
 function precast(spell,arg)
@@ -368,37 +286,7 @@ function midcast(spell,arg)
 end
 
 function aftercast(spell)
-	if areas.Town:contains(world.zone) then
-		windower.add_to_chat(121, "Town Gear")
-		equip(sets.misc.Town)
-	else
-		if player.status == 'Engaged' then
-			if PDT == 1 or MDT == 1 then
-				if PDT == 1 and MDT == 0 then
-					windower.add_to_chat(121,'PDT Locked')
-					equip(sets.idle.PDT)
-				elseif MDT == 1 and PDT == 0 then
-					windower.add_to_chat(121,'MDT Locked')
-					equip(sets.idle.MDT)
-				else
-					MDT = 0
-					PDT = 0
-				end
-			else
-				-- Equip previous TP set 
-					previous_set()
-			end
-		else
-			slot_lock()
-			if PDT == 1 or buffactive['Weakness'] or player.hpp < 30 then
-				equip(sets.idle.PDT)
-			elseif MDT == 1 then
-				equip(sets.idle.MDT)
-			else
-				equip(sets.idle.Standard)
-			end
-		end
-	end
+	previous_set()
 -- Sleep Timers
 	if spell.name == "Sleep II" or spell.name == "Sleepga II" or spell.name == "Repose" or spell.name == "Dream Flower" then
 		windower.send_command('wait 75;input /echo [ WARNING! '..spell.name..' : Will wear off within 0:15 ]')
@@ -419,21 +307,10 @@ end
 
 function previous_set()
 	slot_lock()
-	if Mode == 0 then
-		equip(sets.TP)
-		windower.add_to_chat(121,'TP Set')
-	elseif Mode == 1 then
-		equip(sets.TP.Acc)
-		windower.add_to_chat(121,'Acc TP Set')
-	elseif Mode == 2 then
-		equip(sets.TP.Buffed)
-		windower.add_to_chat(121,'Buffed TP Set')
-	elseif Mode == 3 then
-		equip(sets.TP.Hybrid)
-		windower.add_to_chat(121,'Hybrid TP Set')
-	elseif Mode == 4 then
-		equip(sets.idle.BlueMagic.Learn)
-		windower.add_to_chat(121,'Learning TP Set')
+	if player.status == 'Engaged' then
+		equip(ModeWeapon, sets.TP)
+	else
+		equip(ModeWeapon, sets.idle)
 	end
 end
 

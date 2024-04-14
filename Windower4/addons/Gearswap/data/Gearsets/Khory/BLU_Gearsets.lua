@@ -50,7 +50,7 @@ if player.name == 'Khory' then
 
 		-- Auto Sets
 		-- Standard/idle
-		sets.idle.PDT = {
+		sets.idle = {
 			ammo="Staunch Tathlum +1",
 			head="Gleti's Mask",
 			body="Shamash Robe",
@@ -65,13 +65,6 @@ if player.name == 'Khory' then
 			right_ring="Shneddick Ring",
 			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 			}
-		sets.idle.MDT = set_combine(sets.idle.PDT,{
-			})
-		sets.Resting = set_combine(sets.idle.PDT, {
-			})
-		sets.idle.Standard = set_combine(sets.idle.PDT,{
-			})
-		sets.misc.Town = set_combine(sets.idle.PDT, {})
 		
 		
 		-- Melee Sets
@@ -84,23 +77,29 @@ if player.name == 'Khory' then
 		feet="Malignance Boots",
 		neck="Mirage Stole +2",
 		waist="Sailfi Belt +1",
-		left_ear="Telos Earring",
+		left_ear="Cessance Earring",
 		right_ear="Hashi. Earring +1",
-		left_ring="Chirich Ring +1",
+		left_ring="Defending Ring",
 		right_ring="Epona's Ring",
 		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 		}
-		-- Accuracy
-		sets.TP.Acc = set_combine(sets.TP, {
-		})
-		-- Allianced Buffs - Haste + March x2 
-		sets.TP.Buffed = set_combine(sets.TP, {ammo="Vanir Battery",
-				lear="Dudgeon Earring", rear="Heartseeker Earring",
-                waist="Celt Belt"})
-		-- Evasion
-		sets.TP.Hybrid = set_combine(sets.idle.PDT, {
-                hands="Buremte Gloves",
-                back="Boxer Mantle", feet="Assim. Charuqs"})
+		
+		sets.TP.AM3 = {
+		ammo="Ginsen",
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck={ name="Mirage Stole +2", augments={'Path: A',}},
+		waist="Sweordfaetels +1",
+		left_ear="Dedition Earring",
+		right_ear="Crep. Earring",
+		left_ring="Defending Ring",
+		right_ring="Ilabrat Ring",
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
+		}
+		
 		
 		-- JA
 		sets.precast.JA["Azure Lore"] = {hands="Luhlaza Bazubands"}
@@ -293,9 +292,9 @@ if player.name == 'Khory' then
 		})
 		sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
 		 ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head="Blistering Sallet +1",
+		head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 		body={ name="Gleti's Cuirass", augments={'Path: A',}},
-		hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+		hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		neck="Fotia Gorget",

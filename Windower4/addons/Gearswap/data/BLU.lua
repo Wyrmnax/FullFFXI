@@ -308,7 +308,11 @@ end
 function previous_set()
 	slot_lock()
 	if player.status == 'Engaged' then
-		equip(ModeWeapon, sets.TP)
+		--if buffactive['Aftermath: Lv.3'] then			
+			--equip(ModeWeapon, sets.TP.AM3)
+		--else
+			equip(ModeWeapon, sets.TP)
+		--end
 	else
 		equip(ModeWeapon, sets.idle)
 	end

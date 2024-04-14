@@ -156,6 +156,7 @@
   <Nightingale>false</Nightingale>
   <Troubadour>false</Troubadour>
   <Marcato>false</Marcato>
+  <Majesty>false</Majesty>
   <plDebuffEnabled>false</plDebuffEnabled>
   <monitoredDebuffEnabled>false</monitoredDebuffEnabled>
   <enablePartyDebuffRemoval>false</enablePartyDebuffRemoval>
@@ -178,6 +179,9 @@
   <naErase>false</naErase>
   <Esuna>false</Esuna>
   <EsunaOnlyAmnesia>false</EsunaOnlyAmnesia>
+  <PrioritizeDoomRemoval>false</PrioritizeDoomRemoval>
+  <AugmentDoomRemoval>false</AugmentDoomRemoval>
+  <AugmentDoomRemoval_Method>0</AugmentDoomRemoval_Method>
   <plAgiDown>false</plAgiDown>
   <plAccuracyDown>false</plAccuracyDown>
   <plAddle>false</plAddle>
@@ -310,6 +314,7 @@
   <standAtMP_Percentage>99</standAtMP_Percentage>
   <convertMP>300</convertMP>
   <sublimationMP>100</sublimationMP>
+  <SublimationRecoverWhenCharging>false</SublimationRecoverWhenCharging>
   <Fullcircle_DisableEnemy>false</Fullcircle_DisableEnemy>
   <Fullcircle_GEOTarget>false</Fullcircle_GEOTarget>
   <RadialArcanaMP>300</RadialArcanaMP>
@@ -341,7 +346,7 @@
   <autoFollowDistance>5</autoFollowDistance>
   <autoFollow_Warning>false</autoFollow_Warning>
   <FFXIDefaultAutoFollow>false</FFXIDefaultAutoFollow>
-  <enableHotKeys>false</enableHotKeys>
+  <enableHotKeys>true</enableHotKeys>
   <enableFastCast_Mode>false</enableFastCast_Mode>
   <trackCastingPackets>true</trackCastingPackets>
   <ipAddress>127.0.0.1</ipAddress>

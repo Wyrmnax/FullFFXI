@@ -98,7 +98,7 @@ if player.Name == 'Khory' then
 		right_ear="Enchntr. Earring +1",
 		left_ring="Kishar Ring",
 		right_ring="Jhakri Ring",
-		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +15','Pet: Damage taken -3%',}},
+		back="Fi Follet Cape +1",
 		}
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
 				})

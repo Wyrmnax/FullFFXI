@@ -306,7 +306,7 @@ function get_sets()
     right_ear="Savant's Earring",
     left_ring="Kishar Ring",
     right_ring="",
-    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+    back="Fi Follet Cape +1",
     }
 
 	sets.precast["Stun"] = {	
@@ -324,7 +324,7 @@ function get_sets()
     right_ear="Regal Earring",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
-    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+    back="Fi Follet Cape +1",
 	}
 	
 	sets.precast["Impact"] = {	
@@ -341,7 +341,7 @@ function get_sets()
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
-    back={ name="Lugh's Cape", augments={'"Fast Cast"+10',}},
+    back="Fi Follet Cape +1",
 	}
 
     -- When spell school is aligned with grimoire, swap relevent pieces -- Can also use Arbatel +1 set here if you value 1% quickcast procs per piece. (2+ pieces)  

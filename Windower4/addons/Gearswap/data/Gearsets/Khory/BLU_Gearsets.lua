@@ -126,8 +126,8 @@ if player.name == 'Khory' then
 			lear="Enchntr. Earring +1",
 			rear="Etiolation Earring",
 			left_ring="Kishar Ring",
-			right_ring="Strendu Ring",
-			back={ name="Rosmerta's Cape", augments={'"Fast Cast"+10',}},
+			right_ring="Strendu Ring",			
+			back="Fi Follet Cape +1",
 			}
 			
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {})

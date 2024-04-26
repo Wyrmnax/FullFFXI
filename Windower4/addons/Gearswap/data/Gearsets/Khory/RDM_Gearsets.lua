@@ -118,7 +118,9 @@ if player.Name == 'Khory' then
     waist="Embla Sash",
     left_ear="Malignance Earring",
     right_ear="Mendi. Earring",
-    left_ring="Kishar Ring",}
+    left_ring="Kishar Ring",
+    back="Fi Follet Cape +1",
+	}
 	
 		sets.precast.Cure = set_combine(sets.precast.Fastcast, {
                 body="Heka's Kalasiris",

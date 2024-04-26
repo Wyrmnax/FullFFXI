@@ -96,7 +96,7 @@ if player.Name == 'Khory' then
     right_ear="Enchntr. Earring +1",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
-    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+    back="Fi Follet Cape +1",
 	}
 	
 		sets.precast.Elemental = set_combine(sets.precast.Fastcast,{})

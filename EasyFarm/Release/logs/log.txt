@@ -1,1 +1,10 @@
-2024-04-14 08:51:19.3247 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
+2024-04-24 22:46:53.2855 EasyFarm.Logging.NLogTextFileLogger EasyFarm Started ...
+2024-04-25 08:07:56.1702 EasyFarm.Logging.NLogTextFileLogger FSM thread interrupted
+System.Threading.ThreadInterruptedException: Thread was interrupted from a waiting state.
+   at System.Threading.Thread.SleepInternal(Int32 millisecondsTimeout)
+   at System.Threading.Thread.Sleep(Int32 millisecondsTimeout)
+   at MemoryAPI.Memory.EliteMmoWrapper.NavigationTools.KeepOneYalmBack(Position position) in C:\projects\easyfarm\MemoryAPI\Memory\EliteMMOWrapper.cs:line 146
+   at MemoryAPI.Memory.EliteMmoWrapper.NavigationTools.GotoNPC(Int32 id, Boolean useObjectAvoidance) in C:\projects\easyfarm\MemoryAPI\Memory\EliteMMOWrapper.cs:line 100
+   at EasyFarm.States.ApproachState.Run() in C:\projects\easyfarm\EasyFarm\States\ApproachState.cs:line 66
+   at EasyFarm.States.FiniteStateMachine.RunStateMachine() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 171
+   at EasyFarm.States.FiniteStateMachine.<RunFiniteStateMainWithThread>b__9_0() in C:\projects\easyfarm\EasyFarm\States\FiniteStateMachine.cs:line 99

@@ -79,7 +79,12 @@
                 <x>1423</x>
                 <y>-3</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </text>
-        <tracking>dragua</tracking>
+        <tracking>carabosse</tracking>
     </khory>
 </settings>

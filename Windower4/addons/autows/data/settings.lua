@@ -68,7 +68,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
             }
         },
         ["BRD"] = {
@@ -106,11 +106,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
             }
         },
         ["BST"] = {
@@ -190,7 +190,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -413,11 +413,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["RDM"] = {
@@ -521,11 +521,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Stardiver\" <t>"
+                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -545,7 +545,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["SCH"] = {
@@ -616,7 +616,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {
@@ -627,7 +627,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Fell Cleave\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -636,7 +636,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Cyclone\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -681,7 +681,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -699,7 +699,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Blade: Ei\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -717,7 +717,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
             }
         },
         ["WHM"] = {

@@ -69,7 +69,7 @@ sets.TP = {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    hands="Pel. Vambraces +3",
     legs={ name="Gleti's Breeches", augments={'Path: A',}},
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},

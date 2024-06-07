@@ -166,7 +166,7 @@ sets.TP = {
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Hattori Earring +1",
-    left_ring="Chirich Ring +1",
+    left_ring="Gere Ring",
     right_ring="Epona's Ring",
      back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -206,7 +206,7 @@ sets.precast.WS = {
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Brutal Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Gere Ring",
     right_ring="Epona's Ring",
      back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}

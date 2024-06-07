@@ -91,7 +91,7 @@ sets.TP = {
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Brutal Earring",
+    left_ear="Cessance Earring",
     right_ear="Schere Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Moonlight Ring",

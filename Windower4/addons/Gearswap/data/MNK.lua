@@ -147,11 +147,6 @@ end
 function aftercast(spell,arg)
 -- Autoset
 	previous_set()
-	if player.status == 'Engaged' then
-		if spell and spell.name == 'Footwork' then
-			equip(sets.TP.Footwork)
-		end
-	end
 -- Utsusemi Variable Sets
 	if spell and spell.name == 'Utsusemi: Ni' then
         ShadowType = 'Ni'
@@ -170,11 +165,6 @@ function previous_set()
 			equip(sets.TP)
 		end
 	else 
-		if areas.Town:contains(world.zone) then
-			windower.add_to_chat(121, "Town Gear")
-			equip(sets.misc.Town)
-		else
-			equip(sets.idle)
-		end
+		equip(sets.idle)
 	end
 end

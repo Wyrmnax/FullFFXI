@@ -62,7 +62,7 @@ sets.idle = {
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Rep. Plat. Medal",
-    waist="Ioskeha Belt +1",
+    waist="Sweordfaetels +1",
     left_ear="Telos Earring",
     right_ear="Eabani Earring",
     left_ring="Defending Ring",

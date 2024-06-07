@@ -73,7 +73,7 @@ sets.TP = {
     left_ear="Sherida Earring",
     right_ear="Schere Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Epona's Ring",
+    right_ring="Gere Ring",
     back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 -- Impetus
@@ -86,16 +86,16 @@ sets.TP.Footwork = set_combine(sets.TP, {
 	})
 
 -- JA
-sets.precast.JA["Formless Strikes"] = {body="Hes. Cyclas"}
+sets.precast.JA["Formless Strikes"] = {body=""}
 sets.precast.JA["Chakra"] = set_combine(sets.idle.PDT, { })
 sets.precast.JA["Chi Blast"] = set_combine(sets.idle.PDT, {})
-sets.precast.JA["Impetus"] = {body="Tantra Cyclas +3"}
+sets.precast.JA["Impetus"] = {body="Bhikku Cyclas +3"}
 sets.precast.JA["Hundred Fists"] = {legs="Hes. Hose +1"}
-sets.precast.JA["Focus"] = {head="Anchorite's Crown"}
+sets.precast.JA["Focus"] = {head=""}
 sets.precast.JA["Dodge"] = {feet="Anch. Gaiters +3"}
-sets.precast.JA["Boost"] = {hands="Anchorite's Gloves"}
-sets.precast.JA["Counterstance"] = {feet="Hes. Gaiters"}
-sets.precast.JA["Mantra"] = {feet="Hes. Gaiters"}
+sets.precast.JA["Boost"] = {hands=""}
+sets.precast.JA["Counterstance"] = {feet=""}
+sets.precast.JA["Mantra"] = {feet=""}
 sets.precast.JA["Footwork"] = {feet="Bhikku Gaiters +3"}
 
 -- Weaponskills
@@ -111,7 +111,7 @@ sets.precast.WS = {
     left_ear="Sherida Earring",
     right_ear="Schere Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Epona's Ring",
+    right_ring="Gere Ring",
     back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -146,22 +146,18 @@ sets.precast.WS['Tornado Kick'] = set_combine(sets.precast.WS, {
     feet="Anch. Gaiters +3",
 	})
 
-sets.precast.WS["Asuran Fists"] = set_combine(sets.precast.WS, {
+sets.precast.WS['Asuran Fists'] = set_combine(sets.precast.WS, {
 	ammo="Knobkierrie",
-    head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    legs={ name="Adhemar Kecks", augments={'DEX+10','AGI+10','Accuracy+15',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Digni. Earring",
-    right_ear="Telos Earring",
+	feet="Mpaca's Boots",
+    left_ear="Telos Earring",
+    right_ear="Bhikku Earring +1",
     left_ring="Ilabrat Ring",
-    right_ring="Moonlight Ring",
+    right_ring="Regal Ring",
 	})
 
-sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS), {
-	ammo="Knobkierrie",
-    head={ name="Herculean Helm", augments={'Weapon skill damage +5%','STR+9','Accuracy+7','Attack+8',}},	
-    legs="Hiza. Hizayoroi +2",
+sets.precast.WS['Final Heaven'] = set_combine(sets.precast.WS.WSD), {
 }
 
 sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {})
@@ -169,9 +165,19 @@ sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {})
 
 -- Misc Sets
 sets.precast.Fastcast = set_combine(sets.idle.PDT, {
-				head="Athos's Chapeau", neck="Magoraga Beads", lear="Loquac. Earring", rear="Novia Earring",
-                body="Manibozho Jerkin", hands="Otronif Gloves +1", lring="", rring="Prolix Ring",
-                back="Repulse Mantle", waist="Black Belt", legs="", feet=""})
+	ammo="Sapience Orb",
+    head={ name="Herculean Helm", augments={'"Fast Cast"+5',}},
+    body={ name="Adhemar Jacket +1", augments={'HP+105','"Fast Cast"+10','Magic dmg. taken -4',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+16','"Fast Cast"+5','Mag. Acc.+7',}},
+    feet={ name="Herculean Boots", augments={'Mag. Acc.+1','"Fast Cast"+5',}},
+    neck="Voltsurge Torque",
+    waist="Moonbow Belt +1",
+    left_ear="Etiolation Earring",
+    right_ear="Enchntr. Earring +1",
+    left_ring="Evanescence Ring",
+    right_ring="Lebeche Ring",
+})
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})
 
 sets.misc.Waltz = {}

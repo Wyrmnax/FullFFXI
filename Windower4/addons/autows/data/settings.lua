@@ -110,7 +110,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["BST"] = {
@@ -150,7 +150,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -168,7 +168,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Leaden Salute\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["DNC"] = {
@@ -177,9 +177,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"wasp sting\" <t>"
             }
         },
         ["DRG"] = {

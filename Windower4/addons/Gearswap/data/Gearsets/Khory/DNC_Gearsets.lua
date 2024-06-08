@@ -4,7 +4,7 @@
 -- To Do
 --
 
-if player.name == 'Feary' then
+if player.name == 'Khory' then
 -- includes
 	include('include/utility.lua')
 	include('include/mappings.lua')
@@ -27,56 +27,16 @@ if player.name == 'Feary' then
 		
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = { 
+sets.idle = { 
 				head="Whirlpool Mask", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
                 body="Iuitl Vest", hands="Iuitl Wristbands +1", lring=Aug.Darkring1, rring="Defending Ring",
                 back="Repulse Mantle", waist="Flume Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"}
-
-sets.idle.MDT = { 
-				head="Whirlpool Mask", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
-                body="Iuitl Vest", hands="Iuitl Wristbands +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Engulfer Cape", waist="Flume Belt", legs="Nahtirah Trousers", feet="Iuitl Gaiters"}
-
-sets.misc.Town = set_combine(sets.idle.PDT, {
-				feet="Tandava Crackows"})
-				
-sets.idle.Standard = set_combine(sets.idle.PDT, {
-				lear="Merman's Earring", rear="Merman's Earring", feet="Tandava Crackows"})
--- Full Evasion
-sets.idle.Evasion = set_combine(sets.idle.PDT,{
-			head="Uk'uxkaj Cap", neck="Torero Torque", lear="Musical Earring", rear="Novia Earring",
-            body="Iuitl Vest", hands="Iuitl Wristbands +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Boxer's Mantle", waist="Twilight Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"})
-
--- Precast	
-sets.precast.Recast = set_combine(sets.idle.PDT,{
-			head="Athos's Chapeau", neck="Torero Torque", lear="Magnetic Earring", rear="Loquac. Earring",
-            body="Iuitl Vest", hands="Iuitl Wristbands +1", lring="Rajas Ring", rring="Prolix Ring",
-            back="Boxer's Mantle", waist="Twilight Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"})
 			
 -- TP Sets 
 sets.TP = { ammo="Charis Feather",
 			head="Uk'uxkaj Cap", neck="Charis Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
             body="Charis Casaque +2", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
             back="Atheling Mantle", waist="Patentia Sash", legs="Manibozho Brais", feet="Horos Shoes"}
-
--- Accuracy TP Set
-sets.TP.Acc = {	
-			head="Whirlpool Mask", neck="Asperity Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Manibozho Jerkin", hands="Buremte Gloves", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Hurch'lan Sash", legs="Manibozho Brais", feet="Manibozho Boots"}
-
--- Alliance Buffed - Capped Haste/Marches/Embrava
-sets.TP.Buffed = {
-			head="Felistris Mask", neck="Asperity Necklace", lear="Bladeborn Earring", rear="Steelflash Earring",
-            body="Thaumas Coat", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Windbuffet Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
-
--- Hybrid Evasion
-sets.TP.Hybrid = set_combine(sets.idle.PDT,{
-			head="Uk'uxkaj Cap", neck="Torero Torque", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Iuitl Vest", hands="Iuitl Wristbands +1", lring="Rajas Ring", rring="Epona's Ring",
-            back="Boxer's Mantle", waist="Twilight Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"})
 
 -- RA Sets
 sets.precast.Snapshot = {legs="Nahtirah Trousers"}

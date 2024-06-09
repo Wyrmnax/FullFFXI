@@ -115,18 +115,26 @@ sets.precast.WS = {
     back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
+sets.precast.WS.WSD = {     
+	head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Rep. Plat. Medal",
+    waist="Moonbow Belt +1",
+    left_ear="Sherida Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
+    back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	}
+	
 sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {
 	head="Adhemar Bonnet +1",
 	hands="Ryuo Tekko +1",
 	feet="Mpaca's Boots",
     right_ear="Odr Earring",
-	})
-
-sets.precast.WS['Victory Smite'].Impetus = set_combine(sets.precast.WS, {
-	head="Adhemar Bonnet +1",
-    body="Bhikku Cyclas +3",
-	hands="Ryuo Tekko +1",
-	feet="Mpaca's Boots"
 	})
 
 sets.precast.WS['Raging Fists'] = set_combine(sets.precast.WS, {

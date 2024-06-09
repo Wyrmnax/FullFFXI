@@ -179,7 +179,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"wasp sting\" <t>"
+                ["ws_cmd"] = "/ws \"pyrrhic kleos\" <t>"
             }
         },
         ["DRG"] = {
@@ -281,7 +281,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"final heaven\" <t>"
             }
         },
         ["NIN"] = {

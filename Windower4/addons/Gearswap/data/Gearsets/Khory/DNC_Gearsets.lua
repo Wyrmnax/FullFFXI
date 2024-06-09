@@ -15,107 +15,165 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'NIN' then
-				set_macro_page(18,1)
+				set_macro_page(4,14)
 			elseif player.sub_job == 'WAR' then
-				set_macro_page(18,2)
+				set_macro_page(1,14)
 			elseif player.sub_job == 'SAM' then
-				set_macro_page(18,3)
+				set_macro_page(2,14)
+			elseif player.sub_job == 'DRG' then
+				set_macro_page(3,14)
 			end
 		else
 			set_macro_page(18,1)
 		end
 		
+		
+		send_command('wait 3;input /lockstyleset 21')
+		
 -- Auto Sets
 -- Standard/idle
 sets.idle = { 
-				head="Whirlpool Mask", neck="Twilight Torque", lear="Merman's Earring", rear="Merman's Earring",
-                body="Iuitl Vest", hands="Iuitl Wristbands +1", lring=Aug.Darkring1, rring="Defending Ring",
-                back="Repulse Mantle", waist="Flume Belt", legs="Iuitl Tights", feet="Iuitl Gaiters"}
+	ammo="Staunch Tathlum +1",
+    head={ name="Gleti's Mask", augments={'Path: A',}},
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
+    neck="Rep. Plat. Medal",
+    waist="Flume Belt +1",
+    left_ear="Eabani Earring",
+    right_ear="Etiolation Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Shneddick Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 			
 -- TP Sets 
-sets.TP = { ammo="Charis Feather",
-			head="Uk'uxkaj Cap", neck="Charis Necklace", lear="Dudgeon Earring", rear="Heartseeker Earring",
-            body="Charis Casaque +2", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-            back="Atheling Mantle", waist="Patentia Sash", legs="Manibozho Brais", feet="Horos Shoes"}
+sets.TP = { 
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands="Malignance Gloves",
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Telos Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 
 -- RA Sets
-sets.precast.Snapshot = {legs="Nahtirah Trousers"}
+sets.precast.Snapshot = {legs=""}
 
 sets.RA = {}
 				
 -- JA
-sets.precast.JA["Trance"] = {head="Etoile Tiara +2"}
+sets.precast.JA["Trance"] = {head=""}
 sets.precast.JA["Grand Pas"] = {}
 
-sets.precast.JA["Fan Dance"] = {hands="Etoile Bangles +2"}
-sets.precast.JA["Saber Dance"] = {legs="Etoile Tights +2"}
-sets.precast.JA["No Foot Rise"] = {body="Etoile Casaque +2"}
+sets.precast.JA["Fan Dance"] = {hands=""}
+sets.precast.JA["Saber Dance"] = {legs=""}
+sets.precast.JA["No Foot Rise"] = {body=""}
 sets.precast.JA["Presto"] = {}
 
-sets.precast.JA["Sambas"] = {head="Maxixi Tiara"}
-sets.precast.JA["Jigs"] = {legs="Horos Tights",feet="Maxixi Shoes"}
+sets.precast.JA["Sambas"] = {head=""}
+sets.precast.JA["Jigs"] = {legs="",feet=""}
 -- Waltz - CHR for others Vit for self, Waltz+ Only 
-sets.precast.JA["Waltz"] = set_combine({head="Horos Tiara", body="Maxixi Casaque", feet="Maxixi Shoes",back="Toetapper Mantle",rear="Roundel Earring"})
+sets.precast.JA["Waltz"] = {neck="Etoile Gorget+2",body="Gleti's cuirass", ammo="Yamarang"}
 -- Steps - Accuracy
-sets.precast.JA["Step"] = set_combine(sets.TP.Acc,{head="Maxixi Tiara",hands="Maxixi Bangles",feet="Horos Shoes"})
-sets.precast.JA["Feather Step"] = set_combine(sets.precast.JA["Step"],{feet="Charis Toeshoes +2"})
+sets.precast.JA["Step"] = set_combine(sets.TP,{head="",hands="",feet=""})
+sets.precast.JA["Feather Step"] = set_combine(sets.precast.JA["Step"],{feet="Macu. Toe Sh. +3"})
 -- Flourish - Macc? 
 sets.precast.JA["Flourish"] = set_combine(sets.precast.Macc,{})
-sets.precast.JA["Striking Flourish"] = set_combine(sets.precast.JA["Flourish"],{body="Charis Casaque +2"})
-sets.precast.JA["Violent Flourish"] = set_combine(sets.precast.JA["Flourish"],{body="Horos Casaque"})
-sets.precast.JA["Reverse Flourish"] = set_combine(sets.precast.JA["Flourish"],{hands="Charis Bangles +2"})
-sets.precast.JA["Climactic Flourish"] = set_combine(sets.precast.JA["Flourish"],{head="Charis Tiara +2"})
+sets.precast.JA["Striking Flourish"] = set_combine(sets.precast.JA["Flourish"],{body=""})
+sets.precast.JA["Violent Flourish"] = set_combine(sets.precast.JA["Flourish"],{body=""})
+sets.precast.JA["Reverse Flourish"] = set_combine(sets.precast.JA["Flourish"],{hands="Macu. Bangles +2"})
+sets.precast.JA["Climactic Flourish"] = set_combine(sets.precast.JA["Flourish"],{head="Maculele Tiara +3"})
 
 -- Weaponskills
 sets.precast.WS = {
-				head="Uk'uxkaj Cap", neck="Asperity Necklace", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
-
-sets.precast.WS.Acc = set_combine(sets.precast.WS,{})
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maculele Tiara +3",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    feet={ name="Herculean Boots", augments={'Enmity-3','"Mag.Atk.Bns."+17','Quadruple Attack +2','Accuracy+13 Attack+13','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Telos Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
+				
+sets.precast.WS.WSD = {				
+    ammo="Oshasha's Treatise",
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Telos Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+	}
+				
+sets.precast.WS.Crit = {
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Blistering Sallet +1", augments={'Path: A',}},
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    feet="Gleti's Boots",
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Odr Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+5',}},}
+				
+				
 
 -- Rudra's Storm
-sets.precast.WS["Rudra's Storm"] = {
-				head="Uk'uxkaj Cap", neck="Shadow Gorget", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Metalsinger Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
-
-sets.precast.WS.Acc["Rudra's Storm"] = {
-				head="Uk'uxkaj Cap", neck="Shadow Gorget", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Metalsinger Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS.WSD, {
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
+)
 
 -- Exenterator
-sets.precast.WS["Exenterator"] = {
-				head="Uk'uxkaj Cap", neck="Houyi's Gorget", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Stormsoul Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Metalsinger Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.precast.WS["Exenterator"] = set_combine(sets.precast.WS, {
+	neck="Fotia Gorget",
+    waist="Fotia Belt",
+	}
+)
 
-sets.precast.WS.Acc["Exenterator"] = {
-				head="Whirlpool Mask", neck="Justiciar's Torque", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Stormsoul Ring", rring="Epona's Ring",
-                back="Vespid Mantle", waist="Metalsinger Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
 -- Evisceration
-sets.precast.WS["Evisceration"] = {
-				head="Uk'uxkaj Cap", neck="Asperity Necklace", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
-
-sets.precast.WS.Acc["Evisceration"] = {
-				head="Whirlpool Mask", neck="Asperity Necklace", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS.Crit, {
+	neck="Fotia Gorget",
+    waist="Fotia Belt",
+	}
+)
 
 -- Pyrrhic Kleos
-sets.precast.WS["Pyrrhic Kleos"] = {
-				head="Whirlpool Mask", neck="Justicier's Torque", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+sets.precast.WS["Pyrrhic Kleos"] = set_combine(sets.precast.WS, {
+	neck="Fotia Gorget",
+    waist="Fotia Belt",
+	}
+)
 
-sets.precast.WS.Acc["Pyrrhic Kleos"] = {
-				head="Whirlpool Mask", neck="Justicier's Torque", lear="Steelflash Earring", rear="Bladeborn Earring",
-                body="Manibozho Jerkin", hands="Iuitl Gloves", lring="Rajas Ring", rring="Epona's Ring",
-                back="Atheling Mantle", waist="Wanion Belt", legs="Manibozho Brais", feet="Manibozho Boots"}
+
+-- Shark Bite
+sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS.WSD, {
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
+)
 				
 -- Midcast Sets
 

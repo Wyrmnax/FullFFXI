@@ -41,6 +41,8 @@ local Defensive = 'Offense'
 frame_count = 0
 nexttime = os.clock()	
 del = 0
+boxstep = 0
+featherstep = 0
 
 -- Display
 
@@ -120,10 +122,23 @@ windower.register_event('prerender',function()
 			if player.status == 'Engaged' then
 				if abil_recasts[226] == 0 and buffactive['Finishing Move 5'] then
 					windower.send_command('Climactic Flourish')	
+				elseif abil_recasts[236] == 0 then
+					windower.send_command('Presto')	
+				elseif abil_recasts[220] == 0 and player.tp >= 100 and not buffactive['Finishing Move 5'] then
+					if buffactive['Presto'] and boxstep < 2 then
+						windower.send_command('Box Step')
+						boxstep = boxstep + 1
+					elseif buffactive['Presto'] and featherstep < 2 then
+						windower.send_command('Feather Step')
+						featherstep = featherstep + 1
+					else
+						windower.send_command('Stutter Step')
+					end
 				end
-				if abil_recasts[220] == 0 and player.tp >= 100 and not buffactive['Finishing Move 5'] then
-					windower.send_command('Box Step')	
-				end
+			end
+			if featherstep >1 then
+				boxstep = 0
+				featherstep = 0
 			end
 		end
     end
@@ -163,6 +178,10 @@ end
 function status_change(new,old)
 -- Auto set
     previous_set()
+	if not player.status == 'Engaged' then
+		boxstep = 0
+		featherstep = 0
+	end
 end
 
 
@@ -176,19 +195,11 @@ function precast(spell,arg)
 	elseif spell.type == 'Weaponskill' then
 		if player.status == 'Engaged' then
 			if player.tp >= 100 then
-				if spell.target.distance <= 5 then
-					if Mode == 1 then
-						if sets.precast.WS[spell.name] then
-							equip(sets.precast.WS.Acc[spell.name])
-						else
-							equip(sets.precast.WS.Acc)
-						end
-					else				
-						if sets.precast.WS[spell.name] then
-							equip(sets.precast.WS[spell.name])
-						else
-							equip(sets.precast.WS)
-						end
+				if spell.target.distance <= 5 then			
+					if sets.precast.WS[spell.name] then
+						equip(sets.precast.WS[spell.name])
+					else
+						equip(sets.precast.WS)
 					end
 				else
 					cancel_spell()

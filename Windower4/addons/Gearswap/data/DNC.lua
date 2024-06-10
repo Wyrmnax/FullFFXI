@@ -113,18 +113,18 @@ windower.register_event('prerender',function()
 		-- Auto Step / Flourish
 		
 		if Autos == 'On' then
-			if abil_recasts[223] == 0  and not buffactive['Finishing Move 5'] then
+			if abil_recasts[223] == 0 and not buffactive['Finishing Move (6+)'] then
 				windower.send_command('No Foot Rise')
 			end
-			if abil_recasts[222] == 0 and player.tp < 3000 and (buffactive['Finishing Move 5'] or buffactive['Finishing Move 4']) then
+			if abil_recasts[222] == 0 and player.tp < 1000 and (buffactive['Finishing Move 5'] or buffactive['Finishing Move (6+)']) then
 				windower.send_command('Reverse Flourish')			
 			end
 			if player.status == 'Engaged' then
-				if abil_recasts[226] == 0 and buffactive['Finishing Move 5'] then
+				if abil_recasts[226] == 0 and buffactive['Finishing Move (6+)'] then
 					windower.send_command('Climactic Flourish')	
 				elseif abil_recasts[236] == 0 then
 					windower.send_command('Presto')	
-				elseif abil_recasts[220] == 0 and player.tp >= 100 and not buffactive['Finishing Move 5'] then
+				elseif abil_recasts[220] == 0 and player.tp >= 100 then
 					if buffactive['Presto'] and boxstep < 2 then
 						windower.send_command('Box Step')
 						boxstep = boxstep + 1
@@ -159,18 +159,14 @@ function self_command(command)
 	if command == 'DefenseMode' then
 		if Defensive == 'Offense' then
 			Defensive = 'Defense'
-			windower.add_to_chat(121,'Mode '..Defensive)
 		else
 			Defensive = 'Offense'
-			windower.add_to_chat(121,'Mode '..Defensive)
 		end
 	elseif command == 'Autos' then
 		if Autos == 'Off' then
 			Autos = 'On'
-			windower.add_to_chat(121,'Mode '..Autos)
 		else
 			Autos = 'Off'
-			windower.add_to_chat(121,'Mode '..Autos)
 		end
 	end
 end
@@ -186,20 +182,28 @@ end
 
 
 function precast(spell,arg)
--- Job Abilities
+-- Job Abilities	
 	if spell.type == "JobAbility" then
 		if sets.precast.JA[spell.name] then
 			equip(sets.precast.JA[spell.name])
 		end
 -- Weaponskills
-	elseif spell.type == 'Weaponskill' then
+	elseif spell.type == "WeaponSkill" then
 		if player.status == 'Engaged' then
 			if player.tp >= 100 then
-				if spell.target.distance <= 5 then			
-					if sets.precast.WS[spell.name] then
-						equip(sets.precast.WS[spell.name])
+				if spell.target.distance <= 5 then		
+					if buffactive['Climactic Flourish'] then
+						if sets.precast.WS[spell.name] then
+							equip(sets.precast.WS[spell.name], {head="Maculele Tiara +3"})
+						else
+							equip(sets.precast.WS, {head="Maculele Tiara +3"} )
+						end
 					else
-						equip(sets.precast.WS)
+						if sets.precast.WS[spell.name] then
+							equip(sets.precast.WS[spell.name])
+						else
+							equip(sets.precast.WS)
+						end
 					end
 				else
 					cancel_spell()
@@ -242,13 +246,7 @@ function precast(spell,arg)
 		end
 	elseif spell.type == "Flourish1" or spell.type == "Flourish2" or spell.type == "Flourish3" then
 		if Flourish:contains(spell.name) then
-			if spell.name == "Violent Flourish" then
-				equip(sets.precast.JA[spell.name])
-			elseif spell.name == "Striking Flourish" then
-				equip(sets.precast.JA[spell.name])
-			else
-				equip(sets.precast.JA["Flourish"])
-			end
+			equip(sets.precast.JA[spell.name])
 		end
 	else
 		

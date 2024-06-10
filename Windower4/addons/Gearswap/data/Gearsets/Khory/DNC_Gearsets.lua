@@ -85,13 +85,13 @@ sets.precast.JA["Jigs"] = {legs="",feet=""}
 sets.precast.JA["Waltz"] = {neck="Etoile Gorget+2",body="Gleti's cuirass", ammo="Yamarang"}
 -- Steps - Accuracy
 sets.precast.JA["Step"] = set_combine(sets.TP,{head="",hands="",feet=""})
-sets.precast.JA["Feather Step"] = set_combine(sets.precast.JA["Step"],{feet="Macu. Toe Sh. +3"})
+sets.precast.JA["Feather Step"] = set_combine(sets.TP["Step"],{feet="Macu. Toe Sh. +3"})
 -- Flourish - Macc? 
-sets.precast.JA["Flourish"] = set_combine(sets.precast.Macc,{})
-sets.precast.JA["Striking Flourish"] = set_combine(sets.precast.JA["Flourish"],{body=""})
-sets.precast.JA["Violent Flourish"] = set_combine(sets.precast.JA["Flourish"],{body=""})
-sets.precast.JA["Reverse Flourish"] = set_combine(sets.precast.JA["Flourish"],{hands="Macu. Bangles +2"})
-sets.precast.JA["Climactic Flourish"] = set_combine(sets.precast.JA["Flourish"],{head="Maculele Tiara +3"})
+sets.precast.JA["Flourish"] = set_combine(sets.TP,{})
+sets.precast.JA["Striking Flourish"] = set_combine(sets.TP["Flourish"],{body=""})
+sets.precast.JA["Violent Flourish"] = set_combine(sets.TP["Flourish"],{body=""})
+sets.precast.JA["Reverse Flourish"] = set_combine(sets.TP["Flourish"],{hands="Macu. Bangles +3"})
+sets.precast.JA["Climactic Flourish"] = set_combine(sets.TP["Flourish"],{head="Maculele Tiara +3"})
 
 -- Weaponskills
 sets.precast.WS = {
@@ -140,6 +140,22 @@ sets.precast.WS.Crit = {
     left_ring="Epona's Ring",
     right_ring="Gere Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+5',}},}
+	
+sets.precast.WS.MAB = {				
+    ammo="Oshasha's Treatise",
+    head="Maculele Tiara +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Telos Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+	}
 				
 				
 
@@ -172,6 +188,11 @@ sets.precast.WS["Pyrrhic Kleos"] = set_combine(sets.precast.WS, {
 
 -- Shark Bite
 sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS.WSD, {
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
+)
+
+
+sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
 )
 				

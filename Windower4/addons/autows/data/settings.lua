@@ -179,7 +179,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"pyrrhic kleos\" <t>"
+                ["ws_cmd"] = "/ws \"aeolian edge\" <t>"
             }
         },
         ["DRG"] = {

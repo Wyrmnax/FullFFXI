@@ -82,7 +82,7 @@ sets.precast.JA["Presto"] = {}
 sets.precast.JA["Sambas"] = {head=""}
 sets.precast.JA["Jigs"] = {legs="",feet=""}
 -- Waltz - CHR for others Vit for self, Waltz+ Only 
-sets.precast.JA["Waltz"] = {neck="Etoile Gorget+2",body="Gleti's cuirass", ammo="Yamarang"}
+sets.precast.JA["Waltz"] = {head="Maxixi Tiara +1", feet="Maxixi Toe Shoes +1", neck="Etoile Gorget+2",body="Gleti's cuirass", ammo="Yamarang"}
 -- Steps - Accuracy
 sets.precast.JA["Step"] = set_combine(sets.TP,{head="",hands="",feet=""})
 sets.precast.JA["Feather Step"] = set_combine(sets.TP["Step"],{feet="Macu. Toe Sh. +3"})
@@ -107,7 +107,7 @@ sets.precast.WS = {
     right_ear="Telos Earring",
     left_ring="Epona's Ring",
     right_ring="Gere Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 				
 sets.precast.WS.WSD = {				
@@ -123,12 +123,12 @@ sets.precast.WS.WSD = {
     right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 				
 sets.precast.WS.Crit = {
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head={ name="Blistering Sallet +1", augments={'Path: A',}},
+    head="Adhemar Bonnet +1",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},
     hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs={ name="Gleti's Breeches", augments={'Path: A',}},
@@ -139,7 +139,8 @@ sets.precast.WS.Crit = {
     right_ear="Odr Earring",
     left_ring="Epona's Ring",
     right_ring="Gere Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+5',}},}
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+	}
 	
 sets.precast.WS.MAB = {				
     ammo="Oshasha's Treatise",
@@ -188,20 +189,27 @@ sets.precast.WS["Pyrrhic Kleos"] = set_combine(sets.precast.WS, {
 
 -- Shark Bite
 sets.precast.WS["Shark Bite"] = set_combine(sets.precast.WS.WSD, {
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
-)
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
 
 
 sets.precast.WS["Aeolian Edge"] = set_combine(sets.precast.WS.MAB, {
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},}
-)
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+
+sets.precast.WS["Raging Fists"] = set_combine(sets.precast.WS, {
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	neck="Fotia Gorget",
+    waist="Fotia Belt"
+	
+})
 				
 -- Midcast Sets
 
 -- Aftercast
 
 -- Misc Sets
-sets.precast.Fastcast = set_combine(sets.idle.PDT, {head="Athos's Chapeau", lear="Loquac. Earring", rring="Prolix Ring",})
+sets.precast.Fastcast = set_combine(sets.idle.PDT, {head="", lear="", rring="",})
 
 sets.precast.Utsusemi = set_combine(sets.precast.Fastcast, {neck="Magoraga Beads"})
 

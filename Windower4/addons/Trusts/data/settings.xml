@@ -6,7 +6,7 @@
         <sets>
             <abyssea>
                 <1>Monberaux</1>
-                <2>Ulmia</2>
+                <2>Cornelia</2>
                 <3>Koru-Moru</3>
             </abyssea>
             <alex>
@@ -21,7 +21,7 @@
                 <2>Monberaux</2>
                 <3>Sylvie (UC)</3>
                 <4>Arciela</4>
-                <5>Ulmia</5>
+                <5>Cornelia</5>
             </default>
             <dyna>
                 <1>Ulmia</1>
@@ -73,7 +73,7 @@
             <notank>
                 <1>Sylvie (UC)</1>
                 <2>Qultada</2>
-                <3>Ulmia</3>
+                <3>Cornelia</3>
                 <4>Monberaux</4>
                 <5>Arciela II</5>
             </notank>
@@ -105,7 +105,7 @@
                 <5>Sylvie (UC)</5>
             </shinryu>
             <sortie>
-                <1>Ulmia</1>
+                <1>Cornelia</1>
                 <2>Sylvie (UC)</2>
                 <3>Star Sibyl</3>
                 <4>Koru-Moru</4>

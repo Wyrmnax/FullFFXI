@@ -1,0 +1,21 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <actions>0</actions>
+        <distance>4</distance>
+        <ja>0</ja>
+        <maxwshp>100</maxwshp>
+        <minwshp>30</minwshp>
+        <na>0</na>
+        <posx>10</posx>
+        <posy>200</posy>
+        <proc>0</proc>
+        <samba>1</samba>
+        <setws>Rudra&apos;s Storm</setws>
+        <setws2>Cyclone</setws2>
+        <waltz>0</waltz>
+        <waltzhp>75</waltzhp>
+        <waltzpt>0</waltzpt>
+        <ws>0</ws>
+    </global>
+</settings>

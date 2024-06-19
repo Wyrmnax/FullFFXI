@@ -52,9 +52,9 @@ lua load parse
 lua load skillchains
 //lua load autorun
 lua load autows
-lua load shout_ml
+//lua load shout_ml
 lua load Valkyrie
---lua load react
+//lua load react
 lua load partybuffs
 lua load sheolhelper
 lua load sellnpc

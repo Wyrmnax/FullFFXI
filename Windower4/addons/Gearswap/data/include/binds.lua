@@ -129,6 +129,7 @@ elseif player.main_job == "THF" then
 elseif player.main_job == "DNC" then
 	basic_binds()
 		-- set binds
+	windower.send_command('@bind f9 gs c Waltz')
 	windower.send_command('@bind f10 gs c Autos')
 	windower.send_command('@bind f11 gs c DefenseMode')
 

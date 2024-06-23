@@ -38,6 +38,7 @@ end
 
 local Autos = 'Off'
 local Defensive = 'Offense'
+local Waltz = 'Off'
 frame_count = 0
 nexttime = os.clock()	
 del = 0
@@ -88,6 +89,7 @@ box:show()
 
 windower.register_event("zone change", function()
     Autos = 'Off'
+	Waltz = 'Off'
 end)
 
 --Update Display
@@ -105,12 +107,21 @@ windower.register_event('prerender',function()
         local play = windower.ffxi.get_player()
         local abil_recasts = windower.ffxi.get_ability_recasts()
 		
+		if Waltz == 'On' and play.vitals.hpp < 35 then
+			Defensive = 'Defense'
+			windower.send_command('input /ja "Curing Waltz V" <me>')
+		end
+		
 		-- Defensive - Saber or Fan dance always up
 		if player.status == 'Engaged' then
 			if Defensive == 'Defense' and abil_recasts[224] == 0 then 
 				windower.send_command('Fan Dance')		
-			elseif Defensive == 'Offense' and abil_recasts[219] == 0 then 
-				windower.send_command('Saber Dance')
+			elseif Defensive == 'Offense' then
+				if abil_recasts[219] == 0 then 
+					windower.send_command('Saber Dance')
+				elseif not buffactive['Haste Samba'] and not buffactive['Fan Dance']and player.tp > 350 then
+					windower.send_command('Haste Samba')
+				end
 			end
         end
 		
@@ -205,7 +216,7 @@ function refine_waltz(spell, action, spellMap, eventArgs)
 			if missingHP < 40 and spell.target.name == player.name then
 				-- Not worth curing yourself for so little.
 				-- Don't block when curing others to allow for waking them up.
-				add_to_chat(122,'Full HP!')
+				add_to_chat(122,'Full HP!')	
 				cancel_spell()
 				return
 			elseif missingHP < 150 then
@@ -263,7 +274,7 @@ function refine_waltz(spell, action, spellMap, eventArgs)
 		send_command('@input /ja "'..newWaltz..'" '..tostring(spell.target.raw))
 		if downgrade then
 			add_to_chat(122, downgrade)
-		end
+		end		
 		cancel_spell()
 		return
 	end
@@ -317,7 +328,7 @@ function cancel_conflicting_buffs(spell, action, spellMap, eventArgs)
 end
 
 function update_box()
-	box.content = Defensive..' F11\nAutos '..Autos..' F10'
+	box.content = Defensive..' F11\nAutos '..Autos..' F10\nWaltz '..Waltz..' F9'
 end
 --End Update Display
 
@@ -340,6 +351,12 @@ function self_command(command)
 			Autos = 'On'
 		else
 			Autos = 'Off'
+		end
+	elseif command == 'Waltz' then
+		if Waltz == 'Off' then
+			Waltz = 'On'
+		else
+			Waltz = 'Off'
 		end
 	end
 end

@@ -110,7 +110,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
             }
         },
         ["BST"] = {

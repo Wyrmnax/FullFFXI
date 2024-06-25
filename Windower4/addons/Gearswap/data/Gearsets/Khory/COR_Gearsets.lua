@@ -49,20 +49,21 @@ if player.name == 'Khory' then
 	}
 	
 	sets.MeleeLeaden = { 
-	main={ name="Rostam", augments={'Path: A',}},
+	main={ name="Rostam", augments={'Path: B',}},
     sub={ name="Demers. Degen +1", augments={'Path: A',}},
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
 	
 	sets.RangedLastStand = { 
-	main="Kustawi +1",
+	main={ name="Rostam", augments={'Path: A',}},
+	sub="Kustawi +1",
     sub="Nusku Shield",
     range="Fomalhaut",
 	}
 	
 	sets.RangedLeaden = { 
 	main={ name="Rostam", augments={'Path: A',}},
-    sub="Kustawi +1",
+    sub={ name="Rostam", augments={'Path: B',}},
     range={ name="Death Penalty", augments={'Path: A',}},
 	}
 	
@@ -105,8 +106,7 @@ sets.TP = {
     waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Suppanomimi",
-    --left_ring="Petrov Ring",
-	left_ring="Defending Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Epona's Ring",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}

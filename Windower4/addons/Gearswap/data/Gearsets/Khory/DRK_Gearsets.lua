@@ -18,31 +18,33 @@ if player.name == 'Khory' then
 		automacroset = 1
 		if automacroset == 1 then
 			if player.sub_job == 'NIN' then
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'SAM' then
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'WAR' then
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'DNC' then 
-				set_macro_page(2,6)
+				set_macro_page(3,9)
 			elseif player.sub_job == 'DRG' then 
-				set_macro_page(1,6)
+				set_macro_page(2,9)
 			elseif player.sub_job == 'MNK' then 
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'WHM' then 
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'RDM' then 
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			elseif player.sub_job == 'SCH' then 
-				set_macro_page(1,6)
+				set_macro_page(1,9)
 			end
 		else
-			set_macro_page(1,6)
+			set_macro_page(1,9)
 		end
+		
+	send_command('wait 3;input /lockstyleset 11')
 		
 -- Auto Sets
 -- Standard/idle
-sets.idle.PDT = { 
+sets.idle = { 
 	ammo="Staunch Tathlum +1",
     head={ name="Sakpata's Helm", augments={'Path: A',}},
     body="Sacro Breastplate",
@@ -53,35 +55,15 @@ sets.idle.PDT = {
     waist="Flume Belt +1",
     left_ear="Eabani Earring",
     right_ear="Etiolation Earring",
-    left_ring="Defending Ring",
+    left_ring="Stikini Ring +1",
     right_ring="Shneddick Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
-sets.idle.MDT = {     
-	ammo="Staunch Tathlum +1",
-    head={ name="Sakpata's Helm", augments={'Path: A',}},
-    body="Sacro Breastplate",
-    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sakpata's Cuisses",
-    feet="Sakpata's Leggings",
-	neck="Rep. Plat. Medal",
-    waist="Flume Belt +1",
-    left_ear="Eabani Earring",
-    right_ear="Etiolation Earring",
-    left_ring="Defending Ring",
-    right_ring="Shneddick Ring",
-    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	}
-
-sets.misc.Town = set_combine(sets.idle.PDT, {})
-				
-sets.idle.Standard = set_combine(sets.idle.PDT, {
-				})
 
 sets.Enmity = {}
 
--- Scythe TP set
+-- TP set
 sets.TP = { 
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
@@ -97,16 +79,6 @@ sets.TP = {
     right_ring="Moonlight Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
-sets.TP.Acc = set_combine(sets.TP, {
-				})
-
--- GreatSword
-sets.TP.GS = set_combine(sets.TP, {
-				})
-
-
-sets.TP.GS.Acc = set_combine(sets.TP, {
-				})
 
 -- JA
 sets.precast.JA["Blood Weapon"] = {body="Abyss Cuirass +2"}
@@ -213,18 +185,18 @@ sets.midcast.MAB = set_combine(sets.midcast.Elemental,{})
 
 -- Weaponskills
 sets.precast.WS = {
-	ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Caro Necklace",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Hjarrandi Helm",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    feet="Flam. Gambieras +2",
+    neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
-    right_ear="Heath. Earring +2",
+    right_ear={ name="Schere Earring", augments={'Path: A',}},
     left_ring="Niqmaddu Ring",
-    right_ring="Cornelia's Ring", 
+    right_ring="Moonlight Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 	
@@ -244,20 +216,10 @@ sets.precast.WS.WSD = {
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 -- Scythe
-sets.precast.WS["Insurgency"] = set_combine(sets.precast.WS, {        
-	ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Sakpata's Plate", augments={'Path: A',}},
-    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sulev. Cuisses +2",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+sets.precast.WS["Insurgency"] = set_combine(sets.precast.WS, { 
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+18','Mag. Acc.+18','Weapon skill damage +4%','STR+11 INT+11',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Cornelia's Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
 	
 sets.precast.WS["Cross Reaper"] = set_combine(sets.precast.WS.WSD, {
@@ -265,22 +227,15 @@ sets.precast.WS["Cross Reaper"] = set_combine(sets.precast.WS.WSD, {
 	})
 	
 sets.precast.WS["Guillotine"] = set_combine(sets.precast.WS, {
-	})
-	
-sets.precast.WS["Entropy"] = set_combine(sets.precast.WS, {    
-	ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Sakpata's Plate", augments={'Path: A',}},
-    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sulev. Cuisses +2",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+18','Mag. Acc.+18','Weapon skill damage +4%','STR+11 INT+11',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Cornelia's Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	})
+	
+sets.precast.WS["Entropy"] = set_combine(sets.precast.WS, {    
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	})
 	
 sets.precast.WS["Catastrophe"] = set_combine(sets.precast.WS.WSD, {
@@ -289,19 +244,9 @@ sets.precast.WS["Catastrophe"] = set_combine(sets.precast.WS.WSD, {
 
 -- GreatSword
 sets.precast.WS["Resolution"] = set_combine(sets.precast.WS, {	
-    ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Sakpata's Plate", augments={'Path: A',}},
-    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs="Sulev. Cuisses +2",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+18','Mag. Acc.+18','Weapon skill damage +4%','STR+11 INT+11',}},
-    left_ring="Niqmaddu Ring",
-    right_ring="Cornelia's Ring",
-    back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
 	
 sets.precast.WS["Torcleaver"] = set_combine(sets.precast.WS.WSD, {

@@ -181,6 +181,13 @@ elseif player.main_job == "SAM" then
 	windower.send_command('@bind f12 gs c Mode')
 	windower.send_command('@bind ^f12 gs c ModeX')
 	
+elseif player.main_job == "DRK" then
+	basic_binds()
+	-- set binds
+	windower.send_command('@bind f11 gs c Seigan')	
+	windower.send_command('@bind f12 gs c Mode')
+	windower.send_command('@bind ^f12 gs c ModeX')
+	
 elseif player.main_job == "NIN" then
 	basic_binds()
 	-- set binds

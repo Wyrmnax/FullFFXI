@@ -38,6 +38,8 @@ _addon.lastUpdate = '4/2/2022'
 _addon.windower = '4'
 
 require 'tables'
+require 'sets'
+require 'lists'
 require 'strings'
 require 'logger'
 require 'luau'
@@ -53,7 +55,7 @@ skills = require('skills')
 
 texts = require('texts')
 
-local bags = {[0]='inventory',[8]='wardrobe',[10]='wardrobe2',[11]='wardrobe3',[12]='wardrobe4'}
+local bags = {[0]='inventory',[8]='wardrobe',[10]='wardrobe2',[11]='wardrobe3',[12]='wardrobe4',[13]='wardrobe5',[14]='wardrobe6',[15]='wardrobe7',[16]='wardrobe8'}
 local message_ids = T{110,185,187,317,802}
 local skillchain_ids = T{288,289,290,291,292,293,294,295,296,297,298,299,300,301,385,386,387,388,389,390,391,392,393,394,395,396,397,767,768,769,770}
 local buff_dur = T{[163]=40,[164]=30,[470]=60}
@@ -130,9 +132,10 @@ local skillchains = T{
 	[301] = {id=301,english='Impaction',elements={'Thunder'}}
 }
 
+player = windower.ffxi.get_player()
+
 local active = false
 local debug = false
-local player = windower.ffxi.get_player()
 
 local finish_act = L{2,3,5}
 local start_act = L{7,8,9,12}
@@ -197,11 +200,11 @@ function init_display()
 	display.addon_title = active and ("--- Auto Skillchains "):text_color(0,255,0) or ("--- Auto Skillchains "):text_color(255,0,0)
 
 	display:appendline('Weapon: ${weapon|None}')
-	display.weapon = title_case(get_weapon_name())
+	display.weapon = title_case(get_weapon_name():split("_"):concat(" "))
 
 	display:appendline('Open new SC? ${open_sc|No} \n   Using: ${opener|None}')
 	display.open_sc = settings.open_sc and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
-	if (settings.sc_openers and settings.sc_openers[player.main_job:lower()] and settings.sc_openers[player.main_job:lower()][get_weapon_name()]) then 
+	if (settings.sc_openers and settings.sc_openers[player.main_job:lower()] and type(settings.sc_openers[player.main_job:lower()][get_weapon_name()]) ~= "function") then 
 		display.opener = settings.sc_openers and settings.sc_openers[player.main_job:lower()][get_weapon_name()]
 	else
 		display.opener = "None"
@@ -228,7 +231,8 @@ function init_display()
 	display.max_win = tostring(settings.max_ws_window):text_color(255,0,0)
 
 	display:appendline('Filtered WSs:\n   ${ws_filters|None}')
-	display.ws_filters = (settings.ws_filters[get_weapon_name()] ~= nil) and settings.ws_filters[get_weapon_name()]:concat("\n   ") or "None"
+	local weap = get_weapon_name()
+	display.ws_filters = (weap ~= 'empty' and settings.ws_filters[weap] ~= nil) and settings.ws_filters[weap]:concat("\n   ") or "None"
 
 	display:show()
 end
@@ -236,10 +240,10 @@ end
 function update_display() 
 	display.addon_title = active and ("--- Auto Skillchains "):text_color(0,255,0) or ("--- Auto Skillchains "):text_color(255,0,0)
 
-	display.weapon = title_case(get_weapon_name())
+	display.weapon = title_case(get_weapon_name():split("_"):concat(" "))
 
 	display.open_sc = settings.open_sc and tostring("Yes"):text_color(0,255,64) or tostring("No"):text_color(255,0,0)
-	if (settings.sc_openers and settings.sc_openers[player.main_job:lower()] and settings.sc_openers[player.main_job:lower()][get_weapon_name()]) then 
+	if (player and settings.sc_openers and settings.sc_openers[player.main_job:lower()] and settings.sc_openers[player.main_job:lower()][get_weapon_name()] and type(settings.sc_openers[player.main_job:lower()][get_weapon_name()]) ~= "function") then 
 		display.opener = settings.sc_openers and settings.sc_openers[player.main_job:lower()][get_weapon_name()]
 	else
 		display.opener = "None"
@@ -260,7 +264,9 @@ function update_display()
 	display.min_win = tostring(settings.min_ws_window):text_color(0,255,0)
 	display.max_win = tostring(settings.max_ws_window):text_color(255,0,0)
 
-	display.ws_filters = settings.ws_filters[get_weapon_name()] and settings.ws_filters[get_weapon_name()]:concat("\n   ") or "None"
+	if (settings.ws_filters and settings.ws_filters[get_weapon_name()] and type(settings.ws_filters[get_weapon_name()]) ~= "function") then
+		display.ws_filters = settings.ws_filters[get_weapon_name()] and settings.ws_filters[get_weapon_name()]:concat("\n   ") or "None"
+	end
 end
 --[[ End UI Display Setup ]]
 
@@ -551,7 +557,7 @@ function get_weapon_name()
 	end
 
 	local weapon_name = 'Empty'
-	if weapon ~= 0 then  --0 => nothing equipped
+	if (tonumber(weapon) > 0 and items[bags[bag]] and items[bags[bag]][weapon] and items[bags[bag]][weapon].id) then
 		weapon_name = res.items[items[bags[bag]][weapon].id].en
 	end
 
@@ -617,8 +623,10 @@ windower.register_event('prerender', function(...)
 			return
 		elseif (mob == nil or mob.hpp <= 0) then
 			skillchain_closed()
+			debug_message("WS target died or is nil.")
 			return
 		elseif (last_attempt + settings.attempt_delay > time) then 
+			debug_message("WS attempt_delay still pending " .. (last_attempt + settings.attempt_delay) .. " > " .. time .. ".")
 			return
 		end
 		last_attempt = time
@@ -633,8 +641,11 @@ windower.register_event('prerender', function(...)
 		end
 	end
 
-	-- If we can't close a SC then try to open one, if there a SC effect or we opt to ignore SC effects
-	if (settings.open_sc and not (sc_opened and settings.wait_to_open)) then
+	-- If we can't close a SC then try to open one, if there's a SC effect or we opt to ignore SC effects
+	if (settings.open_sc) then
+		if (sc_opened and settings.wait_to_open) then
+			return
+		end
 		if (last_attempt + settings.attempt_delay > time) then 
 			return
 		end
@@ -743,7 +754,7 @@ windower.register_event('login', function(...)
 		windower.send_command('autoSC off')
 	end
 	player = nil
-	windower.send_command("wait 5; autosc reload")
+	windower.send_command("wait 5; lua r autosc")
 	return
 end)
 
@@ -755,7 +766,7 @@ windower.register_event('logout', 'zone change', 'job change', function(...)
 	return
 end)
 
-windower.register_event('load', 'reload', function(...)
+windower.register_event('load', function(...)
 	init_display()
 end)
 
@@ -826,10 +837,9 @@ windower.register_event('addon command', function(...)
 		end
 
 		local weapon = get_weapon_name()
-		settings.ws_filters[weapon] = settings.ws_filters[weapon] or {}
+		settings.ws_filters[weapon] = settings.ws_filters[weapon] or L{}
 
 		local ws_name = title_case(T(arg):slice(2, #arg):concat(" "))
-		
 		if (ws_name == "Chant Du Cygne") then
 			ws_name = "Chant du Cygne"
 		end
@@ -838,16 +848,21 @@ windower.register_event('addon command', function(...)
 			return
 		end
 
-		if (settings.ws_filters and settings.ws_filters[weapon] and T(settings.ws_filters[weapon]):contains(ws_name)) then
+		local ws_filtered,idx = false,-1
+		for i,v in pairs(settings.ws_filters[weapon]) do
+			if (v == ws_name) then
+				ws_filtered = true
+			end
+		end
+		if (ws_filtered) then
+			T(settings.ws_filters[weapon]):delete(ws_name)
 			message("WS "..ws_name.." removed from filtered WSs for "..title_case(weapon):split("_"):concat(" ")..".")
-			settings.ws_filters[weapon]:delete(ws_name)
 		else
-			message("WS "..ws_name.." added to filtered WSs for "..title_case(weapon):split("_"):concat(" ")..".")
 			T(settings.ws_filters[weapon]):append(ws_name) 
+			message("WS "..ws_name.." added to filtered WSs for "..title_case(weapon):split("_"):concat(" ")..".")
 		end
 
 		settings:save('all')
-		update_display()
 	elseif (cmd == 'tp') then
 		if (#arg < 2) then
 			message("Usage: autoSC TP #### where #### is a number between 1000~3000")

@@ -15,9 +15,9 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"shattersoul\" <t>"
             }
         },
         ["BLU"] = {
@@ -110,7 +110,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Rudra's Storm\" <t>"
+                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
             }
         },
         ["BST"] = {
@@ -150,7 +150,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Last Stand\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -239,7 +239,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
+                ["ws_cmd"] = "/ws \"cross reaper\" <t>"
             }
         },
         ["GEO"] = {
@@ -521,11 +521,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -616,7 +616,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             },
             ["Club"] = {
                 ["hps"] = {
@@ -636,7 +636,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Koki\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -645,7 +645,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Savage Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Great Katana"] = {
                 ["hps"] = {
@@ -654,7 +654,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Seraph Strike\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -663,7 +663,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Shadow of Death\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -681,7 +681,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -690,7 +690,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Judgment\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -699,7 +699,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Energy Drain\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -708,16 +708,16 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Tachi: Koki\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = true,
+                ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
+                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
             }
         },
         ["WHM"] = {

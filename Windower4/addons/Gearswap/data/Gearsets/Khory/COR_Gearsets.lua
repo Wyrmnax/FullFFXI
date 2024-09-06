@@ -37,7 +37,7 @@ if player.name == 'Khory' then
 		end
 		
 	sets.MeleeLastStand = { 
-	main={ name="Rostam", augments={'Path: A',}},
+	main={ name="Rostam", augments={'Path: B',}},
     sub={ name="Demers. Degen +1", augments={'Path: A',}},
     range="Fomalhaut",
 	}

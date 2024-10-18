@@ -353,7 +353,7 @@ function midcast(spell,arg)
 		else
 			-- Normal Nuke
 			if MB == 0 then
-				if player.mp < 670 then
+				if player.mp < 900 then
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 							equip(sets.midcast.Nuke, {body="Spaekona's Coat +3", waist="Hachirin-no-Obi"})
 						else
@@ -368,7 +368,7 @@ function midcast(spell,arg)
 				end
 			-- Magic Burst
 			elseif MB == 1 then
-				if player.mp < 670 then
+				if player.mp < 900 then
 					if spell.element == world.day_element or spell.element == world.weather_element or buffactive[elements.storm_of[spell.element]] then
 								equip(sets.midcast.Nuke.MB,{body="Spaekona's Coat +3",waist="Hachirin-no-Obi"})
 							else

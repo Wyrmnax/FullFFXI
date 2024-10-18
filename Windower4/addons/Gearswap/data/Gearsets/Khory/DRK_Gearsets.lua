@@ -51,7 +51,7 @@ sets.idle = {
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
     feet="Sakpata's Leggings",
-    neck="Rep. Plat. Medal",
+    neck="Coatl Gorget +1",
     waist="Flume Belt +1",
     left_ear="Eabani Earring",
     right_ear="Etiolation Earring",
@@ -71,7 +71,7 @@ sets.TP = {
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Sakpata's Cuisses",
     feet="Flam. Gambieras +2",
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
+    neck="Abyssal Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear="Schere Earring",
@@ -88,10 +88,10 @@ sets.precast.JA["Souleater"] = {head="Chaos Burgeonet"}
 sets.precast.JA["Last Resort"] = {feet="Abyss Sollerets +2"}
 sets.precast.JA["Arcane Circle"] = {feet="Chaos Sollerets"}
 sets.precast.JA["Arcane Crest"] = {}
-sets.precast.JA["Dark Seal"] = {head="Abyss Burgeonet +2"}
+sets.precast.JA["Dark Seal"] = {head="Fall. Burgeonet +3"}
 sets.precast.JA["Weapon Bash"] = {hands="Chaos Gauntlets"}
 sets.precast.JA["Diabolic Eye"] = {hands="Abyss Gauntlets +2"}
-sets.precast.JA["Nether Void"] = {}
+sets.precast.JA["Nether Void"] = {legs = "Heath. Flanchard +3"}
 
 sets.precast.JA["Provoke"] = {}
 sets.precast.JA["Berserk"] = {}
@@ -100,80 +100,80 @@ sets.precast.JA["Warcry"] = {}
 sets.precast.JA["Aggressor"] = {}
 
 -- Magic 
-sets.precast.Fastcast = set_combine(sets.idle.PDT, {
-	ammo="Staunch Tathlum +1",
-    head={ name="Fallen's Burgeonet", augments={'Enhances "Dark Seal" effect',}},
-    body={ name="Found. Breastplate", augments={'Accuracy+14','Mag. Acc.+13','Attack+14','"Mag.Atk.Bns."+14',}},
+sets.precast.Fastcast = {
+	ammo="Sapience Orb",
+    head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
+    body="Sacro Breastplate",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs={ name="Founder's Hose", augments={'MND+10','Mag. Acc.+15','Attack+15','Breath dmg. taken -5%',}},
-    feet="Sulev. Leggings +2",
+    legs="Heath. Flanchard +3",
+    feet={ name="Odyssean Greaves", augments={'Enmity+5','Crit.hit rate+1','Phalanx +3','Accuracy+8 Attack+8','Mag. Acc.+10 "Mag.Atk.Bns."+10',}},
     neck="Voltsurge Torque",
-    waist="witful belt",
-    left_ear="Halasz Earring",
-    right_ear="Mache Earring",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Enchntr. Earring +1",
+    right_ear="Malignance Earring",
     left_ring="Kishar Ring",
     right_ring="Lebeche Ring",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
-	})
+    back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 
 sets.midcast.DarkMagic = {
 	ammo="Pemphredo Tathlum",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Ig. Burgeonet +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    hands="Fall. Fin. Gaunt +3",
+    legs="Heath. Flanchar +3",
+    feet="Rat. Sollerets +1",
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    right_ear="Heath. Earring +2",
     left_ring="Evanescence Ring",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Aspir = {
 	ammo="Pemphredo Tathlum",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Fall. Burgeonet +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    hands="Fall. Fin. Gaunt. +3",
+    legs="Heath. Flanchard +3",
+    feet="Heath. Sollerets +3",
     neck="Erra Pendant",
-    waist="Skrymir Cord",
-    left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
+    waist="Orpheus Sash",
+    left_ear="Hirudinea Earring",
+    right_ear="Heath. Earring +2",
     left_ring="Evanescence Ring",
-    right_ring="Kishar Ring",
+    right_ring="Archon Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Absorb = {
 	ammo="Pemphredo Tathlum",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Ig. Burgeonet +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    hands="Fall. Fin. Gaunt. +3",
+    legs="Heath. Flanchard +3",
+    feet="Rat. Sollerets +1",
     neck="Erra Pendant",
     waist="Skrymir Cord",
     left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
-    left_ring="Evanescence Ring",
+    right_ear="Heath. Earring +2",
+    left_ring="Stikini Ring +1",
     right_ring="Kishar Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 sets.midcast.Dread = {
 	ammo="Pemphredo Tathlum",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
+    body="Heath. Cuirass +2",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Erra Pendant",
+    feet="Rat. Sollerets +1",
+    neck="Unmoving collar +1",
     waist="Skrymir Cord",
-    left_ear="Malignance Earring",
-    right_ear={ name="Heath. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Weapon skill damage +2%',}},
-    left_ring="Evanescence Ring",
-    right_ring="Kishar Ring",
+    left_ear="Tuisto Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Moonlight Ring",
+    right_ring="Gelatinous Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -186,17 +186,17 @@ sets.midcast.MAB = set_combine(sets.midcast.Elemental,{})
 -- Weaponskills
 sets.precast.WS = {
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
+    head="Heath. Burgeon. +2",
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-    legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+    legs="Sulev. Cuisses +2",
     feet="Flam. Gambieras +2",
-    neck="Rep. Plat. Medal",
+    neck="Abyssal Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Cessance Earring",
     right_ear={ name="Schere Earring", augments={'Path: A',}},
     left_ring="Niqmaddu Ring",
-    right_ring="Moonlight Ring",
+    right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}
 	
@@ -206,8 +206,8 @@ sets.precast.WS.WSD = {
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Rep. Plat. Medal",
+    feet="Heath. Sollerets +3",
+    neck="Abyssal Beads +2",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Thrud Earring",
     right_ear="Heath. Earring +2",
@@ -262,6 +262,9 @@ sets.precast.WS["Gound Strike"] = set_combine(sets.precast.WS.WSD, {
 	
 sets.precast.WS["Spinning Slash"] = set_combine(sets.precast.WS.WSD, {
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	})
+	
+sets.precast.WS["Fell Cleave"] = set_combine(sets.precast.WS.WSD, {
 	})
 
 			

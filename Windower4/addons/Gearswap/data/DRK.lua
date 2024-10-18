@@ -9,6 +9,7 @@
 	-- Global Buffs
 	include('include/status.lua')
 	
+	
 -- Gear Sets 
 function get_sets()
 --includes
@@ -22,13 +23,24 @@ function get_sets()
 
 -- Define Default Values for Variables
 	Mode = 0
+	Offense = 1
 	PDT = 0
 	MDT = 0
-	ShadowType = 'None'
-	
-	Seigan = 0
-	nexttime = os.clock()	
+	ShadowType = 'None'	
+	Seigan = 0	
+	nexttime = os.clock()		
 	del = 0
+	
+	degrade_array = {
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI','Firaja'},
+		['Thunder'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI','Thundaja'},
+		['Aero'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI','Aeroja'},
+		['Blizzard'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI','Blizzaja'},
+		['Water'] = {'Water','Water II','Water III','Water IV','Water V','Water VI','Waterja'},
+		['Stone'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI','Stoneja'},
+		['Drain'] = {'Drain','Drain II','Drain III'},
+		['Aspir'] = {'Aspir','Aspir II'},
+        }
 	
 end 
 
@@ -45,7 +57,18 @@ function self_command(command)
 			windower.add_to_chat(121,'Seigan ON')
 			Seigan = 1
 		end
+	elseif command == 'Offense' then
+		if Offense == 1 then
+			windower.add_to_chat(121,'Offense OFF')
+			Offense = 0
+		else 
+			windower.add_to_chat(121,'Offense ON')
+			Offense = 1
+		end
 	end
+	
+	
+	
 end
 
 windower.register_event('prerender',function ()	
@@ -78,14 +101,84 @@ windower.register_event('prerender',function ()
 			if abil_recasts[44] == 0 then
 				windower.send_command('Scarlet Delirium')
 			end
+			if Offense == 1 and abil_recasts[87] == 0 then
+				windower.send_command('Last Resort')
+			end
 		end
     end
 end)
 
 function status_change(new,old)
-    if T{'Idle'}:contains(new) then
-		previous_set()
-    end
+    previous_set()
+end
+
+function refine_various_spells(spell, action, spellMap, eventArgs)
+
+    local newSpell = spell.english
+    local spell_recasts = windower.ffxi.get_spell_recasts()
+    local cancelling = 'All '..spell.english..' are on cooldown. Cancelling.'
+
+    local spell_index
+
+    if spell_recasts[spell.recast_id] > 0 then
+        if spell.name:startswith('Fir') then
+            spell_index = table.find(degrade_array['Fire'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Fire'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+            end
+		elseif spell.name:startswith('Thund') then
+            spell_index = table.find(degrade_array['Thunder'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Thunder'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Blizza') then
+            spell_index = table.find(degrade_array['Blizzard'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Blizzard'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Aero') then
+            spell_index = table.find(degrade_array['Aero'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Aero'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Stone') then
+            spell_index = table.find(degrade_array['Stone'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Stone'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+        end
+		elseif spell.name:startswith('Water') then
+            spell_index = table.find(degrade_array['Water'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Water'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Drain') then
+            spell_index = table.find(degrade_array['Drain'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Drain'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		elseif spell.name:startswith('Aspir') then
+            spell_index = table.find(degrade_array['Aspir'],spell.name)
+            if spell_index > 1 then
+                newSpell = degrade_array['Aspir'][spell_index - 1]
+				Degraded = 1
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+			end
+		end	
+	end
 end
 
 function precast(spell,arg)
@@ -117,6 +210,9 @@ function precast(spell,arg)
 			windower.add_to_chat(121, 'You must be Engaged to WS')
 		end
 	elseif spell.type:endswith('Magic') then
+		if spell.skill == 'Dark Magic' then
+			refine_various_spells(spell, action, spellMap, eventArgs)
+		end
 		 equip(sets.precast.Fastcast)
 		-- Cancel Sneak
 		if spell.name == 'Sneak' and buffactive.Sneak and spell.target.type == 'SELF' then
@@ -157,7 +253,7 @@ function midcast(spell,arg)
 	elseif spell.skill == 'Dark Magic' then
 		if windower.wc_match(spell.name,'Drain*') then		
 			if buffactive['Nether Void'] then
-				equip(sets.midcast.Aspir, {head="Fall. Burgeonet +1", legs="Heath. Flanchard +1" }) 
+				equip(sets.midcast.Aspir, {head="Fall. Burgeonet +3", legs="Heath. Flanchard +3" }) 
 			else
 				equip(sets.midcast.Aspir)
 			end
@@ -167,7 +263,7 @@ function midcast(spell,arg)
 			equip(sets.midcast.Macc)
 		elseif spell.english:wcmatch('Absorb*') then
 			if spell.name == "Absorb-TP" then
-				equip(sets.midcast.Absorb,{hands="Bale Gauntlets +2"})
+				equip(sets.midcast.Absorb,{hands="Heath. Gauntlets +1"})
 			else
 				equip(sets.midcast.Absorb)
 			end
@@ -175,7 +271,7 @@ function midcast(spell,arg)
 			equip(sets.midcast.Dread)
 		elseif spell.name == "Bind" then
 			equip(sets.midcast.INT)
-		elseif spell.name == "Endark" then
+		elseif spell.name == "Endark" or spell.name == "Endark II" then
 			equip(sets.midcast.DarkMagic)
 		else
 			equip(sets.midcast.Macc)

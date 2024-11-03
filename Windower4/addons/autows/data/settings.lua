@@ -17,7 +17,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"shattersoul\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Fudo\" <t>"
             }
         },
         ["BLU"] = {
@@ -290,7 +290,7 @@ return {
                 ["mnk"] = true,
                 ["mobs"] = {},
                 ["monkstring"] = "True",
-                ["ws_cmd"] = "/ws \"final heaven\" <t>"
+                ["ws_cmd"] = "/ws \"victory smite\" <t>"
             }
         },
         ["NIN"] = {
@@ -530,11 +530,11 @@ return {
                     ["<"] = 100,
                     [">"] = 0
                 },
-                ["keepam"] = false,
+                ["keepam"] = true,
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Tachi: Kagero\" <t>"
+                ["ws_cmd"] = "/ws \"Expiacion\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -636,7 +636,7 @@ return {
                 ["mnk"] = false,
                 ["mobs"] = {},
                 ["monkstring"] = "False",
-                ["ws_cmd"] = "/ws \"Seraph Blade\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Koki\" <t>"
             },
             ["Dagger"] = {
                 ["hps"] = {
@@ -645,7 +645,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Tachi: Jinpu\" <t>"
             },
             ["Great Axe"] = {
                 ["hps"] = {
@@ -663,7 +663,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Earth Crusher\" <t>"
             },
             ["Great Sword"] = {
                 ["hps"] = {
@@ -672,7 +672,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Hand-to-Hand"] = {
                 ["hps"] = {
@@ -690,7 +690,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Polearm"] = {
                 ["hps"] = {
@@ -699,7 +699,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
+                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
             },
             ["Scythe"] = {
                 ["hps"] = {
@@ -708,7 +708,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Earth Crusher\" <t>"
+                ["ws_cmd"] = "/ws \"Blade: Ei\" <t>"
             },
             ["Staff"] = {
                 ["hps"] = {
@@ -717,7 +717,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Aeolian Edge\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             },
             ["Sword"] = {
                 ["hps"] = {
@@ -726,7 +726,7 @@ return {
                 },
                 ["keepam"] = false,
                 ["mobs"] = {},
-                ["ws_cmd"] = "/ws \"Sunburst\" <t>"
+                ["ws_cmd"] = "/ws \"Cloudsplitter\" <t>"
             }
         },
         ["WHM"] = {

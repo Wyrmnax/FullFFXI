@@ -10,8 +10,6 @@
 
 wait 5;
 load LuaCore;
-load AutoExec;
-load ChatMon;
 load Config;
 load DelayMeNot;
 load FFXIDB;

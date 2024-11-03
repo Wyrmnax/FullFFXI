@@ -15,6 +15,7 @@
         <ColorNPC>#FF269D49</ColorNPC>
         <ColorMob>#FFED1A20</ColorMob>
         <ColorMarker>#FFB646AD</ColorMarker>
+        <ZoomDefault>-10</ZoomDefault>
     </global>
     <Valka>
         <X>1134</X>
